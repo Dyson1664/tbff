@@ -291,8 +291,132 @@ const Index = () => {
             <div>
               <span className="text-muted-foreground">Type</span>
               <p className="font-medium">Culture & Sightseeing</p>
+        </div>
+
+        {/* Trip Includes Section */}
+        <div className="mt-16 bg-card rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+          <div className="p-6 border-b border-gray-200 bg-muted/50">
+            <h3 className="text-2xl font-bold text-foreground">What's Included</h3>
+            <p className="text-muted-foreground mt-2">Everything you need for an unforgettable Paris experience</p>
+          </div>
+          
+          <div className="p-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground text-lg">Accommodation</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    5 nights in boutique hotel near Champs-Élysées
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Daily breakfast included
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Free WiFi and concierge services
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground text-lg">Activities & Tours</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Skip-the-line tickets to major attractions
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Seine River cruise with dinner
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Guided walking tours in historic districts
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Day trip to Palace of Versailles
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground text-lg">Transportation</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Airport transfers included
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Metro passes for easy city travel
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Private transport to Versailles
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground text-lg">Dining Experiences</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Traditional French breakfast daily
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Sunset dinner cruise on the Seine
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Food market tour with tastings
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground text-lg">Support & Guidance</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    24/7 travel support hotline
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Detailed digital itinerary and maps
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Local emergency contact information
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h4 className="font-semibold text-foreground text-lg">Special Extras</h4>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Welcome package with city map
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Complimentary travel insurance
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    Photography session at iconic landmarks
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>
