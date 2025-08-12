@@ -33,7 +33,7 @@ const Navbar = () => {
           </Button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             {/* Trips Dropdown */}
             <div 
               className="relative"
@@ -51,7 +51,7 @@ const Navbar = () => {
               {/* Dropdown Menu with seamless hover area */}
               {showDropdown && (
                 <div 
-                  className="absolute top-full left-0 mt-0 w-80 bg-background border border-gray-200 rounded-lg shadow-lg z-50"
+                  className="absolute top-full left-0 mt-0 w-96 bg-background border border-gray-200 rounded-lg shadow-lg z-50"
                   onMouseEnter={() => setShowDropdown(true)}
                   onMouseLeave={() => setTimeout(() => setShowDropdown(false), 150)}
                 >
