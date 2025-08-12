@@ -17,10 +17,10 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 14% 22%;
 
-    /* Airbnb coral primary color */
-    --primary: 8 83% 67%;
+    /* Custom teal brand color */
+    --primary: 179 95% 41%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 8 83% 75%;
+    --primary-glow: 179 95% 50%;
 
     --secondary: 220 14% 96%;
     --secondary-foreground: 220 14% 22%;
@@ -36,12 +36,12 @@ All colors MUST be HSL.
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 8 83% 67%;
+    --ring: 179 95% 41%;
 
-    /* Custom Airbnb-inspired tokens */
-    --coral: 8 83% 67%;
-    --coral-light: 8 83% 75%;
-    --coral-dark: 8 83% 58%;
+    /* Custom brand-inspired tokens */
+    --coral: 179 95% 41%;
+    --coral-light: 179 95% 50%;
+    --coral-dark: 179 95% 35%;
     --gray-50: 220 14% 98%;
     --gray-100: 220 14% 96%;
     --gray-200: 220 13% 91%;
@@ -88,9 +88,9 @@ All colors MUST be HSL.
     --popover: 220 14% 6%;
     --popover-foreground: 220 14% 96%;
 
-    --primary: 8 83% 67%;
+    --primary: 179 95% 41%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 8 83% 75%;
+    --primary-glow: 179 95% 50%;
 
     --secondary: 220 14% 10%;
     --secondary-foreground: 220 14% 96%;
@@ -106,12 +106,12 @@ All colors MUST be HSL.
 
     --border: 220 14% 10%;
     --input: 220 14% 10%;
-    --ring: 8 83% 67%;
+    --ring: 179 95% 41%;
 
     /* Dark mode custom tokens */
-    --coral: 8 83% 67%;
-    --coral-light: 8 83% 75%;
-    --coral-dark: 8 83% 58%;
+    --coral: 179 95% 41%;
+    --coral-light: 179 95% 50%;
+    --coral-dark: 179 95% 35%;
     --gray-50: 220 14% 8%;
     --gray-100: 220 14% 10%;
     --gray-200: 220 14% 14%;

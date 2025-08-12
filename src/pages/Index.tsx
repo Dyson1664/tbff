@@ -10,6 +10,9 @@ import day1Evening from "@/assets/day1-evening.jpg";
 import day2Morning from "@/assets/day2-morning.jpg";
 import day2Afternoon from "@/assets/day2-afternoon.jpg";
 import day2Evening from "@/assets/day2-evening.jpg";
+import parisHero from "@/assets/paris-hero.jpg";
+import parisStreet from "@/assets/paris-street.jpg";
+import parisSeine from "@/assets/paris-seine.jpg";
 
 const Index = () => {
   const itinerary = [
@@ -79,17 +82,32 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle">
-      {/* Header */}
-      <div className="bg-background border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-6 py-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-foreground mb-2">Paris Adventure</h1>
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <MapPin className="w-4 h-4" />
-                <span>Paris, France • 2 days</span>
-              </div>
+      {/* Hero Section */}
+      <div className="relative h-[60vh] overflow-hidden">
+        <img 
+          src={parisHero} 
+          alt="Paris skyline with Eiffel Tower" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white max-w-4xl px-6">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">Paris Adventure</h1>
+            <p className="text-xl md:text-2xl mb-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
+              Discover the City of Light through its iconic landmarks, charming streets, and rich culture
+            </p>
+            <div className="flex items-center justify-center gap-2 text-lg animate-fade-in" style={{animationDelay: '0.4s'}}>
+              <MapPin className="w-5 h-5" />
+              <span>Paris, France • 2 days</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Header with Actions */}
+      <div className="bg-background border-b border-gray-200 sticky top-0 z-10">
+        <div className="max-w-6xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
             <div className="flex gap-3">
               <Button variant="outline" size="sm" className="flex items-center gap-2">
                 <Share2 className="w-4 h-4" />
@@ -104,8 +122,44 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Content */}
-      <div className="max-w-4xl mx-auto px-6 py-8">
+      {/* Paris Overview */}
+      <div className="max-w-6xl mx-auto px-6 py-12">
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-foreground mb-6 text-center">About This Trip</h2>
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
+            <div>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                Experience the magic of Paris through this carefully curated 2-day journey. From iconic landmarks 
+                to hidden gems, immerse yourself in the rich history, stunning architecture, and vibrant culture 
+                that makes Paris one of the world's most beloved destinations.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Whether you're marveling at the Eiffel Tower, exploring world-class museums, or strolling along 
+                the Seine, this itinerary offers the perfect blend of must-see attractions and authentic Parisian experiences.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              <img 
+                src={parisStreet} 
+                alt="Charming Parisian street" 
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
+              <img 
+                src={parisSeine} 
+                alt="Seine River in Paris" 
+                className="w-full h-48 object-cover rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Itinerary Title */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-foreground mb-4">Your Itinerary</h2>
+          <p className="text-lg text-muted-foreground">A detailed day-by-day guide to your Parisian adventure</p>
+        </div>
+
+        {/* Daily Itinerary */}
         {itinerary.map((day) => (
           <div key={day.day} className="mb-12">
             <DayHeader 
