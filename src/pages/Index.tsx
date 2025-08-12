@@ -6,10 +6,16 @@ import { Button } from "@/components/ui/button";
 // Import images
 import day1Morning from "@/assets/day1-morning.jpg";
 import day1Afternoon from "@/assets/day1-afternoon.jpg";
-import day1Evening from "@/assets/day1-evening.jpg";
 import day2Morning from "@/assets/day2-morning.jpg";
 import day2Afternoon from "@/assets/day2-afternoon.jpg";
-import day2Evening from "@/assets/day2-evening.jpg";
+import day3Morning from "@/assets/day3-morning.jpg";
+import day3Afternoon from "@/assets/day3-afternoon.jpg";
+import day4Morning from "@/assets/day4-morning.jpg";
+import day4Afternoon from "@/assets/day4-afternoon.jpg";
+import day5Morning from "@/assets/day5-morning.jpg";
+import day5Afternoon from "@/assets/day5-afternoon.jpg";
+import day6Morning from "@/assets/day6-morning.jpg";
+import day6Afternoon from "@/assets/day6-afternoon.jpg";
 import parisHero from "@/assets/paris-hero.jpg";
 import parisStreet from "@/assets/paris-street.jpg";
 import parisSeine from "@/assets/paris-seine.jpg";
@@ -36,14 +42,6 @@ const Index = () => {
           description: "Visit the iconic Eiffel Tower and take the elevator to the top for breathtaking views of Paris. Perfect time for photos and to experience this world-famous landmark.",
           image: day1Afternoon,
           duration: "3 hrs"
-        },
-        {
-          time: "7:30 PM",
-          title: "Dinner at Le Comptoir du Relais",
-          location: "6th Arrondissement",
-          description: "End your first day with an authentic French dining experience at this renowned bistro. Enjoy traditional French cuisine in a cozy, intimate setting.",
-          image: day1Evening,
-          duration: "2 hrs"
         }
       ]
     },
@@ -67,13 +65,97 @@ const Index = () => {
           description: "Relax on a scenic cruise along the Seine River, passing by Notre-Dame, the Louvre, and other historic landmarks from a unique water perspective.",
           image: day2Afternoon,
           duration: "1.5 hrs"
+        }
+      ]
+    },
+    {
+      day: 3,
+      date: "March 17, 2024",
+      title: "Historic Landmarks",
+      activities: [
+        {
+          time: "9:30 AM",
+          title: "Notre-Dame Cathedral",
+          location: "4th Arrondissement, Île de la Cité",
+          description: "Visit the iconic Gothic cathedral and marvel at its stunning architecture, stained glass windows, and historic significance in the heart of Paris.",
+          image: day3Morning,
+          duration: "2 hrs"
+        },
+        {
+          time: "2:30 PM",
+          title: "Latin Quarter Exploration",
+          location: "5th Arrondissement",
+          description: "Wander through the charming cobblestone streets, discover independent bookshops, cozy cafés, and soak in the bohemian atmosphere of this historic district.",
+          image: day3Afternoon,
+          duration: "3 hrs"
+        }
+      ]
+    },
+    {
+      day: 4,
+      date: "March 18, 2024",
+      title: "Shopping & Royal Heritage",
+      activities: [
+        {
+          time: "10:00 AM",
+          title: "Champs-Élysées & Arc de Triomphe",
+          location: "8th Arrondissement",
+          description: "Stroll down the famous avenue, shop at luxury boutiques, and climb the Arc de Triomphe for panoramic views of the city's twelve radiating avenues.",
+          image: day4Morning,
+          duration: "3 hrs"
+        },
+        {
+          time: "2:00 PM",
+          title: "Palace of Versailles",
+          location: "Versailles (30 min from Paris)",
+          description: "Take a day trip to the opulent palace of French royalty. Explore the magnificent rooms, Hall of Mirrors, and expansive gardens of this UNESCO World Heritage site.",
+          image: day4Afternoon,
+          duration: "4 hrs"
+        }
+      ]
+    },
+    {
+      day: 5,
+      date: "March 19, 2024",
+      title: "Local Markets & Art",
+      activities: [
+        {
+          time: "9:00 AM",
+          title: "Marché des Enfants Rouges",
+          location: "3rd Arrondissement, Le Marais",
+          description: "Experience Paris's oldest covered market, sample fresh produce, artisanal foods, and enjoy authentic local cuisine in this vibrant neighborhood market.",
+          image: day5Morning,
+          duration: "2.5 hrs"
+        },
+        {
+          time: "2:00 PM",
+          title: "Musée d'Orsay",
+          location: "7th Arrondissement",
+          description: "Discover the world's finest collection of Impressionist masterpieces by Monet, Renoir, and Van Gogh in this beautifully converted railway station.",
+          image: day5Afternoon,
+          duration: "3 hrs"
+        }
+      ]
+    },
+    {
+      day: 6,
+      date: "March 20, 2024",
+      title: "Farewell Paris",
+      activities: [
+        {
+          time: "10:00 AM",
+          title: "Trocadéro Gardens",
+          location: "16th Arrondissement",
+          description: "Capture your final memories with the best view of the Eiffel Tower from these beautifully landscaped gardens, perfect for farewell photos and reflections.",
+          image: day6Morning,
+          duration: "1.5 hrs"
         },
         {
           time: "6:00 PM",
-          title: "Montmartre & Sacré-Cœur",
-          location: "18th Arrondissement",
-          description: "Explore the artistic quarter of Montmartre, visit the stunning Sacré-Cœur Basilica, and enjoy street performances and local artists.",
-          image: day2Evening,
+          title: "Seine Sunset Dinner Cruise",
+          location: "Various departure points",
+          description: "End your Parisian journey with an elegant dinner cruise along the Seine, enjoying gourmet French cuisine while watching the city lights come alive at sunset.",
+          image: day6Afternoon,
           duration: "3 hrs"
         }
       ]
@@ -98,7 +180,7 @@ const Index = () => {
             </p>
             <div className="flex items-center justify-center gap-2 text-lg animate-fade-in" style={{animationDelay: '0.4s'}}>
               <MapPin className="w-5 h-5" />
-              <span>Paris, France • 2 days</span>
+              <span>Paris, France • 6 days</span>
             </div>
           </div>
         </div>
@@ -129,7 +211,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
             <div>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Experience the magic of Paris through this carefully curated 2-day journey. From iconic landmarks 
+                Experience the magic of Paris through this carefully curated 6-day journey. From iconic landmarks 
                 to hidden gems, immerse yourself in the rich history, stunning architecture, and vibrant culture 
                 that makes Paris one of the world's most beloved destinations.
               </p>
@@ -150,6 +232,14 @@ const Index = () => {
                 className="w-full h-48 object-cover rounded-lg shadow-md"
               />
             </div>
+          </div>
+          
+          {/* Book Now Button */}
+          <div className="text-center mb-8">
+            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold">
+              Book This Trip Now
+            </Button>
+            <p className="text-sm text-muted-foreground mt-2">Secure your Paris adventure today</p>
           </div>
         </div>
 
@@ -186,15 +276,15 @@ const Index = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
             <div>
               <span className="text-muted-foreground">Duration</span>
-              <p className="font-medium">2 Days</p>
+              <p className="font-medium">6 Days</p>
             </div>
             <div>
               <span className="text-muted-foreground">Activities</span>
-              <p className="font-medium">6 Experiences</p>
+              <p className="font-medium">12 Experiences</p>
             </div>
             <div>
               <span className="text-muted-foreground">Areas</span>
-              <p className="font-medium">5 Districts</p>
+              <p className="font-medium">8 Districts</p>
             </div>
             <div>
               <span className="text-muted-foreground">Type</span>
