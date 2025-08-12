@@ -19,8 +19,8 @@ const Navbar = () => {
   };
 
   const handleDropdownLeave = () => {
-    // Add small delay to prevent dropdown from disappearing too quickly
-    setTimeout(() => setShowDropdown(false), 150);
+    // Add longer delay to allow smooth navigation to dropdown items
+    setTimeout(() => setShowDropdown(false), 300);
   };
 
   return (
@@ -48,9 +48,9 @@ const Navbar = () => {
                 <ChevronDown className="w-4 h-4" />
               </Button>
 
-              {/* Dropdown Menu with improved spacing */}
+              {/* Dropdown Menu with improved spacing and bridge area */}
               {showDropdown && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-background border border-gray-200 rounded-lg shadow-lg z-50">
+                <div className="absolute top-full left-0 mt-1 w-80 bg-background border border-gray-200 rounded-lg shadow-lg z-50">
                   <div className="py-2">
                     <div className="px-4 py-2 text-sm font-medium text-muted-foreground border-b border-gray-100">
                       Featured Destinations
