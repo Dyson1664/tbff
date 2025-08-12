@@ -1,5 +1,6 @@
 import { ItineraryCard } from "@/components/ItineraryCard";
 import { DayHeader } from "@/components/DayHeader";
+import Navbar from "@/components/Navbar";
 import { MapPin, Share2, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -164,6 +165,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-subtle">
+      <Navbar />
       {/* Hero Section */}
       <div className="relative h-[60vh] overflow-hidden">
         <img 
