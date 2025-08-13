@@ -3,6 +3,7 @@ import { DayHeader } from "@/components/DayHeader";
 import Navbar from "@/components/Navbar";
 import { MapPin, Share2, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 // Import images
 import day1Morning from "@/assets/day1-morning.jpg";
@@ -252,25 +253,36 @@ const Index = () => {
         </div>
 
         {/* Daily Itinerary */}
-        {itinerary.map((day) => (
-          <div key={day.day} className="mb-12">
-            <DayHeader 
-              dayNumber={day.day}
-              date={day.date}
-              title={day.title}
-            />
-            
-            <div className="pl-6">
-              {day.activities.map((activity, index) => (
-                <ItineraryCard 
-                  key={index}
-                  activity={activity}
-                  isLast={index === day.activities.length - 1}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+        <Accordion type="single" collapsible defaultValue="day-1" className="space-y-4">
+          {itinerary.map((day) => (
+            <AccordionItem key={day.day} value={`day-${day.day}`} className="border border-gray-200 rounded-lg bg-card shadow-sm">
+              <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-gradient-coral rounded-full flex items-center justify-center shadow-coral">
+                    <span className="text-white font-bold text-lg">{day.day}</span>
+                  </div>
+                  <div className="text-left">
+                    <div className="flex items-center gap-2 text-muted-foreground mb-1">
+                      <span className="text-sm font-medium">{day.date}</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground">{day.title}</h3>
+                  </div>
+                </div>
+              </AccordionTrigger>
+              <AccordionContent className="px-6 pb-6">
+                <div className="space-y-6">
+                  {day.activities.map((activity, index) => (
+                    <ItineraryCard 
+                      key={index}
+                      activity={activity}
+                      isLast={index === day.activities.length - 1}
+                    />
+                  ))}
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
         
         {/* Trip Summary */}
         <div className="mt-16 p-6 bg-card rounded-xl border border-gray-200 shadow-sm">
