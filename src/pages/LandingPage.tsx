@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Star, MapPin, Users, Shield, Compass, Globe, Mail } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "@/components/Navbar";
 
 // Import existing images
 import parisHero from "@/assets/paris-hero.jpg";
@@ -110,25 +111,7 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-primary">Wanderly</h1>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-foreground hover:text-primary transition-colors">Tours</a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors">Destinations</a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors">About</a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors">Contact</a>
-            </div>
-            <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm">Sign In</Button>
-              <Button size="sm" className="bg-primary hover:bg-primary/90">Join Now</Button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
@@ -337,7 +320,7 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Wanderly</h3>
+              <h3 className="text-2xl font-bold text-primary mb-4">Imagine Beyond Travel</h3>
               <div className="space-y-3">
                 <a href="#" className="block hover:text-primary transition-colors">Support</a>
                 <a href="#" className="block hover:text-primary transition-colors">Help Center</a>
@@ -371,7 +354,7 @@ export default function LandingPage() {
           </div>
           
           <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm">&copy; 2024 Wanderly. All rights reserved.</p>
+            <p className="text-sm">&copy; 2024 Imagine Beyond Travel. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-primary transition-colors">
                 <Globe className="w-5 h-5" />
