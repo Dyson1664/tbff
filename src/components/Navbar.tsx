@@ -45,7 +45,11 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ml-auto">
             {/* Trips Dropdown */}
-            <div className="relative" {...tripsHandlers}>
+            <div 
+              className="relative"
+              onMouseEnter={() => setShowTripsDropdown(true)}
+              onMouseLeave={() => setShowTripsDropdown(false)}
+            >
               <Button 
                 variant="ghost" 
                 className="flex items-center gap-1 text-foreground hover:text-primary"
@@ -55,11 +59,8 @@ const Navbar = () => {
               </Button>
 
               {showTripsDropdown && (
-                <div 
-                  className="absolute top-full left-0 mt-0 w-96 bg-background border border-gray-200 rounded-lg shadow-lg z-50"
-                  {...tripsHandlers}
-                >
-                  <div className="absolute -top-2 left-0 right-0 h-2"></div>
+                <div className="absolute top-full left-0 w-96 bg-background border border-gray-200 rounded-lg shadow-lg z-50">
+                  <div className="absolute -top-1 left-0 right-0 h-1"></div>
                   <div className="py-1">
                     <div className="px-4 py-3 text-sm font-medium text-muted-foreground border-b border-gray-100">
                       Featured Trip Packages
@@ -92,7 +93,11 @@ const Navbar = () => {
 
 
             {/* Destinations Dropdown */}
-            <div className="relative" {...destinationsHandlers}>
+            <div 
+              className="relative"
+              onMouseEnter={() => setShowDestinationsDropdown(true)}
+              onMouseLeave={() => setShowDestinationsDropdown(false)}
+            >
               <Button 
                 variant="ghost" 
                 className="flex items-center gap-1 text-foreground hover:text-primary"
@@ -102,11 +107,8 @@ const Navbar = () => {
               </Button>
 
               {showDestinationsDropdown && (
-                <div 
-                  className="absolute top-full left-0 mt-0 w-80 bg-background border border-gray-200 rounded-lg shadow-lg z-50"
-                  {...destinationsHandlers}
-                >
-                  <div className="absolute -top-2 left-0 right-0 h-2"></div>
+                <div className="absolute top-full left-0 w-80 bg-background border border-gray-200 rounded-lg shadow-lg z-50">
+                  <div className="absolute -top-1 left-0 right-0 h-1"></div>
                   <div className="py-1">
                     <div className="px-4 py-3 text-sm font-medium text-muted-foreground border-b border-gray-100">
                       Popular Destinations
