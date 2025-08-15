@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showTripsDropdown, setShowTripsDropdown] = useState(false);
@@ -9,20 +10,20 @@ const Navbar = () => {
   const [mobileActiveDropdown, setMobileActiveDropdown] = useState<string | null>(null);
 
   const trips = [
-    { title: "Paris Adventure", duration: "6 Days", location: "France" },
-    { title: "Tokyo Discovery", duration: "8 Days", location: "Japan" },
-    { title: "Santorini Escape", duration: "5 Days", location: "Greece" },
-    { title: "New York Explorer", duration: "4 Days", location: "USA" },
-    { title: "Iceland Northern Lights", duration: "7 Days", location: "Iceland" }
+    { title: "Paris Adventure", duration: "6 Days", location: "France", link: "/paris-itinerary" },
+    { title: "Japan Journey", duration: "10 Days", location: "Japan", link: "/japan-itinerary" },
+    { title: "Thailand Discovery", duration: "8 Days", location: "Thailand", link: "/thailand-itinerary" },
+    { title: "Philippines Paradise", duration: "9 Days", location: "Philippines", link: "/philippines-itinerary" },
+    { title: "Sri Lanka Explorer", duration: "7 Days", location: "Sri Lanka", link: "/srilanka-itinerary" }
   ];
 
 
   const destinations = [
-    { city: "Paris", country: "France", tours: "15+ Tours" },
-    { city: "Tokyo", country: "Japan", tours: "12+ Tours" },
-    { city: "New York", country: "USA", tours: "20+ Tours" },
-    { city: "London", country: "UK", tours: "18+ Tours" },
-    { city: "Barcelona", country: "Spain", tours: "14+ Tours" }
+    { city: "Paris", country: "France", description: "Iconic landmarks & culture", link: "/paris-itinerary" },
+    { city: "Japan", country: "Asia", description: "Ancient traditions & modern cities", link: "/japan-itinerary" },
+    { city: "Thailand", country: "Asia", description: "Temples, beaches & culture", link: "/thailand-itinerary" },
+    { city: "Philippines", country: "Asia", description: "Tropical islands paradise", link: "/philippines-itinerary" },
+    { city: "Sri Lanka", country: "Asia", description: "Pearl of the Indian Ocean", link: "/srilanka-itinerary" }
   ];
 
   const createDropdownHandlers = (setter: (value: boolean) => void) => ({
@@ -38,9 +39,11 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Home Button */}
-          <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0">
-            Imagine Beyond Travel
-          </Button>
+          <Link to="/">
+            <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0">
+              Imagine Beyond Travel
+            </Button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8 ml-auto">
@@ -66,8 +69,9 @@ const Navbar = () => {
                       Featured Trip Packages
                     </div>
                     {trips.map((trip, index) => (
-                      <div 
+                      <Link 
                         key={index}
+                        to={trip.link}
                         className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
                       >
                         <div className="flex justify-between items-start">
@@ -79,7 +83,7 @@ const Navbar = () => {
                             {trip.duration}
                           </span>
                         </div>
-                      </div>
+                      </Link>
                     ))}
                     <div className="px-4 py-3 border-t border-gray-100">
                       <Button variant="link" className="text-primary p-0 h-auto font-medium">
@@ -114,20 +118,21 @@ const Navbar = () => {
                       Popular Destinations
                     </div>
                     {destinations.map((destination, index) => (
-                      <div 
+                      <Link 
                         key={index}
+                        to={destination.link}
                         className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
                       >
                         <div className="flex justify-between items-start">
                           <div>
                             <h4 className="font-medium text-foreground">{destination.city}</h4>
-                            <p className="text-sm text-muted-foreground">{destination.country}</p>
+                            <p className="text-sm text-muted-foreground">{destination.description}</p>
                           </div>
                           <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
-                            {destination.tours}
+                            {destination.country}
                           </span>
                         </div>
-                      </div>
+                      </Link>
                     ))}
                     <div className="px-4 py-3 border-t border-gray-100">
                       <Button variant="link" className="text-primary p-0 h-auto font-medium">
@@ -178,7 +183,7 @@ const Navbar = () => {
                 {mobileActiveDropdown === 'trips' && (
                   <div className="pl-4 space-y-1">
                     {trips.map((trip, index) => (
-                      <div key={index} className="py-2 px-2 hover:bg-muted rounded cursor-pointer">
+                      <Link key={index} to={trip.link} className="py-2 px-2 hover:bg-muted rounded cursor-pointer block">
                         <div className="flex justify-between items-start">
                           <div>
                             <h4 className="font-medium text-foreground text-sm">{trip.title}</h4>
@@ -188,7 +193,7 @@ const Navbar = () => {
                             {trip.duration}
                           </span>
                         </div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -209,17 +214,17 @@ const Navbar = () => {
                 {mobileActiveDropdown === 'destinations' && (
                   <div className="pl-4 space-y-1">
                     {destinations.map((destination, index) => (
-                      <div key={index} className="py-2 px-2 hover:bg-muted rounded cursor-pointer">
+                      <Link key={index} to={destination.link} className="py-2 px-2 hover:bg-muted rounded cursor-pointer block">
                         <div className="flex justify-between items-start">
                           <div>
                             <h4 className="font-medium text-foreground text-sm">{destination.city}</h4>
-                            <p className="text-xs text-muted-foreground">{destination.country}</p>
+                            <p className="text-xs text-muted-foreground">{destination.description}</p>
                           </div>
                           <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
-                            {destination.tours}
+                            {destination.country}
                           </span>
                         </div>
-                      </div>
+                      </Link>
                     ))}
                   </div>
                 )}
