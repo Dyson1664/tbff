@@ -4,7 +4,6 @@ import { ChevronDown, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [showTripsDropdown, setShowTripsDropdown] = useState(false);
-  const [showToursDropdown, setShowToursDropdown] = useState(false);
   const [showDestinationsDropdown, setShowDestinationsDropdown] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileActiveDropdown, setMobileActiveDropdown] = useState<string | null>(null);
@@ -17,13 +16,6 @@ const Navbar = () => {
     { title: "Iceland Northern Lights", duration: "7 Days", location: "Iceland" }
   ];
 
-  const tours = [
-    { title: "City Walking Tours", type: "Walking", duration: "3-4 Hours" },
-    { title: "Food & Wine Tours", type: "Culinary", duration: "5-6 Hours" },
-    { title: "Museum & Culture Tours", type: "Cultural", duration: "Half Day" },
-    { title: "Adventure Tours", type: "Adventure", duration: "Full Day" },
-    { title: "Private Tours", type: "Private", duration: "Custom" }
-  ];
 
   const destinations = [
     { city: "Paris", country: "France", tours: "15+ Tours" },
@@ -35,11 +27,10 @@ const Navbar = () => {
 
   const createDropdownHandlers = (setter: (value: boolean) => void) => ({
     onMouseEnter: () => setter(true),
-    onMouseLeave: () => setTimeout(() => setter(false), 300)
+    onMouseLeave: () => setter(false)
   });
 
   const tripsHandlers = createDropdownHandlers(setShowTripsDropdown);
-  const toursHandlers = createDropdownHandlers(setShowToursDropdown);
   const destinationsHandlers = createDropdownHandlers(setShowDestinationsDropdown);
 
   return (
@@ -66,8 +57,7 @@ const Navbar = () => {
               {showTripsDropdown && (
                 <div 
                   className="absolute top-full left-0 mt-0 w-96 bg-background border border-gray-200 rounded-lg shadow-lg z-50"
-                  onMouseEnter={() => setShowTripsDropdown(true)}
-                  onMouseLeave={() => setTimeout(() => setShowTripsDropdown(false), 150)}
+                  {...tripsHandlers}
                 >
                   <div className="absolute -top-2 left-0 right-0 h-2"></div>
                   <div className="py-1">
@@ -100,52 +90,6 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Tours Dropdown */}
-            <div className="relative" {...toursHandlers}>
-              <Button 
-                variant="ghost" 
-                className="flex items-center gap-1 text-foreground hover:text-primary"
-              >
-                Tours
-                <ChevronDown className="w-4 h-4" />
-              </Button>
-
-              {showToursDropdown && (
-                <div 
-                  className="absolute top-full left-0 mt-0 w-80 bg-background border border-gray-200 rounded-lg shadow-lg z-50"
-                  onMouseEnter={() => setShowToursDropdown(true)}
-                  onMouseLeave={() => setTimeout(() => setShowToursDropdown(false), 150)}
-                >
-                  <div className="absolute -top-2 left-0 right-0 h-2"></div>
-                  <div className="py-1">
-                    <div className="px-4 py-3 text-sm font-medium text-muted-foreground border-b border-gray-100">
-                      Tour Categories
-                    </div>
-                    {tours.map((tour, index) => (
-                      <div 
-                        key={index}
-                        className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
-                      >
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="font-medium text-foreground">{tour.title}</h4>
-                            <p className="text-sm text-muted-foreground">{tour.type}</p>
-                          </div>
-                          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
-                            {tour.duration}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                    <div className="px-4 py-3 border-t border-gray-100">
-                      <Button variant="link" className="text-primary p-0 h-auto font-medium">
-                        View All Tours →
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
 
             {/* Destinations Dropdown */}
             <div className="relative" {...destinationsHandlers}>
@@ -160,8 +104,7 @@ const Navbar = () => {
               {showDestinationsDropdown && (
                 <div 
                   className="absolute top-full left-0 mt-0 w-80 bg-background border border-gray-200 rounded-lg shadow-lg z-50"
-                  onMouseEnter={() => setShowDestinationsDropdown(true)}
-                  onMouseLeave={() => setTimeout(() => setShowDestinationsDropdown(false), 150)}
+                  {...destinationsHandlers}
                 >
                   <div className="absolute -top-2 left-0 right-0 h-2"></div>
                   <div className="py-1">
@@ -249,35 +192,6 @@ const Navbar = () => {
                 )}
               </div>
 
-              {/* Mobile Tours Menu */}
-              <div className="space-y-1">
-                <Button 
-                  variant="ghost" 
-                  className="w-full justify-start text-foreground hover:text-primary"
-                  onClick={() => setMobileActiveDropdown(mobileActiveDropdown === 'tours' ? null : 'tours')}
-                >
-                  Tours
-                  <ChevronDown className="w-4 h-4 ml-auto" />
-                </Button>
-                
-                {mobileActiveDropdown === 'tours' && (
-                  <div className="pl-4 space-y-1">
-                    {tours.map((tour, index) => (
-                      <div key={index} className="py-2 px-2 hover:bg-muted rounded cursor-pointer">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="font-medium text-foreground text-sm">{tour.title}</h4>
-                            <p className="text-xs text-muted-foreground">{tour.type}</p>
-                          </div>
-                          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
-                            {tour.duration}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
 
               {/* Mobile Destinations Menu */}
               <div className="space-y-1">
