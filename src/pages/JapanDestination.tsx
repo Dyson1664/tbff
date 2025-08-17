@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { MapPin, Clock, Users } from "lucide-react";
+import Navbar from "@/components/Navbar";
 import japanHeroImage from "@/assets/japan-hero.jpg";
 
 const JapanDestination = () => {
@@ -19,15 +20,24 @@ const JapanDestination = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navbar />
       {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-primary/20 to-primary-glow/30 flex items-center justify-center">
-        <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4">
-            Japan
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Experience the fascinating blend of ancient traditions and modern innovation
-          </p>
+      <section className="relative h-96 overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${japanHeroImage})` }}
+        >
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="container mx-auto px-6 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+              Japan
+            </h1>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Experience the fascinating blend of ancient traditions and modern innovation
+            </p>
+          </div>
         </div>
       </section>
 
