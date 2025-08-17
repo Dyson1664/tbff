@@ -9,6 +9,11 @@ import ThailandItinerary from "./pages/ThailandItinerary";
 import JapanItinerary from "./pages/JapanItinerary";
 import SriLankaItinerary from "./pages/SriLankaItinerary";
 import PhilippinesItinerary from "./pages/PhilippinesItinerary";
+import FranceDestination from "./pages/FranceDestination";
+import ThailandDestination from "./pages/ThailandDestination";
+import JapanDestination from "./pages/JapanDestination";
+import SriLankaDestination from "./pages/SriLankaDestination";
+import PhilippinesDestination from "./pages/PhilippinesDestination";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,11 +26,21 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          
+          {/* Destination Pages */}
+          <Route path="/france" element={<FranceDestination />} />
+          <Route path="/thailand" element={<ThailandDestination />} />
+          <Route path="/japan" element={<JapanDestination />} />
+          <Route path="/srilanka" element={<SriLankaDestination />} />
+          <Route path="/philippines" element={<PhilippinesDestination />} />
+          
+          {/* Individual Trip Pages */}
           <Route path="/paris-itinerary" element={<ParisItinerary />} />
           <Route path="/thailand-itinerary" element={<ThailandItinerary />} />
           <Route path="/japan-itinerary" element={<JapanItinerary />} />
           <Route path="/srilanka-itinerary" element={<SriLankaItinerary />} />
           <Route path="/philippines-itinerary" element={<PhilippinesItinerary />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

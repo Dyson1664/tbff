@@ -19,11 +19,11 @@ const Navbar = () => {
 
 
   const destinations = [
-    { city: "Paris", country: "France", description: "Iconic landmarks & culture", link: "/paris-itinerary" },
-    { city: "Japan", country: "Asia", description: "Ancient traditions & modern cities", link: "/japan-itinerary" },
-    { city: "Thailand", country: "Asia", description: "Temples, beaches & culture", link: "/thailand-itinerary" },
-    { city: "Philippines", country: "Asia", description: "Tropical islands paradise", link: "/philippines-itinerary" },
-    { city: "Sri Lanka", country: "Asia", description: "Pearl of the Indian Ocean", link: "/srilanka-itinerary" }
+    { city: "France", country: "Europe", description: "Iconic landmarks & culture", link: "/france" },
+    { city: "Japan", country: "Asia", description: "Ancient traditions & modern cities", link: "/japan" },
+    { city: "Thailand", country: "Asia", description: "Temples, beaches & culture", link: "/thailand" },
+    { city: "Philippines", country: "Asia", description: "Tropical islands paradise", link: "/philippines" },
+    { city: "Sri Lanka", country: "Asia", description: "Pearl of the Indian Ocean", link: "/srilanka" }
   ];
 
   const createDropdownHandlers = (setter: (value: boolean) => void) => ({
