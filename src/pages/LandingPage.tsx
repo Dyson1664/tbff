@@ -182,8 +182,14 @@ export default function LandingPage() {
                       <Link to="/paris-itinerary">
                         <Button size="sm" variant="outline">View Details</Button>
                       </Link>
+                    ) : tour.id === 2 ? (
+                      <Link to="/france">
+                        <Button size="sm" variant="outline">View Details</Button>
+                      </Link>
                     ) : (
-                      <Button size="sm" variant="outline">View Details</Button>
+                      <Link to="/thailand">
+                        <Button size="sm" variant="outline">View Details</Button>
+                      </Link>
                     )}
                   </div>
                 </CardContent>
