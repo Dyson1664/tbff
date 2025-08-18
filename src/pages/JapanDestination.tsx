@@ -56,13 +56,13 @@ const JapanDestination = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {trips.map((trip) => (
               <Card key={trip.id} className="overflow-hidden hover:shadow-coral transition-shadow duration-300">
-                <div className="relative h-64">
+                <Link to={trip.route} className="relative h-64 block">
                   <img 
                     src={trip.image} 
                     alt={trip.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
                   />
-                </div>
+                </Link>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
                     <MapPin className="h-4 w-4" />
