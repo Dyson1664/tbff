@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MapPin, Clock, Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import philippinesHeroImage from "@/assets/philippines-hero.jpg";
 
 const PhilippinesDestination = () => {
+  const navigate = useNavigate();
   const trips = [
     {
       id: "philippines-paradise",
@@ -56,13 +57,13 @@ const PhilippinesDestination = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {trips.map((trip) => (
               <Card key={trip.id} className="overflow-hidden hover:shadow-coral transition-shadow duration-300">
-                <Link to={trip.route} className="relative h-64 block">
+                <div className="relative h-64 cursor-pointer" onClick={() => navigate(trip.route)}>
                   <img 
                     src={trip.image} 
                     alt={trip.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   />
-                </Link>
+                </div>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 text-muted-foreground text-sm mb-2">
                     <MapPin className="h-4 w-4" />
