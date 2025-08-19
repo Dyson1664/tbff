@@ -14,6 +14,10 @@ import ThailandDestination from "./pages/ThailandDestination";
 import JapanDestination from "./pages/JapanDestination";
 import SriLankaDestination from "./pages/SriLankaDestination";
 import PhilippinesDestination from "./pages/PhilippinesDestination";
+import ColombiaDestination from "./pages/ColombiaDestination";
+import IndiaDestination from "./pages/IndiaDestination";
+import VietnamDestination from "./pages/VietnamDestination";
+import BhutanDestination from "./pages/BhutanDestination";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +37,10 @@ const App = () => (
           <Route path="/japan" element={<JapanDestination />} />
           <Route path="/srilanka" element={<SriLankaDestination />} />
           <Route path="/philippines" element={<PhilippinesDestination />} />
+          <Route path="/colombia" element={<ColombiaDestination />} />
+          <Route path="/india" element={<IndiaDestination />} />
+          <Route path="/vietnam" element={<VietnamDestination />} />
+          <Route path="/bhutan" element={<BhutanDestination />} />
           
           {/* Individual Trip Pages */}
           <Route path="/paris-itinerary" element={<ParisItinerary />} />
