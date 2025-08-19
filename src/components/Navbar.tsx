@@ -14,7 +14,11 @@ const Navbar = () => {
     { title: "Japan Journey", duration: "10 Days", location: "Japan", link: "/japan-itinerary" },
     { title: "Thailand Discovery", duration: "8 Days", location: "Thailand", link: "/thailand-itinerary" },
     { title: "Philippines Paradise", duration: "9 Days", location: "Philippines", link: "/philippines-itinerary" },
-    { title: "Sri Lanka Explorer", duration: "7 Days", location: "Sri Lanka", link: "/srilanka-itinerary" }
+    { title: "Sri Lanka Explorer", duration: "7 Days", location: "Sri Lanka", link: "/srilanka-itinerary" },
+    { title: "Colombia Coffee Trail", duration: "8 Days", location: "Colombia", link: "/colombia-itinerary" },
+    { title: "India Heritage Tour", duration: "12 Days", location: "India", link: "/india-itinerary" },
+    { title: "Bhutan Monastery Trek", duration: "9 Days", location: "Bhutan", link: "/bhutan-itinerary" },
+    { title: "Vietnam Culture Journey", duration: "10 Days", location: "Vietnam", link: "/vietnam-itinerary" }
   ];
 
 
