@@ -183,11 +183,11 @@ export default function LandingPage() {
                         <Button size="sm" variant="outline">View Details</Button>
                       </Link>
                     ) : tour.id === 2 ? (
-                      <Link to="/thailand">
+                      <Link to="/thailand-itinerary">
                         <Button size="sm" variant="outline">View Details</Button>
                       </Link>
                     ) : (
-                      <Link to="/srilanka">
+                      <Link to="/srilanka-itinerary">
                         <Button size="sm" variant="outline">View Details</Button>
                       </Link>
                     )}
