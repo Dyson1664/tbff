@@ -9,22 +9,17 @@ import thailandHeroImage from "@/assets/thailand-hero.jpg";
 import srilankaHeroImage from "@/assets/srilanka-hero.jpg";
 import philippinesHeroImage from "@/assets/philippines-hero.jpg";
 
-export interface Trip {
-  id: string;
-  title: string;
-  duration: string;
-  description: string;
-  image: string;
-  price: string;
-  route: string;
-}
+// Import country-specific itinerary data
+import { japanData } from "@/data/countries/japan";
+import { parisData } from "@/data/countries/paris";
+import { thailandData } from "@/data/countries/thailand";
+import { philippinesData } from "@/data/countries/philippines";
+import { srilankaData } from "@/data/countries/srilanka";
 
-export interface DestinationData {
-  country: string;
-  heroImage: string;
-  heroSubtitle: string;
-  trips: Trip[];
-}
+// Import types
+import { DestinationData, ItineraryData } from "@/data/types";
+
+export type { Trip, DestinationData, ItineraryData } from "@/data/types";
 
 export const destinationsData: Record<string, DestinationData> = {
   japan: {
@@ -41,7 +36,8 @@ export const destinationsData: Record<string, DestinationData> = {
         price: "From $2,499",
         route: "/japan-itinerary"
       }
-    ]
+    ],
+    itinerary: japanData
   },
   france: {
     country: "France",
@@ -57,7 +53,8 @@ export const destinationsData: Record<string, DestinationData> = {
         price: "From $1,899",
         route: "/paris-itinerary"
       }
-    ]
+    ],
+    itinerary: parisData
   },
   india: {
     country: "India",
@@ -137,7 +134,8 @@ export const destinationsData: Record<string, DestinationData> = {
         price: "From $1,599",
         route: "/thailand-itinerary"
       }
-    ]
+    ],
+    itinerary: thailandData
   },
   srilanka: {
     country: "Sri Lanka",
@@ -153,7 +151,8 @@ export const destinationsData: Record<string, DestinationData> = {
         price: "From $1,299",
         route: "/srilanka-itinerary"
       }
-    ]
+    ],
+    itinerary: srilankaData
   },
   philippines: {
     country: "Philippines",
@@ -169,6 +168,7 @@ export const destinationsData: Record<string, DestinationData> = {
         price: "From $1,699",
         route: "/philippines-itinerary"
       }
-    ]
+    ],
+    itinerary: philippinesData
   }
 };
