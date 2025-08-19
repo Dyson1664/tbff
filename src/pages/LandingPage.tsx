@@ -9,8 +9,8 @@ import Navbar from "@/components/Navbar";
 import parisHero from "@/assets/paris-hero.jpg";
 import parisStreet from "@/assets/paris-street.jpg";
 import parisSeine from "@/assets/paris-seine.jpg";
-import day1Morning from "@/assets/day1-morning.jpg";
-import day2Morning from "@/assets/day2-morning.jpg";
+import thailandHero from "@/assets/thailand-hero.jpg";
+import srilankaHero from "@/assets/srilanka-hero.jpg";
 import day3Morning from "@/assets/day3-morning.jpg";
 
 export default function LandingPage() {
@@ -30,37 +30,37 @@ export default function LandingPage() {
     },
     {
       id: 2,
-      title: "Rome Cultural Journey",
-      location: "Rome, Italy", 
-      duration: "5 days",
+      title: "Thailand Discovery",
+      location: "Bangkok, Thailand", 
+      duration: "7 days",
       rating: 4.8,
       reviews: 89,
-      price: "From €950",
-      image: day1Morning,
+      price: "From $950",
+      image: thailandHero,
       tag: "NEW"
     },
     {
       id: 3,
-      title: "Barcelona Explorer",
-      location: "Barcelona, Spain",
-      duration: "4 days", 
+      title: "Sri Lanka Explorer",
+      location: "Colombo, Sri Lanka",
+      duration: "6 days", 
       rating: 4.7,
       reviews: 156,
-      price: "From €750",
-      image: day2Morning,
+      price: "From $850",
+      image: srilankaHero,
       tag: "FEATURED"
     }
   ];
 
   const destinations = [
     { name: "Paris", image: parisStreet },
-    { name: "Rome", image: day1Morning },
-    { name: "Barcelona", image: day2Morning },
+    { name: "Thailand", image: thailandHero },
+    { name: "Sri Lanka", image: srilankaHero },
     { name: "Amsterdam", image: day3Morning },
     { name: "Prague", image: parisSeine },
     { name: "Vienna", image: parisHero },
     { name: "Budapest", image: parisStreet },
-    { name: "Berlin", image: day1Morning }
+    { name: "Berlin", image: day3Morning }
   ];
 
   const testimonials = [
@@ -183,11 +183,11 @@ export default function LandingPage() {
                         <Button size="sm" variant="outline">View Details</Button>
                       </Link>
                     ) : tour.id === 2 ? (
-                      <Link to="/france">
+                      <Link to="/thailand">
                         <Button size="sm" variant="outline">View Details</Button>
                       </Link>
                     ) : (
-                      <Link to="/thailand">
+                      <Link to="/srilanka">
                         <Button size="sm" variant="outline">View Details</Button>
                       </Link>
                     )}
