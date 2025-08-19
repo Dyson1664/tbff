@@ -1,4 +1,5 @@
 import { Calendar } from "lucide-react";
+import { memo } from "react";
 
 interface DayHeaderProps {
   dayNumber: number;
@@ -6,7 +7,7 @@ interface DayHeaderProps {
   title: string;
 }
 
-export const DayHeader = ({ dayNumber, date, title }: DayHeaderProps) => {
+export const DayHeader = memo(({ dayNumber, date, title }: DayHeaderProps) => {
   return (
     <div className="mb-8 animate-fade-in">
       <div className="flex items-center gap-4 mb-2">
@@ -24,4 +25,4 @@ export const DayHeader = ({ dayNumber, date, title }: DayHeaderProps) => {
       <div className="h-px bg-gradient-to-r from-primary via-primary/20 to-transparent" />
     </div>
   );
-};
+});
