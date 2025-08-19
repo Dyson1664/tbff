@@ -1,45 +1,111 @@
-import { useState } from "react";
+import { useState, useCallback, useMemo, memo } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import { NAVIGATION_TRIPS, NAVIGATION_DESTINATIONS } from "@/data/navigation";
 
-const Navbar = () => {
+// Memoized dropdown item component
+const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) => (
+  <Link 
+    to={trip.link}
+    className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
+  >
+    <div className="flex justify-between items-start">
+      <div>
+        <h4 className="font-medium text-foreground">{trip.title}</h4>
+        <p className="text-sm text-muted-foreground">{trip.location}</p>
+      </div>
+      <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
+        {trip.duration}
+      </span>
+    </div>
+  </Link>
+));
+
+const DropdownDestinationItem = memo(({ destination }: { destination: typeof NAVIGATION_DESTINATIONS[0] }) => (
+  <Link 
+    to={destination.link}
+    className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
+  >
+    <div className="flex justify-between items-start">
+      <div>
+        <h4 className="font-medium text-foreground">{destination.city}</h4>
+        <p className="text-sm text-muted-foreground">{destination.description}</p>
+      </div>
+      <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
+        {destination.country}
+      </span>
+    </div>
+  </Link>
+));
+
+const Navbar = memo(() => {
   const [showTripsDropdown, setShowTripsDropdown] = useState(false);
   const [showDestinationsDropdown, setShowDestinationsDropdown] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileActiveDropdown, setMobileActiveDropdown] = useState<string | null>(null);
 
-  const trips = [
-    { title: "Paris Adventure", duration: "6 Days", location: "France", link: "/paris-itinerary" },
-    { title: "Japan Journey", duration: "10 Days", location: "Japan", link: "/japan-itinerary" },
-    { title: "Thailand Discovery", duration: "8 Days", location: "Thailand", link: "/thailand-itinerary" },
-    { title: "Philippines Paradise", duration: "9 Days", location: "Philippines", link: "/philippines-itinerary" },
-    { title: "Sri Lanka Explorer", duration: "7 Days", location: "Sri Lanka", link: "/srilanka-itinerary" },
-    { title: "Colombia Coffee Trail", duration: "8 Days", location: "Colombia", link: "/colombia-itinerary" },
-    { title: "India Heritage Tour", duration: "12 Days", location: "India", link: "/india-itinerary" },
-    { title: "Bhutan Monastery Trek", duration: "9 Days", location: "Bhutan", link: "/bhutan-itinerary" },
-    { title: "Vietnam Culture Journey", duration: "10 Days", location: "Vietnam", link: "/vietnam-itinerary" }
-  ];
+  // Memoized event handlers to prevent recreation on every render
+  const handleTripsMouseEnter = useCallback(() => setShowTripsDropdown(true), []);
+  const handleTripsMouseLeave = useCallback(() => setShowTripsDropdown(false), []);
+  const handleDestinationsMouseEnter = useCallback(() => setShowDestinationsDropdown(true), []);
+  const handleDestinationsMouseLeave = useCallback(() => setShowDestinationsDropdown(false), []);
+  
+  const toggleMobileMenu = useCallback(() => setIsMobileMenuOpen(prev => !prev), []);
+  const toggleMobileTrips = useCallback(() => {
+    setMobileActiveDropdown(prev => prev === 'trips' ? null : 'trips');
+  }, []);
+  const toggleMobileDestinations = useCallback(() => {
+    setMobileActiveDropdown(prev => prev === 'destinations' ? null : 'destinations');
+  }, []);
 
+  // Memoized trip items to prevent recreation
+  const tripItems = useMemo(() => 
+    NAVIGATION_TRIPS.map((trip, index) => (
+      <DropdownTripItem key={`${trip.link}-${index}`} trip={trip} />
+    )), []
+  );
 
-  const destinations = [
-    { city: "Thailand", country: "Asia", description: "Temples, beaches & culture", link: "/thailand" },
-    { city: "Sri Lanka", country: "Asia", description: "Pearl of the Indian Ocean", link: "/srilanka" },
-    { city: "Philippines", country: "Asia", description: "Tropical islands paradise", link: "/philippines" },
-    { city: "Japan", country: "Asia", description: "Ancient traditions & modern cities", link: "/japan" },
-    { city: "Colombia", country: "South America", description: "Coffee culture & vibrant cities", link: "/colombia" },
-    { city: "India", country: "Asia", description: "Rich heritage & diverse culture", link: "/india" },
-    { city: "Bhutan", country: "Asia", description: "Land of the Thunder Dragon", link: "/bhutan" },
-    { city: "Vietnam", country: "Asia", description: "Historic charm & natural beauty", link: "/vietnam" }
-  ];
+  // Memoized destination items
+  const destinationItems = useMemo(() => 
+    NAVIGATION_DESTINATIONS.map((destination, index) => (
+      <DropdownDestinationItem key={`${destination.link}-${index}`} destination={destination} />
+    )), []
+  );
 
-  const createDropdownHandlers = (setter: (value: boolean) => void) => ({
-    onMouseEnter: () => setter(true),
-    onMouseLeave: () => setter(false)
-  });
+  // Memoized mobile trip items
+  const mobileTripsItems = useMemo(() => 
+    NAVIGATION_TRIPS.map((trip, index) => (
+      <Link key={`mobile-${trip.link}-${index}`} to={trip.link} className="py-2 px-2 hover:bg-muted rounded cursor-pointer block">
+        <div className="flex justify-between items-start">
+          <div>
+            <h4 className="font-medium text-foreground text-sm">{trip.title}</h4>
+            <p className="text-xs text-muted-foreground">{trip.location}</p>
+          </div>
+          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
+            {trip.duration}
+          </span>
+        </div>
+      </Link>
+    )), []
+  );
 
-  const tripsHandlers = createDropdownHandlers(setShowTripsDropdown);
-  const destinationsHandlers = createDropdownHandlers(setShowDestinationsDropdown);
+  // Memoized mobile destination items
+  const mobileDestinationItems = useMemo(() => 
+    NAVIGATION_DESTINATIONS.map((destination, index) => (
+      <Link key={`mobile-${destination.link}-${index}`} to={destination.link} className="py-2 px-2 hover:bg-muted rounded cursor-pointer block">
+        <div className="flex justify-between items-start">
+          <div>
+            <h4 className="font-medium text-foreground text-sm">{destination.city}</h4>
+            <p className="text-xs text-muted-foreground">{destination.description}</p>
+          </div>
+          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
+            {destination.country}
+          </span>
+        </div>
+      </Link>
+    )), []
+  );
 
   return (
     <nav className="bg-background border-b border-gray-200 sticky top-0 z-50 shadow-sm">
@@ -57,8 +123,8 @@ const Navbar = () => {
             {/* Trips Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setShowTripsDropdown(true)}
-              onMouseLeave={() => setShowTripsDropdown(false)}
+              onMouseEnter={handleTripsMouseEnter}
+              onMouseLeave={handleTripsMouseLeave}
             >
               <Button 
                 variant="ghost" 
@@ -69,29 +135,13 @@ const Navbar = () => {
               </Button>
 
               {showTripsDropdown && (
-                <div className="absolute top-full left-0 w-96 bg-background border border-gray-200 rounded-lg shadow-lg z-50">
+                <div className="absolute top-full left-0 w-96 bg-background border border-gray-200 rounded-lg shadow-xl z-[100] backdrop-blur-sm">
                   <div className="absolute -top-1 left-0 right-0 h-1"></div>
                   <div className="py-1">
                     <div className="px-4 py-3 text-sm font-medium text-muted-foreground border-b border-gray-100">
                       Featured Trip Packages
                     </div>
-                    {trips.map((trip, index) => (
-                      <Link 
-                        key={index}
-                        to={trip.link}
-                        className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
-                      >
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="font-medium text-foreground">{trip.title}</h4>
-                            <p className="text-sm text-muted-foreground">{trip.location}</p>
-                          </div>
-                          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
-                            {trip.duration}
-                          </span>
-                        </div>
-                      </Link>
-                    ))}
+                    {tripItems}
                     <div className="px-4 py-3 border-t border-gray-100">
                       <Button variant="link" className="text-primary p-0 h-auto font-medium">
                         View All Trips →
@@ -106,8 +156,8 @@ const Navbar = () => {
             {/* Destinations Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setShowDestinationsDropdown(true)}
-              onMouseLeave={() => setShowDestinationsDropdown(false)}
+              onMouseEnter={handleDestinationsMouseEnter}
+              onMouseLeave={handleDestinationsMouseLeave}
             >
               <Button 
                 variant="ghost" 
@@ -118,29 +168,13 @@ const Navbar = () => {
               </Button>
 
               {showDestinationsDropdown && (
-                <div className="absolute top-full left-0 w-80 bg-background border border-gray-200 rounded-lg shadow-lg z-50">
+                <div className="absolute top-full left-0 w-80 bg-background border border-gray-200 rounded-lg shadow-xl z-[100] backdrop-blur-sm">
                   <div className="absolute -top-1 left-0 right-0 h-1"></div>
                   <div className="py-1">
                     <div className="px-4 py-3 text-sm font-medium text-muted-foreground border-b border-gray-100">
                       Popular Destinations
                     </div>
-                    {destinations.map((destination, index) => (
-                      <Link 
-                        key={index}
-                        to={destination.link}
-                        className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
-                      >
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="font-medium text-foreground">{destination.city}</h4>
-                            <p className="text-sm text-muted-foreground">{destination.description}</p>
-                          </div>
-                          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
-                            {destination.country}
-                          </span>
-                        </div>
-                      </Link>
-                    ))}
+                    {destinationItems}
                     <div className="px-4 py-3 border-t border-gray-100">
                       <Button variant="link" className="text-primary p-0 h-auto font-medium">
                         View All Destinations →
@@ -164,7 +198,7 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              onClick={toggleMobileMenu}
               className="text-foreground"
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -181,7 +215,7 @@ const Navbar = () => {
                 <Button 
                   variant="ghost" 
                   className="w-full justify-start text-foreground hover:text-primary"
-                  onClick={() => setMobileActiveDropdown(mobileActiveDropdown === 'trips' ? null : 'trips')}
+                  onClick={toggleMobileTrips}
                 >
                   Trips
                   <ChevronDown className="w-4 h-4 ml-auto" />
@@ -189,19 +223,7 @@ const Navbar = () => {
                 
                 {mobileActiveDropdown === 'trips' && (
                   <div className="pl-4 space-y-1">
-                    {trips.map((trip, index) => (
-                      <Link key={index} to={trip.link} className="py-2 px-2 hover:bg-muted rounded cursor-pointer block">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="font-medium text-foreground text-sm">{trip.title}</h4>
-                            <p className="text-xs text-muted-foreground">{trip.location}</p>
-                          </div>
-                          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
-                            {trip.duration}
-                          </span>
-                        </div>
-                      </Link>
-                    ))}
+                    {mobileTripsItems}
                   </div>
                 )}
               </div>
@@ -212,7 +234,7 @@ const Navbar = () => {
                 <Button 
                   variant="ghost" 
                   className="w-full justify-start text-foreground hover:text-primary"
-                  onClick={() => setMobileActiveDropdown(mobileActiveDropdown === 'destinations' ? null : 'destinations')}
+                  onClick={toggleMobileDestinations}
                 >
                   Destinations
                   <ChevronDown className="w-4 h-4 ml-auto" />
@@ -220,19 +242,7 @@ const Navbar = () => {
                 
                 {mobileActiveDropdown === 'destinations' && (
                   <div className="pl-4 space-y-1">
-                    {destinations.map((destination, index) => (
-                      <Link key={index} to={destination.link} className="py-2 px-2 hover:bg-muted rounded cursor-pointer block">
-                        <div className="flex justify-between items-start">
-                          <div>
-                            <h4 className="font-medium text-foreground text-sm">{destination.city}</h4>
-                            <p className="text-xs text-muted-foreground">{destination.description}</p>
-                          </div>
-                          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
-                            {destination.country}
-                          </span>
-                        </div>
-                      </Link>
-                    ))}
+                    {mobileDestinationItems}
                   </div>
                 )}
               </div>
@@ -249,6 +259,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+});
 
 export default Navbar;

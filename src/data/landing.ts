@@ -1,0 +1,151 @@
+// Static landing page data extracted for better performance
+
+// Import existing images
+import parisHero from "@/assets/paris-hero.jpg";
+import parisStreet from "@/assets/paris-street.jpg";
+import parisSeine from "@/assets/paris-seine.jpg";
+import thailandHero from "@/assets/thailand-hero.jpg";
+import srilankaHero from "@/assets/srilanka-hero.jpg";
+import philippinesHero from "@/assets/philippines-hero.jpg";
+import japanHero from "@/assets/japan-hero.jpg";
+import colombiaHero from "@/assets/colombia-hero.jpg";
+import indiaHero from "@/assets/india-hero.jpg";
+import bhutanHero from "@/assets/bhutan-hero.jpg";
+import vietnamHero from "@/assets/vietnam-hero.jpg";
+import { Star, MapPin, Users, Shield, Compass, Globe, Mail } from "lucide-react";
+
+export interface FeaturedTour {
+  id: number;
+  title: string;
+  location: string;
+  duration: string;
+  rating: number;
+  reviews: number;
+  price: string;
+  image: string;
+  tag: string;
+}
+
+export interface Destination {
+  name: string;
+  image: string;
+  route: string;
+}
+
+export interface Testimonial {
+  name: string;
+  avatar: string;
+  rating: number;
+  date: string;
+  text: string;
+  location: string;
+}
+
+export interface Feature {
+  icon: typeof Users;
+  title: string;
+  description: string;
+}
+
+// Extract featured tours to module level
+export const FEATURED_TOURS: readonly FeaturedTour[] = [
+  {
+    id: 1,
+    title: "Paris Discovery Tour",
+    location: "Paris, France",
+    duration: "6 days",
+    rating: 4.9,
+    reviews: 127,
+    price: "From €1100",
+    image: parisHero,
+    tag: "POPULAR"
+  },
+  {
+    id: 2,
+    title: "Thailand Discovery",
+    location: "Bangkok, Thailand", 
+    duration: "7 days",
+    rating: 4.8,
+    reviews: 89,
+    price: "From $950",
+    image: thailandHero,
+    tag: "NEW"
+  },
+  {
+    id: 3,
+    title: "Sri Lanka Explorer",
+    location: "Colombo, Sri Lanka",
+    duration: "6 days", 
+    rating: 4.7,
+    reviews: 156,
+    price: "From $850",
+    image: srilankaHero,
+    tag: "FEATURED"
+  }
+] as const;
+
+// Extract destinations to module level
+export const DESTINATIONS: readonly Destination[] = [
+  { name: "Thailand", image: thailandHero, route: "/thailand" },
+  { name: "Sri Lanka", image: srilankaHero, route: "/srilanka" },
+  { name: "Philippines", image: philippinesHero, route: "/philippines" },
+  { name: "Japan", image: japanHero, route: "/japan" },
+  { name: "Colombia", image: colombiaHero, route: "/colombia" },
+  { name: "India", image: indiaHero, route: "/india" },
+  { name: "Bhutan", image: bhutanHero, route: "/bhutan" },
+  { name: "Vietnam", image: vietnamHero, route: "/vietnam" }
+] as const;
+
+// Extract testimonials to module level
+export const TESTIMONIALS: readonly Testimonial[] = [
+  {
+    name: "Emma Wilson",
+    avatar: "EW",
+    rating: 5,
+    date: "Dec 2024",
+    text: "An amazing trip! The itinerary was perfectly planned and every detail was taken care of. The local guides were exceptional and really made the experience memorable.",
+    location: "London, UK"
+  },
+  {
+    name: "Marco Rodriguez", 
+    avatar: "MR",
+    rating: 5,
+    date: "Nov 2024", 
+    text: "Incredible value for money and outstanding service. The accommodations were beautiful and the experiences were truly authentic. Highly recommend!",
+    location: "Madrid, Spain"
+  },
+  {
+    name: "Sarah Chen",
+    avatar: "SC", 
+    rating: 5,
+    date: "Oct 2024",
+    text: "Perfect for solo travelers! I felt safe and supported throughout the entire journey. Met wonderful people and created memories that will last a lifetime.",
+    location: "Toronto, Canada"
+  }
+] as const;
+
+// Extract features to module level
+export const FEATURES: readonly Feature[] = [
+  {
+    icon: Users,
+    title: "Social Travel",
+    description: "Connect with like-minded travelers and make lifelong friends on your journey"
+  },
+  {
+    icon: Compass,
+    title: "Expert Guides", 
+    description: "Local experts who know hidden gems and authentic experiences off the beaten path"
+  },
+  {
+    icon: Shield,
+    title: "Safe & Secure",
+    description: "24/7 support and carefully vetted accommodations for your peace of mind"
+  }
+] as const;
+
+// Tour route mappings for efficient lookups
+export const TOUR_ROUTES: Record<number, string> = {
+  1: "/paris-itinerary",
+  2: "/thailand-itinerary", 
+  3: "/srilanka-itinerary"
+} as const;

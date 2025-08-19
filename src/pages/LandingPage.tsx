@@ -1,118 +1,142 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, MapPin, Users, Shield, Compass, Globe, Mail } from "lucide-react";
-import { useState } from "react";
+import { Star, MapPin, Globe, Mail } from "lucide-react";
+import { useState, useCallback, useMemo, memo } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { 
+  FEATURED_TOURS, 
+  DESTINATIONS, 
+  TESTIMONIALS, 
+  FEATURES, 
+  TOUR_ROUTES 
+} from "@/data/landing";
 
-// Import existing images
+// Import static images
 import parisHero from "@/assets/paris-hero.jpg";
-import parisStreet from "@/assets/paris-street.jpg";
 import parisSeine from "@/assets/paris-seine.jpg";
-import thailandHero from "@/assets/thailand-hero.jpg";
-import srilankaHero from "@/assets/srilanka-hero.jpg";
-import philippinesHero from "@/assets/philippines-hero.jpg";
-import japanHero from "@/assets/japan-hero.jpg";
-import colombiaHero from "@/assets/colombia-hero.jpg";
-import indiaHero from "@/assets/india-hero.jpg";
-import bhutanHero from "@/assets/bhutan-hero.jpg";
-import vietnamHero from "@/assets/vietnam-hero.jpg";
-import day3Morning from "@/assets/day3-morning.jpg";
 
-export default function LandingPage() {
+// Memoized tour card component
+const TourCard = memo(({ tour }: { tour: typeof FEATURED_TOURS[0] }) => (
+  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+    <div className="relative aspect-[4/3] overflow-hidden">
+      <img 
+        src={tour.image} 
+        alt={tour.title}
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+      <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
+        {tour.tag}
+      </div>
+      <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full">
+        <div className="flex items-center gap-1">
+          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+          <span className="text-sm font-medium">{tour.rating}</span>
+        </div>
+      </div>
+    </div>
+    <CardContent className="p-6">
+      <div className="flex items-start justify-between mb-2">
+        <h3 className="text-xl font-semibold text-foreground">{tour.title}</h3>
+      </div>
+      <div className="flex items-center gap-2 text-muted-foreground mb-2">
+        <MapPin className="w-4 h-4" />
+        <span className="text-sm">{tour.location}</span>
+      </div>
+      <p className="text-sm text-muted-foreground mb-4">{tour.duration} • {tour.reviews} reviews</p>
+      <div className="flex items-center justify-between">
+        <span className="text-lg font-bold text-foreground">{tour.price}</span>
+        <Link to={TOUR_ROUTES[tour.id]}>
+          <Button size="sm" variant="outline">View Details</Button>
+        </Link>
+      </div>
+    </CardContent>
+  </Card>
+));
+
+// Memoized destination card component  
+const DestinationCard = memo(({ destination }: { destination: typeof DESTINATIONS[0] }) => (
+  <Link
+    to={destination.route}
+    className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
+  >
+    <img 
+      src={destination.image} 
+      alt={destination.name}
+      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+    />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+    <div className="absolute bottom-4 left-4">
+      <h3 className="text-white font-semibold text-lg">{destination.name}</h3>
+    </div>
+  </Link>
+));
+
+// Memoized testimonial card component
+const TestimonialCard = memo(({ testimonial }: { testimonial: typeof TESTIMONIALS[0] }) => (
+  <Card className="p-6">
+    <div className="flex items-center gap-1 mb-4">
+      {[...Array(testimonial.rating)].map((_, i) => (
+        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+      ))}
+      <span className="text-sm text-muted-foreground ml-2">{testimonial.date}</span>
+    </div>
+    <p className="text-muted-foreground mb-6 leading-relaxed">{testimonial.text}</p>
+    <div className="flex items-center gap-3">
+      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+        <span className="text-primary-foreground font-medium text-sm">{testimonial.avatar}</span>
+      </div>
+      <div>
+        <p className="font-medium text-foreground">{testimonial.name}</p>
+        <p className="text-sm text-muted-foreground">{testimonial.location}</p>
+      </div>
+    </div>
+  </Card>
+));
+
+// Memoized feature card component
+const FeatureCard = memo(({ feature }: { feature: typeof FEATURES[0] }) => (
+  <div className="text-center">
+    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+      <feature.icon className="w-8 h-8 text-primary-foreground" />
+    </div>
+    <h3 className="text-xl font-semibold text-foreground mb-4">{feature.title}</h3>
+    <p className="text-muted-foreground">{feature.description}</p>
+  </div>
+));
+
+export default memo(function LandingPage() {
   const [email, setEmail] = useState("");
 
-  const featuredTours = [
-    {
-      id: 1,
-      title: "Paris Discovery Tour",
-      location: "Paris, France",
-      duration: "6 days",
-      rating: 4.9,
-      reviews: 127,
-      price: "From €1100",
-      image: parisHero,
-      tag: "POPULAR"
-    },
-    {
-      id: 2,
-      title: "Thailand Discovery",
-      location: "Bangkok, Thailand", 
-      duration: "7 days",
-      rating: 4.8,
-      reviews: 89,
-      price: "From $950",
-      image: thailandHero,
-      tag: "NEW"
-    },
-    {
-      id: 3,
-      title: "Sri Lanka Explorer",
-      location: "Colombo, Sri Lanka",
-      duration: "6 days", 
-      rating: 4.7,
-      reviews: 156,
-      price: "From $850",
-      image: srilankaHero,
-      tag: "FEATURED"
-    }
-  ];
+  // Memoized email change handler
+  const handleEmailChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  }, []);
 
-  const destinations = [
-    { name: "Thailand", image: thailandHero, route: "/thailand" },
-    { name: "Sri Lanka", image: srilankaHero, route: "/srilanka" },
-    { name: "Philippines", image: philippinesHero, route: "/philippines" },
-    { name: "Japan", image: japanHero, route: "/japan" },
-    { name: "Colombia", image: colombiaHero, route: "/colombia" },
-    { name: "India", image: indiaHero, route: "/india" },
-    { name: "Bhutan", image: bhutanHero, route: "/bhutan" },
-    { name: "Vietnam", image: vietnamHero, route: "/vietnam" }
-  ];
+  // Memoized component arrays to prevent recreation on every render
+  const tourCards = useMemo(() => 
+    FEATURED_TOURS.map((tour) => (
+      <TourCard key={tour.id} tour={tour} />
+    )), []
+  );
 
-  const testimonials = [
-    {
-      name: "Emma Wilson",
-      avatar: "EW",
-      rating: 5,
-      date: "Dec 2024",
-      text: "An amazing trip! The itinerary was perfectly planned and every detail was taken care of. The local guides were exceptional and really made the experience memorable.",
-      location: "London, UK"
-    },
-    {
-      name: "Marco Rodriguez", 
-      avatar: "MR",
-      rating: 5,
-      date: "Nov 2024", 
-      text: "Incredible value for money and outstanding service. The accommodations were beautiful and the experiences were truly authentic. Highly recommend!",
-      location: "Madrid, Spain"
-    },
-    {
-      name: "Sarah Chen",
-      avatar: "SC", 
-      rating: 5,
-      date: "Oct 2024",
-      text: "Perfect for solo travelers! I felt safe and supported throughout the entire journey. Met wonderful people and created memories that will last a lifetime.",
-      location: "Toronto, Canada"
-    }
-  ];
+  const destinationCards = useMemo(() => 
+    DESTINATIONS.map((destination, index) => (
+      <DestinationCard key={`${destination.name}-${index}`} destination={destination} />
+    )), []
+  );
 
-  const features = [
-    {
-      icon: Users,
-      title: "Social Travel",
-      description: "Connect with like-minded travelers and make lifelong friends on your journey"
-    },
-    {
-      icon: Compass,
-      title: "Expert Guides", 
-      description: "Local experts who know hidden gems and authentic experiences off the beaten path"
-    },
-    {
-      icon: Shield,
-      title: "Safe & Secure",
-      description: "24/7 support and carefully vetted accommodations for your peace of mind"
-    }
-  ];
+  const testimonialCards = useMemo(() => 
+    TESTIMONIALS.map((testimonial, index) => (
+      <TestimonialCard key={`${testimonial.name}-${index}`} testimonial={testimonial} />
+    )), []
+  );
+
+  const featureCards = useMemo(() => 
+    FEATURES.map((feature, index) => (
+      <FeatureCard key={`${feature.title}-${index}`} feature={feature} />
+    )), []
+  );
 
   return (
     <div className="min-h-screen bg-background">
@@ -155,52 +179,7 @@ export default function LandingPage() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredTours.map((tour) => (
-              <Card key={tour.id} className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
-                <div className="relative aspect-[4/3] overflow-hidden">
-                  <img 
-                    src={tour.image} 
-                    alt={tour.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-                    {tour.tag}
-                  </div>
-                  <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm font-medium">{tour.rating}</span>
-                    </div>
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between mb-2">
-                    <h3 className="text-xl font-semibold text-foreground">{tour.title}</h3>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground mb-2">
-                    <MapPin className="w-4 h-4" />
-                    <span className="text-sm">{tour.location}</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">{tour.duration} • {tour.reviews} reviews</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-foreground">{tour.price}</span>
-                    {tour.id === 1 ? (
-                      <Link to="/paris-itinerary">
-                        <Button size="sm" variant="outline">View Details</Button>
-                      </Link>
-                    ) : tour.id === 2 ? (
-                      <Link to="/thailand-itinerary">
-                        <Button size="sm" variant="outline">View Details</Button>
-                      </Link>
-                    ) : (
-                      <Link to="/srilanka-itinerary">
-                        <Button size="sm" variant="outline">View Details</Button>
-                      </Link>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+            {tourCards}
           </div>
         </div>
       </section>
@@ -214,23 +193,7 @@ export default function LandingPage() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {destinations.map((destination, index) => (
-              <Link
-                key={index}
-                to={destination.route}
-                className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
-              >
-                <img 
-                  src={destination.image} 
-                  alt={destination.name}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-semibold text-lg">{destination.name}</h3>
-                </div>
-              </Link>
-            ))}
+            {destinationCards}
           </div>
         </div>
       </section>
@@ -244,26 +207,7 @@ export default function LandingPage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-6">
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                  <span className="text-sm text-muted-foreground ml-2">{testimonial.date}</span>
-                </div>
-                <p className="text-muted-foreground mb-6 leading-relaxed">{testimonial.text}</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-primary-foreground font-medium text-sm">{testimonial.avatar}</span>
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
+            {testimonialCards}
           </div>
         </div>
       </section>
@@ -277,15 +221,7 @@ export default function LandingPage() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
-                  <feature.icon className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <h3 className="text-xl font-semibold text-foreground mb-4">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </div>
-            ))}
+            {featureCards}
           </div>
         </div>
       </section>
@@ -313,7 +249,7 @@ export default function LandingPage() {
                   type="email"
                   placeholder="Enter your email"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={handleEmailChange}
                   className="flex-1 px-4 py-3 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 />
                 <Button className="bg-primary hover:bg-primary/90 px-6">
@@ -381,4 +317,4 @@ export default function LandingPage() {
       </footer>
     </div>
   );
-}
+});
