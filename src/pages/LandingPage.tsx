@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, MapPin, Globe, Mail } from "lucide-react";
+import { Globe, Mail } from "lucide-react";
 import { useState, useCallback, useMemo, memo } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import { HeroSection } from "@/components/common/HeroSection";
+import { TripCard } from "@/components/common/TripCard";
+import { TestimonialCard } from "@/components/common/TestimonialCard";
 import { 
   FEATURED_TOURS, 
   DESTINATIONS, 
@@ -16,43 +18,6 @@ import {
 import parisHero from "@/assets/paris-hero.jpg";
 import parisSeine from "@/assets/paris-seine.jpg";
 
-// Memoized tour card component
-const TourCard = memo(({ tour }: { tour: typeof FEATURED_TOURS[0] }) => (
-  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
-    <div className="relative aspect-[4/3] overflow-hidden">
-      <img 
-        src={tour.image} 
-        alt={tour.title}
-        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-      />
-      <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
-        {tour.tag}
-      </div>
-      <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full">
-        <div className="flex items-center gap-1">
-          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-          <span className="text-sm font-medium">{tour.rating}</span>
-        </div>
-      </div>
-    </div>
-    <CardContent className="p-6">
-      <div className="flex items-start justify-between mb-2">
-        <h3 className="text-xl font-semibold text-foreground">{tour.title}</h3>
-      </div>
-      <div className="flex items-center gap-2 text-muted-foreground mb-2">
-        <MapPin className="w-4 h-4" />
-        <span className="text-sm">{tour.location}</span>
-      </div>
-      <p className="text-sm text-muted-foreground mb-4">{tour.duration} • {tour.reviews} reviews</p>
-      <div className="flex items-center justify-between">
-        <span className="text-lg font-bold text-foreground">{tour.price}</span>
-        <Link to={TOUR_ROUTES[tour.id]}>
-          <Button size="sm" variant="outline">View Details</Button>
-        </Link>
-      </div>
-    </CardContent>
-  </Card>
-));
 
 // Memoized destination card component  
 const DestinationCard = memo(({ destination }: { destination: typeof DESTINATIONS[0] }) => (
@@ -72,27 +37,6 @@ const DestinationCard = memo(({ destination }: { destination: typeof DESTINATION
   </Link>
 ));
 
-// Memoized testimonial card component
-const TestimonialCard = memo(({ testimonial }: { testimonial: typeof TESTIMONIALS[0] }) => (
-  <Card className="p-6">
-    <div className="flex items-center gap-1 mb-4">
-      {[...Array(testimonial.rating)].map((_, i) => (
-        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-      ))}
-      <span className="text-sm text-muted-foreground ml-2">{testimonial.date}</span>
-    </div>
-    <p className="text-muted-foreground mb-6 leading-relaxed">{testimonial.text}</p>
-    <div className="flex items-center gap-3">
-      <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-        <span className="text-primary-foreground font-medium text-sm">{testimonial.avatar}</span>
-      </div>
-      <div>
-        <p className="font-medium text-foreground">{testimonial.name}</p>
-        <p className="text-sm text-muted-foreground">{testimonial.location}</p>
-      </div>
-    </div>
-  </Card>
-));
 
 // Memoized feature card component
 const FeatureCard = memo(({ feature }: { feature: typeof FEATURES[0] }) => (
@@ -116,7 +60,19 @@ export default memo(function LandingPage() {
   // Memoized component arrays to prevent recreation on every render
   const tourCards = useMemo(() => 
     FEATURED_TOURS.map((tour) => (
-      <TourCard key={tour.id} tour={tour} />
+      <TripCard 
+        key={tour.id} 
+        id={tour.id.toString()}
+        image={tour.image}
+        title={tour.title}
+        location={tour.location}
+        duration={tour.duration}
+        price={tour.price}
+        rating={tour.rating.toString()}
+        reviews={tour.reviews.toString()}
+        tag={tour.tag}
+        route={TOUR_ROUTES[tour.id]}
+      />
     )), []
   );
 
@@ -128,7 +84,15 @@ export default memo(function LandingPage() {
 
   const testimonialCards = useMemo(() => 
     TESTIMONIALS.map((testimonial, index) => (
-      <TestimonialCard key={`${testimonial.name}-${index}`} testimonial={testimonial} />
+      <TestimonialCard 
+        key={`${testimonial.name}-${index}`} 
+        name={testimonial.name}
+        location={testimonial.location}
+        text={testimonial.text}
+        rating={testimonial.rating}
+        date={testimonial.date}
+        avatar={testimonial.avatar}
+      />
     )), []
   );
 
@@ -144,31 +108,14 @@ export default memo(function LandingPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${parisHero})` }}
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 text-center text-white max-w-4xl px-6">
-          <div className="inline-block bg-primary/90 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-            <span className="text-sm font-medium">TRENDING DESTINATION</span>
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Europe Discovery Tours
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: '0.2s'}}>
-            Discover hidden gems and iconic landmarks with curated experiences designed for the modern traveler
-          </p>
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold animate-fade-in"
-            style={{animationDelay: '0.4s'}}
-          >
-            Book Now
-          </Button>
-        </div>
-      </section>
+      <HeroSection
+        backgroundImage={parisHero}
+        title="Europe Discovery Tours"
+        subtitle="Discover hidden gems and iconic landmarks with curated experiences designed for the modern traveler"
+        tag="TRENDING DESTINATION"
+        showCta={true}
+        ctaText="Book Now"
+      />
 
       {/* Featured Tours */}
       <section className="py-16 bg-background">

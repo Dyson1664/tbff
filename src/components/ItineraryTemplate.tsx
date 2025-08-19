@@ -1,6 +1,7 @@
 import { ItineraryCard } from "@/components/ItineraryCard";
 import Navbar from "@/components/Navbar";
-import { MapPin, Share2, Heart } from "lucide-react";
+import { HeroSection } from "@/components/common/HeroSection";
+import { Share2, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
@@ -57,26 +58,15 @@ export const ItineraryTemplate = ({ data }: ItineraryTemplateProps) => {
       <Navbar />
       
       {/* Hero Section */}
-      <div className="relative h-[60vh] overflow-hidden">
-        <img 
-          src={data.heroImage} 
-          alt={`${data.title} hero image`}
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-white max-w-4xl px-6">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">{data.title}</h1>
-            <p className="text-xl md:text-2xl mb-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
-              {data.subtitle}
-            </p>
-            <div className="flex items-center justify-center gap-2 text-lg animate-fade-in" style={{animationDelay: '0.4s'}}>
-              <MapPin className="w-5 h-5" />
-              <span>{data.location} • {data.duration}</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      <HeroSection
+        backgroundImage={data.heroImage}
+        title={data.title}
+        subtitle={data.subtitle}
+        location={data.location}
+        duration={data.duration}
+        height="h-[60vh]"
+        overlay="light"
+      />
 
       {/* Header with Actions */}
       <div className="bg-background border-b border-gray-200 sticky top-0 z-10">
