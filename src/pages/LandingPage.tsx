@@ -11,6 +11,12 @@ import parisStreet from "@/assets/paris-street.jpg";
 import parisSeine from "@/assets/paris-seine.jpg";
 import thailandHero from "@/assets/thailand-hero.jpg";
 import srilankaHero from "@/assets/srilanka-hero.jpg";
+import philippinesHero from "@/assets/philippines-hero.jpg";
+import japanHero from "@/assets/japan-hero.jpg";
+import colombiaHero from "@/assets/colombia-hero.jpg";
+import indiaHero from "@/assets/india-hero.jpg";
+import bhutanHero from "@/assets/bhutan-hero.jpg";
+import vietnamHero from "@/assets/vietnam-hero.jpg";
 import day3Morning from "@/assets/day3-morning.jpg";
 
 export default function LandingPage() {
@@ -53,14 +59,14 @@ export default function LandingPage() {
   ];
 
   const destinations = [
-    { name: "Paris", image: parisStreet },
-    { name: "Thailand", image: thailandHero },
-    { name: "Sri Lanka", image: srilankaHero },
-    { name: "Amsterdam", image: day3Morning },
-    { name: "Prague", image: parisSeine },
-    { name: "Vienna", image: parisHero },
-    { name: "Budapest", image: parisStreet },
-    { name: "Berlin", image: day3Morning }
+    { name: "Thailand", image: thailandHero, route: "/thailand" },
+    { name: "Sri Lanka", image: srilankaHero, route: "/srilanka" },
+    { name: "Philippines", image: philippinesHero, route: "/philippines" },
+    { name: "Japan", image: japanHero, route: "/japan" },
+    { name: "Colombia", image: colombiaHero, route: "/colombia" },
+    { name: "India", image: indiaHero, route: "/india" },
+    { name: "Bhutan", image: bhutanHero, route: "/bhutan" },
+    { name: "Vietnam", image: vietnamHero, route: "/vietnam" }
   ];
 
   const testimonials = [
@@ -204,13 +210,14 @@ export default function LandingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Your Next Destination</h2>
-            <p className="text-lg text-muted-foreground">Explore Europe's most captivating cities</p>
+            <p className="text-lg text-muted-foreground">Explore the world's most captivating destinations</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {destinations.map((destination, index) => (
-              <div 
+              <Link
                 key={index}
+                to={destination.route}
                 className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
               >
                 <img 
@@ -222,7 +229,7 @@ export default function LandingPage() {
                 <div className="absolute bottom-4 left-4">
                   <h3 className="text-white font-semibold text-lg">{destination.name}</h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
