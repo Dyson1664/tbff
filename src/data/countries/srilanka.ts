@@ -31,19 +31,19 @@ export const srilankaData = {
           duration: "1 hour"
         },
         {
-          time: "2:00 PM",
-          title: "Journey to Sigiriya",
-          location: "Colombo to Sigiriya",
-          description: "Travel through scenic countryside to reach the Cultural Triangle, home to ancient kingdoms and archaeological wonders. Check into your hotel near the famous Lion Rock.",
+          time: "Evening",
+          title: "Free evening",
+          location: "Colombo",
+          description: "After check-in and time to freshen up, we’ll come together for a quick orientation and tour briefing. Then you’re free to stretch your legs with a walk along the breezy Galle Face Green or explore the trendy boutiques of the Dutch Hospital precinct. The evening is yours to relax before we reunite in the evening for a warm welcome dinner featuring classic Sri Lankan rice-and-curry spreads and a refreshing toast of King Coconut juice.",
           image: srilankaTea,
-          duration: "4 hrs"
+          duration: "5 hrs"
         }
       ]
     },
     {
       day: 2,
       date: "June 21, 2024",
-      title: "Ancient Kingdoms",
+      title: "Columbo to Sigiriya",
       activities: [
         {
           time: "7:00 AM",
