@@ -48,7 +48,7 @@ export const srilankaData = {
         {
           time: "Morning",
           title: "Colombo City Tour",
-          location: "Colombo ➜ Sigiriya",
+          location: "Colombo",
           description: "After an early breakfast, we start the day with a panoramic city drive, cruising past the serene Independence Square, the colonial Colombo Town Hall, and the historic Gangaramaya Temple. We'll grab a quick snack at a local food market before heading north into Sri Lanka's Cultural Triangle.",
           image: srilankaHero,
           duration: "4 hrs"
@@ -56,7 +56,7 @@ export const srilankaData = {
         {
           time: "Evening",
           title: "Cultural Show & Arrival",
-          location: "Sigiriya",
+          location: "Colombo ➜ Sigiriya",
           description: "The journey takes about 3.5 hours, winding past roadside shrines, village spice stalls, and open countryside. Upon arrival in Sigiriya, settle in and get ready for a 6:00 PM traditional Sri Lankan cultural show, where you'll experience the vibrant dances, music and storytelling that reflect the island rich heritage. After the performance, unwind with a sunset pool dip or mocktail, followed by a cozy group dinner under the stars.",
           image: srilankaTea,
           duration: "4 hrs"
