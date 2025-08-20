@@ -104,9 +104,18 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
                           <Button 
                             size="sm" 
                             className="bg-primary hover:bg-primary-glow"
-                            onClick={() => {
+                            onClick={(e) => {
+                              e.preventDefault();
                               console.log('DestinationTemplate Book Now clicked, opening URL:', href);
-                              window.open(href, '_blank', 'noopener,noreferrer');
+                              try {
+                                const newWindow = window.open(href, '_blank');
+                                if (!newWindow) {
+                                  window.location.href = href;
+                                }
+                              } catch (error) {
+                                console.error('Failed to open URL:', error);
+                                window.location.href = href;
+                              }
                             }}
                           >
                             Book Now

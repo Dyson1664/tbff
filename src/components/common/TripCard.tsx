@@ -99,9 +99,18 @@ export const TripCard = memo(({
               <Button 
                 size="sm" 
                 variant={buttonVariant}
-                onClick={() => {
+                onClick={(e) => {
+                  e.preventDefault();
                   console.log('TripCard Book Now clicked, opening URL:', href);
-                  window.open(href, '_blank', 'noopener,noreferrer');
+                  try {
+                    const newWindow = window.open(href, '_blank');
+                    if (!newWindow) {
+                      window.location.href = href;
+                    }
+                  } catch (error) {
+                    console.error('Failed to open URL:', error);
+                    window.location.href = href;
+                  }
                 }}
               >
                 Book Now

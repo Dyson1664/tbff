@@ -271,9 +271,20 @@ const BookNowButton = memo(({ tripSlug, countryName }: { tripSlug?: string; coun
     <Button 
       size="lg" 
       className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
-      onClick={() => {
+      onClick={(e) => {
+        e.preventDefault();
         console.log('Button clicked, opening URL:', href);
-        window.open(href, '_blank', 'noopener,noreferrer');
+        // Try multiple approaches to ensure it works
+        try {
+          const newWindow = window.open(href, '_blank');
+          if (!newWindow) {
+            // Fallback if popup blocked
+            window.location.href = href;
+          }
+        } catch (error) {
+          console.error('Failed to open URL:', error);
+          window.location.href = href;
+        }
       }}
     >
       {STATIC_TEXT.bookNow}
