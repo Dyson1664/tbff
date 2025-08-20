@@ -43,90 +43,90 @@ export const srilankaData = {
     {
       day: 2,
       date: "June 21, 2024",
-      title: "Columbo to Sigiriya",
+      title: "Temples, canals & city vibes",
       activities: [
         {
-          time: "7:00 AM",
-          title: "Sigiriya Rock Fortress",
-          location: "Sigiriya",
-          description: "Climb the iconic Lion Rock, a 5th-century rock fortress with ancient frescoes, mirror walls, and breathtaking views from the summit. A UNESCO World Heritage site.",
+          time: "Morning",
+          title: "Colombo City Tour",
+          location: "Colombo ➜ Sigiriya",
+          description: "After an early breakfast, we start the day with a panoramic city drive, cruising past the serene Independence Square, the colonial Colombo Town Hall, and the historic Gangaramaya Temple. We'll grab a quick snack at a local food market before heading north into Sri Lanka's Cultural Triangle.",
           image: srilankaHero,
           duration: "4 hrs"
         },
         {
-          time: "2:00 PM",
-          title: "Dambulla Cave Temple",
-          location: "Dambulla",
-          description: "Explore the largest cave temple complex in Sri Lanka with over 150 Buddha statues and ancient murals dating back 2,000 years.",
+          time: "Evening",
+          title: "Cultural Show & Arrival",
+          location: "Sigiriya",
+          description: "The journey takes about 3.5 hours, winding past roadside shrines, village spice stalls, and open countryside. Upon arrival in Sigiriya, settle in and get ready for a 6:00 PM traditional Sri Lankan cultural show, where you'll experience the vibrant dances, music and storytelling that reflect the island rich heritage. After the performance, unwind with a sunset pool dip or mocktail, followed by a cozy group dinner under the stars.",
           image: srilankaTea,
-          duration: "2 hrs"
+          duration: "4 hrs"
         }
       ]
     },
     {
       day: 3,
       date: "June 22, 2024",
-      title: "Hill Country & Tea Plantations",
+      title: "Lion's Rock & Spa Downtime",
       activities: [
         {
-          time: "8:00 AM",
-          title: "Scenic Train to Nuwara Eliya",
-          location: "Kandy to Nuwara Eliya",
-          description: "Experience one of the world's most beautiful train journeys through misty mountains, tea plantations, and waterfalls in Sri Lanka's hill country.",
+          time: "Morning",
+          title: "Sigiriya Rock Fortress",
+          location: "Sigiriya",
+          description: "We rise early and take a short drive to one of Sri Lanka's most iconic sites: Sigiriya Rock Fortress. Climb the 1,200 ancient steps, pass by frescoes dating back 1,500 years, and reach the summit for unforgettable 360° views of jungle and village below. You'll be back at the hotel for a well-earned brunch.",
           image: srilankaTea,
           duration: "5 hrs"
         },
         {
-          time: "3:00 PM",
-          title: "Tea Plantation Tour",
-          location: "Nuwara Eliya",
-          description: "Visit a working tea plantation and factory to learn about Ceylon tea production from leaf to cup, with tastings of world-famous Ceylon tea.",
+          time: "Evening",
+          title: "Village Safari Experience",
+          location: "Sigiriya",
+          description: "Immerse yourself in the charm of rural life with our unforgettable evening village safari. Begin your adventure with a peaceful canoe ride across a scenic lake, surrounded by nature's tranquility. As the sun sets, enjoy a hearty local-style dinner, followed by a cozy bonfire under the stars—complete with fun games and warm laughter. The night concludes with a delightful tractor ride through the countryside, leading you back to the bus and onward to your hotel, full of memories and smiles.",
           image: srilankaTea,
-          duration: "2.5 hrs"
+          duration: "4 hrs"
         }
       ]
     },
     {
       day: 4,
       date: "June 23, 2024",
-      title: "Beach Paradise",
+      title: "Tea Trails & Scenic Train Journey",
       activities: [
         {
-          time: "9:00 AM",
-          title: "Journey to Mirissa",
-          location: "Nuwara Eliya to Mirissa",
-          description: "Travel from the cool hills to the tropical coast, arriving at one of Sri Lanka's most beautiful beach destinations known for its golden sand and palm trees.",
+          time: "Morning",
+          title: "Tea Estate Experience",
+          location: "Sigiriya ➜ Ella",
+          description: "After breakfast, we travel south into the cool, green hill country. Our first stop is a working tea estate where you'll try your hand at leaf-plucking and sample fresh brews with the resident planters. From there, we head to Nanu Oya station and board Sri Lanka's beloved blue train.",
           image: srilankaBeach,
           duration: "4 hrs"
         },
         {
-          time: "3:00 PM",
-          title: "Beach Relaxation",
-          location: "Mirissa Beach",
-          description: "Unwind on pristine beaches with crystal clear waters, enjoy water sports, or simply relax under swaying palm trees with a fresh coconut.",
+          time: "Afternoon",
+          title: "Scenic Train Journey to Ella",
+          location: "Ella",
+          description: "This is one of the most scenic rail journeys on earth—watch waterfalls, valleys, and waving villagers roll past your window. In the evening we arrive in Ella, a peaceful mountain town. After check-in, the evening is yours to explore curry spots, music cafés, or a breezy rooftop bar.",
           image: srilankaBeach,
-          duration: "3 hrs"
+          duration: "4 hrs"
         }
       ]
     },
     {
       day: 5,
       date: "June 24, 2024",
-      title: "Whale Watching & Coastal Adventures",
+      title: "Nine-Arch Bridge & Little Adam's Peak",
       activities: [
         {
-          time: "6:00 AM",
-          title: "Whale Watching Expedition",
-          location: "Mirissa Harbor",
-          description: "Early morning boat trip to spot blue whales, sperm whales, and dolphins in their natural habitat. Mirissa is one of the best whale watching destinations in the world.",
+          time: "Morning",
+          title: "Nine-Arch Bridge & Free Time",
+          location: "Ella",
+          description: "Ease into the day with a slow breakfast before we walk to the fairytale-like Nine-Arch Bridge, just in time to watch a train curve across its famous arc. The late morning and early afternoon are yours to enjoy at your own pace—fly down the zip-line, relax at a mountaintop pool club, or café-hop through the bohemian streets of Ella.",
           image: srilankaBeach,
           duration: "4 hrs"
         },
         {
-          time: "2:00 PM",
-          title: "Coconut Tree Hill & Local Markets",
-          location: "Mirissa",
-          description: "Climb the famous Coconut Tree Hill for panoramic ocean views, then explore local markets and taste fresh tropical fruits and street food.",
+          time: "Evening",
+          title: "Little Adam's Peak Hike",
+          location: "Ella",
+          description: "Before sunset, we take a gentle hike up Little Adam's Peak. The 45-minute climb rewards you with glowing views over tea hills and valleys. After dark, we head into town for dinner—think sizzling kottu roti and relaxed local vibes.",
           image: srilankaBeach,
           duration: "3 hrs"
         }
@@ -135,67 +135,67 @@ export const srilankaData = {
     {
       day: 6,
       date: "June 25, 2024",
-      title: "Galle Fort & Southern Coast",
+      title: "Elephants & Southern Sands",
       activities: [
         {
-          time: "9:00 AM",
-          title: "Galle Fort Exploration",
-          location: "Galle",
-          description: "Explore the UNESCO World Heritage Galle Fort, a 16th-century Portuguese and Dutch fortification with colonial architecture, museums, and charming streets.",
+          time: "Morning",
+          title: "Udawalawe Safari",
+          location: "Ella ➜ Udawalawe ➜ Mirissa",
+          description: "After an early breakfast, we hit the road toward Udawalawe National Park. Mid morning, you'll board an open-top jeep for a wildlife safari—keep an eye out for wild elephants, crocodiles, many species of birds and even jackals if you're lucky.",
           image: srilankaHero,
-          duration: "3 hrs"
+          duration: "6 hrs"
         },
         {
-          time: "2:00 PM",
-          title: "Stilt Fishermen & Beach Time",
-          location: "Koggala",
-          description: "Witness the traditional stilt fishing method unique to Sri Lanka, then relax on pristine Koggala Beach with its calm waters and golden sand.",
+          time: "Afternoon",
+          title: "Elephant Transit Home & Beach Arrival",
+          location: "Mirissa",
+          description: "After lunch, we stop at the Elephant Transit Home where orphaned baby elephants are bottle-fed and nurtured until they're ready for the wild. By late afternoon, we reach Mirissa on Sri Lanka's south coast. Kick off your shoes, feel the sand beneath your feet, and enjoy a sunset beach dinner under glowing skies.",
           image: srilankaBeach,
-          duration: "3 hrs"
+          duration: "4 hrs"
         }
       ]
     },
     {
       day: 7,
       date: "June 26, 2024",
-      title: "Yala National Park Safari",
+      title: "Turtles, Galle Fort & Beach Sunset",
       activities: [
         {
-          time: "5:30 AM",
-          title: "Yala National Park Safari",
-          location: "Yala National Park",
-          description: "Early morning safari in Sri Lanka's most famous national park. Spot leopards, elephants, sloth bears, and diverse bird species in their natural habitat.",
+          time: "Morning",
+          title: "Turtle Conservation & Galle Fort",
+          location: "Mirissa",
+          description: "Start the day with a visit to a local turtle conservation project. If timing's right, you may even help release hatchlings into the ocean. Late in the morning, we head west along the coast to explore Galle Fort, a UNESCO World Heritage Site. Wander the colonial ramparts, explore local art galleries, or sip lime soda in one of its shaded cafés.",
           image: srilankaHero,
           duration: "6 hrs"
         },
         {
-          time: "4:00 PM",
-          title: "Safari Lodge Experience",
-          location: "Yala",
-          description: "Relax at a luxury safari lodge, enjoy traditional Sri Lankan cuisine, and share safari stories around a campfire under the stars.",
+          time: "Evening",
+          title: "Beach Sunset",
+          location: "Mirissa",
+          description: "We return to Mirissa by sunset for a golden-hour on the beach—an experience that defines coastal Sri Lanka.",
           image: srilankaTea,
-          duration: "4 hrs"
+          duration: "2 hrs"
         }
       ]
     },
     {
       day: 8,
       date: "June 27, 2024",
-      title: "Ayurveda & Cultural Immersion",
+      title: "Beach Bliss & Farewell Feast",
       activities: [
         {
-          time: "9:00 AM",
-          title: "Ayurvedic Spa Experience",
-          location: "Bentota",
-          description: "Indulge in traditional Ayurvedic treatments and massages using ancient healing techniques and natural herbs for complete rejuvenation.",
+          time: "Morning",
+          title: "Beach Activities",
+          location: "Mirissa",
+          description: "Enjoy a slow start to your final full day with breakfast from 7–9 AM. Then, hit the waves for an included surf lesson with a local instructor, or join a casual beach clean-up effort with our community partners.",
           image: srilankaTea,
-          duration: "3 hrs"
+          duration: "5 hrs"
         },
         {
-          time: "2:00 PM",
-          title: "Traditional Cooking Class",
-          location: "Local Village",
-          description: "Learn to cook authentic Sri Lankan dishes using fresh spices and traditional methods. Visit a spice garden and enjoy your self-prepared meal.",
+          time: "Evening",
+          title: "Farewell Dinner",
+          location: "Mirissa",
+          description: "The afternoon is all yours—sunbathe with a coconut shake in hand, book a massage, or shop for last-minute gifts. In the evening, we come together one last time for a farewell dinner filled with grilled tuna, hoppers, and upbeat baila music to celebrate our incredible journey.",
           image: srilankaTea,
           duration: "4 hrs"
         }
@@ -204,23 +204,15 @@ export const srilankaData = {
     {
       day: 9,
       date: "June 28, 2024",
-      title: "Farewell Colombo",
+      title: "Until next time",
       activities: [
         {
-          time: "10:00 AM",
-          title: "Colombo Shopping & Souvenirs",
-          location: "Colombo",
-          description: "Last-minute shopping for Ceylon tea, precious gems, handicrafts, and souvenirs at Pettah Market and modern shopping centers.",
+          time: "Morning",
+          title: "Departure",
+          location: "Mirissa ➜ Colombo Airport",
+          description: "Check out day. After one final tropical breakfast, it's time to say goodbye. All timings are approximate and may adjust for weather, wildlife movements and train schedules.",
           image: srilankaBeach,
-          duration: "3 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "Departure Transfer",
-          location: "Colombo to Airport",
-          description: "Comfortable transfer to Bandaranaike International Airport with beautiful memories of your Sri Lankan adventure and warm farewells.",
-          image: srilankaHero,
-          duration: "1 hr"
+          duration: "4 hrs"
         }
       ]
     }
