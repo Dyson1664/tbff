@@ -9,7 +9,7 @@ export const srilankaData = {
   title: "Sri Lanka Explorer",
   subtitle: "Discover the Pearl of the Indian Ocean with its ancient heritage and stunning landscapes",
   location: "Sri Lanka",
-  duration: "7 days",
+  duration: "9 days",
   heroImage: srilankaHero,
   aboutDescription: [
     "Journey through Sri Lanka's incredible diversity, from ancient rock fortresses to pristine beaches and lush tea plantations. This island nation offers an extraordinary blend of culture, wildlife, and natural beauty in a compact, easily accessible package.",
@@ -108,19 +108,134 @@ export const srilankaData = {
           duration: "3 hrs"
         }
       ]
+    },
+    {
+      day: 5,
+      date: "June 24, 2024",
+      title: "Whale Watching & Coastal Adventures",
+      activities: [
+        {
+          time: "6:00 AM",
+          title: "Whale Watching Expedition",
+          location: "Mirissa Harbor",
+          description: "Early morning boat trip to spot blue whales, sperm whales, and dolphins in their natural habitat. Mirissa is one of the best whale watching destinations in the world.",
+          image: srilankaBeach,
+          duration: "4 hrs"
+        },
+        {
+          time: "2:00 PM",
+          title: "Coconut Tree Hill & Local Markets",
+          location: "Mirissa",
+          description: "Climb the famous Coconut Tree Hill for panoramic ocean views, then explore local markets and taste fresh tropical fruits and street food.",
+          image: srilankaBeach,
+          duration: "3 hrs"
+        }
+      ]
+    },
+    {
+      day: 6,
+      date: "June 25, 2024",
+      title: "Galle Fort & Southern Coast",
+      activities: [
+        {
+          time: "9:00 AM",
+          title: "Galle Fort Exploration",
+          location: "Galle",
+          description: "Explore the UNESCO World Heritage Galle Fort, a 16th-century Portuguese and Dutch fortification with colonial architecture, museums, and charming streets.",
+          image: srilankaHero,
+          duration: "3 hrs"
+        },
+        {
+          time: "2:00 PM",
+          title: "Stilt Fishermen & Beach Time",
+          location: "Koggala",
+          description: "Witness the traditional stilt fishing method unique to Sri Lanka, then relax on pristine Koggala Beach with its calm waters and golden sand.",
+          image: srilankaBeach,
+          duration: "3 hrs"
+        }
+      ]
+    },
+    {
+      day: 7,
+      date: "June 26, 2024",
+      title: "Yala National Park Safari",
+      activities: [
+        {
+          time: "5:30 AM",
+          title: "Yala National Park Safari",
+          location: "Yala National Park",
+          description: "Early morning safari in Sri Lanka's most famous national park. Spot leopards, elephants, sloth bears, and diverse bird species in their natural habitat.",
+          image: srilankaHero,
+          duration: "6 hrs"
+        },
+        {
+          time: "4:00 PM",
+          title: "Safari Lodge Experience",
+          location: "Yala",
+          description: "Relax at a luxury safari lodge, enjoy traditional Sri Lankan cuisine, and share safari stories around a campfire under the stars.",
+          image: srilankaTea,
+          duration: "4 hrs"
+        }
+      ]
+    },
+    {
+      day: 8,
+      date: "June 27, 2024",
+      title: "Ayurveda & Cultural Immersion",
+      activities: [
+        {
+          time: "9:00 AM",
+          title: "Ayurvedic Spa Experience",
+          location: "Bentota",
+          description: "Indulge in traditional Ayurvedic treatments and massages using ancient healing techniques and natural herbs for complete rejuvenation.",
+          image: srilankaTea,
+          duration: "3 hrs"
+        },
+        {
+          time: "2:00 PM",
+          title: "Traditional Cooking Class",
+          location: "Local Village",
+          description: "Learn to cook authentic Sri Lankan dishes using fresh spices and traditional methods. Visit a spice garden and enjoy your self-prepared meal.",
+          image: srilankaTea,
+          duration: "4 hrs"
+        }
+      ]
+    },
+    {
+      day: 9,
+      date: "June 28, 2024",
+      title: "Farewell Colombo",
+      activities: [
+        {
+          time: "10:00 AM",
+          title: "Colombo Shopping & Souvenirs",
+          location: "Colombo",
+          description: "Last-minute shopping for Ceylon tea, precious gems, handicrafts, and souvenirs at Pettah Market and modern shopping centers.",
+          image: srilankaBeach,
+          duration: "3 hrs"
+        },
+        {
+          time: "2:00 PM",
+          title: "Departure Transfer",
+          location: "Colombo to Airport",
+          description: "Comfortable transfer to Bandaranaike International Airport with beautiful memories of your Sri Lankan adventure and warm farewells.",
+          image: srilankaHero,
+          duration: "1 hr"
+        }
+      ]
     }
   ],
   summary: {
-    duration: "7 Days",
-    activities: "12 Experiences",
-    areas: "4 Regions",
+    duration: "9 Days",
+    activities: "18 Experiences",
+    areas: "6 Regions",
     type: "Culture & Beach"
   },
   included: [
     {
       title: "Accommodation",
       items: [
-        { text: "6 nights in boutique hotels and eco-lodges" },
+        { text: "8 nights in boutique hotels and eco-lodges" },
         { text: "Traditional Sri Lankan breakfast" },
         { text: "Ocean view rooms at beach hotels" }
       ]

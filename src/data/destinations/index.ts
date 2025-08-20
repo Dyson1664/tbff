@@ -148,7 +148,7 @@ export const destinationsData: Record<string, DestinationData> = {
         id: "srilanka-serenity",
         slug: "sri-lanka",
         title: "Sri Lanka Serenity",
-        duration: "7 days",
+        duration: "9 days",
         description: "Experience the pearl of the Indian Ocean with its rich culture, wildlife, and stunning landscapes",
         image: srilankaHeroImage,
         price: "From $1,299",
