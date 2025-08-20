@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { DestinationData } from "@/data/destinations";
-import { getPayUrl } from '@/data/payUrls';
+import { getPayUrlBySlug } from '@/data/payUrls';
 
 interface DestinationTemplateProps {
   data: DestinationData;
@@ -85,15 +85,15 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
                         </Link>
                       </Button>
                       {(() => {
-                        const payUrl = getPayUrl(trip.id);
-                        const isDisabled = payUrl === '#';
+                        const href = getPayUrlBySlug(trip.slug || '');
+                        const isDisabled = href === '#';
                         
                         if (isDisabled) {
                           return (
                             <Button 
                               size="sm" 
-                              disabled 
-                              className="cursor-not-allowed"
+                              className="pointer-events-none opacity-50"
+                              aria-disabled="true"
                             >
                               Book Now
                             </Button>
@@ -101,7 +101,7 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
                         }
                         
                         return (
-                          <a href={payUrl} target="_blank" rel="noopener noreferrer">
+                          <a href={href} target="_blank" rel="noopener noreferrer">
                             <Button size="sm" className="bg-primary hover:bg-primary-glow">
                               Book Now
                             </Button>

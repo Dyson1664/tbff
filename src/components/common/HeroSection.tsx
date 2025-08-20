@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Clock, MapPin } from "lucide-react";
-import { getPayUrl } from '@/data/payUrls';
+import { getPayUrlBySlug } from '@/data/payUrls';
 
 interface HeroSectionProps {
   backgroundImage: string;
@@ -13,7 +13,7 @@ interface HeroSectionProps {
   ctaVariant?: "default" | "outline" | "secondary" | "ghost" | "link" | "destructive";
   tag?: string;
   onCtaClick?: () => void;
-  tripId?: string;
+  tripSlug?: string;
   height?: string;
   overlay?: "light" | "medium" | "dark";
 }
@@ -29,7 +29,7 @@ export const HeroSection = ({
   ctaVariant = "default",
   tag,
   onCtaClick,
-  tripId,
+  tripSlug,
   height = "h-[70vh]",
   overlay = "medium"
 }: HeroSectionProps) => {
@@ -65,19 +65,19 @@ export const HeroSection = ({
           </div>
         )}
         {showCta && (
-          tripId ? (
+          tripSlug ? (
             (() => {
-              const payUrl = getPayUrl(tripId);
-              const isDisabled = payUrl === '#';
+              const href = getPayUrlBySlug(tripSlug);
+              const isDisabled = href === '#';
               
               if (isDisabled) {
                 return (
                   <Button 
                     size="lg" 
                     variant="outline"
-                    disabled
-                    className="mt-6 text-lg px-8 py-4 cursor-not-allowed animate-fade-in"
+                    className="mt-6 text-lg px-8 py-4 pointer-events-none opacity-50 animate-fade-in"
                     style={{animationDelay: '0.6s'}}
+                    aria-disabled="true"
                   >
                     {ctaText}
                   </Button>
@@ -85,7 +85,7 @@ export const HeroSection = ({
               }
               
               return (
-                <a href={payUrl} target="_blank" rel="noopener noreferrer">
+                <a href={href} target="_blank" rel="noopener noreferrer">
                   <Button 
                     size="lg" 
                     variant={ctaVariant}

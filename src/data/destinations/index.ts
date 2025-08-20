@@ -29,6 +29,7 @@ export const destinationsData: Record<string, DestinationData> = {
     trips: [
       {
         id: "japan-journey",
+        slug: "japan",
         title: "Japan Journey",
         duration: "10 days",
         description: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
@@ -127,6 +128,7 @@ export const destinationsData: Record<string, DestinationData> = {
     trips: [
       {
         id: "thailand-discovery",
+        slug: "thailand",
         title: "Thailand Discovery",
         duration: "8 days",
         description: "Immerse yourself in the vibrant culture, stunning temples, and pristine beaches of the Land of Smiles",
@@ -144,6 +146,7 @@ export const destinationsData: Record<string, DestinationData> = {
     trips: [
       {
         id: "srilanka-serenity",
+        slug: "sri-lanka",
         title: "Sri Lanka Serenity",
         duration: "7 days",
         description: "Experience the pearl of the Indian Ocean with its rich culture, wildlife, and stunning landscapes",

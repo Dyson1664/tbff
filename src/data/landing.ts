@@ -16,6 +16,7 @@ import { Star, MapPin, Users, Shield, Compass, Globe, Mail } from "lucide-react"
 
 export interface FeaturedTour {
   id: number;
+  slug?: string;
   title: string;
   location: string;
   duration: string;
@@ -62,6 +63,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
   },
   {
     id: 2,
+    slug: "thailand",
     title: "Thailand Discovery",
     location: "Bangkok, Thailand", 
     duration: "7 days",
@@ -73,6 +75,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
   },
   {
     id: 3,
+    slug: "sri-lanka",
     title: "Sri Lanka Explorer",
     location: "Colombo, Sri Lanka",
     duration: "6 days", 

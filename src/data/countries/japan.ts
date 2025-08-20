@@ -7,6 +7,7 @@ import japanTorii from "@/assets/japan-torii.jpg";
 
 export const japanData = {
   id: "japan-journey",
+  slug: "japan",
   title: "Japan Journey",
   subtitle: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
   location: "Japan",

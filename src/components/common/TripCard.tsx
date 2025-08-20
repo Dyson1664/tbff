@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Star, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { memo } from "react";
-import { getPayUrl } from '@/data/payUrls';
+import { getPayUrlBySlug } from '@/data/payUrls';
 
 interface TripCardProps {
   id: string;
+  slug?: string;
   image: string;
   title: string;
   location: string;
@@ -24,6 +25,7 @@ interface TripCardProps {
 
 export const TripCard = memo(({
   id,
+  slug,
   image,
   title,
   location,
@@ -77,19 +79,24 @@ export const TripCard = memo(({
         <span className="text-lg font-bold text-foreground">{price}</span>
         {showBookNow ? (
           (() => {
-            const payUrl = getPayUrl(id);
-            const isDisabled = payUrl === '#';
+            const href = getPayUrlBySlug(slug || '');
+            const isDisabled = href === '#';
             
             if (isDisabled) {
               return (
-                <Button size="sm" variant="outline" disabled className="cursor-not-allowed">
+                <Button 
+                  size="sm" 
+                  variant="outline" 
+                  className="pointer-events-none opacity-50"
+                  aria-disabled="true"
+                >
                   Book Now
                 </Button>
               );
             }
             
             return (
-              <a href={payUrl} target="_blank" rel="noopener noreferrer">
+              <a href={href} target="_blank" rel="noopener noreferrer">
                 <Button size="sm" variant={buttonVariant}>Book Now</Button>
               </a>
             );

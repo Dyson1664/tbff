@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { memo, useMemo, useCallback } from "react";
 import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-static";
-import { getPayUrl } from '@/data/payUrls';
+import { getPayUrlBySlug } from '@/data/payUrls';
 
 interface Activity {
   time: string;
@@ -36,6 +36,7 @@ interface IncludedSection {
 
 interface CountryData {
   id: string;
+  slug?: string;
   title: string;
   subtitle: string;
   location: string;
@@ -87,7 +88,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
       
       {/* Book Now Button */}
       <div className="text-center mb-8">
-        <BookNowButton tripId={data.id} countryName={countryName} />
+        <BookNowButton tripSlug={data.slug} countryName={countryName} />
         <p className="text-sm text-muted-foreground mt-2">Secure your {countryName} adventure today</p>
       </div>
     </div>
@@ -248,16 +249,16 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 });
 
 // Book Now Button Component
-const BookNowButton = memo(({ tripId, countryName }: { tripId: string; countryName: string }) => {
-  const payUrl = getPayUrl(tripId);
-  const isDisabled = payUrl === '#';
+const BookNowButton = memo(({ tripSlug, countryName }: { tripSlug?: string; countryName: string }) => {
+  const href = getPayUrlBySlug(tripSlug || '');
+  const isDisabled = href === '#';
   
   if (isDisabled) {
     return (
       <Button 
         size="lg" 
-        className="bg-muted hover:bg-muted text-muted-foreground px-8 py-4 text-lg font-semibold cursor-not-allowed"
-        disabled
+        className="pointer-events-none opacity-50 px-8 py-4 text-lg font-semibold"
+        aria-disabled="true"
       >
         {STATIC_TEXT.bookNow}
       </Button>
@@ -265,7 +266,7 @@ const BookNowButton = memo(({ tripId, countryName }: { tripId: string; countryNa
   }
   
   return (
-    <a href={payUrl} target="_blank" rel="noopener noreferrer">
+    <a href={href} target="_blank" rel="noopener noreferrer">
       <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold">
         {STATIC_TEXT.bookNow}
       </Button>

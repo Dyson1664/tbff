@@ -33,6 +33,8 @@ export interface IncludedCategory {
 }
 
 export interface ItineraryData {
+  id?: string;
+  slug?: string;
   title: string;
   subtitle: string;
   location: string;
@@ -47,6 +49,7 @@ export interface ItineraryData {
 
 export interface Trip {
   id: string;
+  slug?: string;
   title: string;
   duration: string;
   description: string;

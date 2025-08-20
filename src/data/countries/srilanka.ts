@@ -5,6 +5,7 @@ import srilankaBeach from "@/assets/srilanka-beach.jpg";
 
 export const srilankaData = {
   id: "srilanka-serenity",
+  slug: "sri-lanka",
   title: "Sri Lanka Explorer",
   subtitle: "Discover the Pearl of the Indian Ocean with its ancient heritage and stunning landscapes",
   location: "Sri Lanka",
