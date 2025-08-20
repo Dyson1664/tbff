@@ -268,11 +268,16 @@ const BookNowButton = memo(({ tripSlug, countryName }: { tripSlug?: string; coun
   }
   
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer">
-      <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold">
-        {STATIC_TEXT.bookNow}
-      </Button>
-    </a>
+    <Button 
+      size="lg" 
+      className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
+      onClick={() => {
+        console.log('Button clicked, opening URL:', href);
+        window.open(href, '_blank', 'noopener,noreferrer');
+      }}
+    >
+      {STATIC_TEXT.bookNow}
+    </Button>
   );
 });
 
