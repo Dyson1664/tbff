@@ -182,8 +182,8 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         <AccordionItem key={day.day} value={`day-${day.day}`} className={STATIC_STYLES.accordionItem}>
           <AccordionTrigger className="px-[18px] md:px-6 py-4 hover:no-underline">
             <div className="flex items-center gap-4">
-              <h3 className="text-2xl md:text-3xl font-bold text-primary">Day {day.day}</h3>
-              <h4 className="text-xl md:text-2xl font-semibold text-foreground">{day.title}</h4>
+              <h3 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">Day {day.day}</h3>
+              <h4 className="text-xl md:text-2xl font-bold text-foreground">{day.title}</h4>
             </div>
           </AccordionTrigger>
           <AccordionContent className="px-[18px] md:px-6 pb-6">
