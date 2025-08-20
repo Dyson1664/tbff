@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { DestinationData } from "@/data/destinations";
+import { getPayUrl } from '@/data/payUrls';
 
 interface DestinationTemplateProps {
   data: DestinationData;
@@ -77,11 +78,37 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
                     <span className="text-lg font-semibold text-primary">
                       {trip.price}
                     </span>
-                    <Button asChild className="bg-primary hover:bg-primary-glow">
-                      <Link to={trip.route}>
-                        View Trip
-                      </Link>
-                    </Button>
+                    <div className="flex gap-2">
+                      <Button asChild variant="outline" size="sm">
+                        <Link to={trip.route}>
+                          View Trip
+                        </Link>
+                      </Button>
+                      {(() => {
+                        const payUrl = getPayUrl(trip.id);
+                        const isDisabled = payUrl === '#';
+                        
+                        if (isDisabled) {
+                          return (
+                            <Button 
+                              size="sm" 
+                              disabled 
+                              className="cursor-not-allowed"
+                            >
+                              Book Now
+                            </Button>
+                          );
+                        }
+                        
+                        return (
+                          <a href={payUrl} target="_blank" rel="noopener noreferrer">
+                            <Button size="sm" className="bg-primary hover:bg-primary-glow">
+                              Book Now
+                            </Button>
+                          </a>
+                        );
+                      })()}
+                    </div>
                   </div>
                 </CardContent>
               </Card>

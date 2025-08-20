@@ -16,6 +16,7 @@ import parisStreet from "@/assets/paris-street.jpg";
 import parisSeine from "@/assets/paris-seine.jpg";
 
 export const parisData = {
+  id: "paris-adventure",
   title: "Paris Adventure",
   subtitle: "Discover the City of Light through its iconic landmarks, charming streets, and rich culture",
   location: "Paris, France",

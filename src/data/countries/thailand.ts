@@ -6,6 +6,7 @@ import thailandPalace from "@/assets/thailand-palace.jpg";
 import thailandBoat from "@/assets/thailand-boat.jpg";
 
 export const thailandData = {
+  id: "thailand-discovery",
   title: "Thailand Discovery",
   subtitle: "Experience the Land of Smiles through ancient temples, vibrant markets, and pristine beaches",
   location: "Thailand",

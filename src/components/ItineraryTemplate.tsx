@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { memo, useMemo, useCallback } from "react";
 import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-static";
+import { getPayUrl } from '@/data/payUrls';
 
 interface Activity {
   time: string;
@@ -34,6 +35,7 @@ interface IncludedSection {
 }
 
 interface CountryData {
+  id: string;
   title: string;
   subtitle: string;
   location: string;
@@ -85,9 +87,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
       
       {/* Book Now Button */}
       <div className="text-center mb-8">
-        <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold">
-          {STATIC_TEXT.bookNow}
-        </Button>
+        <BookNowButton tripId={data.id} countryName={countryName} />
         <p className="text-sm text-muted-foreground mt-2">Secure your {countryName} adventure today</p>
       </div>
     </div>
@@ -246,3 +246,31 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
     </div>
   );
 });
+
+// Book Now Button Component
+const BookNowButton = memo(({ tripId, countryName }: { tripId: string; countryName: string }) => {
+  const payUrl = getPayUrl(tripId);
+  const isDisabled = payUrl === '#';
+  
+  if (isDisabled) {
+    return (
+      <Button 
+        size="lg" 
+        className="bg-muted hover:bg-muted text-muted-foreground px-8 py-4 text-lg font-semibold cursor-not-allowed"
+        disabled
+      >
+        {STATIC_TEXT.bookNow}
+      </Button>
+    );
+  }
+  
+  return (
+    <a href={payUrl} target="_blank" rel="noopener noreferrer">
+      <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold">
+        {STATIC_TEXT.bookNow}
+      </Button>
+    </a>
+  );
+});
+
+export default ItineraryTemplate;

@@ -6,6 +6,7 @@ import japanSushi from "@/assets/japan-sushi.jpg";
 import japanTorii from "@/assets/japan-torii.jpg";
 
 export const japanData = {
+  id: "japan-journey",
   title: "Japan Journey",
   subtitle: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
   location: "Japan",

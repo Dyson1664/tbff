@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { MapPin } from "lucide-react";
+import { Clock, MapPin } from "lucide-react";
+import { getPayUrl } from '@/data/payUrls';
 
 interface HeroSectionProps {
   backgroundImage: string;
@@ -12,6 +13,7 @@ interface HeroSectionProps {
   ctaVariant?: "default" | "outline" | "secondary" | "ghost" | "link" | "destructive";
   tag?: string;
   onCtaClick?: () => void;
+  tripId?: string;
   height?: string;
   overlay?: "light" | "medium" | "dark";
 }
@@ -27,6 +29,7 @@ export const HeroSection = ({
   ctaVariant = "default",
   tag,
   onCtaClick,
+  tripId,
   height = "h-[70vh]",
   overlay = "medium"
 }: HeroSectionProps) => {
@@ -62,15 +65,49 @@ export const HeroSection = ({
           </div>
         )}
         {showCta && (
-          <Button 
-            size="lg" 
-            variant={ctaVariant}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold animate-fade-in"
-            style={{animationDelay: '0.6s'}}
-            onClick={onCtaClick}
-          >
-            {ctaText}
-          </Button>
+          tripId ? (
+            (() => {
+              const payUrl = getPayUrl(tripId);
+              const isDisabled = payUrl === '#';
+              
+              if (isDisabled) {
+                return (
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    disabled
+                    className="mt-6 text-lg px-8 py-4 cursor-not-allowed animate-fade-in"
+                    style={{animationDelay: '0.6s'}}
+                  >
+                    {ctaText}
+                  </Button>
+                );
+              }
+              
+              return (
+                <a href={payUrl} target="_blank" rel="noopener noreferrer">
+                  <Button 
+                    size="lg" 
+                    variant={ctaVariant}
+                    className="mt-6 text-lg px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground animate-fade-in"
+                    style={{animationDelay: '0.6s'}}
+                  >
+                    {ctaText}
+                  </Button>
+                </a>
+              );
+            })()
+          ) : (
+            <Button 
+              size="lg" 
+              variant={ctaVariant}
+              className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold animate-fade-in"
+              style={{animationDelay: '0.6s'}}
+              onClick={onCtaClick}
+            >
+              {ctaText}
+            </Button>
+          )
         )}
       </div>
     </section>

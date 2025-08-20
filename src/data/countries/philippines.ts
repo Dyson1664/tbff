@@ -4,6 +4,7 @@ import philippinesRice from "@/assets/philippines-rice.jpg";
 import philippinesMarket from "@/assets/philippines-market.jpg";
 
 export const philippinesData = {
+  id: "philippines-paradise",
   title: "Philippines Paradise",
   subtitle: "Explore tropical islands, ancient rice terraces, and vibrant Filipino culture",
   location: "Philippines",

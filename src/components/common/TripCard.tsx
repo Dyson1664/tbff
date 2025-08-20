@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Star, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { memo } from "react";
+import { getPayUrl } from '@/data/payUrls';
 
 interface TripCardProps {
   id: string;
@@ -18,9 +19,11 @@ interface TripCardProps {
   description?: string;
   buttonText?: string;
   buttonVariant?: "default" | "outline" | "secondary" | "ghost" | "link" | "destructive";
+  showBookNow?: boolean;
 }
 
 export const TripCard = memo(({
+  id,
   image,
   title,
   location,
@@ -32,7 +35,8 @@ export const TripCard = memo(({
   route,
   description,
   buttonText = "View Details",
-  buttonVariant = "outline"
+  buttonVariant = "outline",
+  showBookNow = false
 }: TripCardProps) => (
   <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
     <div className="relative aspect-[4/3] overflow-hidden">
@@ -71,9 +75,30 @@ export const TripCard = memo(({
       )}
       <div className="flex items-center justify-between">
         <span className="text-lg font-bold text-foreground">{price}</span>
-        <Link to={route}>
-          <Button size="sm" variant={buttonVariant}>{buttonText}</Button>
-        </Link>
+        {showBookNow ? (
+          (() => {
+            const payUrl = getPayUrl(id);
+            const isDisabled = payUrl === '#';
+            
+            if (isDisabled) {
+              return (
+                <Button size="sm" variant="outline" disabled className="cursor-not-allowed">
+                  Book Now
+                </Button>
+              );
+            }
+            
+            return (
+              <a href={payUrl} target="_blank" rel="noopener noreferrer">
+                <Button size="sm" variant={buttonVariant}>Book Now</Button>
+              </a>
+            );
+          })()
+        ) : (
+          <Link to={route}>
+            <Button size="sm" variant={buttonVariant}>{buttonText}</Button>
+          </Link>
+        )}
       </div>
     </CardContent>
   </Card>
