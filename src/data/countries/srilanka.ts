@@ -55,7 +55,7 @@ export const srilankaData = {
         },
         {
           time: "Evening",
-          title: "Cultural Show & Arrival",
+          title: "Arrive in Sigiriya & Culture Show",
           location: "Colombo ➜ Sigiriya",
           description: "The journey takes about 3.5 hours, winding past roadside shrines, village spice stalls, and open countryside. Upon arrival in Sigiriya, settle in and get ready for a 6:00 PM traditional Sri Lankan cultural show, where you'll experience the vibrant dances, music and storytelling that reflect the island rich heritage. After the performance, unwind with a sunset pool dip or mocktail, followed by a cozy group dinner under the stars.",
           image: srilankaTea,
@@ -140,7 +140,7 @@ export const srilankaData = {
         {
           time: "Morning",
           title: "Udawalawe Safari",
-          location: "Ella ➜ Udawalawe ➜ Mirissa",
+          location: "Ella ➜ Udawalawe",
           description: "After an early breakfast, we hit the road toward Udawalawe National Park. Mid morning, you'll board an open-top jeep for a wildlife safari—keep an eye out for wild elephants, crocodiles, many species of birds and even jackals if you're lucky.",
           image: srilankaHero,
           duration: "6 hrs"
@@ -148,7 +148,7 @@ export const srilankaData = {
         {
           time: "Afternoon",
           title: "Elephant Transit Home & Beach Arrival",
-          location: "Mirissa",
+          location: "Udawalawe ➜ Mirissa",
           description: "After lunch, we stop at the Elephant Transit Home where orphaned baby elephants are bottle-fed and nurtured until they're ready for the wild. By late afternoon, we reach Mirissa on Sri Lanka's south coast. Kick off your shoes, feel the sand beneath your feet, and enjoy a sunset beach dinner under glowing skies.",
           image: srilankaBeach,
           duration: "4 hrs"
@@ -185,7 +185,7 @@ export const srilankaData = {
       activities: [
         {
           time: "Morning",
-          title: "Beach Activities",
+          title: "Surf Lesson or Beach Cleanup",
           location: "Mirissa",
           description: "Enjoy a slow start to your final full day with breakfast from 7–9 AM. Then, hit the waves for an included surf lesson with a local instructor, or join a casual beach clean-up effort with our community partners.",
           image: srilankaTea,
