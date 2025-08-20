@@ -250,7 +250,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
 // Book Now Button Component
 const BookNowButton = memo(({ tripSlug, countryName }: { tripSlug?: string; countryName: string }) => {
+  console.log('BookNowButton - tripSlug:', tripSlug, 'countryName:', countryName);
   const href = getPayUrlBySlug(tripSlug || '');
+  console.log('BookNowButton - resolved href:', href);
   const isDisabled = href === '#';
   
   if (isDisabled) {

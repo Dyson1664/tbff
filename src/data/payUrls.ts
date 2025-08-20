@@ -5,7 +5,10 @@ const PAY_URLS: Record<string, string | undefined> = {
 };
 
 export const getPayUrlBySlug = (slug: string) => {
+  console.log('getPayUrlBySlug called with slug:', slug);
+  console.log('Available PAY_URLS:', PAY_URLS);
   const url = PAY_URLS[slug] ?? '#';
+  console.log('Resolved URL:', url);
   if (url === '#') {
     console.warn(`Missing payment URL for slug: ${slug}`);
   }
