@@ -96,9 +96,16 @@ export const TripCard = memo(({
             }
             
             return (
-              <a href={href} target="_blank" rel="noopener noreferrer">
-                <Button size="sm" variant={buttonVariant}>Book Now</Button>
-              </a>
+              <Button 
+                size="sm" 
+                variant={buttonVariant}
+                onClick={() => {
+                  console.log('TripCard Book Now clicked, opening URL:', href);
+                  window.open(href, '_blank', 'noopener,noreferrer');
+                }}
+              >
+                Book Now
+              </Button>
             );
           })()
         ) : (

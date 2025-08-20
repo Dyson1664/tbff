@@ -101,11 +101,16 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
                         }
                         
                         return (
-                          <a href={href} target="_blank" rel="noopener noreferrer">
-                            <Button size="sm" className="bg-primary hover:bg-primary-glow">
-                              Book Now
-                            </Button>
-                          </a>
+                          <Button 
+                            size="sm" 
+                            className="bg-primary hover:bg-primary-glow"
+                            onClick={() => {
+                              console.log('DestinationTemplate Book Now clicked, opening URL:', href);
+                              window.open(href, '_blank', 'noopener,noreferrer');
+                            }}
+                          >
+                            Book Now
+                          </Button>
                         );
                       })()}
                     </div>
