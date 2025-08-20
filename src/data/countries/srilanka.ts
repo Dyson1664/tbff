@@ -20,15 +20,15 @@ export const srilankaData = {
     {
       day: 1,
       date: "June 20, 2024",
-      title: "Colombo & Cultural Triangle",
+      title: "Island Welcome & Urban First Tastes",
       activities: [
         {
-          time: "9:00 AM",
+          time: "Morning",
           title: "Colombo City Tour",
           location: "Colombo",
-          description: "Explore Sri Lanka's vibrant capital with its colonial architecture, bustling markets, and modern developments. Visit the Red Mosque, Independence Square, and Galle Face Green.",
+          description: "Ayubowan—welcome to Sri Lanka! After arriving at Bandaranaike International Airport, your driver will be ready to greet you and bring you into the heart of Colombo. The 45- minute ride takes you from palms and paddy fields into a lively blend of tradition and modernity.",
           image: srilankaBeach,
-          duration: "3 hrs"
+          duration: "1 hour"
         },
         {
           time: "2:00 PM",
