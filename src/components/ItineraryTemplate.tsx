@@ -121,7 +121,7 @@ const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) =
 
 const IncludedSection = memo(({ included, countryName }: { included: CountryData['included'], countryName: string }) => (
   <div className={STATIC_STYLES.includedSection}>
-    <div className="max-w-7xl mx-auto px-6 py-16">
+    <div className="max-w-7xl mx-auto px-3 md:px-6 py-16">
       <div className="text-center mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
         <p className="text-lg text-muted-foreground">Everything you need for an unforgettable {countryName} experience</p>
@@ -180,7 +180,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
     <Accordion type="single" collapsible defaultValue="day-1" className="space-y-4">
       {data.itinerary.map((day) => (
         <AccordionItem key={day.day} value={`day-${day.day}`} className={STATIC_STYLES.accordionItem}>
-          <AccordionTrigger className="px-6 py-4 hover:no-underline">
+          <AccordionTrigger className="px-3 md:px-6 py-4 hover:no-underline">
             <div className="flex items-center gap-4">
               <div className={STATIC_STYLES.dayBadge}>
                 <span className="text-white font-bold text-lg">{day.day}</span>
@@ -193,7 +193,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               </div>
             </div>
           </AccordionTrigger>
-          <AccordionContent className="px-6 pb-6">
+          <AccordionContent className="px-3 md:px-6 pb-6">
             <VirtualizedItinerary activities={day.activities} />
           </AccordionContent>
         </AccordionItem>
@@ -218,7 +218,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
       {/* Header with Actions */}
       <div className={STATIC_STYLES.stickyHeader}>
-        <div className="max-w-6xl mx-auto px-6 py-4">
+        <div className="max-w-6xl mx-auto px-3 md:px-6 py-4">
           <div className="flex items-center justify-between">
             <ActionButtons />
           </div>
@@ -226,7 +226,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       </div>
 
       {/* Country Overview */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="max-w-6xl mx-auto px-3 md:px-6 py-12">
         <AboutSection data={data} />
 
         {/* Itinerary Title */}
