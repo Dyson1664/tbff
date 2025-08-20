@@ -111,7 +111,7 @@ export default memo(function LandingPage() {
       {/* Hero Section */}
       <HeroSection
         backgroundImage={parisHero}
-        title="Europe Discovery Tours"
+        title="Asia Discovery Tours"
         subtitle="Discover hidden gems and iconic landmarks with curated experiences designed for the modern traveler"
         tag="TRENDING DESTINATION"
         showCta={true}
