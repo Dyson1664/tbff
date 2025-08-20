@@ -19,7 +19,7 @@ interface ItineraryCardProps {
 export const ItineraryCard = memo(({ activity, isLast = false }: ItineraryCardProps) => {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200">
-      <div className="aspect-[16/6] md:aspect-[16/6.4] relative overflow-hidden">
+      <div className="aspect-[16/9] md:aspect-[16/6.4] relative overflow-hidden">
         <img 
           src={activity.image} 
           alt={activity.title}
