@@ -9,6 +9,7 @@ const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) =
   <Link 
     to={trip.link}
     className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
+    onClick={() => window.scrollTo(0, 0)}
   >
     <div className="flex justify-between items-start">
       <div>
@@ -76,7 +77,12 @@ const Navbar = memo(() => {
   // Memoized mobile trip items
   const mobileTripsItems = useMemo(() => 
     NAVIGATION_TRIPS.map((trip, index) => (
-      <Link key={`mobile-${trip.link}-${index}`} to={trip.link} className="py-2 px-2 hover:bg-muted rounded cursor-pointer block">
+      <Link 
+        key={`mobile-${trip.link}-${index}`} 
+        to={trip.link} 
+        className="py-2 px-2 hover:bg-muted rounded cursor-pointer block"
+        onClick={() => window.scrollTo(0, 0)}
+      >
         <div className="flex justify-between items-start">
           <div>
             <h4 className="font-medium text-foreground text-sm">{trip.title}</h4>
