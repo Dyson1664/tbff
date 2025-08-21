@@ -242,6 +242,7 @@ export default memo(function LandingPage() {
                     key={trip.title}
                     to={trip.link} 
                     className="block hover:text-primary transition-colors"
+                    onClick={() => window.scrollTo(0, 0)}
                   >
                     {trip.title}
                   </Link>
