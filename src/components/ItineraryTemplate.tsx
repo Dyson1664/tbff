@@ -208,10 +208,16 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Scroll to first image function
   const scrollToFirstImage = useCallback((dayNumber: number) => {
     setTimeout(() => {
+      // Target the accordion trigger (day header) instead
+      const dayTrigger = document.querySelector(`[value="day-${dayNumber}"] [data-accordion-trigger]`);
       const firstImageElement = document.querySelector(`#day-${dayNumber}-first-image`);
-      if (firstImageElement) {
-        const offset = 120; // Adjust this value to position the image perfectly on screen
-        const elementPosition = firstImageElement.getBoundingClientRect().top;
+      
+      // Use the day trigger if available, otherwise fall back to first image
+      const targetElement = dayTrigger || firstImageElement;
+      
+      if (targetElement) {
+        const offset = 150; // Offset to show Day header and title nicely
+        const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         
         window.scrollTo({
@@ -219,7 +225,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           behavior: 'smooth'
         });
       }
-    }, 100); // Small delay to allow accordion to expand
+    }, 150); // Slightly longer delay to allow accordion to expand
   }, []);
 
   // Memoize itinerary rendering with virtual scrolling for large days
@@ -230,6 +236,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           <AccordionTrigger 
             className="px-[18px] md:px-6 py-4 hover:no-underline"
             onClick={() => scrollToFirstImage(day.day)}
+            data-accordion-trigger
           >
             <div className="flex items-center gap-4">
               <h3 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">Day {day.day}</h3>
