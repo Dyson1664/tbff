@@ -25,6 +25,7 @@ const DestinationCard = memo(({ destination }: { destination: typeof DESTINATION
   <Link
     to={destination.route}
     className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
+    onClick={() => window.scrollTo(0, 0)}
   >
     <img 
       src={destination.image} 
