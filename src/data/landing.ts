@@ -2,9 +2,9 @@
 
 // Import existing images
 import thailandHero from "@/assets/thailand-hero.jpg";
+import japanHero from "@/assets/japan-hero.jpg";
 import srilankaHero from "@/assets/srilanka-hero.jpg";
 import philippinesHero from "@/assets/philippines-hero.jpg";
-import japanHero from "@/assets/japan-hero.jpg";
 import colombiaHero from "@/assets/colombia-hero.jpg";
 import indiaHero from "@/assets/india-hero.jpg";
 import bhutanHero from "@/assets/bhutan-hero.jpg";
@@ -47,6 +47,18 @@ export interface Feature {
 
 // Extract featured tours to module level
 export const FEATURED_TOURS: readonly FeaturedTour[] = [
+  {
+    id: 1,
+    slug: "japan",
+    title: "Japan Journey",
+    location: "Tokyo, Japan",
+    duration: "10 days",
+    rating: 4.9,
+    reviews: 142,
+    price: "From $2,499",
+    image: japanHero,
+    tag: "POPULAR"
+  },
   {
     id: 2,
     slug: "thailand",
@@ -134,6 +146,7 @@ export const FEATURES: readonly Feature[] = [
 
 // Tour route mappings for efficient lookups
 export const TOUR_ROUTES: Record<number, string> = {
+  1: "/japan-itinerary",
   2: "/thailand-itinerary", 
   3: "/srilanka-itinerary"
 } as const;
