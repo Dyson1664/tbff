@@ -2,6 +2,7 @@
 import srilankaHero from "@/assets/srilanka-hero.jpg";
 import srilankaTea from "@/assets/srilanka-tea.jpg";
 import srilankaBeach from "@/assets/srilanka-beach.jpg";
+import srilankaColombo from "@/assets/srilanka-colombo.jpg";
 
 export const srilankaData = {
   id: "srilanka-serenity",
@@ -27,7 +28,7 @@ export const srilankaData = {
           title: "Colombo City Tour",
           location: "Colombo",
           description: "Ayubowan—welcome to Sri Lanka! After arriving at Bandaranaike International Airport, your driver will be ready to greet you and bring you into the heart of Colombo. The 45- minute ride takes you from palms and paddy fields into a lively blend of tradition and modernity.",
-          image: srilankaBeach,
+          image: srilankaColombo,
           duration: "1 hour"
         },
         {
