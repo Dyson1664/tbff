@@ -142,11 +142,6 @@ const Navbar = memo(() => {
                       Featured Trip Packages
                     </div>
                     {tripItems}
-                    <div className="px-4 py-3 border-t border-gray-100">
-                      <Button variant="link" className="text-primary p-0 h-auto font-medium">
-                        View All Trips →
-                      </Button>
-                    </div>
                   </div>
                 </div>
               )}
@@ -175,11 +170,6 @@ const Navbar = memo(() => {
                       Popular Destinations
                     </div>
                     {destinationItems}
-                    <div className="px-4 py-3 border-t border-gray-100">
-                      <Button variant="link" className="text-primary p-0 h-auto font-medium">
-                        View All Destinations →
-                      </Button>
-                    </div>
                   </div>
                 </div>
               )}
