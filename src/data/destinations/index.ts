@@ -1,6 +1,5 @@
 // Import all destination hero images
 import japanHeroImage from "@/assets/japan-hero.jpg";
-import parisHeroImage from "@/assets/paris-hero.jpg";
 import indiaHeroImage from "@/assets/india-hero.jpg";
 import bhutanHeroImage from "@/assets/bhutan-hero.jpg";
 import colombiaHeroImage from "@/assets/colombia-hero.jpg";
@@ -11,7 +10,6 @@ import philippinesHeroImage from "@/assets/philippines-hero.jpg";
 
 // Import country-specific itinerary data
 import { japanData } from "@/data/countries/japan";
-import { parisData } from "@/data/countries/paris";
 import { thailandData } from "@/data/countries/thailand";
 import { philippinesData } from "@/data/countries/philippines";
 import { srilankaData } from "@/data/countries/srilanka";
@@ -39,23 +37,6 @@ export const destinationsData: Record<string, DestinationData> = {
       }
     ],
     itinerary: japanData
-  },
-  france: {
-    country: "France",
-    heroImage: parisHeroImage,
-    heroSubtitle: "Experience the romance, culture, and culinary excellence of France",
-    trips: [
-      {
-        id: "paris-adventure",
-        title: "Paris Adventure",
-        duration: "6 days",
-        description: "Discover the City of Light through its iconic landmarks, charming streets, and rich culture",
-        image: parisHeroImage,
-        price: "From $1,899",
-        route: "/paris-itinerary"
-      }
-    ],
-    itinerary: parisData
   },
   india: {
     country: "India",

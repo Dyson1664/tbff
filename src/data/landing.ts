@@ -1,9 +1,6 @@
 // Static landing page data extracted for better performance
 
 // Import existing images
-import parisHero from "@/assets/paris-hero.jpg";
-import parisStreet from "@/assets/paris-street.jpg";
-import parisSeine from "@/assets/paris-seine.jpg";
 import thailandHero from "@/assets/thailand-hero.jpg";
 import srilankaHero from "@/assets/srilanka-hero.jpg";
 import philippinesHero from "@/assets/philippines-hero.jpg";
@@ -50,17 +47,6 @@ export interface Feature {
 
 // Extract featured tours to module level
 export const FEATURED_TOURS: readonly FeaturedTour[] = [
-  {
-    id: 1,
-    title: "Paris Discovery Tour",
-    location: "Paris, France",
-    duration: "6 days",
-    rating: 4.9,
-    reviews: 127,
-    price: "From €1100",
-    image: parisHero,
-    tag: "POPULAR"
-  },
   {
     id: 2,
     slug: "thailand",
@@ -148,7 +134,6 @@ export const FEATURES: readonly Feature[] = [
 
 // Tour route mappings for efficient lookups
 export const TOUR_ROUTES: Record<number, string> = {
-  1: "/paris-itinerary",
   2: "/thailand-itinerary", 
   3: "/srilanka-itinerary"
 } as const;
