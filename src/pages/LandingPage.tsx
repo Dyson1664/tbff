@@ -219,16 +219,16 @@ export default memo(function LandingPage() {
           <div className="grid lg:grid-cols-5 gap-8">
             {/* Logo Section - Takes up more space */}
             <div className="lg:col-span-2">
-              <div className="flex items-center mb-6">
-                <img 
-                  src={ibtLogo} 
-                  alt="IBT Logo" 
-                  className="h-32 w-auto mr-6"
-                />
-                <div>
+              <div className="flex flex-col mb-6">
+                <div className="mb-4">
                   <div className="text-primary text-2xl font-bold">Imagine beyond</div>
                   <div className="text-lg tracking-wider">TRAVEL</div>
                 </div>
+                <img 
+                  src={ibtLogo} 
+                  alt="IBT Logo" 
+                  className="h-48 w-auto"
+                />
               </div>
             </div>
 
