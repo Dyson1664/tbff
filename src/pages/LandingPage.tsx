@@ -235,7 +235,7 @@ export default memo(function LandingPage() {
 
             {/* Tours Column */}
             <div>
-              <h4 className="font-semibold mb-6 text-primary">Tours</h4>
+              <h4 className="font-semibold mb-6 text-primary">Trips</h4>
               <div className="space-y-3 text-sm">
                 {NAVIGATION_TRIPS.map((trip) => (
                   <Link 
