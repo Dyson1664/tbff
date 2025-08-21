@@ -227,7 +227,7 @@ export default memo(function LandingPage() {
                 <img 
                   src={ibtLogo} 
                   alt="IBT Logo" 
-                  className="h-48 w-auto"
+                  className="h-64 w-auto object-contain"
                 />
               </div>
             </div>
