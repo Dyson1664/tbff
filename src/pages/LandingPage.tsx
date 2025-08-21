@@ -223,11 +223,11 @@ export default memo(function LandingPage() {
                 <img 
                   src={ibtLogo} 
                   alt="IBT Logo" 
-                  className="h-16 w-auto mr-4"
+                  className="h-32 w-auto mr-6"
                 />
                 <div>
-                  <div className="text-primary text-xl font-bold">I'm here</div>
-                  <div className="text-sm tracking-wider">TRAVELS</div>
+                  <div className="text-primary text-2xl font-bold">Imagine beyond</div>
+                  <div className="text-lg tracking-wider">TRAVEL</div>
                 </div>
               </div>
             </div>
