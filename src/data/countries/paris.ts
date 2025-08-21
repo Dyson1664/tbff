@@ -223,5 +223,27 @@ export const parisData = {
         { text: "Access to exclusive experiences" }
       ]
     }
+  ],
+  faqs: [
+    {
+      question: "What is the best time to visit Paris?",
+      answer: "April to June and September to November offer pleasant weather and fewer crowds. Summer is peak season with longer days, while winter has holiday charm and fewer tourists."
+    },
+    {
+      question: "Do I need to speak French to enjoy Paris?",
+      answer: "While French is appreciated, many Parisians speak English, especially in tourist areas. Learning basic phrases like 'bonjour' and 'merci' will enhance your experience."
+    },
+    {
+      question: "How should I dress in Paris?",
+      answer: "Parisians dress elegantly and avoid overly casual clothing. Pack comfortable walking shoes, layered clothing, and slightly dressier options for dinners and cultural venues."
+    },
+    {
+      question: "Is it safe to walk around Paris at night?",
+      answer: "Central Paris is generally safe, but like any major city, stay aware of your surroundings. Stick to well-lit areas and main streets, especially in tourist districts."
+    },
+    {
+      question: "Should I book museum tickets in advance?",
+      answer: "Yes, we highly recommend advance booking for major attractions like the Louvre and Eiffel Tower to skip long lines. We'll help arrange priority access for key sites."
+    }
   ]
 };

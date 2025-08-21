@@ -34,6 +34,11 @@ interface IncludedSection {
   items: IncludedItem[];
 }
 
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 interface CountryData {
   id: string;
   slug?: string;
@@ -52,6 +57,7 @@ interface CountryData {
     type: string;
   };
   included: IncludedSection[];
+  faqs: FAQ[];
 }
 
 interface ItineraryTemplateProps {
@@ -146,6 +152,30 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
   </div>
 ));
 
+const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], countryName: string }) => (
+  <div className="mt-16 bg-card rounded-xl border border-gray-200 shadow-sm">
+    <div className="max-w-7xl mx-auto px-[18px] md:px-6 py-16">
+      <div className="text-center mb-12">
+        <h3 className="text-3xl font-bold text-foreground mb-4">Frequently Asked Questions</h3>
+        <p className="text-lg text-muted-foreground">Everything you need to know about your {countryName} adventure</p>
+      </div>
+      
+      <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto space-y-4">
+        {faqs.map((faq, index) => (
+          <AccordionItem key={index} value={`faq-${index}`} className="border border-gray-200 rounded-lg bg-background shadow-sm">
+            <AccordionTrigger className="px-6 py-4 hover:no-underline text-left">
+              <span className="font-semibold text-foreground">{faq.question}</span>
+            </AccordionTrigger>
+            <AccordionContent className="px-6 pb-4">
+              <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+      </Accordion>
+    </div>
+  </div>
+));
+
 const ActionButtons = memo(() => {
   const handleShare = useCallback(() => {
     // Share functionality
@@ -236,6 +266,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
         {/* What's Included Section */}
         <IncludedSection included={data.included} countryName={countryName} />
+        
+        {/* FAQ Section */}
+        <FAQSection faqs={data.faqs} countryName={countryName} />
       </div>
     </div>
   );

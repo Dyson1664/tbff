@@ -168,5 +168,27 @@ export const thailandData = {
         { text: "Local artisan workshop visits" }
       ]
     }
+  ],
+  faqs: [
+    {
+      question: "What is the best time to visit Thailand?",
+      answer: "November to March is ideal with cooler, dry weather. April-May is hot season, and June-October is rainy season. Each season has its charm, and we plan activities accordingly."
+    },
+    {
+      question: "What should I wear when visiting temples?",
+      answer: "Dress modestly with covered shoulders and knees. Avoid shorts, tank tops, or revealing clothing. We recommend bringing a light scarf or shawl for easy temple visits."
+    },
+    {
+      question: "Is Thai food very spicy?",
+      answer: "Thai cuisine can be spicy, but most restaurants can adjust spice levels. Our culinary experiences include mild to medium spiced dishes, and we'll always ask about your spice preferences."
+    },
+    {
+      question: "How much should I tip in Thailand?",
+      answer: "Tipping isn't mandatory but appreciated. 10% at restaurants, 20-50 baht for hotel staff, and 100-200 baht per day for tour guides are standard amounts."
+    },
+    {
+      question: "Can I drink tap water in Thailand?",
+      answer: "We recommend bottled water for drinking. All our accommodations provide complimentary bottled water, and our restaurants use filtered water for cooking and ice."
+    }
   ]
 };

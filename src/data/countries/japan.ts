@@ -168,5 +168,27 @@ export const japanData = {
         { text: "Cherry blossom viewing (seasonal)" }
       ]
     }
+  ],
+  faqs: [
+    {
+      question: "What is the best time to visit Japan?",
+      answer: "The best times are spring (March-May) for cherry blossoms and fall (September-November) for autumn colors. These seasons offer pleasant weather and stunning natural beauty."
+    },
+    {
+      question: "Do I need to speak Japanese to travel in Japan?",
+      answer: "While knowing some basic Japanese phrases is helpful, it's not necessary. Many signs are in English, and people in tourist areas often speak some English. Our guides will also assist with translation."
+    },
+    {
+      question: "What should I pack for my Japan trip?",
+      answer: "Pack comfortable walking shoes, weather-appropriate clothing, a portable charger, and cash (Japan is still largely cash-based). We'll provide a detailed packing list upon booking."
+    },
+    {
+      question: "Are meals included in the itinerary?",
+      answer: "Yes, most meals are included as specified in the 'What's Included' section. You'll experience authentic Japanese cuisine including sushi, ramen, and traditional kaiseki dinners."
+    },
+    {
+      question: "What is the group size for this tour?",
+      answer: "Our Japan tours are limited to 12-16 participants to ensure a personalized experience and easier access to cultural sites and restaurants."
+    }
   ]
 };

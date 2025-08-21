@@ -274,5 +274,27 @@ export const srilankaData = {
         { text: "Local artisan visits and shopping" }
       ]
     }
+  ],
+  faqs: [
+    {
+      question: "What is the best time to visit Sri Lanka?",
+      answer: "December to March is ideal for the west and south coasts, while April to September is better for the east coast. Our itinerary is designed to showcase the best of each region during optimal weather."
+    },
+    {
+      question: "Do I need a visa to visit Sri Lanka?",
+      answer: "Most visitors need an Electronic Travel Authorization (ETA) obtained online before travel. We'll provide detailed visa information and assistance upon booking."
+    },
+    {
+      question: "What vaccinations do I need for Sri Lanka?",
+      answer: "Routine vaccinations should be current. Consider hepatitis A, typhoid, and Japanese encephalitis. Consult your healthcare provider 4-6 weeks before departure for personalized advice."
+    },
+    {
+      question: "Is Sri Lankan food spicy?",
+      answer: "Sri Lankan cuisine can be quite spicy, but we'll ensure meals are prepared to accommodate different spice tolerances. You'll experience authentic flavors with options for milder versions."
+    },
+    {
+      question: "What should I pack for the diverse climates?",
+      answer: "Pack light, breathable clothing for the coast, warmer layers for the hill country, comfortable hiking shoes, rain jacket, sunscreen, and insect repellent. We'll provide a detailed packing list."
+    }
   ]
 };

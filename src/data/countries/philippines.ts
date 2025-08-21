@@ -165,5 +165,27 @@ export const philippinesData = {
         { text: "Local market tours and food tastings" }
       ]
     }
+  ],
+  faqs: [
+    {
+      question: "What is the best time to visit the Philippines?",
+      answer: "The dry season from November to April offers the best weather for traveling. March to May can be hot, while June to October is the rainy season with potential typhoons."
+    },
+    {
+      question: "Do I need any vaccinations for the Philippines?",
+      answer: "Routine vaccinations should be up to date. Consider hepatitis A, typhoid, and Japanese encephalitis. Consult your doctor at least 4-6 weeks before travel for personalized advice."
+    },
+    {
+      question: "What currency is used and can I use credit cards?",
+      answer: "The Philippine Peso (PHP) is the local currency. Credit cards are accepted in cities and tourist areas, but cash is preferred in rural areas and small establishments."
+    },
+    {
+      question: "Is the water safe to drink?",
+      answer: "We recommend drinking bottled or filtered water. All accommodations provide safe drinking water, and our guides will ensure you have access to clean water throughout the trip."
+    },
+    {
+      question: "What should I know about Filipino culture and customs?",
+      answer: "Filipinos are known for their hospitality and friendliness. Dress modestly when visiting religious sites, remove shoes when entering homes, and always greet with a smile. Tipping is appreciated but not mandatory."
+    }
   ]
 };

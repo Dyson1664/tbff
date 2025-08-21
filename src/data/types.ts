@@ -32,6 +32,11 @@ export interface IncludedCategory {
   items: IncludedItem[];
 }
 
+export interface FAQ {
+  question: string;
+  answer: string;
+}
+
 export interface ItineraryData {
   id?: string;
   slug?: string;
@@ -45,6 +50,7 @@ export interface ItineraryData {
   itinerary: ItineraryDay[];
   summary: TourSummary;
   included: IncludedCategory[];
+  faqs: FAQ[];
 }
 
 export interface Trip {
