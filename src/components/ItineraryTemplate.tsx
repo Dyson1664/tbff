@@ -208,16 +208,12 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Scroll to first image function
   const scrollToFirstImage = useCallback((dayNumber: number) => {
     setTimeout(() => {
-      // Target the accordion trigger (day header) instead
-      const dayTrigger = document.querySelector(`[value="day-${dayNumber}"] [data-accordion-trigger]`);
-      const firstImageElement = document.querySelector(`#day-${dayNumber}-first-image`);
+      // Target the entire accordion item to show the day header
+      const accordionItem = document.querySelector(`[value="day-${dayNumber}"]`);
       
-      // Use the day trigger if available, otherwise fall back to first image
-      const targetElement = dayTrigger || firstImageElement;
-      
-      if (targetElement) {
-        const offset = 150; // Offset to show Day header and title nicely
-        const elementPosition = targetElement.getBoundingClientRect().top;
+      if (accordionItem) {
+        const offset = 100; // Offset to show Day header and title nicely from top
+        const elementPosition = accordionItem.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         
         window.scrollTo({
@@ -225,7 +221,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           behavior: 'smooth'
         });
       }
-    }, 150); // Slightly longer delay to allow accordion to expand
+    }, 200); // Longer delay to allow accordion to fully expand
   }, []);
 
   // Memoize itinerary rendering with virtual scrolling for large days
