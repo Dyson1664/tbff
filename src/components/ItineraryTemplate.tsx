@@ -216,7 +216,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       const targetElement = dayTrigger || firstImageElement;
       
       if (targetElement) {
-        const offset = 200; // Increased offset to scroll higher and show Day header
+        const offset = 280; // Much higher offset to show complete Day header and title
         const elementPosition = targetElement.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
         
