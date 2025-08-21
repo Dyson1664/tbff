@@ -27,6 +27,7 @@ const DropdownDestinationItem = memo(({ destination }: { destination: typeof NAV
   <Link 
     to={destination.link}
     className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
+    onClick={() => window.scrollTo(0, 0)}
   >
     <div className="flex justify-between items-start">
       <div>
@@ -99,7 +100,12 @@ const Navbar = memo(() => {
   // Memoized mobile destination items
   const mobileDestinationItems = useMemo(() => 
     NAVIGATION_DESTINATIONS.map((destination, index) => (
-      <Link key={`mobile-${destination.link}-${index}`} to={destination.link} className="py-2 px-2 hover:bg-muted rounded cursor-pointer block">
+      <Link 
+        key={`mobile-${destination.link}-${index}`} 
+        to={destination.link} 
+        className="py-2 px-2 hover:bg-muted rounded cursor-pointer block"
+        onClick={() => window.scrollTo(0, 0)}
+      >
         <div className="flex justify-between items-start">
           <div>
             <h4 className="font-medium text-foreground text-sm">{destination.city}</h4>
