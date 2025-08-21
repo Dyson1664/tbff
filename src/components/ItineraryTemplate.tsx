@@ -205,24 +205,44 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Memoize derived values
   const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
   
+  // Scroll to first image function
+  const scrollToFirstImage = useCallback((dayNumber: number) => {
+    setTimeout(() => {
+      const firstImageElement = document.querySelector(`#day-${dayNumber}-first-image`);
+      if (firstImageElement) {
+        const offset = 120; // Adjust this value to position the image perfectly on screen
+        const elementPosition = firstImageElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }, 100); // Small delay to allow accordion to expand
+  }, []);
+
   // Memoize itinerary rendering with virtual scrolling for large days
   const itineraryContent = useMemo(() => (
     <Accordion type="single" collapsible defaultValue="day-1" className="space-y-4">
       {data.itinerary.map((day) => (
         <AccordionItem key={day.day} value={`day-${day.day}`} className={STATIC_STYLES.accordionItem}>
-          <AccordionTrigger className="px-[18px] md:px-6 py-4 hover:no-underline">
+          <AccordionTrigger 
+            className="px-[18px] md:px-6 py-4 hover:no-underline"
+            onClick={() => scrollToFirstImage(day.day)}
+          >
             <div className="flex items-center gap-4">
               <h3 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">Day {day.day}</h3>
               <h4 className="text-lg md:text-xl font-semibold text-foreground">{day.title}</h4>
             </div>
           </AccordionTrigger>
           <AccordionContent className="px-[18px] md:px-6 pb-6">
-            <VirtualizedItinerary activities={day.activities} />
+            <VirtualizedItinerary activities={day.activities} dayNumber={day.day} />
           </AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>
-  ), [data.itinerary]);
+  ), [data.itinerary, scrollToFirstImage]);
 
   return (
     <div className={STATIC_STYLES.gradient}>
