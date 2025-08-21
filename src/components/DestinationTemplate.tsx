@@ -5,6 +5,7 @@ import { MapPin, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { DestinationData } from "@/data/destinations";
 import { getPayUrlBySlug } from '@/data/payUrls';
+import Footer from "@/components/common/Footer";
 
 interface DestinationTemplateProps {
   data: DestinationData;
@@ -130,6 +131,9 @@ const DestinationTemplate = ({ data }: DestinationTemplateProps) => {
           </div>
         </div>
       </section>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { memo, useMemo, useCallback } from "react";
 import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-static";
 import { getPayUrlBySlug } from '@/data/payUrls';
+import Footer from "@/components/common/Footer";
 
 interface Activity {
   time: string;
@@ -297,6 +298,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         {/* FAQ Section */}
         <FAQSection faqs={data.faqs} countryName={countryName} />
       </div>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 });
