@@ -13,6 +13,7 @@ import {
   FEATURES, 
   TOUR_ROUTES 
 } from "@/data/landing";
+import { NAVIGATION_TRIPS } from "@/data/navigation";
 
 // Import static images
 import parisHero from "@/assets/paris-hero.jpg";
@@ -236,18 +237,15 @@ export default memo(function LandingPage() {
             <div>
               <h4 className="font-semibold mb-6 text-primary">Tours</h4>
               <div className="space-y-3 text-sm">
-                <a href="#" className="block hover:text-primary transition-colors">Siargao Island</a>
-                <a href="#" className="block hover:text-primary transition-colors">Philippine Sunrise</a>
-                <a href="#" className="block hover:text-primary transition-colors">Philippine Sunset</a>
-                <a href="#" className="block hover:text-primary transition-colors">Maldives Bucketlist</a>
-                <a href="#" className="block hover:text-primary transition-colors">Sri Lanka Wander</a>
-                <a href="#" className="block hover:text-primary transition-colors">Argentina's Wonders</a>
-                <a href="#" className="block hover:text-primary transition-colors">Brazil's Treasure</a>
-                <a href="#" className="block hover:text-primary transition-colors">Vietnam Expedition</a>
-                <a href="#" className="block hover:text-primary transition-colors">India Discovery Tour</a>
-                <a href="#" className="block hover:text-primary transition-colors">India Holi Festival Tour</a>
-                <a href="#" className="block hover:text-primary transition-colors">Tanzania Exploration</a>
-                <a href="#" className="block hover:text-primary transition-colors">New Zealand Expedition</a>
+                {NAVIGATION_TRIPS.map((trip) => (
+                  <Link 
+                    key={trip.title}
+                    to={trip.link} 
+                    className="block hover:text-primary transition-colors"
+                  >
+                    {trip.title}
+                  </Link>
+                ))}
               </div>
             </div>
 
