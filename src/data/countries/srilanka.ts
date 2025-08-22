@@ -2,7 +2,7 @@
 import srilankaHero from "@/assets/srilanka-hero.jpg";
 import srilankaTea from "@/assets/srilanka-tea.jpg";
 import srilankaBeach from "@/assets/srilanka-beach.jpg";
-import srilankaColombo from "@/assets/srilanka-colombo.jpg";
+import srilankaColombo from "@/assets/srilanka-colombo.png";
 
 export const srilankaData = {
   id: "srilanka-serenity",
