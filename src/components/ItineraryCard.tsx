@@ -22,7 +22,7 @@ export const ItineraryCard = memo(({ activity, isLast = false, isFirst = false, 
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-200">
       <div 
-        className="aspect-[4/3] relative overflow-hidden"
+        className="aspect-[3/2] relative overflow-hidden"
         id={isFirst && dayNumber ? `day-${dayNumber}-first-image` : undefined}
       >
         <img 
