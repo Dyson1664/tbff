@@ -1,15 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Clock, MapPin } from "lucide-react";
 import { memo } from "react";
-
-interface Activity {
-  time: string;
-  title: string;
-  location: string;
-  description: string;
-  image: string;
-  duration: string;
-}
+import { Activity } from "@/data/types";
 
 interface ItineraryCardProps {
   activity: Activity;
@@ -25,11 +17,14 @@ export const ItineraryCard = memo(({ activity, isLast = false, isFirst = false, 
         className="aspect-[16/8] md:aspect-[16/7] relative overflow-hidden"
         id={isFirst && dayNumber ? `day-${dayNumber}-first-image` : undefined}
       >
-        <img 
-          src={activity.image} 
-          alt={activity.title}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-        />
+        <picture className="absolute inset-0">
+          <source media="(min-width: 768px)" srcSet={activity.imageWide ?? activity.image} />
+          <img
+            src={activity.imageMobile ?? activity.image}
+            alt={activity.title}
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </picture>
         <div className="absolute top-2 left-2 md:top-4 md:left-4 bg-background/90 backdrop-blur-sm px-2 py-1 md:px-3 md:py-1 rounded-full">
           <div className="flex items-center gap-1 text-xs md:text-sm font-medium text-foreground">
             <Clock className="w-3 h-3" />
