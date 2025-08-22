@@ -28,7 +28,7 @@ export const ItineraryCard = memo(({ activity, isLast = false, isFirst = false, 
         <img 
           src={activity.image} 
           alt={activity.title}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
         />
         <div className="absolute top-2 left-2 md:top-4 md:left-4 bg-background/90 backdrop-blur-sm px-2 py-1 md:px-3 md:py-1 rounded-full">
           <div className="flex items-center gap-1 text-xs md:text-sm font-medium text-foreground">
