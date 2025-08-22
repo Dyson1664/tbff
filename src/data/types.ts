@@ -6,8 +6,6 @@ export interface Activity {
   location: string;
   description: string;
   image: string;
-  imageMobile?: string;
-  imageWide?: string;
   duration: string;
 }
 
