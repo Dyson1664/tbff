@@ -105,6 +105,16 @@ export const DayLayout = memo(({
         <div className="px-6 pb-6 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Accommodation</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Hotel Image */}
+            {accommodation.image && (
+              <div className="relative h-48 overflow-hidden rounded-lg">
+                <img
+                  src={accommodation.image}
+                  alt={accommodation.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            )}
             {/* Hotel Details */}
             <div className="space-y-3">
               <div>
@@ -128,16 +138,6 @@ export const DayLayout = memo(({
                 </button>
               )}
             </div>
-            {/* Hotel Image */}
-            {accommodation.image && (
-              <div className="relative h-48 overflow-hidden rounded-lg">
-                <img
-                  src={accommodation.image}
-                  alt={accommodation.name}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
             {/* Map/Additional Image Placeholder */}
             <div className="bg-muted rounded-lg h-48 flex items-center justify-center">
               <div className="w-16 h-16 bg-muted-foreground/20 rounded-lg"></div>
