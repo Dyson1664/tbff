@@ -164,10 +164,12 @@ export const DayLayout = memo(({
                 <p className="font-medium text-foreground text-sm">{transportation.from}</p>
               </div>
               <div className="flex-1 mx-6 relative flex items-center">
-                <div className="h-1 bg-primary rounded-full flex-1" style={{
-                  background: 'linear-gradient(90deg, #0FC2BF 0%, #0FC2BF 50%, #0FC2BF 100%)',
-                  backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 4px, white 4px, white 8px)'
-                }}></div>
+                <div className="h-1 bg-primary rounded-full flex-1 relative">
+                  <div className="absolute inset-0 bg-primary rounded-full" style={{
+                    background: 'linear-gradient(90deg, #0FC2BF 0%, #0FC2BF 50%, #0FC2BF 100%)',
+                    backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 4px, white 4px, white 8px)'
+                  }}></div>
+                </div>
                 <div className="ml-1">
                   <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
