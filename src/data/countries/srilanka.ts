@@ -43,8 +43,11 @@ export const srilankaData = {
     },
     {
       day: 2,
-      date: "June 21, 2024",
+      date: "21 JUN 2024",
       title: "Temples, canals & city vibes",
+      location: "Sigiriya",
+      heroImage: srilankaHero,
+      description: "Journey into Sri Lanka's Cultural Triangle, where ancient wonders and natural beauty converge. Sigiriya stands as a testament to centuries of history, spirituality, and artistic mastery. This UNESCO World Heritage site offers unforgettable views across lush countryside, village life, and sacred shrines. Whether you're seeking cultural immersion or scenic beauty, Sigiriya is your gateway to unforgettable experiences.",
       activities: [
         {
           time: "Morning",
@@ -62,12 +65,46 @@ export const srilankaData = {
           image: srilankaTea,
           duration: "4 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Independence Square",
+          description: "Visit this iconic monument celebrating Sri Lanka's independence and colonial history.",
+          image: srilankaColombo
+        },
+        {
+          title: "Cultural Dance Show",
+          description: "Experience traditional Sri Lankan dances, music and storytelling under the stars.",
+          image: srilankaHero
+        },
+        {
+          title: "Village Life Tour",
+          description: "Discover authentic rural life while traveling through countryside and local markets.",
+          image: srilankaTea
+        }
+      ],
+      accommodation: {
+        name: "Sigiriya Rock Lodge",
+        rating: "4.5 Star",
+        roomTypes: [
+          "01 x Garden View Double",
+          "01 x Premium Triple"
+        ]
+      },
+      transportation: {
+        from: "Colombo",
+        to: "Sigiriya",
+        duration: "3.5 Hours",
+        distance: "165 km"
+      }
     },
     {
       day: 3,
-      date: "June 22, 2024",
+      date: "22 JUN 2024",
       title: "Lion's Rock & Spa Downtime",
+      location: "Sigiriya",
+      heroImage: srilankaHero,
+      description: "Nestled in the lush green hills of Sri Lanka's Cultural Triangle, Sigiriya is a city that exudes charm and spirituality. Known as the home of the iconic Lion Rock fortress, it is a testament to centuries of history, spirituality and artistic mastery. Wander through its ancient pathways brimming with colorful frescoes and archaeological marvels, or take a serene stroll around the surrounding countryside. Whether you're seeking tranquility or adventure, Sigiriya is your gateway to unforgettable experiences.",
       activities: [
         {
           time: "Morning",
@@ -85,7 +122,32 @@ export const srilankaData = {
           image: srilankaTea,
           duration: "4 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Lion Rock Fortress Climb",
+          description: "Ascend the iconic 1,200 ancient steps to reach breathtaking 360° views of the surrounding jungle.",
+          image: srilankaHero
+        },
+        {
+          title: "Ancient Frescoes Gallery",
+          description: "Marvel at 1,500-year-old frescoes that showcase Sri Lanka's rich artistic heritage.",
+          image: srilankaTea
+        },
+        {
+          title: "Village Safari Experience",
+          description: "Enjoy a peaceful canoe ride, local dinner, and bonfire under the stars with countryside tractor rides.",
+          image: srilankaBeach
+        }
+      ],
+      accommodation: {
+        name: "Sigiriya Village Hotel",
+        rating: "4.3 Star",
+        roomTypes: [
+          "01 x Superior Double",
+          "01 x Deluxe Triple"
+        ]
+      }
     },
     {
       day: 4,

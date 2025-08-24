@@ -1,7 +1,6 @@
-import { ItineraryCard } from "@/components/ItineraryCard";
+import { DayLayout } from "@/components/DayLayout";
 import Navbar from "@/components/Navbar";
 import { HeroSection } from "@/components/common/HeroSection";
-import { VirtualizedItinerary } from "@/components/VirtualizedItinerary";
 import { Share2, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -9,22 +8,7 @@ import { memo, useMemo, useCallback } from "react";
 import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-static";
 import { getPayUrlBySlug } from '@/data/payUrls';
 import Footer from "@/components/common/Footer";
-
-interface Activity {
-  time: string;
-  title: string;
-  location: string;
-  description: string;
-  image: string;
-  duration: string;
-}
-
-interface DayItinerary {
-  day: number;
-  date: string;
-  title: string;
-  activities: Activity[];
-}
+import { DayItinerary } from "@/data/types";
 
 interface IncludedItem {
   text: string;
@@ -229,28 +213,24 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
     }, 150); // Delay to allow accordion to expand
   }, []);
 
-  // Memoize itinerary rendering with virtual scrolling for large days
+  // Memoize itinerary rendering with new DayLayout
   const itineraryContent = useMemo(() => (
-    <Accordion type="single" collapsible defaultValue="day-1" className="space-y-4">
+    <div className="space-y-8">
       {data.itinerary.map((day) => (
-        <AccordionItem key={day.day} value={`day-${day.day}`} className={STATIC_STYLES.accordionItem}>
-          <AccordionTrigger 
-            className="px-[18px] md:px-6 py-4 hover:no-underline"
-            onClick={() => scrollToFirstImage(day.day)}
-            data-accordion-trigger
-          >
-            <div className="flex items-center gap-4">
-              <h3 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">Day {day.day}</h3>
-              <h4 className="text-lg md:text-xl font-semibold text-foreground">{day.title}</h4>
-            </div>
-          </AccordionTrigger>
-          <AccordionContent className="px-[18px] md:px-6 pb-6">
-            <VirtualizedItinerary activities={day.activities} dayNumber={day.day} />
-          </AccordionContent>
-        </AccordionItem>
+        <DayLayout
+          key={day.day}
+          dayNumber={day.day}
+          date={day.date}
+          location={day.location || day.title}
+          heroImage={day.heroImage || data.heroImage}
+          description={day.description || `Experience the wonders of ${day.title} in this unforgettable day of your journey.`}
+          experiences={day.experiences || []}
+          accommodation={day.accommodation}
+          transportation={day.transportation}
+        />
       ))}
-    </Accordion>
-  ), [data.itinerary, scrollToFirstImage]);
+    </div>
+  ), [data.itinerary, data.heroImage]);
 
   return (
     <div className={STATIC_STYLES.gradient}>

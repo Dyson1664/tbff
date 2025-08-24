@@ -9,6 +9,40 @@ export interface Activity {
   duration: string;
 }
 
+export interface Experience {
+  title: string;
+  description?: string;
+  image: string;
+}
+
+export interface Accommodation {
+  name: string;
+  rating: string;
+  roomTypes: string[];
+  website?: string;
+  image?: string;
+}
+
+export interface Transportation {
+  from: string;
+  to: string;
+  duration: string;
+  distance?: string;
+}
+
+export interface DayItinerary {
+  day: number;
+  date: string;
+  title: string;
+  location?: string;
+  heroImage?: string;
+  description?: string;
+  activities: Activity[];
+  experiences?: Experience[];
+  accommodation?: Accommodation;
+  transportation?: Transportation;
+}
+
 export interface ItineraryDay {
   day: number;
   date: string;
