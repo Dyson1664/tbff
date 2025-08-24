@@ -101,9 +101,10 @@ export const DayLayout = memo(({
       {accommodation && (
         <div className="px-6 pb-6">
           <h4 className="text-lg font-semibold text-foreground mb-4">Accommodation</h4>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Hotel Image */}
             {accommodation.image && (
-              <div className="relative h-32 overflow-hidden rounded-lg">
+              <div className="relative h-48 overflow-hidden rounded-lg">
                 <img
                   src={accommodation.image}
                   alt={accommodation.name}
@@ -111,22 +112,32 @@ export const DayLayout = memo(({
                 />
               </div>
             )}
-            <div className="space-y-2">
-              <h5 className="font-medium text-foreground">{accommodation.name}</h5>
-              <p className="text-sm text-muted-foreground">{accommodation.rating}</p>
-              <div className="space-y-1">
+            {/* Hotel Details */}
+            <div className="space-y-3">
+              <div>
+                <h5 className="font-medium text-foreground text-base">{accommodation.name}</h5>
+                <p className="text-sm text-muted-foreground">{accommodation.rating}</p>
+              </div>
+              <div className="space-y-2">
                 {accommodation.roomTypes.map((roomType, index) => (
-                  <div key={index} className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span className="w-3 h-3 bg-muted rounded-sm flex-shrink-0"></span>
+                  <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <svg className="w-4 h-4 text-muted-foreground" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
+                      <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                    </svg>
                     {roomType}
                   </div>
                 ))}
               </div>
               {accommodation.website && (
-                <button className="text-xs text-primary hover:underline">
+                <button className="text-sm text-primary hover:underline font-medium">
                   Visit Website
                 </button>
               )}
+            </div>
+            {/* Map/Additional Image Placeholder */}
+            <div className="bg-muted rounded-lg h-48 flex items-center justify-center">
+              <div className="w-16 h-16 bg-muted-foreground/20 rounded-lg"></div>
             </div>
           </div>
         </div>
@@ -136,34 +147,55 @@ export const DayLayout = memo(({
       {transportation && (
         <div className="px-6 pb-6">
           <h4 className="text-lg font-semibold text-foreground mb-4">Transportation</h4>
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <div className="text-center">
-                <div className="w-3 h-3 bg-primary rounded-full mb-1"></div>
-                <p className="text-xs text-muted-foreground">{transportation.from}</p>
+          <div className="space-y-4">
+            {/* Transportation Icons */}
+            <div className="flex justify-center gap-4 mb-6">
+              <div className="w-8 h-8 text-primary">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8zM3 7a2 2 0 012-2h10a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2V7zm2.5 1a.5.5 0 000 1h9a.5.5 0 000-1h-9z" clipRule="evenodd" />
+                </svg>
               </div>
-              <div className="flex-1 relative">
-                <div className="h-px bg-primary"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-background px-2">
-                    <div className="flex gap-1">
-                      <span className="w-1 h-1 bg-primary rounded-full"></span>
-                      <span className="w-1 h-1 bg-primary rounded-full"></span>
-                      <span className="w-1 h-1 bg-primary rounded-full"></span>
-                    </div>
-                  </div>
+              <div className="w-8 h-8 text-primary">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                </svg>
+              </div>
+              <div className="w-8 h-8 text-primary">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 2L3 7v11a1 1 0 001 1h3a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1h3a1 1 0 001-1V7l-7-5z" />
+                </svg>
+              </div>
+              <div className="w-8 h-8 text-primary">
+                <svg fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8 5a1 1 0 100 2h5.586l-1.293 1.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L13.586 5H8zM12 15a1 1 0 100-2H6.414l1.293-1.293a1 1 0 10-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L6.414 15H12z" />
+                </svg>
+              </div>
+            </div>
+            
+            {/* Route Line */}
+            <div className="flex items-center justify-between relative">
+              <div className="text-center">
+                <p className="font-medium text-foreground">{transportation.from}</p>
+              </div>
+              <div className="flex-1 mx-8 relative">
+                <div className="h-1 bg-primary rounded-full relative">
+                  <div className="absolute inset-0 bg-primary rounded-full" style={{
+                    background: 'linear-gradient(90deg, #0FC2BF 0%, #0FC2BF 50%, #0FC2BF 100%)',
+                    backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 4px, white 4px, white 8px)'
+                  }}></div>
                 </div>
               </div>
               <div className="text-center">
-                <div className="w-3 h-3 bg-primary rounded-full mb-1"></div>
-                <p className="text-xs text-muted-foreground">{transportation.to}</p>
+                <p className="font-medium text-foreground">{transportation.to}</p>
               </div>
             </div>
-            <div className="text-right">
-              <p className="text-sm font-medium text-foreground">{transportation.duration}</p>
-              {transportation.distance && (
-                <p className="text-xs text-muted-foreground">{transportation.distance}</p>
-              )}
+            
+            {/* Duration and Distance */}
+            <div className="text-center">
+              <p className="text-sm text-muted-foreground">
+                {transportation.duration}
+                {transportation.distance && ` | ${transportation.distance}`}
+              </p>
             </div>
           </div>
         </div>
