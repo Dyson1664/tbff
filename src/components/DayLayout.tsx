@@ -57,7 +57,7 @@ export const DayLayout = memo(({
       </div>
 
       {/* Hero Image */}
-      <div className="relative h-64 md:h-80 overflow-hidden">
+      <div className="relative h-80 md:h-96 overflow-hidden">
         <img
           src={heroImage}
           alt={`Day ${dayNumber} - ${location}`}
@@ -79,7 +79,7 @@ export const DayLayout = memo(({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {experiences.map((experience, index) => (
               <div key={index} className="group">
-                <div className="relative h-40 overflow-hidden rounded-lg mb-3">
+                <div className="relative h-48 overflow-hidden rounded-lg mb-3">
                   <img
                     src={experience.image}
                     alt={experience.title}
