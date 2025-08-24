@@ -46,7 +46,7 @@ export const DayLayout = memo(({
   return (
     <div className="bg-muted/70 rounded-lg shadow-sm border-2 border-border overflow-hidden mb-8">
       {/* Day Header */}
-      <div className="p-6 pb-4 bg-white">
+      <div className="p-10 pb-6 bg-white">
         <div className="flex items-center gap-4 mb-4">
           <h2 className="text-3xl font-bold text-foreground">Day {dayNumber.toString().padStart(2, '0')}</h2>
           <div>
@@ -57,7 +57,7 @@ export const DayLayout = memo(({
       </div>
 
       {/* Hero Image */}
-      <div className="px-6 bg-white">
+      <div className="px-10 bg-white">
         <div className="relative h-80 md:h-96 overflow-hidden rounded-xl border-8 border-white shadow-sm">
           <img
             src={heroImage}
@@ -68,7 +68,7 @@ export const DayLayout = memo(({
       </div>
 
       {/* Description */}
-      <div className="p-6 bg-white">
+      <div className="p-10 bg-white">
         <p className="text-muted-foreground leading-relaxed text-sm">
           {description}
         </p>
@@ -76,7 +76,7 @@ export const DayLayout = memo(({
 
       {/* Experiences Section */}
       {experiences.length > 0 && (
-        <div className="px-6 pb-6 bg-white">
+        <div className="px-10 pb-10 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Experiences</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {experiences.map((experience, index) => (
@@ -102,7 +102,7 @@ export const DayLayout = memo(({
 
       {/* Accommodation Section */}
       {accommodation && (
-        <div className="px-6 pb-6 bg-white">
+        <div className="px-10 pb-10 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Accommodation</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Hotel Image */}
@@ -146,7 +146,7 @@ export const DayLayout = memo(({
 
       {/* Transportation Section */}
       {transportation && (
-        <div className="px-6 pb-6 bg-white">
+        <div className="px-10 pb-10 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Transportation</h4>
           <div className="space-y-4">
             {/* Transportation Icons */}
