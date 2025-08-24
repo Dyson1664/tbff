@@ -44,7 +44,7 @@ export const DayLayout = memo(({
   transportation 
 }: DayLayoutProps) => {
   return (
-    <div className="bg-background rounded-lg shadow-sm border border-border overflow-hidden mb-8">
+    <div className="bg-muted/30 rounded-lg shadow-sm border border-border overflow-hidden mb-8">
       {/* Day Header */}
       <div className="p-6 pb-4">
         <div className="flex items-center gap-4 mb-4">
@@ -57,12 +57,14 @@ export const DayLayout = memo(({
       </div>
 
       {/* Hero Image */}
-      <div className="relative h-80 md:h-96 overflow-hidden">
-        <img
-          src={heroImage}
-          alt={`Day ${dayNumber} - ${location}`}
-          className="w-full h-full object-cover"
-        />
+      <div className="px-6">
+        <div className="relative h-80 md:h-96 overflow-hidden rounded-xl border-4 border-white shadow-sm">
+          <img
+            src={heroImage}
+            alt={`Day ${dayNumber} - ${location}`}
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
 
       {/* Description */}
