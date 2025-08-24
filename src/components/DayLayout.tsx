@@ -58,7 +58,7 @@ export const DayLayout = memo(({
 
       {/* Hero Image */}
       <div className="px-6 bg-white">
-        <div className="relative h-80 md:h-96 overflow-hidden rounded-xl border-8 border-white shadow-sm">
+        <div className="relative h-80 md:h-96 overflow-hidden rounded-xl border-8 border-border shadow-sm">
           <img
             src={heroImage}
             alt={`Day ${dayNumber} - ${location}`}
