@@ -159,11 +159,12 @@ export const DayLayout = memo(({
             </div>
             
             {/* Route Line */}
-            <div className="flex items-center justify-between relative">
+            <div className="flex items-center justify-center relative max-w-md mx-auto">
               <div className="text-center">
-                <p className="font-medium text-foreground">{transportation.from}</p>
+                <div className="w-3 h-3 bg-primary rounded-full mb-2"></div>
+                <p className="font-medium text-foreground text-sm">{transportation.from}</p>
               </div>
-              <div className="flex-1 mx-8 relative">
+              <div className="flex-1 mx-6 relative">
                 <div className="h-1 bg-primary rounded-full relative">
                   <div className="absolute inset-0 bg-primary rounded-full" style={{
                     background: 'linear-gradient(90deg, #0FC2BF 0%, #0FC2BF 50%, #0FC2BF 100%)',
@@ -172,7 +173,8 @@ export const DayLayout = memo(({
                 </div>
               </div>
               <div className="text-center">
-                <p className="font-medium text-foreground">{transportation.to}</p>
+                <div className="w-3 h-3 bg-primary rounded-full mb-2"></div>
+                <p className="font-medium text-foreground text-sm">{transportation.to}</p>
               </div>
             </div>
             
