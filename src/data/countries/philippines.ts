@@ -20,6 +20,9 @@ export const philippinesData = {
       day: 1,
       date: "July 10, 2024",
       title: "Manila Heritage",
+      location: "Manila, Luzon",
+      heroImage: philippinesMarket,
+      description: "Begin your Philippine adventure in Manila, where Spanish colonial heritage meets modern Filipino culture. Explore the historic walled city of Intramuros with its centuries-old churches and cobblestone streets, then discover the country's rich artistic and cultural heritage through museums and parks dedicated to national heroes.",
       activities: [
         {
           time: "9:00 AM",
@@ -37,7 +40,38 @@ export const philippinesData = {
           image: philippinesMarket,
           duration: "2.5 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Intramuros Historic Walk",
+          description: "Journey through Spanish colonial architecture and centuries-old churches.",
+          image: philippinesMarket
+        },
+        {
+          title: "National Museum Discovery",
+          description: "Explore Filipino art, culture, and natural history collections.",
+          image: philippinesHero
+        },
+        {
+          title: "Rizal Park Heritage",
+          description: "Visit the memorial dedicated to Philippines' national hero Dr. José Rizal.",
+          image: philippinesRice
+        }
+      ],
+      accommodation: {
+        name: "Manila Peninsula Hotel",
+        rating: "5 Star Luxury",
+        roomTypes: [
+          "01 x Deluxe City View",
+          "01 x Executive Suite"
+        ]
+      },
+      transportation: {
+        from: "Airport",
+        to: "Manila Historic District",
+        duration: "45 Minutes",
+        distance: "15 km"
+      }
     },
     {
       day: 2,
@@ -100,6 +134,9 @@ export const philippinesData = {
       day: 3,
       date: "July 12, 2024",
       title: "Island Paradise - Palawan",
+      location: "El Nido, Palawan",
+      heroImage: philippinesHero,
+      description: "Fly to one of the world's most beautiful island destinations, known for its dramatic limestone karsts, hidden lagoons, and crystal-clear waters. El Nido offers some of the most pristine beaches and spectacular island hopping experiences in Southeast Asia, with secluded lagoons and world-class snorkeling opportunities.",
       activities: [
         {
           time: "10:00 AM",
@@ -117,12 +154,46 @@ export const philippinesData = {
           image: philippinesHero,
           duration: "6 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Hidden Lagoons Discovery",
+          description: "Kayak through secret lagoons surrounded by towering limestone cliffs.",
+          image: philippinesHero
+        },
+        {
+          title: "Pristine Beach Relaxation",
+          description: "Unwind on some of the world's most beautiful secluded beaches.",
+          image: philippinesMarket
+        },
+        {
+          title: "Snorkeling Paradise",
+          description: "Explore vibrant coral reefs and tropical marine life in crystal-clear waters.",
+          image: philippinesRice
+        }
+      ],
+      accommodation: {
+        name: "El Nido Resorts Lagen Island",
+        rating: "4.5 Star Resort",
+        roomTypes: [
+          "01 x Beach Villa",
+          "01 x Lagoon View Suite"
+        ]
+      },
+      transportation: {
+        from: "Manila",
+        to: "El Nido",
+        duration: "1.5 Hours",
+        distance: "580 km"
+      }
     },
     {
       day: 4,
       date: "July 13, 2024",
       title: "El Nido Adventures",
+      location: "El Nido Islands, Palawan",
+      heroImage: philippinesHero,
+      description: "Continue your island adventure with more spectacular beaches and hidden gems. Visit some of the most photographed beaches in the world, including secret beaches accessible only by boat, and end your day with one of the world's most spectacular sunsets at Las Cabanas Beach with dramatic limestone cliffs as your backdrop.",
       activities: [
         {
           time: "8:00 AM",
@@ -140,7 +211,38 @@ export const philippinesData = {
           image: philippinesHero,
           duration: "2 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Secret Beach Access",
+          description: "Discover hidden beaches accessible only through small openings in limestone cliffs.",
+          image: philippinesHero
+        },
+        {
+          title: "Matinloc Shrine Visit",
+          description: "Explore historic shrine perched on dramatic cliffs with panoramic ocean views.",
+          image: philippinesMarket
+        },
+        {
+          title: "World-Class Sunset",
+          description: "Experience breathtaking sunsets at Las Cabanas Beach with cocktails and limestone backdrop.",
+          image: philippinesRice
+        }
+      ],
+      accommodation: {
+        name: "El Nido Resorts Miniloc Island",
+        rating: "5 Star Luxury",
+        roomTypes: [
+          "01 x Water Cottage",
+          "01 x Deluxe Beach Villa"
+        ]
+      },
+      transportation: {
+        from: "El Nido Town",
+        to: "Remote Islands",
+        duration: "45 Minutes",
+        distance: "25 km"
+      }
     }
   ],
   summary: {

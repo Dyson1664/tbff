@@ -23,6 +23,9 @@ export const japanData = {
       day: 1,
       date: "May 15, 2024",
       title: "Tokyo Arrival & Modern Culture",
+      location: "Tokyo, Japan",
+      heroImage: japanTokyo,
+      description: "Begin your Japanese adventure in the heart of Tokyo, experiencing the incredible energy of modern Japan. From the world's busiest pedestrian crossing to authentic sushi crafted by master chefs, immerse yourself in the vibrant culture that defines contemporary Tokyo while discovering the city's culinary excellence.",
       activities: [
         {
           time: "10:00 AM",
@@ -40,7 +43,38 @@ export const japanData = {
           image: japanSushi,
           duration: "3 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Shibuya Crossing Culture",
+          description: "Navigate the world's busiest intersection and explore modern Tokyo's urban energy.",
+          image: japanTokyo
+        },
+        {
+          title: "Master Sushi Crafting",
+          description: "Learn traditional sushi techniques from certified master chefs.",
+          image: japanSushi
+        },
+        {
+          title: "Tsukiji Market Discovery",
+          description: "Explore Tokyo's famous fish market and taste the freshest seafood.",
+          image: japanGarden
+        }
+      ],
+      accommodation: {
+        name: "Tokyo Station Hotel",
+        rating: "5 Star Historic",
+        roomTypes: [
+          "01 x Classic Double",
+          "01 x Tokyo Station Suite"
+        ]
+      },
+      transportation: {
+        from: "Narita Airport",
+        to: "Tokyo Central",
+        duration: "60 Minutes",
+        distance: "60 km"
+      }
     },
     {
       day: 2,
@@ -103,6 +137,9 @@ export const japanData = {
       day: 3,
       date: "May 17, 2024",
       title: "Mount Fuji Day Trip",
+      location: "Mount Fuji & Fujikawaguchiko",
+      heroImage: japanTorii,
+      description: "Journey to Japan's most sacred and iconic mountain, Mount Fuji. This day trip combines natural beauty with spiritual significance as you visit the 5th station for breathtaking views and enjoy serene lake reflections. Weather permitting, capture the perfect photo of this UNESCO World Heritage site that has inspired artists and pilgrims for centuries.",
       activities: [
         {
           time: "8:00 AM",
@@ -120,12 +157,46 @@ export const japanData = {
           image: japanGarden,
           duration: "3 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Mount Fuji 5th Station",
+          description: "Experience breathtaking views from Japan's most sacred mountain at 2,300m elevation.",
+          image: japanTorii
+        },
+        {
+          title: "Lake Kawaguchi Reflection",
+          description: "Capture perfect Mount Fuji reflections in the serene waters of Lake Kawaguchi.",
+          image: japanGarden
+        },
+        {
+          title: "Panoramic Ropeway Ride",
+          description: "Soar above the landscape for spectacular mountain and lake panoramic views.",
+          image: japanSushi
+        }
+      ],
+      accommodation: {
+        name: "Kawaguchiko Hotel",
+        rating: "4 Star Resort",
+        roomTypes: [
+          "01 x Mountain View Double",
+          "01 x Traditional Tatami Suite"
+        ]
+      },
+      transportation: {
+        from: "Tokyo",
+        to: "Mount Fuji Area",
+        duration: "2.5 Hours",
+        distance: "120 km"
+      }
     },
     {
       day: 4,
       date: "May 18, 2024",
       title: "Tokyo to Kyoto",
+      location: "Kyoto, Japan",
+      heroImage: japanTorii,
+      description: "Experience Japan's legendary bullet train as you journey to the ancient capital of Kyoto. Upon arrival, immerse yourself in traditional Japanese spirituality at the iconic Fushimi Inari Shrine, famous for its thousands of vermillion torii gates that create mystical tunnels winding up the sacred mountain.",
       activities: [
         {
           time: "9:00 AM",
@@ -143,7 +214,38 @@ export const japanData = {
           image: japanTorii,
           duration: "3 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Shinkansen Bullet Train",
+          description: "Travel at 320 km/h on Japan's world-famous high-speed rail system.",
+          image: japanTokyo
+        },
+        {
+          title: "Fushimi Inari Torii Gates",
+          description: "Walk through thousands of vermillion torii gates on this sacred mountain path.",
+          image: japanTorii
+        },
+        {
+          title: "Ancient Capital Discovery",
+          description: "Begin exploring Kyoto's rich cultural heritage and traditional temples.",
+          image: japanGarden
+        }
+      ],
+      accommodation: {
+        name: "Kyoto Traditional Ryokan",
+        rating: "4.5 Star Heritage",
+        roomTypes: [
+          "01 x Traditional Tatami Room",
+          "01 x Premium Ryokan Suite"
+        ]
+      },
+      transportation: {
+        from: "Tokyo",
+        to: "Kyoto",
+        duration: "2 Hours 15 Minutes",
+        distance: "476 km"
+      }
     }
   ],
   summary: {

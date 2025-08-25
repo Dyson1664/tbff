@@ -23,6 +23,9 @@ export const thailandData = {
       day: 1,
       date: "April 10, 2024",
       title: "Bangkok Arrival & Grand Palace",
+      location: "Bangkok, Thailand",
+      heroImage: thailandPalace,
+      description: "Begin your Thai adventure in the magnificent capital of Bangkok, exploring the stunning Grand Palace complex that served as the royal residence for centuries. Discover intricate golden architecture, sacred temples, and the spiritual heart of Buddhism at Wat Pho, home to the famous reclining Buddha and traditional Thai massage traditions.",
       activities: [
         {
           time: "10:00 AM",
@@ -40,7 +43,38 @@ export const thailandData = {
           image: thailandTemple,
           duration: "2 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Grand Palace Majesty",
+          description: "Explore centuries of Thai royal history through stunning golden architecture and sacred spaces.",
+          image: thailandPalace
+        },
+        {
+          title: "Emerald Buddha Temple",
+          description: "Visit Thailand's most sacred Buddhist temple housing the revered Emerald Buddha.",
+          image: thailandTemple
+        },
+        {
+          title: "Traditional Massage Heritage",
+          description: "Discover the birthplace of traditional Thai massage at Wat Pho Temple.",
+          image: thailandMarket
+        }
+      ],
+      accommodation: {
+        name: "Bangkok Luxury Riverside Hotel",
+        rating: "5 Star Luxury",
+        roomTypes: [
+          "01 x Deluxe City View",
+          "01 x Royal Suite"
+        ]
+      },
+      transportation: {
+        from: "Airport",
+        to: "Bangkok Historic Center",
+        duration: "45 Minutes",
+        distance: "35 km"
+      }
     },
     {
       day: 2,
@@ -103,6 +137,9 @@ export const thailandData = {
       day: 3,
       date: "April 12, 2024",
       title: "Bangkok to Chiang Mai",
+      location: "Chiang Mai, Northern Thailand",
+      heroImage: thailandTemple,
+      description: "Journey north to Chiang Mai, Thailand's cultural capital surrounded by mountains and home to over 300 temples. Experience the transition from bustling Bangkok to the laid-back northern Thai culture as you explore the ancient walled city with its traditional temples, local markets, and authentic mountain atmosphere.",
       activities: [
         {
           time: "9:00 AM",
@@ -120,12 +157,46 @@ export const thailandData = {
           image: thailandMarket,
           duration: "3 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Ancient Walled City",
+          description: "Discover Chiang Mai's historic center with traditional Lanna architecture and culture.",
+          image: thailandTemple
+        },
+        {
+          title: "Temple Architecture Tour",
+          description: "Explore beautiful northern Thai temples with unique architectural styles.",
+          image: thailandMarket
+        },
+        {
+          title: "Mountain Culture Immersion",
+          description: "Experience authentic northern Thai culture and laid-back mountain lifestyle.",
+          image: thailandBoat
+        }
+      ],
+      accommodation: {
+        name: "Chiang Mai Heritage Hotel",
+        rating: "4.5 Star Boutique",
+        roomTypes: [
+          "01 x Lanna Style Double",
+          "01 x Traditional Mountain Suite"
+        ]
+      },
+      transportation: {
+        from: "Bangkok",
+        to: "Chiang Mai",
+        duration: "1 Hour 20 Minutes",
+        distance: "700 km"
+      }
     },
     {
       day: 4,
       date: "April 13, 2024",
       title: "Elephant Sanctuary & Mountain Temples",
+      location: "Mae Taeng & Doi Suthep, Chiang Mai",
+      heroImage: thailandPalace,
+      description: "Experience ethical wildlife conservation at a rescued elephant sanctuary, learning about these gentle giants while participating in their care and rehabilitation. End your day with a spiritual journey to Doi Suthep Temple, perched high on a sacred mountain offering panoramic views of the Chiang Mai valley below.",
       activities: [
         {
           time: "8:00 AM",
@@ -143,7 +214,38 @@ export const thailandData = {
           image: thailandPalace,
           duration: "2 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Elephant Conservation Experience",
+          description: "Participate in ethical elephant care and learn about wildlife conservation efforts.",
+          image: thailandTemple
+        },
+        {
+          title: "Sacred Mountain Temple",
+          description: "Climb to Doi Suthep Temple for spiritual enlightenment and panoramic valley views.",
+          image: thailandPalace
+        },
+        {
+          title: "Golden Naga Staircase",
+          description: "Ascend the famous 309-step staircase guarded by golden serpent statues.",
+          image: thailandMarket
+        }
+      ],
+      accommodation: {
+        name: "Chiang Mai Mountain Resort",
+        rating: "4 Star Eco-Resort",
+        roomTypes: [
+          "01 x Mountain View Villa",
+          "01 x Traditional Thai Pavilion"
+        ]
+      },
+      transportation: {
+        from: "Chiang Mai City",
+        to: "Mae Taeng & Doi Suthep",
+        duration: "45 Minutes",
+        distance: "30 km"
+      }
     }
   ],
   summary: {
