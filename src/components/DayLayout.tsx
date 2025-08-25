@@ -104,7 +104,7 @@ export const DayLayout = memo(({
       {accommodation && (
         <div className="px-10 pb-10 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Accommodation</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Hotel Image */}
             <div className="relative h-48 overflow-hidden rounded-lg">
               <img
@@ -132,10 +132,6 @@ export const DayLayout = memo(({
                   Visit Website
                 </button>
               )}
-            </div>
-            {/* Map/Additional Image Placeholder */}
-            <div className="bg-muted rounded-lg h-48 flex items-center justify-center">
-              <div className="w-16 h-16 bg-muted-foreground/20 rounded-lg"></div>
             </div>
           </div>
         </div>
