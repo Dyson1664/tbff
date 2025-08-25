@@ -1,5 +1,6 @@
 import { memo } from "react";
 import { Car, Ship, Bus, Train, Plane } from "lucide-react";
+import srilankaColomboDayImage from "@/assets/srilanka-colombo.jpg";
 
 interface Experience {
   title: string;
@@ -108,7 +109,7 @@ export const DayLayout = memo(({
             {/* Hotel Image */}
             <div className="relative h-48 overflow-hidden rounded-lg">
               <img
-                src="/src/assets/srilanka-colombo.jpg"
+                src={srilankaColomboDayImage}
                 alt="Sigiriya Rock Lodge"
                 className="w-full h-full object-cover"
               />
