@@ -43,6 +43,9 @@ export const philippinesData = {
       day: 2,
       date: "July 11, 2024",
       title: "Banaue Rice Terraces",
+      location: "Banaue, Northern Luzon",
+      heroImage: philippinesRice,
+      description: "Journey to the spectacular 2,000-year-old Banaue Rice Terraces, often called the 8th Wonder of the World. These ancient terraces carved into mountain slopes by the Ifugao people showcase incredible indigenous engineering and remain a living UNESCO World Heritage site where traditional farming continues today.",
       activities: [
         {
           time: "7:00 AM",
@@ -60,7 +63,38 @@ export const philippinesData = {
           image: philippinesRice,
           duration: "2 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Ancient Rice Terraces",
+          description: "Marvel at 2,000-year-old terraces carved by indigenous Ifugao people.",
+          image: philippinesRice
+        },
+        {
+          title: "Ifugao Culture Experience",
+          description: "Learn about traditional farming methods and indigenous engineering marvels.",
+          image: philippinesMarket
+        },
+        {
+          title: "Mountain Village Tour",
+          description: "Explore authentic Cordillera mountain villages and local traditions.",
+          image: philippinesHero
+        }
+      ],
+      accommodation: {
+        name: "Banaue Hotel & Youth Hostel",
+        rating: "3.5 Star Heritage",
+        roomTypes: [
+          "01 x Mountain View Double",
+          "01 x Traditional Room"
+        ]
+      },
+      transportation: {
+        from: "Manila",
+        to: "Banaue",
+        duration: "8 Hours",
+        distance: "350 km"
+      }
     },
     {
       day: 3,

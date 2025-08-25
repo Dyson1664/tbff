@@ -46,6 +46,9 @@ export const thailandData = {
       day: 2,
       date: "April 11, 2024",
       title: "Floating Markets & Local Culture",
+      location: "Bangkok & Ratchaburi",
+      heroImage: thailandMarket,
+      description: "Discover Thailand's authentic water-based culture through vibrant floating markets and traditional long-tail boat journeys. Experience local life along the canals where vendors have traded for generations, offering fresh produce and traditional delicacies from their boats.",
       activities: [
         {
           time: "8:00 AM",
@@ -63,7 +66,38 @@ export const thailandData = {
           image: thailandBoat,
           duration: "2.5 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Floating Market Experience",
+          description: "Navigate authentic Thai floating markets on traditional long-tail boats.",
+          image: thailandMarket
+        },
+        {
+          title: "Canal Life Discovery",
+          description: "Witness local life along Bangkok's historic waterways and klongs.",
+          image: thailandBoat
+        },
+        {
+          title: "Riverside Temple Visits",
+          description: "Explore beautiful temples accessible only by water along the river.",
+          image: thailandTemple
+        }
+      ],
+      accommodation: {
+        name: "Bangkok Riverside Resort",
+        rating: "4.5 Star",
+        roomTypes: [
+          "01 x Deluxe River View",
+          "01 x Traditional Thai Suite"
+        ]
+      },
+      transportation: {
+        from: "Bangkok",
+        to: "Ratchaburi Province",
+        duration: "2 Hours",
+        distance: "80 km"
+      }
     },
     {
       day: 3,

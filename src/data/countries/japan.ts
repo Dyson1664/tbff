@@ -46,6 +46,9 @@ export const japanData = {
       day: 2,
       date: "May 16, 2024",
       title: "Traditional Tokyo",
+      location: "Tokyo",
+      heroImage: japanTorii,
+      description: "Immerse yourself in Tokyo's spiritual heart where ancient traditions blend seamlessly with modern city life. Visit centuries-old temples, stroll through imperial gardens, and experience the cultural depth that makes Tokyo one of the world's most fascinating capitals.",
       activities: [
         {
           time: "9:00 AM",
@@ -63,7 +66,38 @@ export const japanData = {
           image: japanGarden,
           duration: "3 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Senso-ji Temple Visit",
+          description: "Explore Tokyo's oldest Buddhist temple with traditional Nakamise shopping street.",
+          image: japanTorii
+        },
+        {
+          title: "Imperial Palace Gardens",
+          description: "Discover beautifully manicured landscapes and Japan's imperial history.",
+          image: japanGarden
+        },
+        {
+          title: "Traditional Culture Immersion",
+          description: "Experience authentic Japanese spirituality and customs in modern Tokyo.",
+          image: japanSushi
+        }
+      ],
+      accommodation: {
+        name: "Tokyo Imperial Hotel",
+        rating: "5 Star Luxury",
+        roomTypes: [
+          "01 x Superior Double",
+          "01 x Executive Suite"
+        ]
+      },
+      transportation: {
+        from: "Modern Tokyo",
+        to: "Traditional Districts",
+        duration: "30 Minutes",
+        distance: "8 km"
+      }
     },
     {
       day: 3,
