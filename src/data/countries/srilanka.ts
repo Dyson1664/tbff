@@ -147,19 +147,28 @@ export const srilankaData = {
           "01 x Superior Double",
           "01 x Deluxe Triple"
         ]
+      },
+      transportation: {
+        from: "Sigiriya Rock Fortress",
+        to: "Village Safari Area",
+        duration: "30 Minutes",
+        distance: "15 km"
       }
     },
     {
       day: 4,
       date: "June 23, 2024",
       title: "Tea Trails & Scenic Train Journey",
+      location: "Ella",
+      heroImage: srilankaTea,
+      description: "Journey into Sri Lanka's legendary hill country, where emerald tea plantations cascade down misty mountains. Experience the world-famous blue train ride through breathtaking landscapes, connecting centuries-old tea traditions with the relaxed mountain town vibes of Ella.",
       activities: [
         {
           time: "Morning",
           title: "Tea Estate Experience",
           location: "Sigiriya ➜ Ella",
           description: "After breakfast, we travel south into the cool, green hill country. Our first stop is a working tea estate where you'll try your hand at leaf-plucking and sample fresh brews with the resident planters. From there, we head to Nanu Oya station and board Sri Lanka's beloved blue train.",
-          image: srilankaBeach,
+          image: srilankaTea,
           duration: "4 hrs"
         },
         {
@@ -167,22 +176,56 @@ export const srilankaData = {
           title: "Scenic Train Journey to Ella",
           location: "Ella",
           description: "This is one of the most scenic rail journeys on earth—watch waterfalls, valleys, and waving villagers roll past your window. In the evening we arrive in Ella, a peaceful mountain town. After check-in, the evening is yours to explore curry spots, music cafés, or a breezy rooftop bar.",
-          image: srilankaBeach,
+          image: srilankaHero,
           duration: "4 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Tea Leaf Plucking Experience",
+          description: "Try your hand at traditional tea leaf plucking and learn from expert tea plantation workers.",
+          image: srilankaTea
+        },
+        {
+          title: "Blue Train Scenic Journey",
+          description: "Experience one of the world's most beautiful train rides through misty mountains and valleys.",
+          image: srilankaHero
+        },
+        {
+          title: "Ella Mountain Town Discovery",
+          description: "Explore cozy cafés, music venues, and rooftop bars in this charming hill station.",
+          image: srilankaBeach
+        }
+      ],
+      accommodation: {
+        name: "Ella Mountain Resort",
+        rating: "4.4 Star",
+        roomTypes: [
+          "01 x Mountain View Double",
+          "01 x Garden Triple"
+        ]
+      },
+      transportation: {
+        from: "Sigiriya",
+        to: "Ella via Nanu Oya Train",
+        duration: "6 Hours",
+        distance: "150 km"
+      }
     },
     {
       day: 5,
       date: "June 24, 2024",
       title: "Nine-Arch Bridge & Little Adam's Peak",
+      location: "Ella",
+      heroImage: srilankaHero,
+      description: "Discover Ella's most iconic landmarks on this adventure-filled day. From the fairytale Nine-Arch Bridge to the panoramic views atop Little Adam's Peak, experience the perfect blend of architectural wonder and natural beauty that makes this hill station truly magical.",
       activities: [
         {
           time: "Morning",
           title: "Nine-Arch Bridge & Free Time",
           location: "Ella",
           description: "Ease into the day with a slow breakfast before we walk to the fairytale-like Nine-Arch Bridge, just in time to watch a train curve across its famous arc. The late morning and early afternoon are yours to enjoy at your own pace—fly down the zip-line, relax at a mountaintop pool club, or café-hop through the bohemian streets of Ella.",
-          image: srilankaBeach,
+          image: srilankaHero,
           duration: "4 hrs"
         },
         {
@@ -190,15 +233,49 @@ export const srilankaData = {
           title: "Little Adam's Peak Hike",
           location: "Ella",
           description: "Before sunset, we take a gentle hike up Little Adam's Peak. The 45-minute climb rewards you with glowing views over tea hills and valleys. After dark, we head into town for dinner—think sizzling kottu roti and relaxed local vibes.",
-          image: srilankaBeach,
+          image: srilankaTea,
           duration: "3 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Nine-Arch Bridge Train Spotting",
+          description: "Watch trains curve across this architectural marvel surrounded by lush jungle and tea plantations.",
+          image: srilankaHero
+        },
+        {
+          title: "Adventure Activities",
+          description: "Experience thrilling zip-lines and relax at mountaintop pool clubs with stunning valley views.",
+          image: srilankaBeach
+        },
+        {
+          title: "Little Adam's Peak Sunset Hike",
+          description: "Climb to panoramic viewpoints for golden hour views over endless tea hills and valleys.",
+          image: srilankaTea
+        }
+      ],
+      accommodation: {
+        name: "Ella Jungle Resort",
+        rating: "4.3 Star",
+        roomTypes: [
+          "01 x Valley View Double",
+          "01 x Jungle Triple"
+        ]
+      },
+      transportation: {
+        from: "Ella Town Center",
+        to: "Nine-Arch Bridge & Little Adam's Peak",
+        duration: "1.5 Hours Total",
+        distance: "8 km"
+      }
     },
     {
       day: 6,
       date: "June 25, 2024",
       title: "Elephants & Southern Sands",
+      location: "Mirissa",
+      heroImage: srilankaBeach,
+      description: "Journey from misty mountains to golden beaches, with incredible wildlife encounters along the way. Experience Sri Lanka's famous elephants in their natural habitat, witness conservation efforts up close, and end the day with your toes in the warm sand of the southern coast.",
       activities: [
         {
           time: "Morning",
@@ -216,12 +293,46 @@ export const srilankaData = {
           image: srilankaBeach,
           duration: "4 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Udawalawe Wildlife Safari",
+          description: "Spot wild elephants, crocodiles, and diverse bird species in open-top jeeps through pristine wilderness.",
+          image: srilankaHero
+        },
+        {
+          title: "Elephant Transit Home Visit",
+          description: "Witness conservation in action as orphaned baby elephants are bottle-fed and prepared for release.",
+          image: srilankaTea
+        },
+        {
+          title: "Mirissa Beach Sunset",
+          description: "Enjoy your first golden hour on the southern coast with dinner under glowing beach skies.",
+          image: srilankaBeach
+        }
+      ],
+      accommodation: {
+        name: "Mirissa Beach Resort",
+        rating: "4.5 Star",
+        roomTypes: [
+          "01 x Ocean View Double",
+          "01 x Beach Triple"
+        ]
+      },
+      transportation: {
+        from: "Ella",
+        to: "Mirissa via Udawalawe",
+        duration: "8 Hours",
+        distance: "220 km"
+      }
     },
     {
       day: 7,
       date: "June 26, 2024",
       title: "Turtles, Galle Fort & Beach Sunset",
+      location: "Galle & Mirissa",
+      heroImage: srilankaHero,
+      description: "Combine meaningful conservation work with colonial history exploration along Sri Lanka's stunning southern coast. From releasing baby turtles to wandering through UNESCO-listed Galle Fort, experience the perfect blend of purpose and discovery.",
       activities: [
         {
           time: "Morning",
@@ -236,22 +347,56 @@ export const srilankaData = {
           title: "Beach Sunset",
           location: "Mirissa",
           description: "We return to Mirissa by sunset for a golden-hour on the beach—an experience that defines coastal Sri Lanka.",
-          image: srilankaTea,
+          image: srilankaBeach,
           duration: "2 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Turtle Hatchling Release",
+          description: "Participate in conservation efforts by helping release baby turtles into the Indian Ocean.",
+          image: srilankaBeach
+        },
+        {
+          title: "Galle Fort Colonial Walk",
+          description: "Explore UNESCO World Heritage ramparts, art galleries, and historic cafés in this Dutch colonial fort.",
+          image: srilankaHero
+        },
+        {
+          title: "Mirissa Golden Hour",
+          description: "Experience the quintessential Sri Lankan beach sunset with cocktails and ocean breezes.",
+          image: srilankaTea
+        }
+      ],
+      accommodation: {
+        name: "Mirissa Boutique Hotel",
+        rating: "4.4 Star",
+        roomTypes: [
+          "01 x Premium Ocean View",
+          "01 x Deluxe Beach Triple"
+        ]
+      },
+      transportation: {
+        from: "Mirissa",
+        to: "Galle Fort & Return",
+        duration: "4 Hours Total",
+        distance: "60 km"
+      }
     },
     {
       day: 8,
       date: "June 27, 2024",
       title: "Beach Bliss & Farewell Feast",
+      location: "Mirissa",
+      heroImage: srilankaBeach,
+      description: "Savor your final full day in paradise with the perfect balance of adventure and relaxation. Whether catching waves or giving back to the community, end your Sri Lankan journey with meaningful connections and unforgettable memories under tropical skies.",
       activities: [
         {
           time: "Morning",
           title: "Surf Lesson or Beach Cleanup",
           location: "Mirissa",
           description: "Enjoy a slow start to your final full day with breakfast from 7–9 AM. Then, hit the waves for an included surf lesson with a local instructor, or join a casual beach clean-up effort with our community partners.",
-          image: srilankaTea,
+          image: srilankaBeach,
           duration: "5 hrs"
         },
         {
@@ -262,12 +407,46 @@ export const srilankaData = {
           image: srilankaTea,
           duration: "4 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Surf Lesson Adventure",
+          description: "Learn to ride Sri Lankan waves with expert local instructors on pristine Mirissa beach.",
+          image: srilankaBeach
+        },
+        {
+          title: "Community Beach Cleanup",
+          description: "Give back to the local environment through meaningful conservation work with community partners.",
+          image: srilankaHero
+        },
+        {
+          title: "Farewell Feast & Baila Music",
+          description: "Celebrate your journey with grilled tuna, hoppers, and traditional Sri Lankan music under the stars.",
+          image: srilankaTea
+        }
+      ],
+      accommodation: {
+        name: "Mirissa Paradise Resort",
+        rating: "4.6 Star",
+        roomTypes: [
+          "01 x Beachfront Suite",
+          "01 x Ocean Terrace Triple"
+        ]
+      },
+      transportation: {
+        from: "Beach Activities",
+        to: "Farewell Dinner Venue",
+        duration: "15 Minutes",
+        distance: "3 km"
+      }
     },
     {
       day: 9,
       date: "June 28, 2024",
       title: "Until next time",
+      location: "Colombo Airport",
+      heroImage: srilankaHero,
+      description: "Bid farewell to the Pearl of the Indian Ocean with hearts full of memories and cameras full of stunning moments. As you journey back through the diverse landscapes you've explored, carry with you the warmth of Sri Lankan hospitality and the promise of return.",
       activities: [
         {
           time: "Morning",
@@ -277,7 +456,37 @@ export const srilankaData = {
           image: srilankaBeach,
           duration: "4 hrs"
         }
-      ]
+      ],
+      experiences: [
+        {
+          title: "Final Tropical Breakfast",
+          description: "Savor one last authentic Sri Lankan breakfast with fresh tropical fruits and local specialties.",
+          image: srilankaTea
+        },
+        {
+          title: "Scenic Departure Journey",
+          description: "Take in the diverse landscapes one final time on your journey back to Colombo Airport.",
+          image: srilankaHero
+        },
+        {
+          title: "Memory Collection",
+          description: "Reflect on nine days of incredible experiences while preparing for your onward journey.",
+          image: srilankaBeach
+        }
+      ],
+      accommodation: {
+        name: "Airport Transit Hotel",
+        rating: "4.0 Star",
+        roomTypes: [
+          "Day use rooms available"
+        ]
+      },
+      transportation: {
+        from: "Mirissa",
+        to: "Bandaranaike International Airport",
+        duration: "3.5 Hours",
+        distance: "180 km"
+      }
     }
   ],
   summary: {
