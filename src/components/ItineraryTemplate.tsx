@@ -213,9 +213,28 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
     }, 150); // Delay to allow accordion to expand
   }, []);
 
+  // Scroll to top when accordion opens
+  const handleAccordionChange = useCallback((value: string) => {
+    if (value) {
+      setTimeout(() => {
+        const accordionItem = document.querySelector(`[data-accordion-item][data-state="open"]`);
+        if (accordionItem) {
+          const offset = 100;
+          const elementPosition = accordionItem.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 150);
+    }
+  }, []);
+
   // Memoize itinerary rendering with accordion
   const itineraryContent = useMemo(() => (
-    <Accordion type="single" collapsible className="w-full space-y-4">
+    <Accordion type="single" collapsible className="w-full space-y-4" onValueChange={handleAccordionChange}>
       {data.itinerary.map((day) => (
         <AccordionItem key={day.day} value={`day-${day.day}`} className="border border-gray-200 rounded-lg bg-background shadow-sm">
           <AccordionTrigger className="px-6 py-4 hover:no-underline">
@@ -223,7 +242,6 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
               <div>
                 <h3 className="text-lg font-semibold text-foreground">{day.location || day.title}</h3>
-                <p className="text-sm text-muted-foreground uppercase tracking-wide">{day.date}</p>
               </div>
             </div>
           </AccordionTrigger>
@@ -242,7 +260,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         </AccordionItem>
       ))}
     </Accordion>
-  ), [data.itinerary, data.heroImage]);
+  ), [data.itinerary, data.heroImage, handleAccordionChange]);
 
   return (
     <div className={STATIC_STYLES.gradient}>
