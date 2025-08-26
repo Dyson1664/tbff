@@ -213,23 +213,35 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
     }, 150); // Delay to allow accordion to expand
   }, []);
 
-  // Memoize itinerary rendering with new DayLayout
+  // Memoize itinerary rendering with accordion
   const itineraryContent = useMemo(() => (
-    <div className="space-y-8">
+    <Accordion type="single" collapsible className="w-full space-y-4">
       {data.itinerary.map((day) => (
-        <DayLayout
-          key={day.day}
-          dayNumber={day.day}
-          date={day.date}
-          location={day.location || day.title}
-          heroImage={day.heroImage || data.heroImage}
-          description={day.description || `Experience the wonders of ${day.title} in this unforgettable day of your journey.`}
-          experiences={day.experiences || []}
-          accommodation={day.accommodation}
-          transportation={day.transportation}
-        />
+        <AccordionItem key={day.day} value={`day-${day.day}`} className="border border-gray-200 rounded-lg bg-background shadow-sm">
+          <AccordionTrigger className="px-6 py-4 hover:no-underline">
+            <div className="flex items-center gap-4 text-left">
+              <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">{day.location || day.title}</h3>
+                <p className="text-sm text-muted-foreground uppercase tracking-wide">{day.date}</p>
+              </div>
+            </div>
+          </AccordionTrigger>
+          <AccordionContent className="px-0 pb-0">
+            <DayLayout
+              dayNumber={day.day}
+              date={day.date}
+              location={day.location || day.title}
+              heroImage={day.heroImage || data.heroImage}
+              description={day.description || `Experience the wonders of ${day.title} in this unforgettable day of your journey.`}
+              experiences={day.experiences || []}
+              accommodation={day.accommodation}
+              transportation={day.transportation}
+            />
+          </AccordionContent>
+        </AccordionItem>
       ))}
-    </div>
+    </Accordion>
   ), [data.itinerary, data.heroImage]);
 
   return (
