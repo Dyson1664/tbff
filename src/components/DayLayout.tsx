@@ -145,24 +145,36 @@ export const DayLayout = memo(({
             </div>
             
             {/* Route Line */}
-            <div className="flex items-center justify-center relative max-w-md mx-auto">
-              <div className="text-center">
+            <div className="flex flex-col md:flex-row items-center justify-center relative max-w-md mx-auto">
+              <div className="text-center mb-4 md:mb-0">
                 <p className="font-medium text-foreground text-sm">{transportation.from}</p>
               </div>
-              <div className="flex-1 mx-6 relative flex items-center">
-                <div className="h-1 bg-primary rounded-full flex-1 relative">
-                  <div className="absolute inset-0 bg-primary rounded-full" style={{
-                    background: 'linear-gradient(90deg, #0FC2BF 0%, #0FC2BF 50%, #0FC2BF 100%)',
-                    backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 4px, white 4px, white 8px)'
-                  }}></div>
+              <div className="flex-1 my-4 md:mx-6 md:my-0 relative flex flex-col md:flex-row items-center">
+                <div className="w-1 h-16 md:w-32 md:h-1 bg-primary rounded-full relative">
+                  {/* Mobile vertical dotted line */}
+                  <div 
+                    className="absolute inset-0 bg-primary rounded-full md:hidden"
+                    style={{
+                      background: 'linear-gradient(180deg, #0FC2BF 0%, #0FC2BF 50%, #0FC2BF 100%)',
+                      backgroundImage: 'repeating-linear-gradient(180deg, transparent, transparent 4px, white 4px, white 8px)'
+                    }}
+                  ></div>
+                  {/* Desktop horizontal dotted line */}
+                  <div 
+                    className="absolute inset-0 bg-primary rounded-full hidden md:block"
+                    style={{
+                      background: 'linear-gradient(90deg, #0FC2BF 0%, #0FC2BF 50%, #0FC2BF 100%)',
+                      backgroundImage: 'repeating-linear-gradient(90deg, transparent, transparent 4px, white 4px, white 8px)'
+                    }}
+                  ></div>
                 </div>
-                <div className="ml-1">
-                  <svg className="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                <div className="mt-1 md:ml-1 md:mt-0">
+                  <svg className="w-4 h-4 text-primary transform rotate-90 md:rotate-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
                 </div>
               </div>
-              <div className="text-center">
+              <div className="text-center mt-4 md:mt-0">
                 <p className="font-medium text-foreground text-sm">{transportation.to}</p>
               </div>
             </div>
