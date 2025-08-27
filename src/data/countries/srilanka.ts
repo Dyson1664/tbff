@@ -3,6 +3,8 @@ import srilankaHero from "@/assets/srilanka-hero.jpg";
 import srilankaTea from "@/assets/srilanka-tea.jpg";
 import srilankaBeach from "@/assets/srilanka-beach.jpg";
 import srilankaColombo from "@/assets/srilanka-colombo.png";
+import sigiriyaRock from "@/assets/sigiriya-rock.jpg";
+
 
 export const srilankaData = {
   id: "srilanka-serenity",
@@ -137,7 +139,7 @@ export const srilankaData = {
       date: "22 JUN 2024",
       title: "Ancient Wonders & Sacred Sites",
       location: "Sigiriya",
-      heroImage: srilankaHero,
+      heroImage: sigiriyaRock,
       description: "Discover the magnificent Sigiriya Rock Fortress, one of Sri Lanka's most iconic UNESCO World Heritage sites. This ancient citadel rises majestically from the jungle, offering breathtaking views and fascinating history of King Kashyapa's 5th-century palace complex.",
       activities: [
         {
