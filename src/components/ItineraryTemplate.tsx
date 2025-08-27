@@ -236,15 +236,12 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   const itineraryContent = useMemo(() => (
     <Accordion type="single" collapsible className="w-full space-y-4" onValueChange={handleAccordionChange}>
       {data.itinerary.map((day) => (
-        <AccordionItem key={day.day} value={`day-${day.day}`} className="border border-border rounded-xl bg-card shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden">
-          <AccordionTrigger className="px-6 py-6 hover:no-underline hover:bg-muted/50 transition-colors duration-200 group">
-            <div className="flex items-center gap-6 text-left w-full">
-              <div className="flex-shrink-0 w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center border-2 border-primary/20 group-hover:border-primary/40 transition-colors duration-200">
-                <h2 className="text-lg font-bold text-primary">{day.day.toString().padStart(2, '0')}</h2>
-              </div>
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-200">{day.location || day.title}</h3>
-                <p className="text-sm text-muted-foreground mt-1">Click to explore this day's activities</p>
+        <AccordionItem key={day.day} value={`day-${day.day}`} className="border border-gray-200 rounded-lg bg-background shadow-sm">
+          <AccordionTrigger className="px-6 py-4 hover:no-underline">
+            <div className="flex items-center gap-4 text-left">
+              <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
+              <div>
+                <h3 className="text-lg font-semibold text-foreground">{day.location || day.title}</h3>
               </div>
             </div>
           </AccordionTrigger>
