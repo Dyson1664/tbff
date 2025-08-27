@@ -150,7 +150,7 @@ export const DayLayout = memo(({
                 <p className="font-medium text-foreground text-sm">{transportation.from}</p>
               </div>
               <div className="my-2 md:mx-3 md:my-0 relative flex flex-col md:flex-row items-center">
-                <div className="w-1 h-12 md:w-24 md:h-1 bg-primary rounded-full relative">
+                <div className="w-1 h-16 md:w-32 md:h-1 bg-primary rounded-full relative">
                   {/* Mobile vertical dotted line */}
                   <div 
                     className="absolute inset-0 bg-primary rounded-full md:hidden"
