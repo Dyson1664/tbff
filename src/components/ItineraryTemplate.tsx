@@ -217,18 +217,15 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   const handleAccordionChange = useCallback((value: string) => {
     if (value) {
       setTimeout(() => {
-        const accordionItem = document.querySelector(`[value="${value}"]`);
-        if (accordionItem) {
-          const offset = 120; // Offset to position day header near top
-          const elementPosition = accordionItem.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - offset;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
+        const trigger = document.querySelector(`[data-accordion-item][value="${value}"] [data-accordion-trigger]`);
+        if (trigger) {
+          trigger.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start',
+            inline: 'nearest'
           });
         }
-      }, 100); // Shorter delay
+      }, 150);
     }
   }, []);
 
