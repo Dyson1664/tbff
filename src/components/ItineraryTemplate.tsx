@@ -217,22 +217,30 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   const handleAccordionChange = useCallback((value: string) => {
     if (value) {
       setTimeout(() => {
-        // Simple approach: find the day header by the day number in the value
+        // Find the day header by the day number in the value
         const dayNumber = value.replace('day-', '');
         const dayHeaders = document.querySelectorAll('h2');
         
         for (const header of dayHeaders) {
           if (header.textContent && header.textContent.includes(`Day ${dayNumber.padStart(2, '0')}`)) {
-            const rect = header.getBoundingClientRect();
-            const scrollTop = window.pageYOffset + rect.top - 150; // More offset to keep day visible
+            // Calculate absolute position from top of document
+            let offsetTop = 0;
+            let element = header as HTMLElement;
+            
+            while (element) {
+              offsetTop += element.offsetTop;
+              element = element.offsetParent as HTMLElement;
+            }
+            
+            // Scroll to position with offset
             window.scrollTo({ 
-              top: scrollTop, 
+              top: offsetTop - 150, 
               behavior: 'smooth' 
             });
             break;
           }
         }
-      }, 100);
+      }, 200); // Longer delay to ensure accordion is fully expanded
     }
   }, []);
 
