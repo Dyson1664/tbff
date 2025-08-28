@@ -216,12 +216,11 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Scroll to top when accordion opens
   const handleAccordionChange = useCallback((value: string) => {
     if (value) {
-      const dayNumber = value.replace('day-', '');
       setTimeout(() => {
-        const accordionTrigger = document.querySelector(`[value="${value}"] [data-accordion-trigger]`);
-        if (accordionTrigger) {
-          const offset = 80; // Small offset to keep day header near top
-          const elementPosition = accordionTrigger.getBoundingClientRect().top;
+        const accordionItem = document.querySelector(`[data-state="open"][value="${value}"]`);
+        if (accordionItem) {
+          const offset = 100; // Offset to position day header near top
+          const elementPosition = accordionItem.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - offset;
           
           window.scrollTo({
@@ -229,7 +228,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             behavior: 'smooth'
           });
         }
-      }, 200); // Slightly longer delay to ensure accordion is fully expanded
+      }, 300); // Longer delay to ensure accordion is fully expanded
     }
   }, []);
 
