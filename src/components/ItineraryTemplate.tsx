@@ -216,16 +216,23 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Scroll to top when accordion opens
   const handleAccordionChange = useCallback((value: string) => {
     if (value) {
+      // Wait for accordion to open then scroll to the day header
       setTimeout(() => {
-        const trigger = document.querySelector(`[data-accordion-item][value="${value}"] [data-accordion-trigger]`);
-        if (trigger) {
-          trigger.scrollIntoView({ 
-            behavior: 'smooth', 
-            block: 'start',
-            inline: 'nearest'
-          });
+        const dayHeader = document.querySelector(`h2:contains("Day ${value.replace('day-', '').padStart(2, '0')}")`);
+        if (!dayHeader) {
+          // Fallback: find by accordion item
+          const accordionItem = document.querySelector(`[value="${value}"]`);  
+          if (accordionItem) {
+            const rect = accordionItem.getBoundingClientRect();
+            const scrollTop = window.pageYOffset + rect.top - 100;
+            window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+          }
+        } else {
+          const rect = dayHeader.getBoundingClientRect();
+          const scrollTop = window.pageYOffset + rect.top - 100;
+          window.scrollTo({ top: scrollTop, behavior: 'smooth' });
         }
-      }, 150);
+      }, 200);
     }
   }, []);
 
