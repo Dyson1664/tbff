@@ -223,9 +223,11 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         
         for (const header of dayHeaders) {
           if (header.textContent && header.textContent.includes(`Day ${dayNumber.padStart(2, '0')}`)) {
-            header.scrollIntoView({ 
-              behavior: 'smooth', 
-              block: 'start'
+            const rect = header.getBoundingClientRect();
+            const scrollTop = window.pageYOffset + rect.top - 150; // More offset to keep day visible
+            window.scrollTo({ 
+              top: scrollTop, 
+              behavior: 'smooth' 
             });
             break;
           }
