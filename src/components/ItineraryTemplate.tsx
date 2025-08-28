@@ -217,9 +217,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   const handleAccordionChange = useCallback((value: string) => {
     if (value) {
       setTimeout(() => {
-        const accordionItem = document.querySelector(`[data-state="open"][value="${value}"]`);
+        const accordionItem = document.querySelector(`[value="${value}"]`);
         if (accordionItem) {
-          const offset = 100; // Offset to position day header near top
+          const offset = 120; // Offset to position day header near top
           const elementPosition = accordionItem.getBoundingClientRect().top;
           const offsetPosition = elementPosition + window.pageYOffset - offset;
           
@@ -228,7 +228,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             behavior: 'smooth'
           });
         }
-      }, 300); // Longer delay to ensure accordion is fully expanded
+      }, 100); // Shorter delay
     }
   }, []);
 
