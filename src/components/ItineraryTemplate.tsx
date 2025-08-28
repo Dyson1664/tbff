@@ -216,25 +216,21 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Scroll to top when accordion opens
   const handleAccordionChange = useCallback((value: string) => {
     if (value) {
-      console.log('Accordion opened:', value); // Debug log
       setTimeout(() => {
-        // Find the specific accordion item that was opened
-        const elements = document.querySelectorAll('[data-radix-accordion-item]');
-        let targetElement = null;
+        // Simple approach: find the day header by the day number in the value
+        const dayNumber = value.replace('day-', '');
+        const dayHeaders = document.querySelectorAll('h2');
         
-        elements.forEach(el => {
-          if (el.getAttribute('data-state') === 'open' && el.querySelector(`[data-radix-accordion-trigger]`)) {
-            targetElement = el;
+        for (const header of dayHeaders) {
+          if (header.textContent && header.textContent.includes(`Day ${dayNumber.padStart(2, '0')}`)) {
+            header.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start'
+            });
+            break;
           }
-        });
-        
-        if (targetElement) {
-          console.log('Scrolling to element:', targetElement); // Debug log
-          const rect = targetElement.getBoundingClientRect();
-          const scrollTop = window.pageYOffset + rect.top - 120;
-          window.scrollTo({ top: scrollTop, behavior: 'smooth' });
         }
-      }, 300);
+      }, 100);
     }
   }, []);
 
