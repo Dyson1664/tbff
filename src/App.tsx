@@ -19,6 +19,7 @@ import ColombiaDestination from "./pages/ColombiaDestination";
 import IndiaDestination from "./pages/IndiaDestination";
 import VietnamDestination from "./pages/VietnamDestination";
 import BhutanDestination from "./pages/BhutanDestination";
+import IndiaItinerary from "./pages/IndiaItinerary";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/japan-itinerary" element={<JapanItinerary />} />
           <Route path="/srilanka-itinerary" element={<SriLankaItinerary />} />
           <Route path="/philippines-itinerary" element={<PhilippinesItinerary />} />
+          <Route path="/india-itinerary" element={<IndiaItinerary />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
