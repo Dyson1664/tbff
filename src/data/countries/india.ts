@@ -7,10 +7,10 @@ export const indiaData = {
   title: "India Journey",
   subtitle: "Immerse yourself in the colors, flavors, and ancient wisdom of incredible India",
   location: "India",
-  duration: "12 days",
+  duration: "13 days",
   heroImage: indiaHero,
   aboutDescription: [
-    "Embark on an extraordinary journey through India, where ancient traditions meet vibrant modernity. From the iconic Taj Mahal to bustling spice markets, colorful festivals, and spiritual temples, this 12-day adventure showcases the incredible diversity of the subcontinent.",
+    "Embark on an extraordinary journey through India, where ancient traditions meet vibrant modernity. From the iconic Taj Mahal to bustling spice markets, colorful festivals, and spiritual temples, this 13-day adventure showcases the incredible diversity of the subcontinent.",
     "Experience the warmth of Indian hospitality, savor authentic regional cuisines, and witness the architectural marvels that tell stories of emperors and saints. From the Golden Triangle to spiritual Varanasi, discover why India captivates every traveler's heart."
   ],
   aboutImages: [indiaHero, indiaHero],
@@ -169,10 +169,108 @@ export const indiaData = {
         duration: "3.5 Hours",
         distance: "210 km"
       }
+    },
+    {
+      day: 4,
+      date: "March 18, 2024",
+      title: "Journey to Jaipur - The Pink City",
+      location: "Jaipur, India",
+      heroImage: indiaHero,
+      description: "Travel to Jaipur, the vibrant capital of Rajasthan known as the Pink City. Explore magnificent palaces, colorful bazaars, and experience the royal heritage of the Rajput kings.",
+      activities: [
+        {
+          time: "10:00 AM",
+          title: "City Palace Complex",
+          location: "Jaipur",
+          description: "Explore the magnificent City Palace, still home to the royal family, showcasing a blend of Rajasthani and Mughal architecture with museums and courtyards.",
+          image: indiaHero,
+          duration: "3 hrs"
+        },
+        {
+          time: "3:00 PM",
+          title: "Hawa Mahal & Local Bazaars",
+          location: "Jaipur",
+          description: "Visit the iconic Palace of Winds and explore vibrant local markets famous for textiles, jewelry, and handicrafts.",
+          image: indiaHero,
+          duration: "2.5 hrs"
+        }
+      ],
+      experiences: [
+        {
+          title: "Royal Heritage",
+          description: "Experience the grandeur of Rajput royal architecture and lifestyle.",
+          image: indiaHero
+        },
+        {
+          title: "Local Craftsmanship",
+          description: "Discover traditional Rajasthani handicrafts and textiles in bustling bazaars.",
+          image: indiaHero
+        }
+      ],
+      accommodation: {
+        name: "Taj Rambagh Palace",
+        rating: "5 Star Palace Hotel",
+        roomTypes: [
+          "01 x Palace Room",
+          "01 x Maharaja Suite"
+        ]
+      },
+      transportation: {
+        from: "Agra",
+        to: "Jaipur",
+        duration: "4.5 Hours",
+        distance: "240 km"
+      }
+    },
+    {
+      day: 5,
+      date: "March 19, 2024",
+      title: "Amber Fort & Elephant Experience",
+      location: "Jaipur",
+      heroImage: indiaHero,
+      description: "Explore the magnificent Amber Fort and enjoy unique cultural experiences that showcase the rich traditions of Rajasthan.",
+      activities: [
+        {
+          time: "8:00 AM",
+          title: "Amber Fort Exploration",
+          location: "Amber, Jaipur",
+          description: "Visit the stunning hilltop Amber Fort, with its intricate mirror work, beautiful courtyards, and panoramic views of the surrounding landscape.",
+          image: indiaHero,
+          duration: "3.5 hrs"
+        },
+        {
+          time: "2:00 PM",
+          title: "Traditional Block Printing Workshop",
+          location: "Jaipur",
+          description: "Learn the ancient art of block printing from local artisans and create your own textile masterpiece using traditional techniques.",
+          image: indiaHero,
+          duration: "2 hrs"
+        }
+      ],
+      experiences: [
+        {
+          title: "Hill Fort Architecture",
+          description: "Marvel at the strategic architecture and artistic beauty of Amber Fort.",
+          image: indiaHero
+        },
+        {
+          title: "Artisan Traditions",
+          description: "Learn traditional crafts from master artisans in their workshops.",
+          image: indiaHero
+        }
+      ],
+      accommodation: {
+        name: "Taj Rambagh Palace",
+        rating: "5 Star Palace Hotel",
+        roomTypes: [
+          "01 x Palace Room",
+          "01 x Maharaja Suite"
+        ]
+      }
     }
   ],
   summary: {
-    duration: "12 days",
+    duration: "13 days",
     activities: "Cultural immersion", 
     areas: "Golden Triangle & more",
     type: "Heritage & Culture"
@@ -181,7 +279,7 @@ export const indiaData = {
     {
       title: "Accommodation",
       items: [
-        { text: "11 nights in luxury heritage hotels" },
+        { text: "12 nights in luxury heritage hotels" },
         { text: "Daily breakfast and select meals" },
         { text: "24/7 concierge service" },
         { text: "Traditional welcome ceremonies" }
