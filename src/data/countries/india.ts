@@ -1,5 +1,9 @@
 // Import images
 import indiaHero from "@/assets/india-hero.jpg";
+import indiaDay01 from "@/assets/india-day01-main-shiny.jpg";
+import indiaDay02 from "@/assets/india-day02-main-india-gate.jpg";
+import indiaDay03 from "@/assets/india-day03-main-jaswant-thada.jpg";
+import indiaDay04 from "@/assets/india-day04-main-mehrangarh-fort.jpg";
 
 export const indiaData = {
   id: "india-journey", 
@@ -20,7 +24,7 @@ export const indiaData = {
       date: "March 15, 2024",
       title: "Airport, Meet & Greet",
       location: "New Delhi, India",
-      heroImage: indiaHero,
+      heroImage: indiaDay01,
       description: "Welcome to India! Begin your incredible journey with a warm traditional greeting at Delhi airport. Experience your first taste of Indian hospitality as you're welcomed to this vibrant country.",
       activities: [
         {
@@ -72,7 +76,7 @@ export const indiaData = {
       date: "March 16, 2024",
       title: "Sightseeing Old Delhi and New Delhi",
       location: "Delhi, India",
-      heroImage: indiaHero,
+      heroImage: indiaDay02,
       description: "Discover the fascinating contrasts of India's capital city. Explore the narrow, bustling lanes of Old Delhi and the wide, planned boulevards of New Delhi, experiencing centuries of history in a single day.",
       activities: [
         {
@@ -118,7 +122,7 @@ export const indiaData = {
       date: "March 17, 2024",
       title: "Arrival in Jodhpur",
       location: "Jodhpur, Rajasthan",
-      heroImage: indiaHero,
+      heroImage: indiaDay03,
       description: "Journey to the magnificent Blue City of Jodhpur, where azure-painted houses cascade below the imposing Mehrangarh Fort. Experience the royal heritage of the Marwar region.",
       activities: [
         {
@@ -170,7 +174,7 @@ export const indiaData = {
       date: "March 18, 2024",
       title: "Visit Mehrangarh Fort and Jaswant Thada",
       location: "Jodhpur, Rajasthan",
-      heroImage: indiaHero,
+      heroImage: indiaDay04,
       description: "Explore two of Jodhpur's most magnificent monuments - the imposing Mehrangarh Fort and the elegant marble cenotaph of Jaswant Thada, showcasing the architectural brilliance of Rajput rulers.",
       activities: [
         {
