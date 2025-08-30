@@ -4,15 +4,6 @@ import indiaDay01 from "@/assets/india-day01-main-shiny.jpg";
 import indiaDay02 from "@/assets/india-day02-main-india-gate.jpg";
 import indiaDay03 from "@/assets/india-day03-main-jaswant-thada.jpg";
 import indiaDay04 from "@/assets/india-day04-main-mehrangarh-fort.jpg";
-import indiaDay05 from "@/assets/india-day05-main-ranakpur-jain-temples.jpg";
-import indiaDay06 from "@/assets/india-day06-main-city-palace.jpg";
-import indiaDay07 from "@/assets/india-day07-main-ranthambore-national-park.jpg";
-import indiaDay08 from "@/assets/india-day08-main-safari.jpg";
-import indiaDay09 from "@/assets/india-day09-main-jaipur.jpg";
-import indiaDay10 from "@/assets/india-day10-main-amer-fort.jpg";
-import indiaDay11 from "@/assets/india-day11-main-taj-mahal.jpg";
-import indiaDay12 from "@/assets/india-day12-main-agra-fort.jpg";
-import indiaDay13 from "@/assets/india-day13-main-checkout.jpg";
 
 export const indiaData = {
   id: "india-journey", 
@@ -229,7 +220,7 @@ export const indiaData = {
       date: "March 19, 2024",
       title: "Travel to Udaipur",
       location: "Udaipur, Rajasthan",
-      heroImage: indiaDay05,
+      heroImage: indiaHero,
       description: "Journey to Udaipur, the City of Lakes, renowned for its romantic palaces, serene lakes, and stunning architecture. Experience one of India's most picturesque destinations.",
       activities: [
         {
@@ -281,7 +272,7 @@ export const indiaData = {
       date: "March 20, 2024",
       title: "Time to Explore Udaipur",
       location: "Udaipur, Rajasthan",
-      heroImage: indiaDay06,
+      heroImage: indiaHero,
       description: "Immerse yourself in the romantic splendor of Udaipur. Explore magnificent palaces, wander through colorful bazaars, and experience the cultural richness of this lake city.",
       activities: [
         {
@@ -327,7 +318,7 @@ export const indiaData = {
       date: "March 21, 2024",
       title: "Sawai Madhopur",
       location: "Sawai Madhopur, Rajasthan",
-      heroImage: indiaDay07,
+      heroImage: indiaHero,
       description: "Travel to Sawai Madhopur, gateway to the famous Ranthambore National Park. Prepare for an exciting wildlife adventure in one of India's premier tiger reserves.",
       activities: [
         {
@@ -379,7 +370,7 @@ export const indiaData = {
       date: "March 22, 2024",
       title: "Safari in Ranthambore National Park",
       location: "Ranthambore National Park",
-      heroImage: indiaDay08,
+      heroImage: indiaHero,
       description: "Experience the thrill of wildlife safari in one of India's most famous tiger reserves. Search for the majestic Bengal tiger and other wildlife in their natural habitat.",
       activities: [
         {
@@ -425,7 +416,7 @@ export const indiaData = {
       date: "March 23, 2024",
       title: "Arrival in Jaipur",
       location: "Jaipur, Rajasthan",
-      heroImage: indiaDay09,
+      heroImage: indiaHero,
       description: "Travel to Jaipur, the vibrant Pink City and capital of Rajasthan. Experience the royal heritage, colorful bazaars, and magnificent architecture of this historic city.",
       activities: [
         {
@@ -477,7 +468,7 @@ export const indiaData = {
       date: "March 24, 2024",
       title: "Let's explore Jaipur",
       location: "Jaipur, Rajasthan",
-      heroImage: indiaDay10,
+      heroImage: indiaHero,
       description: "Dive deep into Jaipur's royal heritage. Explore magnificent forts, palaces, and markets that showcase the grandeur of Rajput architecture and culture.",
       activities: [
         {
@@ -523,7 +514,7 @@ export const indiaData = {
       date: "March 25, 2024",
       title: "Taj Mahal",
       location: "Agra, Uttar Pradesh",
-      heroImage: indiaDay11,
+      heroImage: indiaHero,
       description: "Experience the crown jewel of India - the magnificent Taj Mahal. Witness this eternal symbol of love in the soft morning light, creating memories that will last a lifetime.",
       activities: [
         {
@@ -575,7 +566,7 @@ export const indiaData = {
       date: "March 26, 2024",
       title: "Agra back to Delhi",
       location: "Delhi, India",
-      heroImage: indiaDay12,
+      heroImage: indiaHero,
       description: "Complete your incredible Indian journey by returning to Delhi. Enjoy last-minute shopping and reminisce about your amazing adventures across incredible India.",
       activities: [
         {
@@ -627,7 +618,7 @@ export const indiaData = {
       date: "March 27, 2024",
       title: "Checkout",
       location: "Delhi, India",
-      heroImage: indiaDay13,
+      heroImage: indiaHero,
       description: "Bid farewell to incredible India. Complete your checkout and departure with warm memories of an unforgettable journey through the land of colors, culture, and heritage.",
       activities: [
         {
