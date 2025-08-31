@@ -123,11 +123,11 @@ const Navbar = memo(() => {
   return (
     <nav className="bg-background border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo/Home Button */}
           <Link to="/">
             <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0 flex items-center gap-3">
-              <img src={ibtLogo} alt="IBT Logo" className="h-12 w-12" />
+              <img src={ibtLogo} alt="IBT Logo" className="h-14 w-14" />
               Imagine Beyond Travel
             </Button>
           </Link>
