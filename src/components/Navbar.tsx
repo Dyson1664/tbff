@@ -127,7 +127,7 @@ const Navbar = memo(() => {
           {/* Logo/Home Button */}
           <Link to="/">
             <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0 flex items-center gap-3">
-              <img src={ibtLogo} alt="IBT Logo" className="h-19 w-19" />
+              <img src={ibtLogo} alt="IBT Logo" className="h-18 w-18" />
               Imagine Beyond Travel
             </Button>
           </Link>
