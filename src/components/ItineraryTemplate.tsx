@@ -253,7 +253,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             <div className="flex items-center gap-4 text-left">
               <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
               <div>
-                <h3 className="text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">{day.location || day.title}</h3>
+                <h3 className="text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">{day.title}</h3>
               </div>
             </div>
           </AccordionTrigger>
