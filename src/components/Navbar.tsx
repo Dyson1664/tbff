@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { NAVIGATION_TRIPS, NAVIGATION_DESTINATIONS } from "@/data/navigation";
+import ibtLogo from "@/assets/ibt-logo.png";
 
 // Memoized dropdown item component
 const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) => (
@@ -125,7 +126,8 @@ const Navbar = memo(() => {
         <div className="flex items-center justify-between h-16">
           {/* Logo/Home Button */}
           <Link to="/">
-            <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0">
+            <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0 flex items-center gap-2">
+              <img src={ibtLogo} alt="IBT Logo" className="h-8 w-8" />
               Imagine Beyond Travel
             </Button>
           </Link>
