@@ -52,14 +52,6 @@ export const TripCard = memo(({
           {tag}
         </div>
       )}
-      {rating && (
-        <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-2 py-1 rounded-full">
-          <div className="flex items-center gap-1">
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-sm font-medium">{rating}</span>
-          </div>
-        </div>
-      )}
     </div>
     <CardContent className="p-6">
       <div className="flex items-start justify-between mb-2">
