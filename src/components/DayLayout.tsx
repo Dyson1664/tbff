@@ -73,7 +73,7 @@ export const DayLayout = memo(({
           <Carousel className="w-full max-w-4xl mx-auto">
             <CarouselContent>
               {carouselImages.map((image, index) => (
-                <CarouselItem key={index} className="basis-4/5 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="basis-5/6 md:basis-1/2 lg:basis-1/3">
                   <div className="relative h-64 overflow-hidden rounded-lg">
                     <img
                       src={image}
