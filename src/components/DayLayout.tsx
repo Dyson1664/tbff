@@ -34,6 +34,8 @@ interface DayLayoutProps {
   carouselImages: string[];
   accommodation?: Accommodation;
   transportation?: Transportation;
+  meals?: string;
+  highlights?: string;
 }
 
 export const DayLayout = memo(({ 
@@ -44,7 +46,9 @@ export const DayLayout = memo(({
   description, 
   carouselImages, 
   accommodation, 
-  transportation 
+  transportation,
+  meals,
+  highlights
 }: DayLayoutProps) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -83,6 +87,37 @@ export const DayLayout = memo(({
         <p className="text-muted-foreground leading-relaxed text-sm">
           {description}
         </p>
+      </div>
+
+      {/* Day Highlights */}
+      <div className="px-10 pb-10 bg-white">
+        <div className="space-y-3 max-w-2xl">
+          <div className="flex items-start gap-3">
+            <span className="text-lg">📍</span>
+            <div>
+              <span className="text-sm font-medium text-foreground">Location: </span>
+              <span className="text-sm text-muted-foreground">{location}</span>
+            </div>
+          </div>
+          {meals && (
+            <div className="flex items-start gap-3">
+              <span className="text-lg">🍽️</span>
+              <div>
+                <span className="text-sm font-medium text-foreground">Included meals: </span>
+                <span className="text-sm text-muted-foreground">{meals}</span>
+              </div>
+            </div>
+          )}
+          {highlights && (
+            <div className="flex items-start gap-3">
+              <span className="text-lg">🙌🏼</span>
+              <div>
+                <span className="text-sm font-medium text-foreground">Key highlights: </span>
+                <span className="text-sm text-muted-foreground">{highlights}</span>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Image Carousel Section */}
