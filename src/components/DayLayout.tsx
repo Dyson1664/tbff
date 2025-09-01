@@ -1,4 +1,4 @@
-import { memo } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { Car, Ship, Bus, Train, Plane } from "lucide-react";
 import srilankaColomboDayImage from "@/assets/srilanka-colombo.jpg";
 import {
@@ -7,6 +7,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 interface Accommodation {
@@ -45,6 +46,24 @@ export const DayLayout = memo(({
   accommodation, 
   transportation 
 }: DayLayoutProps) => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  const scrollTo = useCallback((index: number) => {
+    api?.scrollTo(index);
+  }, [api]);
   return (
     <div className="bg-white">
       {/* Hero Image */}
@@ -70,10 +89,10 @@ export const DayLayout = memo(({
       {carouselImages.length > 0 && (
         <div className="px-10 pb-10 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Gallery</h4>
-          <Carousel className="w-full max-w-4xl mx-auto">
+          <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
             <CarouselContent>
               {carouselImages.map((image, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="basis-5/6 md:basis-1/2 lg:basis-1/3">
                   <div className="relative h-64 overflow-hidden rounded-lg">
                     <img
                       src={image}
@@ -84,9 +103,25 @@ export const DayLayout = memo(({
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 md:-left-12" />
-            <CarouselNext className="right-2 md:-right-12" />
+            <CarouselPrevious className="hidden lg:flex left-2 md:-left-12" />
+            <CarouselNext className="hidden lg:flex right-2 md:-right-12" />
           </Carousel>
+          
+          {/* Dots Navigation for Mobile/Tablet */}
+          <div className="flex justify-center gap-2 mt-4 lg:hidden">
+            {carouselImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  index === current 
+                    ? "bg-primary" 
+                    : "bg-muted-foreground/30"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       )}
 
