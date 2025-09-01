@@ -1,12 +1,13 @@
 import { memo } from "react";
 import { Car, Ship, Bus, Train, Plane } from "lucide-react";
 import srilankaColomboDayImage from "@/assets/srilanka-colombo.jpg";
-
-interface Experience {
-  title: string;
-  description?: string;
-  image: string;
-}
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Accommodation {
   name: string;
@@ -29,7 +30,7 @@ interface DayLayoutProps {
   location: string;
   heroImage: string;
   description: string;
-  experiences: Experience[];
+  carouselImages: string[];
   accommodation?: Accommodation;
   transportation?: Transportation;
 }
@@ -40,7 +41,7 @@ export const DayLayout = memo(({
   location, 
   heroImage, 
   description, 
-  experiences, 
+  carouselImages, 
   accommodation, 
   transportation 
 }: DayLayoutProps) => {
@@ -65,29 +66,27 @@ export const DayLayout = memo(({
         </p>
       </div>
 
-      {/* Experiences Section */}
-      {experiences.length > 0 && (
+      {/* Image Carousel Section */}
+      {carouselImages.length > 0 && (
         <div className="px-10 pb-10 bg-white">
-          <h4 className="text-lg font-semibold text-foreground mb-4">Experiences</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {experiences.map((experience, index) => (
-              <div key={index} className="group">
-                <div className="relative h-48 overflow-hidden rounded-lg mb-3">
-                  <img
-                    src={experience.image}
-                    alt={experience.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <h5 className="font-medium text-foreground text-sm mb-1">{experience.title}</h5>
-                {experience.description && (
-                  <p className="text-xs text-muted-foreground line-clamp-2">
-                    {experience.description}
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
+          <h4 className="text-lg font-semibold text-foreground mb-4">Gallery</h4>
+          <Carousel className="w-full max-w-4xl mx-auto">
+            <CarouselContent>
+              {carouselImages.map((image, index) => (
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="relative h-64 overflow-hidden rounded-lg">
+                    <img
+                      src={image}
+                      alt={`${location} gallery image ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       )}
 
