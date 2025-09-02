@@ -91,8 +91,8 @@ export const DayLayout = memo(({
 
       {/* Day Highlights */}
       <div className="px-10 pb-10 bg-white">
-        <div className="space-y-3 max-w-2xl">
-          <div className="flex items-start gap-3">
+        <div className="flex flex-row md:flex-col space-x-6 md:space-x-0 space-y-0 md:space-y-3 max-w-4xl overflow-x-auto md:overflow-x-visible">
+          <div className="flex items-start gap-3 flex-shrink-0">
             <span className="text-lg">📍</span>
             <div>
               <span className="text-sm font-medium text-foreground">Location: </span>
@@ -100,7 +100,7 @@ export const DayLayout = memo(({
             </div>
           </div>
           {meals && (
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 flex-shrink-0">
               <span className="text-lg">🍽️</span>
               <div>
                 <span className="text-sm font-medium text-foreground">Included meals: </span>
@@ -109,7 +109,7 @@ export const DayLayout = memo(({
             </div>
           )}
           {highlights && (
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 flex-shrink-0">
               <span className="text-lg">🙌🏼</span>
               <div>
                 <span className="text-sm font-medium text-foreground">Key highlights: </span>
