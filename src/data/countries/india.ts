@@ -23,8 +23,7 @@ export const indiaData = {
   duration: "13 days",
   heroImage: indiaHero,
   aboutDescription: [
-    "Embark on an extraordinary journey through India, where ancient traditions meet vibrant modernity. From the iconic Taj Mahal to bustling spice markets, colorful festivals, and spiritual temples, this 13-day adventure showcases the incredible diversity of the subcontinent.",
-    "Experience the warmth of Indian hospitality, savor authentic regional cuisines, and witness the architectural marvels that tell stories of emperors and saints. From the Golden Triangle to spiritual Varanasi, discover why India captivates every traveler's heart."
+    "It’s time to start exploring India. This tour is perfect for those first time travellers that have always wanted to explore the wonders of India but don’t want to do it alone. This tour will let you experience the amazing different sites India has to offer such as citadel, bustling local markets to the great monuments including the infamous Taj Mahal, the Pink Palaces of Jaipur and Ranthambhore National Park. We begin the tour in India’s capital New Delhi and finish in Agra with various different locations along the way, throughout the trip guests will get to immerse themselves in India’s rich culture experiencing many Indian traditions and tasting some of the amazing dishes India has to offer. Join us for a once in a lifetime experience that will make you want to travel more"
   ],
   aboutImages: [indiaHero, indiaHero],
   itinerary: [
