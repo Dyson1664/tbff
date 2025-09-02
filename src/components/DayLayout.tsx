@@ -91,7 +91,7 @@ export const DayLayout = memo(({
 
       {/* Day Highlights */}
       <div className="px-10 pb-10 bg-white">
-        <div className="flex flex-row md:flex-col space-x-6 md:space-x-0 space-y-0 md:space-y-3 max-w-4xl overflow-x-auto md:overflow-x-visible">
+        <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 space-x-0 md:space-x-6 max-w-4xl overflow-x-visible md:overflow-x-auto">
           <div className="flex items-start gap-3 flex-shrink-0">
             <span className="text-lg">📍</span>
             <div>
