@@ -4,6 +4,7 @@ import { HeroSection } from "@/components/common/HeroSection";
 import { Share2, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { memo, useMemo, useCallback } from "react";
 import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-static";
 import { getPayUrlBySlug } from '@/data/payUrls';
@@ -24,6 +25,12 @@ interface FAQ {
   answer: string;
 }
 
+interface TripHighlight {
+  title: string;
+  description: string;
+  image: string;
+}
+
 interface CountryData {
   id: string;
   slug?: string;
@@ -34,6 +41,7 @@ interface CountryData {
   heroImage: string;
   aboutDescription: string[];
   aboutImages: string[];
+  highlights?: TripHighlight[];
   itinerary: DayItinerary[];
   summary: {
     duration: string;
@@ -50,6 +58,59 @@ interface ItineraryTemplateProps {
 }
 
 // Memoized sub-components for better performance
+const TripHighlights = memo(({ data }: { data: CountryData }) => {
+  // Default highlights if not provided
+  const defaultHighlights: TripHighlight[] = [
+    {
+      title: "Cultural Immersion",
+      description: "Experience authentic local traditions, festivals, and customs that bring this destination to life.",
+      image: data.aboutImages[0] || data.heroImage
+    },
+    {
+      title: "Iconic Landmarks",
+      description: "Visit world-famous monuments and architectural marvels that define this incredible destination.",
+      image: data.aboutImages[1] || data.heroImage
+    },
+    {
+      title: "Local Cuisine",
+      description: "Savor authentic regional dishes and discover the flavors that make this cuisine unique.",
+      image: data.heroImage
+    }
+  ];
+
+  const highlights = data.highlights || defaultHighlights;
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-xl font-semibold text-foreground mb-4">Trip Highlights</h3>
+      <div className="relative">
+        <Carousel className="w-full max-w-xs mx-auto">
+          <CarouselContent>
+            {highlights.map((highlight, index) => (
+              <CarouselItem key={index}>
+                <div className="space-y-3">
+                  <img 
+                    src={highlight.image} 
+                    alt={highlight.title}
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                    loading="lazy"
+                  />
+                  <div className="text-center space-y-2">
+                    <h4 className="font-semibold text-foreground">{highlight.title}</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{highlight.description}</p>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
+        </Carousel>
+      </div>
+    </div>
+  );
+});
+
 const AboutSection = memo(({ data }: { data: CountryData }) => {
   const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
   
@@ -64,16 +125,8 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
             </p>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-4">
-          {data.aboutImages.map((image, index) => (
-            <img 
-              key={index}
-              src={image} 
-              alt={`${data.title} destination ${index + 1}`}
-              className="w-full h-48 object-cover rounded-lg shadow-md"
-              loading="lazy"
-            />
-          ))}
+        <div className="flex justify-center">
+          <TripHighlights data={data} />
         </div>
       </div>
       
