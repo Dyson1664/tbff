@@ -232,7 +232,7 @@ highlights: [
       location: "Jodhpur, Rajasthan",
       heroImage: indiaDay04,
       description: "Explore two of Jodhpur's most magnificent monuments - the imposing Mehrangarh Fort and the elegant marble cenotaph of Jaswant Thada, showcasing the architectural brilliance of Rajput rulers.",
-      galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03],
+      galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04],
       activities: [
         {
           time: "9:00 AM",
