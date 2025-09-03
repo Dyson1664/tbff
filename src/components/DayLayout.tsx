@@ -132,7 +132,7 @@ export const DayLayout = memo(({
                     <img
                       src={image}
                       alt={`${location} gallery image ${index + 1}`}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      className="w-full h-full object-contain transition-transform duration-300 hover:scale-105"
                     />
                   </div>
                 </CarouselItem>
