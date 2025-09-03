@@ -37,6 +37,7 @@ export interface DayItinerary {
   location?: string;
   heroImage?: string;
   description?: string;
+  galleryImages?: string[];
   activities: Activity[];
   experiences?: Experience[];
   accommodation?: Accommodation;
