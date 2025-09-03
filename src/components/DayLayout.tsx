@@ -128,7 +128,7 @@ export const DayLayout = memo(({
             <CarouselContent>
               {carouselImages.map((image, index) => (
                 <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
-                  <div className="relative h-48 overflow-hidden rounded-lg">
+                  <div className="relative h-48 md:h-60 overflow-hidden rounded-lg">
                     <img
                       src={image}
                       alt={`${location} gallery image ${index + 1}`}
