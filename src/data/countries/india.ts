@@ -18,6 +18,8 @@ import indiaDay13 from "@/assets/india-day13-main-checkout.jpg";
 import indiaDay01Gallery01 from "@/assets/india-day01-gallery-01.jpg";
 import indiaDay01Gallery02 from "@/assets/india-day01-gallery-02.jpg";
 import indiaDay01Gallery03 from "@/assets/india-day01-gallery-03.jpg";
+import indiaDay01Gallery04 from "@/assets/india-day01-gallery-04.jpg";
+
 
 export const indiaData = {
   id: "india-journey", 
@@ -60,7 +62,7 @@ highlights: [
       location: "New Delhi, India",
       heroImage: indiaDay01,
       description: "Welcome to India! Begin your incredible journey with a warm traditional greeting at Delhi airport. Experience your first taste of Indian hospitality as you're welcomed to this vibrant country.",
-      galleryImages: [indiaDay01Gallery01, indiaDay01Gallery02, indiaDay01Gallery03],
+      galleryImages: [indiaDay01Gallery01, indiaDay01Gallery02, indiaDay01Gallery03, indiaDay01Gallery04],
       activities: [
         {
           time: "Upon Arrival",
