@@ -20,6 +20,23 @@ import indiaDay01Gallery02 from "@/assets/india-day01-gallery-02.jpg";
 import indiaDay01Gallery03 from "@/assets/india-day01-gallery-03.jpg";
 import indiaDay01Gallery04 from "@/assets/india-day01-gallery-04.jpg";
 
+// Day 2 gallery
+import indiaDay02Gallery01 from "@/assets/india-day02-gallery-01.jpg";
+import indiaDay02Gallery02 from "@/assets/india-day02-gallery-02.jpg";
+import indiaDay02Gallery03 from "@/assets/india-day02-gallery-03.jpg";
+
+// Day 3 gallery
+import indiaDay03Gallery01 from "@/assets/india-day03-gallery-01.jpg";
+import indiaDay03Gallery02 from "@/assets/india-day03-gallery-02.jpg";
+import indiaDay03Gallery03 from "@/assets/india-day03-gallery-03.jpg";
+
+// Day 4 gallery
+import indiaDay04Gallery01 from "@/assets/india-day04-gallery-01.jpg";
+import indiaDay04Gallery02 from "@/assets/india-day04-gallery-02.jpg";
+import indiaDay04Gallery03 from "@/assets/india-day04-gallery-03.jpg";
+import indiaDay04Gallery04 from "@/assets/india-day04-gallery-04.jpg";
+
+
 
 export const indiaData = {
   id: "india-journey", 
