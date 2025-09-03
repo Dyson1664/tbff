@@ -36,6 +36,45 @@ import indiaDay04Gallery02 from "@/assets/india-day04-gallery-02.jpg";
 import indiaDay04Gallery03 from "@/assets/india-day04-gallery-03.jpg";
 import indiaDay04Gallery04 from "@/assets/india-day04-gallery-04.jpg";
 
+// Day 5
+import indiaDay05Gallery01 from "@/assets/india-day05-gallery-01.jpg";
+import indiaDay05Gallery02 from "@/assets/india-day05-gallery-02.jpg";
+import indiaDay05Gallery03 from "@/assets/india-day05-gallery-03.jpg";
+
+// Day 6
+import indiaDay06Gallery01 from "@/assets/india-day06-gallery-01.jpg";
+import indiaDay06Gallery02 from "@/assets/india-day06-gallery-02.jpg";
+import indiaDay06Gallery03 from "@/assets/india-day06-gallery-03.jpg";
+
+// Day 7
+import indiaDay07Gallery01 from "@/assets/india-day07-gallery-01.jpg";
+import indiaDay07Gallery02 from "@/assets/india-day07-gallery-02.jpg";
+import indiaDay07Gallery03 from "@/assets/india-day07-gallery-03.jpg";
+
+// Day 8
+import indiaDay08Gallery01 from "@/assets/india-day08-gallery-01.jpg";
+import indiaDay08Gallery02 from "@/assets/india-day08-gallery-02.jpg";
+import indiaDay08Gallery03 from "@/assets/india-day08-gallery-03.jpg";
+
+// Day 9
+import indiaDay09Gallery01 from "@/assets/india-day09-gallery-01.jpg";
+import indiaDay09Gallery02 from "@/assets/india-day09-gallery-02.jpg";
+import indiaDay09Gallery03 from "@/assets/india-day09-gallery-03.jpg";
+
+// Day 10
+import indiaDay10Gallery01 from "@/assets/india-day10-gallery-01.jpg";
+import indiaDay10Gallery02 from "@/assets/india-day10-gallery-02.jpg";
+import indiaDay10Gallery03 from "@/assets/india-day10-gallery-03.jpg";
+
+// Day 11
+import indiaDay11Gallery01 from "@/assets/india-day11-gallery-01.jpg";
+import indiaDay11Gallery02 from "@/assets/india-day11-gallery-02.jpg";
+import indiaDay11Gallery03 from "@/assets/india-day11-gallery-03.jpg";
+
+// Day 12
+import indiaDay12Gallery01 from "@/assets/india-day12-gallery-01.jpg";
+import indiaDay12Gallery02 from "@/assets/india-day12-gallery-02.jpg";
+import indiaDay12Gallery03 from "@/assets/india-day12-gallery-03.jpg";
 
 
 export const indiaData = {
@@ -279,6 +318,7 @@ highlights: [
       location: "Udaipur, Rajasthan",
       heroImage: indiaDay05,
       description: "Journey to Udaipur, the City of Lakes, renowned for its romantic palaces, serene lakes, and stunning architecture. Experience one of India's most picturesque destinations.",
+      galleryImages: [indiaDay05Gallery01, indiaDay05Gallery02, indiaDay05Gallery03],
       activities: [
         {
           time: "Morning",
@@ -331,6 +371,7 @@ highlights: [
       location: "Udaipur, Rajasthan",
       heroImage: indiaDay06,
       description: "Immerse yourself in the romantic splendor of Udaipur. Explore magnificent palaces, wander through colorful bazaars, and experience the cultural richness of this lake city.",
+      galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03],
       activities: [
         {
           time: "9:00 AM",
@@ -377,6 +418,7 @@ highlights: [
       location: "Sawai Madhopur, Rajasthan",
       heroImage: indiaDay07,
       description: "Travel to Sawai Madhopur, gateway to the famous Ranthambore National Park. Prepare for an exciting wildlife adventure in one of India's premier tiger reserves.",
+      galleryImages: [indiaDay07Gallery01, indiaDay07Gallery02, indiaDay07Gallery03],
       activities: [
         {
           time: "Morning",
@@ -429,6 +471,7 @@ highlights: [
       location: "Ranthambore National Park",
       heroImage: indiaDay08,
       description: "Experience the thrill of wildlife safari in one of India's most famous tiger reserves. Search for the majestic Bengal tiger and other wildlife in their natural habitat.",
+      galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03],
       activities: [
         {
           time: "6:00 AM",
@@ -475,6 +518,7 @@ highlights: [
       location: "Jaipur, Rajasthan",
       heroImage: indiaDay09,
       description: "Travel to Jaipur, the vibrant Pink City and capital of Rajasthan. Experience the royal heritage, colorful bazaars, and magnificent architecture of this historic city.",
+      galleryImages: [indiaDay09Gallery01, indiaDay09Gallery02, indiaDay09Gallery03],
       activities: [
         {
           time: "Morning",
@@ -527,6 +571,7 @@ highlights: [
       location: "Jaipur, Rajasthan",
       heroImage: indiaDay10,
       description: "Dive deep into Jaipur's royal heritage. Explore magnificent forts, palaces, and markets that showcase the grandeur of Rajput architecture and culture.",
+      galleryImages: [indiaDay10Gallery01, indiaDay10Gallery02, indiaDay10Gallery03],
       activities: [
         {
           time: "8:00 AM",
@@ -573,6 +618,7 @@ highlights: [
       location: "Agra, Uttar Pradesh",
       heroImage: indiaDay11,
       description: "Experience the crown jewel of India - the magnificent Taj Mahal. Witness this eternal symbol of love in the soft morning light, creating memories that will last a lifetime.",
+      galleryImages: [indiaDay11Gallery01, indiaDay11Gallery02, indiaDay11Gallery03],
       activities: [
         {
           time: "Early Morning",
@@ -625,6 +671,7 @@ highlights: [
       location: "Delhi, India",
       heroImage: indiaDay12,
       description: "Complete your incredible Indian journey by returning to Delhi. Enjoy last-minute shopping and reminisce about your amazing adventures across incredible India.",
+      galleryImages: [indiaDay12Gallery01, indiaDay12Gallery02, indiaDay12Gallery03],
       activities: [
         {
           time: "Morning",
