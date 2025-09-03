@@ -127,7 +127,7 @@ export const DayLayout = memo(({
           <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
             <CarouselContent>
               {carouselImages.map((image, index) => (
-                <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/2">
                   <div className="relative h-48 md:h-60 overflow-hidden rounded-lg">
                     <img
                       src={image}
