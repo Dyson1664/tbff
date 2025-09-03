@@ -62,7 +62,7 @@ highlights: [
       location: "New Delhi, India",
       heroImage: indiaDay01,
       description: "Welcome to India! Begin your incredible journey with a warm traditional greeting at Delhi airport. Experience your first taste of Indian hospitality as you're welcomed to this vibrant country.",
-      galleryImages: [indiaDay01Gallery01, indiaDay01Gallery02, indiaDay01Gallery03, indiaDay01Gallery04],
+      galleryImages: [indiaDay01Gallery01, indiaDay01Gallery02, indiaDay01Gallery03, indiaDay01Gallery04,],
       activities: [
         {
           time: "Upon Arrival",
