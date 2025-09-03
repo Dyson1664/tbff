@@ -165,7 +165,7 @@ const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) =
 
 const IncludedSection = memo(({ included, countryName }: { included: CountryData['included'], countryName: string }) => (
   <div className={STATIC_STYLES.includedSection}>
-    <div className="max-w-7xl mx-auto px-[18px] md:px-6 py-16">
+    <div className="max-w-7xl mx-auto md:px-3 py-16">
       <div className="text-center mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
         <p className="text-lg text-muted-foreground">Everything you need for an unforgettable {countryName} experience</p>
@@ -192,7 +192,7 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
 
 const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], countryName: string }) => (
   <div className="mt-16 bg-card rounded-xl border border-gray-200 shadow-sm">
-    <div className="max-w-7xl mx-auto px-[18px] md:px-6 py-16">
+    <div className="max-w-7xl mx-auto md:px-3 py-16">
       <div className="text-center mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">Frequently Asked Questions</h3>
         <p className="text-lg text-muted-foreground">Everything you need to know about your {countryName} adventure</p>
@@ -346,7 +346,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
       {/* Header with Actions */}
       <div className={STATIC_STYLES.stickyHeader}>
-        <div className="max-w-6xl mx-auto px-[18px] md:px-6 py-4">
+        <div className="max-w-6xl mx-auto md:px-3 py-4">
           <div className="flex items-center justify-between">
             <ActionButtons />
           </div>
@@ -354,7 +354,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       </div>
 
       {/* Country Overview */}
-      <div className="max-w-6xl mx-auto px-[18px] md:px-6 py-12">
+      <div className="max-w-6xl mx-auto md:px-3 py-12">
         <AboutSection data={data} />
 
         {/* Itinerary Title */}
