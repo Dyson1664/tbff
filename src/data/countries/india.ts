@@ -132,6 +132,7 @@ highlights: [
       location: "Delhi, India",
       heroImage: indiaDay02,
       description: "Discover the fascinating contrasts of India's capital city. Explore the narrow, bustling lanes of Old Delhi and the wide, planned boulevards of New Delhi, experiencing centuries of history in a single day.",
+      galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03],
       activities: [
         {
           time: "9:00 AM",
@@ -178,6 +179,7 @@ highlights: [
       location: "Jodhpur, Rajasthan",
       heroImage: indiaDay03,
       description: "Journey to the magnificent Blue City of Jodhpur, where azure-painted houses cascade below the imposing Mehrangarh Fort. Experience the royal heritage of the Marwar region.",
+      galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03],
       activities: [
         {
           time: "Morning",
@@ -230,6 +232,7 @@ highlights: [
       location: "Jodhpur, Rajasthan",
       heroImage: indiaDay04,
       description: "Explore two of Jodhpur's most magnificent monuments - the imposing Mehrangarh Fort and the elegant marble cenotaph of Jaswant Thada, showcasing the architectural brilliance of Rajput rulers.",
+      galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03],
       activities: [
         {
           time: "9:00 AM",
