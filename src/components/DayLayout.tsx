@@ -10,14 +10,6 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-interface Accommodation {
-  name: string;
-  rating: string;
-  roomTypes: string[];
-  website?: string;
-  image?: string;
-}
-
 interface Transportation {
   from: string;
   to: string;
@@ -32,7 +24,6 @@ interface DayLayoutProps {
   heroImage: string;
   description: string;
   carouselImages: string[];
-  accommodation?: Accommodation;
   transportation?: Transportation;
   meals?: string;
   highlights?: string;
@@ -45,7 +36,6 @@ export const DayLayout = memo(({
   heroImage, 
   description, 
   carouselImages, 
-  accommodation, 
   transportation,
   meals,
   highlights
@@ -156,45 +146,6 @@ export const DayLayout = memo(({
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
-          </div>
-        </div>
-      )}
-
-      {/* Accommodation Section */}
-      {accommodation && (
-        <div className="px-4 pb-10 md:px-10 bg-white">
-          <h4 className="text-lg font-semibold text-foreground mb-4">Accommodation</h4>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Hotel Image */}
-            <div className="relative h-48 overflow-hidden rounded-lg">
-              <img
-                src={srilankaColomboDayImage}
-                alt="Sigiriya Rock Lodge"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Hotel Details */}
-            <div className="space-y-3">
-              <div>
-                <h5 className="font-medium text-foreground text-base">{accommodation.name}</h5>
-                <p className="text-sm text-muted-foreground">{accommodation.rating}</p>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <svg className="w-4 h-4 text-muted-foreground" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clipRule="evenodd" />
-                  <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-                </svg>
-                Double Bed
-              </div>
-              <p className="text-sm text-muted-foreground">Experience comfort and luxury in this beautifully appointed accommodation.</p>
-              {accommodation.website && (
-                <button className="text-sm text-primary hover:underline font-medium">
-                  Visit Website
-                </button>
-              )}
-            </div>
-            {/* Empty third column */}
-            <div></div>
           </div>
         </div>
       )}
