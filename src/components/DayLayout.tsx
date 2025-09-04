@@ -101,7 +101,7 @@ export const DayLayout = memo(({
           </div>
           {accommodation && (
             <div className="flex items-start gap-3 flex-shrink-0">
-              <span className="text-lg">🏨</span>
+              <span className="text-lg">🏠</span>
               <div>
                 <span className="text-sm font-medium text-foreground">Where we stay: </span>
                 <span className="text-sm text-muted-foreground">{accommodation.name}</span>
