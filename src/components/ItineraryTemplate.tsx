@@ -197,7 +197,7 @@ const WhatsIncludedHighlights = memo(({ countryName }: { countryName: string }) 
         <h2 className="text-4xl font-bold text-primary mb-4">WHAT'S INCLUDED</h2>
       </div>
       
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-6">
         <div className="text-center space-y-4">
           <div className="flex justify-center">
             <Home className="w-16 h-16 text-primary" strokeWidth={1.5} />
