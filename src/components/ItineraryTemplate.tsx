@@ -118,7 +118,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
     <div className="mb-16">
       <h2 className="text-3xl font-bold text-foreground mb-6 text-center">{STATIC_TEXT.aboutTitle}</h2>
       <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-        <div>
+        <div className="px-4 md:px-0">
           {data.aboutDescription.map((paragraph, index) => (
             <p key={index} className="text-lg text-muted-foreground leading-relaxed mb-6">
               {paragraph}
