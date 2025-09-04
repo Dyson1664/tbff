@@ -71,7 +71,7 @@ export const DayLayout = memo(({
   return (
     <div className="bg-white">
       {/* Hero Image */}
-      <div className="px-10 pt-6">
+      <div className="px-4 md:px-10 pt-6">
 
         <div className="relative h-48 md:h-auto md:aspect-[16/8] overflow-hidden rounded-xl shadow-sm">
           <img
@@ -83,14 +83,14 @@ export const DayLayout = memo(({
       </div>
 
       {/* Description */}
-      <div className="p-10 bg-white">
+      <div className="px-4 py-10 md:px-10 bg-white">
         <p className="text-muted-foreground leading-relaxed text-sm">
           {description}
         </p>
       </div>
 
       {/* Day Highlights */}
-      <div className="px-10 pb-10 bg-white">
+      <div className="px-4 pb-10 md:px-10 bg-white">
         <div className="flex flex-col md:flex-row space-y-3 md:space-y-0 space-x-0 md:space-x-6 max-w-4xl overflow-x-visible md:overflow-x-auto">
           <div className="flex items-start gap-3 flex-shrink-0">
             <span className="text-lg">📍</span>
@@ -122,7 +122,7 @@ export const DayLayout = memo(({
 
       {/* Image Carousel Section */}
       {carouselImages.length > 0 && (
-        <div className="px-10 pb-10 bg-white">
+        <div className="px-4 pb-10 md:px-10 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Gallery</h4>
           <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
             <CarouselContent>
@@ -162,7 +162,7 @@ export const DayLayout = memo(({
 
       {/* Accommodation Section */}
       {accommodation && (
-        <div className="px-10 pb-10 bg-white">
+        <div className="px-4 pb-10 md:px-10 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Accommodation</h4>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Hotel Image */}
@@ -201,7 +201,7 @@ export const DayLayout = memo(({
 
       {/* Transportation Section */}
       {transportation && (
-        <div className="px-10 pb-10 bg-white">
+        <div className="px-4 pb-10 md:px-10 bg-white">
           <h4 className="text-lg font-semibold text-foreground mb-4">Transportation</h4>
           <div className="space-y-4">
             {/* Transportation Icons */}
