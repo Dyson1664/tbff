@@ -1,7 +1,7 @@
 import { DayLayout } from "@/components/DayLayout";
 import Navbar from "@/components/Navbar";
 import { HeroSection } from "@/components/common/HeroSection";
-import { Share2, Heart } from "lucide-react";
+import { Share2, Heart, Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -190,6 +190,84 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
   </div>
 ));
 
+const WhatsIncludedHighlights = memo(({ countryName }: { countryName: string }) => (
+  <div className="bg-background py-16">
+    <div className="max-w-6xl mx-auto px-4">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-primary mb-4">WHAT'S INCLUDED</h2>
+      </div>
+      
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-center space-y-4">
+          <div className="flex justify-center">
+            <Home className="w-16 h-16 text-primary" strokeWidth={1.5} />
+          </div>
+          <h3 className="text-xl font-bold text-foreground">12 NIGHTS<br />ACCOM</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            From beachside hotels to traditional Filipino huts on remote islands!
+          </p>
+          <a href="#" className="text-primary hover:text-primary/80 underline text-sm">
+            Check it out here
+          </a>
+        </div>
+
+        <div className="text-center space-y-4">
+          <div className="flex justify-center">
+            <Zap className="w-16 h-16 text-primary" strokeWidth={1.5} />
+          </div>
+          <h3 className="text-xl font-bold text-foreground">13 DAYS OF EPIC<br />ACTIVITIES</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            Visit iconic waterfalls, explore pristine beaches, snorkel in emerald green waters & more!
+          </p>
+          <a href="#" className="text-primary hover:text-primary/80 underline text-sm">
+            See the full list
+          </a>
+        </div>
+
+        <div className="text-center space-y-4">
+          <div className="flex justify-center">
+            <Plane className="w-16 h-16 text-primary" strokeWidth={1.5} />
+          </div>
+          <h3 className="text-xl font-bold text-foreground">AIRPORT PICKUP</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            We'll be there to greet you at the airport after your long flight and take you to the accom.
+          </p>
+        </div>
+
+        <div className="text-center space-y-4">
+          <div className="flex justify-center">
+            <Users className="w-16 h-16 text-primary" strokeWidth={1.5} />
+          </div>
+          <h3 className="text-xl font-bold text-foreground">AWESOME<br />GROUP LEADER</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            You'll get an awesome group leader to provide 24/7 support during & after your trip, alongside knowledgeable local guides.
+          </p>
+        </div>
+
+        <div className="text-center space-y-4">
+          <div className="flex justify-center">
+            <UtensilsCrossed className="w-16 h-16 text-primary" strokeWidth={1.5} />
+          </div>
+          <h3 className="text-xl font-bold text-foreground">20 MEALS</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            12 Breakfasts, 6 Lunch & 2 Dinners
+          </p>
+        </div>
+
+        <div className="text-center space-y-4">
+          <div className="flex justify-center">
+            <TreePine className="w-16 h-16 text-primary" strokeWidth={1.5} />
+          </div>
+          <h3 className="text-xl font-bold text-foreground">100% CARBON<br />NEUTRAL</h3>
+          <p className="text-muted-foreground leading-relaxed">
+            We accurately measure the CO2 emissions of your tour and 100% offset them through planting the required amount of trees.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+));
+
 const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], countryName: string }) => (
   <div className="mt-16 bg-card rounded-xl border border-gray-200 shadow-sm">
     <div className="max-w-7xl mx-auto md:px-3 py-16">
@@ -356,6 +434,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       {/* Country Overview */}
       <div className="max-w-6xl mx-auto md:px-3 py-12">
         <AboutSection data={data} />
+
+        {/* What's Included Highlights */}
+        <WhatsIncludedHighlights countryName={countryName} />
 
         {/* Itinerary Title */}
         <div className="text-center mb-12">
