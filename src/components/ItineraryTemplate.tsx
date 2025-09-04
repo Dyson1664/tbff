@@ -440,7 +440,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         <WhatsIncludedHighlights countryName={countryName} />
 
         {/* Itinerary Title */}
-          <div className="text-center mt-10 md:mt-16 mb-12">
+          <div className="text-center mt-10 md:mt-16 mb-8">
           <h2 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.itineraryTitle}</h2>
           <p className="text-lg text-muted-foreground">A detailed day-by-day guide to your {countryName} adventure</p>
         </div>
