@@ -106,7 +106,7 @@ highlights: [
     title: "Cruise over Lake Pichola",
     description:
       "Set off on a sunset cruise across Lake Pichola where expert guides will enhance your trip by explaining the rich history of Udaipur City",
-    image: indiaDay07, // Udaipur/Lake photo
+    image: indiaDay06Gallery03, // Udaipur/Lake photo
   },
 ],
   
