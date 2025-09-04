@@ -318,6 +318,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               heroImage={day.heroImage || data.heroImage}
               description={day.description || `Experience the wonders of ${day.title} in this unforgettable day of your journey.`}
               carouselImages={day.galleryImages || []}
+              accommodation={day.accommodation}
               transportation={day.transportation}
               meals={(day as any).meals || "Breakfast"}
               highlights={(day as any).highlights || day.activities?.map(activity => activity.title).join(", ") || "Explore and discover"}

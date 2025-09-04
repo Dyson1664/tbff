@@ -10,6 +10,14 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
+interface Accommodation {
+  name: string;
+  rating: string;
+  roomTypes: string[];
+  website?: string;
+  image?: string;
+}
+
 interface Transportation {
   from: string;
   to: string;
@@ -24,6 +32,7 @@ interface DayLayoutProps {
   heroImage: string;
   description: string;
   carouselImages: string[];
+  accommodation?: Accommodation;
   transportation?: Transportation;
   meals?: string;
   highlights?: string;
@@ -36,6 +45,7 @@ export const DayLayout = memo(({
   heroImage, 
   description, 
   carouselImages, 
+  accommodation,
   transportation,
   meals,
   highlights
@@ -89,6 +99,15 @@ export const DayLayout = memo(({
               <span className="text-sm text-muted-foreground">{location}</span>
             </div>
           </div>
+          {accommodation && (
+            <div className="flex items-start gap-3 flex-shrink-0">
+              <span className="text-lg">🏨</span>
+              <div>
+                <span className="text-sm font-medium text-foreground">Where we stay: </span>
+                <span className="text-sm text-muted-foreground">{accommodation.name}</span>
+              </div>
+            </div>
+          )}
           {meals && (
             <div className="flex items-start gap-3 flex-shrink-0">
               <span className="text-lg">🍽️</span>
