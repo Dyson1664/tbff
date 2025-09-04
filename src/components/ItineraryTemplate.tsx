@@ -166,7 +166,7 @@ const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) =
 const IncludedSection = memo(({ included, countryName }: { included: CountryData['included'], countryName: string }) => (
   <div className={STATIC_STYLES.includedSection}>
     <div className="max-w-7xl mx-auto md:px-3 py-16">
-      <div className="text-center mb-12">
+            <div className="text-center mt-10 mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
         <p className="text-lg text-muted-foreground">Everything you need for an unforgettable {countryName} experience</p>
       </div>
