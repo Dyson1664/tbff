@@ -10,6 +10,8 @@ import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-sta
 import { getPayUrlBySlug } from '@/data/payUrls';
 import Footer from "@/components/common/Footer";
 import { DayItinerary } from "@/data/types";
+import RouteBar from "@/components/RouteBar";
+
 
 interface WhatsIncludedHighlight {
   icon: React.ComponentType<any>;
@@ -409,6 +411,13 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         {/* What's Included Highlights */}
         <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} />
 
+        {/* Trip Route (only if provided) */}
+        {Array.isArray(data.route) && data.route.length > 1 && (
+          <div className="my-8">
+            <RouteBar stops={data.route} />
+          </div>
+        )}
+        
         {/* Itinerary Title */}
           <div className="text-center mt-10 md:mt-16 mb-8">
           <h2 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.itineraryTitle}</h2>
