@@ -140,7 +140,7 @@ function DesktopScroller({ stops }: { stops: string[] }) {
 
                   {!isLast && (
                     <span
-                      className="mx-0.5 h-0.5 w-8 lg:w-14 flex-none rounded"
+                      className="mx-0.5 h-0.5 w-8 lg:w-6 flex-none rounded"
                       style={{ background: `linear-gradient(to right, ${color}, ${nextColor})` }}
                     />
                   )}
