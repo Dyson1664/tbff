@@ -130,9 +130,18 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
   
   return (
     <div className="mb-16">
+      {/* Trip title */}
       <h2 className="text-3xl font-bold text-foreground mb-6 text-center">{data.title}</h2>
-      <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
-        <div className="px-4 md:px-0">
+
+      {/* 2-column: left = route + about text, right = highlights */}
+      <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
+        <div className="px-4 md:px-0 space-y-6">
+          {/* RouteBar: below title, left of highlights */}
+          {Array.isArray(data.route) && data.route.length > 1 && (
+            <RouteBar stops={data.route} />
+          )}
+
+          {/* About text */}
           {data.aboutDescription.map((paragraph, index) => (
             <p key={index} className="text-lg text-muted-foreground leading-relaxed mb-6">
               {paragraph}
@@ -410,13 +419,6 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
         {/* What's Included Highlights */}
         <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} />
-
-        {/* Trip Route (only if provided) */}
-        {Array.isArray(data.route) && data.route.length > 1 && (
-          <div className="my-8">
-            <RouteBar stops={data.route} />
-          </div>
-        )}
         
         {/* Itinerary Title */}
           <div className="text-center mt-10 md:mt-16 mb-8">
