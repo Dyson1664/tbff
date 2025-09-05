@@ -10,8 +10,8 @@ function MobileScroller({ stops }: { stops: string[] }) {
   if (!stops?.length) return null;
 
   return (
-    <div className="rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">
-      <div className="mb-3">
+      <div className="w-full rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">     
+        <div className="mb-3">
         <h3 className="text-base font-semibold">Route</h3>
       </div>
 
@@ -93,8 +93,8 @@ function DesktopScroller({ stops }: { stops: string[] }) {
   const scrollBy = (dx: number) => trackRef.current?.scrollBy({ left: dx, behavior: "smooth" });
 
   return (
-    <div className="rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">
-      <div className="mb-3">
+      <div className="w-full rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">        
+        <div className="mb-3">
         <h3 className="text-base font-semibold">Route</h3>
       </div>
 
