@@ -97,7 +97,7 @@ export const indiaData = {
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "12 NIGHTS<br />ACCOMMODATION",
+      title: "12 NIGHTS<br />ACCOMM",
       description: "From heritage hotels in Rajasthan to luxury resorts - experience authentic Indian hospitality!"
     },
     {
@@ -111,7 +111,7 @@ export const indiaData = {
     },
     {
       icon: Plane,
-      title: "AIRPORT PICKUP<br />& TRANSFERS",
+      title: "AIRPORT PICKUP",
       description: "We'll greet you in New Delhi and handle all transfers throughout your Indian journey."
     },
     {
@@ -122,7 +122,7 @@ export const indiaData = {
     {
       icon: UtensilsCrossed,
       title: "AUTHENTIC<br />INDIAN CUISINE",
-      description: "12 Breakfasts, 8 Lunches & 6 Dinners featuring regional specialties and cooking classes!"
+      description: "12 Breakfasts, 8 Lunches & 6 Dinners featuring regional specialties!"
     },
     {
       icon: TreePine,
