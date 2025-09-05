@@ -1,121 +1,188 @@
 import React from "react";
-import { Route as RouteIcon } from "lucide-react";
+import { Route as RouteIcon, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 
-// Colors cycle across stops
-const ROUTE_COLORS = [
-  "#06b6d4", // teal-500
-  "#f97316", // orange-500
-  "#8b5cf6", // violet-500
-  "#22c55e", // green-500
-  "#eab308", // yellow-500
-  "#ef4444", // red-500
-];
+// Colors cycle across stops (edit to taste)
+const ROUTE_COLORS = ["#06b6d4", "#f97316", "#8b5cf6", "#22c55e", "#eab308", "#ef4444"];
+const getColor = (i: number) => ROUTE_COLORS[i % ROUTE_COLORS.length];
 
-// Responsive items-per-row
-function usePerRow(sm = 3, md = 4, lg = 6) {
-  const [perRow, setPerRow] = React.useState(sm);
-  React.useEffect(() => {
-    const mqMd = window.matchMedia("(min-width: 768px)");
-    const mqLg = window.matchMedia("(min-width: 1024px)");
-    const update = () => setPerRow(mqLg.matches ? lg : mqMd.matches ? md : sm);
-    update();
-    mqMd.addEventListener("change", update);
-    mqLg.addEventListener("change", update);
-    return () => {
-      mqMd.removeEventListener("change", update);
-      mqLg.removeEventListener("change", update);
-    };
-  }, [sm, md, lg]);
-  return perRow;
-}
-
-export default function RouteBar({ stops }: { stops: string[] }) {
+// --- Mobile: horizontal, draggable scroller (no arrows) ---
+function MobileScroller({ stops }: { stops: string[] }) {
   if (!stops?.length) return null;
-
-  const perRow = usePerRow(3, 4, 6); // mobile, md, lg
-
-  // Split into rows
-  const rows: string[][] = [];
-  for (let i = 0; i < stops.length; i += perRow) {
-    rows.push(stops.slice(i, i + perRow));
-  }
-
-  const getColor = (globalIndex: number) =>
-    ROUTE_COLORS[globalIndex % ROUTE_COLORS.length];
 
   return (
     <div className="rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">
-      <div className="mb-3 flex items-center gap-2">
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-800">
-          <RouteIcon className="h-4 w-4 text-neutral-600 dark:text-neutral-300" />
-        </div>
+      <div className="mb-3">
         <h3 className="text-base font-semibold">Route</h3>
       </div>
 
-      {/* Serpentine layout (alternating row directions) */}
-      <div className="space-y-2">
-        {rows.map((row, rowIdx) => {
-          const isOdd = rowIdx % 2 === 1;
-          const baseIndex = rowIdx * perRow;
-          const displayRow = isOdd ? [...row].reverse() : row;
+      <div
+        className="no-scrollbar overflow-x-auto touch-pan-x"
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
+        <div className="flex items-center flex-nowrap gap-1.5 py-1">
+          {stops.map((stop, i) => {
+            const color = getColor(i);
+            const nextColor = getColor(i + 1);
+            const isLast = i === stops.length - 1;
 
-          return (
-            <div key={rowIdx} className="w-full">
-              <div
-                className={`flex items-center ${
-                  isOdd ? "justify-end" : "justify-start"
-                } flex-wrap gap-2`}
-              >
-                {displayRow.map((stop, i) => {
-                  const originalIdx = isOdd
-                    ? baseIndex + (row.length - 1 - i)
-                    : baseIndex + i;
-                  const color = getColor(originalIdx);
-                  const nextIdx = originalIdx + 1;
-                  const nextColor = getColor(nextIdx);
-                  const isLastInRow = i === displayRow.length - 1;
+            return (
+              <div key={stop + i} className="flex items-center flex-none">
+                {i === 0 && (
+                  <span className="mr-1.5 inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white/80 dark:bg-neutral-900/70 shadow-sm">
+                    <RouteIcon className="h-5 w-5 text-black opacity-90" />
+                  </span>
+                )}
 
-                  return (
-                    <div key={stop} className="flex items-center">
-                      {/* pill (no big circle) */}
-                      <span
-                        className="mr-2 rounded-full border px-2.5 py-1 text-xs md:text-sm font-medium"
-                        style={{ borderColor: color, color }}
-                      >
-                        {stop}
-                      </span>
+                <span
+                  className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black shadow-sm"
+                  style={{ backgroundColor: color }}
+                >
+                  <MapPin className="h-4 w-4 text-black opacity-90" />
+                  {stop}
+                </span>
 
-                      {/* horizontal connector */}
-                      {!isLastInRow && (
-                        <span
-                          className="mx-1 h-0.5 w-6 md:w-10 rounded"
-                          style={{
-                            background: `linear-gradient(to right, ${color}, ${nextColor})`,
-                          }}
-                        />
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-
-              {/* vertical connector to next row */}
-              {rowIdx < rows.length - 1 && (
-                <div className={`flex ${isOdd ? "justify-start" : "justify-end"}`}>
+                {!isLast && (
                   <span
-                    className="h-3 w-0.5 rounded"
-                    style={{
-                      background: `linear-gradient(to bottom, ${getColor(
-                        baseIndex + row.length - 1
-                      )}, ${getColor(baseIndex + row.length)})`,
-                    }}
+                    className="mx-0.5 h-0.5 w-8 flex-none rounded"
+                    style={{ background: `linear-gradient(to right, ${color}, ${nextColor})` }}
                   />
-                </div>
-              )}
-            </div>
-          );
-        })}
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
+
+      {/* Hide native scrollbars */}
+      <style>{`
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </div>
   );
 }
+
+// --- Desktop/Tablet: single-line scroller with arrows (also draggable) ---
+function DesktopScroller({ stops }: { stops: string[] }) {
+  if (!stops?.length) return null;
+
+  const trackRef = React.useRef<HTMLDivElement | null>(null);
+  const [canScrollLeft, setCanScrollLeft] = React.useState(false);
+  const [canScrollRight, setCanScrollRight] = React.useState(false);
+
+  const updateArrows = React.useCallback(() => {
+    const el = trackRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 0);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+  }, []);
+
+  React.useEffect(() => {
+    updateArrows();
+    const el = trackRef.current;
+    if (!el) return;
+    el.addEventListener("scroll", updateArrows, { passive: true });
+    const onResize = () => updateArrows();
+    window.addEventListener("resize", onResize);
+    return () => {
+      el.removeEventListener("scroll", updateArrows);
+      window.removeEventListener("resize", onResize);
+    };
+  }, [updateArrows]);
+
+  const scrollBy = (dx: number) => trackRef.current?.scrollBy({ left: dx, behavior: "smooth" });
+
+  return (
+    <div className="rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">
+      <div className="mb-3">
+        <h3 className="text-base font-semibold">Route</h3>
+      </div>
+
+      <div className="relative">
+        {/* Left arrow */}
+        <button
+          type="button"
+          aria-label="Scroll route left"
+          onClick={() => scrollBy(-320)}
+          disabled={!canScrollLeft}
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full border bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+
+        {/* Scroll track */}
+        <div
+          ref={trackRef}
+          className="no-scrollbar overflow-x-auto pr-8"
+          style={{ scrollBehavior: "smooth" }}
+        >
+          <div className="flex items-center flex-nowrap gap-1.5 py-1">
+            {stops.map((stop, i) => {
+              const color = getColor(i);
+              const nextColor = getColor(i + 1);
+              const isLast = i === stops.length - 1;
+
+              return (
+                <div key={stop + i} className="flex items-center flex-none">
+                  {i === 0 && (
+                    <span className="mr-1.5 inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white/80 dark:bg-neutral-900/70 shadow-sm">
+                      <RouteIcon className="h-5 w-5 text-black opacity-90" />
+                    </span>
+                  )}
+
+                  <span
+                    className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black shadow-sm"
+                    style={{ backgroundColor: color }}
+                  >
+                    <MapPin className="h-4 w-4 text-black opacity-90" />
+                    {stop}
+                  </span>
+
+                  {!isLast && (
+                    <span
+                      className="mx-0.5 h-0.5 w-8 lg:w-14 flex-none rounded"
+                      style={{ background: `linear-gradient(to right, ${color}, ${nextColor})` }}
+                    />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Right arrow */}
+        <button
+          type="button"
+          aria-label="Scroll route right"
+          onClick={() => scrollBy(320)}
+          disabled={!canScrollRight}
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full border bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
+
+      {/* Hide native scrollbars */}
+      <style>{`
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
+    </div>
+  );
+}
+
+export function ResponsiveRoute({ stops }: { stops: string[] }) {
+  if (!stops?.length) return null;
+  return (
+    <>
+      <div className="md:hidden">
+        <MobileScroller stops={stops} />
+      </div>
+      <div className="hidden md:block">
+        <DesktopScroller stops={stops} />
+      </div>
+    </>
+  );
+}
+
+export default ResponsiveRoute;
