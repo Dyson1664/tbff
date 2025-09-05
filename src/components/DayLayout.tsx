@@ -68,6 +68,13 @@ export const DayLayout = memo(({
   const scrollTo = useCallback((index: number) => {
     api?.scrollTo(index);
   }, [api]);
+
+  const advanceCarousel = useCallback(() => {
+    if (api) {
+      const nextIndex = Math.min(current + 2, carouselImages.length - 1);
+      api.scrollTo(nextIndex);
+    }
+  }, [api, current, carouselImages.length]);
   return (
     <div className="bg-white">
       {/* Hero Image */}
@@ -139,7 +146,7 @@ export const DayLayout = memo(({
             <CarouselContent>
               {carouselImages.map((image, index) => (
                 <CarouselItem key={index} className="basis-full md:basis-1/2 lg:basis-1/2">
-                  <div className="relative h-48 md:h-60 overflow-hidden rounded-lg">
+                  <div className="relative h-48 md:h-60 overflow-hidden rounded-lg cursor-pointer" onClick={advanceCarousel}>
                     <img
                       src={image}
                       alt={`${location} gallery image ${index + 1}`}
