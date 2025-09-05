@@ -124,23 +124,25 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
     </div>
   );
 });
-
-const AboutSection = memo(({ data }: { data: CountryData }) => {
-  const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
   
+  const AboutSection = memo(({ data }: { data: CountryData }) => {
+  const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
+
   return (
     <div className="mb-16">
       {/* Trip title */}
       <h2 className="text-3xl font-bold text-foreground mb-6 text-center">{data.title}</h2>
 
-      {/* 2-column: left = route + about text, right = highlights */}
-      <div className="grid md:grid-cols-2 gap-8 items-start mb-12">
-        <div className="px-4 md:px-0 space-y-6">
-          {/* RouteBar: below title, left of highlights */}
+      {/* 1-col on mobile, 2-col on md+ */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12">
+        {/* Left col: route + about */}
+        <div className="order-1 md:order-none px-4 md:px-0 space-y-6 w-full">
+          {/* Route: below title, left of highlights */}
           {Array.isArray(data.route) && data.route.length > 1 && (
-            <ResponsiveRoute stops={data.route} />
+            <div className="w-full">
+              <ResponsiveRoute stops={data.route} />
+            </div>
           )}
-
 
           {/* About text */}
           {data.aboutDescription.map((paragraph, index) => (
@@ -149,11 +151,13 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
             </p>
           ))}
         </div>
-        <div className="flex justify-center">
+
+        {/* Right col: highlights */}
+        <div className="order-2 md:order-none w-full md:flex md:justify-center">
           <TripHighlights data={data} />
         </div>
       </div>
-      
+
       {/* Book Now Button */}
       <div className="text-center mb-8">
         <BookNowButton tripSlug={data.slug} countryName={countryName} />
@@ -162,6 +166,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
     </div>
   );
 });
+
 
 const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) => (
   <div className={STATIC_STYLES.summaryCard}>
