@@ -10,7 +10,7 @@ import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-sta
 import { getPayUrlBySlug } from '@/data/payUrls';
 import Footer from "@/components/common/Footer";
 import { DayItinerary } from "@/data/types";
-import RouteBar from "@/components/RouteBar";
+import ResponsiveRoute from "@/components/RouteBar"; // <-- add this import
 
 
 interface WhatsIncludedHighlight {
@@ -138,8 +138,9 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
         <div className="px-4 md:px-0 space-y-6">
           {/* RouteBar: below title, left of highlights */}
           {Array.isArray(data.route) && data.route.length > 1 && (
-            <RouteBar stops={data.route} />
+            <ResponsiveRoute stops={data.route} />
           )}
+
 
           {/* About text */}
           {data.aboutDescription.map((paragraph, index) => (
