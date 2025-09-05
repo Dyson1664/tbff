@@ -10,8 +10,8 @@ function MobileScroller({ stops }: { stops: string[] }) {
   if (!stops?.length) return null;
 
   return (
-      <div className="w-full rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">     
-        <div className="mb-3">
+    <div className="w-full rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">
+      <div className="mb-3">
         <h3 className="text-base font-semibold">Route</h3>
       </div>
 
@@ -62,7 +62,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
   );
 }
 
-// --- Desktop/Tablet: single-line scroller with arrows (also draggable) ---
+// --- Desktop/Tablet: arrows moved to header (top-right), track below, draggable too ---
 function DesktopScroller({ stops }: { stops: string[] }) {
   if (!stops?.length) return null;
 
@@ -93,73 +93,70 @@ function DesktopScroller({ stops }: { stops: string[] }) {
   const scrollBy = (dx: number) => trackRef.current?.scrollBy({ left: dx, behavior: "smooth" });
 
   return (
-      <div className="w-full rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">        
-        <div className="mb-3">
+    <div className="w-full rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">
+      {/* Header with arrows on the right */}
+      <div className="mb-2 flex items-center justify-between">
         <h3 className="text-base font-semibold">Route</h3>
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            aria-label="Scroll route left"
+            onClick={() => scrollBy(-320)}
+            disabled={!canScrollLeft}
+            className="rounded-full border bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
+          >
+            <ChevronLeft className="h-4 w-4" />
+          </button>
+          <button
+            type="button"
+            aria-label="Scroll route right"
+            onClick={() => scrollBy(320)}
+            disabled={!canScrollRight}
+            className="rounded-full border bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
+          >
+            <ChevronRight className="h-4 w-4" />
+          </button>
+        </div>
       </div>
 
-      <div className="relative">
-        {/* Left arrow */}
-        <button
-          type="button"
-          aria-label="Scroll route left"
-          onClick={() => scrollBy(-320)}
-          disabled={!canScrollLeft}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full border bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
+      {/* Scroll track (no overlay arrows here) */}
+      <div
+        ref={trackRef}
+        className="no-scrollbar overflow-x-auto pr-2"
+        style={{ scrollBehavior: "smooth" }}
+      >
+        <div className="flex items-center flex-nowrap gap-1.5 py-1">
+          {stops.map((stop, i) => {
+            const color = getColor(i);
+            const nextColor = getColor(i + 1);
+            const isLast = i === stops.length - 1;
 
-        {/* Scroll track */}
-        <div
-          ref={trackRef}
-          className="no-scrollbar overflow-x-auto pr-8"
-          style={{ scrollBehavior: "smooth" }}
-        >
-          <div className="flex items-center flex-nowrap gap-1.5 py-1">
-            {stops.map((stop, i) => {
-              const color = getColor(i);
-              const nextColor = getColor(i + 1);
-              const isLast = i === stops.length - 1;
-
-              return (
-                <div key={stop + i} className="flex items-center flex-none">
-                  {i === 0 && (
-                    <span className="mr-1.5 inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white/80 dark:bg-neutral-900/70 shadow-sm">
-                      <RouteIcon className="h-5 w-5 text-black opacity-90" />
-                    </span>
-                  )}
-
-                  <span
-                    className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black shadow-sm"
-                    style={{ backgroundColor: color }}
-                  >
-                    <MapPin className="h-4 w-4 text-black opacity-90" />
-                    {stop}
+            return (
+              <div key={stop + i} className="flex items-center flex-none">
+                {i === 0 && (
+                  <span className="mr-1.5 inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white/80 dark:bg-neutral-900/70 shadow-sm">
+                    <RouteIcon className="h-5 w-5 text-black opacity-90" />
                   </span>
+                )}
 
-                  {!isLast && (
-                    <span
-                      className="mx-0.5 h-0.5 w-8 lg:w-6 flex-none rounded"
-                      style={{ background: `linear-gradient(to right, ${color}, ${nextColor})` }}
-                    />
-                  )}
-                </div>
-              );
-            })}
-          </div>
+                <span
+                  className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black shadow-sm"
+                  style={{ backgroundColor: color }}
+                >
+                  <MapPin className="h-4 w-4 text-black opacity-90" />
+                  {stop}
+                </span>
+
+                {!isLast && (
+                  <span
+                    className="mx-0.5 h-0.5 w-8 lg:w-6 flex-none rounded"
+                    style={{ background: `linear-gradient(to right, ${color}, ${nextColor})` }}
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
-
-        {/* Right arrow */}
-        <button
-          type="button"
-          aria-label="Scroll route right"
-          onClick={() => scrollBy(320)}
-          disabled={!canScrollRight}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full border bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
-        >
-          <ChevronRight className="h-5 w-5" />
-        </button>
       </div>
 
       {/* Hide native scrollbars */}
