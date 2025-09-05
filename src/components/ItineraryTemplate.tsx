@@ -49,6 +49,7 @@ interface CountryData {
   location: string;
   duration: string;
   heroImage: string;
+  route?: string[];
   aboutDescription: string[];
   aboutImages: string[];
   whatsIncludedHighlights?: WhatsIncludedHighlight[];
