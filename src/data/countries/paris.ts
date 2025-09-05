@@ -15,6 +15,9 @@ import parisHero from "@/assets/paris-hero.jpg";
 import parisStreet from "@/assets/paris-street.jpg";
 import parisSeine from "@/assets/paris-seine.jpg";
 
+// Import icons for highlights
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+
 export const parisData = {
   id: "paris-adventure",
   title: "Paris Adventure",
@@ -27,6 +30,44 @@ export const parisData = {
     "Whether you're marveling at the Eiffel Tower, exploring world-class museums, or strolling along the Seine, this itinerary offers the perfect blend of must-see attractions and authentic Parisian experiences."
   ],
   aboutImages: [parisStreet, parisSeine],
+
+  // What's Included Highlights - Paris specific
+  whatsIncludedHighlights: [
+    {
+      icon: Home,
+      title: "5 NIGHTS<br />ACCOMMODATION",
+      description: "Boutique hotel near Champs-Élysées with authentic Parisian charm and luxury amenities!"
+    },
+    {
+      icon: Zap,
+      title: "6 DAYS OF<br />CITY OF LIGHT",
+      description: "Eiffel Tower, Louvre Museum, Versailles Palace, Seine cruises & Parisian culture!",
+      link: {
+        text: "Explore Paris",
+        url: "#itinerary"
+      }
+    },
+    {
+      icon: Plane,
+      title: "AIRPORT TRANSFERS<br />& METRO",
+      description: "Seamless transfers plus unlimited metro passes for easy navigation around the city."
+    },
+    {
+      icon: Users,
+      title: "CULTURAL<br />SPECIALISTS",
+      description: "Local Parisian guides fluent in English who reveal hidden gems and cultural secrets."
+    },
+    {
+      icon: UtensilsCrossed,
+      title: "GOURMET<br />EXPERIENCES",
+      description: "5 French breakfasts, market tours, sunset Seine dinner cruise & authentic bistro meals!"
+    },
+    {
+      icon: TreePine,
+      title: "100% CARBON<br />NEUTRAL",
+      description: "Your Paris adventure supports urban sustainability and green tourism initiatives."
+    }
+  ],
   itinerary: [
     {
       day: 1,

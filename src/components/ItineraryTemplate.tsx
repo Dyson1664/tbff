@@ -11,6 +11,16 @@ import { getPayUrlBySlug } from '@/data/payUrls';
 import Footer from "@/components/common/Footer";
 import { DayItinerary } from "@/data/types";
 
+interface WhatsIncludedHighlight {
+  icon: React.ComponentType<any>;
+  title: string;
+  description: string;
+  link?: {
+    text: string;
+    url: string;
+  };
+}
+
 interface IncludedItem {
   text: string;
 }
@@ -41,6 +51,7 @@ interface CountryData {
   heroImage: string;
   aboutDescription: string[];
   aboutImages: string[];
+  whatsIncludedHighlights?: WhatsIncludedHighlight[];
   highlights?: TripHighlight[];
   itinerary: DayItinerary[];
   summary: {
@@ -190,83 +201,41 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
   </div>
 ));
 
-const WhatsIncludedHighlights = memo(({ countryName }: { countryName: string }) => (
-  <div className="bg-background py-10">
-    <div className="max-w-6xl mx-auto px-4">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
-      </div>
+const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsIncludedHighlight[] }) => {
+  if (!highlights || highlights.length === 0) return null;
 
-      <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-        <div className="text-center space-y-3">
-          <div className="flex justify-center">
-            <Home className="w-12 h-12 text-primary" strokeWidth={1.25} />
-          </div>
-          <h3 className="text-lg font-bold text-foreground">12 NIGHTS<br />ACCOM</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            From beachside hotels to traditional Filipino huts on remote islands!
-          </p>
-          <a href="#" className="text-primary hover:text-primary/80 underline text-xs">
-            Check it out here
-          </a>
+  return (
+    <div className="bg-background py-10">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
         </div>
 
-        <div className="text-center space-y-3">
-          <div className="flex justify-center">
-            <Zap className="w-12 h-12 text-primary" strokeWidth={1.25} />
-          </div>
-          <h3 className="text-lg font-bold text-foreground">13 DAYS OF EPIC<br />ACTIVITIES</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            Visit iconic waterfalls, explore pristine beaches, snorkel in emerald green waters & more!
-          </p>
-          <a href="#" className="text-primary hover:text-primary/80 underline text-xs">
-            See the full list
-          </a>
-        </div>
-
-        <div className="text-center space-y-3">
-          <div className="flex justify-center">
-            <Plane className="w-12 h-12 text-primary" strokeWidth={1.25} />
-          </div>
-          <h3 className="text-lg font-bold text-foreground">AIRPORT PICKUP</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            We'll be there to greet you at the airport after your long flight and take you to the accom.
-          </p>
-        </div>
-
-        <div className="text-center space-y-3">
-          <div className="flex justify-center">
-            <Users className="w-12 h-12 text-primary" strokeWidth={1.25} />
-          </div>
-          <h3 className="text-lg font-bold text-foreground">AWESOME<br />GROUP LEADER</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            You'll get an awesome group leader to provide 24/7 support during & after your trip, alongside knowledgeable local guides.
-          </p>
-        </div>
-
-        <div className="text-center space-y-3">
-          <div className="flex justify-center">
-            <UtensilsCrossed className="w-12 h-12 text-primary" strokeWidth={1.25} />
-          </div>
-          <h3 className="text-lg font-bold text-foreground">20 MEALS</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            12 Breakfasts, 6 Lunch & 2 Dinners
-          </p>
-        </div>
-
-        <div className="text-center space-y-3">
-          <div className="flex justify-center">
-            <TreePine className="w-12 h-12 text-primary" strokeWidth={1.25} />
-          </div>
-          <h3 className="text-lg font-bold text-foreground">100% CARBON<br />NEUTRAL</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            We accurately measure the CO2 emissions of your tour and 100% offset them through planting the required amount of trees.
-          </p>
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+          {highlights.map((highlight, index) => {
+            const IconComponent = highlight.icon;
+            return (
+              <div key={index} className="text-center space-y-3">
+                <div className="flex justify-center">
+                  <IconComponent className="w-12 h-12 text-primary" strokeWidth={1.25} />
+                </div>
+                <h3 className="text-lg font-bold text-foreground" dangerouslySetInnerHTML={{ __html: highlight.title }} />
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {highlight.description}
+                </p>
+                {highlight.link && (
+                  <a href={highlight.link.url} className="text-primary hover:text-primary/80 underline text-xs">
+                    {highlight.link.text}
+                  </a>
+                )}
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
-  </div>
-));
+  );
+});
 
 
 const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], countryName: string }) => (
@@ -437,7 +406,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         <AboutSection data={data} />
 
         {/* What's Included Highlights */}
-        <WhatsIncludedHighlights countryName={countryName} />
+        <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} />
 
         {/* Itinerary Title */}
           <div className="text-center mt-10 md:mt-16 mb-8">

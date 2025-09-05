@@ -5,6 +5,9 @@ import srilankaBeach from "@/assets/srilanka-beach.jpg";
 import srilankaColombo from "@/assets/srilanka-colombo.png";
 import sigiriyaRock from "@/assets/sigiriya-rock.jpg";
 
+// Import icons for highlights
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+
 
 export const srilankaData = {
   id: "srilanka-serenity",
@@ -19,6 +22,44 @@ export const srilankaData = {
     "Experience the warmth of Sri Lankan hospitality while exploring UNESCO World Heritage sites, encountering elephants in their natural habitat, and relaxing on some of the world's most beautiful beaches."
   ],
   aboutImages: [srilankaTea, srilankaBeach],
+
+  // What's Included Highlights - Sri Lanka specific
+  whatsIncludedHighlights: [
+    {
+      icon: Home,
+      title: "8 NIGHTS<br />ACCOMMODATION",
+      description: "From heritage hotels to tea plantation bungalows and beach resorts across the island!"
+    },
+    {
+      icon: Zap,
+      title: "9 DAYS OF<br />DISCOVERY",
+      description: "Ancient rock fortresses, tea country railways, wildlife safaris & pristine beaches!",
+      link: {
+        text: "See full itinerary",
+        url: "#itinerary"
+      }
+    },
+    {
+      icon: Plane,
+      title: "AIRPORT TRANSFERS<br />& TRANSPORT",
+      description: "Meet & greet at Colombo airport plus private vehicle with driver throughout your journey."
+    },
+    {
+      icon: Users,
+      title: "EXPERT LOCAL<br />GUIDES",
+      description: "Knowledgeable Sri Lankan guides who share the island's rich history and cultural insights."
+    },
+    {
+      icon: UtensilsCrossed,
+      title: "AUTHENTIC<br />CUISINE",
+      description: "8 Breakfasts, 6 Lunches & 5 Dinners featuring rice & curry, tea tastings & local specialties!"
+    },
+    {
+      icon: TreePine,
+      title: "100% CARBON<br />NEUTRAL",
+      description: "Your Sri Lankan adventure supports local conservation and sustainable wildlife protection."
+    }
+  ],
   itinerary: [
     {
       day: 1,

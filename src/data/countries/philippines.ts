@@ -3,6 +3,9 @@ import philippinesHero from "@/assets/philippines-hero.jpg";
 import philippinesRice from "@/assets/philippines-rice.jpg";
 import philippinesMarket from "@/assets/philippines-market.jpg";
 
+// Import icons for highlights
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+
 export const philippinesData = {
   id: "philippines-paradise",
   title: "Philippines Paradise",
@@ -15,6 +18,44 @@ export const philippinesData = {
     "Experience world-class diving, UNESCO World Heritage sites, and some of the most beautiful islands on Earth. This journey combines adventure, relaxation, and cultural immersion in one of Southeast Asia's most stunning destinations."
   ],
   aboutImages: [philippinesRice, philippinesMarket],
+
+  // What's Included Highlights - Philippines specific
+  whatsIncludedHighlights: [
+    {
+      icon: Home,
+      title: "8 NIGHTS<br />ACCOMMODATION",
+      description: "From beachside resorts to traditional Filipino bamboo bungalows on remote tropical islands!"
+    },
+    {
+      icon: Zap,
+      title: "9 DAYS OF<br />ISLAND PARADISE",
+      description: "Visit stunning rice terraces, pristine beaches, snorkel in crystal waters & island hopping!",
+      link: {
+        text: "See all adventures",
+        url: "#itinerary"
+      }
+    },
+    {
+      icon: Plane,
+      title: "AIRPORT PICKUP<br />& TRANSFERS",
+      description: "We'll greet you in Manila and handle all transfers including domestic flights between islands."
+    },
+    {
+      icon: Users,
+      title: "LOCAL FILIPINO<br />GUIDES",
+      description: "Expert local guides who know hidden gems and provide authentic cultural experiences."
+    },
+    {
+      icon: UtensilsCrossed,
+      title: "TROPICAL<br />CUISINE",
+      description: "8 Breakfasts, 6 Lunches & 4 Dinners featuring fresh seafood and authentic Filipino dishes!"
+    },
+    {
+      icon: TreePine,
+      title: "100% CARBON<br />NEUTRAL",
+      description: "Your Philippines adventure supports marine conservation and sustainable island tourism."
+    }
+  ],
   itinerary: [
     {
       day: 1,

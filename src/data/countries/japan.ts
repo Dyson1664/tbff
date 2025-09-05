@@ -5,6 +5,9 @@ import japanTokyo from "@/assets/japan-tokyo.jpg";
 import japanSushi from "@/assets/japan-sushi.jpg";
 import japanTorii from "@/assets/japan-torii.jpg";
 
+// Import icons for highlights
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+
 export const japanData = {
   id: "japan-journey",
   slug: "japan",
@@ -18,6 +21,44 @@ export const japanData = {
     "Immerse yourself in Japanese culture through tea ceremonies, temple visits, and authentic culinary experiences. From the iconic Mount Fuji to the peaceful bamboo groves, discover why Japan captivates travelers from around the world."
   ],
   aboutImages: [japanGarden, japanTokyo],
+
+  // What's Included Highlights - Japan specific
+  whatsIncludedHighlights: [
+    {
+      icon: Home,
+      title: "9 NIGHTS<br />ACCOMMODATION",
+      description: "From traditional ryokans to modern hotels - experience authentic Japanese hospitality!"
+    },
+    {
+      icon: Zap,
+      title: "10 DAYS OF<br />CULTURAL IMMERSION",
+      description: "Tea ceremonies, temple visits, bullet trains & authentic experiences in Tokyo and Kyoto!",
+      link: {
+        text: "Explore the itinerary",
+        url: "#itinerary"
+      }
+    },
+    {
+      icon: Plane,
+      title: "AIRPORT TRANSFERS<br />& JR PASS",
+      description: "Seamless transfers plus unlimited travel on Japan's famous bullet trains and local transport."
+    },
+    {
+      icon: Users,
+      title: "CULTURAL<br />EXPERTS",
+      description: "Knowledgeable local guides who speak fluent English and provide deep cultural insights."
+    },
+    {
+      icon: UtensilsCrossed,
+      title: "AUTHENTIC<br />CUISINE",
+      description: "9 Breakfasts plus sushi workshops, tea ceremonies, and traditional kaiseki dining experiences!"
+    },
+    {
+      icon: TreePine,
+      title: "100% CARBON<br />NEUTRAL",
+      description: "Your Japan journey is completely carbon neutral through our verified environmental program."
+    }
+  ],
   itinerary: [
     {
       day: 1,

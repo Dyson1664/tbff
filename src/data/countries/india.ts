@@ -14,6 +14,9 @@ import indiaDay11 from "@/assets/india-day11-main-taj-mahal.jpg";
 import indiaDay12 from "@/assets/india-day12-main-amer-fort.jpg";
 import indiaDay13 from "@/assets/india-day13-main-checkout.jpg";
 
+// Import icons for highlights
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+
 // Import gallery images
 import indiaDay01Gallery01 from "@/assets/india-day01-gallery-01.jpg";
 import indiaDay01Gallery02 from "@/assets/india-day01-gallery-02.jpg";
@@ -89,6 +92,44 @@ export const indiaData = {
     "It’s time to start exploring India. This tour is perfect for those first time travellers that have always wanted to explore the wonders of India but don’t want to do it alone. This tour will let you experience the amazing different sites India has to offer such as citadel, bustling local markets to the great monuments including the infamous Taj Mahal, the Pink Palaces of Jaipur and Ranthambhore National Park. We begin the tour in India’s capital New Delhi and finish in Agra with various different locations along the way, throughout the trip guests will get to immerse themselves in India’s rich culture experiencing many Indian traditions and tasting some of the amazing dishes India has to offer. Join us for a once in a lifetime experience that will make you want to travel more"
   ],
   aboutImages: [indiaHero, indiaHero],
+
+  // What's Included Highlights - India specific
+  whatsIncludedHighlights: [
+    {
+      icon: Home,
+      title: "12 NIGHTS<br />ACCOMMODATION",
+      description: "From heritage hotels in Rajasthan to luxury resorts - experience authentic Indian hospitality!"
+    },
+    {
+      icon: Zap,
+      title: "13 DAYS OF<br />EPIC ACTIVITIES",
+      description: "Visit the Taj Mahal, explore royal palaces, wildlife safaris & immerse in vibrant culture!",
+      link: {
+        text: "See the full itinerary",
+        url: "#itinerary"
+      }
+    },
+    {
+      icon: Plane,
+      title: "AIRPORT PICKUP<br />& TRANSFERS",
+      description: "We'll greet you in New Delhi and handle all transfers throughout your Indian journey."
+    },
+    {
+      icon: Users,
+      title: "EXPERT LOCAL<br />GUIDES",
+      description: "Knowledgeable guides at every destination plus 24/7 support throughout your adventure."
+    },
+    {
+      icon: UtensilsCrossed,
+      title: "AUTHENTIC<br />INDIAN CUISINE",
+      description: "12 Breakfasts, 8 Lunches & 6 Dinners featuring regional specialties and cooking classes!"
+    },
+    {
+      icon: TreePine,
+      title: "100% CARBON<br />NEUTRAL",
+      description: "Your India journey is completely carbon neutral through our verified tree planting program."
+    }
+  ],
 // NEW: Trip highlights
 highlights: [
   {

@@ -5,6 +5,9 @@ import thailandTemple from "@/assets/thailand-temple.jpg";
 import thailandPalace from "@/assets/thailand-palace.jpg";
 import thailandBoat from "@/assets/thailand-boat.jpg";
 
+// Import icons for highlights
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+
 export const thailandData = {
   id: "thailand-discovery",
   slug: "thailand",
@@ -18,6 +21,44 @@ export const thailandData = {
     "Discover golden temples, sample incredible street food, explore floating markets, and relax on world-famous beaches. This carefully curated itinerary balances cultural immersion with natural beauty, creating memories that will last a lifetime."
   ],
   aboutImages: [thailandMarket, thailandTemple],
+
+  // What's Included Highlights - Thailand specific
+  whatsIncludedHighlights: [
+    {
+      icon: Home,
+      title: "7 NIGHTS<br />ACCOMMODATION",
+      description: "From luxury Bangkok hotels to beachfront resorts and traditional Thai-style accommodations!"
+    },
+    {
+      icon: Zap,
+      title: "8 DAYS OF<br />THAI ADVENTURES",
+      description: "Ancient temples, floating markets, Thai cooking classes, island hopping & cultural immersion!",
+      link: {
+        text: "Discover Thailand",
+        url: "#itinerary"
+      }
+    },
+    {
+      icon: Plane,
+      title: "AIRPORT TRANSFERS<br />& TRANSPORT",
+      description: "Meet & greet in Bangkok plus all transfers including domestic flights and boat transfers."
+    },
+    {
+      icon: Users,
+      title: "THAI CULTURAL<br />EXPERTS",
+      description: "Local guides fluent in English who share deep knowledge of Thai history and traditions."
+    },
+    {
+      icon: UtensilsCrossed,
+      title: "AUTHENTIC<br />THAI CUISINE",
+      description: "7 Breakfasts, 5 Lunches & 4 Dinners plus hands-on Thai cooking classes and street food tours!"
+    },
+    {
+      icon: TreePine,
+      title: "100% CARBON<br />NEUTRAL",
+      description: "Your Thailand journey supports local conservation and sustainable tourism initiatives."
+    }
+  ],
   itinerary: [
     {
       day: 1,
