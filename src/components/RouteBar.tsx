@@ -43,7 +43,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
 
                 {!isLast && (
                   <span
-                    className="mx-0.5 h-0.5 w-8 flex-none rounded"
+                    className="mx-0.5 h-0.5 w-4 flex-none rounded"
                     style={{ background: `linear-gradient(to right, ${color}, ${nextColor})` }}
                   />
                 )}
