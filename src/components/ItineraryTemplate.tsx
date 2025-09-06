@@ -49,7 +49,8 @@ interface CountryData {
   location: string;
   duration: string;
   heroImage: string;
-  overviewGallery?: string[];   // <-- new optional gallery for hero left grid
+  overviewGallery?: string[]; 
+  overviewGallery2x?: (string | null)[];  // <-- new optional gallery for hero left grid
   route?: string[];
   aboutDescription: string[];
   aboutImages: string[];
