@@ -423,7 +423,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         {/* Desktop: Grid layout */}
         <div className="hidden md:flex w-full h-full">
           {/* Left side: 6-image grid (40% of screen) */}
-          <div className="w-[40%] h-full grid grid-cols-2 grid-rows-3">
+          <div className="w-[40%] h-full grid grid-cols-3 grid-rows-2">
             {data.itinerary.slice(0, 6).map((day, index) => (
               <div 
                 key={index}
