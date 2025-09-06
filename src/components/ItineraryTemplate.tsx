@@ -414,12 +414,15 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           {/* Left side: 6-image grid (42% of screen) */}
           <div className="w-[42%] h-full grid grid-cols-3 grid-rows-2 gap-0">
             {overviewSix.map((src, index) => (
-              <div 
-                key={index}
-                className="relative bg-cover bg-center bg-no-repeat h-full w-full"
-                style={{ backgroundImage: `url(${src})` }}
-                aria-label={`Overview image ${index + 1}`}
-              />
+              <div key={index} className="relative h-full w-full overflow-hidden">
+                <img 
+                  src={src}
+                  alt={`${data.title} overview ${index + 1}`}
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
+              </div>
             ))}
           </div>
 
