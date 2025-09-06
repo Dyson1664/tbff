@@ -414,17 +414,23 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         <div className="hidden md:flex w-full h-full">
           {/* Left side: 6-image grid (42% of screen) */}
           <div className="w-[42%] h-full grid grid-cols-3 grid-rows-2 gap-0">
-            {overviewSix.map((src, index) => (
-              <div key={index} className="relative h-full w-full overflow-hidden">
-                <img 
-                  src={src}
-                  alt={`${data.title} overview ${index + 1}`}
-                  className="h-full w-full object-cover"
-                  loading="eager"
-                  decoding="async"
-                />
-              </div>
-            ))}
+            {overviewSix.map((src, index) => {
+  const src2x = data.overviewGallery2x?.[index] || undefined;
+  return (
+    <div key={index} className="relative h-full w-full overflow-hidden">
+      <img
+        src={src}
+        srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
+        sizes="(min-width:1024px) 14vw, 33vw"
+        alt={`${data.title} overview ${index + 1}`}
+        className="h-full w-full object-cover"
+        decoding="async"
+        loading={index < 2 ? "eager" : "lazy"}
+      />
+    </div>
+  );
+})}
+
           </div>
 
           {/* Right side: Main hero image (58% of screen) */}
