@@ -19,11 +19,16 @@ import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react
 
 import ov1_400 from "@/assets/india-overviewov1-400w.webp";
 import ov1_800 from "@/assets/india-overviewov1-800w.webp";
-import ov2 from "@/assets/india-overview-02.jpg";
-import ov3 from "@/assets/india-overview-03.jpg";
-import ov4 from "@/assets/india-overview-04.jpg";
-import ov5 from "@/assets/india-overview-05.jpg";
-import ov6 from "@/assets/india-overview-06.jpg";
+import ov2_400 from "@/assets/india-overviewov2-400w.webp";
+import ov2_800 from "@/assets/india-overviewov2-800w.webp";
+import ov3_400 from "@/assets/india-overviewov3-400w.webp";
+import ov3_800 from "@/assets/india-overviewov3-800w.webp";
+import ov4_400 from "@/assets/india-overviewov4-400w.webp";
+import ov4_800 from "@/assets/india-overviewov4-800w.webp";
+import ov5_400 from "@/assets/india-overviewov5-400w.webp";
+import ov5_800 from "@/assets/india-overviewov5-800w.webp";
+import ov6_400 from "@/assets/india-overviewov6-400w.webp";
+import ov6_800 from "@/assets/india-overviewov6-800w.webp";
 
 // Import gallery images
 import indiaDay01Gallery01 from "@/assets/india-day01-gallery-01.jpg";
@@ -96,8 +101,8 @@ export const indiaData = {
   location: "India",
   duration: "13 days",
   heroImage: indiaHero,
-  overviewGallery: [ov1_400, ov2, ov3, ov4, ov5, ov6],
-  overviewGallery2x: [ov1_800, null, null, null, null, null],
+  overviewGallery: [ov1_400, ov2_400, ov3_400, ov4_400, ov5_400, ov6_400],
+  overviewGallery2x:[ov1_800, ov2_800, ov3_800, ov4_800, ov5_800, ov6_800],
   route: ["New Delhi", "Jodhpur", "Udaipur", "Jaipur", "Sawai Madhopur", "Agra"],
   aboutDescription: [
     "It’s time to start exploring India. This tour is perfect for those first time travellers that have always wanted to explore the wonders of India but don’t want to do it alone. This tour will let you experience the amazing different sites India has to offer such as citadel, bustling local markets to the great monuments including the infamous Taj Mahal, the Pink Palaces of Jaipur and Ranthambhore National Park. We begin the tour in India’s capital New Delhi and finish in Agra with various different locations along the way, throughout the trip guests will get to immerse themselves in India’s rich culture experiencing many Indian traditions and tasting some of the amazing dishes India has to offer. Join us for a once in a lifetime experience that will make you want to travel more"
