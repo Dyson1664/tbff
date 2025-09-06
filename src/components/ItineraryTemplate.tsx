@@ -1,7 +1,7 @@
 import { DayLayout } from "@/components/DayLayout";
 import Navbar from "@/components/Navbar";
 import { HeroSection } from "@/components/common/HeroSection";
-import { Share2, Heart, Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+import { Share2, Heart, Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -400,15 +400,59 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       <Navbar />
       
       {/* Hero Section */}
-      <HeroSection
-        backgroundImage={data.heroImage}
-        title={data.title}
-        subtitle={data.subtitle}
-        location={data.location}
-        duration={data.duration}
-        height={STATIC_STYLES.heroHeight}
-        overlay="light"
-      />
+      <section className="relative h-[70vh] flex overflow-hidden">
+        {/* Mobile: Show only main image */}
+        <div className="md:hidden relative w-full h-full">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${data.heroImage})` }}
+          />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-6">
+            <div className="max-w-2xl">
+              <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
+              <p className="text-lg mb-6">{data.subtitle}</p>
+              <div className="flex items-center justify-center gap-2 text-base">
+                <MapPin className="w-4 h-4" />
+                <span>{data.location} • {data.duration}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop: Grid layout */}
+        <div className="hidden md:flex w-full h-full">
+          {/* Left side: 6-image grid (1/3 of screen) */}
+          <div className="w-1/3 h-full grid grid-cols-2 grid-rows-3">
+            {data.itinerary.slice(0, 6).map((day, index) => (
+              <div 
+                key={index}
+                className="relative bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: `url(${day.heroImage || data.heroImage})` }}
+              />
+            ))}
+          </div>
+
+          {/* Right side: Main hero image (2/3 of screen) */}
+          <div className="flex-1 relative">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${data.heroImage})` }}
+            />
+            <div className="absolute inset-0 bg-black/40" />
+            <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-8">
+              <div className="max-w-2xl">
+                <h1 className="text-5xl lg:text-6xl font-bold mb-6">{data.title}</h1>
+                <p className="text-xl lg:text-2xl mb-8">{data.subtitle}</p>
+                <div className="flex items-center justify-center gap-2 text-lg">
+                  <MapPin className="w-5 h-5" />
+                  <span>{data.location} • {data.duration}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Header with Actions */}
       <div className={STATIC_STYLES.stickyHeader}>
