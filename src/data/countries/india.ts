@@ -17,8 +17,8 @@ import indiaDay13 from "@/assets/india-day13-main-checkout.jpg";
 // Import icons for highlights
 import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
 
-import ov1_400 from "@/assets/india-overview/ov1-400w.webp";
-import ov1_800 from "@/assets/india-overview/ov1-800w.webp";
+import ov1_400 from "@/assets/india-overviewov1-400w.webp";
+import ov1_800 from "@/assets/india-overviewov1-800w.webp";
 import ov2 from "@/assets/india-overview-02.jpg";
 import ov3 from "@/assets/india-overview-03.jpg";
 import ov4 from "@/assets/india-overview-04.jpg";
