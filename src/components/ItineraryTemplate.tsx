@@ -422,19 +422,19 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
         {/* Desktop: Grid layout */}
         <div className="hidden md:flex w-full h-full">
-          {/* Left side: 6-image grid (1/3 of screen) */}
-          <div className="w-1/3 h-full grid grid-cols-2 grid-rows-3">
+          {/* Left side: 6-image grid (40% of screen) */}
+          <div className="w-[40%] h-full grid grid-cols-2 grid-rows-3">
             {data.itinerary.slice(0, 6).map((day, index) => (
               <div 
                 key={index}
-                className="relative bg-cover bg-center bg-no-repeat"
+                className="relative bg-cover bg-center bg-no-repeat aspect-square"
                 style={{ backgroundImage: `url(${day.heroImage || data.heroImage})` }}
               />
             ))}
           </div>
 
-          {/* Right side: Main hero image (2/3 of screen) */}
-          <div className="flex-1 relative">
+          {/* Right side: Main hero image (60% of screen) */}
+          <div className="w-[60%] relative">
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${data.heroImage})` }}
