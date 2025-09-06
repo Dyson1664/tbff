@@ -421,7 +421,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       <img
         src={src}
         srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
-        sizes="(min-width:1024px) 14vw, 33vw"
+        sizes="(min-width:1280px) 12vw, (min-width:1024px) 14vw, 33vw"
         alt={`${data.title} overview ${index + 1}`}
         className="h-full w-full object-cover"
         decoding="async"
