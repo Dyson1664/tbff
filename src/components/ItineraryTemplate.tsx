@@ -1,6 +1,5 @@
 import { DayLayout } from "@/components/DayLayout";
 import Navbar from "@/components/Navbar";
-import { HeroSection } from "@/components/common/HeroSection";
 import { Share2, Heart, Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -10,8 +9,7 @@ import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-sta
 import { getPayUrlBySlug } from '@/data/payUrls';
 import Footer from "@/components/common/Footer";
 import { DayItinerary } from "@/data/types";
-import ResponsiveRoute from "@/components/RouteBar"; // <-- add this import
-
+import ResponsiveRoute from "@/components/RouteBar"; // <-- route component
 
 interface WhatsIncludedHighlight {
   icon: React.ComponentType<any>;
@@ -51,6 +49,7 @@ interface CountryData {
   location: string;
   duration: string;
   heroImage: string;
+  overviewGallery?: string[];   // <-- new optional gallery for hero left grid
   route?: string[];
   aboutDescription: string[];
   aboutImages: string[];
@@ -124,8 +123,8 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
     </div>
   );
 });
-  
-  const AboutSection = memo(({ data }: { data: CountryData }) => {
+
+const AboutSection = memo(({ data }: { data: CountryData }) => {
   const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
 
   return (
@@ -167,7 +166,6 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
   );
 });
 
-
 const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) => (
   <div className={STATIC_STYLES.summaryCard}>
     <h3 className="text-lg font-semibold text-foreground mb-3">{STATIC_TEXT.summaryTitle}</h3>
@@ -195,12 +193,12 @@ const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) =
 const IncludedSection = memo(({ included, countryName }: { included: CountryData['included'], countryName: string }) => (
   <div className={STATIC_STYLES.includedSection}>
     <div className="max-w-7xl mx-auto md:px-3 py-16">
-            <div className="text-center mt-10 md:mt-16 mb-12">
+      <div className="text-center mt-10 md:mt-16 mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
         <p className="text-lg text-muted-foreground">Everything you need for an unforgettable {countryName} experience</p>
       </div>
       
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
         {included.map((section, index) => (
           <div key={index} className="space-y-4">
             <h4 className="font-semibold text-foreground text-lg">{section.title}</h4>
@@ -255,7 +253,6 @@ const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsInclud
   );
 });
 
-
 const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], countryName: string }) => (
   <div className="mt-16 bg-card rounded-xl border border-gray-200 shadow-sm">
     <div className="max-w-7xl mx-auto md:px-3 py-16">
@@ -308,58 +305,50 @@ const ActionButtons = memo(() => {
 export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Memoize derived values
   const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
+
+  // ✅ New: compute 6 images for hero left grid (prefer overviewGallery)
+  const overviewSix = useMemo(() => {
+    if (data.overviewGallery && data.overviewGallery.length) {
+      return data.overviewGallery.slice(0, 6);
+    }
+    // fallback to first 6 day hero images (current behavior)
+    return data.itinerary.slice(0, 6).map(d => d.heroImage || data.heroImage);
+  }, [data.overviewGallery, data.itinerary, data.heroImage]);
   
-  // Scroll to first image function
+  // Scroll to first image function (kept for reference)
   const scrollToFirstImage = useCallback((dayNumber: number) => {
     setTimeout(() => {
-      // Target the accordion trigger (day header) or first image
       const dayTrigger = document.querySelector(`[value="day-${dayNumber}"] [data-accordion-trigger]`);
       const firstImageElement = document.querySelector(`#day-${dayNumber}-first-image`);
-      
-      // Use the day trigger if available, otherwise fall back to first image
       const targetElement = dayTrigger || firstImageElement;
-      
       if (targetElement) {
-        const offset = 280; // Much higher offset to show complete Day header and title
-        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offset = 280;
+        const elementPosition = (targetElement as HTMLElement).getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - offset;
-        
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
-    }, 150); // Delay to allow accordion to expand
+    }, 150);
   }, []);
 
   // Scroll to top when accordion opens
   const handleAccordionChange = useCallback((value: string) => {
     if (value) {
       setTimeout(() => {
-        // Find the day header by the day number in the value
         const dayNumber = value.replace('day-', '');
         const dayHeaders = document.querySelectorAll('h2');
-        
         for (const header of dayHeaders) {
           if (header.textContent && header.textContent.includes(`Day ${dayNumber.padStart(2, '0')}`)) {
-            // Calculate absolute position from top of document
             let offsetTop = 0;
             let element = header as HTMLElement;
-            
             while (element) {
               offsetTop += element.offsetTop;
               element = element.offsetParent as HTMLElement;
             }
-            
-            // Scroll to position with offset
-            window.scrollTo({ 
-              top: offsetTop - 150, 
-              behavior: 'smooth' 
-            });
+            window.scrollTo({ top: offsetTop - 150, behavior: 'smooth' });
             break;
           }
         }
-      }, 200); // Longer delay to ensure accordion is fully expanded
+      }, 200);
     }
   }, []);
 
@@ -399,7 +388,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
     <div className={STATIC_STYLES.gradient}>
       <Navbar />
       
-      {/* Hero Section */}
+      {/* Hero Section (custom) */}
       <section className="relative h-[70vh] flex overflow-hidden">
         {/* Mobile: Show only main image */}
         <div className="md:hidden relative w-full h-full">
@@ -424,11 +413,12 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         <div className="hidden md:flex w-full h-full">
           {/* Left side: 6-image grid (40% of screen) */}
           <div className="w-[40%] h-full grid grid-cols-3 grid-rows-2 gap-0">
-            {data.itinerary.slice(0, 6).map((day, index) => (
+            {overviewSix.map((src, index) => (
               <div 
                 key={index}
                 className="relative bg-cover bg-center bg-no-repeat h-full w-full"
-                style={{ backgroundImage: `url(${day.heroImage || data.heroImage})` }}
+                style={{ backgroundImage: `url(${src})` }}
+                aria-label={`Overview image ${index + 1}`}
               />
             ))}
           </div>
@@ -471,7 +461,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} />
         
         {/* Itinerary Title */}
-          <div className="text-center mt-10 md:mt-16 mb-8">
+        <div className="text-center mt-10 md:mt-16 mb-8">
           <h2 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.itineraryTitle}</h2>
           <p className="text-lg text-muted-foreground">A detailed day-by-day guide to your {countryName} adventure</p>
         </div>
@@ -521,11 +511,9 @@ const BookNowButton = memo(({ tripSlug, countryName }: { tripSlug?: string; coun
       onClick={(e) => {
         e.preventDefault();
         console.log('Button clicked, opening URL:', href);
-        // Try multiple approaches to ensure it works
         try {
           const newWindow = window.open(href, '_blank');
           if (!newWindow) {
-            // Fallback if popup blocked
             window.location.href = href;
           }
         } catch (error) {
