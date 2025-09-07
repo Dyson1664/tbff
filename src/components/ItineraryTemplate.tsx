@@ -356,17 +356,21 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Memoize itinerary rendering with accordion
   const itineraryContent = useMemo(() => (
     <Accordion type="single" collapsible className="w-full" onValueChange={handleAccordionChange}>
-      {data.itinerary.map((day) => (
-        <AccordionItem key={day.day} value={`day-${day.day}`} className="bg-background border-0">
-          <div className="border-b border-gray-200 mx-6">
+      {data.itinerary.map((day, index) => (
+        <AccordionItem key={day.day} value={`day-${day.day}`} className={`bg-background border-0 ${
+          index === 0 ? 'rounded-t-lg' : ''
+        } ${
+          index === data.itinerary.length - 1 ? 'rounded-b-lg' : ''
+        }`}>
+          <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-6`}>
             <AccordionTrigger className="px-0 py-4 hover:no-underline group">
-            <div className="flex items-center gap-4 text-left">
-              <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
-              <div>
-                <h3 className="text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">{day.title}</h3>
+              <div className="flex items-center gap-4 text-left">
+                <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
+                <div>
+                  <h3 className="text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">{day.title}</h3>
+                </div>
               </div>
-            </div>
-           </AccordionTrigger>
+            </AccordionTrigger>
           </div>
           <AccordionContent className="px-0 pb-0">
             <DayLayout
