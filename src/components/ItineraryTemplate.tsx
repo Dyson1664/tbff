@@ -355,9 +355,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
   // Memoize itinerary rendering with accordion
   const itineraryContent = useMemo(() => (
-    <Accordion type="single" collapsible className="w-full space-y-1" onValueChange={handleAccordionChange}>
+    <Accordion type="single" collapsible className="w-full" onValueChange={handleAccordionChange}>
       {data.itinerary.map((day) => (
-        <AccordionItem key={day.day} value={`day-${day.day}`} className="border border-gray-200 rounded-lg bg-background shadow-sm">
+        <AccordionItem key={day.day} value={`day-${day.day}`} className="border-b border-gray-200 bg-background">
           <AccordionTrigger className="px-6 py-4 hover:no-underline group">
             <div className="flex items-center gap-4 text-left">
               <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
