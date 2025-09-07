@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 import { NAVIGATION_TRIPS, NAVIGATION_DESTINATIONS } from "@/data/navigation";
 import ibtLogo from "@/assets/ibt-logo.png";
 
+// after
+import ibtLogo from "@/assets/ibt-logo.svg";
+
 // Memoized dropdown item component
 const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) => (
   <Link 
@@ -127,7 +130,7 @@ const Navbar = memo(() => {
           {/* Logo/Home Button */}
           <Link to="/">
             <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0 flex items-center gap-3">
-              <img src={ibtLogo} alt="IBT Logo" className="h-16 w-16" />
+              <img src={ibtLogo} alt="IBT Logo" className="h-8 sm:h-10 md:h-12 w-auto shrink-0" />
               Imagine Beyond Travel
             </Button>
           </Link>
