@@ -134,9 +134,9 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
       <h2 className="text-3xl font-bold text-foreground mb-6 text-center">{data.title}</h2>
 
       {/* 1-col on mobile, 2-col on md+ */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12 bg-background p-8 rounded-lg">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12 bg-background px-6 py-8 md:p-8 rounded-lg">
         {/* Left col: route + about */}
-        <div className="order-1 md:order-none px-4 md:px-0 space-y-6 w-full">
+        <div className="order-1 md:order-none space-y-6 w-full">
           {/* Route: below title, left of highlights */}
           {Array.isArray(data.route) && data.route.length > 1 && (
             <div className="w-full">
