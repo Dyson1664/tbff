@@ -128,7 +128,7 @@ const Navbar = memo(() => {
           <Link to="/">
             <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0 flex items-center gap-3
              focus-visible:ring-0 focus-visible:ring-offset-0 focus:outline-none">
-              <img src={ibtLogo} alt="IBT Logo" className="h-14 w-auto md:h-16 lg:h-20 shrink-0 md:mt-[-2px] lg:mt-[-4px]" />
+              <img src={ibtLogo} alt="IBT Logo"   className="block h-14 w-auto md:h-16 lg:h-20 shrink-0 md:mt-[-2px] lg:mt-[-4px] mix-blend-normal filter invert"/>
               <div className="flex flex-col items-center">
                 <span>Imagine Beyond</span>
                 <span className="text-white text-sm font-normal">Travel</span>
