@@ -123,9 +123,9 @@ const Navbar = memo(() => {
   return (
         <nav className="bg-white text-gray-900 border-b border-gray-200 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="relative flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo/Home Button */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
+          <Link to="/">
             <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0 flex items-center gap-3
              focus-visible:ring-0 focus-visible:ring-offset-0 focus:outline-none">
               <img src={ibtLogo} alt="IBT Logo"  className="block h-[72px] w-auto md:h-16 lg:h-20 shrink-0 md:mt-[-2px] lg:mt-[-4px]"/>
