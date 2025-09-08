@@ -864,24 +864,33 @@ highlights: [
   ],
   faqs: [
     {
-      question: "What's the best time to visit India?",
-      answer: "The best time to visit India is during the cooler months from October to March, when temperatures are more comfortable and rainfall is minimal. This is ideal for exploring outdoor monuments and cities."
+      question: "Where does the trip start & finish?",
+      answer: "The trip starts at New Delhi and finishes in New Delhi"
     },
     {
-      question: "Do I need a visa for India?",
-      answer: "Yes, most travelers need a visa to enter India. An e-Tourist visa can be obtained online in advance for stays up to 60 days. We'll provide detailed visa assistance as part of your booking."
+      question: "Which airport do I need to fly into?",
+      answer: "To Indira Ghandi International Airport - New DelhiTo Indira Ghandi International Airport - New Delhi"
     },
     {
-      question: "What should I pack for India?",
-      answer: "Pack comfortable, modest clothing covering shoulders and knees for temple visits. Include sunscreen, hat, comfortable walking shoes, and any personal medications. Light, breathable fabrics work best."
+      question: "What should I wear?",
+          answer: `For Summer & Warmer Months (March–June): Stick to light, breathable fabrics like cotton and linen to stay cool. Loose-fitting clothes, comfortable sandals or sneakers, sunglasses, and a hat are must-haves. Sun protection, including sunscreen, is key for long days outdoors.
+        
+        For Cooler & Winter Months (October–February): Pack layers! Mornings and evenings can be chilly, especially in northern regions. A light jacket or sweater will keep you warm, while breathable clothing works for daytime. Comfortable walking shoes and a scarf for temple visits are always handy.
+        
+        No matter the season, bring a shawl for religious sites and adventure-ready outfits for outdoor activities!`
+        }
+        ,
+    {
+      question: "Do you have an age limit for tours?",
+      answer: "Our tours cater to adventurous travelers aged 18-45, with most guests between 21-35 years old. It's perfect for people from diverse backgrounds to share travel experiences."
     },
     {
-      question: "Is Indian food very spicy?",
-      answer: "Indian cuisine varies greatly by region. While some dishes are spicy, there are many mild options available. Our guides will help you navigate menus and find dishes suited to your taste preferences."
+      question: "What is the local currency?",
+      answer: "The local currency in India is Indian Rupee. We do advise guests to first collect cash from the airport arms but there will also be various arms available along the way."
     },
     {
-      question: "What about health and safety precautions?",
-      answer: "We recommend drinking bottled water, eating at recommended restaurants, and following basic hygiene practices. Travel insurance is highly recommended. Our guides provide ongoing safety advice throughout the journey."
+      question: "Which airport do I fly out from?",
+      answer: "From Indira Ghandi International Airport - New Delhi"
     }
   ]
 };
