@@ -12,6 +12,5 @@ const LogoIcon = ({ className = "" }: { className?: string }) => (
       </g>
     </svg>
   );
-};
 
 export default LogoIcon;
