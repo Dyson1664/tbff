@@ -132,7 +132,7 @@ const Navbar = memo(() => {
                          focus-visible:ring-0 focus-visible:ring-offset-0 focus:outline-none"
             >
               {/* Bigger on all breakpoints; slight lift on md+ */}
-              <LogoIcon className="h-24 w-auto md:h-28 lg:h-32 -mt-0 md:-mt-1 lg:-mt-1.5 text-white" />
+              <LogoIcon className="h-32 w-auto md:h-40 lg:h-48 -mt-0 md:-mt-1 lg:-mt-1.5 text-white" />
               <div className="flex flex-col items-center">
                 <span>Imagine Beyond</span>
                 <span className="text-white text-sm font-normal">Travel</span>
