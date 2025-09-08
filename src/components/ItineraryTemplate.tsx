@@ -192,27 +192,29 @@ const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) =
 ));
 
 const IncludedSection = memo(({ included, countryName }: { included: CountryData['included'], countryName: string }) => (
-  <div className={STATIC_STYLES.includedSection}>
-    <div className="max-w-7xl mx-auto md:px-3 py-16">
+  <div id="whats-included" className={STATIC_STYLES.includedSection}>
+    <div className="max-w-7xl mx-auto px-6 md:px-3 py-16">
       <div className="text-center mt-10 md:mt-16 mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
         <p className="text-lg text-muted-foreground">Everything you need for an unforgettable {countryName} experience</p>
       </div>
       
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        {included.map((section, index) => (
-          <div key={index} className="space-y-4">
-            <h4 className="font-semibold text-foreground text-lg">{section.title}</h4>
-            <ul className="space-y-3 text-muted-foreground">
-              {section.items.map((item, itemIndex) => (
-                <li key={itemIndex} className="flex items-start gap-3">
-                  <span className="text-primary mt-1 text-lg">•</span>
-                  {item.text}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          {included.map((section, index) => (
+            <div key={index} className="space-y-4">
+              <h4 className="font-semibold text-foreground text-lg">{section.title}</h4>
+              <ul className="space-y-3 text-muted-foreground">
+                {section.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="flex items-start gap-3">
+                    <span className="text-primary mt-1 text-lg">•</span>
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   </div>
@@ -221,9 +223,21 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
 const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsIncludedHighlight[] }) => {
   if (!highlights || highlights.length === 0) return null;
 
+  const handleLinkClick = useCallback((url: string) => {
+    if (url === "#itinerary") {
+      const includedSection = document.getElementById('whats-included');
+      if (includedSection) {
+        const offset = 100;
+        const elementPosition = includedSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
     <div className="bg-background py-10">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-6 md:px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
         </div>
@@ -241,9 +255,12 @@ const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsInclud
                   {highlight.description}
                 </p>
                 {highlight.link && (
-                  <a href={highlight.link.url} className="text-primary hover:text-primary/80 underline text-xs">
+                  <button 
+                    onClick={() => handleLinkClick(highlight.link.url)}
+                    className="text-primary hover:text-primary/80 underline text-xs cursor-pointer"
+                  >
                     {highlight.link.text}
-                  </a>
+                  </button>
                 )}
               </div>
             );
