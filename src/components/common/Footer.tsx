@@ -19,7 +19,7 @@ const Footer = () => {
               <img 
                 src={ibtLogo} 
                 alt="IBT Logo" 
-                className="h-64 w-auto object-contain"
+                className="w-56 md:w-72 lg:w-96 h-auto object-contain"
               />
             </div>
           </div>
