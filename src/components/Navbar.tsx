@@ -131,9 +131,8 @@ const Navbar = memo(() => {
               <img src={ibtLogo} alt="IBT Logo"  className="block h-[72px] w-auto md:h-16 lg:h-20 shrink-0 md:mt-[-2px] lg:mt-[-4px]"/>
               <div className="flex flex-col items-center">
                   <span>Imagine Beyond</span>
-                  <span className="text-gray-900 text-base md:text-lg font-semibold leading-none">
-                    Travel
-                  </span>
+                  <span className="text-base md:text-lg font-semibold leading-none">Travel</span>
+
                 </div>
 
             </Button>
