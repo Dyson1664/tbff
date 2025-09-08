@@ -16,11 +16,12 @@ const Footer = () => {
                 <div className="text-primary text-2xl font-bold">Imagine beyond</div>
                 <div className="text-lg tracking-wider">TRAVEL</div>
               </div>
-              <img 
-                src={ibtLogo} 
-                alt="IBT Logo" 
-                className="w-56 md:w-72 lg:w-96 h-auto object-contain"
-              />
+              <img
+                  src={ibtLogo}
+                  alt="IBT Logo"
+                  className="w-80 sm:w-96 lg:w-[26rem] h-auto max-w-full object-contain mx-auto sm:mx-0"
+                />
+
             </div>
           </div>
 
