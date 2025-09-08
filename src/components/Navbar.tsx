@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { NAVIGATION_TRIPS, NAVIGATION_DESTINATIONS } from "@/data/navigation";
-import LogoIcon from "@/components/LogoIcon";
+import ibtLogo from "@/assets/ibt-logo.svg";
 
 // Memoized dropdown item component
 const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) => (
@@ -123,16 +123,12 @@ const Navbar = memo(() => {
   return (
         <nav className="bg-slate-800 text-white border-b border-gray-700 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20 md:h-24"> {/* ↑ give desktop more headroom */}
+        <div className="flex items-center justify-between h-20">
           {/* Logo/Home Button */}
           <Link to="/">
-            <Button
-              variant="link"
-              className="text-xl font-bold text-primary hover:no-underline p-0 flex items-center gap-3
-                         focus-visible:ring-0 focus-visible:ring-offset-0 focus:outline-none"
-            >
-              {/* Bigger on all breakpoints; slight lift on md+ */}
-              <LogoIcon className="h-32 w-auto md:h-40 lg:h-48 -mt-0 md:-mt-1 lg:-mt-1.5 text-white" />
+            <Button variant="link" className="text-xl font-bold text-primary hover:no-underline p-0 flex items-center gap-3
+             focus-visible:ring-0 focus-visible:ring-offset-0 focus:outline-none">
+              <img src={ibtLogo} alt="IBT Logo"   className="block h-14 w-auto md:h-16 lg:h-20 shrink-0 md:mt-[-2px] lg:mt-[-4px] mix-blend-normal filter invert"/>
               <div className="flex flex-col items-center">
                 <span>Imagine Beyond</span>
                 <span className="text-white text-sm font-normal">Travel</span>
