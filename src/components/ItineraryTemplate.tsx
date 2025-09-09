@@ -230,7 +230,7 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
   </div>
 ));
 
-const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsIncludedHighlight[] }) => {
+const WhatsIncludedHighlights = memo(({ highlights }: { highlights? WhatsIncludedHighlight[] }) => {
   if (!highlights || highlights.length === 0) return null;
 
   const handleLinkClick = useCallback((url: string) => {
