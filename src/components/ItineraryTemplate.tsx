@@ -409,17 +409,14 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           index === data.itinerary.length - 1 ? 'rounded-b-lg' : ''
         }`}>
           <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md:mx-6`}>
-            <AccordionTrigger className="px-0 py-4 hover:no-underline group">
-            <div className="flex items-center gap-2 md:gap-4 text-left w-full">
-              <h2 className="flex-shrink-0 whitespace-nowrap text-2xl font-bold text-foreground">
-                Day {day.day}
-              </h2>
-              <h3 className="flex-1 min-w-0 overflow-hidden text-ellipsis whitespace-nowrap md:whitespace-normal md:overflow-visible text-base md:text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">
-                {day.title}
-              </h3>
-            </div>
-          </AccordionTrigger>
-
+            <AccordionTrigger className="px-4 md:px-0 py-4 hover:no-underline group">
+              <div className="flex items-center gap-4 text-left">
+                <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
+                <div>
+                  <h3 className="text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">{day.title}</h3>
+                </div>
+              </div>
+            </AccordionTrigger>
           </div>
           <AccordionContent className="px-0 pb-0">
             <DayLayout
