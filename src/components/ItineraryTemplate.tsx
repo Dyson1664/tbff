@@ -449,23 +449,12 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${data.heroImage})` }}
           />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-6">
-            <div className="max-w-2xl">
-              <h1 className="text-4xl font-bold mb-4">{data.title}</h1>
-              <p className="text-lg mb-6">{data.subtitle}</p>
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+            <div className="text-center text-white">
+              <h1 className="text-3xl font-bold mb-2">{data.title}</h1>
               <div className="flex items-center justify-center gap-2 text-base">
                 <MapPin className="w-4 h-4" />
                 <span>{data.location} • {data.duration}</span>
-              </div>
-            </div>
-          </div>
-          {/* Trip Info Button - Mobile */}
-          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
-            <div className="bg-white/95 backdrop-blur-md rounded-2xl px-6 py-4 shadow-lg border border-white/20">
-              <div className="text-center">
-                <h3 className="text-foreground font-bold text-lg">{data.title}</h3>
-                <p className="text-muted-foreground text-sm mt-1">{data.location} • {data.duration}</p>
               </div>
             </div>
           </div>
@@ -500,23 +489,12 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${data.heroImage})` }}
             />
-            <div className="absolute inset-0 bg-black/40" />
-            <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-8">
-              <div className="max-w-2xl">
-                <h1 className="text-5xl lg:text-6xl font-bold mb-6">{data.title}</h1>
-                <p className="text-xl lg:text-2xl mb-8">{data.subtitle}</p>
+            <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="text-center text-white">
+                <h1 className="text-4xl lg:text-5xl font-bold mb-3">{data.title}</h1>
                 <div className="flex items-center justify-center gap-2 text-lg">
                   <MapPin className="w-5 h-5" />
                   <span>{data.location} • {data.duration}</span>
-                </div>
-              </div>
-            </div>
-            {/* Trip Info Button - Desktop */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-              <div className="bg-white/95 backdrop-blur-md rounded-2xl px-8 py-5 shadow-lg border border-white/20">
-                <div className="text-center">
-                  <h3 className="text-foreground font-bold text-xl">{data.title}</h3>
-                  <p className="text-muted-foreground text-base mt-1">{data.location} • {data.duration}</p>
                 </div>
               </div>
             </div>
