@@ -228,6 +228,7 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
       </div>
     </div>
   </div>
+</div>
 ));
 
 const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsIncludedHighlight[] }) => {
