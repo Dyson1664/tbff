@@ -282,7 +282,7 @@ const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], cou
       <Accordion
   type="single"
   collapsible
-  className="w-full max-w-4xl mx-auto divide-y divide-gray-200"
+  className="w-full max-w-4xl mx-auto divide-y divide-gray-200 px-4 md:px-0"
 >
   {faqs.map((faq, index) => (
     <AccordionItem
