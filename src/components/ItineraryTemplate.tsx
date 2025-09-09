@@ -230,7 +230,7 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
   </div>
 ));
 
-const WhatsIncludedHighlights = memo(({ highlights }: { highlights? WhatsIncludedHighlight[] }) => {
+const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsIncludedHighlight[] }) => {
   if (!highlights || highlights.length === 0) return null;
 
   const handleLinkClick = useCallback((url: string) => {
@@ -407,7 +407,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         } ${
           index === data.itinerary.length - 1 ? 'rounded-b-lg' : ''
         }`}>
-          <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md :mx-6`}>
+          <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md:mx-6`}>
             <AccordionTrigger className="px-0 py-4 hover:no-underline group">
               <div className="flex items-center gap-4 text-left">
                 <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
