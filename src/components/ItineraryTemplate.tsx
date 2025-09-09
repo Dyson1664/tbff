@@ -418,19 +418,21 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               </div>
             </AccordionTrigger>
           </div>
-          <AccordionContent className="px-0 pb-0">
-            <DayLayout
-              dayNumber={day.day}
-              date={day.date}
-              location={day.location || day.title}
-              heroImage={day.heroImage || data.heroImage}
-              description={day.description || `Experience the wonders of ${day.title} in this unforgettable day of your journey.`}
-              carouselImages={day.galleryImages || []}
-              accommodation={day.accommodation}
-              transportation={day.transportation}
-              meals={(day as any).meals || "Breakfast"}
-              highlights={(day as any).highlights || day.activities?.map(activity => activity.title).join(", ") || "Explore and discover"}
-            />
+          <AccordionContent className="px-0 pb-0 overflow-visible">
+            <div className="bg-background">
+              <DayLayout
+                dayNumber={day.day}
+                date={day.date}
+                location={day.location || day.title}
+                heroImage={day.heroImage || data.heroImage}
+                description={day.description || `Experience the wonders of ${day.title} in this unforgettable day of your journey.`}
+                carouselImages={day.galleryImages || []}
+                accommodation={day.accommodation}
+                transportation={day.transportation}
+                meals={(day as any).meals || "Breakfast"}
+                highlights={(day as any).highlights || day.activities?.map(activity => activity.title).join(", ") || "Explore and discover"}
+              />
+            </div>
           </AccordionContent>
         </AccordionItem>
       ))}

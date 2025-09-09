@@ -76,7 +76,7 @@ export const DayLayout = memo(({
     }
   }, [api, current, carouselImages.length]);
   return (
-    <div className="bg-white">
+    <div className="bg-background">
       {/* Hero Image */}
       <div className="px-4 md:px-10 pt-6">
 
@@ -90,14 +90,14 @@ export const DayLayout = memo(({
       </div>
 
       {/* Description */}
-      <div className="px-4 py-10 md:px-10 bg-white">
+      <div className="px-4 py-10 md:px-10 bg-background">
         <p className="text-muted-foreground leading-relaxed text-sm">
           {description}
         </p>
       </div>
 
       {/* Day Highlights */}
-      <div className="px-4 pb-10 md:px-10 bg-white">
+      <div className="px-4 pb-10 md:px-10 bg-background">
         <div className="flex flex-col space-y-3 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 max-w-4xl">
           {/* Row 1 on desktop */}
           <div className="flex items-start gap-3">
@@ -140,7 +140,7 @@ export const DayLayout = memo(({
 
       {/* Image Carousel Section */}
       {carouselImages.length > 0 && (
-        <div className="px-4 pb-10 md:px-10 bg-white">
+        <div className="px-4 pb-10 md:px-10 bg-background">
           <h4 className="text-lg font-semibold text-foreground mb-4">Gallery</h4>
           <Carousel setApi={setApi} className="w-full max-w-4xl mx-auto">
             <CarouselContent>
@@ -180,7 +180,7 @@ export const DayLayout = memo(({
 
       {/* Transportation Section */}
       {transportation && (
-        <div className="px-4 pb-10 md:px-10 bg-white">
+        <div className="px-4 pb-10 md:px-10 bg-background">
           <h4 className="text-lg font-semibold text-foreground mb-4">Transportation</h4>
           <div className="space-y-4">
             {/* Transportation Icons */}
