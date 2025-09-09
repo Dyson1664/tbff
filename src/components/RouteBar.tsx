@@ -92,7 +92,7 @@ function DesktopScroller({ stops }: { stops: string[] }) {
       {/* Header with icon + arrows */}
       <div className="mb-1 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <RouteIcon className="h-4 w-4 text-primary" />
+          <RouteIcon className="h-5 w-5 text-primary" />
           <h3 className="text-base font-semibold">Route</h3>
         </div>
         <div className="flex items-center gap-1.5">
