@@ -106,7 +106,7 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
                   <img 
                     src={highlight.image} 
                     alt={highlight.title}
-                    className="w-full h-48 md:h-64 lg:h-72 object-cover rounded-lg shadow-md"
+                    className="w-full h-56 md:h-64 lg:h-72 object-cover rounded-lg shadow-md"
                     loading="lazy"
                   />
                   <div className="text-center space-y-2">
