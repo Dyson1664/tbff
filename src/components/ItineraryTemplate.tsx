@@ -279,18 +279,27 @@ const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], cou
         <p className="text-lg text-muted-foreground">Everything you need to know about your {countryName} adventure</p>
       </div>
       
-      <Accordion type="single" collapsible className="w-full max-w-4xl mx-auto space-y-4">
-        {faqs.map((faq, index) => (
-          <AccordionItem key={index} value={`faq-${index}`} className="border border-gray-200 rounded-lg bg-background shadow-sm">
-            <AccordionTrigger className="px-6 py-4 hover:no-underline text-left">
-              <span className="font-semibold text-foreground">{faq.question}</span>
-            </AccordionTrigger>
-            <AccordionContent className="px-6 pb-4">
-              <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <Accordion
+  type="single"
+  collapsible
+  className="w-full max-w-4xl mx-auto divide-y divide-gray-200"
+>
+  {faqs.map((faq, index) => (
+    <AccordionItem
+      key={index}
+      value={`faq-${index}`}
+      className="border-0 rounded-none bg-background"
+    >
+        <AccordionTrigger className="px-0 md:px-6 py-4 hover:no-underline text-left">
+          <span className="font-semibold text-foreground">{faq.question}</span>
+        </AccordionTrigger>
+        <AccordionContent className="px-0 md:px-6 pb-4">
+          <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+        </AccordionContent>
+      </AccordionItem>
+    ))}
+    </Accordion>
+
     </div>
   </div>
 ));
