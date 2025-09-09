@@ -198,7 +198,12 @@ const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) =
 
 const IncludedSection = memo(({ included, countryName }: { included: CountryData['included'], countryName: string }) => (
   <div id="whats-included" className={STATIC_STYLES.includedSection}>
-    <div className="max-w-7xl mx-auto px-6 md:px-3 py-16">
+    <div
+      className="bg-white md:bg-background
+                 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+                 md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
+                 px-4 md:px-3 py-16">
+    <div className="max-w-7xl mx-auto">
       <div className="text-center mt-10 md:mt-16 mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
         <p className="text-lg text-muted-foreground">Everything you need for an unforgettable {countryName} experience</p>
@@ -241,8 +246,12 @@ const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsInclud
   }, []);
 
   return (
-    <div className="bg-background py-10">
-      <div className="max-w-6xl mx-auto px-6 md:px-4">
+    <div
+  className="bg-white md:bg-background
+             w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+             md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
+             py-10">
+    <div className="max-w-6xl mx-auto px-4 md:px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
         </div>
@@ -277,8 +286,13 @@ const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsInclud
 });
 
 const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], countryName: string }) => (
-  <div className="mt-16 bg-card rounded-xl border border-gray-200 shadow-sm">
-    <div className="max-w-7xl mx-auto md:px-3 py-16">
+  <div
+    className="mt-16
+               bg-white md:bg-card
+               md:rounded-xl md:border md:shadow-sm
+               w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+               md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0">
+      <div className="max-w-7xl mx-auto px-4 md:px-3 py-16">
       <div className="text-center mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">Frequently Asked Questions</h3>
         <p className="text-lg text-muted-foreground">Everything you need to know about your {countryName} adventure</p>
@@ -393,7 +407,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         } ${
           index === data.itinerary.length - 1 ? 'rounded-b-lg' : ''
         }`}>
-          <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-6`}>
+          <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md :mx-6`}>
             <AccordionTrigger className="px-0 py-4 hover:no-underline group">
               <div className="flex items-center gap-4 text-left">
                 <h2 className="text-2xl font-bold text-foreground">Day {day.day.toString().padStart(2, '0')}</h2>
@@ -513,8 +527,13 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           <p className="text-lg text-muted-foreground">A detailed day-by-day guide to your {countryName} adventure</p>
         </div>
 
-        {/* Daily Itinerary */}
-        {itineraryContent}
+        {/* Daily Itinerary (full-bleed on mobile) */}
+            <div
+              className="bg-white md:bg-transparent
+                         w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+                         md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0">
+              {itineraryContent}
+            </div>
         
         {/* Trip Summary */}
         <SummarySection summary={data.summary} />
