@@ -460,6 +460,15 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               </div>
             </div>
           </div>
+          {/* Trip Info Button - Mobile */}
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="bg-white/95 backdrop-blur-md rounded-2xl px-6 py-4 shadow-lg border border-white/20">
+              <div className="text-center">
+                <h3 className="text-foreground font-bold text-lg">{data.title}</h3>
+                <p className="text-muted-foreground text-sm mt-1">{data.location} • {data.duration}</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Desktop: Grid layout */}
@@ -499,6 +508,15 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
                 <div className="flex items-center justify-center gap-2 text-lg">
                   <MapPin className="w-5 h-5" />
                   <span>{data.location} • {data.duration}</span>
+                </div>
+              </div>
+            </div>
+            {/* Trip Info Button - Desktop */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+              <div className="bg-white/95 backdrop-blur-md rounded-2xl px-8 py-5 shadow-lg border border-white/20">
+                <div className="text-center">
+                  <h3 className="text-foreground font-bold text-xl">{data.title}</h3>
+                  <p className="text-muted-foreground text-base mt-1">{data.location} • {data.duration}</p>
                 </div>
               </div>
             </div>
