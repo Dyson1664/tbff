@@ -10,8 +10,8 @@ function MobileScroller({ stops }: { stops: string[] }) {
   if (!stops?.length) return null;
 
   return (
-    <div className="w-full rounded-xl bg-white/70 dark:bg-neutral-900/50 px-4 py-2 shadow-sm">
-      <div className="mb-2 flex items-center gap-2">
+    <div className="w-full rounded-none bg-transparent p-0 shadow-none" style={{ border: 0 }}>
+      <div className="mb-1 flex items-center gap-2">
         <RouteIcon className="h-4 w-4 text-primary" />
         <h3 className="text-base font-semibold">Route</h3>
       </div>
@@ -29,7 +29,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
             return (
               <div key={stop + i} className="flex items-center flex-none">
                 <span
-                  className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black shadow-sm"
+                  className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black"
                   style={{ backgroundColor: color }}
                 >
                   <MapPin className="h-4 w-4 text-black opacity-90" />
@@ -57,7 +57,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
   );
 }
 
-// --- Desktop/Tablet: arrows moved to header (top-right), track below, draggable too ---
+// --- Desktop/Tablet: arrows in header, track below, draggable too ---
 function DesktopScroller({ stops }: { stops: string[] }) {
   if (!stops?.length) return null;
 
@@ -88,9 +88,9 @@ function DesktopScroller({ stops }: { stops: string[] }) {
   const scrollBy = (dx: number) => trackRef.current?.scrollBy({ left: dx, behavior: "smooth" });
 
   return (
-    <div className="w-full rounded-xl bg-white/70 dark:bg-neutral-900/50 px-4 py-2 shadow-sm">
+    <div className="w-full rounded-none bg-transparent p-0 shadow-none" style={{ border: 0 }}>
       {/* Header with icon + arrows */}
-      <div className="mb-2 flex items-center justify-between">
+      <div className="mb-1 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <RouteIcon className="h-4 w-4 text-primary" />
           <h3 className="text-base font-semibold">Route</h3>
@@ -101,7 +101,8 @@ function DesktopScroller({ stops }: { stops: string[] }) {
             aria-label="Scroll route left"
             onClick={() => scrollBy(-320)}
             disabled={!canScrollLeft}
-            className="rounded-full bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
+            className="rounded-full p-1 disabled:opacity-30 hover:opacity-80 focus:outline-none"
+            style={{ background: "transparent", border: 0, boxShadow: "none" }}
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
@@ -110,17 +111,18 @@ function DesktopScroller({ stops }: { stops: string[] }) {
             aria-label="Scroll route right"
             onClick={() => scrollBy(320)}
             disabled={!canScrollRight}
-            className="rounded-full bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
+            className="rounded-full p-1 disabled:opacity-30 hover:opacity-80 focus:outline-none"
+            style={{ background: "transparent", border: 0, boxShadow: "none" }}
           >
             <ChevronRight className="h-4 w-4" />
           </button>
         </div>
       </div>
 
-      {/* Scroll track (no overlay arrows here) */}
+      {/* Scroll track */}
       <div
         ref={trackRef}
-        className="no-scrollbar overflow-x-auto pr-2"
+        className="no-scrollbar overflow-x-auto"
         style={{ scrollBehavior: "smooth" }}
       >
         <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
@@ -132,7 +134,7 @@ function DesktopScroller({ stops }: { stops: string[] }) {
             return (
               <div key={stop + i} className="flex items-center flex-none">
                 <span
-                  className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black shadow-sm"
+                  className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black"
                   style={{ backgroundColor: color }}
                 >
                   <MapPin className="h-4 w-4 text-black opacity-90" />
