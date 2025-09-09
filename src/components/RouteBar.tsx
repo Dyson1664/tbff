@@ -12,7 +12,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
   return (
     <div className="w-full rounded-none bg-transparent p-0 shadow-none" style={{ border: 0 }}>
       <div className="mb-1 flex items-center gap-2">
-        <RouteIcon className="h-4 w-4 text-primary" />
+        <RouteIcon className="h-5 w-5 text-primary" />
         <h3 className="text-base font-semibold">Route</h3>
       </div>
 
