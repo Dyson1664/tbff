@@ -10,8 +10,9 @@ function MobileScroller({ stops }: { stops: string[] }) {
   if (!stops?.length) return null;
 
   return (
-    <div className="w-full rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">
-      <div className="mb-3">
+    <div className="w-full rounded-xl bg-white/70 dark:bg-neutral-900/50 px-4 py-2 shadow-sm">
+      <div className="mb-2 flex items-center gap-2">
+        <RouteIcon className="h-4 w-4 text-primary" />
         <h3 className="text-base font-semibold">Route</h3>
       </div>
 
@@ -19,7 +20,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
         className="no-scrollbar overflow-x-auto touch-pan-x"
         style={{ WebkitOverflowScrolling: "touch" }}
       >
-        <div className="flex items-center flex-nowrap gap-1.5 py-1">
+        <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
           {stops.map((stop, i) => {
             const color = getColor(i);
             const nextColor = getColor(i + 1);
@@ -27,12 +28,6 @@ function MobileScroller({ stops }: { stops: string[] }) {
 
             return (
               <div key={stop + i} className="flex items-center flex-none">
-                {i === 0 && (
-                  <span className="mr-1.5 inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white/80 dark:bg-neutral-900/70 shadow-sm">
-                    <RouteIcon className="h-5 w-5 text-black opacity-90" />
-                  </span>
-                )}
-
                 <span
                   className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black shadow-sm"
                   style={{ backgroundColor: color }}
@@ -93,17 +88,20 @@ function DesktopScroller({ stops }: { stops: string[] }) {
   const scrollBy = (dx: number) => trackRef.current?.scrollBy({ left: dx, behavior: "smooth" });
 
   return (
-    <div className="w-full rounded-xl border bg-white/70 dark:bg-neutral-900/50 p-4 shadow-sm">
-      {/* Header with arrows on the right */}
+    <div className="w-full rounded-xl bg-white/70 dark:bg-neutral-900/50 px-4 py-2 shadow-sm">
+      {/* Header with icon + arrows */}
       <div className="mb-2 flex items-center justify-between">
-        <h3 className="text-base font-semibold">Route</h3>
+        <div className="flex items-center gap-2">
+          <RouteIcon className="h-4 w-4 text-primary" />
+          <h3 className="text-base font-semibold">Route</h3>
+        </div>
         <div className="flex items-center gap-1.5">
           <button
             type="button"
             aria-label="Scroll route left"
             onClick={() => scrollBy(-320)}
             disabled={!canScrollLeft}
-            className="rounded-full border bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
+            className="rounded-full bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
           >
             <ChevronLeft className="h-4 w-4" />
           </button>
@@ -112,7 +110,7 @@ function DesktopScroller({ stops }: { stops: string[] }) {
             aria-label="Scroll route right"
             onClick={() => scrollBy(320)}
             disabled={!canScrollRight}
-            className="rounded-full border bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
+            className="rounded-full bg-white/90 p-1 shadow disabled:opacity-30 dark:bg-neutral-900/80"
           >
             <ChevronRight className="h-4 w-4" />
           </button>
@@ -125,7 +123,7 @@ function DesktopScroller({ stops }: { stops: string[] }) {
         className="no-scrollbar overflow-x-auto pr-2"
         style={{ scrollBehavior: "smooth" }}
       >
-        <div className="flex items-center flex-nowrap gap-1.5 py-1">
+        <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
           {stops.map((stop, i) => {
             const color = getColor(i);
             const nextColor = getColor(i + 1);
@@ -133,12 +131,6 @@ function DesktopScroller({ stops }: { stops: string[] }) {
 
             return (
               <div key={stop + i} className="flex items-center flex-none">
-                {i === 0 && (
-                  <span className="mr-1.5 inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 bg-white/80 dark:bg-neutral-900/70 shadow-sm">
-                    <RouteIcon className="h-5 w-5 text-black opacity-90" />
-                  </span>
-                )}
-
                 <span
                   className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black shadow-sm"
                   style={{ backgroundColor: color }}
