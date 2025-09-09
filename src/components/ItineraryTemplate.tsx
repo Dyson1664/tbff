@@ -403,36 +403,30 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   const itineraryContent = useMemo(() => (
     <Accordion type="single" collapsible className="w-full" onValueChange={handleAccordionChange}>
       {data.itinerary.map((day, index) => (
-        <AccordionItem key={day.day} value={`day-${day.day}`} className={`bg-background border-0 ${
-          index === 0 ? 'rounded-t-lg' : ''
-        } ${
-          index === data.itinerary.length - 1 ? 'rounded-b-lg' : ''
-        }`}>
-          <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md:mx-6`}>
-            <AccordionTrigger className="px-4 md:px-0 py-4 hover:no-underline group">
-              <div className="flex items-center gap-4 text-left">
-                <h2 className="text-2xl font-bold text-foreground">Day {day.day}</h2>
-                <div>
-                  <h3 className="text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">{day.title}</h3>
-                </div>
-              </div>
-            </AccordionTrigger>
+        <AccordionItem
+      key={day.day}
+      value={`day-${day.day}`}
+      className={`bg-background border-0 ${
+        index === 0 ? 'rounded-t-lg' : ''
+      } ${
+        index === data.itinerary.length - 1 ? 'rounded-b-lg' : ''
+      }`}
+    >
+      <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md:mx-6`}>
+        <AccordionTrigger className="px-4 md:px-0 py-4 hover:no-underline group">
+          {/* Keep day fixed on one line; let title wrap in its own column */}
+          <div className="grid w-full grid-cols-[auto,1fr] items-baseline gap-x-2 md:gap-x-4 gap-y-1 text-left">
+            <h2 className="col-start-1 row-start-1 whitespace-nowrap text-2xl font-bold text-foreground">
+              Day {day.day}
+            </h2>
+            <h3 className="col-start-2 row-start-1 min-w-0 break-words text-base md:text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">
+              {day.title}
+            </h3>
           </div>
-          <AccordionContent className="px-0 pb-0">
-            <DayLayout
-              dayNumber={day.day}
-              date={day.date}
-              location={day.location || day.title}
-              heroImage={day.heroImage || data.heroImage}
-              description={day.description || `Experience the wonders of ${day.title} in this unforgettable day of your journey.`}
-              carouselImages={day.galleryImages || []}
-              accommodation={day.accommodation}
-              transportation={day.transportation}
-              meals={(day as any).meals || "Breakfast"}
-              highlights={(day as any).highlights || day.activities?.map(activity => activity.title).join(", ") || "Explore and discover"}
-            />
-          </AccordionContent>
-        </AccordionItem>
+        </AccordionTrigger>
+      </div>
+    </AccordionItem>
+
       ))}
     </Accordion>
   ), [data.itinerary, data.heroImage, handleAccordionChange]);
