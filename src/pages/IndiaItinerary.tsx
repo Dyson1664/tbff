@@ -1,5 +1,5 @@
 import { ItineraryTemplate } from "@/components/ItineraryTemplate";
-import { indiaData } from "@/data/countries/india";
+import { indiaData } from "@/data/india";
 
 const IndiaItinerary = () => {
   return <ItineraryTemplate data={indiaData} />;
