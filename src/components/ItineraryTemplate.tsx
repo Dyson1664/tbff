@@ -98,7 +98,7 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
     <div className="space-y-4">
       <h3 className="text-xl font-semibold text-foreground mb-4">Trip Highlights</h3>
       <div className="relative">
-        <Carousel className="w-full max-w-xs md:max-w-md lg:max-w-lg mx-auto">
+        <Carousel className="w-full max-w-none md:max-w-md lg:max-w-lg mx-auto">
           <CarouselContent>
             {highlights.map((highlight, index) => (
               <CarouselItem key={index}>
