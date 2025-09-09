@@ -138,7 +138,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           bg-white md:bg-background
           w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
           md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-          px-4 md:px-8 py-8 md:rounded-lg">
+          px-4 md:px-8 py-8 rounded-lg">
 
         {/* Left col: route + about */}
         <div className="order-1 md:order-none space-y-6 w-full">
