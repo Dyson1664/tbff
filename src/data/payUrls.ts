@@ -2,7 +2,7 @@ const PAY_URLS: Record<string, string | undefined> = {
   'thailand':  import.meta.env.VITE_PAY_URL_THAILAND,
   'sri-lanka': import.meta.env.VITE_PAY_URL_SRI_LANKA,
   'japan':     import.meta.env.VITE_PAY_URL_JAPAN,
-  'india':     import.meta.env.VITE_PAY_URL_INDIA,
+  'india-journey':     import.meta.env.VITE_PAY_URL_INDIA,
 };
 
 export const getPayUrlBySlug = (slug: string) => {
