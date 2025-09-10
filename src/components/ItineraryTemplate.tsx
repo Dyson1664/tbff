@@ -196,39 +196,45 @@ const SummarySection = memo(({ summary }: { summary: CountryData['summary'] }) =
   </div>
 ));
 
-const IncludedSection = memo(({ included, countryName }: { included: CountryData['included'], countryName: string }) => (
-  <div id="whats-included" className={STATIC_STYLES.includedSection}>
-    <div
-      className="bg-transparent
-                 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
-                 md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-                 px-4 md:px-3 py-16">
-    <div className="max-w-7xl mx-auto bg-white md:bg-card rounded-2xl md:rounded-2xl md:border md:shadow-sm overflow-hidden">
-      <div className="text-center mt-6 md:mt-8 mb-8">
-        <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
-        <p className="text-lg text-muted-foreground">Everything you need for an unforgettable {countryName} experience</p>
-      </div>
-      
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 md:justify-items-center">
-          {included.map((section, index) => (
-            <div key={index} className="space-y-4 md:text-center">
-              <h4 className="font-semibold text-foreground text-lg md:text-center">{section.title}</h4>
-              <ul className="space-y-2 text-muted-foreground md:text-left list-disc list-inside marker:text-primary">
-                {section.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="leading-relaxed">
-                  {item.text}
-                 </li>
-                ))}
-              </ul>
+const IncludedSection = memo(
+  ({ included, countryName }: { included: CountryData["included"]; countryName: string }) => (
+    <div id="whats-included" className={STATIC_STYLES.includedSection}>
+      <div
+        className="bg-transparent
+                   w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+                   md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
+                   px-4 md:px-3 py-16"
+      >
+        <div className="max-w-7xl mx-auto bg-white md:bg-card rounded-2xl md:shadow-sm overflow-hidden border-0">
+          <div className="text-center mt-6 md:mt-8 mb-8">
+            <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
+            <p className="text-lg text-muted-foreground">
+              Everything you need for an unforgettable {countryName} experience
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 md:justify-items-center">
+              {included.map((section, index) => (
+                <div key={index} className="space-y-4 md:text-center">
+                  <h4 className="font-semibold text-foreground text-lg md:text-center">{section.title}</h4>
+                  <ul className="space-y-2 text-muted-foreground md:text-left list-disc list-inside marker:text-primary">
+                    {section.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="leading-relaxed">
+                        {item.text}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
-));
+  )
+);
+
 
 const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsIncludedHighlight[] }) => {
   if (!highlights || highlights.length === 0) return null;
