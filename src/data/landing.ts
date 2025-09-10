@@ -28,6 +28,7 @@ export interface Destination {
   name: string;
   image: string;
   route: string;
+  comingSoon?: boolean;
 }
 
 export interface Testimonial {
@@ -87,14 +88,14 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
 
 // Extract destinations to module level
 export const DESTINATIONS: readonly Destination[] = [
-  { name: "Thailand", image: thailandHero, route: "/thailand" },
-  { name: "Sri Lanka", image: srilankaHero, route: "/srilanka" },
-  { name: "Philippines", image: philippinesHero, route: "/philippines" },
-  { name: "Japan", image: japanHero, route: "/japan" },
-  { name: "Colombia", image: colombiaHero, route: "/colombia" },
-  { name: "India", image: indiaHero, route: "/india" },
-  { name: "Bhutan", image: bhutanHero, route: "/bhutan" },
-  { name: "Vietnam", image: vietnamHero, route: "/vietnam" }
+  { name: "Thailand",    image: thailandHero,   route: "/thailand" },
+  { name: "Sri Lanka",   image: srilankaHero,   route: "/srilanka" },
+  { name: "Philippines", image: philippinesHero,route: "/philippines" },
+  { name: "Japan",       image: japanHero,      route: "/japan" },
+  { name: "India",       image: indiaHero,      route: "/india" },
+  { name: "Colombia",    image: colombiaHero,   comingSoon: true }, // no route
+  { name: "Bhutan",      image: bhutanHero,     comingSoon: true }, // no route
+  { name: "Vietnam",     image: vietnamHero,    comingSoon: true }, // no route
 ] as const;
 
 // Extract testimonials to module level
