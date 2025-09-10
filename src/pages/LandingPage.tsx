@@ -27,8 +27,8 @@ const DestinationCard = memo(({ destination }: { destination: typeof DESTINATION
 
   const badge = (
     <span
-      className="inline-flex items-center text-[11px] md:text-xs font-semibold uppercase tracking-wide
-                 bg-white text-gray-900 px-2.5 py-1 rounded-full shadow-md ring-1 ring-black/10"
+      className="inline-flex items-center text-[9px] font-semibold uppercase tracking-wide
+                 bg-white text-gray-900 px-1.5 py-0.5 rounded-full shadow ring-1 ring-black/10"
     >
       Coming soon
     </span>
@@ -42,23 +42,21 @@ const DestinationCard = memo(({ destination }: { destination: typeof DESTINATION
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-      {/* Badge at top-left for maximum contrast */}
       {isComingSoon && (
-        <div className="absolute top-3 left-3 z-10">
+        <div className="absolute top-2 left-2 z-10">
           {badge}
         </div>
       )}
-      {/* Name stays bottom-left */}
       <div className="absolute bottom-4 left-4">
         <h3 className="text-white font-semibold text-lg drop-shadow">{destination.name}</h3>
       </div>
     </>
   );
 
-  // Non-clickable when coming soon; clickable otherwise
+  // Rounder corners: rounded-3xl
   return isComingSoon ? (
     <div
-      className="relative aspect-square overflow-hidden rounded-lg group ring-1 ring-black/10 select-none"
+      className="relative aspect-square overflow-hidden rounded-3xl group ring-1 ring-black/10 select-none"
       aria-disabled="true"
       title={`${destination.name} — Coming soon`}
     >
@@ -67,7 +65,7 @@ const DestinationCard = memo(({ destination }: { destination: typeof DESTINATION
   ) : (
     <Link
       to={destination.route!}
-      className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
+      className="relative aspect-square overflow-hidden rounded-3xl group cursor-pointer"
       onClick={() => window.scrollTo(0, 0)}
       title={destination.name}
     >
@@ -75,6 +73,7 @@ const DestinationCard = memo(({ destination }: { destination: typeof DESTINATION
     </Link>
   );
 });
+
 
 
 
