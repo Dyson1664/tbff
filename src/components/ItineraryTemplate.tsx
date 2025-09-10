@@ -357,30 +357,7 @@ const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], cou
   </div>
 ));
 
-const ActionButtons = memo(() => {
-  const handleShare = useCallback(() => {
-    // Share functionality
-    console.log('Share clicked');
-  }, []);
 
-  const handleSave = useCallback(() => {
-    // Save functionality  
-    console.log('Save clicked');
-  }, []);
-
-  return (
-    <div className="flex gap-3">
-      <Button variant="outline" size="sm" className="flex items-center gap-2" onClick={handleShare}>
-        <Share2 className="w-4 h-4" />
-        {STATIC_TEXT.shareText}
-      </Button>
-      <Button variant="outline" size="sm" className="flex items-center gap-2" onClick={handleSave}>
-        <Heart className="w-4 h-4" />
-        {STATIC_TEXT.saveText}
-      </Button>
-    </div>
-  );
-});
 
 export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Memoize derived values
