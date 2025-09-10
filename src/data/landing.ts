@@ -92,7 +92,7 @@ export const DESTINATIONS: readonly Destination[] = [
   { name: "Sri Lanka",   image: srilankaHero,   route: "/srilanka" },
   { name: "Philippines", image: philippinesHero,route: "/philippines" },
   { name: "Japan",       image: japanHero,      route: "/japan" },
-  { name: "India",       image: indiaHero,      route: "/india" },
+  { name: "India",       image: indiaHero,      route: "/india-itinerary" },
   { name: "Colombia",    image: colombiaHero,   comingSoon: true }, // no route
   { name: "Bhutan",      image: bhutanHero,     comingSoon: true }, // no route
   { name: "Vietnam",     image: vietnamHero,    comingSoon: true }, // no route
