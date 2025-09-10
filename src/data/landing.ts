@@ -88,15 +88,16 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
 
 // Extract destinations to module level
 export const DESTINATIONS: readonly Destination[] = [
-  { name: "Thailand",    image: thailandHero,   route: "/thailand" },
-  { name: "Sri Lanka",   image: srilankaHero,   route: "/srilanka" },
-  { name: "Philippines", image: philippinesHero,route: "/philippines" },
-  { name: "Japan",       image: japanHero,      route: "/japan" },
-  { name: "India",       image: indiaHero,      route: "/india-itinerary" },
-  { name: "Colombia",    image: colombiaHero,   comingSoon: true }, // no route
-  { name: "Bhutan",      image: bhutanHero,     comingSoon: true }, // no route
-  { name: "Vietnam",     image: vietnamHero,    comingSoon: true }, // no route
+  { name: "Thailand",    image: thailandHero,    route: "/thailand-itinerary" },
+  { name: "Sri Lanka",   image: srilankaHero,    route: "/srilanka-itinerary" },
+  { name: "Philippines", image: philippinesHero, route: "/philippines-itinerary" },
+  { name: "Japan",       image: japanHero,       route: "/japan-itinerary" },
+  { name: "India",       image: indiaHero,       route: "/india-itinerary" },
+  { name: "Colombia",    image: colombiaHero,    comingSoon: true },
+  { name: "Bhutan",      image: bhutanHero,      comingSoon: true },
+  { name: "Vietnam",     image: vietnamHero,     comingSoon: true },
 ] as const;
+
 
 // Extract testimonials to module level
 export const TESTIMONIALS: readonly Testimonial[] = [
