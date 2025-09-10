@@ -106,7 +106,7 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
                   <img 
                     src={highlight.image} 
                     alt={highlight.title}
-                    className="w-full h-56 md:h-64 lg:h-72 object-cover rounded-lg shadow-md"
+                    className="w-full h-56 md:h-64 lg:h-72 object-cover rounded-2xl shadow-md"
                     loading="lazy"
                   />
                   <div className="text-center space-y-2">
@@ -138,7 +138,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           bg-white md:bg-background
           w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
           md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-          px-4 md:px-8 py-8 rounded-lg">
+          px-4 md:px-8 py-8 rounded-2xl">
 
         {/* Left col: route + about */}
         <div className="order-1 md:order-none space-y-6 w-full">
@@ -407,9 +407,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
     <Accordion type="single" collapsible className="w-full" onValueChange={handleAccordionChange}>
       {data.itinerary.map((day, index) => (
         <AccordionItem key={day.day} value={`day-${day.day}`} className={`bg-background border-0 ${
-          index === 0 ? 'rounded-t-lg' : ''
+          index === 0 ? 'rounded-t-2xl' : ''
         } ${
-          index === data.itinerary.length - 1 ? 'rounded-b-lg' : ''
+          index === data.itinerary.length - 1 ? 'rounded-b-2xl' : ''
         }`}>
           <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md:mx-6`}>
             <AccordionTrigger className="px-4 md:px-0 py-4 hover:no-underline group">
