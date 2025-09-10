@@ -131,11 +131,11 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
           </CarouselContent>
         </Carousel>
         
-        {/* Mobile: Scrollable container with scroll bar */}
-        <div className="md:hidden overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
-          <div className="flex gap-4 pb-2" style={{ width: `${highlights.length * 280}px` }}>
+        {/* Mobile: Swipeable container with peek */}
+        <div className="md:hidden overflow-x-auto overflow-y-hidden">
+          <div className="flex gap-4 pb-2 pl-4 pr-8">
             {highlights.map((highlight, index) => (
-              <div key={index} className="flex-shrink-0 w-64 space-y-3">
+              <div key={index} className="flex-shrink-0 w-72 space-y-3">
                 <img 
                   src={highlight.image} 
                   alt={highlight.title}
