@@ -202,7 +202,7 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
       className="bg-white md:bg-background
                  w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                  md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-                 px-4 md:px-3 py-16 rounded-2xl">
+                 px-4 md:px-3 py-16 rounded-2xl md:rounded-2xl md:border md:shadow-sm overflow-hidden">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mt-10 md:mt-16 mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
@@ -213,7 +213,7 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           {included.map((section, index) => (
             <div key={index} className="space-y-4">
-              <h4 className="font-semibold text-foreground text-lg md:text -center">{section.title}</h4>
+              <h4 className="font-semibold text-foreground text-lg md:text-center">{section.title}</h4>
               <ul className="space-y-3 text-muted-foreground md:text-center md:mx-auto">
                 {section.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="flex items-start md:items-center md:justify-center gap-3">
