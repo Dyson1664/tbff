@@ -202,7 +202,7 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
       className="bg-white md:bg-background
                  w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                  md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-                 px-4 md:px-3 py-16 rounded-xl">
+                 px-4 md:px-3 py-16 rounded-2xl">
     <div className="max-w-7xl mx-auto">
       <div className="text-center mt-10 md:mt-16 mb-12">
         <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
@@ -251,7 +251,7 @@ const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsInclud
   className="bg-white md:bg-background
              w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
              md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-             py-10 rounded-xl">
+             py-10 rounded-2xl">
     <div className="max-w-6xl mx-auto px-4 md:px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
@@ -290,7 +290,7 @@ const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], cou
   <div
     className="mt-16
                bg-white md:bg-card
-               rounded-xl md:rounded-xl md:border md:shadow-sm
+               rounded-2xl md:rounded-xl md:border md:shadow-sm
                w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0">
       <div className="max-w-7xl mx-auto px-4 md:px-3 py-16">
@@ -530,7 +530,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             <div
               className="bg-white md:bg-transparent
                          w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
-                         md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0 rounded-xl">
+                         md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0 rounded-2xl">
               {itineraryContent}
             </div>
         
