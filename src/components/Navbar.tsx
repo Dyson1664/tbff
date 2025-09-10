@@ -168,7 +168,8 @@ const Navbar = memo(() => {
             </div>
 
 
-            {/* Destinations Dropdown */}
+            {/* Destinations Dropdown (DISABLED) */}
+            {/*
             <div 
               className="relative"
               onMouseEnter={handleDestinationsMouseEnter}
@@ -194,6 +195,7 @@ const Navbar = memo(() => {
                 </div>
               )}
             </div>
+            */}
 
             <Button variant="ghost" className="text-foreground hover:text-primary">
               About
@@ -239,7 +241,8 @@ const Navbar = memo(() => {
               </div>
 
 
-              {/* Mobile Destinations Menu */}
+              {/* Mobile Destinations Menu (DISABLED) */}
+              {/*
               <div className="space-y-1">
                 <Button 
                   variant="ghost" 
@@ -256,7 +259,7 @@ const Navbar = memo(() => {
                   </div>
                 )}
               </div>
-
+                */}
               <Button variant="ghost" className="w-full justify-start text-foreground hover:text-primary">
                 About
               </Button>
