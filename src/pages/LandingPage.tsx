@@ -25,6 +25,15 @@ import parisSeine from "@/assets/paris-seine.jpg";
 const DestinationCard = memo(({ destination }: { destination: typeof DESTINATIONS[0] }) => {
   const isComingSoon = destination.comingSoon === true || !destination.route;
 
+  const badge = (
+    <span
+      className="inline-flex items-center text-[11px] md:text-xs font-semibold uppercase tracking-wide
+                 bg-white text-gray-900 px-2.5 py-1 rounded-full shadow-md ring-1 ring-black/10"
+    >
+      Coming soon
+    </span>
+  );
+
   const content = (
     <>
       <img
@@ -33,18 +42,20 @@ const DestinationCard = memo(({ destination }: { destination: typeof DESTINATION
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-      <div className="absolute bottom-4 left-4 flex items-center gap-2">
-        <h3 className="text-white font-semibold text-lg">{destination.name}</h3>
-        {isComingSoon && (
-          <span className="text-xs font-medium bg-white/25 backdrop-blur px-2 py-0.5 rounded">
-            Coming soon
-          </span>
-        )}
+      {/* Badge at top-left for maximum contrast */}
+      {isComingSoon && (
+        <div className="absolute top-3 left-3 z-10">
+          {badge}
+        </div>
+      )}
+      {/* Name stays bottom-left */}
+      <div className="absolute bottom-4 left-4">
+        <h3 className="text-white font-semibold text-lg drop-shadow">{destination.name}</h3>
       </div>
     </>
   );
 
-  // If coming soon, render a non-link card; otherwise render as a Link
+  // Non-clickable when coming soon; clickable otherwise
   return isComingSoon ? (
     <div
       className="relative aspect-square overflow-hidden rounded-lg group ring-1 ring-black/10 select-none"
@@ -64,6 +75,7 @@ const DestinationCard = memo(({ destination }: { destination: typeof DESTINATION
     </Link>
   );
 });
+
 
 
 
