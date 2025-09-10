@@ -96,9 +96,21 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
 
   return (
     <div className="space-y-4">
-      <h3 className="text-xl font-semibold text-foreground mb-4">Trip Highlights</h3>
+      {/* Mobile: Just title */}
+      <h3 className="md:hidden text-xl font-semibold text-foreground mb-4">Trip Highlights</h3>
+      
       <div className="relative">
-        <Carousel className="w-full max-w-none md:max-w-md lg:max-w-lg mx-auto">
+        {/* Desktop: Carousel with external arrows */}
+        <Carousel className="hidden md:block w-full max-w-none md:max-w-md lg:max-w-lg mx-auto">
+          {/* Desktop: Title with arrows in same row */}
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-xl font-semibold text-foreground">Trip Highlights</h3>
+            <div className="flex gap-2">
+              <CarouselPrevious className="relative inset-auto translate-x-0 translate-y-0" />
+              <CarouselNext className="relative inset-auto translate-x-0 translate-y-0" />
+            </div>
+          </div>
+          
           <CarouselContent>
             {highlights.map((highlight, index) => (
               <CarouselItem key={index}>
@@ -117,9 +129,27 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-2" />
-          <CarouselNext className="right-2" />
         </Carousel>
+        
+        {/* Mobile: Scrollable container with scroll bar */}
+        <div className="md:hidden overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
+          <div className="flex gap-4 pb-2" style={{ width: `${highlights.length * 280}px` }}>
+            {highlights.map((highlight, index) => (
+              <div key={index} className="flex-shrink-0 w-64 space-y-3">
+                <img 
+                  src={highlight.image} 
+                  alt={highlight.title}
+                  className="w-full h-56 object-cover rounded-2xl shadow-md"
+                  loading="lazy"
+                />
+                <div className="text-center space-y-2">
+                  <h4 className="font-semibold text-foreground">{highlight.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{highlight.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
