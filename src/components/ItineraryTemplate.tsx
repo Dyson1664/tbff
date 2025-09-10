@@ -210,7 +210,7 @@ const IncludedSection = memo(({ included, countryName }: { included: CountryData
       </div>
       
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 md:justify-items-center">
           {included.map((section, index) => (
             <div key={index} className="space-y-4 md:text-center">
               <h4 className="font-semibold text-foreground text-lg md:text-center">{section.title}</h4>
