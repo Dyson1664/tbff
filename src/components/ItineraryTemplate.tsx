@@ -1,6 +1,6 @@
 import { DayLayout } from "@/components/DayLayout";
 import Navbar from "@/components/Navbar";
-import { Share2, Heart, Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin } from "lucide-react";
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -537,15 +537,6 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           </div>
         </div>
       </section>
-
-      {/* Header with Actions */}
-      <div className={STATIC_STYLES.stickyHeader}>
-        <div className="max-w-6xl mx-auto md:px-3 py-4">
-          <div className="flex items-center justify-between">
-            <ActionButtons />
-          </div>
-        </div>
-      </div>
 
       {/* Country Overview */}
       <div className="max-w-6xl mx-auto px-4 md:px-3 py-12">
