@@ -16,14 +16,14 @@ export interface NavigationDestination {
 
 // Extract trips data to module level - prevents recreation on every render
 export const NAVIGATION_TRIPS: readonly NavigationTrip[] = [
+  { title: "India Heritage Tour", duration: "13 Days", location: "India", link: "/india-itinerary" },
   { title: "Japan Journey", duration: "10 Days", location: "Japan", link: "/japan-itinerary" },
   { title: "Thailand Discovery", duration: "8 Days", location: "Thailand", link: "/thailand-itinerary" },
   { title: "Philippines Paradise", duration: "9 Days", location: "Philippines", link: "/philippines-itinerary" },
   { title: "Sri Lanka Explorer", duration: "7 Days", location: "Sri Lanka", link: "/srilanka-itinerary" },
-  { title: "Colombia Coffee Trail", duration: "8 Days", location: "Colombia", link: "/colombia-itinerary" },
-  { title: "India Heritage Tour", duration: "12 Days", location: "India", link: "/india-itinerary" },
-  { title: "Bhutan Monastery Trek", duration: "9 Days", location: "Bhutan", link: "/bhutan-itinerary" },
-  { title: "Vietnam Culture Journey", duration: "10 Days", location: "Vietnam", link: "/vietnam-itinerary" }
+  //{ title: "Colombia Coffee Trail", duration: "8 Days", location: "Colombia", link: "/colombia-itinerary" },
+  //{ title: "Bhutan Monastery Trek", duration: "9 Days", location: "Bhutan", link: "/bhutan-itinerary" },
+  //{ title: "Vietnam Culture Journey", duration: "10 Days", location: "Vietnam", link: "/vietnam-itinerary" }
 ] as const;
 
 // Extract destinations data to module level
@@ -32,8 +32,8 @@ export const NAVIGATION_DESTINATIONS: readonly NavigationDestination[] = [
   { city: "Sri Lanka", country: "Asia", description: "Pearl of the Indian Ocean", link: "/srilanka" },
   { city: "Philippines", country: "Asia", description: "Tropical islands paradise", link: "/philippines" },
   { city: "Japan", country: "Asia", description: "Ancient traditions & modern cities", link: "/japan" },
-  { city: "Colombia", country: "South America", description: "Coffee culture & vibrant cities", link: "/colombia" },
+  //{ city: "Colombia", country: "South America", description: "Coffee culture & vibrant cities", link: "/colombia" },
   { city: "India", country: "Asia", description: "Rich heritage & diverse culture", link: "/india" },
-  { city: "Bhutan", country: "Asia", description: "Land of the Thunder Dragon", link: "/bhutan" },
-  { city: "Vietnam", country: "Asia", description: "Historic charm & natural beauty", link: "/vietnam" }
+  //{ city: "Bhutan", country: "Asia", description: "Land of the Thunder Dragon", link: "/bhutan" },
+  //{ city: "Vietnam", country: "Asia", description: "Historic charm & natural beauty", link: "/vietnam" }
 ] as const;
