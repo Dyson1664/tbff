@@ -21,23 +21,50 @@ import parisSeine from "@/assets/paris-seine.jpg";
 
 
 // Memoized destination card component  
-const DestinationCard = memo(({ destination }: { destination: typeof DESTINATIONS[0] }) => (
-  <Link
-    to={destination.route}
-    className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
-    onClick={() => window.scrollTo(0, 0)}
-  >
-    <img 
-      src={destination.image} 
-      alt={destination.name}
-      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-    />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-    <div className="absolute bottom-4 left-4">
-      <h3 className="text-white font-semibold text-lg">{destination.name}</h3>
+// Memoized destination card component
+const DestinationCard = memo(({ destination }: { destination: typeof DESTINATIONS[0] }) => {
+  const isComingSoon = destination.comingSoon === true || !destination.route;
+
+  const content = (
+    <>
+      <img
+        src={destination.image}
+        alt={destination.name}
+        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+      <div className="absolute bottom-4 left-4 flex items-center gap-2">
+        <h3 className="text-white font-semibold text-lg">{destination.name}</h3>
+        {isComingSoon && (
+          <span className="text-xs font-medium bg-white/25 backdrop-blur px-2 py-0.5 rounded">
+            Coming soon
+          </span>
+        )}
+      </div>
+    </>
+  );
+
+  // If coming soon, render a non-link card; otherwise render as a Link
+  return isComingSoon ? (
+    <div
+      className="relative aspect-square overflow-hidden rounded-lg group ring-1 ring-black/10 select-none"
+      aria-disabled="true"
+      title={`${destination.name} — Coming soon`}
+    >
+      {content}
     </div>
-  </Link>
-));
+  ) : (
+    <Link
+      to={destination.route!}
+      className="relative aspect-square overflow-hidden rounded-lg group cursor-pointer"
+      onClick={() => window.scrollTo(0, 0)}
+      title={destination.name}
+    >
+      {content}
+    </Link>
+  );
+});
+
 
 
 // Memoized feature card component
