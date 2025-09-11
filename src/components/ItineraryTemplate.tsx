@@ -6,10 +6,33 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { memo, useMemo, useCallback } from "react";
 import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-static";
-import { getPayUrlBySlug } from '@/data/payUrls';
 import Footer from "@/components/common/Footer";
 import { DayItinerary } from "@/data/types";
 import ResponsiveRoute from "@/components/RouteBar"; // <-- route component
+
+
+// Book Now Button Component (routes to /checkout)
+import { Link } from "react-router-dom";
+
+
+const BookNowButton = memo((
+  { tripSlug, countryName, title }: { tripSlug?: string; countryName: string; title?: string }
+) => {
+  const to = `/checkout?trip=${encodeURIComponent(title || countryName)}${tripSlug ? `&slug=${encodeURIComponent(tripSlug)}` : ""}`;
+
+  return (
+    <Link to={to} onClick={() => window.scrollTo(0, 0)}>
+      <Button
+        size="lg"
+        className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
+      >
+        Book Now
+      </Button>
+    </Link>
+  );
+});
+
+export default BookNowButton;
 
 interface WhatsIncludedHighlight {
   icon: React.ComponentType<any>;
@@ -196,10 +219,13 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
       </div>
 
       {/* Book Now Button */}
-      <div className="text-center mb-8">
-        <BookNowButton tripSlug={data.slug} countryName={countryName} />
-        <p className="text-sm text-muted-foreground mt-2">Secure your {countryName} adventure today</p>
+        <div className="text-center mb-8">
+        <BookNowButton tripSlug={data.slug} countryName={countryName} title={data.title} />
+        <p className="text-sm text-muted-foreground mt-2">
+        Secure your {countryName} adventure today
+        </p>
       </div>
+
     </div>
   );
 });
