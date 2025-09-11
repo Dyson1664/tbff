@@ -70,45 +70,11 @@ export const TripCard = memo(({
       <div className="flex items-center justify-between">
         <span className="text-lg font-bold text-foreground">{price}</span>
         {showBookNow ? (
-          (() => {
-            const href = getPayUrlBySlug(slug || '');
-            const isDisabled = href === '#';
-            
-            if (isDisabled) {
-              return (
-                <Button 
-                  size="sm" 
-                  variant="outline" 
-                  className="pointer-events-none opacity-50"
-                  aria-disabled="true"
-                >
-                  Book Now
-                </Button>
-              );
-            }
-            
-            return (
-              <Button 
-                size="sm" 
-                variant={buttonVariant}
-                onClick={(e) => {
-                  e.preventDefault();
-                  console.log('TripCard Book Now clicked, opening URL:', href);
-                  try {
-                    const newWindow = window.open(href, '_blank');
-                    if (!newWindow) {
-                      window.location.href = href;
-                    }
-                  } catch (error) {
-                    console.error('Failed to open URL:', error);
-                    window.location.href = href;
-                  }
-                }}
-              >
-                Book Now
-              </Button>
-            );
-          })()
+          <Link to={`/checkout?trip=${encodeURIComponent(title)}`}>
+            <Button size="sm" variant={buttonVariant}>
+              Book Now
+            </Button>
+          </Link>
         ) : (
           <Link to={route}>
             <Button size="sm" variant={buttonVariant}>{buttonText}</Button>
