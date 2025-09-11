@@ -27,7 +27,7 @@ export interface FeaturedTour {
 export interface Destination {
   name: string;
   image: string;
-  route: string;
+  route?: string;
   comingSoon?: boolean;
 }
 

@@ -133,9 +133,9 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
         
         {/* Mobile: Swipeable container with peek */}
         <div className="md:hidden overflow-x-auto overflow-y-hidden scrollbar-none">
-          <div className="flex gap-4 pb-2 pl-4 pr-8">
+          <div className="flex gap-3 pb-2 pl-4 pr-12">
             {highlights.map((highlight, index) => (
-              <div key={index} className="flex-shrink-0 w-72 space-y-3">
+              <div key={index} className="flex-shrink-0 w-80 space-y-3">
                 <img 
                   src={highlight.image} 
                   alt={highlight.title}
