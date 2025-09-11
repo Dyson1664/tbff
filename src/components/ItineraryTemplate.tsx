@@ -32,7 +32,6 @@ const BookNowButton = memo((
   );
 });
 
-export default BookNowButton;
 
 interface WhatsIncludedHighlight {
   icon: React.ComponentType<any>;
