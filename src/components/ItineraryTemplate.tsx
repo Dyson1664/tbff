@@ -579,46 +579,5 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   );
 });
 
-// Book Now Button Component
-const BookNowButton = memo(({ tripSlug, countryName }: { tripSlug?: string; countryName: string }) => {
-  console.log('BookNowButton - tripSlug:', tripSlug, 'countryName:', countryName);
-  const href = getPayUrlBySlug(tripSlug || '');
-  console.log('BookNowButton - resolved href:', href);
-  const isDisabled = href === '#';
-  
-  if (isDisabled) {
-    return (
-      <Button 
-        size="lg" 
-        className="pointer-events-none opacity-50 px-8 py-4 text-lg font-semibold"
-        aria-disabled="true"
-      >
-        {STATIC_TEXT.bookNow}
-      </Button>
-    );
-  }
-  
-  return (
-    <Button 
-      size="lg" 
-      className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
-      onClick={(e) => {
-        e.preventDefault();
-        console.log('Button clicked, opening URL:', href);
-        try {
-          const newWindow = window.open(href, '_blank');
-          if (!newWindow) {
-            window.location.href = href;
-          }
-        } catch (error) {
-          console.error('Failed to open URL:', error);
-          window.location.href = href;
-        }
-      }}
-    >
-      {STATIC_TEXT.bookNow}
-    </Button>
-  );
-});
 
 export default ItineraryTemplate;
