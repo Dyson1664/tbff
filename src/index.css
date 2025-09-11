@@ -178,3 +178,8 @@ img[loading="lazy"] {
 .virtual-scroll-container {
   contain: layout style paint;
 }
+
+/* Custom snap behavior for mobile highlights */
+.snap-always {
+  scroll-snap-stop: always;
+}

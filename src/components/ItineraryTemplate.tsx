@@ -135,7 +135,7 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
         <div className="md:hidden overflow-x-auto overflow-y-hidden scrollbar-none scroll-smooth snap-x snap-mandatory">
           <div className="flex pb-2">
             {highlights.map((highlight, index) => (
-              <div key={index} className="flex-shrink-0 snap-start" style={{ width: 'calc(100vw - 3rem)', paddingRight: '0.75rem' }}>
+              <div key={index} className="flex-shrink-0 snap-start snap-always" style={{ width: 'calc(100vw - 3rem)', paddingRight: '0.75rem' }}>
                 <div className="space-y-3 w-full max-w-80 mx-auto">
                   <img 
                     src={highlight.image} 
