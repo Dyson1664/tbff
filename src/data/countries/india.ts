@@ -179,6 +179,7 @@ highlights: [
     galleryImages: [indiaDay01Gallery01, indiaDay01Gallery02, indiaDay01Gallery03, indiaDay01Gallery04],
     activities: [],
     meals: "Breakfast & Dinner",
+    accommodation: "Saket 27",
     highlights: "Airport pickup, hotel check-in, welcome briefing, local dinner",
     transportation: {
       from: "Indira Gandhi Airport",
