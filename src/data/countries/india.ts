@@ -199,6 +199,7 @@ highlights: [
     galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03],
     activities: [],
     meals: "Breakfast",
+    accommodation: "Saket 27",
     highlights: "Salaam Baalak City Walk, Jama Masjid, Gurudwara Bangla Sahib, India Gate tour"
   },
   {
@@ -212,6 +213,7 @@ highlights: [
     galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03],
     activities: [],
     meals: "Breakfast",
+    accommodation: "Hotel Heritage Mandawa",
     highlights: "Shekhawati frescoes, Mandawa havelis, vintage murals, village sunset walks",
     transportation: {
       from: "Delhi",
@@ -231,6 +233,7 @@ highlights: [
     galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04],
     activities: [],
     meals: "Breakfast",
+    accommodation: "The Mandore",
     highlights: "Ghanta Ghar Clock Tower, spice markets, Makhania lassi, shahi samosas"
   },
   {
@@ -244,6 +247,7 @@ highlights: [
     galleryImages: [indiaDay05Gallery01, indiaDay05Gallery02, indiaDay05Gallery03],
     activities: [],
     meals: "Breakfast",
+    accommodation: "The Mandore",
     highlights: "Mehrangarh Fort, Jaswant Thada cenotaphs, optional Bishnoi Village safari",
     transportation: {
       from: "Jodhpur",
@@ -263,6 +267,7 @@ highlights: [
     galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03],
     activities: [],
     meals: "Breakfast",
+    accommodation: "Karohi Haveli",
     highlights: "Ranakpur Jain Temples, 1444 marble pillars, Lake Pichola arrival, Karohi Haveli"
   },
   {
@@ -276,6 +281,7 @@ highlights: [
     galleryImages: [indiaDay07Gallery01, indiaDay07Gallery02, indiaDay07Gallery03],
     activities: [],
     meals: "Breakfast",
+    accommodation: "Karohi Haveli",
     highlights: "City Palace, Crystal Gallery, Saheliyon-ki-Bari gardens, Lake Pichola sunset cruise"
   },
   {
@@ -289,6 +295,7 @@ highlights: [
     galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03],
     activities: [],
     meals: "Dinner & Breakfast",
+    accommodation: "Atithi Camp Pushkar",
     highlights: "Brahma Temple, Pushkar Lake pooja ceremony, luxury desert camp, stargazing"
   },
   {
