@@ -175,7 +175,7 @@ highlights: [
     location: "New Delhi, India",
     heroImage: indiaDay01,
     description:
-      "Touch down in New Delhi, where Mughal grandeur meets modern buzz. Check in at Saket 27, freshen up, and if you're early, dip into mini-adventures—heritage strolls or bustling bazaars. As the city lights glow, meet the crew for a cheerful briefing and a tasty welcome dinner at a local favorite. Stay: Saket 27 · Meals: Breakfast & Dinner",
+      "Touch down in New Delhi, where Mughal grandeur meets modern buzz. Check in at Saket 27, freshen up, and if you're early, dip into mini-adventures—heritage strolls or bustling bazaars. As the city lights glow, meet the crew for a cheerful briefing and a tasty welcome dinner at a local favorite.",
     galleryImages: [indiaDay01Gallery01, indiaDay01Gallery02, indiaDay01Gallery03, indiaDay01Gallery04],
     activities: [],
     meals: "Breakfast & Dinner",
@@ -195,7 +195,7 @@ highlights: [
     location: "Delhi, India",
     heroImage: indiaDay02,
     description:
-      "Ease into the rhythm of the capital with the Salaam Baalak Trust City Walk, guided by young storytellers with lived experience. Step into Old Delhi at Jama Masjid, then shift gears to the serene Gurudwara Bangla Sahib with its glinting domes. Cruise past India Gate, Rashtrapati Bhavan, and Parliament through stately Lutyens' Delhi before a relaxed evening back at your hotel. Stay: Saket 27 · Meals: Breakfast",
+      "Ease into the rhythm of the capital with the Salaam Baalak Trust City Walk, guided by young storytellers with lived experience. Step into Old Delhi at Jama Masjid, then shift gears to the serene Gurudwara Bangla Sahib with its glinting domes. Cruise past India Gate, Rashtrapati Bhavan, and Parliament through stately Lutyens' Delhi before a relaxed evening back at your hotel.",
     galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03],
     activities: [],
     meals: "Breakfast",
@@ -209,7 +209,7 @@ highlights: [
     location: "Jodhpur, Rajasthan",
     heroImage: indiaDay03,
     description:
-      "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan's 'open-air art gallery.' After check-in, wander Mandawa's painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies. Stay: Hotel Heritage Mandawa · Meals: Breakfast",
+      "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan's 'open-air art gallery.' After check-in, wander Mandawa's painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies.",
     galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03],
     activities: [],
     meals: "Breakfast",
@@ -229,7 +229,7 @@ highlights: [
     location: "Jodhpur, Rajasthan",
     heroImage: indiaDay04,
     description:
-      "Head west as the desert hue deepens and Jodhpur's blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower) next check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a shahi samosa. Stay: The Mandore (leafy gardens, chill vibes) · Meals: Breakfast",
+      "Head west as the desert hue deepens and Jodhpur's blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower) next check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a shahi samosa.",
     galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04],
     activities: [],
     meals: "Breakfast",
@@ -243,7 +243,7 @@ highlights: [
     location: "Udaipur, Rajasthan",
     heroImage: indiaDay05,
     description:
-      "Rise for Mehrangarh Fort, soaring above the city with sweeping views, followed by the marble calm of Jaswant Thada. In the afternoon, keep exploring, or opt for a Bishnoi Village Jeep Safari for wildlife spotting and artisan visits in the dunes. Stay: The Mandore · Meals: Breakfast",
+      "Rise for Mehrangarh Fort, soaring above the city with sweeping views, followed by the marble calm of Jaswant Thada. In the afternoon, keep exploring, or opt for a Bishnoi Village Jeep Safari for wildlife spotting and artisan visits in the dunes.",
     galleryImages: [indiaDay05Gallery01, indiaDay05Gallery02, indiaDay05Gallery03],
     activities: [],
     meals: "Breakfast",
@@ -263,7 +263,7 @@ highlights: [
     location: "Udaipur, Rajasthan",
     heroImage: indiaDay06,
     description:
-      "Slide through Aravalli hills to the intricate Ranakpur Jain Temples—1444 unique marble pillars—then sweep into Udaipur as palaces ripple across Lake Pichola. Settle into Karohi Haveli, perched on a hill with dreamy views and a beer in hand. Stay: Karohi Haveli · Meals: Breakfast",
+      "Slide through Aravalli hills to the intricate Ranakpur Jain Temples—1444 unique marble pillars—then sweep into Udaipur as palaces ripple across Lake Pichola. Settle into Karohi Haveli, perched on a hill with dreamy views and a beer in hand.",
     galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03],
     activities: [],
     meals: "Breakfast",
@@ -277,7 +277,7 @@ highlights: [
     location: "Sawai Madhopur, Rajasthan",
     heroImage: indiaDay07,
     description:
-      "Stroll into the City Palace (via Hathi Pol) and its galleries; peek into the sparkling Crystal Gallery; wander the fountains of Saheliyon-ki-Bari. As the light softens, drift across Lake Pichola to Jag Mandir for a sunset that paints the water gold (weather/water levels permitting). Stay: Karohi Haveli · Meals: Breakfast",
+      "Stroll into the City Palace (via Hathi Pol) and its galleries; peek into the sparkling Crystal Gallery; wander the fountains of Saheliyon-ki-Bari. As the light softens, drift across Lake Pichola to Jag Mandir for a sunset that paints the water gold (weather/water levels permitting).",
     galleryImages: [indiaDay07Gallery01, indiaDay07Gallery02, indiaDay07Gallery03],
     activities: [],
     meals: "Breakfast",
@@ -291,7 +291,7 @@ highlights: [
     location: "Ranthambore National Park",
     heroImage: indiaDay08,
     description:
-      "Trade lakes for desert calm as you reach sacred Pushkar. Visit the rare Brahma Temple, then join a pooja on Pushkar Lake's ghats as bells ring and diyas glow. Night falls under big skies at Atithi Camp Pushkar—luxe tents and quiet starlight. Stay: Atithi Camp Pushkar · Meals: Dinner & Breakfast",
+      "Trade lakes for desert calm as you reach sacred Pushkar. Visit the rare Brahma Temple, then join a pooja on Pushkar Lake's ghats as bells ring and diyas glow. Night falls under big skies at Atithi Camp Pushkar—luxe tents and quiet starlight.",
     galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03],
     activities: [],
     meals: "Dinner & Breakfast",
