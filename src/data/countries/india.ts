@@ -45,6 +45,7 @@ import indiaDay02Gallery03 from "@/assets/india-day02-gallery-03.jpg";
 import indiaDay03Gallery01 from "@/assets/india-day03-gallery-01.jpg";
 import indiaDay03Gallery02 from "@/assets/india-day03-gallery-02.jpg";
 import indiaDay03Gallery03 from "@/assets/india-day03-gallery-03.jpg";
+import indiaDay03Gallery04 from "@/assets/india-day03-gallery-04.jpg";
 
 // Day 4 gallery
 import indiaDay04Gallery01 from "@/assets/india-day04-gallery-01.jpg";
@@ -56,11 +57,16 @@ import indiaDay04Gallery04 from "@/assets/india-day04-gallery-04.jpg";
 import indiaDay05Gallery01 from "@/assets/india-day05-gallery-01.jpg";
 import indiaDay05Gallery02 from "@/assets/india-day05-gallery-02.jpg";
 import indiaDay05Gallery03 from "@/assets/india-day05-gallery-03.jpg";
+import indiaDay05Gallery04 from "@/assets/india-day05-gallery-04.jpg";
+import indiaDay05Gallery05 from "@/assets/india-day05-gallery-05.jpg";
 
 // Day 6
 import indiaDay06Gallery01 from "@/assets/india-day06-gallery-01.jpg";
 import indiaDay06Gallery02 from "@/assets/india-day06-gallery-02.jpg";
 import indiaDay06Gallery03 from "@/assets/india-day06-gallery-03.jpg";
+import indiaDay06Gallery04 from "@/assets/india-day06-gallery-04.jpg";
+import indiaDay06Gallery05 from "@/assets/india-day06-gallery-05.jpg";
+
 
 // Day 7
 import indiaDay07Gallery01 from "@/assets/india-day07-gallery-01.jpg";
@@ -71,6 +77,7 @@ import indiaDay07Gallery03 from "@/assets/india-day07-gallery-03.jpg";
 import indiaDay08Gallery01 from "@/assets/india-day08-gallery-01.jpg";
 import indiaDay08Gallery02 from "@/assets/india-day08-gallery-02.jpg";
 import indiaDay08Gallery03 from "@/assets/india-day08-gallery-03.jpg";
+import indiaDay08Gallery04 from "@/assets/india-day08-gallery-04.jpg";
 
 // Day 9
 import indiaDay09Gallery01 from "@/assets/india-day09-gallery-01.jpg";
@@ -210,7 +217,7 @@ highlights: [
     heroImage: indiaDay03,
     description:
       "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan's 'open-air art gallery.' After check-in, wander Mandawa's painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies.",
-    galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03],
+    galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03, indiaDay03Gallery04],
     activities: [],
     meals: "Breakfast",
     accommodation: { name: "Hotel Heritage Mandawa" },
@@ -230,7 +237,7 @@ highlights: [
     heroImage: indiaDay04,
     description:
       "Head west as the desert hue deepens and Jodhpur's blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower) next check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a shahi samosa.",
-    galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04],
+    galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04, indiaDay05Gallery04, indiaDay05Gallery05],
     activities: [],
     meals: "Breakfast",
     accommodation: { name: "The Mandore" },
@@ -264,7 +271,7 @@ highlights: [
     heroImage: indiaDay06,
     description:
       "Slide through Aravalli hills to the intricate Ranakpur Jain Temples—1444 unique marble pillars—then sweep into Udaipur as palaces ripple across Lake Pichola. Settle into Karohi Haveli, perched on a hill with dreamy views and a beer in hand.",
-    galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03],
+    galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03, indiaDay06Gallery04, indiaDay06Gallery05],
     activities: [],
     meals: "Breakfast",
     accommodation: { name: "Karohi Haveli" },
@@ -292,7 +299,7 @@ highlights: [
     heroImage: indiaDay08,
     description:
       "Trade lakes for desert calm as you reach sacred Pushkar. Visit the rare Brahma Temple, then join a pooja on Pushkar Lake's ghats as bells ring and diyas glow. Night falls under big skies at Atithi Camp Pushkar—luxe tents and quiet starlight.",
-    galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03],
+    galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03, indiaDay08Gallery04],
     activities: [],
     meals: "Dinner & Breakfast",
     accommodation: { name: "Atithi Camp Pushkar" },
