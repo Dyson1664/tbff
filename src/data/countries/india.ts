@@ -105,7 +105,7 @@ export const indiaData = {
   overviewGallery2x:[ov1_800, ov2_800, ov3_800, ov4_800, ov5_800, ov6_800],
   route: ["New Delhi", "Jodhpur", "Udaipur", "Jaipur", "Sawai Madhopur", "Agra"],
   aboutDescription: [
-    "It’s time to start exploring India. This tour is perfect for those first time travellers that have always wanted to explore the wonders of India but don’t want to do it alone. This tour will let you experience the amazing different sites India has to offer such as citadel, bustling local markets to the great monuments including the infamous Taj Mahal, the Pink Palaces of Jaipur and Ranthambhore National Park. We begin the tour in India’s capital New Delhi and finish in Agra with various different locations along the way, throughout the trip guests will get to immerse themselves in India’s rich culture experiencing many Indian traditions and tasting some of the amazing dishes India has to offer. Join us for a once in a lifetime experience that will make you want to travel more"
+    "It's time to start exploring India. This tour is perfect for those first time travellers that have always wanted to explore the wonders of India but don't want to do it alone. This tour will let you experience the amazing different sites India has to offer such as citadel, bustling local markets to the great monuments including the infamous Taj Mahal, the Pink Palaces of Jaipur and Ranthambhore National Park. We begin the tour in India's capital New Delhi and finish in Agra with various different locations along the way, throughout the trip guests will get to immerse themselves in India's rich culture experiencing many Indian traditions and tasting some of the amazing dishes India has to offer. Join us for a once in a lifetime experience that will make you want to travel more"
   ],
   aboutImages: [indiaHero, indiaHero],
 
@@ -175,8 +175,11 @@ highlights: [
     location: "New Delhi, India",
     heroImage: indiaDay01,
     description:
-      "Touch down in New Delhi, where Mughal grandeur meets modern buzz. Check in at Saket 27, freshen up, and if you’re early, dip into mini-adventures—heritage strolls or bustling bazaars. As the city lights glow, meet the crew for a cheerful briefing and a tasty welcome dinner at a local favorite. Stay: Saket 27 · Meals: Breakfast & Dinner",
+      "Touch down in New Delhi, where Mughal grandeur meets modern buzz. Check in at Saket 27, freshen up, and if you're early, dip into mini-adventures—heritage strolls or bustling bazaars. As the city lights glow, meet the crew for a cheerful briefing and a tasty welcome dinner at a local favorite. Stay: Saket 27 · Meals: Breakfast & Dinner",
     galleryImages: [indiaDay01Gallery01, indiaDay01Gallery02, indiaDay01Gallery03, indiaDay01Gallery04],
+    activities: [],
+    meals: "Breakfast & Dinner",
+    highlights: "Airport pickup, hotel check-in, welcome briefing, local dinner",
     transportation: {
       from: "Indira Gandhi Airport",
       to: "Central Delhi Hotel",
@@ -191,8 +194,11 @@ highlights: [
     location: "Delhi, India",
     heroImage: indiaDay02,
     description:
-      "Ease into the rhythm of the capital with the Salaam Baalak Trust City Walk, guided by young storytellers with lived experience. Step into Old Delhi at Jama Masjid, then shift gears to the serene Gurudwara Bangla Sahib with its glinting domes. Cruise past India Gate, Rashtrapati Bhavan, and Parliament through stately Lutyens’ Delhi before a relaxed evening back at your hotel. Stay: Saket 27 · Meals: Breakfast",
-    galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03]
+      "Ease into the rhythm of the capital with the Salaam Baalak Trust City Walk, guided by young storytellers with lived experience. Step into Old Delhi at Jama Masjid, then shift gears to the serene Gurudwara Bangla Sahib with its glinting domes. Cruise past India Gate, Rashtrapati Bhavan, and Parliament through stately Lutyens' Delhi before a relaxed evening back at your hotel. Stay: Saket 27 · Meals: Breakfast",
+    galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03],
+    activities: [],
+    meals: "Breakfast",
+    highlights: "Salaam Baalak City Walk, Jama Masjid, Gurudwara Bangla Sahib, India Gate tour"
   },
   {
     day: 3,
@@ -201,8 +207,11 @@ highlights: [
     location: "Jodhpur, Rajasthan",
     heroImage: indiaDay03,
     description:
-      "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan’s “open-air art gallery.” After check-in, wander Mandawa’s painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies. Stay: Hotel Heritage Mandawa · Meals: Breakfast",
+      "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan's 'open-air art gallery.' After check-in, wander Mandawa's painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies. Stay: Hotel Heritage Mandawa · Meals: Breakfast",
     galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03],
+    activities: [],
+    meals: "Breakfast",
+    highlights: "Shekhawati frescoes, Mandawa havelis, vintage murals, village sunset walks",
     transportation: {
       from: "Delhi",
       to: "Jodhpur",
@@ -217,8 +226,11 @@ highlights: [
     location: "Jodhpur, Rajasthan",
     heroImage: indiaDay04,
     description:
-      "Head west as the desert hue deepens and Jodhpur’s blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower) next check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a crisp shahi samosa. Stay: The Mandore (leafy gardens, chill vibes) · Meals: Breakfast",
-    galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04]
+      "Head west as the desert hue deepens and Jodhpur's blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower) next check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a shahi samosa. Stay: The Mandore (leafy gardens, chill vibes) · Meals: Breakfast",
+    galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04],
+    activities: [],
+    meals: "Breakfast",
+    highlights: "Ghanta Ghar Clock Tower, spice markets, Makhania lassi, shahi samosas"
   },
   {
     day: 5,
@@ -229,6 +241,9 @@ highlights: [
     description:
       "Rise for Mehrangarh Fort, soaring above the city with sweeping views, followed by the marble calm of Jaswant Thada. In the afternoon, keep exploring, or opt for a Bishnoi Village Jeep Safari for wildlife spotting and artisan visits in the dunes. Stay: The Mandore · Meals: Breakfast",
     galleryImages: [indiaDay05Gallery01, indiaDay05Gallery02, indiaDay05Gallery03],
+    activities: [],
+    meals: "Breakfast",
+    highlights: "Mehrangarh Fort, Jaswant Thada cenotaphs, optional Bishnoi Village safari",
     transportation: {
       from: "Jodhpur",
       to: "Udaipur",
@@ -244,7 +259,10 @@ highlights: [
     heroImage: indiaDay06,
     description:
       "Slide through Aravalli hills to the intricate Ranakpur Jain Temples—1444 unique marble pillars—then sweep into Udaipur as palaces ripple across Lake Pichola. Settle into Karohi Haveli, perched on a hill with dreamy views and a beer in hand. Stay: Karohi Haveli · Meals: Breakfast",
-    galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03]
+    galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03],
+    activities: [],
+    meals: "Breakfast",
+    highlights: "Ranakpur Jain Temples, 1444 marble pillars, Lake Pichola arrival, Karohi Haveli"
   },
   {
     day: 7,
@@ -254,7 +272,10 @@ highlights: [
     heroImage: indiaDay07,
     description:
       "Stroll into the City Palace (via Hathi Pol) and its galleries; peek into the sparkling Crystal Gallery; wander the fountains of Saheliyon-ki-Bari. As the light softens, drift across Lake Pichola to Jag Mandir for a sunset that paints the water gold (weather/water levels permitting). Stay: Karohi Haveli · Meals: Breakfast",
-    galleryImages: [indiaDay07Gallery01, indiaDay07Gallery02, indiaDay07Gallery03]
+    galleryImages: [indiaDay07Gallery01, indiaDay07Gallery02, indiaDay07Gallery03],
+    activities: [],
+    meals: "Breakfast",
+    highlights: "City Palace, Crystal Gallery, Saheliyon-ki-Bari gardens, Lake Pichola sunset cruise"
   },
   {
     day: 8,
@@ -263,8 +284,11 @@ highlights: [
     location: "Ranthambore National Park",
     heroImage: indiaDay08,
     description:
-      "Trade lakes for desert calm as you reach sacred Pushkar. Visit the rare Brahma Temple, then join a pooja on Pushkar Lake’s ghats as bells ring and diyas glow. Night falls under big skies at Atithi Camp Pushkar—luxe tents and quiet starlight. Stay: Atithi Camp Pushkar · Meals: Dinner & Breakfast",
-    galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03]
+      "Trade lakes for desert calm as you reach sacred Pushkar. Visit the rare Brahma Temple, then join a pooja on Pushkar Lake's ghats as bells ring and diyas glow. Night falls under big skies at Atithi Camp Pushkar—luxe tents and quiet starlight. Stay: Atithi Camp Pushkar · Meals: Dinner & Breakfast",
+    galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03],
+    activities: [],
+    meals: "Dinner & Breakfast",
+    highlights: "Brahma Temple, Pushkar Lake pooja ceremony, luxury desert camp, stargazing"
   },
   {
     day: 9,
@@ -274,6 +298,9 @@ highlights: [
     heroImage: indiaDay09,
     description: "Travel to Jaipur, the vibrant Pink City and capital of Rajasthan. Experience the royal heritage, colorful bazaars, and magnificent architecture of this historic city.",
     galleryImages: [indiaDay09Gallery01, indiaDay09Gallery02, indiaDay09Gallery03],
+    activities: [],
+    meals: "Breakfast & Lunch",
+    highlights: "Pink City arrival, royal heritage sites, colorful bazaars, Rajasthani architecture",
     transportation: {
       from: "Sawai Madhopur",
       to: "Jaipur",
@@ -288,7 +315,10 @@ highlights: [
     location: "Jaipur, Rajasthan",
     heroImage: indiaDay10,
     description: "Dive deep into Jaipur's royal heritage. Explore magnificent forts, palaces, and markets that showcase the grandeur of Rajput architecture and culture.",
-    galleryImages: [indiaDay10Gallery01, indiaDay10Gallery02, indiaDay10Gallery03]
+    galleryImages: [indiaDay10Gallery01, indiaDay10Gallery02, indiaDay10Gallery03],
+    activities: [],
+    meals: "Breakfast & Lunch",
+    highlights: "Amer Fort exploration, City Palace tour, Hawa Mahal, local markets"
   },
   {
     day: 11,
@@ -298,6 +328,9 @@ highlights: [
     heroImage: indiaDay11,
     description: "Experience the crown jewel of India - the magnificent Taj Mahal. Witness this eternal symbol of love in the soft morning light, creating memories that will last a lifetime.",
     galleryImages: [indiaDay11Gallery01, indiaDay11Gallery02, indiaDay11Gallery03],
+    activities: [],
+    meals: "Breakfast & Lunch",
+    highlights: "Taj Mahal sunrise visit, Agra Fort, marble inlay workshops, Mughal heritage",
     transportation: {
       from: "Jaipur",
       to: "Agra",
@@ -313,6 +346,9 @@ highlights: [
     heroImage: indiaDay12,
     description: "Complete your incredible Indian journey by returning to Delhi. Enjoy last-minute shopping and reminisce about your amazing adventures across incredible India.",
     galleryImages: [indiaDay12Gallery01, indiaDay12Gallery02, indiaDay12Gallery03],
+    activities: [],
+    meals: "Breakfast",
+    highlights: "Delhi return, shopping time, journey reflection, departure preparations",
     transportation: {
       from: "Agra",
       to: "Delhi",
@@ -327,6 +363,9 @@ highlights: [
     location: "Delhi, India",
     heroImage: indiaDay13,
     description: "Bid farewell to incredible India. Complete your checkout and departure with warm memories of an unforgettable journey through the land of colors, culture, and heritage.",
+    activities: [],
+    meals: "Breakfast",
+    highlights: "Final checkout, departure assistance, journey memories, safe travels",
     transportation: {
       from: "Hotel",
       to: "Indira Gandhi Airport",
@@ -392,15 +431,7 @@ included: [
         ,
     {
       question: "Do you have an age limit for tours?",
-      answer: "Our tours cater to adventurous travelers aged 18-45, with most guests between 21-35 years old. It's perfect for people from diverse backgrounds to share travel experiences."
-    },
-    {
-      question: "What is the local currency?",
-      answer: "The local currency in India is Indian Rupee. We do advise guests to first collect cash from the airport arms but there will also be various arms available along the way."
-    },
-    {
-      question: "Which airport do I fly out from?",
-      answer: "From Indira Ghandi International Airport - New Delhi"
+      answer: "We welcome travellers aged 18-39 years old, but this is just a guideline to help us create consistent groups. If you're just outside this range (especially on the older side) and feel you'd fit well with our active travel style and group dynamic, feel free to reach out. We're happy to consider applications case by case."
     }
   ]
 };

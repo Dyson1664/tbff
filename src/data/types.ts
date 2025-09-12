@@ -42,6 +42,8 @@ export interface DayItinerary {
   experiences?: Experience[];
   accommodation?: Accommodation;
   transportation?: Transportation;
+  meals?: string;
+  highlights?: string;
 }
 
 export interface ItineraryDay {

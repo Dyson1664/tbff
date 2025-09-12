@@ -468,8 +468,8 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               carouselImages={day.galleryImages || []}
               accommodation={day.accommodation}
               transportation={day.transportation}
-              meals={(day as any).meals || "Breakfast"}
-              highlights={(day as any).highlights || day.activities?.map(activity => activity.title).join(", ") || "Explore and discover"}
+              meals={day.meals || "Breakfast"}
+              highlights={day.highlights || day.activities?.map(activity => activity.title).join(", ") || "Explore and discover"}
             />
           </AccordionContent>
         </AccordionItem>
