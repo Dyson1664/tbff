@@ -93,7 +93,7 @@ import indiaDay12Gallery02 from "@/assets/india-day12-gallery-02.jpg";
 import indiaDay12Gallery03 from "@/assets/india-day12-gallery-03.jpg";
 
 export const indiaData = {
-  id: "india-journey",
+  id: "india-journey", 
   slug: "india-journey",
   title: "India Journey",
   subtitle: "Immerse yourself in the colors, flavors, and ancient wisdom of incredible India",
@@ -101,7 +101,7 @@ export const indiaData = {
   duration: "13 days",
   heroImage: indiaHero,
   overviewGallery: [ov1_400, ov2_400, ov3_400, ov4_400, ov5_400, ov6_400],
-  overviewGallery2x: [ov1_800, ov2_800, ov3_800, ov4_800, ov5_800, ov6_800],
+  overviewGallery2x:[ov1_800, ov2_800, ov3_800, ov4_800, ov5_800, ov6_800],
 
   // Updated to reflect your new flow incl. Mandawa & Pushkar
   route: ["New Delhi", "Mandawa", "Jodhpur", "Udaipur", "Pushkar", "Jaipur", "Agra"],
@@ -148,204 +148,203 @@ export const indiaData = {
       description: "Your India journey is completely carbon neutral through our verified tree planting program."
     }
   ],
-
   // NEW: Trip highlights
   highlights: [
     {
       title: "Taj Mahal",
       description: "Visit one of the 7 wonders of the world",
-      image: indiaDay11 // Taj photo
+      image: indiaDay11, // Taj photo
     },
     {
       title: "Canter Safari Ranthambhore National Park",
       description:
         "Visit Ranthambhore National Park where you have the chance to witness Leopards, Sloth Bear and maybe even the majestic Tiger",
-      image: indiaDay08 // Safari photo
+      image: indiaDay08, // Safari photo
     },
     {
       title: "Cruise over Lake Pichola",
       description:
         "Set off on a sunset cruise across Lake Pichola where expert guides will enhance your trip by explaining the rich history of Udaipur City",
-      image: indiaDay06Gallery03 // Udaipur/Lake photo
-    }
+      image: indiaDay06Gallery03, // Udaipur/Lake photo
+    },
   ],
-
+  
   itinerary: [
-    {
-      day: 1,
-      date: "March 15, 2024",
-      title: "Delhi Arrival: Hello, India!",
-      location: "New Delhi, India",
-      heroImage: indiaDay01,
-      description:
-        "Touch down in New Delhi, where Mughal grandeur meets modern buzz. Check in at Saket 27, freshen up, and if you’re early, dip into mini-adventures—heritage strolls or bustling bazaars. As the city lights glow, meet the crew for a cheerful briefing and a tasty welcome dinner at a local favorite. Stay: Saket 27 · Meals: Breakfast & Dinner",
-      galleryImages: [indiaDay01Gallery01, indiaDay01Gallery02, indiaDay01Gallery03, indiaDay01Gallery04],
-      transportation: {
-        from: "Indira Gandhi Airport",
-        to: "Central Delhi Hotel",
-        duration: "45 Minutes",
-        distance: "25 km"
-      }
-    },
-    {
-      day: 2,
-      date: "March 16, 2024",
-      title: "Delhi Deep-Dive: Stories, Spice & Splendor",
-      location: "Delhi, India",
-      heroImage: indiaDay02,
-      description:
-        "Ease into the rhythm of the capital with the Salaam Baalak Trust City Walk, guided by young storytellers with lived experience. Step into Old Delhi at Jama Masjid, then shift gears to the serene Gurudwara Bangla Sahib with its glinting domes. Cruise past India Gate, Rashtrapati Bhavan, and Parliament through stately Lutyens’ Delhi before a relaxed evening back at your hotel. Stay: Saket 27 · Meals: Breakfast",
-      galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03]
-    },
-    {
-      day: 3,
-      date: "March 17, 2024",
-      title: "To Mandawa: Fresco Heaven",
-      location: "Mandawa, Rajasthan",
-      heroImage: indiaDay03,
-      description:
-        "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan’s “open-air art gallery.” After check-in, wander Mandawa’s painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies. Stay: Hotel Heritage Mandawa · Meals: Breakfast",
-      galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03],
-      transportation: {
-        from: "Delhi",
-        to: "Mandawa",
-        duration: "6 Hours",
-        distance: "260 km"
-      }
-    },
-    {
-      day: 4,
-      date: "March 18, 2024",
-      title: "Mandawa → Jodhpur: Blue City Buzz",
-      location: "Jodhpur, Rajasthan",
-      heroImage: indiaDay04,
-      description:
-        "Head west as the desert hue deepens and Jodhpur’s blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower), check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a crisp shahi samosa. Stay: The Mandore (leafy gardens, chill vibes) · Meals: Breakfast",
-      galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04]
-    },
-    {
-      day: 5,
-      date: "March 19, 2024",
-      title: "Jodhpur: Forts, Cenotaphs & Desert Culture",
-      location: "Jodhpur, Rajasthan",
-      heroImage: indiaDay05,
-      description:
-        "Rise for Mehrangarh Fort, soaring above the city with sweeping views, followed by the marble calm of Jaswant Thada. In the afternoon, keep exploring, or opt for a Bishnoi Village Jeep Safari for wildlife spotting and artisan visits in the dunes. Stay: The Mandore · Meals: Breakfast",
-      galleryImages: [indiaDay05Gallery01, indiaDay05Gallery02, indiaDay05Gallery03]
-      // (No transportation here; travel to Udaipur happens on Day 6)
-    },
-    {
-      day: 6,
-      date: "March 20, 2024",
-      title: "Jodhpur → Udaipur: Marble Magic by the Lakes",
-      location: "Udaipur, Rajasthan",
-      heroImage: indiaDay06,
-      description:
-        "Slide through Aravalli hills to the intricate Ranakpur Jain Temples—1444 unique marble pillars—then sweep into Udaipur as palaces ripple across Lake Pichola. Settle into Karohi Haveli, perched on a hill with dreamy views and a beer in hand. Stay: Karohi Haveli · Meals: Breakfast",
-      galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03],
-      transportation: {
-        from: "Jodhpur",
-        to: "Udaipur",
-        duration: "5 Hours",
-        distance: "250 km"
-      }
-    },
-    {
-      day: 7,
-      date: "March 21, 2024",
-      title: "Udaipur: Palaces, Gardens & Golden Hour Boat Ride",
-      location: "Udaipur, Rajasthan",
-      heroImage: indiaDay07,
-      description:
-        "Stroll into the City Palace (via Hathi Pol) and its galleries; peek into the sparkling Crystal Gallery; wander the fountains of Saheliyon-ki-Bari. As the light softens, drift across Lake Pichola to Jag Mandir for a sunset that paints the water gold (weather/water levels permitting). Stay: Karohi Haveli · Meals: Breakfast",
-      galleryImages: [indiaDay07Gallery01, indiaDay07Gallery02, indiaDay07Gallery03]
-    },
-    {
-      day: 8,
-      date: "March 22, 2024",
-      title: "Udaipur → Pushkar: Holy Lake, Chill Vibes",
-      location: "Pushkar, Rajasthan",
-      heroImage: indiaDay08, // consider swapping to a Pushkar image if available
-      description:
-        "Trade lakes for desert calm as you reach sacred Pushkar. Visit the rare Brahma Temple, then join a pooja on Pushkar Lake’s ghats as bells ring and diyas glow. Night falls under big skies at Atithi Camp Pushkar—luxe tents and quiet starlight. Stay: Atithi Camp Pushkar · Meals: Dinner & Breakfast",
-      galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03]
-      // (Add transportation here if you want to surface Udaipur → Pushkar drive details)
-    },
-    {
-      day: 9,
-      date: "March 23, 2024",
-      title: "Arrival in Jaipur",
-      location: "Jaipur, Rajasthan",
-      heroImage: indiaDay09,
-      description:
-        "Travel to Jaipur, the vibrant Pink City and capital of Rajasthan. Experience the royal heritage, colorful bazaars, and magnificent architecture of this historic city.",
-      galleryImages: [indiaDay09Gallery01, indiaDay09Gallery02, indiaDay09Gallery03],
-      transportation: {
-        from: "Sawai Madhopur",
-        to: "Jaipur",
-        duration: "3 Hours",
-        distance: "160 km"
-      }
-    },
-    {
-      day: 10,
-      date: "March 24, 2024",
-      title: "Let's explore Jaipur",
-      location: "Jaipur, Rajasthan",
-      heroImage: indiaDay10,
-      description:
-        "Dive deep into Jaipur's royal heritage. Explore magnificent forts, palaces, and markets that showcase the grandeur of Rajput architecture and culture.",
-      galleryImages: [indiaDay10Gallery01, indiaDay10Gallery02, indiaDay10Gallery03]
-    },
-    {
-      day: 11,
-      date: "March 25, 2024",
-      title: "Taj Mahal",
-      location: "Agra, Uttar Pradesh",
-      heroImage: indiaDay11,
-      description:
-        "Experience the crown jewel of India - the magnificent Taj Mahal. Witness this eternal symbol of love in the soft morning light, creating memories that will last a lifetime.",
-      galleryImages: [indiaDay11Gallery01, indiaDay11Gallery02, indiaDay11Gallery03],
-      transportation: {
-        from: "Jaipur",
-        to: "Agra",
-        duration: "5 Hours",
-        distance: "240 km"
-      }
-    },
-    {
-      day: 12,
-      date: "March 26, 2024",
-      title: "Agra back to Delhi",
-      location: "Delhi, India",
-      heroImage: indiaDay12,
-      description:
-        "Complete your incredible Indian journey by returning to Delhi. Enjoy last-minute shopping and reminisce about your amazing adventures across incredible India.",
-      galleryImages: [indiaDay12Gallery01, indiaDay12Gallery02, indiaDay12Gallery03],
-      transportation: {
-        from: "Agra",
-        to: "Delhi",
-        duration: "4 Hours",
-        distance: "230 km"
-      }
-    },
-    {
-      day: 13,
-      date: "March 27, 2024",
-      title: "Checkout",
-      location: "Delhi, India",
-      heroImage: indiaDay13,
-      description:
-        "Bid farewell to incredible India. Complete your checkout and departure with warm memories of an unforgettable journey through the land of colors, culture, and heritage.",
-      transportation: {
-        from: "Hotel",
-        to: "Indira Gandhi Airport",
-        duration: "45 Minutes",
-        distance: "25 km"
-      }
+  {
+    day: 1,
+    date: "March 15, 2024",
+    title: "Delhi Arrival: Hello, India!",
+    location: "New Delhi, India",
+    heroImage: "indiaDay01",
+    description:
+      "Touch down in New Delhi, where Mughal grandeur meets modern buzz. Check in at Saket 27, freshen up, and if you’re early, dip into mini-adventures—heritage strolls or bustling bazaars. As the city lights glow, meet the crew for a cheerful briefing and a tasty welcome dinner at a local favorite. Stay: Saket 27 · Meals: Breakfast & Dinner",
+    galleryImages: ["indiaDay01Gallery01", "indiaDay01Gallery02", "indiaDay01Gallery03", "indiaDay01Gallery04"],
+    transportation: {
+      from: "Indira Gandhi Airport",
+      to: "Central Delhi Hotel",
+      duration: "45 Minutes",
+      distance: "25 km"
     }
-  ],
-
+  },
+  {
+    day: 2,
+    date: "March 16, 2024",
+    title: "Delhi Deep-Dive: Stories, Spice & Splendor",
+    location: "Delhi, India",
+    heroImage: "indiaDay02",
+    description:
+      "Ease into the rhythm of the capital with the Salaam Baalak Trust City Walk, guided by young storytellers with lived experience. Step into Old Delhi at Jama Masjid, then shift gears to the serene Gurudwara Bangla Sahib with its glinting domes. Cruise past India Gate, Rashtrapati Bhavan, and Parliament through stately Lutyens’ Delhi before a relaxed evening back at your hotel. Stay: Saket 27 · Meals: Breakfast",
+    galleryImages: ["indiaDay02Gallery01", "indiaDay02Gallery02", "indiaDay02Gallery03"]
+  },
+  {
+    day: 3,
+    date: "March 17, 2024",
+    title: "To Mandawa: Fresco Heaven",
+    location: "Mandawa, Rajasthan",
+    heroImage: "indiaDay03",
+    description:
+      "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan’s “open-air art gallery.” After check-in, wander Mandawa’s painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies. Stay: Hotel Heritage Mandawa · Meals: Breakfast",
+    galleryImages: ["indiaDay03Gallery01", "indiaDay03Gallery02", "indiaDay03Gallery03"],
+    transportation: {
+      from: "Delhi",
+      to: "Mandawa",
+      duration: "6 Hours",
+      distance: "260 km"
+    }
+  },
+  {
+    day: 4,
+    date: "March 18, 2024",
+    title: "Mandawa → Jodhpur: Blue City Buzz",
+    location: "Jodhpur, Rajasthan",
+    heroImage: "indiaDay04",
+    description:
+      "Head west as the desert hue deepens and Jodhpur’s blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower), check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a crisp shahi samosa. Stay: The Mandore (leafy gardens, chill vibes) · Meals: Breakfast",
+    galleryImages: ["indiaDay04Gallery01", "indiaDay04Gallery02", "indiaDay04Gallery03", "indiaDay04Gallery04"]
+  },
+  {
+    day: 5,
+    date: "March 19, 2024",
+    title: "Jodhpur: Forts, Cenotaphs & Desert Culture",
+    location: "Jodhpur, Rajasthan",
+    heroImage: "indiaDay05",
+    description:
+      "Rise for Mehrangarh Fort, soaring above the city with sweeping views, followed by the marble calm of Jaswant Thada. In the afternoon, keep exploring, or opt for a Bishnoi Village Jeep Safari for wildlife spotting and artisan visits in the dunes. Stay: The Mandore · Meals: Breakfast",
+    galleryImages: ["indiaDay05Gallery01", "indiaDay05Gallery02", "indiaDay05Gallery03"]
+    // (No transportation here; travel to Udaipur happens on Day 6)
+  },
+  {
+    day: 6,
+    date: "March 20, 2024",
+    title: "Jodhpur → Udaipur: Marble Magic by the Lakes",
+    location: "Udaipur, Rajasthan",
+    heroImage: "indiaDay06",
+    description:
+      "Slide through Aravalli hills to the intricate Ranakpur Jain Temples—1444 unique marble pillars—then sweep into Udaipur as palaces ripple across Lake Pichola. Settle into Karohi Haveli, perched on a hill with dreamy views and a beer in hand. Stay: Karohi Haveli · Meals: Breakfast",
+    galleryImages: ["indiaDay06Gallery01", "indiaDay06Gallery02", "indiaDay06Gallery03"],
+    transportation: {
+      from: "Jodhpur",
+      to: "Udaipur",
+      duration: "5 Hours",
+      distance: "250 km"
+    }
+  },
+  {
+    day: 7,
+    date: "March 21, 2024",
+    title: "Udaipur: Palaces, Gardens & Golden Hour Boat Ride",
+    location: "Udaipur, Rajasthan",
+    heroImage: "indiaDay07",
+    description:
+      "Stroll into the City Palace (via Hathi Pol) and its galleries; peek into the sparkling Crystal Gallery; wander the fountains of Saheliyon-ki-Bari. As the light softens, drift across Lake Pichola to Jag Mandir for a sunset that paints the water gold (weather/water levels permitting). Stay: Karohi Haveli · Meals: Breakfast",
+    galleryImages: ["indiaDay07Gallery01", "indiaDay07Gallery02", "indiaDay07Gallery03"]
+  },
+  {
+    day: 8,
+    date: "March 22, 2024",
+    title: "Udaipur → Pushkar: Holy Lake, Chill Vibes",
+    location: "Pushkar, Rajasthan",
+    heroImage: "indiaDay08", // consider swapping to a Pushkar image if available
+    description:
+      "Trade lakes for desert calm as you reach sacred Pushkar. Visit the rare Brahma Temple, then join a pooja on Pushkar Lake’s ghats as bells ring and diyas glow. Night falls under big skies at Atithi Camp Pushkar—luxe tents and quiet starlight. Stay: Atithi Camp Pushkar · Meals: Dinner & Breakfast",
+    galleryImages: ["indiaDay08Gallery01", "indiaDay08Gallery02", "indiaDay08Gallery03"]
+    // (Add transportation here if you want to surface Udaipur → Pushkar drive details)
+  },
+  {
+    day: 9,
+    date: "March 23, 2024",
+    title: "Arrival in Jaipur",
+    location: "Jaipur, Rajasthan",
+    heroImage: "indiaDay09",
+    description:
+      "Travel to Jaipur, the vibrant Pink City and capital of Rajasthan. Experience the royal heritage, colorful bazaars, and magnificent architecture of this historic city.",
+    galleryImages: ["indiaDay09Gallery01", "indiaDay09Gallery02", "indiaDay09Gallery03"],
+    transportation: {
+      from: "Sawai Madhopur",
+      to: "Jaipur",
+      duration: "3 Hours",
+      distance: "160 km"
+    }
+  },
+  {
+    day: 10,
+    date: "March 24, 2024",
+    title: "Let's explore Jaipur",
+    location: "Jaipur, Rajasthan",
+    heroImage: "indiaDay10",
+    description:
+      "Dive deep into Jaipur's royal heritage. Explore magnificent forts, palaces, and markets that showcase the grandeur of Rajput architecture and culture.",
+    galleryImages: ["indiaDay10Gallery01", "indiaDay10Gallery02", "indiaDay10Gallery03"]
+  },
+  {
+    day: 11,
+    date: "March 25, 2024",
+    title: "Taj Mahal",
+    location: "Agra, Uttar Pradesh",
+    heroImage: "indiaDay11",
+    description:
+      "Experience the crown jewel of India - the magnificent Taj Mahal. Witness this eternal symbol of love in the soft morning light, creating memories that will last a lifetime.",
+    galleryImages: ["indiaDay11Gallery01", "indiaDay11Gallery02", "indiaDay11Gallery03"],
+    transportation: {
+      from: "Jaipur",
+      to: "Agra",
+      duration: "5 Hours",
+      distance: "240 km"
+    }
+  },
+  {
+    day: 12,
+    date: "March 26, 2024",
+    title: "Agra back to Delhi",
+    location: "Delhi, India",
+    heroImage: "indiaDay12",
+    description:
+      "Complete your incredible Indian journey by returning to Delhi. Enjoy last-minute shopping and reminisce about your amazing adventures across incredible India.",
+    galleryImages: ["indiaDay12Gallery01", "indiaDay12Gallery02", "indiaDay12Gallery03"],
+    transportation: {
+      from: "Agra",
+      to: "Delhi",
+      duration: "4 Hours",
+      distance: "230 km"
+    }
+  },
+  {
+    day: 13,
+    date: "March 27, 2024",
+    title: "Checkout",
+    location: "Delhi, India",
+    heroImage: "indiaDay13",
+    description:
+      "Bid farewell to incredible India. Complete your checkout and departure with warm memories of an unforgettable journey through the land of colors, culture, and heritage.",
+    transportation: {
+      from: "Hotel",
+      to: "Indira Gandhi Airport",
+      duration: "45 Minutes",
+      distance: "25 km"
+    }
+  }
+]
+,
   faqs: [
     {
       question: "Where does the trip start & finish?",
@@ -357,21 +356,20 @@ export const indiaData = {
     },
     {
       question: "What should I wear?",
-      answer: `For Summer & Warmer Months (March–June): Stick to light, breathable fabrics like cotton and linen to stay cool. Loose-fitting clothes, comfortable sandals or sneakers, sunglasses, and a hat are must-haves. Sun protection, including sunscreen, is key for long days outdoors.
+          answer: `For Summer & Warmer Months (March–June): Stick to light, breathable fabrics like cotton and linen to stay cool. Loose-fitting clothes, comfortable sandals or sneakers, sunglasses, and a hat are must-haves. Sun protection, including sunscreen, is key for long days outdoors.
         
         For Cooler & Winter Months (October–February): Pack layers! Mornings and evenings can be chilly, especially in northern regions. A light jacket or sweater will keep you warm, while breathable clothing works for daytime. Comfortable walking shoes and a scarf for temple visits are always handy.
         
         No matter the season, bring a shawl for religious sites and adventure-ready outfits for outdoor activities!`
-    },
+        }
+        ,
     {
       question: "Do you have an age limit for tours?",
-      answer:
-        "Our tours cater to adventurous travelers aged 18-45, with most guests between 21-35 years old. It's perfect for people from diverse backgrounds to share travel experiences."
+      answer: "Our tours cater to adventurous travelers aged 18-45, with most guests between 21-35 years old. It's perfect for people from diverse backgrounds to share travel experiences."
     },
     {
       question: "What is the local currency?",
-      answer:
-        "The local currency in India is the Indian Rupee (INR). We advise guests to first collect cash from the airport ATMs, and there will also be various ATMs available along the way."
+      answer: "The local currency in India is the Indian Rupee (INR). We advise guests to first collect cash from the airport ATMs, and there will also be various ATMs available along the way."
     },
     {
       question: "Which airport do I fly out from?",
