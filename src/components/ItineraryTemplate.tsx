@@ -483,11 +483,11 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       <Navbar />
       
       {/* Hero Section (custom) */}
-      <section className="relative h-[70vh] flex overflow-hidden bg-white border border-gray-200 shadow-sm md:mx-6 lg:mx-12 xl:mx-16 md:rounded-2xl">
+      <section className="relative h-[70vh] flex overflow-hidden md:mx-6 lg:mx-12 xl:mx-16 md:rounded-2xl">
         {/* Mobile: Show only main image */}
         <div className="md:hidden relative w-full h-full">
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-2xl"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${data.heroImage})` }}
           />
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
@@ -504,11 +504,11 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         {/* Desktop: Grid layout */}
         <div className="hidden md:flex w-full h-full">
           {/* Left side: 4-image grid (40% of screen for better tile visibility) */}
-          <div className="w-[40%] h-full grid grid-cols-2 grid-rows-2 gap-2 p-2">
+          <div className="w-[40%] h-full grid grid-cols-2 grid-rows-2 gap-0">
             {overviewFour.map((src, index) => {
   const src2x = data.overviewGallery2x?.[index] || undefined;
   return (
-    <div key={index} className="relative h-full w-full overflow-hidden border-2 border-white rounded-lg shadow-sm">
+    <div key={index} className="relative h-full w-full overflow-hidden">
       <img
         src={src}
         srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
@@ -525,19 +525,17 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           </div>
 
           {/* Right side: Main hero image (60% of screen) */}
-          <div className="w-[60%] relative p-2">
-            <div className="h-full border-2 border-white rounded-lg shadow-sm overflow-hidden">
-              <div 
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url(${data.heroImage})` }}
-              />
-              <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
-                <div className="text-center text-white">
-                  <h1 className="text-4xl lg:text-5xl font-bold mb-3">{data.title}</h1>
-                  <div className="flex items-center justify-center gap-2 text-lg">
-                    <MapPin className="w-5 h-5" />
-                    <span>{data.location} • {data.duration}</span>
-                  </div>
+          <div className="w-[60%] relative">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: `url(${data.heroImage})` }}
+            />
+            <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="text-center text-white">
+                <h1 className="text-4xl lg:text-5xl font-bold mb-3">{data.title}</h1>
+                <div className="flex items-center justify-center gap-2 text-lg">
+                  <MapPin className="w-5 h-5" />
+                  <span>{data.location} • {data.duration}</span>
                 </div>
               </div>
             </div>
