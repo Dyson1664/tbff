@@ -195,7 +195,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
         {/* Left col: title + route + about */}
         <div className="order-1 md:order-none space-y-6 w-full">
           {/* Trip title - now inside white border */}
-          <h2 className="text-3xl font-bold text-foreground text-center md:text-left">{data.title}</h2>
+          <h2 className="text-3xl font-bold text-foreground text-center md:text-left">{data.duration} | {data.title}</h2>
           
           {/* Route: below title, left of highlights */}
           {Array.isArray(data.route) && data.route.length > 1 && (
