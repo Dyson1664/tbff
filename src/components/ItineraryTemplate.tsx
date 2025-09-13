@@ -504,7 +504,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         {/* Desktop: Grid layout */}
         <div className="hidden md:flex w-full h-full">
           {/* Left side: 4-image grid (35% of screen) */}
-          <div className="w-[35%] h-full grid grid-cols-2 grid-rows-2 gap-1">
+          <div className="w-[35%] h-full grid grid-cols-2 grid-rows-2 gap-0 border-r border-white/20">
             {overviewFour.map((src, index) => {
   const src2x = data.overviewGallery2x?.[index] || undefined;
   return (
