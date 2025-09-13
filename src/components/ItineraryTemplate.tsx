@@ -483,7 +483,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       <Navbar />
       
       {/* Hero Section (custom) */}
-      <section className="relative h-[70vh] flex overflow-hidden md:mx-6 lg:mx-12 xl:mx-16 md:rounded-2xl mt-8 bg-white ring-1 ring-gray-200 p-2 shadow-sm">
+        <section className="relative h-screen md:h-[70vh] flex overflow-hidden md:mx-6 lg:mx-12 xl:mx-16 rounded-none md:rounded-2xl mt-0 md:mt-6 bg-transparent md:bg-white p-0 md:p-6 shadow-none md:shadow-sm">
         {/* Mobile: Show only main image */}
         <div className="md:hidden relative w-full h-full">
           <div 
@@ -507,6 +507,11 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           <div className="w-[40%] h-full grid grid-cols-2 grid-rows-2 gap-0">
             {overviewFour.map((src, index) => {
   const src2x = data.overviewGallery2x?.[index] || undefined;
+  const cornerClass =
+    index === 0 ? "rounded-tl-2xl" :       // top-left tile → round top-left
+    index === 2 ? "rounded-bl-2xl" :       // bottom-left tile → round bottom-left
+    "";                                    // others square
+
   return (
     <div key={index} className="relative h-full w-full overflow-hidden">
       <img
@@ -514,7 +519,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
         sizes="(min-width:1280px) 20vw, (min-width:1024px) 20vw, 50vw"
         alt={`${data.title} overview ${index + 1}`}
-        className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+        className={`h-full w-full object-cover hover:scale-105 transition-transform duration-300 ${cornerClass}`}
         decoding="async"
         loading={index < 2 ? "eager" : "lazy"}
       />
@@ -522,10 +527,11 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   );
 })}
 
+
           </div>
 
           {/* Right side: Main hero image (60% of screen) */}
-          <div className="w-[60%] relative">
+           <div className="w-[60%] relative overflow-hidden rounded-tr-2xl rounded-br-2xl">
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${data.heroImage})` }}
