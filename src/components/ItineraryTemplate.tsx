@@ -503,8 +503,8 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
         {/* Desktop: Grid layout */}
         <div className="hidden md:flex w-full h-full">
-          {/* Left side: 4-image grid (35% of screen) */}
-          <div className="w-[35%] h-full grid grid-cols-2 grid-rows-2 gap-0 border-r border-white/20">
+          {/* Left side: 4-image grid (40% of screen for better tile visibility) */}
+          <div className="w-[40%] h-full grid grid-cols-2 grid-rows-2 gap-0 border-r border-white/20">
             {overviewFour.map((src, index) => {
   const src2x = data.overviewGallery2x?.[index] || undefined;
   return (
@@ -512,9 +512,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       <img
         src={src}
         srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
-        sizes="(min-width:1280px) 17vw, (min-width:1024px) 17vw, 50vw"
+        sizes="(min-width:1280px) 20vw, (min-width:1024px) 20vw, 50vw"
         alt={`${data.title} overview ${index + 1}`}
-        className="h-full w-full object-cover"
+        className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
         decoding="async"
         loading={index < 2 ? "eager" : "lazy"}
       />
@@ -524,8 +524,8 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
           </div>
 
-          {/* Right side: Main hero image (65% of screen) */}
-          <div className="w-[65%] relative">
+          {/* Right side: Main hero image (60% of screen) */}
+          <div className="w-[60%] relative">
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${data.heroImage})` }}
