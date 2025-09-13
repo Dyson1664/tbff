@@ -391,13 +391,13 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Memoize derived values
   const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
 
-  // ✅ New: compute 6 images for hero left grid (prefer overviewGallery)
-  const overviewSix = useMemo(() => {
+  // ✅ New: compute 4 images for hero left grid (prefer overviewGallery)
+  const overviewFour = useMemo(() => {
     if (data.overviewGallery && data.overviewGallery.length) {
-      return data.overviewGallery.slice(0, 6);
+      return data.overviewGallery.slice(0, 4);
     }
-    // fallback to first 6 day hero images (current behavior)
-    return data.itinerary.slice(0, 6).map(d => d.heroImage || data.heroImage);
+    // fallback to first 4 day hero images (current behavior)
+    return data.itinerary.slice(0, 4).map(d => d.heroImage || data.heroImage);
   }, [data.overviewGallery, data.itinerary, data.heroImage]);
   
   // Scroll to first image function (kept for reference)
@@ -503,16 +503,16 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
         {/* Desktop: Grid layout */}
         <div className="hidden md:flex w-full h-full">
-          {/* Left side: 6-image grid (42% of screen) */}
-          <div className="w-[42%] h-full grid grid-cols-3 grid-rows-2 gap-0">
-            {overviewSix.map((src, index) => {
+          {/* Left side: 4-image grid (35% of screen) */}
+          <div className="w-[35%] h-full grid grid-cols-2 grid-rows-2 gap-1">
+            {overviewFour.map((src, index) => {
   const src2x = data.overviewGallery2x?.[index] || undefined;
   return (
     <div key={index} className="relative h-full w-full overflow-hidden">
       <img
         src={src}
         srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
-        sizes="(min-width:1280px) 12vw, (min-width:1024px) 14vw, 33vw"
+        sizes="(min-width:1280px) 17vw, (min-width:1024px) 17vw, 50vw"
         alt={`${data.title} overview ${index + 1}`}
         className="h-full w-full object-cover"
         decoding="async"
@@ -524,8 +524,8 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
           </div>
 
-          {/* Right side: Main hero image (58% of screen) */}
-          <div className="w-[58%] relative">
+          {/* Right side: Main hero image (65% of screen) */}
+          <div className="w-[65%] relative">
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${data.heroImage})` }}
