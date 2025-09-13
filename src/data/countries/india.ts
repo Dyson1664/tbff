@@ -190,9 +190,9 @@ highlights: [
     highlights: "Airport pickup, hotel check-in, welcome briefing, local dinner",
     transportation: {
       from: "Indira Gandhi Airport",
-      to: "Central Delhi Hotel",
-      duration: "45 Minutes",
-      distance: "25 km"
+      to: "Saket 27 Hotel",
+      duration: "35 Minutes",
+      distance: "15 km"
     }
   },
   {
@@ -222,12 +222,6 @@ highlights: [
     meals: "Breakfast",
     accommodation: { name: "Hotel Heritage Mandawa" },
     highlights: "Shekhawati frescoes, Mandawa havelis, vintage murals, village sunset walks",
-    transportation: {
-      from: "Delhi",
-      to: "Jodhpur",
-      duration: "1.5 Hours (Flight)",
-      distance: "550 km"
-    }
   },
   {
     day: 4,
@@ -256,12 +250,6 @@ highlights: [
     meals: "Breakfast",
     accommodation: { name: "The Mandore" },
     highlights: "Mehrangarh Fort, Jaswant Thada cenotaphs, optional Bishnoi Village safari",
-    transportation: {
-      from: "Jodhpur",
-      to: "Udaipur",
-      duration: "5 Hours",
-      distance: "250 km"
-    }
   },
   {
     day: 6,
@@ -316,12 +304,6 @@ highlights: [
     activities: [],
     meals: "Breakfast & Lunch",
     highlights: "Pink City arrival, royal heritage sites, colorful bazaars, Rajasthani architecture",
-    transportation: {
-      from: "Sawai Madhopur",
-      to: "Jaipur",
-      duration: "3 Hours",
-      distance: "160 km"
-    }
   },
   {
     day: 10,
@@ -346,12 +328,6 @@ highlights: [
     activities: [],
     meals: "Breakfast & Lunch",
     highlights: "Taj Mahal sunrise visit, Agra Fort, marble inlay workshops, Mughal heritage",
-    transportation: {
-      from: "Jaipur",
-      to: "Agra",
-      duration: "5 Hours",
-      distance: "240 km"
-    }
   },
   {
     day: 12,
@@ -364,12 +340,6 @@ highlights: [
     activities: [],
     meals: "Breakfast",
     highlights: "Delhi return, shopping time, journey reflection, departure preparations",
-    transportation: {
-      from: "Agra",
-      to: "Delhi",
-      duration: "4 Hours",
-      distance: "230 km"
-    }
   },
   {
     day: 13,
@@ -381,12 +351,6 @@ highlights: [
     activities: [],
     meals: "Breakfast",
     highlights: "Final checkout, departure assistance, journey memories, safe travels",
-    transportation: {
-      from: "Hotel",
-      to: "Indira Gandhi Airport",
-      duration: "45 Minutes",
-      distance: "25 km"
-    }
   }
 ],
 summary: {
