@@ -185,9 +185,6 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
 
   return (
     <div className="mb-16">
-      {/* Trip title */}
-      <h2 className="text-3xl font-bold text-foreground mb-6 text-center">{data.title}</h2>
-
       {/* 1-col on mobile, 2-col on md+ */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12
           bg-white md:bg-background
@@ -195,8 +192,11 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
           px-4 md:px-8 py-8 rounded-2xl">
 
-        {/* Left col: route + about */}
+        {/* Left col: title + route + about */}
         <div className="order-1 md:order-none space-y-6 w-full">
+          {/* Trip title - now inside white border */}
+          <h2 className="text-3xl font-bold text-foreground text-center md:text-left">{data.title}</h2>
+          
           {/* Route: below title, left of highlights */}
           {Array.isArray(data.route) && data.route.length > 1 && (
             <div className="w-full">
