@@ -69,12 +69,12 @@ export const TripCard = memo(({
       )}
       <div className="flex items-center justify-between">
         <span className="text-lg font-bold text-foreground">{price}</span>
-        {showBookNow ? (
-          <Link to={`/checkout?trip=${encodeURIComponent(title)}`}>
+        {showBookNow && slug ? (
+          <a href={getPayUrlBySlug(slug)} target="_blank" rel="noopener noreferrer">
             <Button size="sm" variant={buttonVariant}>
               Book Now
             </Button>
-          </Link>
+          </a>
         ) : (
           <Link to={route}>
             <Button size="sm" variant={buttonVariant}>{buttonText}</Button>

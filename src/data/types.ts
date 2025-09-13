@@ -17,8 +17,8 @@ export interface Experience {
 
 export interface Accommodation {
   name: string;
-  rating: string;
-  roomTypes: string[];
+  rating?: string;
+  roomTypes?: string[];
   website?: string;
   image?: string;
 }
