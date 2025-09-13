@@ -185,10 +185,10 @@ export const DayLayout = memo(({
           <div className="space-y-4">
             {/* Transportation Icons */}
             <div className="flex justify-center gap-4 mb-6">
-              <Car className="w-8 h-8 text-muted-foreground/40" />
+              <Car className="w-8 h-8 text-primary" />
               <Ship className="w-8 h-8 text-muted-foreground/40" />
               <Bus className="w-8 h-8 text-muted-foreground/40" />
-              <Train className="w-8 h-8 text-primary" />
+              <Train className="w-8 h-8 text-muted-foreground/40" />
               <Plane className="w-8 h-8 text-muted-foreground/40" />
             </div>
             
