@@ -11,24 +11,25 @@ import { DayItinerary } from "@/data/types";
 import ResponsiveRoute from "@/components/RouteBar"; // <-- route component
 
 
-// Book Now Button Component (routes to /checkout)
+// Book Now Button Component (routes to external Shopify payment)
 import { Link } from "react-router-dom";
+import { getPayUrlBySlug } from "@/data/payUrls";
 
 
 const BookNowButton = memo((
   { tripSlug, countryName, title }: { tripSlug?: string; countryName: string; title?: string }
 ) => {
-  const to = `/checkout?trip=${encodeURIComponent(title || countryName)}${tripSlug ? `&slug=${encodeURIComponent(tripSlug)}` : ""}`;
+  const paymentUrl = tripSlug ? getPayUrlBySlug(tripSlug) : '#';
 
   return (
-    <Link to={to} onClick={() => window.scrollTo(0, 0)}>
+    <a href={paymentUrl} target="_blank" rel="noopener noreferrer">
       <Button
         size="lg"
         className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold"
       >
         Book Now
       </Button>
-    </Link>
+    </a>
   );
 });
 
