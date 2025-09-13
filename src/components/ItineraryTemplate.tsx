@@ -483,7 +483,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       <Navbar />
       
       {/* Hero Section (custom) */}
-      <section className="relative h-[70vh] flex overflow-hidden md:mx-6 lg:mx-12 xl:mx-16 md:rounded-2xl">
+      <section className="relative h-[70vh] flex overflow-hidden md:mx-6 lg:mx-12 xl:mx-16 md:rounded-2xl mt-8">
         {/* Mobile: Show only main image */}
         <div className="md:hidden relative w-full h-full">
           <div 
