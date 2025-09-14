@@ -38,7 +38,7 @@ export interface DayItinerary {
   heroImage?: string;
   description?: string;
   galleryImages?: string[];
-  activities: Activity[];
+  activities?: Activity[];
   experiences?: Experience[];
   accommodation?: Accommodation;
   transportation?: Transportation;
@@ -50,7 +50,7 @@ export interface ItineraryDay {
   day: number;
   date: string;
   title: string;
-  activities: Activity[];
+  activities?: Activity[];
 }
 
 export interface TourSummary {

@@ -80,17 +80,7 @@ export const srilankaData = {
       to: "Colombo City",
       duration: "45 Minutes",
       distance: "35 km"
-    },
-    activities: [
-      {
-        time: "2:00 PM",
-        title: "Arrival & City Tour",
-        location: "Colombo",
-        description: "Arrival and initial city exploration",
-        image: srilankaColombo,
-        duration: "3 hrs"
-      }
-    ]
+    }
   },
   {
     day: 2,
@@ -99,17 +89,7 @@ export const srilankaData = {
     location: "Sigiriya",
     heroImage: srilankaHero,
     description:
-      "Journey into Sri Lanka's Cultural Triangle, where ancient wonders and natural beauty converge. Sigiriya stands as a testament to centuries of history, spirituality, and artistic mastery. This UNESCO World Heritage site offers unforgettable views across lush countryside, village life, and sacred shrines. Whether you're seeking cultural immersion or scenic beauty, Sigiriya is your gateway to unforgettable experiences.",
-    activities: [
-      {
-        time: "10:00 AM",
-        title: "Cultural Triangle Exploration",
-        location: "Sigiriya",
-        description: "Explore the cultural triangle area",
-        image: srilankaHero,
-        duration: "4 hrs"
-      }
-    ]
+      "Journey into Sri Lanka's Cultural Triangle, where ancient wonders and natural beauty converge. Sigiriya stands as a testament to centuries of history, spirituality, and artistic mastery. This UNESCO World Heritage site offers unforgettable views across lush countryside, village life, and sacred shrines. Whether you're seeking cultural immersion or scenic beauty, Sigiriya is your gateway to unforgettable experiences."
   },
   {
     day: 3,
@@ -118,17 +98,7 @@ export const srilankaData = {
     location: "Sigiriya",
     heroImage: sigiriyaRock,
     description:
-      "Discover the magnificent Sigiriya Rock Fortress, one of Sri Lanka's most iconic UNESCO World Heritage sites. This ancient citadel rises majestically from the jungle, offering breathtaking views and fascinating history of King Kashyapa's 5th-century palace complex.",
-    activities: [
-      {
-        time: "6:00 AM",
-        title: "Sigiriya Rock Fortress",
-        location: "Sigiriya",
-        description: "Climb the ancient rock fortress at sunrise",
-        image: sigiriyaRock,
-        duration: "5 hrs"
-      }
-    ]
+      "Discover the magnificent Sigiriya Rock Fortress, one of Sri Lanka's most iconic UNESCO World Heritage sites. This ancient citadel rises majestically from the jungle, offering breathtaking views and fascinating history of King Kashyapa's 5th-century palace complex."
   },
   {
     day: 4,
@@ -137,17 +107,7 @@ export const srilankaData = {
     location: "Kandy",
     heroImage: srilankaTea,
     description:
-      "Journey to the hill capital of Kandy, Sri Lanka's cultural heart and last kingdom of the ancient kings. This UNESCO World Heritage city is home to the sacred Temple of the Tooth Relic, beautiful botanical gardens, and stunning lake views surrounded by misty hills.",
-    activities: [
-      {
-        time: "9:00 AM",
-        title: "Temple of the Tooth Relic",
-        location: "Kandy",
-        description: "Visit the sacred temple and explore Kandy",
-        image: srilankaTea,
-        duration: "4 hrs"
-      }
-    ]
+      "Journey to the hill capital of Kandy, Sri Lanka's cultural heart and last kingdom of the ancient kings. This UNESCO World Heritage city is home to the sacred Temple of the Tooth Relic, beautiful botanical gardens, and stunning lake views surrounded by misty hills."
   },
   {
     day: 5,
@@ -156,17 +116,7 @@ export const srilankaData = {
     location: "Nuwara Eliya",
     heroImage: srilankaTea,
     description:
-      "Experience Sri Lanka's enchanting tea country in Nuwara Eliya, known as 'Little England' for its cool climate and colonial architecture. Journey through emerald tea plantations, visit a working tea factory, and ride the scenic hill country train through misty mountains.",
-    activities: [
-      {
-        time: "8:00 AM",
-        title: "Tea Plantation Tour",
-        location: "Nuwara Eliya",
-        description: "Tour tea plantations and factory",
-        image: srilankaTea,
-        duration: "6 hrs"
-      }
-    ]
+      "Experience Sri Lanka's enchanting tea country in Nuwara Eliya, known as 'Little England' for its cool climate and colonial architecture. Journey through emerald tea plantations, visit a working tea factory, and ride the scenic hill country train through misty mountains."
   },
   {
     day: 6,
@@ -175,17 +125,7 @@ export const srilankaData = {
     location: "Ella",
     heroImage: srilankaHero,
     description:
-      "Experience one of the world's most beautiful train journeys from Nuwara Eliya to Ella, winding through tea plantations and mountain valleys. In Ella, discover stunning viewpoints, waterfalls, and visit an ethical elephant sanctuary.",
-    activities: [
-      {
-        time: "7:00 AM",
-        title: "Scenic Train Journey",
-        location: "Ella",
-        description: "Beautiful train journey and viewpoints",
-        image: srilankaHero,
-        duration: "8 hrs"
-      }
-    ]
+      "Experience one of the world's most beautiful train journeys from Nuwara Eliya to Ella, winding through tea plantations and mountain valleys. In Ella, discover stunning viewpoints, waterfalls, and visit an ethical elephant sanctuary."
   },
   {
     day: 7,
@@ -194,17 +134,7 @@ export const srilankaData = {
     location: "Yala National Park",
     heroImage: srilankaBeach,
     description:
-      "Embark on an exciting wildlife safari in Yala National Park, home to the highest density of leopards in the world. Spot elephants, sloth bears, crocodiles, and over 200 bird species in this incredible biodiversity hotspot.",
-    activities: [
-      {
-        time: "5:00 AM",
-        title: "Wildlife Safari",
-        location: "Yala National Park",
-        description: "Safari to spot leopards and wildlife",
-        image: srilankaBeach,
-        duration: "6 hrs"
-      }
-    ]
+      "Embark on an exciting wildlife safari in Yala National Park, home to the highest density of leopards in the world. Spot elephants, sloth bears, crocodiles, and over 200 bird species in this incredible biodiversity hotspot."
   },
   {
     day: 8,
@@ -213,17 +143,7 @@ export const srilankaData = {
     location: "Galle",
     heroImage: srilankaBeach,
     description:
-      "Explore the UNESCO World Heritage site of Galle Fort, a perfectly preserved Dutch colonial city surrounded by massive ramparts. Wander cobblestone streets, visit art galleries, and enjoy stunning ocean views from the fort walls.",
-    activities: [
-      {
-        time: "9:00 AM",
-        title: "Galle Fort Exploration",
-        location: "Galle",
-        description: "Explore Dutch colonial heritage and beaches",
-        image: srilankaBeach,
-        duration: "5 hrs"
-      }
-    ]
+      "Explore the UNESCO World Heritage site of Galle Fort, a perfectly preserved Dutch colonial city surrounded by massive ramparts. Wander cobblestone streets, visit art galleries, and enjoy stunning ocean views from the fort walls."
   },
   {
     day: 9,
@@ -232,17 +152,7 @@ export const srilankaData = {
     location: "Colombo",
     heroImage: srilankaColombo,
     description:
-      "Return to Colombo for your final day in Sri Lanka. Enjoy last-minute shopping, visit remaining sights, or simply relax before your departure. Take with you unforgettable memories of this incredible island nation.",
-    activities: [
-      {
-        time: "10:00 AM",
-        title: "Final Day Activities",
-        location: "Colombo",
-        description: "Shopping and departure preparations",
-        image: srilankaColombo,
-        duration: "4 hrs"
-      }
-    ]
+      "Return to Colombo for your final day in Sri Lanka. Enjoy last-minute shopping, visit remaining sights, or simply relax before your departure. Take with you unforgettable memories of this incredible island nation."
   }
 ]
 ,
