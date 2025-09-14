@@ -16,8 +16,11 @@ import {
 import Footer from "@/components/common/Footer";
 
 // Import static images
-import parisHero from "@/assets/paris-hero.jpg";
 import parisSeine from "@/assets/paris-seine.jpg";
+
+import landingHero from "@/assets/landing-hero.jpg"
+
+
 
 
 // Memoized destination card component  
@@ -150,13 +153,12 @@ export default memo(function LandingPage() {
 
       {/* Hero Section */}
       <HeroSection
-        backgroundImage={parisHero}
+        backgroundImage={landingHero}
         title="Asia Discovery Tours"
         subtitle="Discover hidden gems and iconic landmarks with curated experiences designed for the modern traveler"
-        tag="TRENDING DESTINATION"
-        showCta={true}
-        ctaText="Book Now"
-      />
+        showCta={false}
+        overlay="light"
+          />
 
       {/* Featured Tours */}
       <section className="py-16 bg-background">

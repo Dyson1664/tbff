@@ -7,6 +7,10 @@ import srilankaHero from "@/assets/srilanka-hero.jpg";
 import philippinesHero from "@/assets/philippines-hero.jpg";
 import colombiaHero from "@/assets/colombia-hero.jpg";
 import indiaHero from "@/assets/india-hero.jpg";
+
+import indiaDay11 from "@/assets/india-day11-main-taj-mahal.jpg";
+
+
 import bhutanHero from "@/assets/bhutan-hero.jpg";
 import vietnamHero from "@/assets/vietnam-hero.jpg";
 import { Star, MapPin, Users, Shield, Compass, Globe, Mail } from "lucide-react";
@@ -53,33 +57,33 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     slug: "japan",
     title: "Japan Journey",
     location: "Tokyo, Japan",
-    duration: "10 days",
+    duration: "7 days",
     rating: 4.9,
-    reviews: 142,
+    reviews: "",
     price: "From $2,499",
     image: japanHero,
     tag: "POPULAR"
   },
   {
     id: 2,
-    slug: "thailand",
-    title: "Thailand Discovery",
-    location: "Bangkok, Thailand", 
-    duration: "7 days",
-    rating: 4.8,
-    reviews: 89,
-    price: "From $950",
-    image: thailandHero,
-    tag: "NEW"
+    slug: "india-journey",
+    image: indiaDay11,
+    title: "India Journey",
+    location: "India",
+    duration: "13 days",
+    price: "$1,599",
+    rating: 4.9,
+    reviews: "",
+    tag: "NEW",
   },
   {
     id: 3,
     slug: "sri-lanka",
     title: "Sri Lanka Explorer",
     location: "Colombo, Sri Lanka",
-    duration: "6 days", 
+    duration: "9 days",
     rating: 4.7,
-    reviews: 156,
+    reviews: "",
     price: "From $850",
     image: srilankaHero,
     tag: "FEATURED"

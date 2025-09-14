@@ -15,7 +15,7 @@ interface HeroSectionProps {
   onCtaClick?: () => void;
   tripSlug?: string;
   height?: string;
-  overlay?: "light" | "medium" | "dark";
+  overlay?: "none" | "light" | "medium" | "dark";
 }
 
 export const HeroSection = ({
@@ -34,6 +34,7 @@ export const HeroSection = ({
   overlay = "medium"
 }: HeroSectionProps) => {
   const overlayClass = {
+    none:  "bg-transparent",
     light: "bg-black/20",
     medium: "bg-black/40",
     dark: "bg-black/60"

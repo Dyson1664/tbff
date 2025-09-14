@@ -40,7 +40,7 @@ export const TripCard = memo(({
   buttonVariant = "outline",
   showBookNow = false
 }: TripCardProps) => (
-  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
+    <Card className="overflow-hidden rounded-3xl border shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group">
     <div className="relative aspect-[4/3] overflow-hidden">
       <img 
         src={image} 
