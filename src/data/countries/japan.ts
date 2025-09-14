@@ -287,6 +287,120 @@ export const japanData = {
         duration: "2 Hours 15 Minutes",
         distance: "476 km"
       }
+    },
+    {
+      day: 5,
+      date: "May 19, 2024",
+      title: "Day 5 - To Be Added",
+      location: "Kyoto, Japan",
+      heroImage: japanGarden,
+      description: "Content to be added later.",
+      activities: [
+        {
+          time: "9:00 AM",
+          title: "Activity to be added",
+          location: "Kyoto",
+          description: "Details to be added later.",
+          image: japanGarden,
+          duration: "3 hrs"
+        }
+      ],
+      experiences: [
+        {
+          title: "Experience to be added",
+          description: "Details to be added later.",
+          image: japanGarden
+        }
+      ],
+      accommodation: {
+        name: "Accommodation TBD",
+        rating: "To be added",
+        roomTypes: [
+          "Room details to be added"
+        ]
+      },
+      transportation: {
+        from: "Location A",
+        to: "Location B",
+        duration: "TBD",
+        distance: "TBD"
+      }
+    },
+    {
+      day: 6,
+      date: "May 20, 2024",
+      title: "Day 6 - To Be Added",
+      location: "Kyoto, Japan",
+      heroImage: japanSushi,
+      description: "Content to be added later.",
+      activities: [
+        {
+          time: "9:00 AM",
+          title: "Activity to be added",
+          location: "Kyoto",
+          description: "Details to be added later.",
+          image: japanSushi,
+          duration: "3 hrs"
+        }
+      ],
+      experiences: [
+        {
+          title: "Experience to be added",
+          description: "Details to be added later.",
+          image: japanSushi
+        }
+      ],
+      accommodation: {
+        name: "Accommodation TBD",
+        rating: "To be added",
+        roomTypes: [
+          "Room details to be added"
+        ]
+      },
+      transportation: {
+        from: "Location A",
+        to: "Location B",
+        duration: "TBD",
+        distance: "TBD"
+      }
+    },
+    {
+      day: 7,
+      date: "May 21, 2024",
+      title: "Day 7 - To Be Added",
+      location: "Japan",
+      heroImage: japanTorii,
+      description: "Content to be added later.",
+      activities: [
+        {
+          time: "9:00 AM",
+          title: "Activity to be added",
+          location: "Japan",
+          description: "Details to be added later.",
+          image: japanTorii,
+          duration: "3 hrs"
+        }
+      ],
+      experiences: [
+        {
+          title: "Experience to be added",
+          description: "Details to be added later.",
+          image: japanTorii
+        }
+      ],
+      accommodation: {
+        name: "Accommodation TBD",
+        rating: "To be added",
+        roomTypes: [
+          "Room details to be added"
+        ]
+      },
+      transportation: {
+        from: "Location A",
+        to: "Location B",
+        duration: "TBD",
+        distance: "TBD"
+      }
     }
   ],
   summary: {

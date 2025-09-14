@@ -84,7 +84,7 @@ export interface ItineraryData {
   heroImage: string;
   aboutDescription: string[];
   aboutImages: string[];
-  itinerary: ItineraryDay[];
+  itinerary: DayItinerary[];
   summary: TourSummary;
   included: IncludedCategory[];
   faqs: FAQ[];

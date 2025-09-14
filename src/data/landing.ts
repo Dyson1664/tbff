@@ -59,7 +59,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     location: "Tokyo, Japan",
     duration: "7 days",
     rating: 4.9,
-    reviews: "",
+    reviews: 142,
     price: "From $2,499",
     image: japanHero,
     tag: "POPULAR"
@@ -73,7 +73,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     duration: "13 days",
     price: "$1,599",
     rating: 4.9,
-    reviews: "",
+    reviews: 89,
     tag: "NEW",
   },
   {
@@ -83,7 +83,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     location: "Colombo, Sri Lanka",
     duration: "9 days",
     rating: 4.7,
-    reviews: "",
+    reviews: 156,
     price: "From $850",
     image: srilankaHero,
     tag: "FEATURED"
