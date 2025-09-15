@@ -71,7 +71,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     title: "India Journey",
     location: "India",
     duration: "13 days",
-    price: "$1,599",
+    price: "from $1,599",
     rating: 4.9,
     reviews: 89,
     tag: "NEW",
@@ -153,6 +153,6 @@ export const FEATURES: readonly Feature[] = [
 // Tour route mappings for efficient lookups
 export const TOUR_ROUTES: Record<number, string> = {
   1: "/japan-itinerary",
-  2: "/thailand-itinerary", 
+  2: "/india-itinerary", 
   3: "/srilanka-itinerary"
 } as const;
