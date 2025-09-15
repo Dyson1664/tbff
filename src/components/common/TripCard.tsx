@@ -40,23 +40,23 @@ export const TripCard = memo(({
           </div>
         )}
       </div>
-      <CardContent className="p-6">
-        <div className="flex items-start justify-between mb-2">
-          <h3 className="text-xl font-semibold text-foreground">{title}</h3>
+      <CardContent className="p-8">
+        <div className="mb-4">
+          <h3 className="text-2xl font-bold text-foreground mb-3">{title}</h3>
+          <div className="flex items-center gap-2 text-muted-foreground mb-3">
+            <MapPin className="w-5 h-5" />
+            <span className="text-base font-medium">{location}</span>
+          </div>
+          <p className="text-base text-muted-foreground font-medium">
+            {duration}
+          </p>
         </div>
-        <div className="flex items-center gap-2 text-muted-foreground mb-2">
-          <MapPin className="w-4 h-4" />
-          <span className="text-sm">{location}</span>
-        </div>
-        <p className="text-sm text-muted-foreground mb-4">
-          {duration}
-        </p>
         {description && (
-          <p className="text-sm text-muted-foreground mb-4">{description}</p>
+          <p className="text-base text-muted-foreground leading-relaxed mb-6">{description}</p>
         )}
-        <div className="flex items-center justify-between">
-          <span className="text-lg font-bold text-foreground">{price}</span>
-          {/* No button — entire card is clickable */}
+        <div className="pt-4 border-t border-border">
+          <span className="text-2xl font-bold text-foreground">{price}</span>
+          <p className="text-sm text-muted-foreground mt-1">per person</p>
         </div>
       </CardContent>
     </Card>

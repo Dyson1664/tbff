@@ -106,14 +106,11 @@ export default memo(function LandingPage() {
       <TripCard 
         key={tour.id} 
         id={tour.id.toString()}
-        slug={tour.slug}
         image={tour.image}
         title={tour.title}
         location={tour.location}
         duration={tour.duration}
         price={tour.price}
-        rating={tour.rating.toString()}
-        reviews={tour.reviews.toString()}
         tag={tour.tag}
         route={TOUR_ROUTES[tour.id]}
       />
