@@ -44,7 +44,7 @@ export const TripCard = memo(({
         <div>
           <h3 className="text-xl font-bold text-foreground mb-2 tracking-tight">{title}</h3>
           <div className="flex items-center gap-2 text-muted-foreground mb-3">
-            <span className="text-base">🌍</span>
+            <span className="text-base">📍</span>
             <span className="text-sm font-medium">{location.split(',').pop()?.trim()}</span>
           </div>
           <div className="flex items-center justify-between">
