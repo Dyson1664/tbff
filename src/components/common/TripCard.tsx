@@ -41,9 +41,9 @@ export const TripCard = memo(({
         )}
       </div>
       <CardContent className="p-6">
-        <div className="mb-3">
+        <div>
           <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
-          <div className="flex items-center gap-2 text-muted-foreground mb-2">
+          <div className="flex items-center gap-2 text-muted-foreground mb-3">
             <MapPin className="w-4 h-4" />
             <span className="text-sm">{location.split(',').pop()?.trim()}</span>
           </div>
@@ -54,7 +54,7 @@ export const TripCard = memo(({
             <span className="text-lg font-bold text-foreground">
               {price.replace(/^from\s*/i, '').trim() !== price ? (
                 <>
-                  <span className="font-normal text-base">from </span>
+                  <span className="font-normal text-base">From </span>
                   {price.replace(/^from\s*/i, '').trim()}
                 </>
               ) : (
@@ -63,7 +63,7 @@ export const TripCard = memo(({
             </span>
           </div>
           {description && (
-            <p className="text-sm text-muted-foreground mt-4">{description}</p>
+            <p className="text-sm text-muted-foreground mt-3">{description}</p>
           )}
         </div>
       </CardContent>
