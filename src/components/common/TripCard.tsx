@@ -40,23 +40,25 @@ export const TripCard = memo(({
           </div>
         )}
       </div>
-      <CardContent className="p-8">
-        <div className="mb-4">
-          <h3 className="text-2xl font-bold text-foreground mb-3">{title}</h3>
-          <div className="flex items-center gap-2 text-muted-foreground mb-3">
-            <MapPin className="w-5 h-5" />
-            <span className="text-base font-medium">{location}</span>
+      <CardContent className="p-6">
+        <div className="flex items-start justify-between mb-3">
+          <div className="flex-1">
+            <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
+            <div className="flex items-center gap-2 text-muted-foreground mb-2">
+              <MapPin className="w-4 h-4" />
+              <span className="text-sm">{location.split(',').pop()?.trim()}</span>
+            </div>
+            <p className="text-sm text-muted-foreground mb-4">
+              {duration}
+            </p>
+            {description && (
+              <p className="text-sm text-muted-foreground">{description}</p>
+            )}
           </div>
-          <p className="text-base text-muted-foreground font-medium">
-            {duration}
-          </p>
-        </div>
-        {description && (
-          <p className="text-base text-muted-foreground leading-relaxed mb-6">{description}</p>
-        )}
-        <div className="pt-4 border-t border-border">
-          <span className="text-2xl font-bold text-foreground">{price}</span>
-          <p className="text-sm text-muted-foreground mt-1">per person</p>
+          <div className="text-right ml-4">
+            <span className="text-xl font-bold text-foreground">{price}</span>
+            <p className="text-xs text-muted-foreground mt-1">per person</p>
+          </div>
         </div>
       </CardContent>
     </Card>
