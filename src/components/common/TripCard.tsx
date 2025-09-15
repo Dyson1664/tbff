@@ -49,7 +49,7 @@ export const TripCard = memo(({
           <span className="text-sm">{location}</span>
         </div>
         <p className="text-sm text-muted-foreground mb-4">
-          {duration}{reviews && ` • ${reviews} reviews`}
+          {duration}
         </p>
         {description && (
           <p className="text-sm text-muted-foreground mb-4">{description}</p>
