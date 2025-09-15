@@ -42,10 +42,10 @@ export const TripCard = memo(({
       </div>
       <CardContent className="p-6">
         <div>
-          <h3 className="text-xl font-semibold text-foreground mb-2">{title}</h3>
+          <h3 className="text-xl font-bold text-foreground mb-2 tracking-tight">{title}</h3>
           <div className="flex items-center gap-2 text-muted-foreground mb-3">
-            <MapPin className="w-4 h-4" />
-            <span className="text-sm">{location.split(',').pop()?.trim()}</span>
+            <span className="text-base">🌍</span>
+            <span className="text-sm font-medium">{location.split(',').pop()?.trim()}</span>
           </div>
           <div className="flex items-center justify-between">
             <p className="text-sm text-muted-foreground">
