@@ -47,7 +47,13 @@ const Footer = () => {
             <h4 className="font-semibold mb-6 text-primary">Help</h4>
             <div className="space-y-3 text-sm">
               <a href="#" className="block hover:text-primary transition-colors">Contact Us</a>
-              <a href="#" className="block hover:text-primary transition-colors">FAQs</a>
+              <Link 
+                to="/faqs" 
+                className="block hover:text-primary transition-colors"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                FAQs
+              </Link>
               <a href="#" className="block hover:text-primary transition-colors">Newsletter</a>
               <a href="#" className="block hover:text-primary transition-colors">Terms & Conditions</a>
             </div>
@@ -69,7 +75,13 @@ const Footer = () => {
                 Travel Safety
               </Link>
               <a href="#" className="block hover:text-primary transition-colors">Travel Information</a>
-              <a href="#" className="block hover:text-primary transition-colors">FAQs</a>
+              <Link 
+                to="/faqs" 
+                className="block hover:text-primary transition-colors"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                FAQs
+              </Link>
             </div>
           </div>
 
