@@ -197,9 +197,11 @@ const Navbar = memo(() => {
             </div>
             */}
 
-            <Button variant="ghost" className="text-foreground hover:text-primary">
-              About
-            </Button>
+            <Link to="/about">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                About
+              </Button>
+            </Link>
             <Button variant="ghost" className="text-foreground hover:text-primary">
               Contact
             </Button>
@@ -260,9 +262,11 @@ const Navbar = memo(() => {
                 )}
               </div>
                 */}
-              <Button variant="ghost" className="w-full justify-start text-foreground hover:text-primary">
-                About
-              </Button>
+              <Link to="/about">
+                <Button variant="ghost" className="w-full justify-start text-foreground hover:text-primary">
+                  About
+                </Button>
+              </Link>
               <Button variant="ghost" className="w-full justify-start text-foreground hover:text-primary">
                 Contact
               </Button>
