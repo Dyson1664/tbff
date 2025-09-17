@@ -4,44 +4,10 @@ import Footer from "@/components/common/Footer";
 import { HeroSection } from "@/components/common/HeroSection";
 import landingHero from "@/assets/landing-hero.jpg";
 
-// Team member data
-const TEAM_MEMBERS = [
-  {
-    name: "Darrin",
-    title: "Spoofer",
-    description: "Driven by his passion for travel and adventure, Darrin brings over 8 years of experience in the travel industry. He started Imagine Beyond Travel in January 2023, committed to providing top-notch customer service and always looking for ways to make the travel experience even better.",
-    avatar: "D",
-    image: null
-  },
-  {
-    name: "Dave",
-    title: "spoofer", 
-    description: "With over 6 years of experience in operations and customer service, Dave ensures every detail of your journey is perfectly planned. He combines his business expertise with a passion for creating unique and memorable travel experiences for all travelers.",
-    avatar: "D",
-    image: null
-  }
-];
-
-const TeamMemberCard = memo(({ member }: { member: typeof TEAM_MEMBERS[0] }) => (
-  <div className="text-center">
-    <div className="w-32 h-32 mx-auto mb-6 relative">
-      {member.image ? (
-        <img 
-          src={member.image} 
-          alt={member.name}
-          className="w-full h-full rounded-full object-cover border-4 border-white shadow-lg"
-        />
-      ) : (
-        <div className="w-full h-full bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg">
-          <span className="text-primary-foreground font-bold text-3xl">{member.avatar}</span>
-        </div>
-      )}
-    </div>
-    <h3 className="text-xl font-bold text-foreground mb-2">{member.name}</h3>
-    <p className="text-primary font-medium mb-4">{member.title}</p>
-    <p className="text-muted-foreground leading-relaxed max-w-sm mx-auto">{member.description}</p>
-  </div>
-));
+// Founders data
+const FOUNDERS_INFO = {
+  description: "Founded in January 2023 by Darrin and Dave, Imagine Beyond Travel was born from a shared passion for creating extraordinary travel experiences. With their combined 14+ years of experience in the travel industry and operations, they are committed to providing exceptional customer service while continuously innovating to make every journey even more memorable."
+};
 
 export default memo(function AboutUs() {
   return (
@@ -122,18 +88,28 @@ export default memo(function AboutUs() {
         </div>
       </section>
 
-      {/* Meet Our Team */}
+      {/* Meet Our Founders */}
       <section className="py-16 bg-background">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Team</h2>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Founders</h2>
             <p className="text-lg text-muted-foreground">The passionate people behind your amazing travel experiences</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            {TEAM_MEMBERS.map((member, index) => (
-              <TeamMemberCard key={`${member.name}-${index}`} member={member} />
-            ))}
+          <div className="text-center">
+            <div className="flex justify-center items-center mb-8 space-x-4">
+              <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg">
+                <span className="text-primary-foreground font-bold text-2xl">D</span>
+              </div>
+              <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg">
+                <span className="text-primary-foreground font-bold text-2xl">D</span>
+              </div>
+            </div>
+            <h3 className="text-2xl font-bold text-foreground mb-2">Darrin & Dave</h3>
+            <p className="text-primary font-medium mb-6">Co-Founders</p>
+            <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-lg">
+              {FOUNDERS_INFO.description}
+            </p>
           </div>
         </div>
       </section>
