@@ -216,7 +216,7 @@ const FAQs = React.memo(() => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-colors">
-              💬 Live Chat Support
+              📞 Call Us: +1-555-IBT-TRIP
             </button>
             <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-colors">
               📧 Email Us
