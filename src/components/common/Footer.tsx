@@ -61,7 +61,13 @@ const Footer = () => {
               >
                 Pre-departure Info
               </Link>
-              <a href="#" className="block hover:text-primary transition-colors">Travel Safety</a>
+              <Link 
+                to="/travel-safety" 
+                className="block hover:text-primary transition-colors"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Travel Safety
+              </Link>
               <a href="#" className="block hover:text-primary transition-colors">Travel Information</a>
               <a href="#" className="block hover:text-primary transition-colors">FAQs</a>
             </div>

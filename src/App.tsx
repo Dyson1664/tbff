@@ -22,6 +22,7 @@ import BhutanDestination from "./pages/BhutanDestination";
 import IndiaItinerary from "./pages/IndiaItinerary";
 import AboutUs from "./pages/AboutUs";
 import PreDepartureInfo from "./pages/PreDepartureInfo";
+import TravelSafety from "./pages/TravelSafety";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -57,6 +58,7 @@ const App = () => (
           {/* Static Pages */}
           <Route path="/about" element={<AboutUs />} />
           <Route path="/pre-departure" element={<PreDepartureInfo />} />
+          <Route path="/travel-safety" element={<TravelSafety />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
