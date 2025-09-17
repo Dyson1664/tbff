@@ -86,7 +86,6 @@ const Footer = () => {
               >
                 Travel Safety
               </Link>
-              <a href="#" className="block hover:text-primary transition-colors">Travel Information</a>
             </div>
           </div>
 
