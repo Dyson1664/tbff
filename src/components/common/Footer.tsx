@@ -54,7 +54,13 @@ const Footer = () => {
 
             <h4 className="font-semibold mb-6 mt-8 text-primary">Resources</h4>
             <div className="space-y-3 text-sm">
-              <Link to="/pre-departure" className="block hover:text-primary transition-colors">Pre-departure Info</Link>
+              <Link 
+                to="/pre-departure" 
+                className="block hover:text-primary transition-colors"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Pre-departure Info
+              </Link>
               <a href="#" className="block hover:text-primary transition-colors">Travel Safety</a>
               <a href="#" className="block hover:text-primary transition-colors">Travel Information</a>
               <a href="#" className="block hover:text-primary transition-colors">FAQs</a>

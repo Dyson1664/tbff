@@ -138,28 +138,6 @@ const PreDepartureInfo = React.memo(() => {
         </div>
       </section>
 
-      {/* Emergency Contacts */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-            Emergency Contacts 🚨
-          </h2>
-          <div className="bg-card rounded-lg p-8 border border-border">
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold text-lg text-card-foreground mb-4">24/7 Travel Support</h3>
-                <p className="text-2xl font-bold text-primary mb-2">+1-555-IBT-HELP</p>
-                <p className="text-muted-foreground">Available round the clock for any travel emergencies</p>
-              </div>
-              <div>
-                <h3 className="font-semibold text-lg text-card-foreground mb-4">Email Support</h3>
-                <p className="text-lg font-semibold text-primary mb-2">emergency@imaginebeyondtravel.com</p>
-                <p className="text-muted-foreground">For non-urgent matters and documentation</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
