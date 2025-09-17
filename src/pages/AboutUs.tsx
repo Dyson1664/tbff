@@ -8,14 +8,14 @@ import landingHero from "@/assets/landing-hero.jpg";
 const TEAM_MEMBERS = [
   {
     name: "Darrin",
-    title: "Founder & CEO",
+    title: "Spoofer",
     description: "Driven by his passion for travel and adventure, Darrin brings over 8 years of experience in the travel industry. He started Imagine Beyond Travel in January 2023, committed to providing top-notch customer service and always looking for ways to make the travel experience even better.",
     avatar: "D",
     image: null
   },
   {
     name: "Dave",
-    title: "Co-Founder & Operations Manager", 
+    title: "spoofer", 
     description: "With over 6 years of experience in operations and customer service, Dave ensures every detail of your journey is perfectly planned. He combines his business expertise with a passion for creating unique and memorable travel experiences for all travelers.",
     avatar: "D",
     image: null
