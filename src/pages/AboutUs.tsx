@@ -102,7 +102,7 @@ export default memo(function AboutUs() {
               <span className="text-muted-foreground text-sm">Team Photo</span>
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-2">Darrin & Dave</h3>
-            <p className="text-primary font-medium mb-6">Co-Founders</p>
+            <p className="text-primary font-medium mb-6">Spoofer 1 and spoofer 2</p>
             <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-lg">
               {FOUNDERS_INFO.description}
             </p>
