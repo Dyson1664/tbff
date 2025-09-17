@@ -88,22 +88,18 @@ export default memo(function AboutUs() {
         </div>
       </section>
 
-      {/* Meet Our Founders */}
+      {/* Meet Our Team */}
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Founders</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Team</h2>
             <p className="text-lg text-muted-foreground">The passionate people behind your amazing travel experiences</p>
           </div>
           
           <div className="text-center">
-            <div className="flex justify-center items-center mb-8 space-x-4">
-              <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg">
-                <span className="text-primary-foreground font-bold text-2xl">D</span>
-              </div>
-              <div className="w-24 h-24 bg-primary rounded-full flex items-center justify-center border-4 border-white shadow-lg">
-                <span className="text-primary-foreground font-bold text-2xl">D</span>
-              </div>
+            {/* Team Photo Placeholder */}
+            <div className="w-64 h-48 mx-auto mb-8 bg-muted rounded-2xl border-4 border-white shadow-lg flex items-center justify-center">
+              <span className="text-muted-foreground text-sm">Team Photo</span>
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-2">Darrin & Dave</h3>
             <p className="text-primary font-medium mb-6">Co-Founders</p>
