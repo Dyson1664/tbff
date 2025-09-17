@@ -55,7 +55,13 @@ const Footer = () => {
                 FAQs
               </Link>
               <a href="#" className="block hover:text-primary transition-colors">Newsletter</a>
-              <a href="#" className="block hover:text-primary transition-colors">Terms & Conditions</a>
+              <Link 
+                to="/terms" 
+                className="block hover:text-primary transition-colors"
+                onClick={() => window.scrollTo(0, 0)}
+              >
+                Terms & Conditions
+              </Link>
             </div>
 
             <h4 className="font-semibold mb-6 mt-8 text-primary">Resources</h4>
@@ -138,7 +144,13 @@ const Footer = () => {
         <div className="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-gray-400">&copy; 2025 Imagine Beyond Travel. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-400">
-            <a href="#" className="hover:text-primary transition-colors">Terms & Conditions</a>
+            <Link 
+              to="/terms" 
+              className="hover:text-primary transition-colors"
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Terms & Conditions
+            </Link>
             <span>•</span>
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
           </div>

@@ -24,6 +24,7 @@ import AboutUs from "./pages/AboutUs";
 import PreDepartureInfo from "./pages/PreDepartureInfo";
 import TravelSafety from "./pages/TravelSafety";
 import FAQs from "./pages/FAQs";
+import TermsConditions from "./pages/TermsConditions";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -61,6 +62,7 @@ const App = () => (
           <Route path="/pre-departure" element={<PreDepartureInfo />} />
           <Route path="/travel-safety" element={<TravelSafety />} />
           <Route path="/faqs" element={<FAQs />} />
+          <Route path="/terms" element={<TermsConditions />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
