@@ -14,8 +14,9 @@ export const thailandData = {
   title: "Thailand Discovery",
   subtitle: "Experience the Land of Smiles through ancient temples, vibrant markets, and pristine beaches",
   location: "Thailand",
-  duration: "8 days",
+  duration: "9 days",
   heroImage: thailandHero,
+  route: ["Bangkok", "Railay Beach", "Phi Phi Islands", "Phuket"],
   aboutDescription: [
     "Embark on an unforgettable journey through Thailand, where ancient traditions meet modern vibrancy. From the bustling streets of Bangkok to the serene beaches of the islands, this 8-day adventure showcases the best of what Thailand has to offer.",
     "Discover golden temples, sample incredible street food, explore floating markets, and relax on world-famous beaches. This carefully curated itinerary balances cultural immersion with natural beauty, creating memories that will last a lifetime."
@@ -61,234 +62,119 @@ export const thailandData = {
   ],
   itinerary: [
     {
-      day: 1,
-      date: "April 10, 2024",
-      title: "Bangkok Arrival & Grand Palace",
-      location: "Bangkok, Thailand",
-      heroImage: thailandPalace,
-      description: "Begin your Thai adventure in the magnificent capital of Bangkok, exploring the stunning Grand Palace complex that served as the royal residence for centuries. Discover intricate golden architecture, sacred temples, and the spiritual heart of Buddhism at Wat Pho, home to the famous reclining Buddha and traditional Thai massage traditions.",
-      activities: [
-        {
-          time: "10:00 AM",
-          title: "Grand Palace Complex",
-          location: "Bangkok Old City",
-          description: "Begin your Thai adventure at the magnificent Grand Palace, home to Thai royalty for centuries. Marvel at the intricate architecture, golden spires, and the sacred Emerald Buddha.",
-          image: thailandPalace,
-          duration: "3 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "Wat Pho Temple",
-          location: "Bangkok",
-          description: "Visit the Temple of the Reclining Buddha, famous for its massive golden Buddha statue and traditional Thai massage school. Experience the spiritual heart of Buddhism in Thailand.",
-          image: thailandTemple,
-          duration: "2 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Grand Palace Majesty",
-          description: "Explore centuries of Thai royal history through stunning golden architecture and sacred spaces.",
-          image: thailandPalace
-        },
-        {
-          title: "Emerald Buddha Temple",
-          description: "Visit Thailand's most sacred Buddhist temple housing the revered Emerald Buddha.",
-          image: thailandTemple
-        },
-        {
-          title: "Traditional Massage Heritage",
-          description: "Discover the birthplace of traditional Thai massage at Wat Pho Temple.",
-          image: thailandMarket
-        }
-      ],
-      accommodation: {
-        name: "Bangkok Luxury Riverside Hotel",
-        rating: "5 Star Luxury",
-        roomTypes: [
-          "01 x Deluxe City View",
-          "01 x Royal Suite"
-        ]
-      },
-      transportation: {
-        from: "Airport",
-        to: "Bangkok Historic Center",
-        duration: "45 Minutes",
-        distance: "35 km"
-      }
-    },
-    {
-      day: 2,
-      date: "April 11, 2024",
-      title: "Floating Markets & Local Culture",
-      location: "Bangkok & Ratchaburi",
-      heroImage: thailandMarket,
-      description: "Discover Thailand's authentic water-based culture through vibrant floating markets and traditional long-tail boat journeys. Experience local life along the canals where vendors have traded for generations, offering fresh produce and traditional delicacies from their boats.",
-      activities: [
-        {
-          time: "8:00 AM",
-          title: "Damnoen Saduak Floating Market",
-          location: "Ratchaburi Province",
-          description: "Experience Thailand's famous floating market where vendors sell fresh fruits, vegetables, and local delicacies from traditional long-tail boats along the canals.",
-          image: thailandMarket,
-          duration: "4 hrs"
-        },
-        {
-          time: "3:00 PM",
-          title: "Long-tail Boat River Tour",
-          location: "Chao Phraya River",
-          description: "Cruise along Bangkok's waterways on a traditional long-tail boat, witnessing local life along the klongs (canals) and visiting riverside temples.",
-          image: thailandBoat,
-          duration: "2.5 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Floating Market Experience",
-          description: "Navigate authentic Thai floating markets on traditional long-tail boats.",
-          image: thailandMarket
-        },
-        {
-          title: "Canal Life Discovery",
-          description: "Witness local life along Bangkok's historic waterways and klongs.",
-          image: thailandBoat
-        },
-        {
-          title: "Riverside Temple Visits",
-          description: "Explore beautiful temples accessible only by water along the river.",
-          image: thailandTemple
-        }
-      ],
-      accommodation: {
-        name: "Bangkok Riverside Resort",
-        rating: "4.5 Star",
-        roomTypes: [
-          "01 x Deluxe River View",
-          "01 x Traditional Thai Suite"
-        ]
-      },
-      transportation: {
-        from: "Bangkok",
-        to: "Ratchaburi Province",
-        duration: "2 Hours",
-        distance: "80 km"
-      }
-    },
-    {
-      day: 3,
-      date: "April 12, 2024",
-      title: "Bangkok to Chiang Mai",
-      location: "Chiang Mai, Northern Thailand",
-      heroImage: thailandTemple,
-      description: "Journey north to Chiang Mai, Thailand's cultural capital surrounded by mountains and home to over 300 temples. Experience the transition from bustling Bangkok to the laid-back northern Thai culture as you explore the ancient walled city with its traditional temples, local markets, and authentic mountain atmosphere.",
-      activities: [
-        {
-          time: "9:00 AM",
-          title: "Flight to Chiang Mai",
-          location: "Bangkok to Chiang Mai",
-          description: "Take a short domestic flight to Northern Thailand's cultural capital, surrounded by mountains and home to over 300 temples.",
-          image: thailandTemple,
-          duration: "1.5 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "Chiang Mai Old City Walk",
-          location: "Chiang Mai Historic Center",
-          description: "Explore the ancient walled city, visiting traditional temples, local markets, and experiencing the laid-back northern Thai culture.",
-          image: thailandMarket,
-          duration: "3 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Ancient Walled City",
-          description: "Discover Chiang Mai's historic center with traditional Lanna architecture and culture.",
-          image: thailandTemple
-        },
-        {
-          title: "Temple Architecture Tour",
-          description: "Explore beautiful northern Thai temples with unique architectural styles.",
-          image: thailandMarket
-        },
-        {
-          title: "Mountain Culture Immersion",
-          description: "Experience authentic northern Thai culture and laid-back mountain lifestyle.",
-          image: thailandBoat
-        }
-      ],
-      accommodation: {
-        name: "Chiang Mai Heritage Hotel",
-        rating: "4.5 Star Boutique",
-        roomTypes: [
-          "01 x Lanna Style Double",
-          "01 x Traditional Mountain Suite"
-        ]
-      },
-      transportation: {
-        from: "Bangkok",
-        to: "Chiang Mai",
-        duration: "1 Hour 20 Minutes",
-        distance: "700 km"
-      }
-    },
-    {
-      day: 4,
-      date: "April 13, 2024",
-      title: "Elephant Sanctuary & Mountain Temples",
-      location: "Mae Taeng & Doi Suthep, Chiang Mai",
-      heroImage: thailandPalace,
-      description: "Experience ethical wildlife conservation at a rescued elephant sanctuary, learning about these gentle giants while participating in their care and rehabilitation. End your day with a spiritual journey to Doi Suthep Temple, perched high on a sacred mountain offering panoramic views of the Chiang Mai valley below.",
-      activities: [
-        {
-          time: "8:00 AM",
-          title: "Ethical Elephant Sanctuary",
-          location: "Mae Taeng District",
-          description: "Spend time with rescued elephants in their natural habitat, learning about conservation efforts while feeding and bathing these gentle giants.",
-          image: thailandTemple,
-          duration: "6 hrs"
-        },
-        {
-          time: "4:00 PM",
-          title: "Doi Suthep Temple",
-          location: "Doi Suthep Mountain",
-          description: "Visit this sacred mountain temple offering panoramic views of Chiang Mai valley. Climb the 309-step staircase flanked by golden nagas.",
-          image: thailandPalace,
-          duration: "2 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Elephant Conservation Experience",
-          description: "Participate in ethical elephant care and learn about wildlife conservation efforts.",
-          image: thailandTemple
-        },
-        {
-          title: "Sacred Mountain Temple",
-          description: "Climb to Doi Suthep Temple for spiritual enlightenment and panoramic valley views.",
-          image: thailandPalace
-        },
-        {
-          title: "Golden Naga Staircase",
-          description: "Ascend the famous 309-step staircase guarded by golden serpent statues.",
-          image: thailandMarket
-        }
-      ],
-      accommodation: {
-        name: "Chiang Mai Mountain Resort",
-        rating: "4 Star Eco-Resort",
-        roomTypes: [
-          "01 x Mountain View Villa",
-          "01 x Traditional Thai Pavilion"
-        ]
-      },
-      transportation: {
-        from: "Chiang Mai City",
-        to: "Mae Taeng & Doi Suthep",
-        duration: "45 Minutes",
-        distance: "30 km"
-      }
-    }
-  ],
+  day: 1,
+  date: "April 10, 2024",
+  title: "Bangkok Arrival & Welcome Dinner",
+  location: "Bangkok, Thailand",
+  heroImage: thailandPalace,
+  description:
+    "Your journey begins in the vibrant heart of Thailand. After landing at Suvarnabhumi, meet your private driver and head into the city. Check in, unwind, then board our private Sky Tower van for a scenic evening ride through neon-lit Bangkok. Gather for a welcome dinner—your first taste of Thailand’s bold flavors. Optional: rooftop swim or browse nearby night markets.",
+  meals: "Dinner",
+  accommodation: { name: "Chillex" },
+  highlights: "Airport pickup, evening city drive, welcome dinner, optional rooftop swim & night market",
+  transportation: {
+    from: "Suvarnabhumi Airport",
+    to: "Central Bangkok Hotel",
+    duration: "45 Minutes",
+    distance: "35 km"
+  }
+},
+{
+  day: 2,
+  date: "April 11, 2024",
+  title: "Bangkok by River: Wat Arun & Wat Pho",
+  location: "Bangkok, Thailand",
+  heroImage: thailandMarket,
+  description:
+    "Fuel up with breakfast, then walk to the river for a breezy Chao Phraya cruise. Step ashore to explore two icons: the shimmering spires of Wat Arun and the golden Reclining Buddha at Wat Pho. A tuk-tuk returns you to the hotel. Free time to shop boutiques, sip iced Thai tea, or relax by the pool.",
+  meals: "Breakfast",
+  accommodation: { name: "Chillex" },
+  highlights: "Chao Phraya river cruise, Wat Arun, Wat Pho, tuk-tuk ride, free afternoon"
+},
+{
+  day: 3,
+  date: "April 12, 2024",
+  title: "Fly South to Krabi • Railay Beach Arrival",
+  location: "Railay Beach, Krabi",
+  heroImage: thailandBoat,
+  description:
+    "Trade city streets for sandy shores. Catch a morning flight to Krabi, then transfer by road and long-tail boat to the car-free peninsula of Railay. Check in, hike to a cliffside viewpoint, and wander beachside walking streets. Sunset coconuts with limestone cliffs as your backdrop.",
+  meals: "Breakfast",
+  accommodation: { name: "Phutawan Resort" },
+  highlights: "Domestic flight to Krabi, long-tail boat transfer, Railay viewpoint hike, sunset on the beach"
+},
+{
+  day: 4,
+  date: "April 13, 2024",
+  title: "Railay Adventures: Kayak & Climb",
+  location: "Railay Beach, Krabi",
+  heroImage: thailandBoat,
+  description:
+    "After a poolside breakfast, adventure takes over: kayak Railay’s emerald waters, then try guided rock climbing on the famous limestone routes (all levels welcome). In the evening, catch the beach fire show and soak up Railay’s laid-back vibe.",
+  meals: "Breakfast",
+  accommodation: { name: "Phutawan Resort" },
+  highlights: "Sea kayaking, guided rock climbing, evening beach fire show"
+},{
+  day: 5,
+  date: "April 14, 2024",
+  title: "Phi Phi Arrival: Beaches & Nightlife",
+  location: "Phi Phi Islands, Krabi",
+  heroImage: thailandBoat,
+  description:
+    "High-speed ferry to the world-famous Phi Phi Islands. Check in, grab a beachfront lunch, and join a guided walk to get your bearings—or jump straight into the sea. Afternoon vibes ramp up with pool parties, village strolling, and golden-hour swims. After dark, fire dancers and beach bars light up the shoreline.",
+  meals: "Breakfast",
+  accommodation: { name: "Chaokoh Phi Phi Hotel And Resort" },
+  highlights: "Ferry transfer, guided walking tour, beachfront hangouts, pool party, island nightlife"
+},
+{
+  day: 6,
+  date: "April 15, 2024",
+  title: "Maya Bay, Pileh Lagoon & Island Hopping",
+  location: "Phi Phi Islands, Krabi",
+  heroImage: thailandBoat,
+  description:
+    "Ease into the morning—sunrise viewpoint hike or a lazy smoothie on the sand—then set sail for a full-day adventure. Swim the emerald waters of Pileh Lagoon, step onto iconic Maya Bay (conditions permitting), snorkel coral gardens, and discover hidden coves. Picnic lunch aboard before a mellow sunset return.",
+  meals: "Breakfast & Lunch",
+  accommodation: { name: "Chaokoh Phi Phi Hotel And Resort" },
+  highlights: "Maya Bay, Pileh Lagoon, full-day island hopping, snorkeling gear included"
+},
+{
+  day: 7,
+  date: "April 16, 2024",
+  title: "Phuket Arrival: Markets, Massages & Sunset",
+  location: "Phuket, Thailand",
+  heroImage: thailandBoat,
+  description:
+    "Farewell Phi Phi—ferry to Phuket, then settle into your resort. The afternoon is yours: explore Patong’s lively streets, browse local crafts, or unwind with a traditional Thai massage. As evening falls, choose beach bars, street eats, or a calm coastal stroll.",
+  meals: "Breakfast",
+  accommodation: { name: "Zenseana Resort & Spa" },
+  highlights: "Ferry to Phuket, resort downtime, Patong exploration, traditional Thai massage"
+},
+{
+  day: 8,
+  date: "April 17, 2024",
+  title: "Ethical Elephant Sanctuary & Farewell Dinner",
+  location: "Phuket, Thailand",
+  heroImage: thailandTemple,
+  description:
+    "A heartwarming day at an ethical elephant sanctuary—feed, bathe, and learn the stories behind these rescued giants while supporting real conservation work. After a rustic lunch on-site, return to the resort for pool time or last-minute shopping. In the evening, gather for a celebratory farewell dinner.",
+  meals: "Breakfast & Lunch",
+  accommodation: { name: "Zenseana Resort & Spa" },
+  highlights: "Ethical elephant sanctuary visit, hands-on care, conservation learning, farewell dinner"
+},
+{
+  day: 9,
+  date: "April 18, 2024",
+  title: "Phuket Farewell",
+  location: "Phuket, Thailand",
+  heroImage: thailandPalace,
+  description:
+    "A light tropical breakfast, one last dip, and easy check-out. Continue your Thailand travels or head to the airport for your onward flight—khop khun kha/khrap for an unforgettable escape.",
+  meals: "Breakfast",
+  accommodation: { name: "Zenseana Resort & Spa" },
+  highlights: "Tropical breakfast, beach strolls, departure day ease"
+}
+],
   summary: {
     duration: "8 Days",
     activities: "15 Experiences",

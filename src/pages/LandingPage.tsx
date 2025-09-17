@@ -113,6 +113,7 @@ export default memo(function LandingPage() {
         price={tour.price}
         tag={tour.tag}
         route={TOUR_ROUTES[tour.id]}
+        overview={tour.overview}
       />
     )), []
   );

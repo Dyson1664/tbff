@@ -26,6 +26,7 @@ export interface FeaturedTour {
   price: string;
   image: string;
   tag: string;
+  overview?: string;
 }
 
 export interface Destination {
@@ -50,7 +51,6 @@ export interface Feature {
   description: string;
 }
 
-// Extract featured tours to module level
 export const FEATURED_TOURS: readonly FeaturedTour[] = [
   {
     id: 1,
@@ -62,7 +62,9 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     reviews: 142,
     price: "From $2,499",
     image: japanHero,
-    tag: "POPULAR"
+    tag: "POPULAR",
+    overview:
+      "Neon cities to Zen temples—Tokyo to Kyoto by bullet train, sushi, and shrines."
   },
   {
     id: 2,
@@ -75,6 +77,8 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     rating: 4.9,
     reviews: 89,
     tag: "NEW",
+    overview:
+      "Handpicked highlights: Delhi, Jodhpur, Udaipur, Pushkar, Jaipur, Agra."
   },
   {
     id: 3,
@@ -86,7 +90,9 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     reviews: 156,
     price: "From $850",
     image: srilankaHero,
-    tag: "FEATURED"
+    tag: "FEATURED",
+    overview:
+      "From Colombo’s vibrant streets to Ella’s trails and Arugam Bay’s waves—Sri Lanka awaits."
   }
 ] as const;
 

@@ -13,6 +13,7 @@ export const philippinesData = {
   location: "Philippines",
   duration: "9 days",
   heroImage: philippinesHero,
+  route: ["Manila", "Port Barton", "Daracotan Island", "El Nido"],
   aboutDescription: [
     "Discover the incredible diversity of the Philippines, an archipelago of over 7,000 islands offering pristine beaches, ancient rice terraces, and warm Filipino hospitality. From the bustling streets of Manila to the remote beauty of Palawan and Banaue.",
     "Experience world-class diving, UNESCO World Heritage sites, and some of the most beautiful islands on Earth. This journey combines adventure, relaxation, and cultural immersion in one of Southeast Asia's most stunning destinations."
@@ -57,235 +58,134 @@ export const philippinesData = {
     }
   ],
   itinerary: [
+  {
+  day: 1,
+  date: "July 10, 2024",
+  title: "Welcome to the Philippines",
+  location: "Manila, Luzon",
+  heroImage: philippinesMarket,
+  description:
+    "Welcome to Manila! After arriving in the capital, a private van transfers you to our centrally located hotel. Settle in, unwind, or take a stroll around the vibrant neighborhood. At 6:00 PM, meet your guide and travel crew for a relaxed welcome meet-up, with an optional group dinner and drinks to kick things off.",
+  meals: "—",
+  accommodation: { name: "Lub D Hotel, Manila" },
+  highlights: "private airport pickup, welcome meet-up at 6:00 PM, optional group dinner & drinks, neighborhood stroll",
+  transportation: {
+    from: "Ninoy Aquino International Airport (MNL)",
+    to: "Lub D Hotel, Makati (Manila)",
+    duration: "45 Minutes",
+    distance: "15 km"
+  }
+},
+{
+  day: 2,
+  date: "July 11, 2024",
+  title: "Journey to Port Barton",
+  location: "Port Barton, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "We’re off to island life! Catch a morning flight to Puerto Princesa, then drive through scenic countryside. Along the way, stop for a heartfelt local lunch at a family home—a true taste of Filipino hospitality. By afternoon, arrive in the peaceful beach town of Port Barton. Unwind and explore at your own pace.",
+  meals: "Lunch",
+  accommodation: { name: "Holiday Suites, Port Barton" },
+  highlights: "flight to Puerto Princesa, countryside drive, home-cooked lunch with local family, Port Barton arrival & free time"
+},
+{
+  day: 3,
+  date: "July 12, 2024",
+  title: "Island Hopping in Paradise",
+  location: "Port Barton, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "A full day of island hopping in Port Barton’s turquoise waters—snorkel vibrant reefs, relax on palm-fringed beaches, and enjoy island picnics. Expect 3–4 snorkeling stops (weather dependent) and plenty of saltwater joy.",
+  meals: "Breakfast & Lunch",
+  accommodation: { name: "Holiday Suites, Port Barton" },
+  highlights: "3–4 island/snorkel spots (weather dependent), turquoise lagoons, reef snorkeling, island picnic, beach time"
+},
+{
+  day: 4,
+  date: "July 13, 2024",
+  title: "Free Day: Choose Your Own Adventure",
+  location: "Port Barton, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "Today is yours! Lounge on the beach, book a massage, or opt for adventures like scuba diving, a trip to Long Beach, or a hands-on cultural craft experience with locals.",
+  meals: "Breakfast",
+  accommodation: { name: "Holiday Suites, Port Barton" },
+  highlights: "free day, optional massage, optional scuba diving, Long Beach visit, cultural craft experience"
+}
+,
     {
-      day: 1,
-      date: "July 10, 2024",
-      title: "Manila Heritage",
-      location: "Manila, Luzon",
-      heroImage: philippinesMarket,
-      description: "Begin your Philippine adventure in Manila, where Spanish colonial heritage meets modern Filipino culture. Explore the historic walled city of Intramuros with its centuries-old churches and cobblestone streets, then discover the country's rich artistic and cultural heritage through museums and parks dedicated to national heroes.",
-      activities: [
-        {
-          time: "9:00 AM",
-          title: "Intramuros Walking Tour",
-          location: "Manila",
-          description: "Explore the historic walled city built by Spanish colonizers, featuring centuries-old churches, museums, and cobblestone streets that tell the story of Philippine history.",
-          image: philippinesMarket,
-          duration: "3 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "Rizal Park & National Museum",
-          location: "Manila",
-          description: "Visit the park dedicated to the national hero Dr. José Rizal and explore Filipino art, culture, and history at the National Museum complex.",
-          image: philippinesMarket,
-          duration: "2.5 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Intramuros Historic Walk",
-          description: "Journey through Spanish colonial architecture and centuries-old churches.",
-          image: philippinesMarket
-        },
-        {
-          title: "National Museum Discovery",
-          description: "Explore Filipino art, culture, and natural history collections.",
-          image: philippinesHero
-        },
-        {
-          title: "Rizal Park Heritage",
-          description: "Visit the memorial dedicated to Philippines' national hero Dr. José Rizal.",
-          image: philippinesRice
-        }
-      ],
-      accommodation: {
-        name: "Manila Peninsula Hotel",
-        rating: "5 Star Luxury",
-        roomTypes: [
-          "01 x Deluxe City View",
-          "01 x Executive Suite"
-        ]
-      },
-      transportation: {
-        from: "Airport",
-        to: "Manila Historic District",
-        duration: "45 Minutes",
-        distance: "15 km"
-      }
-    },
-    {
-      day: 2,
-      date: "July 11, 2024",
-      title: "Banaue Rice Terraces",
-      location: "Banaue, Northern Luzon",
-      heroImage: philippinesRice,
-      description: "Journey to the spectacular 2,000-year-old Banaue Rice Terraces, often called the 8th Wonder of the World. These ancient terraces carved into mountain slopes by the Ifugao people showcase incredible indigenous engineering and remain a living UNESCO World Heritage site where traditional farming continues today.",
-      activities: [
-        {
-          time: "7:00 AM",
-          title: "Flight to Tuguegarao",
-          location: "Manila to Banaue",
-          description: "Journey to the Cordillera Mountains in Northern Luzon, home to the spectacular 2,000-year-old Banaue Rice Terraces, often called the 8th Wonder of the World.",
-          image: philippinesRice,
-          duration: "6 hrs"
-        },
-        {
-          time: "3:00 PM",
-          title: "Rice Terraces Viewpoint",
-          location: "Banaue",
-          description: "Marvel at the ancient rice terraces carved into mountain slopes by the Ifugao people, a UNESCO World Heritage site showcasing indigenous engineering.",
-          image: philippinesRice,
-          duration: "2 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Ancient Rice Terraces",
-          description: "Marvel at 2,000-year-old terraces carved by indigenous Ifugao people.",
-          image: philippinesRice
-        },
-        {
-          title: "Ifugao Culture Experience",
-          description: "Learn about traditional farming methods and indigenous engineering marvels.",
-          image: philippinesMarket
-        },
-        {
-          title: "Mountain Village Tour",
-          description: "Explore authentic Cordillera mountain villages and local traditions.",
-          image: philippinesHero
-        }
-      ],
-      accommodation: {
-        name: "Banaue Hotel & Youth Hostel",
-        rating: "3.5 Star Heritage",
-        roomTypes: [
-          "01 x Mountain View Double",
-          "01 x Traditional Room"
-        ]
-      },
-      transportation: {
-        from: "Manila",
-        to: "Banaue",
-        duration: "8 Hours",
-        distance: "350 km"
-      }
-    },
-    {
-      day: 3,
-      date: "July 12, 2024",
-      title: "Island Paradise - Palawan",
-      location: "El Nido, Palawan",
-      heroImage: philippinesHero,
-      description: "Fly to one of the world's most beautiful island destinations, known for its dramatic limestone karsts, hidden lagoons, and crystal-clear waters. El Nido offers some of the most pristine beaches and spectacular island hopping experiences in Southeast Asia, with secluded lagoons and world-class snorkeling opportunities.",
-      activities: [
-        {
-          time: "10:00 AM",
-          title: "Flight to El Nido",
-          location: "Manila to El Nido, Palawan",
-          description: "Fly to one of the world's most beautiful island destinations, known for its limestone karsts, hidden lagoons, and crystal-clear waters.",
-          image: philippinesHero,
-          duration: "2 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "Island Hopping Tour A",
-          location: "El Nido Islands",
-          description: "Explore Big Lagoon, Small Lagoon, Secret Lagoon, and Shimizu Island. Snorkel in pristine waters and relax on secluded beaches surrounded by dramatic cliffs.",
-          image: philippinesHero,
-          duration: "6 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Hidden Lagoons Discovery",
-          description: "Kayak through secret lagoons surrounded by towering limestone cliffs.",
-          image: philippinesHero
-        },
-        {
-          title: "Pristine Beach Relaxation",
-          description: "Unwind on some of the world's most beautiful secluded beaches.",
-          image: philippinesMarket
-        },
-        {
-          title: "Snorkeling Paradise",
-          description: "Explore vibrant coral reefs and tropical marine life in crystal-clear waters.",
-          image: philippinesRice
-        }
-      ],
-      accommodation: {
-        name: "El Nido Resorts Lagen Island",
-        rating: "4.5 Star Resort",
-        roomTypes: [
-          "01 x Beach Villa",
-          "01 x Lagoon View Suite"
-        ]
-      },
-      transportation: {
-        from: "Manila",
-        to: "El Nido",
-        duration: "1.5 Hours",
-        distance: "580 km"
-      }
-    },
-    {
-      day: 4,
-      date: "July 13, 2024",
-      title: "El Nido Adventures",
-      location: "El Nido Islands, Palawan",
-      heroImage: philippinesHero,
-      description: "Continue your island adventure with more spectacular beaches and hidden gems. Visit some of the most photographed beaches in the world, including secret beaches accessible only by boat, and end your day with one of the world's most spectacular sunsets at Las Cabanas Beach with dramatic limestone cliffs as your backdrop.",
-      activities: [
-        {
-          time: "8:00 AM",
-          title: "Island Hopping Tour C",
-          location: "El Nido Islands",
-          description: "Visit Hidden Beach, Matinloc Shrine, Secret Beach, and Star Beach. Experience some of the most photographed beaches in the world with excellent snorkeling opportunities.",
-          image: philippinesHero,
-          duration: "7 hrs"
-        },
-        {
-          time: "6:00 PM",
-          title: "Sunset at Las Cabanas Beach",
-          location: "El Nido",
-          description: "Watch one of the world's most spectacular sunsets while sipping cocktails on the beach, with the dramatic limestone cliffs of El Nido as your backdrop.",
-          image: philippinesHero,
-          duration: "2 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Secret Beach Access",
-          description: "Discover hidden beaches accessible only through small openings in limestone cliffs.",
-          image: philippinesHero
-        },
-        {
-          title: "Matinloc Shrine Visit",
-          description: "Explore historic shrine perched on dramatic cliffs with panoramic ocean views.",
-          image: philippinesMarket
-        },
-        {
-          title: "World-Class Sunset",
-          description: "Experience breathtaking sunsets at Las Cabanas Beach with cocktails and limestone backdrop.",
-          image: philippinesRice
-        }
-      ],
-      accommodation: {
-        name: "El Nido Resorts Miniloc Island",
-        rating: "5 Star Luxury",
-        roomTypes: [
-          "01 x Water Cottage",
-          "01 x Deluxe Beach Villa"
-        ]
-      },
-      transportation: {
-        from: "El Nido Town",
-        to: "Remote Islands",
-        duration: "45 Minutes",
-        distance: "25 km"
-      }
-    }
-  ],
+  day: 5,
+  date: "July 14, 2024",
+  title: "Escape to Daracotan Island",
+  location: "Daracotan Island, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "Head off the grid to Daracotan Island and settle into the rustic-luxe Isla Experience. Spend the afternoon snorkeling, hammocking, and soaking up tropical island magic. If skies are clear, enjoy a bonfire on the beach tonight.",
+  meals: "Breakfast & Dinner",
+  accommodation: { name: "Isla Experience, Daracotan Island" },
+  highlights: "boat transfer to remote island, snorkeling, hammocks, beach time, bonfire under the stars"
+},
+{
+  day: 6,
+  date: "July 15, 2024",
+  title: "Shipwrecks, Village Life & Ocean Vibes",
+  location: "Daracotan Island, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "Begin with sunrise yoga or a peaceful beach walk. Choose your rhythm: snorkel a shipwreck, swim with friendly pigs, explore the local village, or learn to cook Filipino-style.",
+  meals: "Breakfast, Lunch & Dinner",
+  accommodation: { name: "Isla Experience, Daracotan Island" },
+  highlights: "sunrise yoga, shipwreck snorkel, swim with pigs, village trek, Filipino cooking demo"
+},
+{
+  day: 7,
+  date: "July 16, 2024",
+  title: "From Island Escape to El Nido",
+  location: "El Nido, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "Say goodbye to remote island life and transfer to El Nido, famed for its limestone cliffs and beach scene. Check into a stunning coastal resort, then enjoy sunset views and a rooftop cocktail.",
+  meals: "Breakfast & Lunch",
+  accommodation: { name: "Lime Resort, El Nido" },
+  highlights: "island-to-town transfer, coastal resort check-in, rooftop sunset, cocktails"
+},
+{
+  day: 8,
+  date: "July 17, 2024",
+  title: "El Nido Island Hopping Adventure",
+  location: "El Nido Islands, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "Cruise the Bacuit Archipelago’s secret lagoons, hidden coves, and jaw-dropping beaches. A full day of swimming, snorkeling, kayaking, and a delicious Filipino-style island lunch. (3–5 island stops, weather dependent.)",
+  meals: "Breakfast & Lunch",
+  accommodation: { name: "Lime Resort, El Nido" },
+  highlights: "Bacuit lagoons and coves, kayaking, snorkeling, Filipino island lunch"
+},
+{
+  day: 9,
+  date: "July 18, 2024",
+  title: "Zipline & Beach Club Bliss",
+  location: "El Nido, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "Soar the Maremegmeg Zipline with ocean views, then spend the afternoon your way—chill at Angkla Beach Club or head to Nacpan Beach for sun and swim.",
+  meals: "Breakfast",
+  accommodation: { name: "Lime Resort, El Nido" },
+  highlights: "Maremegmeg Zipline ocean views, Angkla Beach Club, Nacpan Beach (₱1000/$18 minimum spend)"
+},
+{
+  day: 10,
+  date: "July 19, 2024",
+  title: "Until Next Time",
+  location: "El Nido, Palawan",
+  heroImage: philippinesHero,
+  description:
+    "Enjoy a final beachfront coffee or one last dip. We’ll assist with transfers back to Puerto Princesa or Manila depending on your onward travel.",
+  meals: "Breakfast",
+  highlights: "free morning, farewell ocean dip, airport transfers to Puerto Princesa or Manila"
+}
+]
+,
   summary: {
     duration: "9 Days",
     activities: "16 Experiences",

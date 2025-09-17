@@ -16,6 +16,7 @@ export const japanData = {
   location: "Japan",
   duration: "10 days",
   heroImage: japanHero,
+  route: ["Tokyo", "Mt. Fuji", "Kyoto"],
   aboutDescription: [
     "Experience the mesmerizing contrast of Japan, where bullet trains glide past ancient temples and neon-lit cities coexist with serene gardens. This 10-day journey takes you from the bustling metropolis of Tokyo to the cultural heart of Kyoto.",
     "Immerse yourself in Japanese culture through tea ceremonies, temple visits, and authentic culinary experiences. From the iconic Mount Fuji to the peaceful bamboo groves, discover why Japan captivates travelers from around the world."
@@ -60,349 +61,100 @@ export const japanData = {
     }
   ],
   itinerary: [
-    {
-      day: 1,
-      date: "May 15, 2024",
-      title: "Tokyo Arrival & Modern Culture",
-      location: "Tokyo, Japan",
-      heroImage: japanTokyo,
-      description: "Begin your Japanese adventure in the heart of Tokyo, experiencing the incredible energy of modern Japan. From the world's busiest pedestrian crossing to authentic sushi crafted by master chefs, immerse yourself in the vibrant culture that defines contemporary Tokyo while discovering the city's culinary excellence.",
-      activities: [
-        {
-          time: "10:00 AM",
-          title: "Shibuya Crossing Experience",
-          location: "Shibuya, Tokyo",
-          description: "Experience the world's busiest pedestrian crossing and explore the vibrant Shibuya district with its neon lights, shopping centers, and urban energy.",
-          image: japanTokyo,
-          duration: "2 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "Authentic Sushi Experience",
-          location: "Tsukiji Outer Market",
-          description: "Learn the art of sushi making from a master chef and enjoy the freshest fish at Tokyo's famous fish market area. A true culinary adventure.",
-          image: japanSushi,
-          duration: "3 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Shibuya Crossing Culture",
-          description: "Navigate the world's busiest intersection and explore modern Tokyo's urban energy.",
-          image: japanTokyo
-        },
-        {
-          title: "Master Sushi Crafting",
-          description: "Learn traditional sushi techniques from certified master chefs.",
-          image: japanSushi
-        },
-        {
-          title: "Tsukiji Market Discovery",
-          description: "Explore Tokyo's famous fish market and taste the freshest seafood.",
-          image: japanGarden
-        }
-      ],
-      accommodation: {
-        name: "Tokyo Station Hotel",
-        rating: "5 Star Historic",
-        roomTypes: [
-          "01 x Classic Double",
-          "01 x Tokyo Station Suite"
-        ]
-      },
-      transportation: {
-        from: "Narita Airport",
-        to: "Tokyo Central",
-        duration: "60 Minutes",
-        distance: "60 km"
-      }
-    },
-    {
-      day: 2,
-      date: "May 16, 2024",
-      title: "Traditional Tokyo",
-      location: "Tokyo",
-      heroImage: japanTorii,
-      description: "Immerse yourself in Tokyo's spiritual heart where ancient traditions blend seamlessly with modern city life. Visit centuries-old temples, stroll through imperial gardens, and experience the cultural depth that makes Tokyo one of the world's most fascinating capitals.",
-      activities: [
-        {
-          time: "9:00 AM",
-          title: "Senso-ji Temple",
-          location: "Asakusa, Tokyo",
-          description: "Visit Tokyo's oldest Buddhist temple, walk through the traditional Nakamise shopping street, and experience the spiritual side of the bustling city.",
-          image: japanTorii,
-          duration: "2.5 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "East Gardens & Imperial Palace",
-          location: "Chiyoda, Tokyo",
-          description: "Stroll through the peaceful East Gardens and learn about Japan's imperial history while enjoying beautifully manicured landscapes in the heart of Tokyo.",
-          image: japanGarden,
-          duration: "3 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Senso-ji Temple Visit",
-          description: "Explore Tokyo's oldest Buddhist temple with traditional Nakamise shopping street.",
-          image: japanTorii
-        },
-        {
-          title: "Imperial Palace Gardens",
-          description: "Discover beautifully manicured landscapes and Japan's imperial history.",
-          image: japanGarden
-        },
-        {
-          title: "Traditional Culture Immersion",
-          description: "Experience authentic Japanese spirituality and customs in modern Tokyo.",
-          image: japanSushi
-        }
-      ],
-      accommodation: {
-        name: "Tokyo Imperial Hotel",
-        rating: "5 Star Luxury",
-        roomTypes: [
-          "01 x Superior Double",
-          "01 x Executive Suite"
-        ]
-      },
-      transportation: {
-        from: "Modern Tokyo",
-        to: "Traditional Districts",
-        duration: "30 Minutes",
-        distance: "8 km"
-      }
-    },
-    {
-      day: 3,
-      date: "May 17, 2024",
-      title: "Mount Fuji Day Trip",
-      location: "Mount Fuji & Fujikawaguchiko",
-      heroImage: japanTorii,
-      description: "Journey to Japan's most sacred and iconic mountain, Mount Fuji. This day trip combines natural beauty with spiritual significance as you visit the 5th station for breathtaking views and enjoy serene lake reflections. Weather permitting, capture the perfect photo of this UNESCO World Heritage site that has inspired artists and pilgrims for centuries.",
-      activities: [
-        {
-          time: "8:00 AM",
-          title: "Mount Fuji 5th Station",
-          location: "Mount Fuji",
-          description: "Journey to Japan's most iconic mountain and reach the 5th station for breathtaking views. Weather permitting, capture the perfect photo of this sacred peak.",
-          image: japanTorii,
-          duration: "4 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "Lake Kawaguchi",
-          location: "Fujikawaguchiko",
-          description: "Enjoy serene lake views with Mount Fuji reflections, ride the panoramic ropeway, and experience the natural beauty surrounding Japan's most famous mountain.",
-          image: japanGarden,
-          duration: "3 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Mount Fuji 5th Station",
-          description: "Experience breathtaking views from Japan's most sacred mountain at 2,300m elevation.",
-          image: japanTorii
-        },
-        {
-          title: "Lake Kawaguchi Reflection",
-          description: "Capture perfect Mount Fuji reflections in the serene waters of Lake Kawaguchi.",
-          image: japanGarden
-        },
-        {
-          title: "Panoramic Ropeway Ride",
-          description: "Soar above the landscape for spectacular mountain and lake panoramic views.",
-          image: japanSushi
-        }
-      ],
-      accommodation: {
-        name: "Kawaguchiko Hotel",
-        rating: "4 Star Resort",
-        roomTypes: [
-          "01 x Mountain View Double",
-          "01 x Traditional Tatami Suite"
-        ]
-      },
-      transportation: {
-        from: "Tokyo",
-        to: "Mount Fuji Area",
-        duration: "2.5 Hours",
-        distance: "120 km"
-      }
-    },
-    {
-      day: 4,
-      date: "May 18, 2024",
-      title: "Tokyo to Kyoto",
-      location: "Kyoto, Japan",
-      heroImage: japanTorii,
-      description: "Experience Japan's legendary bullet train as you journey to the ancient capital of Kyoto. Upon arrival, immerse yourself in traditional Japanese spirituality at the iconic Fushimi Inari Shrine, famous for its thousands of vermillion torii gates that create mystical tunnels winding up the sacred mountain.",
-      activities: [
-        {
-          time: "9:00 AM",
-          title: "Shinkansen Bullet Train",
-          location: "Tokyo to Kyoto",
-          description: "Experience Japan's famous bullet train, reaching speeds of up to 320 km/h while enjoying views of Mount Fuji and the Japanese countryside.",
-          image: japanTokyo,
-          duration: "3 hrs"
-        },
-        {
-          time: "2:00 PM",
-          title: "Fushimi Inari Shrine",
-          location: "Kyoto",
-          description: "Walk through thousands of vermillion torii gates winding up the mountain at this iconic shrine dedicated to the rice deity Inari.",
-          image: japanTorii,
-          duration: "3 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Shinkansen Bullet Train",
-          description: "Travel at 320 km/h on Japan's world-famous high-speed rail system.",
-          image: japanTokyo
-        },
-        {
-          title: "Fushimi Inari Torii Gates",
-          description: "Walk through thousands of vermillion torii gates on this sacred mountain path.",
-          image: japanTorii
-        },
-        {
-          title: "Ancient Capital Discovery",
-          description: "Begin exploring Kyoto's rich cultural heritage and traditional temples.",
-          image: japanGarden
-        }
-      ],
-      accommodation: {
-        name: "Kyoto Traditional Ryokan",
-        rating: "4.5 Star Heritage",
-        roomTypes: [
-          "01 x Traditional Tatami Room",
-          "01 x Premium Ryokan Suite"
-        ]
-      },
-      transportation: {
-        from: "Tokyo",
-        to: "Kyoto",
-        duration: "2 Hours 15 Minutes",
-        distance: "476 km"
-      }
-    },
-    {
-      day: 5,
-      date: "May 19, 2024",
-      title: "Day 5 - To Be Added",
-      location: "Kyoto, Japan",
-      heroImage: japanGarden,
-      description: "Content to be added later.",
-      activities: [
-        {
-          time: "9:00 AM",
-          title: "Activity to be added",
-          location: "Kyoto",
-          description: "Details to be added later.",
-          image: japanGarden,
-          duration: "3 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Experience to be added",
-          description: "Details to be added later.",
-          image: japanGarden
-        }
-      ],
-      accommodation: {
-        name: "Accommodation TBD",
-        rating: "To be added",
-        roomTypes: [
-          "Room details to be added"
-        ]
-      },
-      transportation: {
-        from: "Location A",
-        to: "Location B",
-        duration: "TBD",
-        distance: "TBD"
-      }
-    },
-    {
-      day: 6,
-      date: "May 20, 2024",
-      title: "Day 6 - To Be Added",
-      location: "Kyoto, Japan",
-      heroImage: japanSushi,
-      description: "Content to be added later.",
-      activities: [
-        {
-          time: "9:00 AM",
-          title: "Activity to be added",
-          location: "Kyoto",
-          description: "Details to be added later.",
-          image: japanSushi,
-          duration: "3 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Experience to be added",
-          description: "Details to be added later.",
-          image: japanSushi
-        }
-      ],
-      accommodation: {
-        name: "Accommodation TBD",
-        rating: "To be added",
-        roomTypes: [
-          "Room details to be added"
-        ]
-      },
-      transportation: {
-        from: "Location A",
-        to: "Location B",
-        duration: "TBD",
-        distance: "TBD"
-      }
-    },
-    {
-      day: 7,
-      date: "May 21, 2024",
-      title: "Day 7 - To Be Added",
-      location: "Japan",
-      heroImage: japanTorii,
-      description: "Content to be added later.",
-      activities: [
-        {
-          time: "9:00 AM",
-          title: "Activity to be added",
-          location: "Japan",
-          description: "Details to be added later.",
-          image: japanTorii,
-          duration: "3 hrs"
-        }
-      ],
-      experiences: [
-        {
-          title: "Experience to be added",
-          description: "Details to be added later.",
-          image: japanTorii
-        }
-      ],
-      accommodation: {
-        name: "Accommodation TBD",
-        rating: "To be added",
-        roomTypes: [
-          "Room details to be added"
-        ]
-      },
-      transportation: {
-        from: "Location A",
-        to: "Location B",
-        duration: "TBD",
-        distance: "TBD"
-      }
-    }
-  ],
+  // --- JAPAN: Days 1–4 (paste over your existing day 1–4 objects) ---
+{
+  day: 1,
+  date: "May 15, 2024",
+  title: "Tokyo Arrival & Welcome Dinner",
+  location: "Tokyo, Japan",
+  heroImage: japanTokyo,
+  description:
+    "Welcome to Tokyo! There’s no airport pickup—your guide will help with directions for the train (about 1 hour; recommended). Taxis are available but expensive. Check in, relax, or explore nearby shopping areas. Meet the guide and crew at 7:00 PM for a relaxed welcome dinner.",
+  meals: "Dinner",
+  accommodation: { name: "THE KNOT TOKYO Shinjuku" },
+  highlights: "Self-guided neighborhood strolls, optional Mario Kart street karts, shopping districts",
+  transportation: {
+    from: "Narita/Haneda Airport",
+    to: "The Knot Tokyo",
+    duration: "≈ 60 Minutes by train",
+    distance: "—"
+  }
+},
+{
+  day: 2,
+  date: "May 16, 2024",
+  title: "Asakusa Senso-ji, Sake Tasting & Ameyoko",
+  location: "Tokyo, Japan",
+  heroImage: japanTorii,
+  description:
+    "Morning at Kaminarimon Gate and Senso-ji Temple, then premium sake tasting at Gashue. Stroll Ameyoko shopping street and sample local izakayas for dinner. Most sights are walkable (10–15 min), with short train hops (10–30 min). Dinner at 7.",
+  meals: "Breakfast & Dinner",
+  accommodation: { name: "THE KNOT TOKYO Shinjuku" },
+  highlights: "Senso-ji Temple, premium sake tasting (Gashue), Ameyoko street & izakayas"
+},
+{
+  day: 3,
+  date: "May 17, 2024",
+  title: "Meiji Jingu, Harajuku & Golden Gai",
+  location: "Tokyo, Japan",
+  heroImage: japanTorii,
+  description:
+    "Train to Meiji Jingu, Tokyo’s forest shrine. Wander Harajuku’s Takeshita-dori for pop culture and fashion. Free time, then dive into Shinjuku’s tiny themed bars in Golden Gai after dinner at 7. Expect plenty of walking and multiple short train rides.",
+  meals: "Breakfast & Dinner",
+  accommodation: { name: "THE KNOT TOKYO Shinjuku" },
+  highlights: "Meiji Jingu shrine, Harajuku Takeshita-dori, Golden Gai bar alleys"
+},
+{
+  day: 4,
+  date: "May 18, 2024",
+  title: "Mt. Fuji Day (Hakone Loop) → Kyoto",
+  location: "Kyoto, Japan",
+  heroImage: japanTorii,
+  description:
+    "Mt Fuji day! Tackle the Hakone Loop with scenic transports and viewpoints (weather permitting), then continue on to Kyoto. Travel notes: walk ~10 minutes to Ueno Station; total journey to Kyoto about 2.5 hours.",
+  meals: "Breakfast",
+  accommodation: { name: "Toyoko Inn Odawara" },
+  highlights: "Hakone Loop (ropeway/cruise/Owakudani), Mt Fuji viewpoints, evening transfer to Kyoto"
+}
+// --- end ---
+,
+  {
+  day: 5,
+  date: "May 19, 2024",
+  title: "Kyoto Classics: Tea Ceremony, Kiyomizu-dera & Gion",
+  location: "Kyoto, Japan",
+  heroImage: japanGarden,
+  description:
+    "Early start for Kyoto’s iconic red gates at dawn, then a serene tea ceremony at the Hosomi Museum (short bus ride). Wander the historic lanes around Kiyomizu-dera and through the Gion district’s wooden machiya and lantern-lit alleys.",
+  meals: "Breakfast & Dinner",
+  accommodation: { name: "Prince Smart Inn Shijo Omiya" },
+  highlights: "Tea ceremony (Hosomi Museum), Kiyomizu-dera area, Gion streets & geisha district"
+},
+{
+  day: 6,
+  date: "May 20, 2024",
+  title: "Fushimi Inari, Samurai Class & Nara Park",
+  location: "Kyoto & Nara, Japan",
+  heroImage: japanTorii,
+  description:
+    "Beat the crowds at Fushimi Inari Taisha’s vermilion torii at sunrise, then try a hands-on samurai/kendo experience. In the afternoon, take the train to Nara Park to meet the friendly deer and visit historic temple grounds.",
+  meals: "Breakfast",
+  accommodation: { name: "Prince Smart Inn Shijo Omiya" },
+  highlights: "Fushimi Inari torii gates, samurai/kendo session, Nara Park & deer"
+},
+{
+  day: 7,
+  date: "May 21, 2024",
+  title: "Kyoto Checkout & Farewell",
+  location: "Kyoto, Japan",
+  heroImage: japanGarden,
+  description:
+    "Enjoy a slow morning in Kyoto—grab a last matcha or photo stroll—then check out and continue your onward journey.",
+  meals: "Breakfast",
+  highlights: "Free morning, checkout, onward travel"
+}
+]
+,
   summary: {
     duration: "10 Days",
     activities: "18 Experiences",
