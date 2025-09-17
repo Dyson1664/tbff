@@ -60,7 +60,7 @@ const Footer = () => {
               >
                 FAQs
               </Link>
-              <a href="#" className="block hover:text-primary transition-colors">Newsletter</a>
+              
               <Link 
                 to="/terms" 
                 className="block hover:text-primary transition-colors"
@@ -87,13 +87,6 @@ const Footer = () => {
                 Travel Safety
               </Link>
               <a href="#" className="block hover:text-primary transition-colors">Travel Information</a>
-              <Link 
-                to="/faqs" 
-                className="block hover:text-primary transition-colors"
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                FAQs
-              </Link>
             </div>
           </div>
 
