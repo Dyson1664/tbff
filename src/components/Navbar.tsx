@@ -139,7 +139,7 @@ const Navbar = memo(() => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 ml-2">
+          <div className="hidden md:flex items-center space-x-8 flex-1 justify-start ml-4">
             {/* Trips Dropdown */}
             <div 
               className="relative"
@@ -155,7 +155,7 @@ const Navbar = memo(() => {
               </Button>
 
               {showTripsDropdown && (
-                <div className="absolute top-full left-0 w-96 bg-background border border-gray-200 rounded-lg shadow-xl z-[100] backdrop-blur-sm">
+                <div className="absolute top-full right-0 w-96 bg-background border border-gray-200 rounded-lg shadow-xl z-[100] backdrop-blur-sm">
                   <div className="absolute -top-1 left-0 right-0 h-1"></div>
                   <div className="py-1">
                     <div className="px-4 py-3 text-sm font-medium text-muted-foreground border-b border-gray-100">
