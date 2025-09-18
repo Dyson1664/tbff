@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-5 gap-8">
           {/* Logo Section - Takes up more space */}
-          <div className="lg:col-span-2 flex items-center justify-center min-h-full">
+          <div className="lg:col-span-2">
             <div className="flex flex-col items-center text-center">
               <div className="mb-6">
                 <div className="text-primary text-2xl font-bold">Imagine beyond</div>
