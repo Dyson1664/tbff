@@ -139,7 +139,7 @@ const Navbar = memo(() => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8 mx-auto">
+          <div className="hidden md:flex items-center space-x-8 ml-auto mr-12">
 
             {/* Trips Dropdown */}
             <div 
