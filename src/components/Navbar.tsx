@@ -202,9 +202,6 @@ const Navbar = memo(() => {
                 About
               </Button>
             </Link>
-            <Button variant="ghost" className="text-foreground hover:text-primary">
-              Contact
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -267,9 +264,6 @@ const Navbar = memo(() => {
                   About
                 </Button>
               </Link>
-              <Button variant="ghost" className="w-full justify-start text-foreground hover:text-primary">
-                Contact
-              </Button>
             </div>
           </div>
         )}
