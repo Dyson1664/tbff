@@ -1,5 +1,16 @@
 // Import images
 import philippinesHero from "@/assets/philippines-hero.jpg";
+import philippinesDay03 from "@/assets/philippines-day03.jpeg";
+import philippinesDay05 from "@/assets/philippines-day05.jpeg";
+import philippinesDay04 from "@/assets/philippines-day04.jpeg";
+import philippinesDay06 from "@/assets/philippines-day06.jpeg";
+import philippinesDay08 from "@/assets/philippines-day08.jpeg";
+import philippinesDay09 from "@/assets/philippines-day09.jpeg";
+import philippinesDay10 from "@/assets/philippines-day10.jpeg";
+
+
+
+
 import philippinesRice from "@/assets/philippines-rice.jpg";
 import philippinesMarket from "@/assets/philippines-market.jpg";
 
@@ -93,7 +104,7 @@ export const philippinesData = {
   date: "July 12, 2024",
   title: "Island Hopping in Paradise",
   location: "Port Barton, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay03,
   description:
     "A full day of island hopping in Port Barton’s turquoise waters—snorkel vibrant reefs, relax on palm-fringed beaches, and enjoy island picnics. Expect 3–4 snorkeling stops (weather dependent) and plenty of saltwater joy.",
   meals: "Breakfast & Lunch",
@@ -105,7 +116,7 @@ export const philippinesData = {
   date: "July 13, 2024",
   title: "Free Day: Choose Your Own Adventure",
   location: "Port Barton, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay04,
   description:
     "Today is yours! Lounge on the beach, book a massage, or opt for adventures like scuba diving, a trip to Long Beach, or a hands-on cultural craft experience with locals.",
   meals: "Breakfast",
@@ -118,7 +129,7 @@ export const philippinesData = {
   date: "July 14, 2024",
   title: "Escape to Daracotan Island",
   location: "Daracotan Island, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay05,
   description:
     "Head off the grid to Daracotan Island and settle into the rustic-luxe Isla Experience. Spend the afternoon snorkeling, hammocking, and soaking up tropical island magic. If skies are clear, enjoy a bonfire on the beach tonight.",
   meals: "Breakfast & Dinner",
@@ -130,7 +141,7 @@ export const philippinesData = {
   date: "July 15, 2024",
   title: "Shipwrecks, Village Life & Ocean Vibes",
   location: "Daracotan Island, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay06,
   description:
     "Begin with sunrise yoga or a peaceful beach walk. Choose your rhythm: snorkel a shipwreck, swim with friendly pigs, explore the local village, or learn to cook Filipino-style.",
   meals: "Breakfast, Lunch & Dinner",
@@ -154,7 +165,7 @@ export const philippinesData = {
   date: "July 17, 2024",
   title: "El Nido Island Hopping Adventure",
   location: "El Nido Islands, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay08,
   description:
     "Cruise the Bacuit Archipelago’s secret lagoons, hidden coves, and jaw-dropping beaches. A full day of swimming, snorkeling, kayaking, and a delicious Filipino-style island lunch. (3–5 island stops, weather dependent.)",
   meals: "Breakfast & Lunch",
@@ -166,7 +177,7 @@ export const philippinesData = {
   date: "July 18, 2024",
   title: "Zipline & Beach Club Bliss",
   location: "El Nido, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay09,
   description:
     "Soar the Maremegmeg Zipline with ocean views, then spend the afternoon your way—chill at Angkla Beach Club or head to Nacpan Beach for sun and swim.",
   meals: "Breakfast",
@@ -178,7 +189,7 @@ export const philippinesData = {
   date: "July 19, 2024",
   title: "Until Next Time",
   location: "El Nido, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay10,
   description:
     "Enjoy a final beachfront coffee or one last dip. We’ll assist with transfers back to Puerto Princesa or Manila depending on your onward travel.",
   meals: "Breakfast",
@@ -187,7 +198,7 @@ export const philippinesData = {
 ]
 ,
   summary: {
-    duration: "9 Days",
+    duration: "10 Days",
     activities: "16 Experiences",
     areas: "3 Islands",
     type: "Adventure & Beach"

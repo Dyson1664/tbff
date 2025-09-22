@@ -195,150 +195,171 @@ highlights: [
     }
   },
   {
-    day: 2,
-    date: "March 16, 2024",
-    title: "Delhi Deep-Dive: Stories, Spice & Splendor",
-    location: "Delhi, India",
-    heroImage: indiaDay02,
-    description:
-      "Ease into the rhythm of the capital with the Salaam Baalak Trust City Walk, guided by young storytellers with lived experience. Step into Old Delhi at Jama Masjid, then shift gears to the serene Gurudwara Bangla Sahib with its glinting domes. Cruise past India Gate, Rashtrapati Bhavan, and Parliament through stately Lutyens' Delhi before a relaxed evening back at your hotel.",
-    galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03],
-    meals: "Breakfast",
-    accommodation: { name: "Saket 27" },
-    highlights: "Salaam Baalak City Walk, Jama Masjid, Gurudwara Bangla Sahib, India Gate tour"
-  },
-  {
-    day: 3,
-    date: "March 17, 2024",
-    title: "To Mandawa: Fresco Heaven",
-    location: "Jodhpur, Rajasthan",
-    heroImage: indiaDay03,
-    description:
-      "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan's 'open-air art gallery.' After check-in, wander Mandawa's painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies.",
-    galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03, indiaDay03Gallery04],
-    meals: "Breakfast",
-    accommodation: { name: "Hotel Heritage Mandawa" },
-    highlights: "Shekhawati frescoes, Mandawa havelis, vintage murals, village sunset walks",
-  },
-  {
-    day: 4,
-    date: "March 18, 2024",
-    title: "Mandawa → Jodhpur: Blue City Buzz",
-    location: "Jodhpur, Rajasthan",
-    heroImage: indiaDay04,
-    description:
-      "Head west as the desert hue deepens and Jodhpur's blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower) next check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a shahi samosa.",
-    galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04, indiaDay05Gallery04, indiaDay05Gallery05],
-    meals: "Breakfast",
-    accommodation: { name: "The Mandore" },
-    highlights: "Ghanta Ghar Clock Tower, spice markets, Makhania lassi, shahi samosas"
-  },
-  {
-    day: 5,
-    date: "March 19, 2024",
-    title: "Jodhpur: Forts, Cenotaphs & Desert Culture",
-    location: "Udaipur, Rajasthan",
-    heroImage: indiaDay05,
-    description:
-      "Rise for Mehrangarh Fort, soaring above the city with sweeping views, followed by the marble calm of Jaswant Thada. In the afternoon, keep exploring, or opt for a Bishnoi Village Jeep Safari for wildlife spotting and artisan visits in the dunes.",
-    galleryImages: [indiaDay05Gallery01, indiaDay05Gallery02, indiaDay05Gallery03],
-    meals: "Breakfast",
-    accommodation: { name: "The Mandore" },
-    highlights: "Mehrangarh Fort, Jaswant Thada cenotaphs, optional Bishnoi Village safari",
-  },
-  {
-    day: 6,
-    date: "March 20, 2024",
-    title: "Jodhpur → Udaipur: Marble Magic by the Lakes",
-    location: "Udaipur, Rajasthan",
-    heroImage: indiaDay06,
-    description:
-      "Slide through Aravalli hills to the intricate Ranakpur Jain Temples—1444 unique marble pillars—then sweep into Udaipur as palaces ripple across Lake Pichola. Settle into Karohi Haveli, perched on a hill with dreamy views and a beer in hand.",
-    galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03, indiaDay06Gallery04, indiaDay06Gallery05],
-    meals: "Breakfast",
-    accommodation: { name: "Karohi Haveli" },
-    highlights: "Ranakpur Jain Temples, 1444 marble pillars, Lake Pichola arrival, Karohi Haveli"
-  },
-  {
-    day: 7,
-    date: "March 21, 2024",
-    title: "Udaipur: Palaces, Gardens & Golden Hour Boat Ride",
-    location: "Sawai Madhopur, Rajasthan",
-    heroImage: indiaDay07,
-    description:
-      "Stroll into the City Palace (via Hathi Pol) and its galleries; peek into the sparkling Crystal Gallery; wander the fountains of Saheliyon-ki-Bari. As the light softens, drift across Lake Pichola to Jag Mandir for a sunset that paints the water gold (weather/water levels permitting).",
-    galleryImages: [indiaDay07Gallery01, indiaDay07Gallery02, indiaDay07Gallery03],
-    meals: "Breakfast",
-    accommodation: { name: "Karohi Haveli" },
-    highlights: "City Palace, Crystal Gallery, Saheliyon-ki-Bari gardens, Lake Pichola sunset cruise"
-  },
-  {
-    day: 8,
-    date: "March 22, 2024",
-    title: "Udaipur → Pushkar: Holy Lake, Chill Vibes",
-    location: "Ranthambore National Park",
-    heroImage: indiaDay08,
-    description:
-      "Trade lakes for desert calm as you reach sacred Pushkar. Visit the rare Brahma Temple, then join a pooja on Pushkar Lake's ghats as bells ring and diyas glow. Night falls under big skies at Atithi Camp Pushkar—luxe tents and quiet starlight.",
-    galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03, indiaDay08Gallery04],
-    meals: "Dinner & Breakfast",
-    accommodation: { name: "Atithi Camp Pushkar" },
-    highlights: "Brahma Temple, Pushkar Lake pooja ceremony, luxury desert camp, stargazing"
-  },
-  {
-    day: 9,
-    date: "March 23, 2024",
-    title: "Arrival in Jaipur",
-    location: "Jaipur, Rajasthan",
-    heroImage: indiaDay09,
-    description: "Travel to Jaipur, the vibrant Pink City and capital of Rajasthan. Experience the royal heritage, colorful bazaars, and magnificent architecture of this historic city.",
-    galleryImages: [indiaDay09Gallery01, indiaDay09Gallery02, indiaDay09Gallery03],
-    meals: "Breakfast & Lunch",
-    highlights: "Pink City arrival, royal heritage sites, colorful bazaars, Rajasthani architecture",
-  },
-  {
-    day: 10,
-    date: "March 24, 2024",
-    title: "Let's explore Jaipur",
-    location: "Jaipur, Rajasthan",
-    heroImage: indiaDay10,
-    description: "Dive deep into Jaipur's royal heritage. Explore magnificent forts, palaces, and markets that showcase the grandeur of Rajput architecture and culture.",
-    galleryImages: [indiaDay10Gallery01, indiaDay10Gallery02, indiaDay10Gallery03],
-    meals: "Breakfast & Lunch",
-    highlights: "Amer Fort exploration, City Palace tour, Hawa Mahal, local markets"
-  },
-  {
-    day: 11,
-    date: "March 25, 2024",
-    title: "Taj Mahal",
-    location: "Agra, Uttar Pradesh",
-    heroImage: indiaDay11,
-    description: "Experience the crown jewel of India - the magnificent Taj Mahal. Witness this eternal symbol of love in the soft morning light, creating memories that will last a lifetime.",
-    galleryImages: [indiaDay11Gallery01, indiaDay11Gallery02, indiaDay11Gallery03],
-    meals: "Breakfast & Lunch",
-    highlights: "Taj Mahal sunrise visit, Agra Fort, marble inlay workshops, Mughal heritage",
-  },
-  {
-    day: 12,
-    date: "March 26, 2024",
-    title: "Agra back to Delhi",
-    location: "Delhi, India",
-    heroImage: indiaDay12,
-    description: "Complete your incredible Indian journey by returning to Delhi. Enjoy last-minute shopping and reminisce about your amazing adventures across incredible India.",
-    galleryImages: [indiaDay12Gallery01, indiaDay12Gallery02, indiaDay12Gallery03],
-    meals: "Breakfast",
-    highlights: "Delhi return, shopping time, journey reflection, departure preparations",
-  },
-  {
-    day: 13,
-    date: "March 27, 2024",
-    title: "Checkout",
-    location: "Delhi, India",
-    heroImage: indiaDay13,
-    description: "Bid farewell to incredible India. Complete your checkout and departure with warm memories of an unforgettable journey through the land of colors, culture, and heritage.",
-    meals: "Breakfast",
-    highlights: "Final checkout, departure assistance, journey memories, safe travels",
-  }
+  day: 2,
+  date: "March 16, 2024",
+  title: "Delhi Deep-Dive: Stories, Spice & Splendor",
+  location: "Delhi, India",
+  heroImage: indiaDay02,
+  description:
+    "Ease into the rhythm of the capital with the Salaam Baalak Trust City Walk, guided by young storytellers with lived experience. Step into Old Delhi at Jama Masjid, then shift gears to the serene Gurudwara Bangla Sahib with its glinting domes. Cruise past India Gate, Rashtrapati Bhavan, and Parliament through stately Lutyens' Delhi before a relaxed evening back at your hotel.",
+  galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03],
+  meals: "Breakfast",
+  accommodation: { name: "Saket 27" },
+  highlights: "Salaam Baalak City Walk, Jama Masjid, Gurudwara Bangla Sahib, India Gate tour",
+},
+{
+  day: 3,
+  date: "March 17, 2024",
+  title: "To Mandawa: Fresco Heaven",
+  location: "Mandawa, Rajasthan", // fixed
+  heroImage: indiaDay03,
+  description:
+    "Roll out of Delhi and watch the landscape unfurl toward Shekhawati—Rajasthan's 'open-air art gallery.' After check-in, wander Mandawa's painted past: Chokhani, Ladia, Saraf, and quirky Binsidhar Newatia (spot the vintage phone and car murals!). Sunset brings quiet village lanes and pastel skies.",
+  galleryImages: [indiaDay03Gallery01, indiaDay03Gallery02, indiaDay03Gallery03, indiaDay03Gallery04],
+  meals: "Breakfast",
+  accommodation: { name: "Hotel Heritage Mandawa" },
+  highlights: "Shekhawati frescoes, Mandawa havelis, vintage murals, village sunset walks",
+},
+{
+  day: 4,
+  date: "March 18, 2024",
+  title: "Mandawa → Jodhpur: Blue City Buzz",
+  location: "Jodhpur, Rajasthan",
+  heroImage: indiaDay04,
+  description:
+    "Head west as the desert hue deepens and Jodhpur's blue houses appear beneath the fort. By evening, dive into Ghanta Ghar (Clock Tower), then check out the market, sniff Mathaniya chilies, try flavored teas, haggle for handicrafts—then reward yourself with a creamy Makhania lassi and a shahi samosa.",
+  galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04, indiaDay05Gallery04, indiaDay05Gallery05],
+  meals: "Breakfast",
+  accommodation: { name: "The Mandore" },
+  highlights: "Ghanta Ghar Clock Tower, spice markets, Makhania lassi, shahi samosas",
+},
+{
+  day: 5,
+  date: "March 19, 2024",
+  title: "Jodhpur: Forts, Cenotaphs & Desert Culture",
+  location: "Jodhpur, Rajasthan", // fixed
+  heroImage: indiaDay05,
+  description:
+    "Rise for Mehrangarh Fort, soaring above the city with sweeping views, followed by the marble calm of Jaswant Thada. In the afternoon, keep exploring, or opt for a Bishnoi Village Jeep Safari for wildlife spotting and artisan visits in the dunes.",
+  galleryImages: [indiaDay05Gallery01, indiaDay05Gallery02, indiaDay05Gallery03],
+  meals: "Breakfast",
+  accommodation: { name: "The Mandore" },
+  highlights: "Mehrangarh Fort, Jaswant Thada cenotaphs, optional Bishnoi Village safari",
+},
+{
+  day: 6,
+  date: "March 20, 2024",
+  title: "Let’s travel to Udaipur",
+  location: "Udaipur, Rajasthan",
+  heroImage: indiaDay06,
+  description:
+    "It’s time to go. After breakfast we roll toward Udaipur with a wow-stop at the 15th-century Ranakpur Jain Temples—home to 1,444 uniquely carved marble pillars (no two alike!). Arrive in Udaipur, check in, and kick back for a bit. Then dress up for a breezy night out in this dreamy lake city—lantern-lit lanes, rooftop views, and all the romantic feels. After we check into the hotel and have a relaxed afternoon, we will get ready for a nice night in this beautiful town.",
+  galleryImages: [indiaDay06Gallery01, indiaDay06Gallery02, indiaDay06Gallery03, indiaDay06Gallery04, indiaDay06Gallery05],
+  meals: "Breakfast",
+  accommodation: { name: "Karohi Haveli" },
+  highlights: "Ranakpur Jain Temples (1,444 pillars), Lake Pichola arrival, lantern-lit old town evening",
+},
+{
+  day: 7,
+  date: "March 21, 2024",
+  title: "Udaipur — let’s go explore",
+  location: "Udaipur, Rajasthan", // fixed from Sawai Madhopur
+  heroImage: indiaDay07,
+  description:
+    "Kick off at the City Palace and enter through Hathi Pol past Jagdish Temple and get lost in Insta-worthy halls of paintings, mosaics, and carved chhatris. Pop into the Crystal Gallery to peep a rare 19th-century crystal collection ordered by Maharana Sajjan Singh—peak royal bling. Reset vibes at Sahelion-ki-Bari, the chill ‘garden of the maids of honor,’ with fountains and shady paths made for soft-life strolls. Golden hour? Board a Lake Pichola boat (water levels permitting), glide past palace-lit skylines, hop off at Jag Mandir for island-palace feels, and watch the sun melt over the water.",
+  galleryImages: [indiaDay07Gallery01, indiaDay07Gallery02, indiaDay07Gallery03],
+  meals: "Breakfast",
+  accommodation: { name: "Karohi Haveli" },
+  highlights: "City Palace, Jagdish Temple, Crystal Gallery, Sahelion-ki-Bari, Lake Pichola sunset cruise",
+},
+{
+  day: 8,
+  date: "March 22, 2024",
+  title: "Travel to Ranthambore",
+  location: "Sawai Madhopur, Rajasthan", // fixed from Ranthambore National Park label
+  heroImage: indiaDay08,
+  description:
+    "Ranthambore express day — let’s go! Rise early for your transfer to Udaipur railway station and hop on the train to Sawai Madhopur. Settle by the window as the Indian countryside rolls by—fields, villages, and chai breaks included. On arrival, meet your rep for an assisted transfer, check in, and refuel with a delicious lunch. Welcome to Ranthambore National Park, a vast wild playground near Sawai Madhopur in Rajasthan. In the afternoon, head up to Ranthambore Fort for epic views and a hit of history among ancient ramparts. Roll back to the hotel for a lovely dinner and stories from the day—perfect ending before tomorrow’s jungle vibes.",
+  galleryImages: [indiaDay08Gallery01, indiaDay08Gallery02, indiaDay08Gallery03, indiaDay08Gallery04],
+  meals: "Breakfast, Lunch, Dinner",
+  accommodation: { name: "Jungle Cave Resort" },
+  highlights: "Train to Sawai Madhopur, Ranthambore Fort sunset views, arrival near the National Park",
+},
+{
+  day: 9,
+  date: "March 23, 2024",
+  title: "In Ranthambore — Safari Day",
+  location: "Sawai Madhopur, Rajasthan",
+  heroImage: indiaDay09, // unchanged
+  description:
+    "Roll out early for a morning game drive. Settle into the gypsy, breathe in the cool forest air, and watch the park wake with peacocks calling, deer tiptoeing, and langurs leaping. Tiger sightings are part magic, part patience—but the jungle buzzes even if the big cat plays shy: crocs by the lakes, sambar and chital in the grass, and 300+ bird species flashing color. Opt in for an afternoon drive to double your chances. Evening at the pool, swapping safari stories under the stars.",
+  galleryImages: [indiaDay09Gallery01, indiaDay09Gallery02, indiaDay09Gallery03], // unchanged
+  meals: "Breakfast, Lunch, Dinner",
+  accommodation: { name: "Jungle Cave Resort" },
+  highlights: "Ranthambore safari, wildlife viewing, poolside evening under the stars",
+},
+{
+  day: 10,
+  date: "March 24, 2024",
+  title: "Travel to Jaipur — Your Day, Your Pace",
+  location: "Jaipur, Rajasthan",
+  heroImage: indiaDay10, // unchanged
+  description:
+    "After breakfast, hit the highway to the Pink City. Make the day your own: dive into bazaars for handicrafts and block prints, sip masala chai on a rooftop, try a cooking class or block-print workshop, hunt down street-food favorites like kachori and lassi, or simply chill by the hotel pool.",
+  galleryImages: [indiaDay10Gallery01, indiaDay10Gallery02, indiaDay10Gallery03], // unchanged
+  meals: "Breakfast",
+  accommodation: { name: "Om Niwas Suite Hotel" },
+  highlights: "Free day in Jaipur, optional cooking class, markets and rooftops",
+},
+{
+  day: 11,
+  date: "March 25, 2024",
+  title: "Jaipur Sightseeing Classics",
+  location: "Jaipur, Rajasthan",
+  heroImage: indiaDay11, // unchanged
+  description:
+    "Start with a photo stop at Hawa Mahal, the pink honeycomb where royal ladies once watched city life. Head up to Amber Fort—courtyards, mirrored halls, and sandstone/marble grandeur. Pause at Jal Mahal, the dreamy lakeside palace on Man Sagar, then wrap at the City Palace Museum for royal costumes and a striking arms gallery. Evening free for shopping and fun.",
+  galleryImages: [indiaDay11Gallery01, indiaDay11Gallery02, indiaDay11Gallery03], // unchanged
+  meals: "Breakfast",
+  accommodation: { name: "Om Niwas Suite Hotel" },
+  highlights: "Hawa Mahal, Amber Fort, Jal Mahal, City Palace Museum",
+},
+{
+  day: 12,
+  date: "March 26, 2024",
+  title: "Agra — Let’s Go",
+  location: "Agra, Uttar Pradesh",
+  heroImage: indiaDay12, // unchanged
+  description:
+    "After breakfast, roll out to Agra. Later, step into the mighty Agra Fort—UNESCO-listed and once a seat of Mughal power. Explore polished pavilions, mosques, and leaf-lined courtyards; admire the signature Mughal blend of Islamic arches and Hindu detailing—camera-ready at every turn.",
+  galleryImages: [indiaDay12Gallery01, indiaDay12Gallery02, indiaDay12Gallery03], // unchanged
+  meals: "Breakfast",
+  accommodation: { name: "Hotel Elinor" },
+  highlights: "Agra Fort architecture, Mughal history, evening at leisure",
+},
+{
+  day: 13,
+  date: "March 27, 2024",
+  title: "Taj Mahal Sunrise & Back to Delhi",
+  location: "Agra → Delhi, India",
+  heroImage: indiaDay13, // unchanged
+  description:
+    "Rise before dawn for the Taj Mahal as first light washes marble in blush and gold—bucket list moment unlocked. Later, return to Delhi to relax before a farewell dinner and one last night out with new friends made along the way.",
+  meals: "Breakfast",
+  accommodation: { name: "Saket 27" },
+  highlights: "Taj Mahal sunrise, return to Delhi, farewell evening",
+},
+{
+  day: 14,
+  date: "March 28, 2024",
+  title: "Farewell & Onward Travel",
+  location: "Delhi, India",
+  heroImage: indiaDay13, // reuse Day 13’s hero
+  description:
+    "Thank you for the memories—what a trip! Until the next adventure, safe travels home and keep the wanderlust alive. Bags light, photos many, hearts full. Goodbye for now, and see you down the road.",
+  meals: "—",
+  highlights: "Checkout, onward travel",
+}
 ],
 summary: {
   duration: "13 days",

@@ -11,7 +11,11 @@ import tile2_800_srilanka from "@/assets/tile2_800_srilanka.webp";
 import tile3_800_srilanka from "@/assets/tile3_800_srilanka.webp";
 import tile4_800_srilanka from "@/assets/tile4_800_srilanka.webp";
 
-// Import icons for highlights
+import mirissaBeach from "@/assets/srilanka-mirissa-beach.jpg";
+import hillCountryTrain from "@/assets/srilanka-hill-country-train.jpg";
+
+
+// Import icons for highlightsn
 import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
 
 
@@ -66,6 +70,26 @@ export const srilankaData = {
       description: "Your Sri Lankan adventure supports local conservation and sustainable wildlife protection."
     }
   ],
+
+  highlights: [
+  {
+    title: "Sigiriya Rock",
+    description: "Climb Sri Lanka’s iconic UNESCO rock fortress.",
+    image: sigiriyaRock,
+  },
+  {
+    title: "Mirissa",
+    description: "Sun, surf, and golden beaches on the south coast.",
+    image: mirissaBeach,
+  },
+  {
+    title: "Hill Country Train",
+    description: "Ride the famous tea-country railway through misty mountains and emerald plantations.",
+    image: hillCountryTrain,
+  },
+],
+
+
   itinerary: [
   {
     day: 1,
@@ -75,6 +99,9 @@ export const srilankaData = {
     heroImage: srilankaColombo,
     description:
       "Begin your Sri Lankan adventure in the vibrant capital city of Colombo. This bustling metropolis perfectly blends colonial heritage with modern urban energy, offering your first taste of the island's rich culture and warm hospitality. From historic landmarks to trendy districts, Colombo provides the perfect introduction to your Sri Lankan journey.",
+    meals: "Dinner",
+    accommodation: { name: "Saket 27" },
+    highlights: "Airport pickup, hotel check-in, welcome briefing",
     transportation: {
       from: "Bandaranaike Airport",
       to: "Colombo City",
@@ -89,7 +116,10 @@ export const srilankaData = {
     location: "Sigiriya",
     heroImage: srilankaHero,
     description:
-      "Journey into Sri Lanka's Cultural Triangle, where ancient wonders and natural beauty converge. Sigiriya stands as a testament to centuries of history, spirituality, and artistic mastery. This UNESCO World Heritage site offers unforgettable views across lush countryside, village life, and sacred shrines. Whether you're seeking cultural immersion or scenic beauty, Sigiriya is your gateway to unforgettable experiences."
+      "Journey into Sri Lanka's Cultural Triangle, where ancient wonders and natural beauty converge. Sigiriya stands as a testament to centuries of history, spirituality, and artistic mastery. This UNESCO World Heritage site offers unforgettable views across lush countryside, village life, and sacred shrines. Whether you're seeking cultural immersion or scenic beauty, Sigiriya is your gateway to unforgettable experiences.",
+    meals: "Breakfast",
+    accommodation: { name: "Sofia Hotel Colombo" },
+    highlights: "Airport pickup, hotel check-in, welcome briefing, local dinner",
   },
   {
     day: 3,
