@@ -162,7 +162,7 @@ highlights: [
   {
     title: "Taj Mahal",
     description: "Visit one of the 7 wonders of the world",
-    image: indiaDay11, // Taj photo
+    image: indiaDay13, // Taj photo
   },
   {
     title: "Canter Safari Ranthambhore National Park",

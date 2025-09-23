@@ -8,7 +8,7 @@ import philippinesHero from "@/assets/philippines-hero.jpg";
 import colombiaHero from "@/assets/colombia-hero.jpg";
 import indiaHero from "@/assets/india-hero.jpg";
 
-import indiaDay11 from "@/assets/india-day11-main-taj-mahal.jpg";
+import indiaDay13 from "@/assets/india-day13-main-taj-mahal.jpg";
 
 
 import bhutanHero from "@/assets/bhutan-hero.jpg";
@@ -69,7 +69,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
   {
     id: 2,
     slug: "india-journey",
-    image: indiaDay11,
+    image: indiaDay13,
     title: "India Journey",
     location: "India",
     duration: "13 days",
