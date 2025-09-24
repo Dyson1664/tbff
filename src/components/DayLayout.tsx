@@ -87,7 +87,7 @@ export const DayLayout = memo(({
             className="w-full h-full object-cover"
           />
           {/* Location overlay in top right corner */}
-          <div className="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white px-3 py-1.5 rounded-lg text-sm font-medium">
+          <div className="absolute top-3 right-3 bg-black/40 backdrop-blur-sm text-white px-2 py-0.5 rounded text-xs font-light tracking-wide">
             {location}
           </div>
         </div>
