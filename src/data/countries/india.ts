@@ -3,8 +3,8 @@ import indiaHero from "@/assets/india-hero.jpg";
 import indiaDay01 from "@/assets/india-day01-main-shiny.jpg";
 import indiaDay02 from "@/assets/india-day02-main-india-gate.jpg";
 import indiaDay03 from "@/assets/india-day03-main-jaswant-thada.jpg";
-import indiaDay04 from "@/assets/india-day04-main-mehrangarh-fort.jpg";
-import indiaDay05 from "@/assets/india-day05-main-ranakpur-jain-temples.jpg";
+import indiaDay04 from "@/assets/india-day04-main-ranakpur-jain-temples.jpg";
+import indiaDay05 from "@/assets/india-day05-main-jaswant-thada.jpg";
 import indiaDay06 from "@/assets/india-day06-main-city-palace.jpg";
 import indiaDay07 from "@/assets/india-day07-main-udaipur.jpg";
 import indiaDay08 from "@/assets/india-day08-main-ranthambore.jpg";
@@ -40,7 +40,6 @@ import indiaDay01Gallery04 from "@/assets/india-day01-gallery-04.jpg";
 // Day 2 gallery
 import indiaDay02Gallery01 from "@/assets/india-day02-gallery-01.jpg";
 import indiaDay02Gallery02 from "@/assets/india-day02-gallery-02.jpg";
-import indiaDay02Gallery03 from "@/assets/india-day02-gallery-03.jpg";
 
 // Day 3 gallery
 import indiaDay03Gallery01 from "@/assets/india-day03-gallery-01.jpg";
@@ -55,7 +54,6 @@ import indiaDay04Gallery03 from "@/assets/india-day04-gallery-03.jpg";
 import indiaDay04Gallery04 from "@/assets/india-day04-gallery-04.jpg";
 
 // Day 5
-import indiaDay05Gallery01 from "@/assets/india-day05-gallery-01.jpg";
 import indiaDay05Gallery02 from "@/assets/india-day05-gallery-02.jpg";
 import indiaDay05Gallery03 from "@/assets/india-day05-gallery-03.jpg";
 import indiaDay05Gallery04 from "@/assets/india-day05-gallery-04.jpg";
@@ -206,7 +204,7 @@ highlights: [
   heroImage: indiaDay02,
   description:
     "After breakfast, lace up for the Salaam Baalak Walk—wind through hidden lanes with young guides sharing powerful, first-hand stories from the Salaam Baalak Trust. Next, feel the buzz of Old Delhi at Jama Masjid, Shah Jahan’s grand finale and a masterpiece of Mughal design. Glide over to Gurudwara Bangla Sahib, where serene white marble and golden domes honor the eighth Sikh Guru, Harkrishan Dev. Cruise through Lutyens’ Delhi for a photo stop at India Gate—a tribute to ~90,000 Indian soldiers of WWI and beyond—then roll past Rashtrapati Bhawan and Parliament House like a VIP. Big sights, real stories, and nonstop Delhi energy from breakfast to dusk. After this we head back to the hotel to relax before our night out.",
-  galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02, indiaDay02Gallery03],
+  galleryImages: [indiaDay02Gallery01, indiaDay02Gallery02],
   meals: "Breakfast",
   accommodation: { name: "Saket 27" },
   highlights:
@@ -233,7 +231,7 @@ highlights: [
   heroImage: indiaDay04,
   description:
     "After breakfast, road-trip to Jodhpur. As the sun softens, head out on a guided stroll around the Clock Tower (Ghanta Ghar) market—spice heaven! Pick up Mathaniya red chilies, plus handicrafts, flavored teas, hand-embroidered fabrics, and quirky antiques. When your shopping bags (and feet) are full, treat yourself to a creamy Makhania lassi locals swear is the best—then cap the evening with a crisp, golden shahi samosa. Shopping spree: conquered. Taste buds: delighted.",
-  galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay04Gallery03, indiaDay04Gallery04, indiaDay05Gallery04, indiaDay05Gallery05],
+  galleryImages: [indiaDay04Gallery01, indiaDay04Gallery02, indiaDay05Gallery04, indiaDay05Gallery05],
   meals: "Breakfast",
   accommodation: { name: "The Mandore" },
   highlights: "Ghanta Ghar Clock Tower, spice markets, Makhania lassi, shahi samosas",
@@ -246,7 +244,7 @@ highlights: [
   heroImage: indiaDay05,
   description:
     "Kick off with the mighty Mehrangarh Fort, Rao Jodha’s 1459 masterpiece soaring high above the Blue City. Roam royal palaces with intricate carvings, sweep through grand courtyards, and pop into the museum packed with regal relics. Then unwind at the tranquil Jaswant Thada—the “Taj Mahal of Marwar”—a gleaming 1899 marble memorial built by Maharaja Sardar Singh for his father, Jaswant Singh I: delicate latticework and peaceful lakeside vibes. Short, stunning, unforgettable.",
-  galleryImages: [indiaDay05Gallery01, indiaDay05Gallery02, indiaDay05Gallery03],
+  galleryImages: [indiaDay05Gallery02, indiaDay05Gallery03, indiaDay04Gallery03, indiaDay04Gallery04],
   meals: "Breakfast",
   accommodation: { name: "The Mandore" },
   highlights: "Mehrangarh Fort, Jaswant Thada, Jaswant Singh",
