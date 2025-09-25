@@ -15,13 +15,23 @@ import indiaDay12 from "@/assets/india-day12-main-amer-fort.jpg";
 import indiaDay13 from "@/assets/india-day13-main-taj-mahal.jpg";
 import indiaDay14 from "@/assets/india-day13-main-checkout.jpg";
 
+import triphigh2 from "@/assets/india-high-safari.jpg";
+
+
 // Import icons for highlights
 import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
 
-import ov1_400 from "@/assets/india-overviewov1-400w.webp";
-import ov1_800 from "@/assets/india-overviewov1-800w.webp";
-import ov2_400 from "@/assets/india-overviewov2-400w.webp";
-import ov2_800 from "@/assets/india-overviewov2-800w.webp";
+import ov1_400 from "@/assets/india-day11-main.jpg";
+import ov1_800 from "@/assets/india-day11-main.jpg";
+
+import ov2_400 from "@/assets/india-day02-main-india-gate.jpg";
+import ov2_800 from "@/assets/india-day02-main-india-gate.jpg";
+
+
+//import ov1_400 from "@/assets/india-overviewov1-400w.webp";
+//import ov1_800 from "@/assets/india-overviewov1-800w.webp";
+//import ov2_400 from "@/assets/india-overviewov2-400w.webp";
+//import ov2_800 from "@/assets/india-overviewov2-800w.webp";
 import ov3_400 from "@/assets/india-overviewov3-400w.webp";
 import ov3_800 from "@/assets/india-overviewov3-800w.webp";
 import ov4_400 from "@/assets/india-overviewov4-400w.webp";
@@ -166,7 +176,7 @@ highlights: [
     title: "Canter Safari Ranthambhore National Park",
     description:
       "Visit Ranthambhore National Park where you have the chance to witness Leopards, Sloth Bear and maybe even the majestic Tiger",
-    image: indiaDay08, // Safari photo
+    image: triphigh2, // Safari photo
   },
   {
     title: "Cruise over Lake Pichola",
@@ -391,16 +401,7 @@ included: [
       { text: "All toll taxes and parking fees" }
     ]
   },
-  {
-    title: "Experiences",
-    items: [
-      { text: "Taj Mahal sunrise visit" },
-      { text: "Private heritage walks and cultural tours" },
-      { text: "Traditional cooking demonstrations" },
-      { text: "Spiritual ceremonies and blessings" },
-      { text: "Local artisan workshops" }
-    ]
-  }
+
 ]
 ,
   faqs: [
