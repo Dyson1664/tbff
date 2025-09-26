@@ -550,7 +550,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
       </section>
 
       {/* Country Overview */}
-      <div className="max-w-6xl mx-auto px-4 md:px-3 py-12">
+      <div className="max-w-6xl mx-auto px-4 md:px-3 py-0 md:py-12">
         <AboutSection data={data} />
 
         {/* What's Included Highlights */}
