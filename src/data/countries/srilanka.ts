@@ -290,24 +290,32 @@ export const srilankaData = {
   ],
   faqs: [
     {
-      question: "What is the best time to visit Sri Lanka?",
-      answer: "December to March is ideal for the west and south coasts, while April to September is better for the east coast. Our itinerary is designed to showcase the best of each region during optimal weather."
+      question: "Which airport do I need to fly into?",
+      answer: "Colombo Bandaranaike International Airport (CMB)"
     },
     {
-      question: "Do I need a visa to visit Sri Lanka?",
-      answer: "Most visitors need an Electronic Travel Authorization (ETA) obtained online before travel. We'll provide detailed visa information and assistance upon booking."
+      question: "Where does the trip start & finish?",
+      answer: "Starts in Colombo and ends in Mirissa"
     },
     {
-      question: "What vaccinations do I need for Sri Lanka?",
-      answer: "Routine vaccinations should be current. Consider hepatitis A, typhoid, and Japanese encephalitis. Consult your healthcare provider 4-6 weeks before departure for personalized advice."
+      question: "How far is the airport from start hotel?",
+      answer: "30 – 40 minutes depending on traffic"
     },
     {
-      question: "Is Sri Lankan food spicy?",
-      answer: "Sri Lankan cuisine can be quite spicy, but we'll ensure meals are prepared to accommodate different spice tolerances. You'll experience authentic flavors with options for milder versions."
+      question: "How far is the airport from end hotel?",
+      answer: "2.5 hours, can take taxi or Uber (transfer not included). Departure from Colombo Bandaranaike International Airport (CMB)"
     },
     {
-      question: "What should I pack for the diverse climates?",
-      answer: "Pack light, breathable clothing for the coast, warmer layers for the hill country, comfortable hiking shoes, rain jacket, sunscreen, and insect repellent. We'll provide a detailed packing list."
+      question: "Do you have an age limit for tours?",
+      answer: "Our tours cater to adventurous travelers aged 18-45, with most guests between 21-35 years old. Perfect for people of all different backgrounds to share travel experiences."
+    },
+    {
+      question: "What is the local currency?",
+      answer: "The local currency is Sri Lankan Rupee"
+    },
+    {
+      question: "What are the Visa Requirements?",
+      answer: "Apply for E-VISA. Electronic Travel Authorization (ETA): Most visitors can obtain a tourist ETA online through the Sri Lankan government's ETA website: https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US"
     }
   ]
 };
