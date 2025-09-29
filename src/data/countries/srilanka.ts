@@ -100,8 +100,8 @@ export const srilankaData = {
     description:
       "Begin your Sri Lankan adventure in the vibrant capital city of Colombo. This bustling metropolis perfectly blends colonial heritage with modern urban energy, offering your first taste of the island's rich culture and warm hospitality. From historic landmarks to trendy districts, Colombo provides the perfect introduction to your Sri Lankan journey.",
     meals: "Dinner",
-    accommodation: { name: "Saket 27" },
-    highlights: "Airport pickup, hotel check-in, welcome briefing",
+    accommodation: { name: "Sofia Hotel Colombo or Cinnamon Red Hotel" },
+    highlights: "Welcome dinner",
     transportation: {
       from: "Bandaranaike Airport",
       to: "Colombo City",
@@ -118,8 +118,8 @@ export const srilankaData = {
     description:
       "Journey into Sri Lanka's Cultural Triangle, where ancient wonders and natural beauty converge. Sigiriya stands as a testament to centuries of history, spirituality, and artistic mastery. This UNESCO World Heritage site offers unforgettable views across lush countryside, village life, and sacred shrines. Whether you're seeking cultural immersion or scenic beauty, Sigiriya is your gateway to unforgettable experiences.",
     meals: "Breakfast",
-    accommodation: { name: "Sofia Hotel Colombo" },
-    highlights: "Airport pickup, hotel check-in, welcome briefing, local dinner",
+    accommodation: { name: "Into the Wild Sigiriya Hotel" },
+    highlights: "Temples",
   },
   {
     day: 3,
@@ -128,7 +128,10 @@ export const srilankaData = {
     location: "Sigiriya",
     heroImage: sigiriyaRock,
     description:
-      "Discover the magnificent Sigiriya Rock Fortress, one of Sri Lanka's most iconic UNESCO World Heritage sites. This ancient citadel rises majestically from the jungle, offering breathtaking views and fascinating history of King Kashyapa's 5th-century palace complex."
+      "Get ready for an epic adventure at the stunning Sigiriya Rock Fortress, one of Sri Lanka's coolest UNESCO World Heritage sites! Imagine a majestic ancient citadel popping up from the jungle, with mind-blowing views and stories of King Kashyapa's 5th-century palace. After soaking in the history and taking in the breathtaking scenery, you can enjoy the best, most beautiful hike around. Then, kick back and relax with an optional spa or pool dip before heading out for a village safari—where you can try canoeing Sri Lankan style, enjoy a delicious local dinner, and end the night with a cozy bonfire and fun-filled games. It's a wild, wonderful day you won't forget!",
+    meals: "Breakfast, Dinner",
+    accommodation: { name: "Into the Wild Sigiriya Hotel" },
+    highlights: "Sigiriya Rock, village safari"
   },
   {
     day: 4,
@@ -137,7 +140,10 @@ export const srilankaData = {
     location: "Kandy",
     heroImage: srilankaTea,
     description:
-      "Journey to the hill capital of Kandy, Sri Lanka's cultural heart and last kingdom of the ancient kings. This UNESCO World Heritage city is home to the sacred Temple of the Tooth Relic, beautiful botanical gardens, and stunning lake views surrounded by misty hills."
+      "Get ready for an exciting trip to the hill capital of Kandy, Sri Lanka's cultural treasure and the last kingdom of the ancient kings! This UNESCO World Heritage city is packed with awesome sights like the sacred Temple of the Tooth Relic, lush botanical gardens, and stunning lake views framed by misty hills. On the way, we'll make fun stops at vibrant tea plantations and aromatic spice gardens—where you can taste fresh teas and smell incredible spices. It's a journey full of history, nature, and flavor that'll leave you awe-inspired and craving more!",
+    meals: "Breakfast",
+    accommodation: { name: "Queens Hotel or Swiss Hotel Kandy" },
+    highlights: "Tea plantation, Temple of Tooth"
   },
   {
     day: 5,
