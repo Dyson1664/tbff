@@ -148,47 +148,62 @@ export const srilankaData = {
   {
     day: 5,
     date: "24 JUN 2024",
-    title: "Tea Country & Mountain Railways",
-    location: "Nuwara Eliya",
+    title: "Exploring Kandy and Cooking Class",
+    location: "Kandy",
     heroImage: srilankaTea,
     description:
-      "Experience Sri Lanka's enchanting tea country in Nuwara Eliya, known as 'Little England' for its cool climate and colonial architecture. Journey through emerald tea plantations, visit a working tea factory, and ride the scenic hill country train through misty mountains."
+      "Kick off your day with a delightful breakfast. Fuel up and get ready for an exciting day ahead! A van will pick you up for a lush adventure at the botanic gardens — explore beautiful plants, relax in nature, and maybe snap some amazing photos! After your botanical exploration, enjoy a leisurely lunch followed by some chill time at the hotel. Whether you want to shop for souvenirs, take a refreshing swim, or just kick back and relax your way. In the afternoon, get ready for a fun and tasty cooking class where you'll learn new recipes and skills. The van will pick you up from the hotel, so bring your excitement and appetite for a memorable day!",
+    meals: "Breakfast",
+    accommodation: { name: "Queens Hotel or Swiss Hotel Kandy" },
+    highlights: "Cooking class, Botanic gardens"
   },
   {
     day: 6,
     date: "25 JUN 2024",
-    title: "Scenic Train & Elephant Encounters",
+    title: "Travel to Ella",
     location: "Ella",
     heroImage: srilankaHero,
     description:
-      "Experience one of the world's most beautiful train journeys from Nuwara Eliya to Ella, winding through tea plantations and mountain valleys. In Ella, discover stunning viewpoints, waterfalls, and visit an ethical elephant sanctuary."
+      "Start your day bright and early with a delicious breakfast to fuel your adventure! Then, we're off to Ella train station for a scenic journey like no other. Hop aboard the famous afternoon train and enjoy breathtaking jungle views, snap plenty of photos from the iconic glassy scenic area though those open doors, and feel the thrill of the ride through lush greenery. As the train winds into the charming mountain town of Ella, you'll be greeted by a laid-back, hippie vibe that feels like a slice of paradise. Arrive in the evening and get ready to dive into the vibrant night scene exploring cozy cafes, enjoying live music, or just soaking up the chilled-out atmosphere of this magical town. An unforgettable day filled with stunning sights and cool vibes awaits!",
+    meals: "Breakfast",
+    accommodation: { name: "Flower Garden or Ella Gap Hotel" },
+    highlights: "Train ride, Town of Ella"
   },
   {
     day: 7,
     date: "26 JUN 2024",
-    title: "Wildlife Safari & Ancient Cities",
-    location: "Yala National Park",
+    title: "Ella Adventures",
+    location: "Ella",
     heroImage: srilankaBeach,
     description:
-      "Embark on an exciting wildlife safari in Yala National Park, home to the highest density of leopards in the world. Spot elephants, sloth bears, crocodiles, and over 200 bird species in this incredible biodiversity hotspot."
+      "Get ready for an amazing day in Ella! Late in the morning, we'll head to the iconic Nine Arch Bridge — a breathtaking spot where you can watch the train chug lazily through the lush valley and marvel at this engineering marvel surrounded by stunning greenery. It's a perfect photo op and a great way to soak in the magic of Ella! Later in the day, unleash your adventurous spirit with a scenic hike up Little Adam's Peak. As the sun begins to set, you'll be rewarded with jaw-dropping panoramic views and golden hues that make the moment truly special.",
+    meals: "Breakfast",
+    accommodation: { name: "Flower Garden or Ella Gap Hotel" },
+    highlights: "Nine Arch Bridge, Little Adam's Peak"
   },
   {
     day: 8,
     date: "27 JUN 2024",
-    title: "Dutch Colonial Heritage & Beaches",
-    location: "Galle",
+    title: "Wildlife & Coastal Beauty",
+    location: "Mirissa",
     heroImage: srilankaBeach,
     description:
-      "Explore the UNESCO World Heritage site of Galle Fort, a perfectly preserved Dutch colonial city surrounded by massive ramparts. Wander cobblestone streets, visit art galleries, and enjoy stunning ocean views from the fort walls."
+      "Today's adventure kicks off with us leaving the charming town of Ella after a hearty breakfast. Our journey takes us to the exciting Udawalawe, with an exciting stop at the stunning Quick Water Falls. Next, we explore the adorable Baby Elephant Home, where over 100 orphaned baby elephants are lovingly cared for — a truly heartwarming sight! After a delicious lunch, we dive into the jungle for an epic safari, where we'll spot majestic elephants, crocodiles, colorful birds, and other incredible wildlife. Get ready for an unforgettable day of fun and adventure! We then head into the beautiful town of Mirissa.",
+    meals: "Breakfast",
+    accommodation: { name: "Randiya Sea View or Mimoza Mirissa" },
+    highlights: "Baby Elephant Home, Safari"
   },
   {
     day: 9,
     date: "28 JUN 2024",
-    title: "Final Moments & Farewell",
-    location: "Colombo",
-    heroImage: srilankaColombo,
+    title: "Surf, History & Beach Vibes",
+    location: "Mirissa/Galle",
+    heroImage: srilankaBeach,
     description:
-      "Return to Colombo for your final day in Sri Lanka. Enjoy last-minute shopping, visit remaining sights, or simply relax before your departure. Take with you unforgettable memories of this incredible island nation."
+      "Kick off the morning to a delicious breakfast to fuel your epic surf adventure, to soak in the island vibe. Get ready to hit the waves with an exciting surf lesson, ride like you're a pro and feel the thrill! Afterward, indulge in a tasty lunch, then explore the historic Galle Fort in the afternoon, marveling at its rich history and stunning architecture. As the sun sets, experience breathtaking views during sunset and enjoy a lavish dinner buffet. The night isn't over—head back to the beach for an unforgettable evening of dancing, singing karaoke, and endless fun under the stars!",
+    meals: "Breakfast",
+    accommodation: { name: "Randiya Sea View or Mimoza Mirissa" },
+    highlights: "Surfing lesson, Galle Fort"
   }
 ]
 ,
