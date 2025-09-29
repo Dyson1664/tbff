@@ -25,7 +25,7 @@ export const srilankaData = {
   title: "Sri Lanka Explorer",
   subtitle: "Discover the Pearl of the Indian Ocean with its ancient heritage and stunning landscapes",
   location: "Sri Lanka",
-  duration: "9 days",
+  duration: "11 days",
   heroImage: srilankaHero,
   overviewGallery2x:[tile1_800_srilanka, tile2_800_srilanka, tile3_800_srilanka, tile4_800_srilanka],
   route: ["Colombo", "Sigiriya", "Kandy", "Nuwara Eliya", "Ella", "Galle", "Colombo"],
@@ -204,12 +204,36 @@ export const srilankaData = {
     meals: "Breakfast",
     accommodation: { name: "Randiya Sea View or Mimoza Mirissa" },
     highlights: "Surfing lesson, Galle Fort"
+  },
+  {
+    day: 10,
+    date: "29 JUN 2024",
+    title: "Last Beach Day & Farewell Celebration",
+    location: "Mirissa",
+    heroImage: srilankaBeach,
+    description:
+      "This morning we can start with laid-back late breakfast and soak up the chill beach vibes. Since it's our last day together, let's make it epic and bask in the sun, catch some rays, and enjoy the ocean breeze with a nice cold cocktail in hand. We also like to leave a positive mark by cleaning up the beach with a quick trash pickup for the environment! Feeling adventurous? Maybe squeeze in another surf session and ride those waves one last time. Later, explore some local shops and pick up cool souvenirs. As the evening arrives, get ready for our unforgettable farewell dinner under the stars with an epic night filled with good food, dancing and laughs. This is the perfect way to wrap up our amazing Sri Lanka Adventure!",
+    meals: "Breakfast, Dinner",
+    accommodation: { name: "Randiya Sea View or Mimoza Mirissa" },
+    highlights: "Chill day, fun in the sun"
+  },
+  {
+    day: 11,
+    date: "30 JUN 2024",
+    title: "Farewell & Departure",
+    location: "Mirissa/Departure",
+    heroImage: srilankaBeach,
+    description:
+      "Gihin Ennam for now! Check-out day in Mirissa wraps our 11-day adventure with smiles, hugs, and a few happy tears. Swap photos and contacts, promise future reunions, and take one last look at the city that brought everyone together. With souvenirs packed and new friendships that feel like old ones, we head out in different directions—hearts full and already dreaming of the next journey. Safe travels!",
+    meals: "Breakfast",
+    accommodation: { name: "Check-out" },
+    highlights: "Check-out, farewell"
   }
 ]
 ,
   summary: {
-    duration: "9 Days",
-    activities: "18 Experiences", 
+    duration: "11 Days",
+    activities: "20 Experiences", 
     areas: "4 Regions",
     type: "Culture & Nature"
   },
