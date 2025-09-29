@@ -181,7 +181,13 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
 });
 
 const AboutSection = memo(({ data }: { data: CountryData }) => {
-  const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
+  const countryName = useMemo(() => {
+    // Special case for Sri Lanka to keep both words
+    if (data.title.toLowerCase().includes('sri lanka')) {
+      return 'Sri Lanka';
+    }
+    return data.title.split(' ')[0];
+  }, [data.title]);
 
   return (
     <div className="mb-16">
@@ -389,7 +395,13 @@ const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], cou
 
 export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
   // Memoize derived values
-  const countryName = useMemo(() => data.title.split(' ')[0], [data.title]);
+  const countryName = useMemo(() => {
+    // Special case for Sri Lanka to keep both words
+    if (data.title.toLowerCase().includes('sri lanka')) {
+      return 'Sri Lanka';
+    }
+    return data.title.split(' ')[0];
+  }, [data.title]);
 
   // ✅ New: compute 4 images for hero left grid (prefer overviewGallery)
   const overviewFour = useMemo(() => {
