@@ -11,26 +11,20 @@ const CONTACT_INFO = [
   {
     icon: <Phone className="w-6 h-6" />,
     title: "Call Us",
-    details: ["+1-555-IBT-TRIP", "(+1-555-428-8747)"],
-    description: "Available 24/7 for emergencies"
+    details: ["(303) 704-2860"],
+    description: "Available for all your travel inquiries"
   },
   {
     icon: <Mail className="w-6 h-6" />,
     title: "Email Us",
-    details: ["info@imaginebeyondtravel.com", "emergency@imaginebeyondtravel.com"],
+    details: ["bookings@imaginebeyondtrvel.com"],
     description: "We respond within 24 hours"
   },
   {
-    icon: <MapPin className="w-6 h-6" />,
-    title: "Visit Us",
-    details: ["123 Adventure Lane", "Travel City, TC 12345", "United States"],
-    description: "By appointment only"
-  },
-  {
-    icon: <Clock className="w-6 h-6" />,
-    title: "Office Hours",
-    details: ["Monday - Friday: 9 AM - 6 PM EST", "Saturday: 10 AM - 4 PM EST", "Sunday: Closed"],
-    description: "Emergency support available 24/7"
+    icon: <MessageCircle className="w-6 h-6" />,
+    title: "WhatsApp",
+    details: ["Coming Soon"],
+    description: "Quick messaging support"
   }
 ];
 
@@ -101,7 +95,7 @@ const ContactUs = React.memo(() => {
       {/* Contact Information Grid */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {CONTACT_INFO.map((contact, index) => (
               <div key={index} className="bg-card rounded-lg p-6 border border-border text-center hover:shadow-lg transition-shadow">
                 <div className="text-primary mb-4 flex justify-center">
@@ -254,11 +248,11 @@ const ContactUs = React.memo(() => {
             these options will get you connected faster.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="px-8 py-3 text-lg">
-              📞 Call Now: +1-555-IBT-TRIP
+            <Button className="px-8 py-3 text-lg" asChild>
+              <a href="tel:3037042860">📞 Call Now: (303) 704-2860</a>
             </Button>
-            <Button variant="outline" className="px-8 py-3 text-lg">
-              📧 Email: info@imaginebeyondtravel.com
+            <Button variant="outline" className="px-8 py-3 text-lg" asChild>
+              <a href="mailto:bookings@imaginebeyondtrvel.com">📧 Email: bookings@imaginebeyondtrvel.com</a>
             </Button>
           </div>
         </div>
