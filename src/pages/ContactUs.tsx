@@ -116,27 +116,6 @@ const ContactUs = React.memo(() => {
         </div>
       </section>
 
-      {/* Quick Contact Options */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Need Immediate Assistance? 🚀
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            For urgent travel matters or if you prefer to speak directly with our team, 
-            these options will get you connected faster.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="px-8 py-3 text-lg" asChild>
-              <a href="tel:3037042860">📞 Call Now: (303) 704-2860</a>
-            </Button>
-            <Button variant="outline" className="px-8 py-3 text-lg" asChild>
-              <a href="mailto:bookings@imaginebeyondtrvel.com">📧 Email: bookings@imaginebeyondtrvel.com</a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Social Media Section */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
