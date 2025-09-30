@@ -24,7 +24,7 @@ export const philippinesData = {
   location: "Philippines",
   duration: "9 days",
   heroImage: philippinesHero,
-  route: ["Manila", "Port Barton", "Daracotan Island", "El Nido"],
+  route: ["Manila", "Port Barton", "Wonderland", "El Nido"],
   aboutDescription: [
     "Discover the incredible diversity of the Philippines, an archipelago of over 7,000 islands offering pristine beaches, ancient rice terraces, and warm Filipino hospitality. From the bustling streets of Manila to the remote beauty of Palawan and Banaue.",
     "Experience world-class diving, UNESCO World Heritage sites, and some of the most beautiful islands on Earth. This journey combines adventure, relaxation, and cultural immersion in one of Southeast Asia's most stunning destinations."
@@ -127,25 +127,25 @@ export const philippinesData = {
     {
   day: 5,
   date: "July 14, 2024",
-  title: "Escape to Daracotan Island",
-  location: "Daracotan Island, Palawan",
+  title: "Escape to Wonderland",
+  location: "Wonderland, Palawan",
   heroImage: philippinesDay05,
   description:
-    "Head off the grid to Daracotan Island and settle into the rustic-luxe Isla Experience. Spend the afternoon snorkeling, hammocking, and soaking up tropical island magic. If skies are clear, enjoy a bonfire on the beach tonight.",
+    "Head off the grid to Wonderland and settle into the rustic-luxe Isla Experience. Spend the afternoon snorkeling, hammocking, and soaking up tropical island magic. If skies are clear, enjoy a bonfire on the beach tonight.",
   meals: "Breakfast & Dinner",
-  accommodation: { name: "Isla Experience, Daracotan Island" },
+  accommodation: { name: "Isla Experience, Wonderland" },
   highlights: "boat transfer to remote island, snorkeling, hammocks, beach time, bonfire under the stars"
 },
 {
   day: 6,
   date: "July 15, 2024",
   title: "Shipwrecks, Village Life & Ocean Vibes",
-  location: "Daracotan Island, Palawan",
+  location: "Wonderland, Palawan",
   heroImage: philippinesDay06,
   description:
     "Begin with sunrise yoga or a peaceful beach walk. Choose your rhythm: snorkel a shipwreck, swim with friendly pigs, explore the local village, or learn to cook Filipino-style.",
   meals: "Breakfast, Lunch & Dinner",
-  accommodation: { name: "Isla Experience, Daracotan Island" },
+  accommodation: { name: "Isla Experience, Wonderland" },
   highlights: "sunrise yoga, shipwreck snorkel, swim with pigs, village trek, Filipino cooking demo"
 },
 {
