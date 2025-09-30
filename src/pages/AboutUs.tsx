@@ -6,7 +6,7 @@ import landingHero from "@/assets/landing-hero.jpg";
 
 // Founders data
 const FOUNDERS_INFO = {
-  description: "Founded in January 2023 by Darrin and Dave, Imagine Beyond Travel was born from a shared passion for creating extraordinary travel experiences. With their combined 14+ years of experience in the travel industry and operations, they are committed to providing exceptional customer service while continuously innovating to make every journey even more memorable."
+  description: "Imagine Beyond Travel was founded by Darrin (Founder) and Dave (Co-Founder) after their paths crossed on Siargao Island in the Philippines. United by a shared vision and complementary strengths—Darrin's 5+ years in tourism and Dave's 3+ years in web development and production, we set out to build a company for solo explorers who want to see the world together. Our mission is simple, deliver imaginative, expertly run trips that turn strangers into friends and destinations into lasting memories. We design and host thoughtfully curated, community-minded tours that emphasize connection, authenticity, and seamless logistics so you can explore more and worry less"
 };
 
 export default memo(function AboutUs() {
@@ -96,14 +96,25 @@ export default memo(function AboutUs() {
             <p className="text-lg text-muted-foreground">The passionate people behind your amazing travel experiences</p>
           </div>
           
-          <div className="text-center">
-            {/* Team Photo Placeholder */}
-            <div className="w-64 h-48 mx-auto mb-8 bg-muted rounded-2xl border-4 border-white shadow-lg flex items-center justify-center">
-              <span className="text-muted-foreground text-sm">Team Photo</span>
+          <div>
+            {/* Team Photos */}
+            <div className="flex justify-center gap-8 mb-8">
+              <div className="text-center">
+                <div className="w-48 h-48 mx-auto mb-4 bg-muted rounded-2xl border-4 border-white shadow-lg flex items-center justify-center">
+                  <span className="text-muted-foreground text-sm">Darrin</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground">Darrin</h3>
+                <p className="text-primary font-medium">Founder</p>
+              </div>
+              <div className="text-center">
+                <div className="w-48 h-48 mx-auto mb-4 bg-muted rounded-2xl border-4 border-white shadow-lg flex items-center justify-center">
+                  <span className="text-muted-foreground text-sm">Dave</span>
+                </div>
+                <h3 className="text-xl font-bold text-foreground">Dave</h3>
+                <p className="text-primary font-medium">Co-Founder</p>
+              </div>
             </div>
-            <h3 className="text-2xl font-bold text-foreground mb-2">Darrin & Dave</h3>
-            <p className="text-primary font-medium mb-6">Spoofer 1 and spoofer 2</p>
-            <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-lg">
+            <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-lg text-center">
               {FOUNDERS_INFO.description}
             </p>
           </div>
