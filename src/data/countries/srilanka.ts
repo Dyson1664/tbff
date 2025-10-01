@@ -48,12 +48,12 @@ export const srilankaData = {
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "8 NIGHTS<br />ACCOMMODATION",
+      title: "10 NIGHTS<br />ACCOMMODATION",
       description: "From heritage hotels to tea plantation bungalows and beach resorts across the island!"
     },
     {
       icon: Zap,
-      title: "9 DAYS OF<br />DISCOVERY",
+      title: "11 DAYS OF<br />DISCOVERY",
       description: "Ancient rock fortresses, tea country railways, wildlife safaris & pristine beaches!",
       link: {
         text: "See full itinerary",
@@ -73,7 +73,7 @@ export const srilankaData = {
     {
       icon: UtensilsCrossed,
       title: "AUTHENTIC<br />CUISINE",
-      description: "8 Breakfasts, 1 Lunches & 3 Dinners featuring rice & curry, tea tastings & local specialties!"
+      description: "2 Dinners, 9 Breakfasts featuring rice & curry, tea tastings & local specialties!"
     },
     {
       icon: TreePine,
