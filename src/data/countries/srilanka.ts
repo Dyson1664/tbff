@@ -245,7 +245,7 @@ export const srilankaData = {
   summary: {
     duration: "11 Days",
     activities: "20 Experiences", 
-    areas: "4 Regions",
+    areas: "5 Regions",
     type: "Culture & Nature"
   },
   included: [
