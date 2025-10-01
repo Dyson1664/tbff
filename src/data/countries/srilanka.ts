@@ -250,8 +250,11 @@ export const srilankaData = {
   },
   included: [
     {
-      title: "Meals",
+      title: "Accommodation & Meals",
       items: [
+        { text: "10 nights in premium hotels and lodges" },
+        { text: "Traditional Sri Lankan breakfast daily" },
+        { text: "Tea plantation bungalow experience" },
         { text: "2 Dinners" },
         { text: "9 Breakfasts" }
       ]
@@ -282,14 +285,6 @@ export const srilankaData = {
         { text: "Blue Train ticket from Nanu Oya to Ella (scenic ride)" },
         { text: "Transport to all included experiences (temples, hikes, beaches, etc.)" },
         { text: "Private vehicle with driver throughout journey" }
-      ]
-    },
-    {
-      title: "Accommodation",
-      items: [
-        { text: "10 nights in premium hotels and lodges" },
-        { text: "Traditional Sri Lankan breakfast daily" },
-        { text: "Tea plantation bungalow experience" }
       ]
     },
     {
