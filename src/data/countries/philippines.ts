@@ -35,7 +35,7 @@ export const philippinesData = {
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "8 NIGHTS<br />ACCOMMODATION",
+      title: "9 NIGHTS<br />ACCOMMODATION",
       description: "From beachside resorts to traditional Filipino bamboo bungalows on remote tropical islands!"
     },
     {
@@ -60,7 +60,7 @@ export const philippinesData = {
     {
       icon: UtensilsCrossed,
       title: "TROPICAL<br />CUISINE",
-      description: "8 Breakfasts, 6 Lunches & 4 Dinners featuring fresh seafood and authentic Filipino dishes!"
+      description: "8 Breakfasts, 5 Lunches & 2 Dinners featuring authentic Filipino dishes!"
     },
     {
       icon: TreePine,
@@ -207,7 +207,7 @@ export const philippinesData = {
     {
       title: "Accommodation",
       items: [
-        { text: "8 nights in beachfront resorts and mountain lodges" },
+        { text: "9 nights in beachfront resorts and mountain lodges" },
         { text: "Filipino breakfast featuring local specialties" },
         { text: "Ocean view rooms in El Nido" }
       ]
