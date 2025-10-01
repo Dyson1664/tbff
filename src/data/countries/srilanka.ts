@@ -250,28 +250,46 @@ export const srilankaData = {
   },
   included: [
     {
-      title: "Accommodation",
+      title: "Meals",
       items: [
-        { text: "8 nights in premium hotels and lodges" },
-        { text: "Traditional Sri Lankan breakfast daily" },
-        { text: "Tea plantation bungalow experience" }
+        { text: "2 Dinners" },
+        { text: "9 Breakfasts" }
       ]
     },
     {
       title: "Activities & Tours",
       items: [
-        { text: "Sigiriya Rock Fortress entrance" },
-        { text: "Temple of the Tooth visit" },
-        { text: "Elephant orphanage experience" },
-        { text: "Tea factory and plantation tours" }
+        { text: "Temple Visit (Colombo)" },
+        { text: "Language immersion class" },
+        { text: "Cultural Dance Show in Sigiriya" },
+        { text: "Sigiriya Rock Fortress Hike" },
+        { text: "Tea Plantation Visit & Tasting" },
+        { text: "World-Famous Blue Train Ride" },
+        { text: "Nine-Arch Bridge Visit" },
+        { text: "Little Adam's Peak Hike" },
+        { text: "Udawalawe Wildlife Safari (open-air jeep)" },
+        { text: "Elephant Transit Home Visit" },
+        { text: "Turtle Conservation Project" },
+        { text: "Galle Fort Exploration" },
+        { text: "Surf Lesson in Mirissa" }
       ]
     },
     {
-      title: "Transportation", 
+      title: "Transportation",
       items: [
-        { text: "Airport transfers throughout" },
-        { text: "Private vehicle with driver" },
-        { text: "Train journey through hill country" }
+        { text: "Airport pick-up from Bandaranaike International Airport (Day 1)" },
+        { text: "Private transport between all cities and regions (Colombo ➜ Sigiriya ➜ Ella ➜ Mirissa)" },
+        { text: "Blue Train ticket from Nanu Oya to Ella (scenic ride)" },
+        { text: "Transport to all included experiences (temples, hikes, beaches, etc.)" },
+        { text: "Private vehicle with driver throughout journey" }
+      ]
+    },
+    {
+      title: "Accommodation",
+      items: [
+        { text: "10 nights in premium hotels and lodges" },
+        { text: "Traditional Sri Lankan breakfast daily" },
+        { text: "Tea plantation bungalow experience" }
       ]
     },
     {
@@ -283,7 +301,7 @@ export const srilankaData = {
       ]
     },
     {
-      title: "Support & Guidance", 
+      title: "Support & Guidance",
       items: [
         { text: "English-speaking local guides" },
         { text: "24/7 support during your trip" },
