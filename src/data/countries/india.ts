@@ -24,8 +24,11 @@ import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react
 import ov1_400 from "@/assets/india-day11-main.jpg";
 import ov1_800 from "@/assets/india-day11-main.jpg";
 
-import ov2_400 from "@/assets/india-day02-main-india-gate.jpg";
-import ov2_800 from "@/assets/india-day02-main-india-gate.jpg";
+//import ov2_400 from "@/assets/india-day02-main-india-gate.jpg";
+//import ov2_800 from "@/assets/india-day02-main-india-gate.jpg";
+
+import ov2_400 from "@/assets/india-overviewov2-400w.jpg";
+import ov2_800 from "@/assets/india-overviewov2-400w.jpg";
 
 
 //import ov1_400 from "@/assets/india-overviewov1-400w.webp";
@@ -34,8 +37,13 @@ import ov2_800 from "@/assets/india-day02-main-india-gate.jpg";
 //import ov2_800 from "@/assets/india-overviewov2-800w.webp";
 import ov3_400 from "@/assets/india-overviewov3-400w.webp";
 import ov3_800 from "@/assets/india-overviewov3-800w.webp";
-import ov4_400 from "@/assets/india-overviewov4-400w.webp";
-import ov4_800 from "@/assets/india-overviewov4-800w.webp";
+
+
+import ov4_400 from "@/assets/india-day02-main-india-gate.jpg";
+import ov4_800 from "@/assets/india-day02-main-india-gate.jpg";
+
+//import ov4_400 from "@/assets/india-overviewov4-400w.webp";
+//import ov4_800 from "@/assets/india-overviewov4-800w.webp";
 import ov5_400 from "@/assets/india-overviewov5-400w.webp";
 import ov5_800 from "@/assets/india-overviewov5-800w.webp";
 import ov6_400 from "@/assets/india-overviewov6-400w.webp";
