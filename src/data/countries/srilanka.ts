@@ -14,6 +14,17 @@ import tile4_800_srilanka from "@/assets/tile4_800_srilanka.webp";
 import mirissaBeach from "@/assets/srilanka-mirissa-beach.jpg";
 import hillCountryTrain from "@/assets/srilanka-hill-country-train.jpg";
 
+import srilankaDay02 from "@/assets/srilanka-day02-temple.webp";
+import srilankaDay04 from "@/assets/srilanka-day04-main-temple-of-tooth.jpg";
+import srilankaDay05 from "@/assets/srilanka-day05-main-kandy-2.jpg";
+import srilankaDay07 from "@/assets/srilanka-day07-little-adams-peak.jpg";
+
+import srilankaDay08 from "@/assets/india-high-safari.jpg";
+import srilankaDay09 from "@/assets/srilanka-day09-main-surfing.jpg";
+import srilankaDay10 from "@/assets/srilanka-day10-main-mirissa-beach.jpg";
+import srilankaDay11 from "@/assets/srilanka-day11-main-goodbye-group-photo.jpg"; // only if you actually have Day 11
+
+
 
 // Import icons for highlightsn
 import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
@@ -30,7 +41,7 @@ export const srilankaData = {
   overviewGallery2x:[tile1_800_srilanka, tile2_800_srilanka, tile3_800_srilanka, tile4_800_srilanka],
   route: ["Colombo", "Sigiriya", "Kandy", "Nuwara Eliya", "Ella", "Galle", "Colombo"],
   aboutDescription: [
-    "Traveling Sri Lanka is an incredible experience because of its stunning natural beauty, rich cultural heritage, and warm hospitality. The country offers diverse landscapes, from pristine beaches and lush tea plantations to ancient temples and wildlife safaris. You get to enjoy delicious cuisine, vibrant festivals, and friendly locals that make every trip memorable. Whether you're seeking adventure, relaxation, or cultural exploration, Sri Lanka provides a unique and captivating destination."],
+    "Embarking on a journey through Sri Lanka is like stepping into a vibrant adventure! Imagine frolicking on picture-perfect beaches, wandering through emerald tea gardens, exploring ancient temples, or exciting wildlife safaris. Savor mouthwatering local dishes, dance along with colorful festivals, and laugh with the friendly locals who will make you feel right at home. Whether you're craving thrills, chill time, or cultural discoveries, Sri Lanka is a fun-filled, one-of-a-kind paradise that promises unforgettable memories at every turn."],
   aboutImages: [srilankaTea, srilankaBeach],
 
   // What's Included Highlights - Sri Lanka specific
@@ -114,7 +125,7 @@ export const srilankaData = {
     date: "21 JUN 2024",
     title: "Temples, canals & city vibes",
     location: "Sigiriya",
-    heroImage: srilankaHero,
+    heroImage: srilankaDay02,
     description:
       "Journey into Sri Lanka's Cultural Triangle, where ancient wonders and natural beauty converge. Sigiriya stands as a testament to centuries of history, spirituality, and artistic mastery. This UNESCO World Heritage site offers unforgettable views across lush countryside, village life, and sacred shrines. Whether you're seeking cultural immersion or scenic beauty, Sigiriya is your gateway to unforgettable experiences.",
     meals: "Breakfast",
@@ -138,7 +149,7 @@ export const srilankaData = {
     date: "23 JUN 2024",
     title: "Royal Heritage & Sacred Tooth",
     location: "Kandy",
-    heroImage: srilankaTea,
+    heroImage: srilankaDay04,
     description:
       "Get ready for an exciting trip to the hill capital of Kandy, Sri Lanka's cultural treasure and the last kingdom of the ancient kings! This UNESCO World Heritage city is packed with awesome sights like the sacred Temple of the Tooth Relic, lush botanical gardens, and stunning lake views framed by misty hills. On the way, we'll make fun stops at vibrant tea plantations and aromatic spice gardens—where you can taste fresh teas and smell incredible spices. It's a journey full of history, nature, and flavor that'll leave you awe-inspired and craving more!",
     meals: "Breakfast",
@@ -150,7 +161,7 @@ export const srilankaData = {
     date: "24 JUN 2024",
     title: "Exploring Kandy and Cooking Class",
     location: "Kandy",
-    heroImage: srilankaTea,
+    heroImage: srilankaDay05,
     description:
       "Kick off your day with a delightful breakfast. Fuel up and get ready for an exciting day ahead! A van will pick you up for a lush adventure at the botanic gardens — explore beautiful plants, relax in nature, and maybe snap some amazing photos! After your botanical exploration, enjoy a leisurely lunch followed by some chill time at the hotel. Whether you want to shop for souvenirs, take a refreshing swim, or just kick back and relax your way. In the afternoon, get ready for a fun and tasty cooking class where you'll learn new recipes and skills. The van will pick you up from the hotel, so bring your excitement and appetite for a memorable day!",
     meals: "Breakfast",
@@ -174,7 +185,7 @@ export const srilankaData = {
     date: "26 JUN 2024",
     title: "Ella Adventures",
     location: "Ella",
-    heroImage: srilankaBeach,
+    heroImage: srilankaDay07,
     description:
       "Get ready for an amazing day in Ella! Late in the morning, we'll head to the iconic Nine Arch Bridge — a breathtaking spot where you can watch the train chug lazily through the lush valley and marvel at this engineering marvel surrounded by stunning greenery. It's a perfect photo op and a great way to soak in the magic of Ella! Later in the day, unleash your adventurous spirit with a scenic hike up Little Adam's Peak. As the sun begins to set, you'll be rewarded with jaw-dropping panoramic views and golden hues that make the moment truly special.",
     meals: "Breakfast",
@@ -186,7 +197,7 @@ export const srilankaData = {
     date: "27 JUN 2024",
     title: "Wildlife & Coastal Beauty",
     location: "Mirissa",
-    heroImage: srilankaBeach,
+    heroImage: srilankaDay08,
     description:
       "Today's adventure kicks off with us leaving the charming town of Ella after a hearty breakfast. Our journey takes us to the exciting Udawalawe, with an exciting stop at the stunning Quick Water Falls. Next, we explore the adorable Baby Elephant Home, where over 100 orphaned baby elephants are lovingly cared for — a truly heartwarming sight! After a delicious lunch, we dive into the jungle for an epic safari, where we'll spot majestic elephants, crocodiles, colorful birds, and other incredible wildlife. Get ready for an unforgettable day of fun and adventure! We then head into the beautiful town of Mirissa.",
     meals: "Breakfast",
@@ -198,7 +209,7 @@ export const srilankaData = {
     date: "28 JUN 2024",
     title: "Surf, History & Beach Vibes",
     location: "Mirissa/Galle",
-    heroImage: srilankaBeach,
+    heroImage: srilankaDay09,
     description:
       "Kick off the morning to a delicious breakfast to fuel your epic surf adventure, to soak in the island vibe. Get ready to hit the waves with an exciting surf lesson, ride like you're a pro and feel the thrill! Afterward, indulge in a tasty lunch, then explore the historic Galle Fort in the afternoon, marveling at its rich history and stunning architecture. As the sun sets, experience breathtaking views during sunset and enjoy a lavish dinner buffet. The night isn't over—head back to the beach for an unforgettable evening of dancing, singing karaoke, and endless fun under the stars!",
     meals: "Breakfast",
@@ -210,7 +221,7 @@ export const srilankaData = {
     date: "29 JUN 2024",
     title: "Last Beach Day & Farewell Celebration",
     location: "Mirissa",
-    heroImage: srilankaBeach,
+    heroImage: srilankaDay10,
     description:
       "This morning we can start with laid-back late breakfast and soak up the chill beach vibes. Since it's our last day together, let's make it epic and bask in the sun, catch some rays, and enjoy the ocean breeze with a nice cold cocktail in hand. We also like to leave a positive mark by cleaning up the beach with a quick trash pickup for the environment! Feeling adventurous? Maybe squeeze in another surf session and ride those waves one last time. Later, explore some local shops and pick up cool souvenirs. As the evening arrives, get ready for our unforgettable farewell dinner under the stars with an epic night filled with good food, dancing and laughs. This is the perfect way to wrap up our amazing Sri Lanka Adventure!",
     meals: "Breakfast, Dinner",
@@ -222,7 +233,7 @@ export const srilankaData = {
     date: "30 JUN 2024",
     title: "Farewell & Departure",
     location: "Mirissa/Departure",
-    heroImage: srilankaBeach,
+    heroImage: srilankaDay11,
     description:
       "Gihin Ennam for now! Check-out day in Mirissa wraps our 11-day adventure with smiles, hugs, and a few happy tears. Swap photos and contacts, promise future reunions, and take one last look at the city that brought everyone together. With souvenirs packed and new friendships that feel like old ones, we head out in different directions—hearts full and already dreaming of the next journey. Safe travels!",
     meals: "Breakfast",
