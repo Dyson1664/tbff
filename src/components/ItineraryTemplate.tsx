@@ -412,10 +412,10 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
           </div>
           
           {/* Reserve Button */}
-          <a href={paymentUrl} target="_blank" rel="noopener noreferrer" className="flex justify-center">
+          <a href={paymentUrl} target="_blank" rel="noopener noreferrer" className="block">
             <Button
               size="default"
-              className="w-auto px-12 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold"
             >
               Reserve Now
             </Button>
