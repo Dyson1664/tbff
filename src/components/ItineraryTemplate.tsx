@@ -408,7 +408,7 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
           {/* Price */}
           <div className="space-y-1">
             <p className="text-sm text-muted-foreground">From</p>
-            <p className="text-3xl font-bold text-foreground">GBP £1100</p>
+            <p className="text-3xl font-bold text-foreground">USD $1,399</p>
           </div>
           
           {/* Reserve Button */}
@@ -423,7 +423,7 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
           
           {/* Reserve Info */}
           <p className="text-xs text-center text-muted-foreground leading-relaxed">
-            Reserve for £150 - deducted from total fees. Non-refundable.
+            Reserve for $200 - deducted from total fees. Non-refundable.
           </p>
         </div>
       </div>
@@ -645,7 +645,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         <div className="flex items-center justify-between gap-4">
           <div className="flex flex-col">
             <span className="text-sm text-muted-foreground">From</span>
-            <span className="text-2xl font-bold text-foreground">GBP £1100</span>
+            <span className="text-2xl font-bold text-foreground">USD $1,399</span>
           </div>
           <a href={data.slug ? getPayUrlBySlug(data.slug) : '#'} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
             <Button
