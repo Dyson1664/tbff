@@ -391,6 +391,46 @@ const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], cou
   </div>
 ));
 
+// Sticky Booking Card Component
+const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; countryName: string }) => {
+  const paymentUrl = data.slug ? getPayUrlBySlug(data.slug) : '#';
+  
+  return (
+    <div className="hidden lg:block w-80 flex-shrink-0">
+      <div className="sticky top-24 space-y-4">
+        <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 space-y-6">
+          {/* Trip Title */}
+          <div className="space-y-2">
+            <h3 className="text-xl font-bold text-foreground">{data.duration}</h3>
+            <p className="text-sm text-muted-foreground">{data.route ? data.route.join(' to ') : data.location}</p>
+          </div>
+          
+          {/* Price */}
+          <div className="space-y-1">
+            <p className="text-sm text-muted-foreground">From</p>
+            <p className="text-3xl font-bold text-foreground">GBP £1100</p>
+          </div>
+          
+          {/* Reserve Button */}
+          <a href={paymentUrl} target="_blank" rel="noopener noreferrer" className="block">
+            <Button
+              size="lg"
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-6 text-lg font-semibold"
+            >
+              Reserve Now
+            </Button>
+          </a>
+          
+          {/* Reserve Info */}
+          <p className="text-xs text-center text-muted-foreground leading-relaxed">
+            Reserve for £150 - deducted from total fees. Non-refundable.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+});
+
 
 
 export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
@@ -561,35 +601,43 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         </div>
       </section>
 
-      {/* Country Overview */}
-      <div className="max-w-6xl mx-auto px-4 md:px-3 py-0 md:py-12">
-        <AboutSection data={data} />
+      {/* Country Overview - with sticky sidebar on desktop */}
+      <div className="max-w-7xl mx-auto px-4 md:px-3 py-0 md:py-12">
+        <div className="flex gap-8">
+          {/* Main Content */}
+          <div className="flex-1 min-w-0">
+            <AboutSection data={data} />
 
-        {/* What's Included Highlights */}
-        <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} />
-        
-        {/* Itinerary Title */}
-        <div className="text-center mt-10 md:mt-16 mb-8">
-          <h2 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.itineraryTitle}</h2>
-          <p className="text-lg text-muted-foreground">A detailed day-by-day guide to your {countryName} adventure</p>
-        </div>
+            {/* What's Included Highlights */}
+            <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} />
+            
+            {/* Itinerary Title */}
+            <div className="text-center mt-10 md:mt-16 mb-8">
+              <h2 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.itineraryTitle}</h2>
+              <p className="text-lg text-muted-foreground">A detailed day-by-day guide to your {countryName} adventure</p>
+            </div>
 
-        {/* Daily Itinerary (full-bleed on mobile) */}
+            {/* Daily Itinerary (full-bleed on mobile) */}
             <div
               className="bg-white md:bg-transparent
                          w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                          md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0 rounded-2xl">
               {itineraryContent}
             </div>
-        
-        {/* Trip Summary */}
-        <SummarySection summary={data.summary} />
+            
+            {/* Trip Summary */}
+            <SummarySection summary={data.summary} />
 
-        {/* What's Included Section */}
-        <IncludedSection included={data.included} countryName={countryName} />
-        
-        {/* FAQ Section */}
-        <FAQSection faqs={data.faqs} countryName={countryName} />
+            {/* What's Included Section */}
+            <IncludedSection included={data.included} countryName={countryName} />
+            
+            {/* FAQ Section */}
+            <FAQSection faqs={data.faqs} countryName={countryName} />
+          </div>
+          
+          {/* Sticky Booking Card */}
+          <StickyBookingCard data={data} countryName={countryName} />
+        </div>
       </div>
       
       {/* Footer */}
