@@ -640,6 +640,24 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         </div>
       </div>
       
+      {/* Mobile Sticky Booking Bar */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 px-4 py-3 shadow-lg">
+        <div className="flex items-center justify-between gap-4">
+          <div className="flex flex-col">
+            <span className="text-sm text-muted-foreground">From</span>
+            <span className="text-2xl font-bold text-foreground">GBP £1100</span>
+          </div>
+          <a href={data.slug ? getPayUrlBySlug(data.slug) : '#'} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+            <Button
+              size="default"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold px-8"
+            >
+              Reserve Now
+            </Button>
+          </a>
+        </div>
+      </div>
+
       {/* Footer */}
       <Footer />
     </div>
