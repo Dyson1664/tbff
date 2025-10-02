@@ -8,11 +8,12 @@ import philippinesDay08 from "@/assets/philippines-day08.jpeg";
 import philippinesDay09 from "@/assets/philippines-day09.jpeg";
 import philippinesDay10 from "@/assets/philippines-day10.jpeg";
 
-
-
-
 import philippinesRice from "@/assets/philippines-rice.jpg";
 import philippinesMarket from "@/assets/philippines-market.jpg";
+
+import highlight02 from "@/assets/highlight-ph-02.jpg"
+import highlight03 from "@/assets/highlight-ph-03.jpg"
+
 
 // Import icons for highlights
 import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
@@ -30,6 +31,24 @@ export const philippinesData = {
     "Experience world-class diving, UNESCO World Heritage sites, and some of the most beautiful islands on Earth. This journey combines adventure, relaxation, and cultural immersion in one of Southeast Asia's most stunning destinations."
   ],
   aboutImages: [philippinesRice, philippinesMarket],
+
+highlights: [
+  {
+    title: "Island hoping El Nido & Lime Resort",
+    description: "Spend one unforgettable day exploring El Nido’s turquoise waters and hidden lagoons. Spend three dreamy nights of incredible sunsets at Lime Resort’s infinity pool.",
+    image: philippinesDay03,
+  },
+  {
+    title: "Wonderland island",
+    description: "Nestled between jungle hills and turquoise waters, Wonderland is island living perfected. As the sun sets, unwind with music and tropical drinks, then gather around the bonfire under a starlit sky.",
+    image: highlight02,
+  },
+  {
+    title: "Island hopping & snorkeling",
+    description: "Island hop through Port Barton’s hidden gems and snorkel vibrant reefs with turtles.",
+    image: highlight03,
+  },
+],
 
   // What's Included Highlights - Philippines specific
   whatsIncludedHighlights: [
