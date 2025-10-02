@@ -591,9 +591,13 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
               <div className="text-center text-white">
                 <h1 className="text-4xl lg:text-5xl font-bold mb-3">{data.title}</h1>
-                <div className="flex items-center justify-center gap-2 text-lg">
+                <div className="flex items-center justify-center gap-2 text-lg mb-4">
                   <MapPin className="w-5 h-5" />
                   <span>{data.location} • {data.duration}</span>
+                </div>
+                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-6 py-3 inline-block">
+                  <p className="text-sm text-white/90 mb-1">From</p>
+                  <p className="text-3xl font-bold text-white">USD $1,399</p>
                 </div>
               </div>
             </div>
