@@ -224,14 +224,6 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
         </div>
       </div>
 
-      {/* Book Now Button */}
-        <div className="text-center mb-8">
-        <BookNowButton tripSlug={data.slug} countryName={countryName} title={data.title} />
-        <p className="text-sm text-muted-foreground mt-2">
-        Secure your {countryName} adventure today
-        </p>
-      </div>
-
     </div>
   );
 });
