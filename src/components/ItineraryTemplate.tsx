@@ -588,16 +588,19 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${data.heroImage})` }}
             />
+            {/* Price in top right corner */}
+            <div className="absolute top-6 right-6 z-10">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg px-4 py-2">
+                <p className="text-xs text-white/90">From</p>
+                <p className="text-xl font-bold text-white">USD $1,399</p>
+              </div>
+            </div>
             <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
               <div className="text-center text-white">
                 <h1 className="text-4xl lg:text-5xl font-bold mb-3">{data.title}</h1>
-                <div className="flex items-center justify-center gap-2 text-lg mb-4">
+                <div className="flex items-center justify-center gap-2 text-lg">
                   <MapPin className="w-5 h-5" />
                   <span>{data.location} • {data.duration}</span>
-                </div>
-                <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-6 py-3 inline-block">
-                  <p className="text-sm text-white/90 mb-1">From</p>
-                  <p className="text-3xl font-bold text-white">USD $1,399</p>
                 </div>
               </div>
             </div>
