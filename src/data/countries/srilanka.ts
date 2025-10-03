@@ -48,7 +48,7 @@ export const srilankaData = {
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "10 NIGHTS<br />ACCOMMODATION",
+      title: "10 NIGHTS<br />ACCOMM",
       description: "From heritage hotels to tea plantation bungalows and beach resorts across the island!"
     },
     {

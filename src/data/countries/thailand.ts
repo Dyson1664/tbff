@@ -27,7 +27,7 @@ export const thailandData = {
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "7 NIGHTS<br />ACCOMMODATION",
+      title: "7 NIGHTS<br />ACCOMM",
       description: "From luxury Bangkok hotels to beachfront resorts and traditional Thai-style accommodations!"
     },
     {

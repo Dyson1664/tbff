@@ -54,7 +54,7 @@ highlights: [
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "9 NIGHTS<br />ACCOMMODATION",
+      title: "9 NIGHTS<br />ACCOMM",
       description: "From beachside resorts to traditional Filipino bamboo bungalows on remote tropical islands!"
     },
     {

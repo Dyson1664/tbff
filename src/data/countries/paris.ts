@@ -35,7 +35,7 @@ export const parisData = {
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "5 NIGHTS<br />ACCOMMODATION",
+      title: "5 NIGHTS<br />ACCOMM",
       description: "Boutique hotel near Champs-Élysées with authentic Parisian charm and luxury amenities!"
     },
     {

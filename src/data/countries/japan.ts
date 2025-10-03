@@ -27,7 +27,7 @@ export const japanData = {
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "9 NIGHTS<br />ACCOMMODATION",
+      title: "9 NIGHTS<br />ACCOMM",
       description: "From traditional ryokans to modern hotels - experience authentic Japanese hospitality!"
     },
     {
