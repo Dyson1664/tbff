@@ -403,7 +403,7 @@ summary: {
 },
 included: [
   {
-    title: "Accommodation",
+    title: "ACCOMM",
     items: [
       { text: "13 nights in luxury heritage hotels" },
       { text: "Daily breakfast and select meals" },
