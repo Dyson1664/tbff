@@ -582,7 +582,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             />
             {/* Price in top right corner */}
             <div className="absolute top-6 right-6 z-10">
-              <div className="bg-primary/20 backdrop-blur-md border border-primary/40 rounded-lg px-4 py-2">
+              <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-4 py-2">
                 <p className="text-xs text-white/90">From</p>
                 <p className="text-xl font-bold text-white">USD $1,399</p>
               </div>
