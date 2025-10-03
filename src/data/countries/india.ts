@@ -124,7 +124,7 @@ export const indiaData = {
   title: "India Journey",
   subtitle: "Immerse yourself in the colors, flavors, and ancient wisdom of incredible India",
   location: "India",
-  duration: "13 days",
+  duration: "14 days",
   heroImage: indiaHero,
   overviewGallery: [ov1_400, ov2_400, ov3_400, ov4_400, ov5_400, ov6_400],
   overviewGallery2x:[ov1_800, ov2_800, ov3_800, ov4_800, ov5_800, ov6_800],
@@ -143,7 +143,7 @@ export const indiaData = {
     },
     {
       icon: Zap,
-      title: "13 DAYS OF<br />EPIC ACTIVITIES",
+      title: "14 DAYS OF<br />EPIC ACTIVITIES",
       description: "Visit the Taj Mahal, explore royal palaces, wildlife safaris & immerse in vibrant culture!",
       link: {
         text: "See the full itinerary",
@@ -383,7 +383,7 @@ highlights: [
 }
 ],
 summary: {
-  duration: "13 days",
+  duration: "14 days",
   activities: "Cultural immersion",
   areas: "Golden Triangle & more",
   type: "Heritage & Culture"
