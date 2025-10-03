@@ -216,7 +216,7 @@ export const parisData = {
   },
   included: [
     {
-      title: "Accommodation",
+      title: "ACCOMM",
       items: [
         { text: "5 nights in boutique hotel near Champs-Élysées" },
         { text: "Daily breakfast included" },
