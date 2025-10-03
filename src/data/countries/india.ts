@@ -197,8 +197,8 @@ highlights: [
   day: 1,
   date: "March 15, 2024",
   title: "Delhi Arrival — Hello, India!",
-  location: "New Delhi",
-  siteName: "Saket 27",
+  location: "Delhi",
+  siteName: "Delhi",
   heroImage: indiaDay01,
     description:
       "Touch down in New Delhi, where Mughal grandeur meets modern buzz. Check in at Saket 27, freshen up, and if you're early, dip into mini-adventures—heritage strolls or bustling bazaars. As the city lights glow, meet the crew for a cheerful briefing and a tasty welcome dinner at a local favorite.",
@@ -217,7 +217,7 @@ highlights: [
   day: 2,
   date: "March 16, 2024",
   title: "Delhi — Full-Day Adventure",
-  location: "New Delhi",
+  location: "Delhi",
   siteName: "India Gate",
   heroImage: indiaDay02,
   description:
@@ -247,7 +247,7 @@ highlights: [
   date: "March 18, 2024",
   title: "Mandawa → Jodhpur — Blue City Buzz", // colon removed
   location: "Jodhpur",
-  siteName: "Ranakpur Jain Temples",
+  siteName: "Ghanta Ghar Clock Tower",
   heroImage: indiaDay04,
   description:
     "After breakfast, road-trip to Jodhpur. As the sun softens, head out on a guided stroll around the Clock Tower (Ghanta Ghar) market—spice heaven! Pick up Mathaniya red chilies, plus handicrafts, flavored teas, hand-embroidered fabrics, and quirky antiques. When your shopping bags (and feet) are full, treat yourself to a creamy Makhania lassi locals swear is the best—then cap the evening with a crisp, golden shahi samosa. Shopping spree: conquered. Taste buds: delighted.",
@@ -275,8 +275,8 @@ highlights: [
   day: 6,
   date: "March 20, 2024",
   title: "Lets travel to Udaipur",
-  location: "Ranakpur Jain Temples",
-  siteName: "Udaipur City",
+  location: "Udaipur",
+  siteName: "Udaipur",
   heroImage: indiaDay06,
   description:
     "Its time to go. After breakfast we roll toward Udaipur with a wow-stop at the 15th-century Ranakpur Jain Temples and home to 1,444 uniquely carved marble pillars (no two alike!). Arrive in Udaipur, check in, and kick back for a bit. Then dress up for a breezy night out in this dreamy lake city—lantern-lit lanes, rooftop views, and all the romantic feels. After we check into the hotel and have a relaxed afternoon, we will get ready for a nice night in this beautiful town.",
@@ -289,8 +289,8 @@ highlights: [
   day: 7,
   date: "March 21, 2024",
   title: "Udaipur, lets go explore",
-  location: "City Palace Udaipur",
-  siteName: "City Palace",
+  location: "Udaipur",
+  siteName: "City Palace Udaipur",
   heroImage: indiaDay07,
   description:
     "Kick off at the City Palace and enter through Hathi Pol past Jagdish Temple and get lost in Insta-worthy halls of paintings, mosaics, and carved chhatris. Reset vibes at Sahelion-ki-Bari, the chill “garden of the maids of honor,” with fountains and shady paths made for soft life strolls. Golden hour? Board a Lake Pichola boat (water levels permitting), glide past palace-lit skylines, hop off at Jag Mandir for island-palace feels, and watch the sun melt over the water. Culture, pics, and sunset magic—perfect Udaipur day unlocked.",
@@ -303,7 +303,7 @@ highlights: [
   day: 8,
   date: "March 22, 2024",
   title: "Travel to Ranthambore",
-  location: "Ranthambhore Fort",
+  location: "Ranthambore",
   siteName: "Ranthambhore Fort",
   heroImage: indiaDay08,
   description:
@@ -317,8 +317,8 @@ highlights: [
   day: 9,
   date: "March 23, 2024",
   title: "In Ranthambore",
-  location: "Safari",
-  siteName: "Ranthambore National Park",
+  location: "Ranthambore",
+  siteName: "Ranthambore National Park Safari",
   heroImage: indiaDay09,
   description:
     "Roll out early for a morning game drive. Settle into the canter, breathe in that cool forest air, and watch the park wake up with peacocks calling, deer tiptoeing, langurs leaping. The drive runs a few hours, with you back at the hotel by late morning for a well-earned breakfast. Tiger sightings are part magic, part patience—and the jungle is buzzing even if the big cat plays shy: crocs by the lakes, sambar and chital in the grass, and more than 300 bird species flashing color through the trees. In the afternoon, you can opt for another game drive to double your chances (and your bragging rights). The evening is yours to lounge by the pool, flipping through photos, or swapping safari stories under the stars.",
@@ -332,8 +332,8 @@ highlights: [
   day: 10,
   date: "March 24, 2024",
   title: "Travel to Jaipur — Your Day, Your Pace",
-  location: "",
-  siteName: "Amer Fort",
+  location: "Jaipur",
+  siteName: "Amber Fort",
   heroImage: indiaDay10,
   description:
     "After breakfast, hit the highway to the Pink City. Make the day your own: dive into bazaars for handicrafts and block prints, sip masala chai on a rooftop, try a cooking class or block-print workshop, hunt down street-food favorites like kachori and lassi, or simply chill by the hotel pool.",
@@ -346,8 +346,8 @@ highlights: [
   day: 11,
   date: "March 25, 2024",
   title: "Jaipur Sightseeing Classics",
-  location: "City Palace Museum",
-  siteName: "Jal Mahal",
+  location: "Jaipur",
+  siteName: "City Palace Jaipur",
   heroImage: indiaDay11,
   description:
     "Start with a photo stop at Hawa Mahal, the pink honeycomb where royal ladies once watched city life. Head up to Amber Fort—courtyards, mirrored halls, and sandstone/marble grandeur. Pause at Jal Mahal, the dreamy lakeside palace on Man Sagar, then wrap at the City Palace Museum for royal costumes and a striking arms gallery. Evening free for shopping and fun.",
@@ -360,7 +360,8 @@ highlights: [
   day: 12,
   date: "March 26, 2024",
   title: "Agra — Let’s Go",
-  location: "Agra Fort",
+  location: "Agra",
+  siteName: "Agra Fort",
   heroImage: indiaDay12,
   description:
     "After breakfast, roll out to Agra. Later, step into the mighty Agra Fort—UNESCO-listed and once a seat of Mughal power. Explore polished pavilions, mosques, and leaf-lined courtyards; admire the signature Mughal blend of Islamic arches and Hindu detailing—camera-ready at every turn.",
@@ -373,7 +374,7 @@ highlights: [
   day: 13,
   date: "March 27, 2024",
   title: "Taj Mahal Sunrise & Back to Delhi",
-  location: "Taj Mahal",
+  location: "Agra",
   siteName: "Taj Mahal",
   heroImage: indiaDay13,
   description:
@@ -387,7 +388,7 @@ highlights: [
   day: 14,
   date: "March 28, 2024",
   title: "Farewell & Onward Travel",
-  location: "",
+  location: "Dehli",
   siteName: "Farewell",
   heroImage: indiaDay14,
   description:
