@@ -35,6 +35,7 @@ export interface DayItinerary {
   date: string;
   title: string;
   location?: string;
+  siteName?: string; // Name of the building/attraction shown in the image
   heroImage?: string;
   description?: string;
   galleryImages?: string[];

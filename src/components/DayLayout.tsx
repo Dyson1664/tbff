@@ -29,6 +29,7 @@ interface DayLayoutProps {
   dayNumber: number;
   date: string;
   location: string;
+  siteName?: string;
   heroImage: string;
   description: string;
   carouselImages: string[];
@@ -41,7 +42,8 @@ interface DayLayoutProps {
 export const DayLayout = memo(({ 
   dayNumber, 
   date, 
-  location, 
+  location,
+  siteName, 
   heroImage, 
   description, 
   carouselImages, 
@@ -86,9 +88,9 @@ export const DayLayout = memo(({
             alt={`Day ${dayNumber} - ${location}`}
             className="w-full h-full object-cover"
           />
-          {/* Location overlay in top right corner */}
+          {/* Site name overlay in top right corner */}
           <div className="absolute top-3 right-3 bg-black/40 backdrop-blur-sm text-white px-2 py-0.5 rounded text-xs font-light tracking-wide">
-            {location}
+            {siteName || location}
           </div>
         </div>
       </div>

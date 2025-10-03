@@ -508,6 +508,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               dayNumber={day.day}
               date={day.date}
               location={day.location || day.title}
+              siteName={day.siteName}
               heroImage={day.heroImage || data.heroImage}
               description={day.description || `Experience the wonders of ${day.title} in this unforgettable day of your journey.`}
               carouselImages={day.galleryImages || []}
