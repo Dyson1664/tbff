@@ -162,8 +162,8 @@ export const DayLayout = memo(({
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden lg:flex left-2 md:-left-12" />
-            <CarouselNext className="hidden lg:flex right-2 md:-right-12" />
+            <CarouselPrevious className="hidden lg:flex -left-4" />
+            <CarouselNext className="hidden lg:flex -right-4" />
           </Carousel>
           
           {/* Dots Navigation for Mobile/Tablet */}
