@@ -138,7 +138,7 @@ export const indiaData = {
   whatsIncludedHighlights: [
     {
       icon: Home,
-      title: "12 NIGHTS<br />ACCOMM",
+      title: "13 NIGHTS<br />ACCOMM",
       description: "From heritage hotels in Rajasthan to luxury resorts - experience authentic Indian hospitality!"
     },
     {
@@ -392,7 +392,7 @@ included: [
   {
     title: "Accommodation",
     items: [
-      { text: "12 nights in luxury heritage hotels" },
+      { text: "13 nights in luxury heritage hotels" },
       { text: "Daily breakfast and select meals" },
       { text: "24/7 concierge service" },
       { text: "Traditional welcome ceremonies" }
