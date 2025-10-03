@@ -401,9 +401,9 @@ summary: {
   areas: "Golden Triangle & more",
   type: "Heritage & Culture"
 },
-included: [
+  included: [
   {
-    title: "ACCOMM",
+    title: "Accommodation",
     items: [
       { text: "13 nights in luxury heritage hotels" },
       { text: "Daily breakfast and select meals" },

@@ -250,7 +250,7 @@ export const srilankaData = {
   },
   included: [
     {
-      title: "ACCOMM & Meals",
+      title: "Accommodation & Meals",
       items: [
         { text: "10 nights in premium hotels and lodges" },
         { text: "Traditional Sri Lankan breakfast daily" },

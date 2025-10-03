@@ -163,7 +163,7 @@ export const japanData = {
   },
   included: [
     {
-      title: "ACCOMM",
+      title: "Accommodation",
       items: [
         { text: "9 nights mixing modern hotels and traditional ryokans" },
         { text: "Traditional Japanese breakfast" },

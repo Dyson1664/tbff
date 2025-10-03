@@ -183,7 +183,7 @@ export const thailandData = {
   },
   included: [
     {
-      title: "ACCOMM",
+      title: "Accommodation",
       items: [
         { text: "7 nights in carefully selected hotels" },
         { text: "Traditional Thai breakfast daily" },

@@ -224,7 +224,7 @@ highlights: [
   },
   included: [
     {
-      title: "ACCOMM",
+      title: "Accommodation",
       items: [
         { text: "9 nights in beachfront resorts and mountain lodges" },
         { text: "Filipino breakfast featuring local specialties" },
