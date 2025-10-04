@@ -98,11 +98,11 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
 
 // Extract destinations to module level
 export const DESTINATIONS: readonly Destination[] = [
-  { name: "Thailand",    image: thailandHero,    route: "/thailand-itinerary" },
+  { name: "India",       image: indiaHero,       route: "/india-itinerary" },
   { name: "Sri Lanka",   image: srilankaHero,    route: "/srilanka-itinerary" },
   { name: "Philippines", image: philippinesHero, route: "/philippines-itinerary" },
   { name: "Japan",       image: japanHero,       route: "/japan-itinerary" },
-  { name: "India",       image: indiaHero,       route: "/india-itinerary" },
+  { name: "Thailand",    image: thailandHero,    comingSoon: true },
   { name: "Colombia",    image: colombiaHero,    comingSoon: true },
   { name: "Bhutan",      image: bhutanHero,      comingSoon: true },
   { name: "Vietnam",     image: vietnamHero,     comingSoon: true },
