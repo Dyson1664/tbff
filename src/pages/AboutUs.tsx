@@ -112,12 +112,8 @@ export default memo(function AboutUs() {
                 <p className="text-primary font-medium">Founder</p>
               </div>
               <div className="text-center">
-                <div className="w-48 h-48 mx-auto mb-4 rounded-full border-4 border-white shadow-lg overflow-hidden">
-                  <img 
-                    src={aboutusdave}
-                    alt="Dave - Co-Founder"
-                    className="w-full h-full object-cover object-center"
-                  />
+                <div className="w-48 h-48 mx-auto mb-4 bg-muted rounded-full border-4 border-white shadow-lg flex items-center justify-center">
+                  <span className="text-muted-foreground text-sm">Dave</span>
                 </div>
                 <h3 className="text-xl font-bold text-foreground">Dave</h3>
                 <p className="text-primary font-medium">Co-Founder</p>
