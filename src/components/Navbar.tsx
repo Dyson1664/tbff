@@ -6,12 +6,9 @@ import { NAVIGATION_TRIPS, NAVIGATION_DESTINATIONS } from "@/data/navigation";
 import ibtLogo from "@/assets/ibt-logo.svg";
 
 // Memoized dropdown item component
-const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) => (
-  <Link 
-    to={trip.link}
-    className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
-    onClick={() => window.scrollTo(0, 0)}
-  >
+const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) => {
+  const isComingSoon = trip.duration === "Coming Soon";
+  const content = (
     <div className="flex justify-between items-start">
       <div>
         <h4 className="font-medium text-foreground">{trip.title}</h4>
@@ -21,8 +18,22 @@ const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) =
         {trip.duration}
       </span>
     </div>
-  </Link>
-));
+  );
+
+  return isComingSoon ? (
+    <div className="px-4 py-3 opacity-60 cursor-not-allowed">
+      {content}
+    </div>
+  ) : (
+    <Link 
+      to={trip.link}
+      className="px-4 py-3 hover:bg-muted cursor-pointer transition-colors block"
+      onClick={() => window.scrollTo(0, 0)}
+    >
+      {content}
+    </Link>
+  );
+});
 
 const DropdownDestinationItem = memo(({ destination }: { destination: typeof NAVIGATION_DESTINATIONS[0] }) => (
   <Link 
@@ -78,13 +89,9 @@ const Navbar = memo(() => {
 
   // Memoized mobile trip items
   const mobileTripsItems = useMemo(() => 
-    NAVIGATION_TRIPS.map((trip, index) => (
-      <Link 
-        key={`mobile-${trip.link}-${index}`} 
-        to={trip.link} 
-        className="py-2 px-2 hover:bg-muted rounded cursor-pointer block"
-        onClick={() => window.scrollTo(0, 0)}
-      >
+    NAVIGATION_TRIPS.map((trip, index) => {
+      const isComingSoon = trip.duration === "Coming Soon";
+      const content = (
         <div className="flex justify-between items-start">
           <div>
             <h4 className="font-medium text-foreground text-sm">{trip.title}</h4>
@@ -94,8 +101,26 @@ const Navbar = memo(() => {
             {trip.duration}
           </span>
         </div>
-      </Link>
-    )), []
+      );
+
+      return isComingSoon ? (
+        <div 
+          key={`mobile-${trip.link}-${index}`}
+          className="py-2 px-2 opacity-60 cursor-not-allowed block"
+        >
+          {content}
+        </div>
+      ) : (
+        <Link 
+          key={`mobile-${trip.link}-${index}`} 
+          to={trip.link} 
+          className="py-2 px-2 hover:bg-muted rounded cursor-pointer block"
+          onClick={() => window.scrollTo(0, 0)}
+        >
+          {content}
+        </Link>
+      );
+    }), []
   );
 
   // Memoized mobile destination items

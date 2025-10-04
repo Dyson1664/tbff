@@ -20,10 +20,10 @@ export const NAVIGATION_TRIPS: readonly NavigationTrip[] = [
   { title: "Japan Journey", duration: "7 Days", location: "Japan", link: "/japan-itinerary" },
   { title: "Philippines Paradise", duration: "10 Days", location: "Philippines", link: "/philippines-itinerary" },
   { title: "Sri Lanka Explorer", duration: "9 Days", location: "Sri Lanka", link: "/srilanka-itinerary" },
-  { title: "Thailand Discovery", duration: "Coming Soon", location: "Thailand", link: "/thailand-itinerary" },
-  //{ title: "Colombia Coffee Trail", duration: "8 Days", location: "Colombia", link: "/colombia-itinerary" },
+  { title: "Thailand Discovery", duration: "Coming Soon", location: "Thailand", link: "#" },
+  { title: "Vietnam Culture Journey", duration: "Coming Soon", location: "Vietnam", link: "#" },
+  { title: "Colombia Coffee Trail", duration: "Coming Soon", location: "Colombia", link: "#" },
   //{ title: "Bhutan Monastery Trek", duration: "9 Days", location: "Bhutan", link: "/bhutan-itinerary" },
-  //{ title: "Vietnam Culture Journey", duration: "10 Days", location: "Vietnam", link: "/vietnam-itinerary" }
 ] as const;
 
 // Extract destinations data to module level
