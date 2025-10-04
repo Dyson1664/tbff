@@ -28,16 +28,19 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-6 text-primary">Trips</h4>
             <div className="space-y-3 text-sm">
-              {NAVIGATION_TRIPS.map((trip) => (
-                <Link 
-                  key={trip.title}
-                  to={trip.link} 
-                  className="block hover:text-primary transition-colors"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  {trip.title}
-                </Link>
-              ))}
+              {NAVIGATION_TRIPS
+                .filter((trip) => !['Thailand', 'Vietnam', 'Colombia'].some(name => trip.location.includes(name)))
+                .map((trip) => (
+                  <Link 
+                    key={trip.title}
+                    to={trip.link} 
+                    className="block hover:text-primary transition-colors"
+                    onClick={() => window.scrollTo(0, 0)}
+                  >
+                    {trip.title}
+                  </Link>
+                ))
+              }
             </div>
           </div>
 
