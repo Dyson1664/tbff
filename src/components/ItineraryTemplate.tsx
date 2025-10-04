@@ -373,8 +373,11 @@ const FAQSection = memo(({ faqs, countryName }: { faqs: CountryData['faqs'], cou
           <span className="font-semibold text-foreground">{faq.question}</span>
         </AccordionTrigger>
         <AccordionContent className="px-0 md:px-6 pb-4">
-          <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
-        </AccordionContent>
+  <p className="text-muted-foreground leading-relaxed whitespace-pre-line">
+    {faq.answer}
+  </p>
+</AccordionContent>
+
       </AccordionItem>
     ))}
     </Accordion>

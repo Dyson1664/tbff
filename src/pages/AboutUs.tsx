@@ -6,6 +6,8 @@ import landingHero from "@/assets/landing-hero.jpg";
 
 import aboutus2 from "@/assets/about-us-2.jpeg"
 import aboutus1 from "@/assets/about-us-1.jpeg"
+import aboutusdave from "@/assets/about-us-dave.jpg"
+
 
 // Founders data
 const FOUNDERS_INFO = {

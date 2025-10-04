@@ -7,7 +7,7 @@ import philippinesDay02 from "@/assets/philippines-day-02.jpg";
 import philippinesDay03 from "@/assets/philippines-day03.jpeg";
 import philippinesDay05 from "@/assets/philippines-day05.jpeg";
 import philippinesDay04 from "@/assets/philippines-day04.jpeg";
-import philippinesDay06 from "@/assets/philippines-day06.jpeg";
+import philippinesDay06 from "@/assets/philippines-day06.jpg";
 import philippinesDay07 from "@/assets/philippines-day07.jpg";
 
 import philippinesDay08 from "@/assets/philippines-day08.jpeg";
@@ -21,6 +21,7 @@ import philippinesDay5wonder from "@/assets/philippines-day05-wonderland.jpg";
 import philippinesRice from "@/assets/philippines-rice.jpg";
 import philippinesMarket from "@/assets/philippines-market.jpg";
 
+import highlight01 from "@/assets/highlight-ph-01.jpeg"
 import highlight02 from "@/assets/highlight-ph-02.jpg"
 import highlight03 from "@/assets/highlight-ph-03.jpg"
 
@@ -34,7 +35,7 @@ export const philippinesData = {
   subtitle: "Explore tropical islands, ancient rice terraces, and vibrant Filipino culture",
   location: "Philippines",
   duration: "10 days",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay07,
   route: ["Manila", "Port Barton", "Wonderland", "El Nido"],
   aboutDescription: [
     "Discover the incredible diversity of the Philippines, an archipelago of over 7,000 islands offering pristine beaches, ancient rice terraces, and warm Filipino hospitality. From the bustling streets of Manila to the remote beauty of Palawan and Banaue.",
@@ -46,7 +47,7 @@ highlights: [
   {
     title: "Island hoping El Nido & Lime Resort",
     description: "Spend one unforgettable day exploring El Nido’s turquoise waters and hidden lagoons. Spend three dreamy nights of incredible sunsets at Lime Resort’s infinity pool.",
-    image: philippinesDay03,
+    image: highlight01,
   },
   {
     title: "Wonderland island",
@@ -233,76 +234,74 @@ highlights: [
     type: "Adventure & Beach"
   },
   included: [
-    {
-      title: "Accommodation",
-      items: [
-        { text: "9 nights in beachfront resorts and mountain lodges" },
-        { text: "Filipino breakfast featuring local specialties" },
-        { text: "Ocean view rooms in El Nido" }
-      ]
-    },
-    {
-      title: "Island Adventures",
-      items: [
-        { text: "Multiple island hopping tours with snorkeling gear" },
-        { text: "Kayaking through hidden lagoons" },
-        { text: "Rice terraces guided trekking" },
-        { text: "Underground river exploration" }
-      ]
-    },
-    {
-      title: "Transportation",
-      items: [
-        { text: "Domestic flights between islands" },
-        { text: "Private boats for island hopping" },
-        { text: "Mountain transfers in air-conditioned vehicles" }
-      ]
-    },
-    {
-      title: "Cultural Immersion",
-      items: [
-        { text: "Traditional Ifugao village visits" },
-        { text: "Filipino cooking class with local families" },
-        { text: "Historical Manila walking tours" }
-      ]
-    },
-    {
-      title: "Expert Support",
-      items: [
-        { text: "Licensed dive masters and boat captains" },
-        { text: "Local mountain guides in Banaue" },
-        { text: "24/7 travel support throughout" }
-      ]
-    },
-    {
-      title: "Special Experiences",
-      items: [
-        { text: "Sunset cocktails on private beaches" },
-        { text: "Traditional Filipino massage treatments" },
-        { text: "Local market tours and food tastings" }
-      ]
-    }
-  ],
-  faqs: [
-    {
-      question: "What is the best time to visit the Philippines?",
-      answer: "The dry season from November to April offers the best weather for traveling. March to May can be hot, while June to October is the rainy season with potential typhoons."
-    },
-    {
-      question: "Do I need any vaccinations for the Philippines?",
-      answer: "Routine vaccinations should be up to date. Consider hepatitis A, typhoid, and Japanese encephalitis. Consult your doctor at least 4-6 weeks before travel for personalized advice."
-    },
-    {
-      question: "What currency is used and can I use credit cards?",
-      answer: "The Philippine Peso (PHP) is the local currency. Credit cards are accepted in cities and tourist areas, but cash is preferred in rural areas and small establishments."
-    },
-    {
-      question: "Is the water safe to drink?",
-      answer: "We recommend drinking bottled or filtered water. All accommodations provide safe drinking water, and our guides will ensure you have access to clean water throughout the trip."
-    },
-    {
-      question: "What should I know about Filipino culture and customs?",
-      answer: "Filipinos are known for their hospitality and friendliness. Dress modestly when visiting religious sites, remove shoes when entering homes, and always greet with a smile. Tipping is appreciated but not mandatory."
-    }
-  ]
+  {
+    title: "Meals",
+    items: [
+      { text: "8 Breakfasts" },
+      { text: "4 Lunches" },
+      { text: "2 Dinners" }
+    ]
+  },
+  {
+    title: "Transportation",
+    items: [
+      { text: "Airport pick-up from Manila (NAIA)" },
+      { text: "Flight on Day 2: Manila → Puerto Princesa" },
+      { text: "Transport to all included activities" }
+    ]
+  },
+  {
+    title: "Island & Water Adventures",
+    items: [
+      { text: "Private boat excursion in Port Barton" },
+      { text: "El Nido private boat excursion" },
+      { text: "Zip-line" },
+      { text: "Feed / swim with island pigs" },
+      { text: "Beach picnics" },
+      { text: "Beach bonfire (weather permitting)" }
+    ]
+  },
+  {
+    title: "Cultural & Community",
+    items: [
+      { text: "Cooking demonstration" },
+      { text: "Visit local community & give" },
+      { text: "Local lunch experience" }
+    ]
+  }
+]
+,
+faqs: [
+  {
+    question: "Where does the trip start & finish?",
+    answer: "The tour starts in Manila and ends in El Nido, Palawan."
+  },
+  {
+    question: "Which airport do I need to fly into?",
+    answer: "Fly into Manila—Ninoy Aquino International Airport (NAIA)."
+  },
+  {
+  question: "Which airport do I need to fly out from?",
+  answer:
+    "The tour ends in El Nido. Options:\n\n" +
+    "1) Fly from El Nido (ENI) to Manila or Cebu for your international connection.\n\n" +
+    "2) Take a ~6-hour van/car to Puerto Princesa (PPS) and fly to Manila or Cebu.\n\n" +
+    "3) Take a 5–6 hour ferry from El Nido to Coron, then fly from Coron (USU) to Manila or Cebu.\n\n" +
+    "Note: Transfers for these options are not included."
+}
+,
+  {
+    question: "Do you have an age limit for tours?",
+    answer: "Our tours cater to adventurous travelers aged 18–45, with most guests between 21–35 years old."
+  },
+  {
+    question: "What is the local currency?",
+    answer: "Philippine Peso (PHP)."
+  },
+  {
+    question: "What are the visa requirements?",
+    answer: `Citizens of ~157 countries receive a 30-day visa-free entry (check your government's site to confirm). You must have an onward/return flight. Complete the Philippines eTravel form within 72 hours of arrival: https://etravel.gov.ph`
+  }
+]
+
 };
