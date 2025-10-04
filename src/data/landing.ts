@@ -85,7 +85,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     slug: "sri-lanka",
     title: "Sri Lanka Explorer",
     location: "Colombo, Sri Lanka",
-    duration: "9 days",
+    duration: "11 days",
     rating: 4.7,
     reviews: 156,
     price: "From $850",
