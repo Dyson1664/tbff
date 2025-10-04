@@ -4,6 +4,16 @@ import japanGarden from "@/assets/japan-garden.jpg";
 import japanTokyo from "@/assets/japan-tokyo.jpg";
 import japanSushi from "@/assets/japan-sushi.jpg";
 import japanTorii from "@/assets/japan-torii.jpg";
+import japanmtfuji from "@/assets/japan-mt-fuji.jpg";
+
+//import japanDay01  from "@/assets/japan-day01-main-shibuya-crossing.jpg";      // Tokyo arrival + Shibuya
+import japanDay02  from "@/assets/japan-day02-main-sensoji.jpg";               // Asakusa Sensō-ji / Kaminarimon
+import japanDay03  from "@/assets/japan-day03-main-meiji-jingu.jpg";           // Meiji Shrine + Harajuku/Golden Gai
+import japanDay04  from "@/assets/japan-day04-main-hakone-mt-fuji.jpg";        // Hakone Loop / Mt. Fuji views
+import japanDay05  from "@/assets/japan-day05-main-fushimi-inari.jpg";         // Fushimi Inari torii gates
+import japanDay06  from "@/assets/japan-day06-main-nara-deer-park.jpg";        // Nara Deer Park + samurai class
+import japanDay07  from "@/assets/japan-day07-main-kyoto-farewell.jpg";        // Kyoto checkout / farewell
+
 
 // Import icons for highlights
 import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
@@ -14,7 +24,7 @@ export const japanData = {
   title: "Japan Journey",
   subtitle: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
   location: "Japan",
-  duration: "10 days",
+  duration: "7 days",
   heroImage: japanHero,
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
   aboutDescription: [
@@ -23,43 +33,69 @@ export const japanData = {
   ],
   aboutImages: [japanGarden, japanTokyo],
 
+
+// Trip highlights — Japan (7 days)
+highlights: [
+  {
+    title: "Mt. Fuji & Hakone Loop",
+    description:
+      "Glide by ropeway over Owakudani, sail Lake Ashi on the pirate ship, and (weather permitting) catch iconic views of Mt. Fuji.",
+    image: japanmtfuji, // Hakone / Mt. Fuji day
+  },
+  {
+    title: "Fushimi Inari’s Thousand Gates",
+    description:
+      "Walk the vermilion torii tunnels of Kyoto’s most photographed shrine—serene at sunrise and pure Kyoto magic.",
+    image: japanDay05, // Fushimi Inari day
+  },
+  {
+    title: "Senso-ji to Golden Gai",
+    description:
+      "Start at historic Sensō-ji and end in Shinjuku’s tiny Golden Gai bars—Tokyo’s timeless temples and neon nightlife in one sweep.",
+    image: japanDay03, // Meiji/Harajuku/Golden Gai day (or swap to japanDay02 if you prefer Senso-ji imagery)
+  },
+],
+
+
+
   // What's Included Highlights - Japan specific
-  whatsIncludedHighlights: [
-    {
-      icon: Home,
-      title: "9 NIGHTS<br />ACCOMM",
-      description: "From traditional ryokans to modern hotels - experience authentic Japanese hospitality!"
-    },
-    {
-      icon: Zap,
-      title: "10 DAYS OF<br />CULTURAL IMMERSION",
-      description: "Tea ceremonies, temple visits, bullet trains & authentic experiences in Tokyo and Kyoto!",
-      link: {
-        text: "Explore the itinerary",
-        url: "#itinerary"
-      }
-    },
-    {
-      icon: Plane,
-      title: "AIRPORT TRANSFERS<br />& JR PASS",
-      description: "Seamless transfers plus unlimited travel on Japan's famous bullet trains and local transport."
-    },
-    {
-      icon: Users,
-      title: "CULTURAL<br />EXPERTS",
-      description: "Knowledgeable local guides who speak fluent English and provide deep cultural insights."
-    },
-    {
-      icon: UtensilsCrossed,
-      title: "AUTHENTIC<br />CUISINE",
-      description: "9 Breakfasts plus sushi workshops, tea ceremonies, and traditional kaiseki dining experiences!"
-    },
-    {
-      icon: TreePine,
-      title: "100% CARBON<br />NEUTRAL",
-      description: "Your Japan journey is completely carbon neutral through our verified environmental program."
+whatsIncludedHighlights: [
+  {
+    icon: Home,
+    title: "6 NIGHTS<br />ACCOMM",
+    description: "Comfortable stays in well-located hotels/ryokan-style properties."
+  },
+  {
+    icon: Zap,
+    title: "SIGNATURE<br />ACTIVITIES",
+    description: "Tea ceremonies, temple visits, bullet trains, Golden Gai, Samurai class & authentic experiences.",
+    link: {
+      text: "Explore the itinerary",
+      url: "#itinerary"
     }
-  ],
+  },
+  {
+    icon: Plane,
+    title: "AIRPORT PICKUP",
+    description: "Train transfer to the hotel is covered by the tour’s provided IC card."
+  },
+  {
+    icon: Users,
+    title: "CULTURAL<br />EXPERTS",
+    description: "Knowledgeable local guides who speak fluent English and provide deep cultural insights."
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "MEALS",
+    description: "3 breakfasts, 1 dinner."
+  },
+  {
+    icon: TreePine,
+    title: "100% CARBON<br />NEUTRAL",
+    description: "Your Japan journey is completely carbon neutral through our verified environmental program."
+  }
+],
+
   itinerary: [
   // --- JAPAN: Days 1–4 (paste over your existing day 1–4 objects) ---
 {
@@ -83,155 +119,159 @@ export const japanData = {
 {
   day: 2,
   date: "May 16, 2024",
-  title: "Asakusa Senso-ji, Sake Tasting & Ameyoko",
+  title: "Tokyo walking tour",
   location: "Tokyo, Japan",
-  heroImage: japanTorii,
+  heroImage: japanDay02,
   description:
-    "Morning at Kaminarimon Gate and Senso-ji Temple, then premium sake tasting at Gashue. Stroll Ameyoko shopping street and sample local izakayas for dinner. Most sights are walkable (10–15 min), with short train hops (10–30 min). Dinner at 7.",
-  meals: "Breakfast & Dinner",
+    "We kick off in Asakusa, Tokyo’s historic heart—duck under the Kaminari-mon Gate and wander toward Sensō-ji, the city’s oldest temple, where red lanterns glow and incense drifts through the courtyards. At midday, pop into Premium Sake Pub Gashue for a guided tasting of rare regional brews paired with crisp rice crackers and local snacks. In the afternoon, follow the market path to Ameyoko, a once–postwar black market turned street-food playground. Snack on takoyaki, browse for quirky souvenirs, and soak up the buzz. Dinner is your choice to explore on your own or join a small group for cozy local restaurants. We’ll then cap the night with karaoke—carefree fun.",
   accommodation: { name: "THE KNOT TOKYO Shinjuku" },
-  highlights: "Senso-ji Temple, premium sake tasting (Gashue), Ameyoko street & izakayas"
+  highlights: "Temples, sake tasting & street-food alleys, karaoke"
 },
+
 {
   day: 3,
   date: "May 17, 2024",
-  title: "Meiji Jingu, Harajuku & Golden Gai",
+  title: "Explore Tokyo",
   location: "Tokyo, Japan",
-  heroImage: japanTorii,
+  heroImage: japanDay03,
   description:
-    "Train to Meiji Jingu, Tokyo’s forest shrine. Wander Harajuku’s Takeshita-dori for pop culture and fashion. Free time, then dive into Shinjuku’s tiny themed bars in Golden Gai after dinner at 7. Expect plenty of walking and multiple short train rides.",
-  meals: "Breakfast & Dinner",
+    "We start in the serenity of Meiji-jingū Shrine, nestled in a forest just steps from the city. Then hop over to Harajuku’s Takeshita-dōri, where rainbow crepes, pastel goth, and cosplay culture collide. The afternoon is wide open—visit an owl café, thrift for vintage finds, or walk the elegant Omotesandō boulevard for designer eye candy. As the sun sets, we gather for dinner, then head into the legendary nightlife maze of Golden Gai in Shinjuku—six narrow alleyways, 200 pint-sized bars, and enough character to fill a film reel.",
   accommodation: { name: "THE KNOT TOKYO Shinjuku" },
-  highlights: "Meiji Jingu shrine, Harajuku Takeshita-dori, Golden Gai bar alleys"
+  highlights: "Meiji-jingū, Harajuku Takeshita-dōri, Golden Gai nightlife"
 },
+
 {
   day: 4,
   date: "May 18, 2024",
+  // Title = keep your existing one (“GOOD”)
   title: "Mt. Fuji Day (Hakone Loop) → Kyoto",
   location: "Kyoto, Japan",
-  heroImage: japanTorii,
+  heroImage: japanDay04,
   description:
-    "Mt Fuji day! Tackle the Hakone Loop with scenic transports and viewpoints (weather permitting), then continue on to Kyoto. Travel notes: walk ~10 minutes to Ueno Station; total journey to Kyoto about 2.5 hours.",
-  meals: "Breakfast",
-  accommodation: { name: "Toyoko Inn Odawara" },
-  highlights: "Hakone Loop (ropeway/cruise/Owakudani), Mt Fuji viewpoints, evening transfer to Kyoto"
-}
-// --- end ---
-,
-  {
+    "Adventure day! We’re off to do the classic Hakone loop—see mountains, sail a pirate ship across mirror-still Lake Ashi, float by ropeway over the steaming vents of Owakudani, and if the skies are kind, gasp at sweeping views of Mount Fuji. By mid-afternoon, hop the legendary shinkansen from Odawara and rocket to timeless Kyoto. Once you arrive, slurp a soul-warming bowl of tonkotsu ramen or sink into a soothing soak at a neighborhood sentō. Scenic, playful, and unforgettable from start to finish.",
+  accommodation: { name: "Prince Smart Inn Shijo Omiya" },
+  // keep meals as they were in your file if you had one; otherwise omit
+  highlights: "Hakone loop, Lake Ashi cruise, Owakudani ropeway, Mt Fuji views, shinkansen to Kyoto"
+},
+
+{
   day: 5,
   date: "May 19, 2024",
-  title: "Kyoto Classics: Tea Ceremony, Kiyomizu-dera & Gion",
+  title: "Exploring Classics of Kyoto",
   location: "Kyoto, Japan",
-  heroImage: japanGarden,
+  heroImage: japanDay05,
   description:
-    "Early start for Kyoto’s iconic red gates at dawn, then a serene tea ceremony at the Hosomi Museum (short bus ride). Wander the historic lanes around Kiyomizu-dera and through the Gion district’s wooden machiya and lantern-lit alleys.",
-  meals: "Breakfast & Dinner",
+    "We start early with a peaceful visit to Fushimi Inari Taisha and its glowing orange torii gates—walking through the Senbon Torii just after sunrise is magic. Later in the morning, step into Kyoto’s refined past at the Hosomi Museum’s tea salon for a traditional tea ceremony with hands-on matcha whisking. Afternoon brings a stroll through the atmospheric lanes around Kiyomizu-dera and the historic Gion district. You may spot a geisha flitting between teahouses or discover handmade sweets in a tucked-away shop. Evening is yours—choose from Kyoto’s many kaiseki restaurants or catch a traditional geiko performance.",
+  meals: "Breakfast",
   accommodation: { name: "Prince Smart Inn Shijo Omiya" },
-  highlights: "Tea ceremony (Hosomi Museum), Kiyomizu-dera area, Gion streets & geisha district"
-},
+  highlights: "Fushimi Inari (orange torii gates), tea ceremony (Hosomi Museum), Kiyomizu-dera, Gion"
+}
+,
 {
   day: 6,
   date: "May 20, 2024",
-  title: "Fushimi Inari, Samurai Class & Nara Park",
+  title: "Kyoto — Adventure & Activities",
   location: "Kyoto & Nara, Japan",
-  heroImage: japanTorii,
+  heroImage: japanDay06,
   description:
-    "Beat the crowds at Fushimi Inari Taisha’s vermilion torii at sunrise, then try a hands-on samurai/kendo experience. In the afternoon, take the train to Nara Park to meet the friendly deer and visit historic temple grounds.",
+    "Today kicks off with a hands-on samurai class learning sword basics and diving into the legends, history, and culture of Japan’s warrior tradition. Then we zip to Nara on a scenic train ride (just under an hour). Wander Nara Park, home to over a thousand bowing sika deer—feed them rice crackers and then marvel at the mighty Great Buddha inside Tōdai-ji Temple. We’ll return to Kyoto in time for last-minute treasure hunting at Nishiki Market or one final round of karaoke before we say goodbye.",
   meals: "Breakfast",
   accommodation: { name: "Prince Smart Inn Shijo Omiya" },
-  highlights: "Fushimi Inari torii gates, samurai/kendo session, Nara Park & deer"
+  highlights: "Samurai class, Nara Park, Tōdai-ji Great Buddha"
 },
 {
   day: 7,
   date: "May 21, 2024",
-  title: "Kyoto Checkout & Farewell",
+  title: "Sayōnara (check out)",
   location: "Kyoto, Japan",
-  heroImage: japanGarden,
+  heroImage: japanDay07,
   description:
-    "Enjoy a slow morning in Kyoto—grab a last matcha or photo stroll—then check out and continue your onward journey.",
+    "Sayōnara—for now! Check-out day in Kyoto wraps our adventure with smiles, hugs, and a few happy tears. Swap photos and contacts, promise future reunions, and take one last look at the city that brought everyone together. With souvenirs packed and new friendships that feel like old ones, we head out—hearts full and already dreaming of the next journey. Safe travels!",
   meals: "Breakfast",
-  highlights: "Free morning, checkout, onward travel"
+  accommodation: { name: "Prince Smart Inn Shijo Omiya" },
+  highlights: "Onward travel"
 }
+
 ]
 ,
   summary: {
-    duration: "10 Days",
+    duration: "7 Days",
     activities: "18 Experiences",
-    areas: "4 Cities",
+    areas: "2 Cities",
     type: "Culture & Nature"
   },
   included: [
-    {
-      title: "Accommodation",
-      items: [
-        { text: "9 nights mixing modern hotels and traditional ryokans" },
-        { text: "Traditional Japanese breakfast" },
-        { text: "Onsen (hot spring) access" }
-      ]
-    },
-    {
-      title: "Activities & Cultural Experiences",
-      items: [
-        { text: "Tea ceremony with kimono experience" },
-        { text: "Sushi making masterclass" },
-        { text: "Temple and shrine entrance fees" },
-        { text: "Mount Fuji area tour" }
-      ]
-    },
-    {
-      title: "Transportation",
-      items: [
-        { text: "7-day JR Pass for unlimited train travel" },
-        { text: "Airport transfers via express trains" },
-        { text: "Local transportation passes" }
-      ]
-    },
-    {
-      title: "Culinary Delights",
-      items: [
-        { text: "Traditional kaiseki dinner experience" },
-        { text: "Tsukiji fish market food tour" },
-        { text: "Sake tasting sessions" }
-      ]
-    },
-    {
-      title: "Expert Guidance",
-      items: [
-        { text: "Certified English-speaking guides" },
-        { text: "Cultural etiquette orientation" },
-        { text: "24/7 emergency support" }
-      ]
-    },
-    {
-      title: "Unique Experiences",
-      items: [
-        { text: "Private garden meditation session" },
-        { text: "Traditional craftsman workshops" },
-        { text: "Cherry blossom viewing (seasonal)" }
-      ]
-    }
-  ],
+  {
+    title: "Transportation & Passes",
+    items: [
+      { text: "Pre-loaded IC transit card covering all itinerary travel + extra credit for airport → hotel transfer" }
+    ]
+  },
+  {
+    title: "Meals",
+    items: [
+      { text: "3 × Breakfast" },
+      { text: "1 × Dinner" },
+      { text: "Sake tasting experience" }
+    ]
+  },
+  {
+    title: "Tokyo Highlights",
+    items: [
+      { text: "Guided visit to Sensō-ji Temple" },
+      { text: "Visit to Meiji Shrine" },
+      { text: "Golden Gai night crawl (bar entrances not included)" }
+    ]
+  },
+  {
+    title: "Mount Fuji & Hakone",
+    items: [
+      { text: "Mount Fuji viewpoints (weather permitting)" },
+      { text: "Lake Ashi pirate boat ride" },
+      { text: "Hakone ropeway ride" }
+    ]
+  },
+  {
+    title: "Kyoto & Nara Experiences",
+    items: [
+      { text: "Matcha tea ceremony" },
+      { text: "Kimono rental" },
+      { text: "Fushimi Inari Shrine visit" },
+      { text: "Kendō samurai class" },
+      { text: "Nara Deer Park visit" },
+      { text: "Bamboo Grove walk in Arashiyama" },
+      { text: "Tenryū-ji Temple or Zen garden visit" },
+      { text: "Nishiki Market visit" }
+    ]
+  }
+]
+,
   faqs: [
-    {
-      question: "What is the best time to visit Japan?",
-      answer: "The best times are spring (March-May) for cherry blossoms and fall (September-November) for autumn colors. These seasons offer pleasant weather and stunning natural beauty."
-    },
-    {
-      question: "Do I need to speak Japanese to travel in Japan?",
-      answer: "While knowing some basic Japanese phrases is helpful, it's not necessary. Many signs are in English, and people in tourist areas often speak some English. Our guides will also assist with translation."
-    },
-    {
-      question: "What should I pack for my Japan trip?",
-      answer: "Pack comfortable walking shoes, weather-appropriate clothing, a portable charger, and cash (Japan is still largely cash-based). We'll provide a detailed packing list upon booking."
-    },
-    {
-      question: "Are meals included in the itinerary?",
-      answer: "Yes, most meals are included as specified in the 'What's Included' section. You'll experience authentic Japanese cuisine including sushi, ramen, and traditional kaiseki dinners."
-    },
-    {
-      question: "What is the group size for this tour?",
-      answer: "Our Japan tours are limited to 12-16 participants to ensure a personalized experience and easier access to cultural sites and restaurants."
-    }
-  ]
+  {
+    question: "How fit do I need to be to do this trek?",
+    answer: "This is a walking-focused trip. Expect to walk an average of 3–5 miles (5–8 km) per day at a relaxed pace with frequent stops."
+  },
+  {
+    question: "Which airport do I need to fly into?",
+    answer: "You can arrive at either Narita International Airport (NRT) or Tokyo International Airport (HND, a.k.a. Haneda)."
+  },
+  {
+    question: "Which airport do I need to fly out from?",
+    answer: "You can depart from Narita (NRT), Haneda (HND), or Osaka’s Kansai International Airport (KIX), depending on your onward plans."
+  },
+  {
+    question: "Do you have an age limit for tours?",
+    answer: "Our tours cater to adventurous travelers aged 18–45, with most guests between 21–35. If you’re close to this range and feel you’re a good fit, reach out."
+  },
+  {
+    question: "What is the local currency?",
+    answer: "Japanese Yen (JPY). Many places accept cards, but having some cash is useful for smaller shops and street food."
+  },
+  {
+    question: "What are the visa requirements?",
+    answer: "Visa requirements depend on your nationality and length of stay. Please check your own government’s travel site and Japan’s official guidance. For U.S. travelers, see “Japan International Travel Information” from the U.S. Department of State: https://travel.state.gov"
+  }
+]
+
+
 };

@@ -134,6 +134,8 @@ export const indiaData = {
   ],
   aboutImages: [indiaHero, indiaHero],
 
+
+
   // What's Included Highlights - India specific
   whatsIncludedHighlights: [
     {

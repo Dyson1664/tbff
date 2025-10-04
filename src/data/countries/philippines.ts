@@ -1,12 +1,22 @@
 // Import images
 import philippinesHero from "@/assets/philippines-hero.jpg";
+import philippinesDay01 from "@/assets/philippines-day-01.jpg";
+import philippinesDay02 from "@/assets/philippines-day-02.jpg";
+
+
 import philippinesDay03 from "@/assets/philippines-day03.jpeg";
 import philippinesDay05 from "@/assets/philippines-day05.jpeg";
 import philippinesDay04 from "@/assets/philippines-day04.jpeg";
 import philippinesDay06 from "@/assets/philippines-day06.jpeg";
+import philippinesDay07 from "@/assets/philippines-day07.jpg";
+
 import philippinesDay08 from "@/assets/philippines-day08.jpeg";
 import philippinesDay09 from "@/assets/philippines-day09.jpeg";
 import philippinesDay10 from "@/assets/philippines-day10.jpeg";
+
+import philippinesDay5wonder from "@/assets/philippines-day05-wonderland.jpg";
+
+
 
 import philippinesRice from "@/assets/philippines-rice.jpg";
 import philippinesMarket from "@/assets/philippines-market.jpg";
@@ -23,7 +33,7 @@ export const philippinesData = {
   title: "Philippines Paradise",
   subtitle: "Explore tropical islands, ancient rice terraces, and vibrant Filipino culture",
   location: "Philippines",
-  duration: "9 days",
+  duration: "10 days",
   heroImage: philippinesHero,
   route: ["Manila", "Port Barton", "Wonderland", "El Nido"],
   aboutDescription: [
@@ -59,7 +69,7 @@ highlights: [
     },
     {
       icon: Zap,
-      title: "9 DAYS OF<br />ISLAND PARADISE",
+      title: "10 DAYS OF<br />ISLAND PARADISE",
       description: "Visit stunning rice terraces, pristine beaches, snorkel in crystal waters & island hopping!",
       link: {
         text: "See all adventures",
@@ -93,7 +103,7 @@ highlights: [
   date: "July 10, 2024",
   title: "Welcome to the Philippines",
   location: "Manila, Luzon",
-  heroImage: philippinesMarket,
+  heroImage: philippinesDay01,
   description:
     "Welcome to Manila! After arriving in the capital, a private van transfers you to our centrally located hotel. Settle in, unwind, or take a stroll around the vibrant neighborhood. At 6:00 PM, meet your guide and travel crew for a relaxed welcome meet-up, with an optional group dinner and drinks to kick things off.",
   meals: "—",
@@ -111,7 +121,7 @@ highlights: [
   date: "July 11, 2024",
   title: "Journey to Port Barton",
   location: "Port Barton, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay05,
   description:
     "We’re off to island life! Catch a morning flight to Puerto Princesa, then drive through scenic countryside. Along the way, stop for a heartfelt local lunch at a family home—a true taste of Filipino hospitality. By afternoon, arrive in the peaceful beach town of Port Barton. Unwind and explore at your own pace.",
   meals: "Lunch",
@@ -148,7 +158,7 @@ highlights: [
   date: "July 14, 2024",
   title: "Escape to Wonderland",
   location: "Wonderland, Palawan",
-  heroImage: philippinesDay05,
+  heroImage: philippinesDay5wonder,
   description:
     "Head off the grid to Wonderland and settle into the rustic-luxe Isla Experience. Spend the afternoon snorkeling, hammocking, and soaking up tropical island magic. If skies are clear, enjoy a bonfire on the beach tonight.",
   meals: "Breakfast & Dinner",
@@ -172,7 +182,7 @@ highlights: [
   date: "July 16, 2024",
   title: "From Island Escape to El Nido",
   location: "El Nido, Palawan",
-  heroImage: philippinesHero,
+  heroImage: philippinesDay07,
   description:
     "Say goodbye to remote island life and transfer to El Nido, famed for its limestone cliffs and beach scene. Check into a stunning coastal resort, then enjoy sunset views and a rooftop cocktail.",
   meals: "Breakfast & Lunch",
