@@ -21,7 +21,7 @@ const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) =
   );
 
   return isComingSoon ? (
-    <div className="px-4 py-3 opacity-60 cursor-not-allowed">
+    <div className="px-4 py-3 cursor-default">
       {content}
     </div>
   ) : (
@@ -106,7 +106,7 @@ const Navbar = memo(() => {
       return isComingSoon ? (
         <div 
           key={`mobile-${trip.link}-${index}`}
-          className="py-2 px-2 opacity-60 cursor-not-allowed block"
+          className="py-2 px-2 cursor-default block"
         >
           {content}
         </div>
