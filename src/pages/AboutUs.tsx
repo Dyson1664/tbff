@@ -4,6 +4,9 @@ import Footer from "@/components/common/Footer";
 import { HeroSection } from "@/components/common/HeroSection";
 import landingHero from "@/assets/landing-hero.jpg";
 
+import aboutus2 from "@/assets/about-us-2.jpeg"
+import aboutus1 from "@/assets/about-us-1.jpeg"
+
 // Founders data
 const FOUNDERS_INFO = {
   description: "Imagine Beyond Travel was founded by Darrin (Founder) and Dave (Co-Founder) after their paths crossed on Siargao Island in the Philippines. United by a shared vision and complementary strengths—Darrin's 5+ years in tourism and Dave's 3+ years in web development and production, we set out to build a company for solo explorers who want to see the world together. Our mission is simple, deliver imaginative, expertly run trips that turn strangers into friends and destinations into lasting memories. We design and host thoughtfully curated, community-minded tours that emphasize connection, authenticity, and seamless logistics so you can explore more and worry less"
@@ -31,7 +34,7 @@ export default memo(function AboutUs() {
               <div className="relative">
                 <div className="absolute -top-6 -left-6 w-16 h-16 bg-primary/20 rounded-full"></div>
                 <img 
-                  src={landingHero} 
+                  src={aboutus1}
                   alt="Travel adventure"
                   className="w-full h-80 object-cover rounded-2xl shadow-lg"
                 />
@@ -63,7 +66,7 @@ export default memo(function AboutUs() {
             <div className="relative">
               <div className="absolute -top-6 -right-6 w-16 h-16 bg-yellow-400/30 rounded-full"></div>
               <img 
-                src={landingHero} 
+                src={aboutus2}
                 alt="Travel community"
                 className="w-full h-80 object-cover rounded-2xl shadow-lg"
               />
