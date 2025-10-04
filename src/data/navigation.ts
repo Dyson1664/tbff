@@ -18,9 +18,9 @@ export interface NavigationDestination {
 export const NAVIGATION_TRIPS: readonly NavigationTrip[] = [
   { title: "India Heritage Tour", duration: "13 Days", location: "India", link: "/india-itinerary" },
   { title: "Japan Journey", duration: "7 Days", location: "Japan", link: "/japan-itinerary" },
-  { title: "Thailand Discovery", duration: "11 Days", location: "Thailand", link: "/thailand-itinerary" },
   { title: "Philippines Paradise", duration: "10 Days", location: "Philippines", link: "/philippines-itinerary" },
   { title: "Sri Lanka Explorer", duration: "9 Days", location: "Sri Lanka", link: "/srilanka-itinerary" },
+  { title: "Thailand Discovery", duration: "Coming Soon", location: "Thailand", link: "/thailand-itinerary" },
   //{ title: "Colombia Coffee Trail", duration: "8 Days", location: "Colombia", link: "/colombia-itinerary" },
   //{ title: "Bhutan Monastery Trek", duration: "9 Days", location: "Bhutan", link: "/bhutan-itinerary" },
   //{ title: "Vietnam Culture Journey", duration: "10 Days", location: "Vietnam", link: "/vietnam-itinerary" }
