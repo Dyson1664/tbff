@@ -215,7 +215,7 @@ export default memo(function LandingPage() {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 bg-background">
+      {/* <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1">
@@ -250,7 +250,7 @@ export default memo(function LandingPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <Footer />
