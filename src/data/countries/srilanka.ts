@@ -27,7 +27,7 @@ import srilankaDay11 from "@/assets/srilanka-day11-main-goodbye-group-photo.jpg"
 
 
 // Import icons for highlightsn
-import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+import { Home, Zap, Plane, Users, Soup, TreePine } from "lucide-react";
 
 
 export const srilankaData = {
@@ -71,7 +71,7 @@ export const srilankaData = {
       description: "Knowledgeable Sri Lankan guides who share the island's rich history and cultural insights."
     },
     {
-      icon: UtensilsCrossed,
+      icon: Soup,
       title: "AUTHENTIC<br />CUISINE",
       description: "2 Dinners, 9 Breakfasts featuring rice & curry, tea tastings & local specialties!"
     },

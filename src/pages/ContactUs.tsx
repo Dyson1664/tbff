@@ -1,79 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/common/Footer";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Phone, Mail, MapPin, Clock, Send, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 const CONTACT_INFO = [
   {
-    icon: <Phone className="w-6 h-6" />,
-    title: "Call Us",
-    details: ["(303) 704-2860"],
-    description: "Available for all your travel inquiries"
-  },
-  {
     icon: <Mail className="w-6 h-6" />,
-    title: "Email Us",
-    details: ["bookings@imaginebeyondtrvel.com"],
-    description: "We respond within 24 hours"
+    title: "Email",
+    details: ["bookings@imaginebeyondtrvel.com"], // plain text
+    description: "We respond within 24 hours",
   },
   {
     icon: <MessageCircle className="w-6 h-6" />,
     title: "WhatsApp",
-    details: ["Coming Soon"],
-    description: "Quick messaging support"
-  }
-];
-
-const INQUIRY_TYPES = [
-  "General Inquiry",
-  "Trip Planning",
-  "Booking Support",
-  "Payment Questions",
-  "Travel Insurance",
-  "Group Travel",
-  "Emergency Support",
-  "Feedback/Complaint"
+    details: ["303-704-2860"], // plain text
+    description: "Quick messaging support",
+  },
 ];
 
 const ContactUs = React.memo(() => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    inquiryType: "",
-    destination: "",
-    travelDates: "",
-    message: ""
-  });
-
-  const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      inquiryType: "",
-      destination: "",
-      travelDates: "",
-      message: ""
-    });
-  };
-
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/20 via-primary/10 to-background py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -83,25 +32,29 @@ const ContactUs = React.memo(() => {
             </div>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Contact Us 📞
+            Contact Us
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ready to start planning your next adventure? We're here to help you every step of the way. 
-            Get in touch with our travel experts today!
+            Ready to start planning your next adventure? We’re here to help every step of the way.
           </p>
         </div>
       </section>
 
-      {/* Contact Information Grid */}
+      {/* Contact Information (Centered) */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto place-items-center">
             {CONTACT_INFO.map((contact, index) => (
-              <div key={index} className="bg-card rounded-lg p-6 border border-border text-center hover:shadow-lg transition-shadow">
+              <div
+                key={index}
+                className="w-full max-w-sm bg-card rounded-lg p-6 border border-border text-center hover:shadow-lg transition-shadow"
+              >
                 <div className="text-primary mb-4 flex justify-center">
                   {contact.icon}
                 </div>
-                <h3 className="font-semibold text-lg text-card-foreground mb-3">{contact.title}</h3>
+                <h3 className="font-semibold text-lg text-card-foreground mb-3">
+                  {contact.title}
+                </h3>
                 <div className="space-y-1 mb-3">
                   {contact.details.map((detail, detailIndex) => (
                     <p key={detailIndex} className="text-sm text-muted-foreground font-medium">
@@ -116,12 +69,10 @@ const ContactUs = React.memo(() => {
         </div>
       </section>
 
-      {/* Social Media Section */}
+      {/* Social Media Section (optional, keep if you like) */}
       <section className="py-16 bg-gradient-to-r from-primary/10 to-primary/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-6">
-            Follow Our Adventures 📱
-          </h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Follow Our Adventures</h2>
           <p className="text-muted-foreground mb-8">
             Stay connected with us on social media for travel inspiration, tips, and exclusive offers!
           </p>

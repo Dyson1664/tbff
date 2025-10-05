@@ -16,7 +16,7 @@ import japanDay07  from "@/assets/japan-day07-main-kyoto-farewell.jpg";        /
 
 
 // Import icons for highlights
-import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+import { Home, Zap, Plane, Users, Soup, TreePine } from "lucide-react";
 
 export const japanData = {
   id: "japan-journey",
@@ -85,8 +85,8 @@ whatsIncludedHighlights: [
     description: "Knowledgeable local guides who speak fluent English and provide deep cultural insights."
   },
   {
-    icon: UtensilsCrossed,
-    title: "MEALS",
+    icon: Soup,
+    title: "AUTHENTIC<br />CUISINE",
     description: "3 breakfasts, 1 dinner."
   },
   {

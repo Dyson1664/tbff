@@ -2,129 +2,89 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/common/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { HelpCircle, MapPin, Clock, CreditCard, Plane, Shield, Users, Calendar } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 
-const FAQ_CATEGORIES = [
+const FAQ_ITEMS = [
   {
-    title: "Booking & Planning",
-    icon: <Calendar className="w-5 h-5" />,
-    color: "bg-blue-500/10 border-blue-200",
-    iconColor: "text-blue-600",
-    questions: [
-      {
-        question: "How far in advance should I book my trip?",
-        answer: "We recommend booking 2-3 months in advance for the best prices and availability. However, we can often arrange last-minute trips with 2-4 weeks notice, though options may be more limited."
-      },
-      {
-        question: "Can I customize my itinerary?",
-        answer: "Absolutely! All our trips can be customized to match your interests, budget, and travel style. Our expert travel consultants will work with you to create your perfect adventure."
-      },
-      {
-        question: "What's included in the trip price?",
-        answer: "Trip inclusions vary by destination, but typically include accommodations, most meals, guided tours, entrance fees, and ground transportation. International flights and personal expenses are usually separate."
-      },
-      {
-        question: "Do you offer group discounts?",
-        answer: "Yes! We offer discounts for groups of 6 or more travelers. Contact us for special group pricing and customized itineraries for your friends, family, or organization."
-      },
-      {
-        question: "What if I need to cancel my trip?",
-        answer: "Cancellation policies vary by trip and timing. We strongly recommend travel insurance to protect your investment. Our team will explain all policies before booking and help you understand your options."
-      }
-    ]
+    question: "What’s not included?",
+    answer:
+      "Flights, travel insurance, visas (if required), and your personal spending money aren’t included. We keep these flexible so you can choose airlines, coverage, and budgets that suit you.",
   },
   {
-    title: "Travel Requirements",
-    icon: <Shield className="w-5 h-5" />,
-    color: "bg-green-500/10 border-green-200",
-    iconColor: "text-green-600",
-    questions: [
-      {
-        question: "Do I need a visa for my destination?",
-        answer: "Visa requirements depend on your nationality and destination. We'll provide detailed information about visa requirements and can assist with the application process for most destinations."
-      },
-      {
-        question: "What vaccinations do I need?",
-        answer: "Vaccination requirements vary by destination. We recommend consulting with a travel health clinic 4-6 weeks before departure. We'll provide health information for your specific destinations."
-      },
-      {
-        question: "How early should I arrive at the airport?",
-        answer: "For international flights, arrive 3 hours early. For domestic flights, 2 hours is usually sufficient. We'll provide detailed departure information in your pre-trip documentation."
-      },
-      {
-        question: "Can I travel if my passport expires soon?",
-        answer: "Most countries require your passport to be valid for 6 months beyond your travel dates. Check your passport expiration date and renew if necessary well before your trip."
-      },
-      {
-        question: "What should I pack for my destination?",
-        answer: "We provide detailed packing lists tailored to your specific destination and travel season. Generally, pack light, bring comfortable walking shoes, and leave room for souvenirs!"
-      }
-    ]
+    question: "What’s included in the trips?",
+    answer:
+      "We handle the big stuff—accommodation, internal transport, curated activities, and a selection of meals—plus authentic local experiences and a few surprises. Some trips include airport pickup on Day 1. Every trip is led by an Imagine Beyond Travel Group Leader, with local experts joining along the way.",
   },
   {
-    title: "During Your Trip",
-    icon: <MapPin className="w-5 h-5" />,
-    color: "bg-purple-500/10 border-purple-200",
-    iconColor: "text-purple-600",
-    questions: [
-      {
-        question: "Will I have Wi-Fi and internet access?",
-        answer: "Most hotels and many restaurants offer Wi-Fi. We recommend getting an international data plan or local SIM card for reliable connectivity while exploring."
-      },
-      {
-        question: "What if I get sick during my trip?",
-        answer: "We provide 24/7 emergency support and can help you find medical care. Travel insurance with medical coverage is highly recommended for all international trips."
-      },
-      {
-        question: "How much spending money should I bring?",
-        answer: "This varies by destination and your spending habits. We provide spending guidelines for each location, covering meals, shopping, tips, and optional activities."
-      },
-      {
-        question: "Are your tour guides local?",
-        answer: "Yes! We work with experienced local guides who are passionate about sharing their culture and knowledge. They provide authentic insights you won't find in guidebooks."
-      },
-      {
-        question: "What if I have dietary restrictions?",
-        answer: "We can accommodate most dietary needs with advance notice. Inform us of any allergies or restrictions when booking, and we'll coordinate with restaurants and hotels."
-      }
-    ]
+    question: "What kind of people join the trips?",
+    answer:
+      "Our groups are a mix of solo travelers, friends, and couples—mostly in their 20s and 30s—taking time off work, on sabbatical, or traveling longer-term. The best part? Strangers quickly become travel friends and share unforgettable moments together.",
   },
   {
-    title: "Payment & Insurance",
-    icon: <CreditCard className="w-5 h-5" />,
-    color: "bg-orange-500/10 border-orange-200",
-    iconColor: "text-orange-600",
-    questions: [
-      {
-        question: "What payment methods do you accept?",
-        answer: "We accept major credit cards, bank transfers, and PayPal. A deposit is required to secure your booking, with the balance due 60 days before departure."
-      },
-      {
-        question: "Do I need travel insurance?",
-        answer: "While not mandatory, we strongly recommend comprehensive travel insurance covering trip cancellation, medical emergencies, and lost luggage. We can help you find the right coverage."
-      },
-      {
-        question: "Are there any hidden fees?",
-        answer: "No hidden fees! We provide transparent pricing upfront. Any additional costs (like optional activities or meals not included) are clearly outlined in your itinerary."
-      },
-      {
-        question: "Can I pay in installments?",
-        answer: "Yes! We offer flexible payment plans. You can split your payment over several months leading up to your departure date. Contact us to arrange a payment schedule that works for you."
-      },
-      {
-        question: "What happens if my flight is delayed or cancelled?",
-        answer: "We monitor all flights and will assist with rebooking and arrangements. Travel insurance can cover additional costs due to flight disruptions. Our 24/7 support team is always available to help."
-      }
-    ]
-  }
+    question: "Do others come solo?",
+    answer:
+      "Yes—most guests join solo. Group travel makes it easy to connect from day one, whether it’s your first time traveling alone or your tenth. Expect a friendly, welcoming vibe from the start.",
+  },
+  {
+    question: "What is the average age?",
+    answer:
+      "Our trips are especially popular with travelers in their 20s and 30s. We keep things fun, social, and laid-back—more like exploring with friends than a school trip.",
+  },
+  {
+    question: "Why choose Imagine Beyond Travel?",
+    answer:
+      "We craft small-group adventures designed for curious, social travelers. Think thoughtful itineraries, unique experiences, seamless logistics, and the right balance of culture, adventure, and downtime—so you can focus on having an amazing time.",
+  },
+  {
+    question: "How far in advance should I book?",
+    answer:
+      "Most travelers book 3–4 months ahead, especially for peak seasons. That said, last-minute spots do pop up—if your dates are flexible, we can often help on shorter notice too.",
+  },
+  {
+    question: "Is there much free time for myself?",
+    answer:
+      "Definitely. We build in a good mix of group time and personal time, so you can relax, explore, or add optional activities. Your Group Leader will have plenty of suggestions for your free periods.",
+  },
+  // Append these to the end of FAQ_ITEMS
+{
+  question: "Should I bring a backpack or a suitcase?",
+  answer:
+    "Totally your call. Many travelers prefer backpacks for easy movement between stops, while others love the structure of a suitcase. Whichever you pick, pack light and keep it easy to handle.",
+},
+{
+  question: "Where do we meet when I arrive?",
+  answer:
+    "About a month before departure, we’ll send a Welcome Email with your meeting point, your Group Leader’s contact, and a link to the trip WhatsApp group so you can connect with everyone in advance.",
+},
+{
+  question: "Do I need to arrive at a specific time?",
+  answer:
+    "We suggest arriving by early afternoon so you can settle in before the welcome meeting. If you’re landing earlier or later, no problem—just give us a heads-up. Hotel check-in is typically from 2 PM.",
+},
+{
+  question: "How does airport pickup work?",
+  answer:
+    "If your trip includes an airport transfer, a driver will meet you in arrivals holding a sign with your name and take you directly to the first-night hotel—simple and stress-free.",
+},
+{
+  question: "I’m not into partying—will I still enjoy the trip?",
+  answer:
+    "Absolutely. There may be optional nights out, but there’s zero pressure to join. Our itineraries focus on culture, food, nature, and authentic experiences—party or no party, you’ll fit right in.",
+},
+{
+  question: "Who will I share a room with?",
+  answer:
+    "Solo travelers are paired with a roommate of the same gender. Traveling with a friend or partner? Tell us in advance and we’ll room you together.",
+}
 ];
+
 
 const FAQs = React.memo(() => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
-      {/* Hero Section */}
+
+      {/* Hero */}
       <section className="relative bg-gradient-to-br from-primary/20 via-primary/10 to-background py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
@@ -136,94 +96,59 @@ const FAQs = React.memo(() => {
             Frequently Asked Questions 🤔
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Got questions? We've got answers! Find everything you need to know about traveling with Imagine Beyond Travel.
+            Got questions? We've got answers. Everything you need to know about traveling with Imagine Beyond Travel.
           </p>
         </div>
       </section>
 
-      {/* Fun Stats Section */}
-      <section className="py-12 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Happy Travelers</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">15+</div>
-              <div className="text-sm text-muted-foreground">Destinations</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Support</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">99%</div>
-              <div className="text-sm text-muted-foreground">Satisfaction Rate</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Categories */}
+      {/* Single FAQ Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-12">
-            {FAQ_CATEGORIES.map((category, categoryIndex) => (
-              <div key={categoryIndex} className={`rounded-2xl border-2 p-6 ${category.color}`}>
-                <div className="flex items-center mb-6">
-                  <div className={`${category.iconColor} mr-3`}>
-                    {category.icon}
-                  </div>
-                  <h2 className="text-2xl font-bold text-foreground">{category.title}</h2>
-                </div>
-                
-                <Accordion type="single" collapsible className="space-y-2">
-                  {category.questions.map((faq, index) => (
-                    <AccordionItem 
-                      key={index} 
-                      value={`${categoryIndex}-${index}`}
-                      className="bg-card/50 rounded-lg border border-border/50 px-4"
-                    >
-                      <AccordionTrigger className="text-left font-medium hover:no-underline py-4">
-                        <span className="flex items-start">
-                          <span className="bg-primary/20 text-primary rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">
-                            {categoryIndex * 5 + index + 1}
-                          </span>
-                          {faq.question}
-                        </span>
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground pb-4 pl-9">
-                        {faq.answer}
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
+          <Accordion type="single" collapsible className="space-y-3">
+            {FAQ_ITEMS.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`faq-${index}`}
+                className="bg-card/50 rounded-lg border border-border/50 px-4"
+              >
+                <AccordionTrigger className="text-left font-medium hover:no-underline py-4">
+                  <span className="flex items-start">
+                    <span className="bg-primary/20 text-primary rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5 flex-shrink-0">
+                      {index + 1}
+                    </span>
+                    {faq.question}
+                  </span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-4 pl-9">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-            Still Have Questions? 💬
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Don't see your question answered? Our friendly travel experts are here to help you plan your perfect adventure!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-colors">
-              📞 Call Us: +1-555-IBT-TRIP
-            </button>
-            <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-colors">
-              📧 Email Us
-            </button>
-          </div>
-        </div>
-      </section>
+{/* Contact */}
+<section className="py-20 bg-gradient-to-r from-primary/10 to-primary/5">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+      Still Have Questions? 💬
+    </h2>
+    <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+      Don’t see your question? Our friendly travel experts are here to help!
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <div className="border border-primary text-primary px-8 py-3 rounded-lg font-semibold">
+        📧 Email: bookings@imaginebeyondtrvel.com
+      </div>
+      <div className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold">
+        💬 WhatsApp: 303-704-2860
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       <Footer />
     </div>

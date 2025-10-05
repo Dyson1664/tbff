@@ -19,7 +19,7 @@ import triphigh2 from "@/assets/india-high-safari.jpg";
 
 
 // Import icons for highlights
-import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+import { Home, Zap, Plane, Users, Soup, TreePine } from "lucide-react";
 
 import ov1_400 from "@/assets/india-day11-main.jpg";
 import ov1_800 from "@/assets/india-day11-main.jpg";
@@ -163,7 +163,7 @@ export const indiaData = {
       description: "Knowledgeable guides at every destination plus 24/7 support throughout your adventure."
     },
     {
-      icon: UtensilsCrossed,
+      icon: Soup,
       title: "AUTHENTIC<br />INDIAN CUISINE",
       description: "12 Breakfasts, 7 Lunches & 6 Dinners featuring regional specialties!"
     },

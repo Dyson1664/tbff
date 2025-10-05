@@ -27,7 +27,7 @@ import highlight03 from "@/assets/highlight-ph-03.jpg"
 
 
 // Import icons for highlights
-import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine } from "lucide-react";
+import { Home, Zap, Plane, Users, Soup, TreePine } from "lucide-react";
 
 export const philippinesData = {
   id: "philippines-paradise",
@@ -88,8 +88,8 @@ highlights: [
       description: "Expert local guides who know hidden gems and provide authentic cultural experiences."
     },
     {
-      icon: UtensilsCrossed,
-      title: "TROPICAL<br />CUISINE",
+      icon: Soup,
+      title: "AUTHENTIC<br />CUISINE",
       description: "8 Breakfasts, 5 Lunches & 2 Dinners featuring authentic Filipino dishes!"
     },
     {

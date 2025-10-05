@@ -5,83 +5,100 @@ import { Scale, FileText, Shield, AlertCircle } from "lucide-react";
 
 const TERMS_SECTIONS = [
   {
-    title: "1. Booking and Payment Terms",
+    title: "1. Booking & Payment",
     content: [
-      "A deposit is required to secure your booking, with the balance due 60 days before departure.",
-      "Full payment is required for bookings made within 60 days of departure.",
-      "We accept major credit cards, bank transfers, and PayPal payments.",
-      "All prices are quoted in USD unless otherwise specified.",
-      "Prices are subject to change until booking is confirmed with deposit."
+      "Deposit: Your spot is confirmed once the USD $300 deposit is received.",
+      "Balance: The remaining balance is due no later than 60 days before the tour start date.",
+      "All prices are quoted and charged in United States Dollars (USD).",
+      "The traveler who paid a deposit may assign/transfer that deposit and booking to another person by written notice with the new traveler’s full name and contact details. Transfer is only permitted to the same tour date and may be subject to any third-party change fees.",
+      "You must be 18 years or older to make a booking."
     ]
   },
   {
-    title: "2. Cancellation and Refund Policy",
+    title: "2. Refunds & Cancellations",
     content: [
-      "Cancellations more than 90 days before departure: Full refund minus $200 processing fee.",
-      "Cancellations 61-90 days before departure: 50% refund of total trip cost.",
-      "Cancellations 31-60 days before departure: 25% refund of total trip cost.",
-      "Cancellations within 30 days of departure: No refund available.",
-      "Travel insurance is highly recommended to protect against unforeseen circumstances."
+      "Client-initiated cancellations:",
+      "• Up to 90 days before the tour start date: 100% refund of amounts paid to Imagine Beyond Travel, minus any non-recoverable third-party fees.",
+      "• 89 days or fewer before the tour start date: No refund; all amounts paid are forfeited.",
+      "Imagine Beyond Travel cancellations:",
+      "• If Imagine Beyond Travel cancels the trip for any reason, you will receive a 100% refund of all amounts paid to Imagine Beyond Travel.",
+      "Transfer of booking:",
+      "• If you or any member of your party is prevented from traveling, that person may transfer their place to someone else if:",
+      "  – The person is introduced by you and meets all trip conditions;",
+      "  – The outstanding balance is paid in full 60 days before the tour start date;",
+      "  – The transferee agrees to these Terms & Conditions and all other contract terms;",
+      "  – The transferee pays any extra fees (e.g., internal flight name changes or other carrier/admin fees)."
     ]
   },
   {
-    title: "3. Travel Documents and Requirements",
+    title: "3. Travel & Medical Insurance (Mandatory)",
     content: [
-      "Travelers are responsible for ensuring they have valid passports and necessary visas.",
-      "Passports must be valid for at least 6 months beyond the return date.",
-      "Visa requirements vary by destination and nationality - we provide guidance but ultimate responsibility lies with the traveler.",
-      "Health requirements including vaccinations are the traveler's responsibility.",
-      "Failure to have proper documentation may result in denied boarding or entry."
+      "Adequate travel insurance is a condition of travel. Your policy must cover your personal requirements including pre-existing medical conditions, cancellation charges, medical expenses, and repatriation.",
+      "Proof of insurance may be requested at any time. If you choose to travel without adequate insurance cover, Imagine Beyond Travel will not be liable for losses for which insurance would otherwise have provided coverage.",
+      "If you are undertaking adventure or high-risk activities, ensure your policy explicitly covers them."
     ]
   },
   {
-    title: "4. Trip Changes and Modifications",
+    title: "4. Passport & Entry Requirements",
     content: [
-      "Trip modifications are subject to availability and may incur additional costs.",
-      "Changes requested within 30 days of departure may not be possible.",
-      "Room upgrades and special requests are subject to availability and additional fees.",
-      "Itinerary changes due to weather, political situations, or safety concerns may be necessary.",
-      "We reserve the right to substitute hotels or activities of similar quality if necessary."
+      "By booking, you confirm that your passport will have at least six (6) months’ validity beyond the tour’s end date and that you meet all visa and health requirements for the destinations visited.",
+      "Imagine Beyond Travel is not liable for denied boarding or entry due to documentation issues."
     ]
   },
   {
-    title: "5. Liability and Insurance",
+    title: "5. Airfare & Carriers",
     content: [
-      "Imagine Beyond Travel acts as an agent for transportation, accommodation, and activity providers.",
-      "We are not liable for acts, errors, or omissions of third-party service providers.",
-      "Travel insurance is strongly recommended and may be required for certain destinations.",
-      "Travelers participate in all activities at their own risk.",
-      "Maximum liability is limited to the cost of the trip purchased."
+      "International flights to/from your destination are not included in our tour prices.",
+      "We act only as a third-party agent for any flight providers used during a tour. We are not responsible for flight schedule changes, delays, or lost/delayed baggage by airline companies.",
+      "We are not responsible for delays to ferry services or other third-party transportation."
     ]
   },
   {
-    title: "6. Health and Safety",
+    title: "6. Cardholder Declaration",
     content: [
-      "Travelers must disclose any medical conditions that may affect their ability to travel.",
-      "Some activities may have age, health, or physical fitness requirements.",
-      "We reserve the right to refuse service to travelers who pose a risk to themselves or others.",
-      "Emergency medical evacuation insurance is recommended for international travel.",
-      "Travelers should consult healthcare providers regarding destination-specific health requirements."
+      "You certify that the payment card used is your own (or that you have formal authority to use it) and that all details provided are true and correct."
     ]
   },
   {
-    title: "7. Behavior and Conduct",
+    title: "7. Liability",
     content: [
-      "Travelers are expected to behave respectfully toward other travelers, guides, and local communities.",
-      "Disruptive behavior may result in removal from the trip without refund.",
-      "Travelers must comply with local laws and customs at all destinations.",
-      "Illegal drug use or excessive alcohol consumption will not be tolerated.",
-      "Damage to property caused by travelers will be charged to the responsible party."
+      "Imagine Beyond Travel will act with reasonable care but is not liable for losses arising from circumstances beyond our control, including (but not limited to) force majeure events, government actions, or third-party defaults.",
+      "Nothing in these Terms & Conditions seeks to exclude or limit any statutory consumer rights that cannot be excluded by law."
     ]
   },
   {
-    title: "8. Force Majeure",
+    title: "8. Assumption of Risk",
     content: [
-      "We are not liable for trip cancellations or changes due to circumstances beyond our control.",
-      "Force majeure includes but is not limited to: natural disasters, war, terrorism, strikes, and government actions.",
-      "In case of force majeure, we will work to provide alternative arrangements or future travel credits.",
-      "Refunds for force majeure situations are subject to what we can recover from suppliers.",
-      "Travel insurance can provide additional protection for force majeure situations."
+      "By booking with Imagine Beyond Travel, you acknowledge that our trips can be adventurous in nature and may involve inherent risks, including traveling in locations with different political, cultural, environmental, and weather conditions than those you’re used to.",
+      "We continuously monitor local information to assess conditions in destinations where our tours operate. You agree to follow safety guidance from leaders and local partners at all times."
+    ]
+  },
+  {
+    title: "9. External/Independent Tours & Free Time",
+    content: [
+      "If you choose to participate in any activities not arranged by Imagine Beyond Travel (including activities booked during free time), you do so at your own risk.",
+      "Imagine Beyond Travel is not liable for damages or inconveniences arising from independently booked activities."
+    ]
+  },
+  {
+    title: "10. Images & Marketing",
+    content: [
+      "By joining a tour, you acknowledge that photos and videos may be captured by Imagine Beyond Travel, other participants, or affiliates.",
+      "You grant Imagine Beyond Travel a royalty-free, worldwide, perpetual license to use images featuring you for marketing and promotional purposes."
+    ]
+  },
+  {
+    title: "11. Complaints",
+    content: [
+      "We aim to deliver an excellent experience. If an issue arises, please speak with your Group Leader immediately so we can attempt to resolve it on the spot.",
+      "If you’re not satisfied after local resolution attempts, contact us at bookings@imaginebeyondtrvel.com. While we are not liable for third-party issues, we’ll do our best to assist promptly."
+    ]
+  },
+  {
+    title: "12. Acceptance",
+    content: [
+      "Completion of payment (deposit or full balance) constitutes acceptance of these Terms & Conditions.",
+      "These Terms & Conditions are governed by the laws of the United States."
     ]
   }
 ];
@@ -90,7 +107,7 @@ const TermsConditions = React.memo(() => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-primary/10 to-primary/5 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -103,12 +120,12 @@ const TermsConditions = React.memo(() => {
             Terms & Conditions
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Please read these terms and conditions carefully before booking your travel with Imagine Beyond Travel.
+            Please read these terms carefully before booking your travel with Imagine Beyond Travel.
           </p>
         </div>
       </section>
 
-      {/* Last Updated Notice */}
+      {/* Last Updated */}
       <section className="py-8 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
@@ -118,7 +135,7 @@ const TermsConditions = React.memo(() => {
         </div>
       </section>
 
-      {/* Introduction */}
+      {/* Intro */}
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-card rounded-lg p-8 border border-border">
@@ -127,9 +144,9 @@ const TermsConditions = React.memo(() => {
               <div>
                 <h2 className="text-xl font-semibold text-card-foreground mb-3">Important Notice</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  By booking a trip with Imagine Beyond Travel, you agree to be bound by these Terms and Conditions. 
-                  These terms constitute a legally binding agreement between you and Imagine Beyond Travel. 
-                  Please read them carefully and contact us if you have any questions before making a booking.
+                  By booking a trip with Imagine Beyond Travel, you agree to be bound by these Terms & Conditions.
+                  These terms form a binding agreement between you and Imagine Beyond Travel.
+                  Please review them and contact us with any questions before booking.
                 </p>
               </div>
             </div>
@@ -137,7 +154,7 @@ const TermsConditions = React.memo(() => {
         </div>
       </section>
 
-      {/* Terms Sections */}
+      {/* Terms List */}
       <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-8">
@@ -151,7 +168,7 @@ const TermsConditions = React.memo(() => {
                   {section.content.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start">
                       <span className="text-primary mr-3 mt-1.5">•</span>
-                      <span className="text-muted-foreground leading-relaxed">{item}</span>
+                      <span className="text-muted-foreground leading-relaxed whitespace-pre-line">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -161,46 +178,37 @@ const TermsConditions = React.memo(() => {
         </div>
       </section>
 
-      {/* Additional Legal Information */}
+      {/* Governance */}
       <section className="py-16 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-card rounded-lg p-6 border border-border">
               <h3 className="text-lg font-semibold text-card-foreground mb-4">Governing Law</h3>
               <p className="text-muted-foreground">
-                These terms and conditions are governed by the laws of the United States. 
-                Any disputes will be resolved through binding arbitration in accordance with 
-                the rules of the American Arbitration Association.
+                These terms are governed by the laws of the United States. Any disputes will be resolved pursuant to applicable law.
               </p>
             </div>
             <div className="bg-card rounded-lg p-6 border border-border">
               <h3 className="text-lg font-semibold text-card-foreground mb-4">Changes to Terms</h3>
               <p className="text-muted-foreground">
-                We reserve the right to modify these terms and conditions at any time. 
-                Changes will be posted on our website and will apply to bookings made 
-                after the effective date of the changes.
+                We may modify these Terms & Conditions at any time. Updates will be posted on our website and apply to bookings made after the effective date of the change.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Information */}
+      {/* Contact */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl font-bold text-foreground mb-6">
-            Questions About These Terms?
-          </h2>
+          <h2 className="text-2xl font-bold text-foreground mb-6">Questions About These Terms?</h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            If you have any questions about these Terms and Conditions, please don't hesitate to contact us.
+            If you have questions about our Terms & Conditions, please reach out to our team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-colors">
-              📞 Call: +1-555-IBT-TRIP
-            </button>
-            <button className="border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-colors">
-              📧 Email: legal@imaginebeyondtravel.com
-            </button>
+            <div className="border border-primary text-primary px-8 py-3 rounded-lg font-semibold">
+              📧 Email: bookings@imaginebeyondtrvel.com
+            </div>
           </div>
         </div>
       </section>
