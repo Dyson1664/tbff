@@ -261,7 +261,7 @@ const IncludedSection = memo(
                  rounded-2xl md:rounded-xl md:border md:shadow-sm
                  w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                  md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0">
-      <div className="max-w-7xl mx-auto px-4 md:px-3 py-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-16">
         <div className="text-center mb-12">
           <h3 className="text-3xl font-bold text-foreground mb-4">{STATIC_TEXT.includedTitle}</h3>
           <p className="text-lg text-muted-foreground">
