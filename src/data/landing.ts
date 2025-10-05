@@ -62,7 +62,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     reviews: 142,
     price: "From $2,499",
     image: japanHero,
-    tag: "POPULAR",
+    tag: "",
     overview:
       "Neon cities to Zen temples—Tokyo to Kyoto by bullet train, sushi, and shrines."
   },
@@ -76,7 +76,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     price: "from $1,599",
     rating: 4.9,
     reviews: 89,
-    tag: "NEW",
+    tag: "LIVE",
     overview:
       "Handpicked highlights: Delhi, Jodhpur, Udaipur, Pushkar, Jaipur, Agra."
   },
@@ -90,7 +90,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     reviews: 156,
     price: "From $850",
     image: srilankaHero,
-    tag: "FEATURED",
+    tag: "",
     overview:
       "From Colombo’s vibrant streets to Ella’s trails and Arugam Bay’s waves—Sri Lanka awaits."
   }
