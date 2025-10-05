@@ -11,7 +11,7 @@ import aboutusdave from "@/assets/about-us-dave.jpg"
 
 // Founders data
 const FOUNDERS_INFO = {
-  description: "Imagine Beyond Travel was founded by Darrin (Founder) and Dave (Co-Founder) after their paths crossed on Siargao Island in the Philippines. United by a shared vision and complementary strengths—Darrin's 5+ years in tourism and Dave's 3+ years in web development and production, we set out to build a company for solo explorers who want to see the world together. Our mission is simple, deliver imaginative, expertly run trips that turn strangers into friends and destinations into lasting memories. We design and host thoughtfully curated, community-minded tours that emphasize connection, authenticity, and seamless logistics so you can explore more and worry less"
+  description: "Imagine Beyond Travel was founded by Darrin Wilson, from Denver, Colorado, and Dave Reilly, from Dublin, Ireland, after their paths crossed on Siargao Island in the Philippines. United by a shared vision and complementary strengths—Darrin's 5+ years in tourism and Dave's 3+ years in web development and production—we set out to build a company for solo explorers who want to join like-minded travelers and see the world together."
 };
 
 export default memo(function AboutUs() {
@@ -47,8 +47,11 @@ export default memo(function AboutUs() {
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Mission</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Our mission is to create unique, fun, and unforgettable travel experiences. Working with local communities, we aim to leave a trail of meaningful connections and a positive impact wherever we go.
+              <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                Our mission is simple: to deliver imaginative, expertly run trips that turn strangers into friends and destinations into lasting memories. We care deeply about our guests' experience, comfort, and well-being, ensuring every journey is thoughtfully curated, community-minded, and seamlessly organized—so you can explore more and worry less.
+              </p>
+              <p className="text-xl font-semibold text-primary italic">
+                Dream it. Live it. Imagine Beyond
               </p>
             </div>
           </div>
@@ -106,17 +109,19 @@ export default memo(function AboutUs() {
             <div className="flex justify-center gap-8 mb-8">
               <div className="text-center">
                 <div className="w-48 h-48 mx-auto mb-4 bg-muted rounded-full border-4 border-white shadow-lg flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Darrin</span>
+                  <span className="text-muted-foreground text-sm">Darrin Wilson</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Darrin</h3>
+                <h3 className="text-xl font-bold text-foreground">Darrin Wilson</h3>
                 <p className="text-primary font-medium">Founder</p>
+                <p className="text-sm text-muted-foreground">Denver, Colorado</p>
               </div>
               <div className="text-center">
                 <div className="w-48 h-48 mx-auto mb-4 bg-muted rounded-full border-4 border-white shadow-lg flex items-center justify-center">
-                  <span className="text-muted-foreground text-sm">Dave</span>
+                  <span className="text-muted-foreground text-sm">Dave Reilly</span>
                 </div>
-                <h3 className="text-xl font-bold text-foreground">Dave</h3>
+                <h3 className="text-xl font-bold text-foreground">Dave Reilly</h3>
                 <p className="text-primary font-medium">Co-Founder</p>
+                <p className="text-sm text-muted-foreground">Dublin, Ireland</p>
               </div>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-3xl mx-auto text-lg text-center">
