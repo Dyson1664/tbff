@@ -13,7 +13,7 @@ import {
   Camera,
   Sun,
   LifeBuoy,
-  FileWarning,
+  Globe,
   CheckCircle2,
   Heart,
 } from "lucide-react";
@@ -127,7 +127,7 @@ const TravelSafety = React.memo(() => {
         <div className="max-w-5xl mx-auto px-4">
           <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
             <div className="flex items-start gap-3">
-              <FileWarning className="w-6 h-6 text-primary mt-1" />
+              <Globe className="w-6 h-6 text-primary mt-1" />
               <div>
                 <p className="text-muted-foreground leading-relaxed">
                   Travel comes with new environments and different norms. The points below outline what you may encounter—and how to prepare. We take every reasonable precaution to support your safety and enjoyment, and this guide shares ways you can further protect yourself on the road.
