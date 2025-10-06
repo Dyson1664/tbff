@@ -201,25 +201,28 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
         {/* Trip title - centered */}
         <h2 className="text-3xl font-bold text-foreground text-center mb-8">{data.duration} | {data.title}</h2>
         
-        {/* Route: full width */}
-        {Array.isArray(data.route) && data.route.length > 1 && (
-          <div className="w-full mb-8">
-            <ResponsiveRoute stops={data.route} />
-          </div>
-        )}
-
-        {/* Content grid: about text and highlights */}
+        {/* Content grid: route/text on left, highlights on right at same level */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          {/* Left col: about text */}
-          <div className="order-1 md:order-none space-y-6 w-full">
-            {data.aboutDescription.map((paragraph, index) => (
-              <p key={index} className="text-lg text-muted-foreground leading-relaxed mb-6">
-                {paragraph}
-              </p>
-            ))}
+          {/* Left col: route and about text */}
+          <div className="order-1 md:order-none space-y-8 w-full">
+            {/* Route */}
+            {Array.isArray(data.route) && data.route.length > 1 && (
+              <div className="w-full">
+                <ResponsiveRoute stops={data.route} />
+              </div>
+            )}
+            
+            {/* About text */}
+            <div className="space-y-6">
+              {data.aboutDescription.map((paragraph, index) => (
+                <p key={index} className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
 
-          {/* Right col: highlights */}
+          {/* Right col: highlights - now at same level */}
           <div className="order-2 md:order-none w-full md:flex md:justify-center">
             <TripHighlights data={data} />
           </div>
