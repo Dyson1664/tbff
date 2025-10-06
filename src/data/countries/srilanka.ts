@@ -6,10 +6,10 @@ import srilankaColombo from "@/assets/srilanka-colombo.png";
 import sigiriyaRock from "@/assets/sigiriya-rock.jpg";
 
 // 2x (retina) gallery images — Sri Lanka (4 tiles)
-import tile1_800_srilanka from "@/assets/tile1_800_srilanka.webp";
+import tile1_800_srilanka from "@/assets/srilanka-tile2.jpg";
 import tile2_800_srilanka from "@/assets/tile2_800_srilanka.webp";
 import tile3_800_srilanka from "@/assets/tile3_800_srilanka.webp";
-import tile4_800_srilanka from "@/assets/tile4_800_srilanka.webp";
+import tile4_800_srilanka from "@/assets/srilanka-tile.jpg";
 
 import mirissaBeach from "@/assets/srilanka-mirissa-beach.jpg";
 import hillCountryTrain from "@/assets/srilanka-hill-country-train.jpg";

@@ -76,7 +76,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     price: "from $1,529",
     rating: 4.9,
     reviews: 89,
-    tag: "LIVE",
+    tag: "RESERVE NOW",
     overview:
       "Handpicked highlights: Delhi, Jodhpur, Udaipur, Pushkar, Jaipur, Agra."
   },
