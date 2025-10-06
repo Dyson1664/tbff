@@ -16,10 +16,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
         <h3 className="text-lg font-semibold">Route</h3>
       </div>
 
-      <div
-        className="no-scrollbar overflow-x-auto touch-pan-x"
-        style={{ WebkitOverflowScrolling: "touch" }}
-      >
+      <div className="no-scrollbar overflow-x-auto touch-pan-x" style={{ WebkitOverflowScrolling: "touch" }}>
         <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
           {stops.map((stop, i) => {
             const color = getColor(i);
@@ -31,9 +28,10 @@ function MobileScroller({ stops }: { stops: string[] }) {
                 <span
                   className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black"
                   style={{ backgroundColor: color }}
+                  title={stop}
                 >
                   <MapPin className="h-4 w-4 text-black opacity-90" />
-                  {stop}
+                  <span className="truncate max-w-[180px]">{stop}</span>
                 </span>
 
                 {!isLast && (
@@ -57,41 +55,90 @@ function MobileScroller({ stops }: { stops: string[] }) {
   );
 }
 
-// --- Desktop/Tablet: arrows in header, track below, draggable too ---
+// --- Desktop/Tablet: arrows in header, track below, draggable too (gentle progressive sizing) ---
+type SizeMode = "normal" | "compact" | "tight";
+
 function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
   if (!stops?.length) return null;
 
   const trackRef = React.useRef<HTMLDivElement | null>(null);
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(false);
+  const [mode, setMode] = React.useState<SizeMode>("normal");
 
-  const updateArrows = React.useCallback(() => {
+  const updateState = React.useCallback(() => {
     const el = trackRef.current;
     if (!el) return;
+
+    // arrows
     setCanScrollLeft(el.scrollLeft > 0);
     setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
+
+    // determine overflow amount
+    const overflow = Math.max(0, el.scrollWidth - el.clientWidth);
+
+    // Gentle thresholds:
+    //  - compact only if a little overflow
+    //  - tight only if a lot of overflow (long routes)
+    if (overflow <= 8) {
+      setMode("normal");
+    } else if (overflow <= 320) {
+      setMode("compact");
+    } else {
+      setMode("tight");
+    }
   }, []);
 
   React.useEffect(() => {
-    updateArrows();
+    updateState();
     const el = trackRef.current;
     if (!el) return;
-    el.addEventListener("scroll", updateArrows, { passive: true });
-    const onResize = () => updateArrows();
+    el.addEventListener("scroll", updateState, { passive: true });
+    const onResize = () => updateState();
     window.addEventListener("resize", onResize);
+    // re-check after fonts load
+    // @ts-ignore
+    document.fonts?.ready?.then(updateState).catch(() => {});
     return () => {
-      el.removeEventListener("scroll", updateArrows);
+      el.removeEventListener("scroll", updateState);
       window.removeEventListener("resize", onResize);
     };
-  }, [updateArrows]);
+  }, [updateState, stops]);
 
   const scrollBy = (dx: number) => trackRef.current?.scrollBy({ left: dx, behavior: "smooth" });
 
-  const isJapan = slug === 'japan';
+  const isJapan = slug === "japan";
+
+  // size presets (gentle scaling)
+  const presets = {
+    normal: {
+      chip: "px-3 py-1 text-sm gap-1.5",
+      icon: "h-4 w-4",
+      connectorW: "w-8 lg:w-6",
+      labelMax: "max-w-[170px]",
+    },
+    compact: {
+      chip: "px-2.5 py-[6px] text-[13px] gap-1.5",
+      icon: "h-[15px] w-[15px]",
+      connectorW: "w-6 lg:w-5",
+      labelMax: "max-w-[145px]",
+    },
+    tight: {
+      chip: "px-2 py-[5px] text-xs gap-1",
+      icon: "h-3.5 w-3.5",
+      connectorW: "w-5 lg:w-4",
+      labelMax: "max-w-[120px]",
+    },
+  }[mode];
 
   return (
-    <div className={`w-full rounded-none bg-transparent p-0 shadow-none ${isJapan ? 'flex flex-col items-center' : ''}`} style={{ border: 0 }}>
-      {/* Header with icon + arrows - hide for Japan */}
+    <div
+      className={`w-full rounded-none bg-transparent p-0 shadow-none ${
+        isJapan ? "flex flex-col items-center" : ""
+      }`}
+      style={{ border: 0 }}
+    >
+      {/* Header with icon + arrows - hidden for Japan layout */}
       {!isJapan && (
         <div className="mb-1 flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -124,19 +171,16 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
       )}
 
       {/* Scroll track */}
-      <div
-        ref={trackRef}
-        className="no-scrollbar overflow-x-auto"
-        style={{ scrollBehavior: "smooth" }}
-      >
+      <div ref={trackRef} className="no-scrollbar overflow-x-auto" style={{ scrollBehavior: "smooth" }}>
         <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
-          {/* Route label inline for Japan */}
+          {/* Inline label for Japan layout */}
           {isJapan && (
             <div className="flex items-center gap-2 mr-3">
               <RouteIcon className="h-5 w-5 text-primary" />
               <h3 className="text-lg font-semibold">Route</h3>
             </div>
           )}
+
           {stops.map((stop, i) => {
             const color = getColor(i);
             const nextColor = getColor(i + 1);
@@ -145,16 +189,17 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
             return (
               <div key={stop + i} className="flex items-center flex-none">
                 <span
-                  className="mr-1.5 inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-sm font-semibold text-black"
+                  className={`mr-1.5 inline-flex items-center rounded-full font-semibold text-black ${presets.chip}`}
                   style={{ backgroundColor: color }}
+                  title={stop}
                 >
-                  <MapPin className="h-4 w-4 text-black opacity-90" />
-                  {stop}
+                  <MapPin className={`${presets.icon} text-black/90`} />
+                  <span className={`truncate ${presets.labelMax}`}>{stop}</span>
                 </span>
 
                 {!isLast && (
                   <span
-                    className="mx-0.5 h-0.5 w-8 lg:w-6 flex-none rounded"
+                    className={`mx-0.5 h-0.5 ${presets.connectorW} flex-none rounded`}
                     style={{ background: `linear-gradient(to right, ${color}, ${nextColor})` }}
                   />
                 )}
