@@ -38,6 +38,7 @@ export const srilankaData = {
   location: "Sri Lanka",
   duration: "11 days",
   heroImage: srilankaHero,
+  price: "USD $1,449",
   overviewGallery2x:[tile1_800_srilanka, tile2_800_srilanka, tile3_800_srilanka, tile4_800_srilanka],
   route: ["Colombo", "Sigiriya", "Kandy", "Nuwara Eliya", "Ella", "Galle", "Colombo"],
   aboutDescription: [

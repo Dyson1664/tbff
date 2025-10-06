@@ -126,6 +126,7 @@ export const indiaData = {
   location: "India",
   duration: "14 days",
   heroImage: indiaHero,
+  price: "USD $1,529",
   overviewGallery: [ov1_400, ov2_400, ov3_400, ov4_400, ov5_400, ov6_400],
   overviewGallery2x:[ov1_800, ov2_800, ov3_800, ov4_800, ov5_800, ov6_800],
   route: ["New Delhi", "Jodhpur", "Udaipur", "Sawai Madhopur", "Jaipur", "Agra"],

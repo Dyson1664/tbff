@@ -26,6 +26,7 @@ export const japanData = {
   location: "Japan",
   duration: "7 days",
   heroImage: japanHero,
+  price: "USD $1,899",
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
   aboutDescription: [
     "Experience the mesmerizing contrast of Japan, where bullet trains glide past ancient temples and neon-lit cities coexist with serene gardens. This 10-day journey takes you from the bustling metropolis of Tokyo to the cultural heart of Kyoto.",

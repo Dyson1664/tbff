@@ -36,6 +36,7 @@ export const philippinesData = {
   location: "Philippines",
   duration: "10 days",
   heroImage: philippinesDay07,
+  price: "USD $1,679",
   route: ["Manila", "Port Barton", "Wonderland", "El Nido"],
   aboutDescription: [
     "Discover the incredible diversity of the Philippines, an archipelago of over 7,000 islands offering pristine beaches, ancient rice terraces, and warm Filipino hospitality. From the bustling streets of Manila to the remote beauty of Palawan and Banaue.",
