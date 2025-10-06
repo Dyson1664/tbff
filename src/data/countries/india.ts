@@ -424,6 +424,16 @@ summary: {
       { text: "All toll taxes and parking fees" }
     ]
   },
+  {
+    title: "Experiences",
+    items: [
+      { text: "Taj Mahal sunrise visit" },
+      { text: "Private heritage walks and cultural tours" },
+      { text: "Traditional cooking demonstrations" },
+      { text: "Spiritual ceremonies and blessings" },
+      { text: "Local artisan workshops" }
+    ]
+  }
 
 ]
 ,
