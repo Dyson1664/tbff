@@ -248,8 +248,8 @@ whatsIncludedHighlights: [
 ,
   faqs: [
   {
-    question: "How fit do I need to be to do this trek?",
-    answer: "This is a walking-focused trip. Expect to walk an average of 3–5 miles (5–8 km) per day at a relaxed pace with frequent stops."
+    question: "Is this an active walking tour?",
+    answer: "This is a walking-focused trip. Expect to walk an average of 2–3 miles per day at a relaxed pace with frequent stops."
   },
   {
     question: "Which airport do I need to fly into?",
