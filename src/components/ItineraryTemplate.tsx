@@ -192,42 +192,39 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
 
   return (
     <div className="mb-16">
-      {/* Trip title - centered on desktop */}
-      <h2 className="text-3xl font-bold text-foreground text-center mb-8">{data.duration} | {data.title}</h2>
-      
-      {/* Route: full width across screen on desktop */}
-      {Array.isArray(data.route) && data.route.length > 1 && (
-        <div className="w-full mb-12
-          bg-white md:bg-background
-          w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
-          md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-          px-4 md:px-8 py-6 rounded-2xl">
-          <ResponsiveRoute stops={data.route} />
-        </div>
-      )}
-
-      {/* Content grid: about text and highlights */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start
-          bg-white md:bg-background
+      {/* Single white container with everything */}
+      <div className="bg-white md:bg-background
           w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
           md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
           px-4 md:px-8 py-8 rounded-2xl">
+        
+        {/* Trip title - centered */}
+        <h2 className="text-3xl font-bold text-foreground text-center mb-8">{data.duration} | {data.title}</h2>
+        
+        {/* Route: full width */}
+        {Array.isArray(data.route) && data.route.length > 1 && (
+          <div className="w-full mb-8">
+            <ResponsiveRoute stops={data.route} />
+          </div>
+        )}
 
-        {/* Left col: about text */}
-        <div className="order-1 md:order-none space-y-6 w-full">
-          {data.aboutDescription.map((paragraph, index) => (
-            <p key={index} className="text-lg text-muted-foreground leading-relaxed mb-6">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        {/* Content grid: about text and highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          {/* Left col: about text */}
+          <div className="order-1 md:order-none space-y-6 w-full">
+            {data.aboutDescription.map((paragraph, index) => (
+              <p key={index} className="text-lg text-muted-foreground leading-relaxed mb-6">
+                {paragraph}
+              </p>
+            ))}
+          </div>
 
-        {/* Right col: highlights */}
-        <div className="order-2 md:order-none w-full md:flex md:justify-center">
-          <TripHighlights data={data} />
+          {/* Right col: highlights */}
+          <div className="order-2 md:order-none w-full md:flex md:justify-center">
+            <TripHighlights data={data} />
+          </div>
         </div>
       </div>
-
     </div>
   );
 });
