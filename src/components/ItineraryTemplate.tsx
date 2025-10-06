@@ -220,7 +220,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           </div>
 
           {/* Right col: highlights */}
-          <div className="order-2 md:order-none w-full md:flex md:justify-center">
+          <div className="order-2 md:order-none w-full">
             <TripHighlights data={data} />
           </div>
         </div>
