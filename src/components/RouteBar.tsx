@@ -145,28 +145,6 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
             <RouteIcon className="h-5 w-5 text-primary" />
             <h3 className="text-lg font-semibold">Route</h3>
           </div>
-          <div className="flex items-center gap-1.5">
-            <button
-              type="button"
-              aria-label="Scroll route left"
-              onClick={() => scrollBy(-320)}
-              disabled={!canScrollLeft}
-              className="rounded-full p-1 disabled:opacity-30 hover:opacity-80 focus:outline-none"
-              style={{ background: "transparent", border: 0, boxShadow: "none" }}
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-            <button
-              type="button"
-              aria-label="Scroll route right"
-              onClick={() => scrollBy(320)}
-              disabled={!canScrollRight}
-              className="rounded-full p-1 disabled:opacity-30 hover:opacity-80 focus:outline-none"
-              style={{ background: "transparent", border: 0, boxShadow: "none" }}
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
         </div>
       )}
 
