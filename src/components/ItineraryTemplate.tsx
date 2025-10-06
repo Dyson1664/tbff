@@ -270,7 +270,7 @@ const IncludedSection = memo(
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 lg:gap-x-16 gap-y-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-12 max-w-7xl mx-auto">
           {included.map((section, index) => (
             <div key={index} className="space-y-5">
               <h4 className="font-semibold text-foreground text-lg mb-5">{section.title}</h4>
