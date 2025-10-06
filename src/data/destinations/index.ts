@@ -32,7 +32,7 @@ export const destinationsData: Record<string, DestinationData> = {
         duration: "10 days",
         description: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
         image: japanHeroImage,
-        price: "From $2,499",
+        price: "From $1,899",
         route: "/japan-itinerary"
       }
     ],
@@ -49,7 +49,7 @@ export const destinationsData: Record<string, DestinationData> = {
         duration: "12 days",
         description: "Discover the incredible diversity of India from the Taj Mahal to vibrant markets and spiritual temples",
         image: indiaHeroImage,
-        price: "From $1,999",
+        price: "From $1,529",
         route: "/india-itinerary"
       }
     ]
@@ -132,7 +132,7 @@ export const destinationsData: Record<string, DestinationData> = {
         duration: "9 days",
         description: "Experience the pearl of the Indian Ocean with its rich culture, wildlife, and stunning landscapes",
         image: srilankaHeroImage,
-        price: "From $1,299",
+        price: "From $1,449",
         route: "/srilanka-itinerary"
       }
     ],
@@ -149,7 +149,7 @@ export const destinationsData: Record<string, DestinationData> = {
         duration: "9 days",
         description: "Explore tropical islands, ancient rice terraces, and vibrant Filipino culture",
         image: philippinesHeroImage,
-        price: "From $1,699",
+        price: "From $1,679",
         route: "/philippines-itinerary"
       }
     ],
