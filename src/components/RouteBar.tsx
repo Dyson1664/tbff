@@ -91,35 +91,37 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
 
   return (
     <div className={`w-full rounded-none bg-transparent p-0 shadow-none ${isJapan ? 'flex flex-col items-center' : ''}`} style={{ border: 0 }}>
-      {/* Header with icon + arrows */}
-      <div className="mb-1 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <RouteIcon className="h-5 w-5 text-primary" />
-          <h3 className="text-lg font-semibold">Route</h3>
+      {/* Header with icon + arrows - hide for Japan */}
+      {!isJapan && (
+        <div className="mb-1 flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <RouteIcon className="h-5 w-5 text-primary" />
+            <h3 className="text-lg font-semibold">Route</h3>
+          </div>
+          <div className="flex items-center gap-1.5">
+            <button
+              type="button"
+              aria-label="Scroll route left"
+              onClick={() => scrollBy(-320)}
+              disabled={!canScrollLeft}
+              className="rounded-full p-1 disabled:opacity-30 hover:opacity-80 focus:outline-none"
+              style={{ background: "transparent", border: 0, boxShadow: "none" }}
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </button>
+            <button
+              type="button"
+              aria-label="Scroll route right"
+              onClick={() => scrollBy(320)}
+              disabled={!canScrollRight}
+              className="rounded-full p-1 disabled:opacity-30 hover:opacity-80 focus:outline-none"
+              style={{ background: "transparent", border: 0, boxShadow: "none" }}
+            >
+              <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
         </div>
-        <div className="flex items-center gap-1.5">
-          <button
-            type="button"
-            aria-label="Scroll route left"
-            onClick={() => scrollBy(-320)}
-            disabled={!canScrollLeft}
-            className="rounded-full p-1 disabled:opacity-30 hover:opacity-80 focus:outline-none"
-            style={{ background: "transparent", border: 0, boxShadow: "none" }}
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </button>
-          <button
-            type="button"
-            aria-label="Scroll route right"
-            onClick={() => scrollBy(320)}
-            disabled={!canScrollRight}
-            className="rounded-full p-1 disabled:opacity-30 hover:opacity-80 focus:outline-none"
-            style={{ background: "transparent", border: 0, boxShadow: "none" }}
-          >
-            <ChevronRight className="h-4 w-4" />
-          </button>
-        </div>
-      </div>
+      )}
 
       {/* Scroll track */}
       <div
@@ -128,6 +130,13 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
         style={{ scrollBehavior: "smooth" }}
       >
         <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
+          {/* Route label inline for Japan */}
+          {isJapan && (
+            <div className="flex items-center gap-2 mr-3">
+              <RouteIcon className="h-5 w-5 text-primary" />
+              <h3 className="text-lg font-semibold">Route</h3>
+            </div>
+          )}
           {stops.map((stop, i) => {
             const color = getColor(i);
             const nextColor = getColor(i + 1);
