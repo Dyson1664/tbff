@@ -58,7 +58,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
 }
 
 // --- Desktop/Tablet: arrows in header, track below, draggable too ---
-function DesktopScroller({ stops }: { stops: string[] }) {
+function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
   if (!stops?.length) return null;
 
   const trackRef = React.useRef<HTMLDivElement | null>(null);
@@ -87,8 +87,10 @@ function DesktopScroller({ stops }: { stops: string[] }) {
 
   const scrollBy = (dx: number) => trackRef.current?.scrollBy({ left: dx, behavior: "smooth" });
 
+  const isJapan = slug === 'japan';
+
   return (
-    <div className="w-full rounded-none bg-transparent p-0 shadow-none" style={{ border: 0 }}>
+    <div className={`w-full rounded-none bg-transparent p-0 shadow-none ${isJapan ? 'flex flex-col items-center' : ''}`} style={{ border: 0 }}>
       {/* Header with icon + arrows */}
       <div className="mb-1 flex items-center justify-between">
         <div className="flex items-center gap-2">
@@ -162,7 +164,7 @@ function DesktopScroller({ stops }: { stops: string[] }) {
   );
 }
 
-export function ResponsiveRoute({ stops }: { stops: string[] }) {
+export function ResponsiveRoute({ stops, slug }: { stops: string[]; slug?: string }) {
   if (!stops?.length) return null;
   return (
     <>
@@ -170,7 +172,7 @@ export function ResponsiveRoute({ stops }: { stops: string[] }) {
         <MobileScroller stops={stops} />
       </div>
       <div className="hidden md:block">
-        <DesktopScroller stops={stops} />
+        <DesktopScroller stops={stops} slug={slug} />
       </div>
     </>
   );
