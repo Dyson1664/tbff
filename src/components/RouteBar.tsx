@@ -145,7 +145,7 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
             <RouteIcon className="h-5 w-5 text-primary" />
             <h3 className="text-lg font-semibold">Route</h3>
           </div>
-          <div className="md:flex xl:hidden items-center gap-1.5">
+          <div className="md:flex items-center gap-1.5">
             <button
               type="button"
               aria-label="Scroll route left"
