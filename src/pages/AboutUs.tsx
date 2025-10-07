@@ -118,23 +118,8 @@ export default memo(function AboutUs() {
           <div>
             {/* Team Photos */}
             <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
-              {/* Dave - shown second on mobile, first on desktop */}
-              <div className="text-center order-2 md:order-1">
-                <div className="w-48 h-48 mx-auto mb-4 rounded-full border-4 border-white shadow-lg overflow-hidden">
-                  <img
-                    src={aboutusDave}
-                    alt="Dave Reilly"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <h3 className="text-xl font-bold text-foreground">Dave Reilly</h3>
-                <p className="text-primary font-medium">Co-Founder</p>
-                <p className="text-sm text-muted-foreground">Dublin, Ireland</p>
-              </div>
-
-              {/* Darrin - shown first on mobile, second on desktop */}
-              <div className="text-center order-1 md:order-2">
+              {/* Darrin - shown first on mobile and left on desktop */}
+              <div className="text-center order-1 md:order-1">
                 <div className="w-48 h-48 mx-auto mb-4 rounded-full border-4 border-white shadow-lg overflow-hidden">
                   <img
                     src={aboutusDarrin}
@@ -146,6 +131,21 @@ export default memo(function AboutUs() {
                 <h3 className="text-xl font-bold text-foreground">Darrin Wilson</h3>
                 <p className="text-primary font-medium">Founder</p>
                 <p className="text-sm text-muted-foreground">Denver, Colorado</p>
+              </div>
+
+              {/* Dave - shown second on mobile and right on desktop */}
+              <div className="text-center order-2 md:order-2">
+                <div className="w-48 h-48 mx-auto mb-4 rounded-full border-4 border-white shadow-lg overflow-hidden">
+                  <img
+                    src={aboutusDave}
+                    alt="Dave Reilly"
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-foreground">Dave Reilly</h3>
+                <p className="text-primary font-medium">Co-Founder</p>
+                <p className="text-sm text-muted-foreground">Dublin, Ireland</p>
               </div>
             </div>
 
