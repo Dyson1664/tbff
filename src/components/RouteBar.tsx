@@ -80,7 +80,7 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
     // Gentle thresholds:
     //  - compact only if a little overflow
     //  - tight only if a lot of overflow (long routes)
-    if (overflow <= 8) {
+    if (overflow <= 50) {
       setMode("normal");
     } else if (overflow <= 320) {
       setMode("compact");
