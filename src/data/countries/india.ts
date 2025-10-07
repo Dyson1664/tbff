@@ -199,7 +199,7 @@ highlights: [
   itinerary: [
   {
   day: 1,
-  date: "March 15, 2024",
+  date: "Feb 27, 2025",
   title: "Delhi Arrival — Hello, India!",
   location: "Delhi",
   siteName: "Delhi",
@@ -219,7 +219,7 @@ highlights: [
   },
   {
   day: 2,
-  date: "March 16, 2024",
+  date: "Feb 28, 2025",
   title: "Delhi — Full-Day Adventure",
   location: "Delhi",
   siteName: "India Gate",
@@ -234,7 +234,7 @@ highlights: [
 },
 {
   day: 3,
-  date: "March 17, 2024",
+  date: "March 1, 2025",
   title: "To Mandawa — Fresco Heaven",
   location: "Mandawa",
   siteName: "Mandawa Havelis",
@@ -248,7 +248,7 @@ highlights: [
 },
 {
   day: 4,
-  date: "March 18, 2024",
+  date: "March 2, 2025",
   title: "Mandawa → Jodhpur — Blue City Buzz", // colon removed
   location: "Jodhpur",
   siteName: "Ghanta Ghar Clock Tower",
@@ -262,7 +262,7 @@ highlights: [
 },
 {
   day: 5,
-  date: "March 19, 2024",
+  date: "March 3, 2025",
   title: "Jodhpur Sightseeing",
   location: "Jodhpur",
   siteName: "Jaswant Thada",
@@ -277,7 +277,7 @@ highlights: [
 ,
 {
   day: 6,
-  date: "March 20, 2024",
+  date: "March 4, 2025",
   title: "Lets travel to Udaipur",
   location: "Udaipur",
   siteName: "Udaipur",
@@ -291,7 +291,7 @@ highlights: [
 },
 {
   day: 7,
-  date: "March 21, 2024",
+  date: "March 5, 2025",
   title: "Udaipur, lets go explore",
   location: "Udaipur",
   siteName: "City Palace Udaipur",
@@ -305,7 +305,7 @@ highlights: [
 },
 {
   day: 8,
-  date: "March 22, 2024",
+  date: "March 6, 2025",
   title: "Travel to Ranthambore",
   location: "Ranthambore",
   siteName: "Ranthambhore Fort",
@@ -319,7 +319,7 @@ highlights: [
 },
 {
   day: 9,
-  date: "March 23, 2024",
+  date: "March 7, 2025",
   title: "In Ranthambore",
   location: "Ranthambore",
   siteName: "Ranthambore National Park Safari",
@@ -334,7 +334,7 @@ highlights: [
 ,
 {
   day: 10,
-  date: "March 24, 2024",
+  date: "March 8, 2025",
   title: "Travel to Jaipur — Your Day, Your Pace",
   location: "Jaipur",
   siteName: "Amber Fort",
@@ -348,7 +348,7 @@ highlights: [
 },
 {
   day: 11,
-  date: "March 25, 2024",
+  date: "March 9, 2025",
   title: "Jaipur Sightseeing Classics",
   location: "Jaipur",
   siteName: "City Palace Jaipur",
@@ -362,7 +362,7 @@ highlights: [
 },
 {
   day: 12,
-  date: "March 26, 2024",
+  date: "March 10, 2025",
   title: "Agra — Let’s Go",
   location: "Agra",
   siteName: "Agra Fort",
@@ -376,7 +376,7 @@ highlights: [
 },
 {
   day: 13,
-  date: "March 27, 2024",
+  date: "March 11, 2025",
   title: "Taj Mahal Sunrise & Back to Delhi",
   location: "Agra",
   siteName: "Taj Mahal",
@@ -390,7 +390,7 @@ highlights: [
 },
 {
   day: 14,
-  date: "March 28, 2024",
+  date: "March 12, 2025",
   title: "Farewell & Onward Travel",
   location: "Dehli",
   siteName: "Farewell",
