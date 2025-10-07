@@ -88,6 +88,12 @@ export const DayLayout = memo(({
             alt={`Day ${dayNumber} - ${location}`}
             className="w-full h-full object-cover"
           />
+          {/* Date overlay in top left corner */}
+          {date && (
+            <div className="absolute top-3 left-3 bg-black/40 backdrop-blur-sm text-white px-2 py-0.5 rounded text-xs font-light tracking-wide">
+              {date}
+            </div>
+          )}
           {/* Site name overlay in top right corner */}
           <div className="absolute top-3 right-3 bg-black/40 backdrop-blur-sm text-white px-2 py-0.5 rounded text-xs font-light tracking-wide">
             {siteName || location}
