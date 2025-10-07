@@ -72,7 +72,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     image: indiaDay13,
     title: "India Journey",
     location: "India",
-    duration: "13 days",
+    duration: "14 days",
     price: "from $1,529",
     rating: 4.9,
     reviews: 89,
