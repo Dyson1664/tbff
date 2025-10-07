@@ -171,8 +171,8 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
       )}
 
       {/* Scroll track */}
-      <div ref={trackRef} className="no-scrollbar overflow-x-auto xl:overflow-x-visible" style={{ scrollBehavior: "smooth" }}>
-        <div className="flex items-center flex-nowrap xl:flex-wrap gap-1.5 py-0.5">
+      <div ref={trackRef} className="no-scrollbar overflow-x-auto" style={{ scrollBehavior: "smooth" }}>
+        <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
           {/* Inline label for Japan layout */}
           {isJapan && (
             <div className="flex items-center gap-2 mr-3">
