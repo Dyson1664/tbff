@@ -8,14 +8,14 @@ import ibtLogo from "@/assets/ibt-logo.svg";
 // Memoized dropdown item component
 const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) => {
   const isComingSoon = trip.duration === "Coming Soon";
-  const isIndia = trip.title === "India Journey";
+  const isIndia = trip.location === "India";
   const content = (
     <div className="flex justify-between items-start">
       <div>
         <h4 className="font-medium text-foreground">{trip.title}</h4>
         <p className="text-sm text-muted-foreground">
           {trip.location}
-          {isIndia && <span className="ml-2" style={{ color: '#0FC2BF' }}>Starts Feb 27th</span>}
+          {isIndia && <span className="ml-2 text-primary">Starts Feb 27th</span>}
         </p>
       </div>
       <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
@@ -95,14 +95,14 @@ const Navbar = memo(() => {
   const mobileTripsItems = useMemo(() => 
     NAVIGATION_TRIPS.map((trip, index) => {
       const isComingSoon = trip.duration === "Coming Soon";
-      const isIndia = trip.title === "India Journey";
+      const isIndia = trip.location === "India";
       const content = (
         <div className="flex justify-between items-start">
           <div>
             <h4 className="font-medium text-foreground text-sm">{trip.title}</h4>
             <p className="text-xs text-muted-foreground">
               {trip.location}
-              {isIndia && <span className="ml-2" style={{ color: '#0FC2BF' }}>Starts Feb 27th</span>}
+              {isIndia && <span className="ml-2 text-primary">Starts Feb 27th</span>}
             </p>
           </div>
           <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
