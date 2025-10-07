@@ -118,25 +118,25 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
 
   const isJapan = slug === "japan";
 
-  // size presets (gentle scaling)
+  // size presets (more aggressive scaling to fit)
   const presets = {
     normal: {
-      chip: "px-3.5 py-1.5 text-sm gap-1.5",
+      chip: "px-2.5 py-1 text-[13px] gap-1",
       icon: "h-4 w-4",
-      connectorW: "w-8 lg:w-6",
-      labelMax: "max-w-[180px]",
+      connectorW: "w-5",
+      labelMax: "max-w-[140px]",
     },
     compact: {
-      chip: "px-3 py-1 text-sm gap-1.5",
-      icon: "h-4 w-4",
-      connectorW: "w-7 lg:w-5",
-      labelMax: "max-w-[160px]",
+      chip: "px-2 py-0.5 text-xs gap-1",
+      icon: "h-3.5 w-3.5",
+      connectorW: "w-4",
+      labelMax: "max-w-[120px]",
     },
     tight: {
-      chip: "px-2.5 py-[6px] text-[13px] gap-1.5",
-      icon: "h-[15px] w-[15px]",
-      connectorW: "w-6 lg:w-4",
-      labelMax: "max-w-[140px]",
+      chip: "px-1.5 py-0.5 text-xs gap-0.5",
+      icon: "h-3.5 w-3.5",
+      connectorW: "w-3",
+      labelMax: "max-w-[100px]",
     },
   }[mode];
 
