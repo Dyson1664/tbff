@@ -200,7 +200,9 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           px-4 md:px-8 py-8 rounded-2xl">
         
         {/* Trip title - centered */}
-        <h2 className="text-3xl font-bold text-foreground text-center mb-8">{data.duration} | {data.title}</h2>
+        <h2 className="text-3xl font-bold text-foreground text-center mb-8">
+          {data.startDate && `${data.startDate} | `}{data.duration} | {data.title}
+        </h2>
         
         {/* Route: full width */}
         {Array.isArray(data.route) && data.route.length > 1 && (
