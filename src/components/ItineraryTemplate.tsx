@@ -73,7 +73,8 @@ interface CountryData {
   duration: string;
   heroImage: string;
   price?: string;
-  overviewGallery?: string[]; 
+  startDate?: string;
+  overviewGallery?: string[];
   overviewGallery2x?: (string | null)[];  // <-- new optional gallery for hero left grid
   route?: string[];
   aboutDescription: string[];
@@ -398,7 +399,9 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
           {/* Trip Title */}
           <div className="space-y-2">
             <h3 className="text-xl font-bold text-foreground">{data.duration}</h3>
-            <p className="font-playfair text-lg text-primary mb-1">Trip starts Feb 27th</p>
+            {data.startDate && (
+              <p className="font-playfair text-lg text-primary mb-1">Trip starts {data.startDate}</p>
+            )}
             <p className="text-sm text-muted-foreground">{data.route ? data.route.join(' to ') : data.location}</p>
           </div>
           
