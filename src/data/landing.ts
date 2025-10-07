@@ -115,7 +115,7 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     name: "Emma Wilson",
     avatar: "EW",
     rating: 5,
-    date: "Dec 2024",
+    date: "Aug 2025",
     text: "An amazing trip! The itinerary was perfectly planned and every detail was taken care of. The local guides were exceptional and really made the experience memorable.",
     location: "London, UK"
   },
@@ -123,7 +123,7 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     name: "Marco Rodriguez", 
     avatar: "MR",
     rating: 5,
-    date: "Nov 2024", 
+    date: "July 2025",
     text: "Incredible value for money and outstanding service. The accommodations were beautiful and the experiences were truly authentic. Highly recommend!",
     location: "Madrid, Spain"
   },
@@ -131,7 +131,7 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     name: "Sarah Chen",
     avatar: "SC", 
     rating: 5,
-    date: "Oct 2024",
+    date: "June 2025",
     text: "Perfect for solo travelers! I felt safe and supported throughout the entire journey. Met wonderful people and created memories that will last a lifetime.",
     location: "Toronto, Canada"
   }
