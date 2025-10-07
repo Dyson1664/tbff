@@ -80,8 +80,15 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
     // Gentle thresholds:
     //  - compact only if a little overflow
     //  - tight only if a lot of overflow (long routes)
-    if (overflow <= 8) {
+    // On xl screens, be more aggressive to avoid scrolling
+    const isXl = window.innerWidth >= 1280;
+    
+    if (overflow <= 4) {
       setMode("normal");
+    } else if (isXl && overflow <= 150) {
+      setMode("compact");
+    } else if (isXl) {
+      setMode("tight");
     } else if (overflow <= 320) {
       setMode("compact");
     } else {
