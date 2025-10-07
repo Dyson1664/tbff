@@ -16,7 +16,7 @@ export interface NavigationDestination {
 
 // Extract trips data to module level - prevents recreation on every render
 export const NAVIGATION_TRIPS: readonly NavigationTrip[] = [
-  { title: "India Heritage Tour", duration: "13 Days", location: "India", link: "/india-itinerary" },
+  { title: "India Heritage Tour", duration: "14 Days", location: "India", link: "/india-itinerary" },
   { title: "Japan Journey", duration: "7 Days", location: "Japan", link: "/japan-itinerary" },
   { title: "Philippines Paradise", duration: "10 Days", location: "Philippines", link: "/philippines-itinerary" },
   { title: "Sri Lanka Explorer", duration: "9 Days", location: "Sri Lanka", link: "/srilanka-itinerary" },
