@@ -8,6 +8,19 @@ const getColor = (i: number) => ROUTE_COLORS[i % ROUTE_COLORS.length];
 // --- Mobile: horizontal, draggable scroller (no arrows) ---
 function MobileScroller({ stops }: { stops: string[] }) {
   if (!stops?.length) return null;
+  
+  const scrollRef = React.useRef<HTMLDivElement | null>(null);
+  const [scrollPosition, setScrollPosition] = React.useState(0);
+
+  const handleScroll = () => {
+    if (scrollRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+      // Calculate scroll position as percentage
+      const maxScroll = scrollWidth - clientWidth;
+      const position = maxScroll > 0 ? scrollLeft / maxScroll : 0;
+      setScrollPosition(position);
+    }
+  };
 
   return (
     <div className="w-full rounded-none bg-transparent p-0 shadow-none" style={{ border: 0 }}>
@@ -16,7 +29,12 @@ function MobileScroller({ stops }: { stops: string[] }) {
         <h3 className="text-lg font-semibold">Route</h3>
       </div>
 
-      <div className="no-scrollbar overflow-x-auto touch-pan-x" style={{ WebkitOverflowScrolling: "touch" }}>
+      <div 
+        ref={scrollRef}
+        onScroll={handleScroll}
+        className="no-scrollbar overflow-x-auto touch-pan-x" 
+        style={{ WebkitOverflowScrolling: "touch" }}
+      >
         <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
           {stops.map((stop, i) => {
             const color = getColor(i);
@@ -44,6 +62,23 @@ function MobileScroller({ stops }: { stops: string[] }) {
             );
           })}
         </div>
+      </div>
+      
+      {/* Scroll indicator dots */}
+      <div className="flex justify-center gap-1.5 mt-2">
+        {[...Array(Math.min(stops.length, 5))].map((_, i) => {
+          const isActive = i === Math.round(scrollPosition * (Math.min(stops.length, 5) - 1));
+          return (
+            <div
+              key={i}
+              className="h-1.5 w-1.5 rounded-full transition-all duration-200"
+              style={{ 
+                backgroundColor: isActive ? '#0FC2BF' : '#d1d5db',
+                transform: isActive ? 'scale(1.2)' : 'scale(1)'
+              }}
+            />
+          );
+        })}
       </div>
 
       {/* Hide native scrollbars */}
