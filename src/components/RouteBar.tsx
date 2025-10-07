@@ -79,23 +79,23 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
     // determine overflow amount
     const overflow = Math.max(0, el.scrollWidth - el.clientWidth);
 
-    // Fit-to-width: shrink progressively until it fits
-    if (overflow > 0) {
-      const current = modeRef.current;
-      if (current === "normal") {
+    // Fit-to-width with gentle thresholds
+    if (overflow <= 60) {
+      if (modeRef.current !== "normal") {
+        modeRef.current = "normal";
+        setMode("normal");
+      }
+    } else if (overflow <= 350) {
+      if (modeRef.current !== "compact") {
         modeRef.current = "compact";
         setMode("compact");
-        requestAnimationFrame(updateState);
-        return;
       }
-      if (current === "compact") {
+    } else {
+      if (modeRef.current !== "tight") {
         modeRef.current = "tight";
         setMode("tight");
-        requestAnimationFrame(updateState);
-        return;
       }
     }
-    // Do not expand back automatically to avoid flicker
   }, []);
 
   React.useEffect(() => {
