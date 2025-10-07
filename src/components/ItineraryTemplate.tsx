@@ -397,6 +397,7 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
         <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 space-y-6">
           {/* Trip Title */}
           <div className="space-y-2">
+            <p className="font-playfair text-lg text-primary mb-1">Trips starts Feb 27th</p>
             <h3 className="text-xl font-bold text-foreground">{data.duration}</h3>
             <p className="text-sm text-muted-foreground">{data.route ? data.route.join(' to ') : data.location}</p>
           </div>
