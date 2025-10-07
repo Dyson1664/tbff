@@ -11,6 +11,7 @@ function MobileScroller({ stops }: { stops: string[] }) {
   
   const scrollRef = React.useRef<HTMLDivElement | null>(null);
   const [scrollPosition, setScrollPosition] = React.useState(0);
+  const [isScrollable, setIsScrollable] = React.useState(false);
 
   const handleScroll = () => {
     if (scrollRef.current) {
@@ -22,11 +23,45 @@ function MobileScroller({ stops }: { stops: string[] }) {
     }
   };
 
+  React.useEffect(() => {
+    const checkScrollable = () => {
+      if (scrollRef.current) {
+        const { scrollWidth, clientWidth } = scrollRef.current;
+        setIsScrollable(scrollWidth > clientWidth + 5); // +5 for small tolerance
+      }
+    };
+    
+    checkScrollable();
+    window.addEventListener('resize', checkScrollable);
+    return () => window.removeEventListener('resize', checkScrollable);
+  }, [stops]);
+
   return (
     <div className="w-full rounded-none bg-transparent p-0 shadow-none" style={{ border: 0 }}>
-      <div className="mb-1 flex items-center gap-2">
-        <RouteIcon className="h-5 w-5 text-primary" />
-        <h3 className="text-lg font-semibold">Route</h3>
+      <div className="mb-1 flex items-center gap-2 justify-between">
+        <div className="flex items-center gap-2">
+          <RouteIcon className="h-5 w-5 text-primary" />
+          <h3 className="text-lg font-semibold">Route</h3>
+        </div>
+        
+        {/* Scroll indicator dots - only show when scrollable */}
+        {isScrollable && (
+          <div className="flex gap-1.5">
+            {[...Array(Math.min(stops.length, 5))].map((_, i) => {
+              const isActive = i === Math.round(scrollPosition * (Math.min(stops.length, 5) - 1));
+              return (
+                <div
+                  key={i}
+                  className="h-1.5 w-1.5 rounded-full transition-all duration-200"
+                  style={{ 
+                    backgroundColor: isActive ? '#0FC2BF' : '#d1d5db',
+                    transform: isActive ? 'scale(1.2)' : 'scale(1)'
+                  }}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
 
       <div 
@@ -62,23 +97,6 @@ function MobileScroller({ stops }: { stops: string[] }) {
             );
           })}
         </div>
-      </div>
-      
-      {/* Scroll indicator dots */}
-      <div className="flex justify-center gap-1.5 mt-2">
-        {[...Array(Math.min(stops.length, 5))].map((_, i) => {
-          const isActive = i === Math.round(scrollPosition * (Math.min(stops.length, 5) - 1));
-          return (
-            <div
-              key={i}
-              className="h-1.5 w-1.5 rounded-full transition-all duration-200"
-              style={{ 
-                backgroundColor: isActive ? '#0FC2BF' : '#d1d5db',
-                transform: isActive ? 'scale(1.2)' : 'scale(1)'
-              }}
-            />
-          );
-        })}
       </div>
 
       {/* Hide native scrollbars */}
