@@ -204,7 +204,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
         
         {/* Route: full width */}
         {Array.isArray(data.route) && data.route.length > 1 && (
-          <div className="w-full mb-8">
+          <div className="w-full mb-8 -mx-4 md:-mx-8 px-4 md:px-8">
             <ResponsiveRoute stops={data.route} slug={data.slug} />
           </div>
         )}
