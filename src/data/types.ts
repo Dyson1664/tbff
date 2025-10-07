@@ -32,7 +32,7 @@ export interface Transportation {
 
 export interface DayItinerary {
   day: number;
-  date: string;
+  date?: string;
   title: string;
   location?: string;
   siteName?: string; // Name of the building/attraction shown in the image

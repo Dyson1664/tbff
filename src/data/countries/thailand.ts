@@ -63,7 +63,6 @@ export const thailandData = {
   itinerary: [
     {
   day: 1,
-  date: "April 10, 2024",
   title: "Bangkok Arrival & Welcome Dinner",
   location: "Bangkok, Thailand",
   heroImage: thailandPalace,
@@ -81,7 +80,6 @@ export const thailandData = {
 },
 {
   day: 2,
-  date: "April 11, 2024",
   title: "Bangkok by River: Wat Arun & Wat Pho",
   location: "Bangkok, Thailand",
   heroImage: thailandMarket,
@@ -93,7 +91,6 @@ export const thailandData = {
 },
 {
   day: 3,
-  date: "April 12, 2024",
   title: "Fly South to Krabi • Railay Beach Arrival",
   location: "Railay Beach, Krabi",
   heroImage: thailandBoat,
@@ -105,7 +102,6 @@ export const thailandData = {
 },
 {
   day: 4,
-  date: "April 13, 2024",
   title: "Railay Adventures: Kayak & Climb",
   location: "Railay Beach, Krabi",
   heroImage: thailandBoat,
@@ -116,7 +112,6 @@ export const thailandData = {
   highlights: "Sea kayaking, guided rock climbing, evening beach fire show"
 },{
   day: 5,
-  date: "April 14, 2024",
   title: "Phi Phi Arrival: Beaches & Nightlife",
   location: "Phi Phi Islands, Krabi",
   heroImage: thailandBoat,
@@ -128,7 +123,6 @@ export const thailandData = {
 },
 {
   day: 6,
-  date: "April 15, 2024",
   title: "Maya Bay, Pileh Lagoon & Island Hopping",
   location: "Phi Phi Islands, Krabi",
   heroImage: thailandBoat,
@@ -140,7 +134,6 @@ export const thailandData = {
 },
 {
   day: 7,
-  date: "April 16, 2024",
   title: "Phuket Arrival: Markets, Massages & Sunset",
   location: "Phuket, Thailand",
   heroImage: thailandBoat,
@@ -152,7 +145,6 @@ export const thailandData = {
 },
 {
   day: 8,
-  date: "April 17, 2024",
   title: "Ethical Elephant Sanctuary & Farewell Dinner",
   location: "Phuket, Thailand",
   heroImage: thailandTemple,
@@ -164,7 +156,6 @@ export const thailandData = {
 },
 {
   day: 9,
-  date: "April 18, 2024",
   title: "Phuket Farewell",
   location: "Phuket, Thailand",
   heroImage: thailandPalace,

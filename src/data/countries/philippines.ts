@@ -103,7 +103,6 @@ highlights: [
   itinerary: [
   {
   day: 1,
-  date: "July 10, 2024",
   title: "Welcome to the Philippines",
   location: "Manila, Luzon",
   heroImage: philippinesDay01,
@@ -121,7 +120,6 @@ highlights: [
 },
 {
   day: 2,
-  date: "July 11, 2024",
   title: "Journey to Port Barton",
   location: "Port Barton, Palawan",
   heroImage: philippinesDay05,
@@ -133,7 +131,6 @@ highlights: [
 },
 {
   day: 3,
-  date: "July 12, 2024",
   title: "Island Hopping in Paradise",
   location: "Port Barton, Palawan",
   heroImage: philippinesDay03,
@@ -145,7 +142,6 @@ highlights: [
 },
 {
   day: 4,
-  date: "July 13, 2024",
   title: "Free Day: Choose Your Own Adventure",
   location: "Port Barton, Palawan",
   heroImage: philippinesDay04,
@@ -158,7 +154,6 @@ highlights: [
 ,
     {
   day: 5,
-  date: "July 14, 2024",
   title: "Escape to Wonderland",
   location: "Wonderland, Palawan",
   heroImage: philippinesDay5wonder,
@@ -170,7 +165,6 @@ highlights: [
 },
 {
   day: 6,
-  date: "July 15, 2024",
   title: "Shipwrecks, Village Life & Ocean Vibes",
   location: "Wonderland, Palawan",
   heroImage: philippinesDay06,
@@ -182,7 +176,6 @@ highlights: [
 },
 {
   day: 7,
-  date: "July 16, 2024",
   title: "From Island Escape to El Nido",
   location: "El Nido, Palawan",
   heroImage: philippinesDay07,
@@ -194,7 +187,6 @@ highlights: [
 },
 {
   day: 8,
-  date: "July 17, 2024",
   title: "El Nido Island Hopping Adventure",
   location: "El Nido Islands, Palawan",
   heroImage: philippinesDay08,
@@ -206,7 +198,6 @@ highlights: [
 },
 {
   day: 9,
-  date: "July 18, 2024",
   title: "Zipline & Beach Club Bliss",
   location: "El Nido, Palawan",
   heroImage: philippinesDay09,
@@ -218,7 +209,6 @@ highlights: [
 },
 {
   day: 10,
-  date: "July 19, 2024",
   title: "Until Next Time",
   location: "El Nido, Palawan",
   heroImage: philippinesDay10,

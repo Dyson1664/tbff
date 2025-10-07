@@ -113,13 +113,6 @@ export const DayLayout = memo(({
         <div className="flex flex-col space-y-3 md:grid md:grid-cols-2 md:gap-6 md:space-y-0 max-w-4xl">
           {/* Row 1 on desktop */}
           <div className="flex items-start gap-3">
-            <span className="text-lg">📅</span>
-            <div>
-              <span className="text-sm font-medium text-foreground">Date: </span>
-              <span className="text-sm text-muted-foreground">{date}</span>
-            </div>
-          </div>
-          <div className="flex items-start gap-3">
             <span className="text-lg">📍</span>
             <div>
               <span className="text-sm font-medium text-foreground">Location: </span>

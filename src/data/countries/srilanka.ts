@@ -105,7 +105,6 @@ export const srilankaData = {
   itinerary: [
   {
     day: 1,
-    date: "June 20, 2024",
     title: "Island Welcome & Urban First Tastes",
     location: "Colombo",
     heroImage: srilankaColombo,
@@ -123,7 +122,6 @@ export const srilankaData = {
   },
   {
     day: 2,
-    date: "21 JUN 2024",
     title: "Temples, canals & city vibes",
     location: "Sigiriya",
     heroImage: srilankaDay02,
@@ -135,7 +133,6 @@ export const srilankaData = {
   },
   {
     day: 3,
-    date: "22 JUN 2024",
     title: "Ancient Wonders & Sacred Sites",
     location: "Sigiriya",
     heroImage: sigiriyaRock,
@@ -147,7 +144,6 @@ export const srilankaData = {
   },
   {
     day: 4,
-    date: "23 JUN 2024",
     title: "Royal Heritage & Sacred Tooth",
     location: "Kandy",
     heroImage: srilankaDay04,
@@ -159,7 +155,6 @@ export const srilankaData = {
   },
   {
     day: 5,
-    date: "24 JUN 2024",
     title: "Exploring Kandy and Cooking Class",
     location: "Kandy",
     heroImage: srilankaDay05,
@@ -171,7 +166,6 @@ export const srilankaData = {
   },
   {
     day: 6,
-    date: "25 JUN 2024",
     title: "Travel to Ella",
     location: "Ella",
     heroImage: srilankaHero,
@@ -183,7 +177,6 @@ export const srilankaData = {
   },
   {
     day: 7,
-    date: "26 JUN 2024",
     title: "Ella Adventures",
     location: "Ella",
     heroImage: srilankaDay07,
@@ -195,7 +188,6 @@ export const srilankaData = {
   },
   {
     day: 8,
-    date: "27 JUN 2024",
     title: "Wildlife & Coastal Beauty",
     location: "Mirissa",
     heroImage: srilankaDay08,
@@ -207,7 +199,6 @@ export const srilankaData = {
   },
   {
     day: 9,
-    date: "28 JUN 2024",
     title: "Surf, History & Beach Vibes",
     location: "Mirissa/Galle",
     heroImage: srilankaDay09,
@@ -219,7 +210,6 @@ export const srilankaData = {
   },
   {
     day: 10,
-    date: "29 JUN 2024",
     title: "Last Beach Day & Farewell Celebration",
     location: "Mirissa",
     heroImage: srilankaDay10,
@@ -231,7 +221,6 @@ export const srilankaData = {
   },
   {
     day: 11,
-    date: "30 JUN 2024",
     title: "Farewell & Departure",
     location: "Mirissa/Departure",
     heroImage: srilankaDay11,

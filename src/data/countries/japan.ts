@@ -101,7 +101,6 @@ whatsIncludedHighlights: [
   // --- JAPAN: Days 1–4 (paste over your existing day 1–4 objects) ---
 {
   day: 1,
-  date: "May 15, 2024",
   title: "Tokyo Arrival & Welcome Dinner",
   location: "Tokyo, Japan",
   heroImage: japanTokyo,
@@ -119,7 +118,6 @@ whatsIncludedHighlights: [
 },
 {
   day: 2,
-  date: "May 16, 2024",
   title: "Tokyo walking tour",
   location: "Tokyo, Japan",
   heroImage: japanDay02,
@@ -131,7 +129,6 @@ whatsIncludedHighlights: [
 
 {
   day: 3,
-  date: "May 17, 2024",
   title: "Explore Tokyo",
   location: "Tokyo, Japan",
   heroImage: japanDay03,
@@ -143,7 +140,6 @@ whatsIncludedHighlights: [
 
 {
   day: 4,
-  date: "May 18, 2024",
   // Title = keep your existing one (“GOOD”)
   title: "Mt. Fuji Day (Hakone Loop) → Kyoto",
   location: "Kyoto, Japan",
@@ -157,7 +153,6 @@ whatsIncludedHighlights: [
 
 {
   day: 5,
-  date: "May 19, 2024",
   title: "Exploring Classics of Kyoto",
   location: "Kyoto, Japan",
   heroImage: japanDay05,
@@ -170,7 +165,6 @@ whatsIncludedHighlights: [
 ,
 {
   day: 6,
-  date: "May 20, 2024",
   title: "Kyoto — Adventure & Activities",
   location: "Kyoto & Nara, Japan",
   heroImage: japanDay06,
@@ -182,7 +176,6 @@ whatsIncludedHighlights: [
 },
 {
   day: 7,
-  date: "May 21, 2024",
   title: "Sayōnara (check out)",
   location: "Kyoto, Japan",
   heroImage: japanDay07,
