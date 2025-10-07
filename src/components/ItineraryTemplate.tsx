@@ -505,7 +505,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
                   Day {day.day}
                 </h2>
                 {day.date && (
-                  <span className="whitespace-nowrap text-base md:text-lg font-semibold text-primary">
+                  <span className="whitespace-nowrap text-sm md:text-base font-medium text-muted-foreground">
                     {day.date}
                   </span>
                 )}
