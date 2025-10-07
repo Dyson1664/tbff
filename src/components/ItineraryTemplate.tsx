@@ -275,7 +275,7 @@ const IncludedSection = memo(
           {included.map((section, index) => (
             <div key={index} className="space-y-5">
               <h4 className="font-semibold text-foreground text-lg mb-5">{section.title}</h4>
-              <ul className="space-y-3.5 text-muted-foreground list-disc list-inside marker:text-primary">
+              <ul className="space-y-2 text-muted-foreground list-disc list-inside marker:text-primary">
                 {section.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="leading-relaxed">
                     {item.text}
