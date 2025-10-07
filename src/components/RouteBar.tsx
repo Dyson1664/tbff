@@ -145,7 +145,7 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
             <RouteIcon className="h-5 w-5 text-primary" />
             <h3 className="text-lg font-semibold">Route</h3>
           </div>
-          <div className="md:flex items-center gap-1.5">
+          <div className="md:flex xl:hidden items-center gap-1.5">
             <button
               type="button"
               aria-label="Scroll route left"
@@ -171,8 +171,8 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
       )}
 
       {/* Scroll track */}
-      <div ref={trackRef} className="no-scrollbar overflow-x-auto" style={{ scrollBehavior: "smooth" }}>
-        <div className="flex items-center flex-nowrap gap-1.5 py-0.5">
+      <div ref={trackRef} className="no-scrollbar overflow-x-auto xl:overflow-x-visible" style={{ scrollBehavior: "smooth" }}>
+        <div className="flex items-center flex-nowrap xl:flex-wrap gap-1.5 py-0.5">
           {/* Inline label for Japan layout */}
           {isJapan && (
             <div className="flex items-center gap-2 mr-3">
