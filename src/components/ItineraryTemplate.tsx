@@ -543,6 +543,14 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${data.heroImage})` }}
           />
+          {/* India Tour Start Date Badge - Mobile Only */}
+          {data.slug === 'india-journey' && (
+            <div className="absolute top-4 right-4 z-10">
+              <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-3 py-2 shadow-lg">
+                <p className="text-sm font-semibold text-white whitespace-nowrap">Tour starts Feb 27th</p>
+              </div>
+            </div>
+          )}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
             <div className="text-center text-white">
               <h1 className="text-3xl font-bold mb-2">{data.title}</h1>
