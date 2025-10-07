@@ -556,7 +556,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               <h1 className="text-3xl font-bold mb-2">{data.title}</h1>
               <div className="flex items-center justify-center gap-2 text-base">
                 <MapPin className="w-4 h-4" />
-                <span>{data.location} • {data.duration}</span>
+                <span>{data.slug === 'india-journey' ? 'Feb 27th' : data.location} • {data.duration}</span>
               </div>
             </div>
           </div>
