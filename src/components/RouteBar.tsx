@@ -65,6 +65,8 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(false);
   const [mode, setMode] = React.useState<SizeMode>("normal");
+  const modeRef = React.useRef<SizeMode>("normal");
+  React.useEffect(() => { modeRef.current = mode; }, [mode]);
 
   const updateState = React.useCallback(() => {
     const el = trackRef.current;
@@ -77,16 +79,23 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
     // determine overflow amount
     const overflow = Math.max(0, el.scrollWidth - el.clientWidth);
 
-    // Gentle thresholds:
-    //  - compact only if a little overflow
-    //  - tight only if a lot of overflow (long routes)
-    if (overflow <= 50) {
-      setMode("normal");
-    } else if (overflow <= 320) {
-      setMode("compact");
-    } else {
-      setMode("tight");
+    // Fit-to-width: shrink progressively until it fits
+    if (overflow > 0) {
+      const current = modeRef.current;
+      if (current === "normal") {
+        modeRef.current = "compact";
+        setMode("compact");
+        requestAnimationFrame(updateState);
+        return;
+      }
+      if (current === "compact") {
+        modeRef.current = "tight";
+        setMode("tight");
+        requestAnimationFrame(updateState);
+        return;
+      }
     }
+    // Do not expand back automatically to avoid flicker
   }, []);
 
   React.useEffect(() => {
