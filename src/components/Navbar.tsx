@@ -12,11 +12,11 @@ const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) =
     <div className="flex justify-between items-start">
       <div>
         <h4 className="font-medium text-foreground">{trip.title}</h4>
-      </div>
-      <div className="text-right flex flex-col items-end">
         <p className="text-sm text-muted-foreground">{trip.location}</p>
-        <span className="text-xs text-muted-foreground">14 days • starts Feb 27th</span>
       </div>
+      <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
+        {trip.duration}
+      </span>
     </div>
   );
 
@@ -95,11 +95,11 @@ const Navbar = memo(() => {
         <div className="flex justify-between items-start">
           <div>
             <h4 className="font-medium text-foreground text-sm">{trip.title}</h4>
-          </div>
-          <div className="text-right flex flex-col items-end">
             <p className="text-xs text-muted-foreground">{trip.location}</p>
-            <span className="text-xs text-muted-foreground">14 days • starts Feb 27th</span>
           </div>
+          <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
+            {trip.duration}
+          </span>
         </div>
       );
 
