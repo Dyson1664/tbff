@@ -83,7 +83,7 @@ export const TripCard = memo(({
   );
 
   return (
-    <Link to={route} className="block">
+    <Link to={route} className="block" onClick={() => window.scrollTo(0, 0)}>
       {cardContent}
     </Link>
   );
