@@ -153,7 +153,7 @@ export default memo(function LandingPage() {
       <HeroSection
         backgroundImage={landingHero}
         title="Asia Discovery Tours"
-        subtitle="Discover hidden gems and iconic landmarks with curated experiences designed for the modern traveler"
+        subtitle="Discover hidden gems and iconic landmarks with curated experiences for those who say yes to adventure and imagine beyond"
         showCta={false}
         overlay="light"
           />
