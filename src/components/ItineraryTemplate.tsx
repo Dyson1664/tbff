@@ -412,14 +412,24 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
           </div>
           
           {/* Reserve Button */}
-          <a href={paymentUrl} target="_blank" rel="noopener noreferrer" className="block">
+          {['japan', 'sri-lanka', 'philippines'].includes(data.slug || '') ? (
             <Button
               size="default"
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold"
+              className="w-full bg-muted text-muted-foreground rounded-xl font-semibold cursor-not-allowed"
+              disabled
             >
-              RESERVE NOW
+              COMING SOON
             </Button>
-          </a>
+          ) : (
+            <a href={paymentUrl} target="_blank" rel="noopener noreferrer" className="block">
+              <Button
+                size="default"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold"
+              >
+                RESERVE NOW
+              </Button>
+            </a>
+          )}
           
           {/* Reserve Info */}
           <p className="text-xs text-center text-muted-foreground leading-relaxed">
@@ -671,14 +681,24 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             <span className="text-sm text-muted-foreground">From</span>
             <span className="text-2xl font-bold text-foreground">{data.price || 'USD $1,399'}</span>
           </div>
-          <a href={data.slug ? getPayUrlBySlug(data.slug) : '#'} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+          {['japan', 'sri-lanka', 'philippines'].includes(data.slug || '') ? (
             <Button
               size="default"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold px-8"
+              className="bg-muted text-muted-foreground rounded-full font-semibold px-8 cursor-not-allowed"
+              disabled
             >
-              RESERVE NOW
+              COMING SOON
             </Button>
-          </a>
+          ) : (
+            <a href={data.slug ? getPayUrlBySlug(data.slug) : '#'} target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+              <Button
+                size="default"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold px-8"
+              >
+                RESERVE NOW
+              </Button>
+            </a>
+          )}
         </div>
       </div>
 

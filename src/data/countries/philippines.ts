@@ -31,6 +31,7 @@ import { Home, Zap, Plane, Users, Soup, TreePine } from "lucide-react";
 
 export const philippinesData = {
   id: "philippines-paradise",
+  slug: "philippines",
   title: "Philippines Paradise",
   subtitle: "Explore tropical islands, ancient rice terraces, and vibrant Filipino culture",
   location: "Philippines",
