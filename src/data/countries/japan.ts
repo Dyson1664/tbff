@@ -21,7 +21,7 @@ import { Home, Zap, Plane, Users, Soup, TreePine } from "lucide-react";
 export const japanData = {
   id: "japan-journey",
   slug: "japan",
-  title: "Japan Journey",
+  title: "Japan Golden Route",
   subtitle: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
   location: "Japan",
   duration: "7 days",
