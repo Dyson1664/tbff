@@ -510,21 +510,14 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
         }`}>
           <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md:mx-6`}>
             <AccordionTrigger className="px-4 md:px-0 py-4 hover:no-underline group">
-              <div className="w-full flex flex-col md:flex-row md:items-baseline gap-1 md:gap-4 text-left">
-                <div className="flex items-baseline gap-2 md:gap-4">
-                  <h2 className="whitespace-nowrap flex-shrink-0 text-2xl font-bold text-foreground">
-                    Day {day.day}
-                  </h2>
-                  <span aria-hidden="true" className="mx-2 text-muted-foreground/40">|</span>
-                  <h3 className="min-w-0 break-words text-base md:text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">
-                    {day.title}
-                  </h3>
-                </div>
-                {data.slug === 'india-journey' && day.day === 1 && data.startDate && (
-                  <span className="text-xs md:text-sm text-primary/60 font-medium md:ml-auto">
-                    Trip starts {data.startDate}
-                  </span>
-                )}
+              <div className="w-full flex items-baseline gap-2 md:gap-4 text-left">
+                <h2 className="whitespace-nowrap flex-shrink-0 text-2xl font-bold text-foreground">
+                  Day {day.day}
+                </h2>
+                <span aria-hidden="true" className="mx-2 text-muted-foreground/40">|</span>
+                <h3 className="min-w-0 break-words text-base md:text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">
+                  {day.title}
+                </h3>
               </div>
             </AccordionTrigger>
           </div>
@@ -560,12 +553,20 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${data.heroImage})` }}
           />
+          {/* India Tour Start Date Badge - Mobile Only */}
+          {data.slug === 'india-journey' && (
+            <div className="absolute top-4 right-4 z-10">
+              <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-3 py-2 shadow-lg">
+                <p className="text-sm font-semibold text-white whitespace-nowrap">Tour starts Feb 27th</p>
+              </div>
+            </div>
+          )}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
             <div className="text-center text-white">
               <h1 className="text-3xl font-bold mb-2">{data.title}</h1>
               <div className="flex items-center justify-center gap-2 text-base">
                 <MapPin className="w-4 h-4" />
-                <span>{data.location} • {data.duration}</span>
+                <span>{data.slug === 'india-journey' ? 'Feb 27th' : data.location} • {data.duration}</span>
               </div>
             </div>
           </div>
@@ -606,6 +607,14 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${data.heroImage})` }}
             />
+            {/* Tour Start Date Badge - Top Left - India Only */}
+            {data.slug === 'india-journey' && (
+              <div className="absolute top-6 left-6 z-10">
+                <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-3 py-1.5">
+                  <p className="text-sm font-semibold text-white">Tour starts Feb 27th</p>
+                </div>
+              </div>
+            )}
             {/* Price in top right corner */}
             <div className="absolute top-6 right-6 z-10">
               <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-4 py-2">
@@ -618,7 +627,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
                 <h1 className="text-4xl lg:text-5xl font-bold mb-3">{data.title}</h1>
                 <div className="flex items-center justify-center gap-2 text-lg">
                   <MapPin className="w-5 h-5" />
-                  <span>{data.location} • {data.duration}</span>
+                  <span>{data.startDate || data.location} • {data.duration}</span>
                 </div>
               </div>
             </div>
