@@ -29,7 +29,7 @@ export const japanData = {
   price: "USD $1,899",
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
   aboutDescription: [
-    "Experience the mesmerizing contrast of Japan, where bullet trains glide past ancient temples and neon-lit cities coexist with serene gardens. This 10-day journey takes you from the bustling metropolis of Tokyo to the cultural heart of Kyoto.",
+    "Experience the mesmerizing contrast of Japan, where bullet trains glide past ancient temples and neon-lit cities coexist with serene gardens. This 7-day journey takes you from the bustling metropolis of Tokyo to the cultural heart of Kyoto.",
     "Immerse yourself in Japanese culture through tea ceremonies, temple visits, and authentic culinary experiences. From the iconic Mount Fuji to the peaceful bamboo groves, discover why Japan captivates travelers from around the world."
   ],
   aboutImages: [japanGarden, japanTokyo],
