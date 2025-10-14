@@ -38,6 +38,7 @@ export const philippinesData = {
   duration: "10 days",
   heroImage: philippinesDay07,
   price: "USD $1,679",
+  startDate: "May 4th",
   overviewGallery2x:[philippinesDay03, philippinesDay02, philippinesDay04, philippinesDay08],
   route: ["Manila", "Port Barton", "Wonderland", "El Nido"],
   aboutDescription: [
@@ -104,6 +105,7 @@ highlights: [
   itinerary: [
   {
   day: 1,
+  date: "May 4th",
   title: "Welcome to the Philippines",
   location: "Manila, Luzon",
   heroImage: philippinesDay01,
@@ -121,6 +123,7 @@ highlights: [
 },
 {
   day: 2,
+  date: "May 5th",
   title: "Journey to Port Barton",
   location: "Port Barton, Palawan",
   heroImage: philippinesDay05,
@@ -132,6 +135,7 @@ highlights: [
 },
 {
   day: 3,
+  date: "May 6th",
   title: "Island Hopping in Paradise",
   location: "Port Barton, Palawan",
   heroImage: philippinesDay03,
@@ -143,6 +147,7 @@ highlights: [
 },
 {
   day: 4,
+  date: "May 7th",
   title: "Free Day: Choose Your Own Adventure",
   location: "Port Barton, Palawan",
   heroImage: philippinesDay04,
@@ -155,6 +160,7 @@ highlights: [
 ,
     {
   day: 5,
+  date: "May 8th",
   title: "Escape to Wonderland",
   location: "Wonderland, Palawan",
   heroImage: philippinesDay5wonder,
@@ -166,6 +172,7 @@ highlights: [
 },
 {
   day: 6,
+  date: "May 9th",
   title: "Shipwrecks, Village Life & Ocean Vibes",
   location: "Wonderland, Palawan",
   heroImage: philippinesDay06,
@@ -177,6 +184,7 @@ highlights: [
 },
 {
   day: 7,
+  date: "May 10th",
   title: "From Island Escape to El Nido",
   location: "El Nido, Palawan",
   heroImage: philippinesDay07,
@@ -188,6 +196,7 @@ highlights: [
 },
 {
   day: 8,
+  date: "May 11th",
   title: "El Nido Island Hopping Adventure",
   location: "El Nido Islands, Palawan",
   heroImage: philippinesDay08,
@@ -199,6 +208,7 @@ highlights: [
 },
 {
   day: 9,
+  date: "May 12th",
   title: "Zipline & Beach Club Bliss",
   location: "El Nido, Palawan",
   heroImage: philippinesDay09,
@@ -210,6 +220,7 @@ highlights: [
 },
 {
   day: 10,
+  date: "May 13th",
   title: "Until Next Time",
   location: "El Nido, Palawan",
   heroImage: philippinesDay10,
