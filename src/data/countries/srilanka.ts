@@ -106,7 +106,7 @@ export const srilankaData = {
   itinerary: [
   {
     day: 1,
-    date: "May 4th",
+    date: "April 19th",
     title: "Island Welcome & Urban First Tastes",
     location: "Colombo",
     heroImage: srilankaColombo,
@@ -124,7 +124,7 @@ export const srilankaData = {
   },
   {
     day: 2,
-    date: "May 5th",
+    date: "April 20th",
     title: "Temples, canals & city vibes",
     location: "Sigiriya",
     heroImage: srilankaDay02,
@@ -136,7 +136,7 @@ export const srilankaData = {
   },
   {
     day: 3,
-    date: "May 6th",
+    date: "April 21st",
     title: "Ancient Wonders & Sacred Sites",
     location: "Sigiriya",
     heroImage: sigiriyaRock,
@@ -148,7 +148,7 @@ export const srilankaData = {
   },
   {
     day: 4,
-    date: "May 7th",
+    date: "April 22nd",
     title: "Royal Heritage & Sacred Tooth",
     location: "Kandy",
     heroImage: srilankaDay04,
@@ -160,7 +160,7 @@ export const srilankaData = {
   },
   {
     day: 5,
-    date: "May 8th",
+    date: "April 23rd",
     title: "Exploring Kandy and Cooking Class",
     location: "Kandy",
     heroImage: srilankaDay05,
@@ -172,7 +172,7 @@ export const srilankaData = {
   },
   {
     day: 6,
-    date: "May 9th",
+    date: "April 24th",
     title: "Travel to Ella",
     location: "Ella",
     heroImage: srilankaHero,
@@ -184,7 +184,7 @@ export const srilankaData = {
   },
   {
     day: 7,
-    date: "May 10th",
+    date: "April 25th",
     title: "Ella Adventures",
     location: "Ella",
     heroImage: srilankaDay07,
@@ -196,7 +196,7 @@ export const srilankaData = {
   },
   {
     day: 8,
-    date: "May 11th",
+    date: "April 26th",
     title: "Wildlife & Coastal Beauty",
     location: "Mirissa",
     heroImage: srilankaDay08,
@@ -208,7 +208,7 @@ export const srilankaData = {
   },
   {
     day: 9,
-    date: "May 12th",
+    date: "April 27th",
     title: "Surf, History & Beach Vibes",
     location: "Mirissa/Galle",
     heroImage: srilankaDay09,
@@ -220,7 +220,7 @@ export const srilankaData = {
   },
   {
     day: 10,
-    date: "May 13th",
+    date: "April 28th",
     title: "Last Beach Day & Farewell Celebration",
     location: "Mirissa",
     heroImage: srilankaDay10,
@@ -232,7 +232,7 @@ export const srilankaData = {
   },
   {
     day: 11,
-    date: "May 14th",
+    date: "April 29th",
     title: "Farewell & Departure",
     location: "Mirissa/Departure",
     heroImage: srilankaDay11,
