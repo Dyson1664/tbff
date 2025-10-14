@@ -9,13 +9,25 @@ import ibtLogo from "@/assets/ibt-logo.svg";
 const DropdownTripItem = memo(({ trip }: { trip: typeof NAVIGATION_TRIPS[0] }) => {
   const isComingSoon = trip.duration === "Coming Soon";
   const isIndia = trip.location === "India";
+  const isSriLanka = trip.location === "Sri Lanka";
+  const isPhilippines = trip.location === "Philippines";
+  
+  const getStartDate = () => {
+    if (isIndia) return "Starts Feb 27th";
+    if (isSriLanka) return "Starts April 19th";
+    if (isPhilippines) return "Starts May 4th";
+    return null;
+  };
+  
+  const startDate = getStartDate();
+  
   const content = (
     <div className="flex justify-between items-start">
       <div>
         <h4 className="font-medium text-foreground">{trip.title}</h4>
         <p className="text-sm text-muted-foreground">
           {trip.location}
-          {isIndia && <span className="ml-2 text-primary">Starts Feb 27th</span>}
+          {startDate && <span className="ml-2 text-primary">{startDate}</span>}
         </p>
       </div>
       <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
@@ -96,13 +108,25 @@ const Navbar = memo(() => {
     NAVIGATION_TRIPS.map((trip, index) => {
       const isComingSoon = trip.duration === "Coming Soon";
       const isIndia = trip.location === "India";
+      const isSriLanka = trip.location === "Sri Lanka";
+      const isPhilippines = trip.location === "Philippines";
+      
+      const getStartDate = () => {
+        if (isIndia) return "Starts Feb 27th";
+        if (isSriLanka) return "Starts April 19th";
+        if (isPhilippines) return "Starts May 4th";
+        return null;
+      };
+      
+      const startDate = getStartDate();
+      
       const content = (
         <div className="flex justify-between items-start">
           <div>
             <h4 className="font-medium text-foreground text-sm">{trip.title}</h4>
             <p className="text-xs text-muted-foreground">
               {trip.location}
-              {isIndia && <span className="ml-2 text-primary">Starts Feb 27th</span>}
+              {startDate && <span className="ml-2 text-primary">{startDate}</span>}
             </p>
           </div>
           <span className="text-xs text-primary font-medium bg-primary/10 px-2 py-1 rounded">
