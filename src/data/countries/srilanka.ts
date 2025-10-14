@@ -105,6 +105,7 @@ export const srilankaData = {
   itinerary: [
   {
     day: 1,
+    date: "May 4th",
     title: "Island Welcome & Urban First Tastes",
     location: "Colombo",
     heroImage: srilankaColombo,
@@ -122,6 +123,7 @@ export const srilankaData = {
   },
   {
     day: 2,
+    date: "May 5th",
     title: "Temples, canals & city vibes",
     location: "Sigiriya",
     heroImage: srilankaDay02,
@@ -133,6 +135,7 @@ export const srilankaData = {
   },
   {
     day: 3,
+    date: "May 6th",
     title: "Ancient Wonders & Sacred Sites",
     location: "Sigiriya",
     heroImage: sigiriyaRock,
@@ -144,6 +147,7 @@ export const srilankaData = {
   },
   {
     day: 4,
+    date: "May 7th",
     title: "Royal Heritage & Sacred Tooth",
     location: "Kandy",
     heroImage: srilankaDay04,
@@ -155,6 +159,7 @@ export const srilankaData = {
   },
   {
     day: 5,
+    date: "May 8th",
     title: "Exploring Kandy and Cooking Class",
     location: "Kandy",
     heroImage: srilankaDay05,
@@ -166,6 +171,7 @@ export const srilankaData = {
   },
   {
     day: 6,
+    date: "May 9th",
     title: "Travel to Ella",
     location: "Ella",
     heroImage: srilankaHero,
@@ -177,6 +183,7 @@ export const srilankaData = {
   },
   {
     day: 7,
+    date: "May 10th",
     title: "Ella Adventures",
     location: "Ella",
     heroImage: srilankaDay07,
@@ -188,6 +195,7 @@ export const srilankaData = {
   },
   {
     day: 8,
+    date: "May 11th",
     title: "Wildlife & Coastal Beauty",
     location: "Mirissa",
     heroImage: srilankaDay08,
@@ -199,6 +207,7 @@ export const srilankaData = {
   },
   {
     day: 9,
+    date: "May 12th",
     title: "Surf, History & Beach Vibes",
     location: "Mirissa/Galle",
     heroImage: srilankaDay09,
@@ -210,6 +219,7 @@ export const srilankaData = {
   },
   {
     day: 10,
+    date: "May 13th",
     title: "Last Beach Day & Farewell Celebration",
     location: "Mirissa",
     heroImage: srilankaDay10,
@@ -221,6 +231,7 @@ export const srilankaData = {
   },
   {
     day: 11,
+    date: "May 14th",
     title: "Farewell & Departure",
     location: "Mirissa/Departure",
     heroImage: srilankaDay11,
