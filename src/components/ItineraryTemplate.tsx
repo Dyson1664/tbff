@@ -412,7 +412,7 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
           </div>
           
           {/* Reserve Button */}
-          {['japan', 'sri-lanka', 'philippines'].includes(data.slug || '') ? (
+          {paymentUrl === '#' ? (
             <Button
               size="default"
               className="w-full bg-muted text-muted-foreground rounded-xl font-semibold cursor-not-allowed"
@@ -689,7 +689,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             <span className="text-sm text-muted-foreground">From</span>
             <span className="text-2xl font-bold text-foreground">{data.price || 'USD $1,399'}</span>
           </div>
-          {['japan', 'sri-lanka', 'philippines'].includes(data.slug || '') ? (
+          {(data.slug ? getPayUrlBySlug(data.slug) : '#') === '#' ? (
             <Button
               size="default"
               className="bg-muted text-muted-foreground rounded-full font-semibold px-8 cursor-not-allowed"
