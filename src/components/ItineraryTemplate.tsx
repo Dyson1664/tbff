@@ -553,11 +553,13 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
             style={{ backgroundImage: `url(${data.heroImage})` }}
           />
-          {/* India Tour Start Date Badge - Mobile Only */}
-          {data.slug === 'india-journey' && (
+          {/* Tour Start Date Badge - Mobile Only */}
+          {(data.slug === 'india-journey' || data.slug === 'sri-lanka') && (
             <div className="absolute top-4 right-4 z-10">
               <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-3 py-2 shadow-lg">
-                <p className="text-sm font-semibold text-white whitespace-nowrap">Tour starts Feb 27th</p>
+                <p className="text-sm font-semibold text-white whitespace-nowrap">
+                  {data.slug === 'india-journey' ? 'Tour starts Feb 27th' : 'Tour starts April 19th'}
+                </p>
               </div>
             </div>
           )}
@@ -607,11 +609,13 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{ backgroundImage: `url(${data.heroImage})` }}
             />
-            {/* Tour Start Date Badge - Top Left - India Only */}
-            {data.slug === 'india-journey' && (
+            {/* Tour Start Date Badge - Top Left */}
+            {(data.slug === 'india-journey' || data.slug === 'sri-lanka') && (
               <div className="absolute top-6 left-6 z-10">
                 <div className="bg-primary backdrop-blur-md border border-primary rounded-lg px-3 py-1.5">
-                  <p className="text-sm font-semibold text-white">Tour starts Feb 27th</p>
+                  <p className="text-sm font-semibold text-white">
+                    {data.slug === 'india-journey' ? 'Tour starts Feb 27th' : 'Tour starts April 19th'}
+                  </p>
                 </div>
               </div>
             )}
