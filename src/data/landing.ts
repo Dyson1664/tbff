@@ -7,6 +7,8 @@ import srilankaHero from "@/assets/srilanka-hero.jpg";
 import philippinesHero from "@/assets/philippines-hero.jpg";
 import colombiaHero from "@/assets/colombia-hero.jpg";
 import indiaHero from "@/assets/india-hero.jpg";
+import srilankaDay06 from "@/assets/srilanka-day05-ella-bridge.jpg";
+
 
 import indiaDay13 from "@/assets/india-day13-main-taj-mahal.jpg";
 
@@ -89,7 +91,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     rating: 4.7,
     reviews: 156,
     price: "From $1,449",
-    image: srilankaHero,
+    image: srilankaDay06,
     tag: "",
     overview:
       "From Colombo’s vibrant streets to Ella’s trails and Arugam Bay’s waves—Sri Lanka awaits."
