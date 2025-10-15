@@ -38,7 +38,7 @@ export const srilankaData = {
   subtitle: "Discover the Pearl of the Indian Ocean with its ancient heritage and stunning landscapes",
   location: "Sri Lanka",
   duration: "11 days",
-  heroImage: srilankaHero,
+  heroImage: srilankaDay06,
   price: "USD $1,449",
   startDate: "April 19th",
   overviewGallery2x:[tile1_800_srilanka, tile2_800_srilanka, tile3_800_srilanka, tile4_800_srilanka],

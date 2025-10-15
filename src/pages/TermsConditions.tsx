@@ -7,27 +7,34 @@ const TERMS_SECTIONS = [
   {
     title: "1. Booking & Payment",
     content: [
-      "Deposit: Your spot is confirmed once the USD $300 deposit is received.",
+      "Deposit (non-refundable): Your spot is confirmed once the USD $300 deposit is received.",
       "Balance: The remaining balance is due no later than 60 days before the tour start date.",
       "All prices are quoted and charged in United States Dollars (USD).",
       "The traveler who paid a deposit may assign/transfer that deposit and booking to another person by written notice with the new traveler’s full name and contact details. Transfer is only permitted to the same tour date and may be subject to any third-party change fees.",
       "You must be 18 years or older to make a booking."
     ]
   },
+  // Special grouped layout for bullets + subheadings
   {
     title: "2. Refunds & Cancellations",
     content: [
-      "Client-initiated cancellations:",
-      "• Up to 90 days before the tour start date: 100% refund of amounts paid to Imagine Beyond Travel, minus any non-recoverable third-party fees.",
-      "• 89 days or fewer before the tour start date: No refund; all amounts paid are forfeited.",
-      "Imagine Beyond Travel cancellations:",
-      "• If Imagine Beyond Travel cancels the trip for any reason, you will receive a 100% refund of all amounts paid to Imagine Beyond Travel.",
-      "Transfer of booking:",
-      "• If you or any member of your party is prevented from traveling, that person may transfer their place to someone else if:",
-      "  – The person is introduced by you and meets all trip conditions;",
-      "  – The outstanding balance is paid in full 60 days before the tour start date;",
-      "  – The transferee agrees to these Terms & Conditions and all other contract terms;",
-      "  – The transferee pays any extra fees (e.g., internal flight name changes or other carrier/admin fees)."
+      [
+        "Client-initiated cancellations:",
+        "Up to 90 days before the tour start date: 100% refund of amounts paid to Imagine Beyond Travel, minus any non-recoverable third-party fees.",
+        "89 days or fewer before the tour start date: No refund; all amounts paid are forfeited."
+      ],
+      [
+        "Imagine Beyond Travel cancellations:",
+        "If Imagine Beyond Travel cancels the trip for any reason, you will receive a 100% refund of all amounts paid to Imagine Beyond Travel."
+      ],
+      [
+        "Transfer of booking:",
+        "If you or any member of your party is prevented from traveling, that person may transfer their place to someone else if:",
+        "The person is introduced by you and meets all trip conditions;",
+        "The outstanding balance is paid in full 60 days before the tour start date;",
+        "The transferee agrees to these Terms & Conditions and all other contract terms;",
+        "The transferee pays any extra fees (e.g., internal flight name changes or other carrier/admin fees)."
+      ]
     ]
   },
   {
@@ -103,6 +110,8 @@ const TERMS_SECTIONS = [
   }
 ];
 
+const BRAND_TEAL = "#0FC2BF";
+
 const TermsConditions = React.memo(() => {
   return (
     <div className="min-h-screen bg-background">
@@ -122,16 +131,6 @@ const TermsConditions = React.memo(() => {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Please read these terms carefully before booking your travel with Imagine Beyond Travel.
           </p>
-        </div>
-      </section>
-
-      {/* Last Updated */}
-      <section className="py-8 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-center space-x-2 text-sm text-muted-foreground">
-            <FileText className="w-4 h-4" />
-            <span>Last updated: January 2025</span>
-          </div>
         </div>
       </section>
 
@@ -164,14 +163,77 @@ const TermsConditions = React.memo(() => {
                   <Shield className="w-5 h-5 text-primary mr-3" />
                   {section.title}
                 </h3>
-                <ul className="space-y-3">
-                  {section.content.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start">
-                      <span className="text-primary mr-3 mt-1.5">•</span>
-                      <span className="text-muted-foreground leading-relaxed whitespace-pre-line">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+
+                {/* Normal sections: simple bullet list with brand-teal markers */}
+                {index !== 1 ? (
+                  <ul className="list-disc pl-6 space-y-3 marker:text-[var(--brand-teal)]">
+                    {/* CSS var allows one place to set the color inline */}
+                    <style>{`:root { --brand-teal: ${BRAND_TEAL}; }`}</style>
+                    {section.content.map((item: any, i: number) => (
+                      <li key={i} className="text-muted-foreground leading-relaxed">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  // Refunds & Cancellations: sub-headings (no bullets) + their own bullet lists
+                  <div className="space-y-6">
+                    {/* 1) Client-initiated */}
+                    <div>
+                      <div className="text-muted-foreground font-medium leading-relaxed">
+                        Client-initiated cancellations:
+                      </div>
+                      <ul className="mt-2 list-disc pl-6 space-y-2 marker:text-[var(--brand-teal)]">
+                        <li className="text-muted-foreground leading-relaxed">
+                          Up to 90 days before the tour start date: 100% refund of amounts paid to Imagine Beyond
+                          Travel, minus any non-recoverable third-party fees.
+                        </li>
+                        <li className="text-muted-foreground leading-relaxed">
+                          89 days or fewer before the tour start date: No refund; all amounts paid are forfeited.
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* 2) IBT cancellations */}
+                    <div>
+                      <div className="text-muted-foreground font-medium leading-relaxed">
+                        Imagine Beyond Travel cancellations:
+                      </div>
+                      <ul className="mt-2 list-disc pl-6 space-y-2 marker:text-[var(--brand-teal)]">
+                        <li className="text-muted-foreground leading-relaxed">
+                          If Imagine Beyond Travel cancels the trip for any reason, you will receive a 100% refund of all
+                          amounts paid to Imagine Beyond Travel.
+                        </li>
+                      </ul>
+                    </div>
+
+                    {/* 3) Transfer of booking */}
+                    <div>
+                      <div className="text-muted-foreground font-medium leading-relaxed">
+                        Transfer of booking:
+                      </div>
+                      <ul className="mt-2 list-disc pl-6 space-y-2 marker:text-[var(--brand-teal)]">
+                        <li className="text-muted-foreground leading-relaxed">
+                          If you or any member of your party is prevented from traveling, that person may transfer their
+                          place to someone else if:
+                        </li>
+                        <li className="text-muted-foreground leading-relaxed">
+                          The person is introduced by you and meets all trip conditions;
+                        </li>
+                        <li className="text-muted-foreground leading-relaxed">
+                          The outstanding balance is paid in full 60 days before the tour start date;
+                        </li>
+                        <li className="text-muted-foreground leading-relaxed">
+                          The transferee agrees to these Terms & Conditions and all other contract terms;
+                        </li>
+                        <li className="text-muted-foreground leading-relaxed">
+                          The transferee pays any extra fees (e.g., internal flight name changes or other carrier/admin
+                          fees).
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -185,13 +247,15 @@ const TermsConditions = React.memo(() => {
             <div className="bg-card rounded-lg p-6 border border-border">
               <h3 className="text-lg font-semibold text-card-foreground mb-4">Governing Law</h3>
               <p className="text-muted-foreground">
-                These terms are governed by the laws of the United States. Any disputes will be resolved pursuant to applicable law.
+                These terms are governed by the laws of the United States. Any disputes will be resolved pursuant to
+                applicable law.
               </p>
             </div>
             <div className="bg-card rounded-lg p-6 border border-border">
               <h3 className="text-lg font-semibold text-card-foreground mb-4">Changes to Terms</h3>
               <p className="text-muted-foreground">
-                We may modify these Terms & Conditions at any time. Updates will be posted on our website and apply to bookings made after the effective date of the change.
+                We may modify these Terms & Conditions at any time. Updates will be posted on our website and apply to
+                bookings made after the effective date of the change.
               </p>
             </div>
           </div>
@@ -206,8 +270,10 @@ const TermsConditions = React.memo(() => {
             If you have questions about our Terms & Conditions, please reach out to our team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <div className="border border-primary text-primary px-8 py-3 rounded-lg font-semibold">
-              📧 Email: bookings@imaginebeyondtrvel.com
+            <div className="border" style={{ borderColor: BRAND_TEAL }}>
+              <div className="px-8 py-3 rounded-lg font-semibold" style={{ color: BRAND_TEAL }}>
+                📧 Email: bookings@imaginebeyondtrvel.com
+              </div>
             </div>
           </div>
         </div>
