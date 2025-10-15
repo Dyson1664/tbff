@@ -76,7 +76,7 @@ export const srilankaData = {
     {
       icon: Soup,
       title: "AUTHENTIC<br />CUISINE",
-      description: "3 Dinners, 9 Breakfasts featuring rice & curry, tea tastings & local specialties!"
+      description: "3 Dinners, 10 Breakfasts featuring rice & curry, tea tastings & local specialties!"
     },
     {
       icon: TreePine,
@@ -259,7 +259,7 @@ export const srilankaData = {
         { text: "Traditional Sri Lankan breakfast daily" },
         { text: "Tea plantation bungalow experience" },
         { text: "3 Dinners" },
-        { text: "9 Breakfasts" }
+        { text: "10 Breakfasts" }
       ]
     },
     {
