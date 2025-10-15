@@ -17,6 +17,7 @@ import hillCountryTrain from "@/assets/srilanka-hill-country-train.jpg";
 import srilankaDay02 from "@/assets/srilanka-day02-temple.webp";
 import srilankaDay04 from "@/assets/srilanka-day04-main-temple-of-tooth.jpg";
 import srilankaDay05 from "@/assets/srilanka-day05-main-kandy-2.jpg";
+import srilankaDay06 from "@/assets/srilanka-day05-ella-bridge.jpg";
 import srilankaDay07 from "@/assets/srilanka-day07-little-adams-peak.jpg";
 
 import srilankaDay08 from "@/assets/india-high-safari.jpg";
@@ -75,7 +76,7 @@ export const srilankaData = {
     {
       icon: Soup,
       title: "AUTHENTIC<br />CUISINE",
-      description: "2 Dinners, 9 Breakfasts featuring rice & curry, tea tastings & local specialties!"
+      description: "3 Dinners, 9 Breakfasts featuring rice & curry, tea tastings & local specialties!"
     },
     {
       icon: TreePine,
@@ -175,7 +176,7 @@ export const srilankaData = {
     date: "April 24th",
     title: "Travel to Ella",
     location: "Ella",
-    heroImage: srilankaHero,
+    heroImage: srilankaDay06,
     description:
       "Start your day bright and early with a delicious breakfast to fuel your adventure! Then, we're off to Ella train station for a scenic journey like no other. Hop aboard the famous afternoon train and enjoy breathtaking jungle views, snap plenty of photos from the iconic glassy scenic area though those open doors, and feel the thrill of the ride through lush greenery. As the train winds into the charming mountain town of Ella, you'll be greeted by a laid-back, hippie vibe that feels like a slice of paradise. Arrive in the evening and get ready to dive into the vibrant night scene exploring cozy cafes, enjoying live music, or just soaking up the chilled-out atmosphere of this magical town. An unforgettable day filled with stunning sights and cool vibes awaits!",
     meals: "Breakfast",
@@ -257,7 +258,7 @@ export const srilankaData = {
         { text: "10 nights in premium hotels and lodges" },
         { text: "Traditional Sri Lankan breakfast daily" },
         { text: "Tea plantation bungalow experience" },
-        { text: "2 Dinners" },
+        { text: "3 Dinners" },
         { text: "9 Breakfasts" }
       ]
     },
