@@ -118,7 +118,7 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     avatar: "DR",
     rating: 5,
     date: "Oct 2025",
-    text: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list! Cheers mates :)",
+    text: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!",
     location: "United Kingdom"
   },
   {
