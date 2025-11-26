@@ -114,28 +114,28 @@ export const DESTINATIONS: readonly Destination[] = [
 // Extract testimonials to module level
 export const TESTIMONIALS: readonly Testimonial[] = [
   {
-    name: "Emma Wilson",
-    avatar: "EW",
+    name: "Daniel Riley",
+    avatar: "DR",
     rating: 5,
-    date: "Aug 2025",
-    text: "An amazing trip! The itinerary was perfectly planned and every detail was taken care of. The local guides were exceptional and really made the experience memorable.",
-    location: "London, UK"
+    date: "Oct 2025",
+    text: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list! Cheers mates :)",
+    location: "United Kingdom"
   },
   {
-    name: "Marco Rodriguez", 
-    avatar: "MR",
+    name: "Anastasia Giddens", 
+    avatar: "AG",
     rating: 5,
-    date: "July 2025",
-    text: "Incredible value for money and outstanding service. The accommodations were beautiful and the experiences were truly authentic. Highly recommend!",
-    location: "Madrid, Spain"
+    date: "Nov 2025",
+    text: "Jay was a fantastic tour guide for the Philippines trip. He accommodated everyone's needs and was amazing and patient. Would highly recommend a trip with him.",
+    location: "Peru"
   },
   {
-    name: "Sarah Chen",
-    avatar: "SC", 
+    name: "Selena Agosto",
+    avatar: "SA", 
     rating: 5,
-    date: "June 2025",
-    text: "Perfect for solo travelers! I felt safe and supported throughout the entire journey. Met wonderful people and created memories that will last a lifetime.",
-    location: "Toronto, Canada"
+    date: "Nov 2025",
+    text: "Our tour guide Jay was amazing. He was super kind, accommodating, and always made sure all the girls on the trip had everything they needed!",
+    location: "United States"
   }
 ] as const;
 
