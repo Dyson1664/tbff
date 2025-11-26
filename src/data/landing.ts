@@ -127,7 +127,7 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     rating: 5,
     date: "Nov 2025",
     text: "Jay was a fantastic tour guide for the Philippines trip. He accommodated everyone's needs and was amazing and patient. Would highly recommend a trip with him.",
-    location: "Peru"
+    location: "United States"
   },
   {
     name: "Selena Agosto",
