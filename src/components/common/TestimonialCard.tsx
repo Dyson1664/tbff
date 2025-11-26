@@ -21,14 +21,14 @@ export const TestimonialCard = memo(({
   avatar,
   avatarImage
 }: TestimonialCardProps) => (
-  <Card className="p-6">
+  <Card className="p-6 flex flex-col h-full">
     <div className="flex items-center gap-1 mb-4">
       {[...Array(rating)].map((_, i) => (
         <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
       ))}
       <span className="text-sm text-muted-foreground ml-2">{date}</span>
     </div>
-    <p className="text-muted-foreground mb-6 leading-relaxed">{text}</p>
+    <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">{text}</p>
     <div className="flex items-center gap-3">
       {avatarImage ? (
         <img 
