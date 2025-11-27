@@ -14,6 +14,10 @@ import tile4_800_srilanka from "@/assets/srilanka-tile.jpg";
 import mirissaBeach from "@/assets/srilanka-mirissa-beach.jpg";
 import hillCountryTrain from "@/assets/srilanka-hill-country-train.jpg";
 
+// Review images
+import review1 from "@/assets/review-1.png";
+import review2 from "@/assets/review-2.png";
+
 import srilankaDay02 from "@/assets/srilanka-day02-temple.webp";
 import srilankaDay04 from "@/assets/srilanka-day04-main-temple-of-tooth.jpg";
 import srilankaDay05 from "@/assets/srilanka-day05-main-kandy-2.jpg";
@@ -344,5 +348,10 @@ export const srilankaData = {
       question: "What are the Visa Requirements?",
       answer: "Apply for E-VISA. Electronic Travel Authorization (ETA): Most visitors can obtain a tourist ETA online through the Sri Lankan government's ETA website: https://www.eta.gov.lk/slvisa/visainfo/center.jsp?locale=en_US"
     }
-  ]
+  ],
+  review: {
+    testimonialText: "I had an amazing trip with Imagine Beyond Travel. Everything was smooth, well-organized, and perfectly balanced with adventure, culture, and relaxation. Our tour guide was fantastic. Highly recommend.",
+    author: "Montana Rae, USA",
+    images: [review1, review2]
+  }
 };
