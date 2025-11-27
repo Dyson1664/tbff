@@ -1,18 +1,30 @@
 // Import images
 import japanHero from "@/assets/japan-hero.jpg";
+import japanHero2 from "@/assets/japan-hero2.jpg";
+import japanHero3 from "@/assets/japan-hero3.jpg";
 import japanGarden from "@/assets/japan-garden.jpg";
 import japanTokyo from "@/assets/japan-tokyo.jpg";
 import japanSushi from "@/assets/japan-sushi.jpg";
 import japanTorii from "@/assets/japan-torii.jpg";
 import japanmtfuji from "@/assets/japan-mt-fuji.jpg";
 
-//import japanDay01  from "@/assets/japan-day01-main-shibuya-crossing.jpg";      // Tokyo arrival + Shibuya
+//import japanDay01 from "@/assets/japan-day01-main-shibuya-crossing.jpg";      // Tokyo arrival + Shibuya
 import japanDay02  from "@/assets/japan-day02-main-sensoji.jpg";               // Asakusa Sensō-ji / Kaminarimon
 import japanDay03  from "@/assets/japan-day03-main-meiji-jingu.jpg";           // Meiji Shrine + Harajuku/Golden Gai
 import japanDay04  from "@/assets/japan-day04-main-hakone-mt-fuji.jpg";        // Hakone Loop / Mt. Fuji views
-import japanDay05  from "@/assets/japan-day05-main-fushimi-inari.jpg";         // Fushimi Inari torii gates
+import japanDay05  from "@/assets/japan-day05-main-fushimi-inari.jpg";
+
+import japantea from "@/assets/japan-tea.jpg";
+import japansword from "@/assets/japan-sword.jpg";
+
+        // Fushimi Inari torii gates
 import japanDay06  from "@/assets/japan-day06-main-nara-deer-park.jpg";        // Nara Deer Park + samurai class
 import japanDay07  from "@/assets/japan-day07-main-kyoto-farewell.jpg";        // Kyoto checkout / farewell
+
+import tile01  from "@/assets/japan-tile01.jpg";
+import tile02  from "@/assets/japan-tile02.jpg";
+import tile03  from "@/assets/japan-tile03.jpg";
+import tile04  from "@/assets/japan-tile04.jpg";
 
 
 // Import icons for highlights
@@ -25,13 +37,14 @@ export const japanData = {
   subtitle: "Discover the perfect harmony of ancient traditions and cutting-edge modernity",
   location: "Japan",
   duration: "7 days",
-  heroImage: japanHero,
+  heroImage: japanHero3,
   price: "USD $1,899",
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
   aboutDescription: [
     "Experience the mesmerizing contrast of Japan, where bullet trains glide past ancient temples and neon-lit cities coexist with serene gardens. This 7-day journey takes you from the bustling metropolis of Tokyo to the cultural heart of Kyoto.",
     "Immerse yourself in Japanese culture through tea ceremonies, temple visits, and authentic culinary experiences. From the iconic Mount Fuji to the peaceful bamboo groves, discover why Japan captivates travelers from around the world."
   ],
+  overviewGallery2x:[tile01, tile04, tile02, tile03],
   aboutImages: [japanGarden, japanTokyo],
 
 
@@ -155,7 +168,7 @@ whatsIncludedHighlights: [
   day: 5,
   title: "Exploring Classics of Kyoto",
   location: "Kyoto, Japan",
-  heroImage: japanDay05,
+  heroImage: japantea,
   description:
     "We start early with a peaceful visit to Fushimi Inari Taisha and its glowing orange torii gates—walking through the Senbon Torii just after sunrise is magic. Later in the morning, step into Kyoto’s refined past at the Hosomi Museum’s tea salon for a traditional tea ceremony with hands-on matcha whisking. Afternoon brings a stroll through the atmospheric lanes around Kiyomizu-dera and the historic Gion district. You may spot a geisha flitting between teahouses or discover handmade sweets in a tucked-away shop. Evening is yours—choose from Kyoto’s many kaiseki restaurants or catch a traditional geiko performance.",
   meals: "Breakfast",
@@ -167,7 +180,7 @@ whatsIncludedHighlights: [
   day: 6,
   title: "Kyoto — Adventure & Activities",
   location: "Kyoto & Nara, Japan",
-  heroImage: japanDay06,
+  heroImage: japansword,
   description:
     "Today kicks off with a hands-on samurai class learning sword basics and diving into the legends, history, and culture of Japan’s warrior tradition. Then we zip to Nara on a scenic train ride (just under an hour). Wander Nara Park, home to over a thousand bowing sika deer—feed them rice crackers and then marvel at the mighty Great Buddha inside Tōdai-ji Temple. We’ll return to Kyoto in time for last-minute treasure hunting at Nishiki Market or one final round of karaoke before we say goodbye.",
   meals: "Breakfast",
