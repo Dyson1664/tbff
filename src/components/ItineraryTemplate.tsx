@@ -386,7 +386,7 @@ const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsInclud
   className="bg-white md:bg-background
              w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
              md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-             py-10 rounded-2xl">
+             py-8 md:py-10 rounded-2xl">
     <div className="max-w-6xl mx-auto px-4 md:px-4">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
