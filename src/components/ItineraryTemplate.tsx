@@ -113,8 +113,8 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
       <div className="bg-white md:bg-background
                       w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                       md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-                      py-8 px-6 mb-8
-                      md:py-12 md:px-8 md:rounded-2xl md:mb-12
+                      py-8 px-6 my-8
+                      md:py-12 md:px-8 md:rounded-2xl md:mb-12 md:my-0
                       md:h-1/2 md:p-4 md:pt-20 lg:pt-24 md:pb-6 md:px-6 lg:px-8 md:flex md:flex-col md:justify-center md:rounded-br-2xl md:mb-0">
         <div className="max-w-2xl mx-auto w-full">
           {/* 5 Stars */}
