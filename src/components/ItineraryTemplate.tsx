@@ -111,14 +111,14 @@ const ReviewSection = memo(({ countryName }: { countryName: string }) => {
           ))}
         </div>
         
-        {/* Rating text */}
-        <p className="text-sm font-medium text-foreground mb-4">
-          Thai Intro has an average rating of 4.9/5 based on 4,618 customer reviews.
+        {/* Testimonial quote */}
+        <p className="text-sm italic text-muted-foreground mb-3">
+          "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!"
         </p>
         
-        {/* Testimonial quote */}
-        <p className="text-sm italic text-muted-foreground mb-4">
-          "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!" - Daniel Riley, United Kingdom
+        {/* Author info */}
+        <p className="text-xs text-muted-foreground mb-4">
+          - Daniel Riley, United Kingdom
         </p>
         
         {/* Read more link */}
