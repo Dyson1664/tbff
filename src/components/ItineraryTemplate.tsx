@@ -110,10 +110,13 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
 
   return (
     <>
-      <div className="h-1/2 md:h-[45%] bg-background/95 p-4 md:p-6 lg:p-8 flex flex-col justify-center rounded-br-2xl">
+      <div className="bg-white md:bg-background
+                      w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+                      md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
+                      py-8 md:py-12 px-6 md:px-8 rounded-2xl mb-8 md:mb-12">
         <div className="max-w-2xl mx-auto w-full">
           {/* 5 Stars */}
-          <div className="flex gap-1 mb-2 mt-0 md:mt-8">
+          <div className="flex gap-1 mb-2">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="w-5 h-5 fill-[#0FC2BF] text-[#0FC2BF]" />
             ))}
@@ -707,32 +710,28 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               })}
             </div>
             
-            {/* Bottom row: Review section OR bottom 2 images */}
-            {data.review ? (
-              <ReviewSection review={data.review} />
-            ) : (
-              <div className="h-1/2 grid grid-cols-2 gap-0">
-                {overviewFour.slice(2, 4).map((src, index) => {
-                  const actualIndex = index + 2;
-                  const src2x = data.overviewGallery2x?.[actualIndex] || undefined;
-                  const cornerClass = index === 1 ? "rounded-br-2xl" : "";
+            {/* Bottom row: 2 more images */}
+            <div className="h-1/2 md:h-[45%] grid grid-cols-2 gap-0">
+              {overviewFour.slice(2, 4).map((src, index) => {
+                const actualIndex = index + 2;
+                const src2x = data.overviewGallery2x?.[actualIndex] || undefined;
+                const cornerClass = index === 1 ? "rounded-br-2xl" : "";
 
-                  return (
-                    <div key={actualIndex} className="relative h-full w-full overflow-hidden">
-                      <img
-                        src={src}
-                        srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
-                        sizes="(min-width:1280px) 20vw, (min-width:1024px) 20vw, 50vw"
-                        alt={`${data.title} overview ${actualIndex + 1}`}
-                        className={`h-full w-full object-cover hover:scale-105 transition-transform duration-300 ${cornerClass}`}
-                        decoding="async"
-                        loading="eager"
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-            )}
+                return (
+                  <div key={actualIndex} className="relative h-full w-full overflow-hidden">
+                    <img
+                      src={src}
+                      srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
+                      sizes="(min-width:1280px) 20vw, (min-width:1024px) 20vw, 50vw"
+                      alt={`${data.title} overview ${actualIndex + 1}`}
+                      className={`h-full w-full object-cover hover:scale-105 transition-transform duration-300 ${cornerClass}`}
+                      decoding="async"
+                      loading="eager"
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
@@ -743,6 +742,9 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           {/* Main Content */}
           <div className="flex-1 min-w-0">
             <AboutSection data={data} />
+
+            {/* Review Section */}
+            <ReviewSection review={data.review} />
 
             {/* What's Included Highlights */}
             <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} />
