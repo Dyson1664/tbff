@@ -113,15 +113,18 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
       <div className="bg-white md:bg-background
                       w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                       md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-                      py-8 px-6 my-8
+                      py-8 px-6 mb-8
                       md:py-12 md:px-8 md:rounded-2xl md:mb-12 md:my-0
                       md:h-1/2 md:p-4 md:pt-20 lg:pt-24 md:pb-6 md:px-6 lg:px-8 md:flex md:flex-col md:justify-center md:rounded-br-2xl md:mb-0">
         <div className="max-w-2xl mx-auto w-full">
-          {/* 5 Stars */}
-          <div className="flex gap-1 mb-2">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-5 h-5 fill-[#0FC2BF] text-[#0FC2BF]" />
-            ))}
+          {/* 5 Stars with 5/5 rating */}
+          <div className="flex items-center gap-2 mb-2">
+            <div className="flex gap-1">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-5 h-5 fill-[#0FC2BF] text-[#0FC2BF]" />
+              ))}
+            </div>
+            <span className="text-sm font-semibold text-foreground">5/5</span>
           </div>
 
           {/* Quote text */}
