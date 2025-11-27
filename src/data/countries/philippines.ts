@@ -25,6 +25,10 @@ import highlight01 from "@/assets/highlight-ph-01.jpeg"
 import highlight02 from "@/assets/highlight-ph-02.jpg"
 import highlight03 from "@/assets/highlight-ph-03.jpg"
 
+// Review images
+import review1 from "@/assets/review-1.png";
+import review2 from "@/assets/review-2.png";
+
 
 // Import icons for highlights
 import { Home, Zap, Plane, Users, Soup, TreePine } from "lucide-react";
@@ -311,7 +315,7 @@ highlights: [
 review: {
   testimonialText: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!",
   author: "Daniel Riley, United Kingdom",
-  images: ["/src/assets/review-1.png", "/src/assets/review-2.png"]
+  images: [review1, review2]
 }
 
 };
