@@ -707,8 +707,32 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
               })}
             </div>
             
-            {/* Bottom row: Review section */}
-            <ReviewSection review={data.review} />
+            {/* Bottom row: Review section OR bottom 2 images */}
+            {data.review ? (
+              <ReviewSection review={data.review} />
+            ) : (
+              <div className="h-1/2 grid grid-cols-2 gap-0">
+                {overviewFour.slice(2, 4).map((src, index) => {
+                  const actualIndex = index + 2;
+                  const src2x = data.overviewGallery2x?.[actualIndex] || undefined;
+                  const cornerClass = index === 1 ? "rounded-br-2xl" : "";
+
+                  return (
+                    <div key={actualIndex} className="relative h-full w-full overflow-hidden">
+                      <img
+                        src={src}
+                        srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
+                        sizes="(min-width:1280px) 20vw, (min-width:1024px) 20vw, 50vw"
+                        alt={`${data.title} overview ${actualIndex + 1}`}
+                        className={`h-full w-full object-cover hover:scale-105 transition-transform duration-300 ${cornerClass}`}
+                        decoding="async"
+                        loading="eager"
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            )}
           </div>
         </div>
       </section>
