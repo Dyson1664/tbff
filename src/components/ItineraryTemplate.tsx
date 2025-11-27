@@ -10,8 +10,6 @@ import Footer from "@/components/common/Footer";
 import { DayItinerary } from "@/data/types";
 import ResponsiveRoute from "@/components/RouteBar"; // <-- route component
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import review1 from "@/assets/review-1.png";
-import review2 from "@/assets/review-2.png";
 
 
 // Book Now Button Component (routes to external Shopify payment)
@@ -93,6 +91,11 @@ interface CountryData {
   };
   included: IncludedSection[];
   faqs: FAQ[];
+  review?: {
+    testimonialText: string;
+    author: string;
+    images: string[];
+  };
 }
 
 interface ItineraryTemplateProps {
@@ -100,38 +103,40 @@ interface ItineraryTemplateProps {
 }
 
 // Review Section Component
-const ReviewSection = memo(({ countryName }: { countryName: string }) => {
+const ReviewSection = memo(({ review }: { review?: { testimonialText: string; author: string; images: string[] } }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const reviewImages = [review1, review2];
+  if (!review) return null;
 
   return (
     <>
       <div className="h-1/2 bg-background/95 p-6 flex flex-col justify-center rounded-br-2xl">
-        {/* Stars */}
-        <div className="flex gap-1 mb-3">
-          {[...Array(5)].map((_, i) => (
-            <Star key={i} className="w-5 h-5 fill-primary text-primary" />
-          ))}
+        <div className="max-w-2xl mx-auto">
+          {/* 5 Stars */}
+          <div className="flex gap-1 mb-4">
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-5 h-5 fill-[#0FC2BF] text-[#0FC2BF]" />
+            ))}
+          </div>
+
+          {/* Quote text */}
+          <blockquote className="text-base md:text-lg text-foreground/90 mb-3 leading-relaxed">
+            "{review.testimonialText}"
+          </blockquote>
+
+          {/* Author */}
+          <p className="text-sm text-muted-foreground mb-4">
+            - {review.author}
+          </p>
+
+          {/* Read More Link */}
+          <button 
+            onClick={() => setIsModalOpen(true)}
+            className="text-[#0FC2BF] hover:underline text-sm font-medium inline-flex items-center gap-1"
+          >
+            Read more here
+          </button>
         </div>
-        
-        {/* Testimonial quote */}
-        <p className="text-sm italic text-muted-foreground mb-3">
-          "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!"
-        </p>
-        
-        {/* Author info */}
-        <p className="text-xs text-muted-foreground mb-4">
-          - Daniel Riley, United Kingdom
-        </p>
-        
-        {/* Read more link */}
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="text-primary text-sm font-medium hover:underline text-left"
-        >
-          Read more here
-        </button>
       </div>
 
       {/* Review Modal with Image Carousel */}
@@ -139,7 +144,7 @@ const ReviewSection = memo(({ countryName }: { countryName: string }) => {
         <DialogContent className="max-w-4xl bg-background p-8 rounded-lg">
           <Carousel className="w-full">
             <CarouselContent>
-              {reviewImages.map((image, index) => (
+              {review.images.map((image, index) => (
                 <CarouselItem key={index}>
                   <div className="flex items-center justify-center">
                     <img 
@@ -703,7 +708,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             </div>
             
             {/* Bottom row: Review section */}
-            <ReviewSection countryName={data.title} />
+            <ReviewSection review={data.review} />
           </div>
         </div>
       </section>

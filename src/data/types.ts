@@ -75,6 +75,12 @@ export interface FAQ {
   answer: string;
 }
 
+export interface Review {
+  testimonialText: string;
+  author: string;
+  images: string[];
+}
+
 export interface ItineraryData {
   id?: string;
   slug?: string;
@@ -89,6 +95,7 @@ export interface ItineraryData {
   summary: TourSummary;
   included: IncludedCategory[];
   faqs: FAQ[];
+  review?: Review;
 }
 
 export interface Trip {

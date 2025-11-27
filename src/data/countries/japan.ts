@@ -264,11 +264,11 @@ whatsIncludedHighlights: [
   },
   {
     question: "Which airport do I need to fly out from?",
-    answer: "You can depart from Narita (NRT), Haneda (HND), or Osaka’s Kansai International Airport (KIX), depending on your onward plans."
+    answer: "You can depart from Narita (NRT), Haneda (HND), or Osaka's Kansai International Airport (KIX), depending on your onward plans."
   },
   {
     question: "Do you have an age limit for tours?",
-    answer: "Our tours cater to adventurous travelers aged 18–45, with most guests between 21–35. If you’re close to this range and feel you’re a good fit, reach out."
+    answer: "Our tours cater to adventurous travelers aged 18–45, with most guests between 21–35. If you're close to this range and feel you're a good fit, reach out."
   },
   {
     question: "What is the local currency?",
@@ -276,9 +276,14 @@ whatsIncludedHighlights: [
   },
   {
     question: "What are the visa requirements?",
-    answer: "Visa requirements depend on your nationality and length of stay. Please check your own government’s travel site and Japan’s official guidance. For U.S. travelers, see “Japan International Travel Information” from the U.S. Department of State: https://travel.state.gov"
+    answer: "Visa requirements depend on your nationality and length of stay. Please check your own government's travel site and Japan's official guidance. For U.S. travelers, see \"Japan International Travel Information\" from the U.S. Department of State: https://travel.state.gov"
   }
-]
+],
 
+review: {
+  testimonialText: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!",
+  author: "Daniel Riley, United Kingdom",
+  images: ["/src/assets/review-1.png", "/src/assets/review-2.png"]
+}
 
 };
