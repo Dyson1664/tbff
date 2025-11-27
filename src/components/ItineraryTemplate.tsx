@@ -167,8 +167,8 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2" />
-            <CarouselNext className="right-2" />
+            <CarouselPrevious className="-left-12" />
+            <CarouselNext className="-right-12" />
           </Carousel>
         </DialogContent>
       </Dialog>
