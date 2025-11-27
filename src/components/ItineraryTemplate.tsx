@@ -10,6 +10,8 @@ import Footer from "@/components/common/Footer";
 import { DayItinerary } from "@/data/types";
 import ResponsiveRoute from "@/components/RouteBar"; // <-- route component
 import { Dialog, DialogContent } from "@/components/ui/dialog";
+import review1 from "@/assets/review-1.png";
+import review2 from "@/assets/review-2.png";
 
 
 // Book Now Button Component (routes to external Shopify payment)
@@ -101,6 +103,8 @@ interface ItineraryTemplateProps {
 const ReviewSection = memo(({ countryName }: { countryName: string }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const reviewImages = [review1, review2];
+
   return (
     <>
       <div className="h-1/2 bg-background/95 p-6 flex flex-col justify-center rounded-br-2xl">
@@ -130,67 +134,26 @@ const ReviewSection = memo(({ countryName }: { countryName: string }) => {
         </button>
       </div>
 
-      {/* Review Modal */}
+      {/* Review Modal with Image Carousel */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-        <DialogContent className="max-w-3xl bg-background p-8 rounded-lg">
-          {/* Close button */}
-          <button
-            onClick={() => setIsModalOpen(false)}
-            className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
-          >
-            <X className="w-5 h-5" />
-          </button>
-
-          {/* Review Card */}
-          <div className="space-y-6">
-            {/* Header with avatar, name, and date */}
-            <div className="flex items-start justify-between">
-              <div className="flex items-start gap-4">
-                {/* Avatar */}
-                <div className="w-16 h-16 bg-[#0FC2BF] rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                  <span className="text-white font-bold text-2xl">DW</span>
-                </div>
-                
-                <div>
-                  {/* Name and subtitle */}
-                  <h3 className="text-2xl font-semibold text-foreground mb-1">Daniel Wallington</h3>
-                  <p className="text-sm text-muted-foreground mb-3">FR · 1 review</p>
-                </div>
-              </div>
-              
-              {/* Date */}
-              <p className="text-lg text-muted-foreground">Oct 15, 2025</p>
-            </div>
-
-            {/* Stars - Trustpilot green */}
-            <div className="flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <div key={i} className="w-10 h-10 bg-[#00B67A] flex items-center justify-center">
-                  <Star className="w-6 h-6 fill-white text-white" />
-                </div>
+        <DialogContent className="max-w-4xl bg-background p-8 rounded-lg">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {reviewImages.map((image, index) => (
+                <CarouselItem key={index}>
+                  <div className="flex items-center justify-center">
+                    <img 
+                      src={image} 
+                      alt={`Review ${index + 1}`}
+                      className="w-full h-auto object-contain rounded-lg"
+                    />
+                  </div>
+                </CarouselItem>
               ))}
-            </div>
-
-            {/* Review title */}
-            <h4 className="text-2xl font-semibold text-foreground">What a fantastic holiday</h4>
-
-            {/* Review text */}
-            <p className="text-base text-foreground leading-relaxed">
-              What a fantastic holiday! Darrin and the team provided fun, insight and the break I really needed in Sri Lanka. They knew all the best spots from the beautiful mountains around Ella, the Royal Palace & Sacred Tooth Temple in Kandy and Sigiriya rock, the whole trip took my breath away. They know how to party too! Thanks guys!
-              <br /><br />
-              Daniel
-            </p>
-
-            {/* Bottom tags */}
-            <div className="flex gap-3">
-              <span className="px-4 py-2 bg-muted rounded-full text-sm text-muted-foreground">
-                September 13, 2025
-              </span>
-              <span className="px-4 py-2 bg-muted rounded-full text-sm text-muted-foreground">
-                Unprompted review
-              </span>
-            </div>
-          </div>
+            </CarouselContent>
+            <CarouselPrevious className="left-2" />
+            <CarouselNext className="right-2" />
+          </Carousel>
         </DialogContent>
       </Dialog>
     </>
