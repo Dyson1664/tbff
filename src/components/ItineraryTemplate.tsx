@@ -118,7 +118,7 @@ const ReviewSection = memo(({ countryName }: { countryName: string }) => {
         
         {/* Testimonial quote */}
         <p className="text-sm italic text-muted-foreground mb-4">
-          "Thai Intro Travel is an incredible way to experience Thailand. The itinerary is jam-packed with awesome activities..." - Aaron
+          "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!" - Daniel Riley, United Kingdom
         </p>
         
         {/* Read more link */}
@@ -150,15 +150,10 @@ const ReviewSection = memo(({ countryName }: { countryName: string }) => {
           <div className="space-y-4">
             <div className="flex items-start justify-between">
               <div className="flex items-start gap-4">
-                {/* Avatar */}
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white font-semibold text-lg">CS</span>
-                </div>
-                
                 <div>
                   {/* Name and stars */}
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-bold text-foreground">CHLOE STEWART</h3>
+                    <h3 className="font-bold text-foreground">DANIEL RILEY</h3>
                     <div className="flex gap-0.5">
                       {[...Array(5)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-red-500 text-red-500" />
