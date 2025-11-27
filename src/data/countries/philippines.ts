@@ -275,7 +275,7 @@ highlights: [
   }
 ]
 ,
-faqs: [
+  faqs: [
   {
     question: "Where does the trip start & finish?",
     answer: "The tour starts in Manila and ends in El Nido, Palawan."
@@ -306,6 +306,12 @@ faqs: [
     question: "What are the visa requirements?",
     answer: `Citizens of ~157 countries receive a 30-day visa-free entry (check your government's site to confirm). You must have an onward/return flight. Complete the Philippines eTravel form within 72 hours of arrival: https://etravel.gov.ph`
   }
-]
+],
+
+review: {
+  testimonialText: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!",
+  author: "Daniel Riley, United Kingdom",
+  images: ["/src/assets/review-1.png", "/src/assets/review-2.png"]
+}
 
 };
