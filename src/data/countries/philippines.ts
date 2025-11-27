@@ -313,8 +313,8 @@ highlights: [
 ],
 
 review: {
-  testimonialText: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!",
-  author: "Daniel Riley, United Kingdom",
+  testimonialText: "What an amazing 10-day adventure in the Philippines! Jiear was the perfect guide! He was warm, knowledgeable, and always one step ahead. We explored Port Barton and El Nido, plus the magical Wonderland Island experience.",
+  author: "Louisa Miller, USA",
   images: [review1, review2]
 }
 
