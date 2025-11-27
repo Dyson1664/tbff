@@ -110,7 +110,7 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
 
   return (
     <>
-      <div className="h-1/2 bg-background/95 p-4 md:p-6 lg:p-8 flex flex-col justify-center rounded-br-2xl">
+      <div className="h-1/2 md:h-[45%] bg-background/95 p-4 md:p-6 lg:p-8 flex flex-col justify-center rounded-br-2xl">
         <div className="max-w-2xl mx-auto w-full">
           {/* 5 Stars */}
           <div className="flex gap-1 mb-3 md:mb-4">
@@ -686,7 +686,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
           {/* Right side: 2 images on top, review section on bottom */}
           <div className="w-[40%] h-full flex flex-col gap-0">
             {/* Top row: 2 images */}
-            <div className="h-1/2 grid grid-cols-2 gap-0">
+            <div className="h-1/2 md:h-[55%] grid grid-cols-2 gap-0">
               {overviewFour.slice(0, 2).map((src, index) => {
                 const src2x = data.overviewGallery2x?.[index] || undefined;
                 const cornerClass = index === 1 ? "rounded-tr-2xl" : "";
