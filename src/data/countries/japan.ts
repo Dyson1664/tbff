@@ -7,6 +7,8 @@ import japanTokyo from "@/assets/japan-tokyo.jpg";
 import japanSushi from "@/assets/japan-sushi.jpg";
 import japanTorii from "@/assets/japan-torii.jpg";
 import japanmtfuji from "@/assets/japan-mt-fuji.jpg";
+import review1 from "@/assets/review-1.png";
+import review2 from "@/assets/review-2.png";
 
 //import japanDay01 from "@/assets/japan-day01-main-shibuya-crossing.jpg";      // Tokyo arrival + Shibuya
 import japanDay02  from "@/assets/japan-day02-main-sensoji.jpg";               // Asakusa Sensō-ji / Kaminarimon
@@ -283,7 +285,7 @@ whatsIncludedHighlights: [
 review: {
   testimonialText: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!",
   author: "Daniel Riley, United Kingdom",
-  images: ["/src/assets/review-1.png", "/src/assets/review-2.png"]
+  images: [review1, review2]
 }
 
 };
