@@ -153,7 +153,7 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
       {/* Review Modal with Image Carousel */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent className="max-w-4xl bg-background p-8 rounded-lg">
-          <Carousel className="w-full">
+          <Carousel className="w-full relative">
             <CarouselContent>
               {review.images.map((image, index) => (
                 <CarouselItem key={index}>
@@ -167,8 +167,16 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="-left-12" />
-            <CarouselNext className="-right-12" />
+            {/* Desktop arrows - positioned outside the dialog content */}
+            <CarouselPrevious className="hidden md:flex -left-16 lg:-left-20" />
+            <CarouselNext className="hidden md:flex -right-16 lg:-right-20" />
+            {/* Mobile swipe indicator */}
+            <div className="md:hidden flex justify-center items-center gap-2 mt-4 text-muted-foreground text-sm">
+              <span>Swipe for more</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
           </Carousel>
         </DialogContent>
       </Dialog>
