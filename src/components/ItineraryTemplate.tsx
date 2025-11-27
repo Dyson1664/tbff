@@ -124,18 +124,18 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
             "{review.testimonialText}"
           </blockquote>
 
-          {/* Author */}
-          <p className="text-sm text-muted-foreground mb-2">
-            - {review.author}
-          </p>
-
-          {/* Read More Link */}
-          <button 
-            onClick={() => setIsModalOpen(true)}
-            className="text-[#0FC2BF] hover:underline text-sm font-medium inline-flex items-center gap-1"
-          >
-            Read more here
-          </button>
+          {/* Author and Read More Link */}
+          <div className="flex items-center justify-between">
+            <p className="text-sm text-muted-foreground">
+              - {review.author}
+            </p>
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="text-[#0FC2BF] hover:underline text-sm font-medium inline-flex items-center gap-1"
+            >
+              Read more here
+            </button>
+          </div>
         </div>
       </div>
 
