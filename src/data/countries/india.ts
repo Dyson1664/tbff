@@ -122,6 +122,10 @@ import indiaDay13Gallery01 from "@/assets/india-day13-gallery-01.jpg";
 import indiaDay13Gallery02 from "@/assets/india-day13-gallery-02.jpg";
 import indiaDay13Gallery03 from "@/assets/india-day13-gallery-03.jpg";
 
+// Review images
+import review1 from "@/assets/review-1.png";
+import review2 from "@/assets/review-2.png";
+
 
 export const indiaData = {
   id: "india-journey", 
@@ -465,5 +469,10 @@ summary: {
       question: "Do you have an age limit for tours?",
       answer: "We welcome travellers aged 18-39 years old, but this is just a guideline to help us create consistent groups. If you're just outside this range (especially on the older side) and feel you'd fit well with our active travel style and group dynamic, feel free to reach out. We're happy to consider applications case by case."
     }
-  ]
+  ],
+  review: {
+    testimonialText: "I had an amazing trip with Imagine Beyond Travel. Everything was smooth, well-organized, and perfectly balanced with adventure, culture, and relaxation. Our tour guide was fantastic. Highly recommend.",
+    author: "Montana Rae, USA",
+    images: [review1, review2]
+  }
 };
