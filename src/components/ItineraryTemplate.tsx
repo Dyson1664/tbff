@@ -122,7 +122,7 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
           <div className="flex items-center gap-2 mb-2">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-[#0FC2BF] text-[#0FC2BF]" />
+                <Star key={i} className="w-5 h-5 fill-primary text-primary" />
               ))}
             </div>
             <span className="text-sm font-semibold text-foreground">5/5</span>
