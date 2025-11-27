@@ -473,6 +473,7 @@ summary: {
   review: {
     testimonialText: "I had an amazing trip with Imagine Beyond Travel. Everything was smooth, well-organized, and perfectly balanced with adventure, culture, and relaxation. Our tour guide was fantastic. Highly recommend.",
     author: "Montana Rae, USA",
-    images: [review1, review2]
+    images: [review1, review2],
+    disableReadMore: true
   }
 };
