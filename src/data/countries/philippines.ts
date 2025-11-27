@@ -28,6 +28,7 @@ import highlight03 from "@/assets/highlight-ph-03.jpg"
 // Review images
 import review1 from "@/assets/review-1.png";
 import review2 from "@/assets/review-2.png";
+import review3 from "@/assets/ph-review-3.png";
 
 
 // Import icons for highlights
@@ -315,7 +316,7 @@ highlights: [
 review: {
   testimonialText: "What an amazing 10-day adventure in the Philippines! Jiear was the perfect guide! He was warm, knowledgeable, and always one step ahead. We explored Port Barton and El Nido, plus the magical Wonderland Island experience.",
   author: "Louisa Miller, USA",
-  images: [review1, review2]
+  images: [review1, review2, review3]
 }
 
 };

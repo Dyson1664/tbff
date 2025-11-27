@@ -285,7 +285,7 @@ whatsIncludedHighlights: [
 review: {
   testimonialText: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!",
   author: "Daniel Riley, United Kingdom",
-  images: [review1, review2]
+  images: []
 }
 
 };
