@@ -1,14 +1,15 @@
 import { DayLayout } from "@/components/DayLayout";
 import Navbar from "@/components/Navbar";
-import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin } from "lucide-react";
+import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin, Star, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { memo, useMemo, useCallback } from "react";
+import { memo, useMemo, useCallback, useState } from "react";
 import { STATIC_STYLES, STATIC_TEXT, SUMMARY_LABELS } from "@/data/itinerary-static";
 import Footer from "@/components/common/Footer";
 import { DayItinerary } from "@/data/types";
 import ResponsiveRoute from "@/components/RouteBar"; // <-- route component
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 
 // Book Now Button Component (routes to external Shopify payment)
@@ -95,6 +96,102 @@ interface CountryData {
 interface ItineraryTemplateProps {
   data: CountryData;
 }
+
+// Review Section Component
+const ReviewSection = memo(({ countryName }: { countryName: string }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  return (
+    <>
+      <div className="h-1/2 bg-background/95 p-6 flex flex-col justify-center rounded-br-2xl">
+        {/* Stars */}
+        <div className="flex gap-1 mb-3">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+          ))}
+        </div>
+        
+        {/* Rating text */}
+        <p className="text-sm font-medium text-foreground mb-4">
+          Thai Intro has an average rating of 4.9/5 based on 4,618 customer reviews.
+        </p>
+        
+        {/* Testimonial quote */}
+        <p className="text-sm italic text-muted-foreground mb-4">
+          "Thai Intro Travel is an incredible way to experience Thailand. The itinerary is jam-packed with awesome activities..." - Aaron
+        </p>
+        
+        {/* Read more link */}
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="text-primary text-sm font-medium hover:underline text-left"
+        >
+          Read more here
+        </button>
+      </div>
+
+      {/* Review Modal */}
+      <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+        <DialogContent className="max-w-2xl bg-background p-8 rounded-lg">
+          {/* Close button */}
+          <button
+            onClick={() => setIsModalOpen(false)}
+            className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
+          >
+            <X className="w-5 h-5" />
+          </button>
+
+          {/* Header */}
+          <h2 className="text-lg font-bold text-foreground mb-6 uppercase">
+            THAI INTRO HAS AN AVERAGE RATING OF 4.9/5 BASED ON 4,618 CUSTOMER REVIEWS.
+          </h2>
+
+          {/* Review Card */}
+          <div className="space-y-4">
+            <div className="flex items-start justify-between">
+              <div className="flex items-start gap-4">
+                {/* Avatar */}
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-semibold text-lg">CS</span>
+                </div>
+                
+                <div>
+                  {/* Name and stars */}
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-bold text-foreground">CHLOE STEWART</h3>
+                    <div className="flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-red-500 text-red-500" />
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Date */}
+                  <p className="text-sm text-muted-foreground mb-3">Nov 25, 2025</p>
+                  
+                  {/* Review text */}
+                  <p className="text-sm text-foreground leading-relaxed">
+                    Incredible tour and company! From start to finish, intro made it so easy to book. Their communication has been incredible the whole time. We did the 9 days Intro to travel and what an intro it was. Our tour guide Liam was unbelievable, and I honestly could not fault him. He was funny, organised, patient (yes, we asked a million questions a day and he didn't care) and he bought all the fun to the tour. He was so knowledgable and I would 100% recommend. My only negative... is having to go...
+                  </p>
+                </div>
+              </div>
+
+              {/* Google logo */}
+              <div className="flex-shrink-0">
+                <svg className="w-8 h-8" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+});
 
 // Memoized sub-components for better performance
 const TripHighlights = memo(({ data }: { data: CountryData }) => {
@@ -614,29 +711,32 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             </div>
           </div>
 
-          {/* Right side: 4-image grid (40% of screen for better tile visibility) */}
-          <div className="w-[40%] h-full grid grid-cols-2 grid-rows-2 gap-0">
-            {overviewFour.map((src, index) => {
-  const src2x = data.overviewGallery2x?.[index] || undefined;
-  const cornerClass =
-    index === 1 ? "rounded-tr-2xl" :       // top-right tile → round top-right
-    index === 3 ? "rounded-br-2xl" :       // bottom-right tile → round bottom-right
-    "";                                    // others square
+          {/* Right side: 2 images on top, review section on bottom */}
+          <div className="w-[40%] h-full flex flex-col gap-0">
+            {/* Top row: 2 images */}
+            <div className="h-1/2 grid grid-cols-2 gap-0">
+              {overviewFour.slice(0, 2).map((src, index) => {
+                const src2x = data.overviewGallery2x?.[index] || undefined;
+                const cornerClass = index === 1 ? "rounded-tr-2xl" : "";
 
-  return (
-    <div key={index} className="relative h-full w-full overflow-hidden">
-      <img
-        src={src}
-        srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
-        sizes="(min-width:1280px) 20vw, (min-width:1024px) 20vw, 50vw"
-        alt={`${data.title} overview ${index + 1}`}
-        className={`h-full w-full object-cover hover:scale-105 transition-transform duration-300 ${cornerClass}`}
-        decoding="async"
-        loading={index < 2 ? "eager" : "lazy"}
-      />
-    </div>
-  );
-})}
+                return (
+                  <div key={index} className="relative h-full w-full overflow-hidden">
+                    <img
+                      src={src}
+                      srcSet={src2x ? `${src} 1x, ${src2x} 2x` : undefined}
+                      sizes="(min-width:1280px) 20vw, (min-width:1024px) 20vw, 50vw"
+                      alt={`${data.title} overview ${index + 1}`}
+                      className={`h-full w-full object-cover hover:scale-105 transition-transform duration-300 ${cornerClass}`}
+                      decoding="async"
+                      loading="eager"
+                    />
+                  </div>
+                );
+              })}
+            </div>
+            
+            {/* Bottom row: Review section */}
+            <ReviewSection countryName={data.title} />
           </div>
         </div>
       </section>
