@@ -11,8 +11,10 @@ import review1 from "@/assets/review-1.png";
 import review2 from "@/assets/review-2.png";
 
 //import japanDay01 from "@/assets/japan-day01-main-shibuya-crossing.jpg";      // Tokyo arrival + Shibuya
+import japanDay01  from "@/assets/japan-day01.jpg";               // Asakusa Sensō-ji / Kaminarimon
+
 import japanDay02  from "@/assets/japan-day02-main-sensoji.jpg";               // Asakusa Sensō-ji / Kaminarimon
-import japanDay03  from "@/assets/japan-day03-main-meiji-jingu.jpg";           // Meiji Shrine + Harajuku/Golden Gai
+import japanDay03  from "@/assets/japan-day03-group.jpg";           // Meiji Shrine + Harajuku/Golden Gai
 import japanDay04  from "@/assets/japan-day04-main-hakone-mt-fuji.jpg";        // Hakone Loop / Mt. Fuji views
 import japanDay05  from "@/assets/japan-day05-main-fushimi-inari.jpg";
 
@@ -118,7 +120,7 @@ whatsIncludedHighlights: [
   day: 1,
   title: "Tokyo Arrival & Welcome Dinner",
   location: "Tokyo, Japan",
-  heroImage: japanTokyo,
+  heroImage: japanDay01,
   description:
     "Welcome to Tokyo! There’s no airport pickup—your guide will help with directions for the train (about 1 hour; recommended). Taxis are available but expensive. Check in, relax, or explore nearby shopping areas. Meet the guide and crew at 7:00 PM for a relaxed welcome dinner.",
   meals: "Dinner",
@@ -135,7 +137,7 @@ whatsIncludedHighlights: [
   day: 2,
   title: "Tokyo walking tour",
   location: "Tokyo, Japan",
-  heroImage: japanDay02,
+  heroImage: japanTokyo,
   description:
     "We kick off in Asakusa, Tokyo’s historic heart—duck under the Kaminari-mon Gate and wander toward Sensō-ji, the city’s oldest temple, where red lanterns glow and incense drifts through the courtyards. At midday, pop into Premium Sake Pub Gashue for a guided tasting of rare regional brews paired with crisp rice crackers and local snacks. In the afternoon, follow the market path to Ameyoko, a once–postwar black market turned street-food playground. Snack on takoyaki, browse for quirky souvenirs, and soak up the buzz. Dinner is your choice to explore on your own or join a small group for cozy local restaurants. We’ll then cap the night with karaoke—carefree fun.",
   accommodation: { name: "THE KNOT TOKYO Shinjuku" },

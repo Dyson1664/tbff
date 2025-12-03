@@ -1,9 +1,15 @@
 // Import images
 import philippinesHero from "@/assets/philippines-hero.jpg";
+import philippinesHero2 from "@/assets/ph-hero.jpg";
+import philippinesHero4 from "@/assets/ph-hero4.jpg";
+
+
 import philippinesDay01 from "@/assets/philippines-day-01.jpg";
+import phmanila from "@/assets/ph-manila.jpg";
+
 import philippinesDay02 from "@/assets/philippines-day-02.jpg";
 
-
+import phboattrip from "@/assets/ph-hero3.jpg";
 import philippinesDay03 from "@/assets/philippines-day03.jpeg";
 import philippinesDay05 from "@/assets/philippines-day05.jpeg";
 import philippinesDay04 from "@/assets/philippines-day04.jpeg";
@@ -11,6 +17,8 @@ import philippinesDay06 from "@/assets/philippines-day06.jpg";
 import philippinesDay07 from "@/assets/philippines-day07.jpg";
 
 import philippinesDay08 from "@/assets/philippines-day08.jpeg";
+import phelnido from "@/assets/ph-elnido.jpg";
+
 import philippinesDay09 from "@/assets/philippines-day09.jpeg";
 import philippinesDay10 from "@/assets/philippines-day10.jpeg";
 
@@ -41,10 +49,10 @@ export const philippinesData = {
   subtitle: "Explore tropical islands, ancient rice terraces, and vibrant Filipino culture",
   location: "Philippines",
   duration: "10 days",
-  heroImage: philippinesDay07,
+  heroImage: philippinesHero2,
   price: "USD $1,679",
   startDate: "May 4th",
-  overviewGallery2x:[philippinesDay03, philippinesDay02, philippinesDay04, philippinesDay08],
+  overviewGallery2x:[philippinesDay03, philippinesHero4, philippinesDay04, philippinesDay08],
   route: ["Manila", "Port Barton", "Wonderland", "El Nido"],
   aboutDescription: [
     "Discover the incredible diversity of the Philippines, an archipelago of over 7,000 islands offering pristine beaches, ancient rice terraces, and warm Filipino hospitality. From the bustling streets of Manila to the remote beauty of Palawan and Banaue.",
@@ -113,7 +121,7 @@ highlights: [
   date: "May 4th",
   title: "Welcome to the Philippines",
   location: "Manila, Luzon",
-  heroImage: philippinesDay01,
+  heroImage: phmanila,
   description:
     "Welcome to Manila! After arriving in the capital, a private van transfers you to our centrally located hotel. Settle in, unwind, or take a stroll around the vibrant neighborhood. At 6:00 PM, meet your guide and travel crew for a relaxed welcome meet-up, with an optional group dinner and drinks to kick things off.",
   meals: "—",
@@ -143,7 +151,7 @@ highlights: [
   date: "May 6th",
   title: "Island Hopping in Paradise",
   location: "Port Barton, Palawan",
-  heroImage: philippinesDay03,
+  heroImage: phboattrip,
   description:
     "A full day of island hopping in Port Barton’s turquoise waters—snorkel vibrant reefs, relax on palm-fringed beaches, and enjoy island picnics. Expect 3–4 snorkeling stops (weather dependent) and plenty of saltwater joy.",
   meals: "Breakfast & Lunch",
@@ -204,7 +212,7 @@ highlights: [
   date: "May 11th",
   title: "El Nido Island Hopping Adventure",
   location: "El Nido Islands, Palawan",
-  heroImage: philippinesDay08,
+  heroImage: phelnido,
   description:
     "Cruise the Bacuit Archipelago’s secret lagoons, hidden coves, and jaw-dropping beaches. A full day of swimming, snorkeling, kayaking, and a delicious Filipino-style island lunch. (3–5 island stops, weather dependent.)",
   meals: "Breakfast & Lunch",
