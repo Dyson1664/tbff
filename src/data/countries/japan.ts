@@ -11,19 +11,19 @@ import review1 from "@/assets/review-1.png";
 import review2 from "@/assets/review-2.png";
 
 //import japanDay01 from "@/assets/japan-day01-main-shibuya-crossing.jpg";      // Tokyo arrival + Shibuya
-import japanDay01  from "@/assets/japan-day01.jpg";               // Asakusa Sensō-ji / Kaminarimon
+import japanDay01  from "@/assets/japan-day01-groupbb.jpg";               // Asakusa Sensō-ji / Kaminarimon
 
 import japanDay02  from "@/assets/japan-day02-main-sensoji.jpg";               // Asakusa Sensō-ji / Kaminarimon
 import japanDay03  from "@/assets/japan-day03-group.jpg";           // Meiji Shrine + Harajuku/Golden Gai
 import japanDay04  from "@/assets/japan-day04-main-hakone-mt-fuji.jpg";        // Hakone Loop / Mt. Fuji views
 import japanDay05  from "@/assets/japan-day05-main-fushimi-inari.jpg";
 
-import japantea from "@/assets/japan-tea.jpg";
-import japansword from "@/assets/japan-sword.jpg";
+import japantea from "@/assets/japan-tea2.jpg";
+import japansword from "@/assets/japan-sword2.jpg";
 
         // Fushimi Inari torii gates
 import japanDay06  from "@/assets/japan-day06-main-nara-deer-park.jpg";        // Nara Deer Park + samurai class
-import japanDay07  from "@/assets/japan-day07-main-kyoto-farewell.jpg";        // Kyoto checkout / farewell
+import japanDay07  from "@/assets/japan-last-day.jpg";        // Kyoto checkout / farewell
 
 import tile01  from "@/assets/japan-tile01.jpg";
 import tile02  from "@/assets/japan-tile02.jpg";
