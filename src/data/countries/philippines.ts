@@ -55,6 +55,12 @@ export const philippinesData = {
   startDate: "May 4th",
   overviewGallery2x:[philippinesDay03, philippinesHero4, philippinesDay04, philippinesDay08],
   route: ["Manila", "Port Barton", "Wonderland", "El Nido"],
+  tags: [
+    { emoji: "🏖️", label: "Beach" },
+    { emoji: "🚀", label: "Adventure" },
+    { emoji: "🏝️", label: "Island Hopping" },
+    { emoji: "⏱️", label: "Under 2 Weeks" },
+  ],
   aboutDescription: [
     "Discover the incredible diversity of the Philippines, an archipelago of over 7,000 islands offering pristine beaches, ancient rice terraces, and warm Filipino hospitality. From the bustling streets of Manila to the remote beauty of Palawan and Banaue.",
     "Experience world-class diving, UNESCO World Heritage sites, and some of the most beautiful islands on Earth. This journey combines adventure, relaxation, and cultural immersion in one of Southeast Asia's most stunning destinations."
