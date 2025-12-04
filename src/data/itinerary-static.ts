@@ -12,7 +12,7 @@ export const STATIC_STYLES = {
 
 export const STATIC_TEXT = {
   aboutTitle: "About This Trip",
-  itineraryTitle: "Your Itinerary",
+  itineraryTitle: "Itinerary",
   summaryTitle: "Trip Summary",
   includedTitle: "What's Included",
   bookNow: "Book This Trip Now",
