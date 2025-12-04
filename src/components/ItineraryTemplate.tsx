@@ -297,11 +297,11 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
         )}
 
         {/* Trip title - centered */}
-        <h2 className="text-3xl font-bold text-foreground text-center mb-4">{data.duration} | {data.title}</h2>
+        <h2 className="text-3xl font-bold text-foreground text-center mb-6">{data.duration} | {data.title}</h2>
 
         {/* Category Tags */}
         {data.tags && data.tags.length > 0 && (
-          <div className="mb-8">
+          <div className="mb-6">
             <CategoryTags tags={data.tags} />
           </div>
         )}
