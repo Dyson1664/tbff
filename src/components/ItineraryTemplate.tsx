@@ -1,6 +1,7 @@
 import { DayLayout } from "@/components/DayLayout";
 import Navbar from "@/components/Navbar";
 import { Home, Zap, Plane, Users, UtensilsCrossed, TreePine, MapPin, Star, X } from "lucide-react";
+import { CategoryTags, CategoryTag } from "@/components/CategoryTags";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -78,6 +79,7 @@ interface CountryData {
   overviewGallery?: string[];
   overviewGallery2x?: (string | null)[];  // <-- new optional gallery for hero left grid
   route?: string[];
+  tags?: CategoryTag[];
   aboutDescription: string[];
   aboutImages: string[];
   whatsIncludedHighlights?: WhatsIncludedHighlight[];
@@ -287,15 +289,20 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
           px-4 md:px-8 py-8 rounded-2xl">
         
-        {/* Trip title - centered */}
-        <h2 className="text-3xl font-bold text-foreground text-center mb-8">{data.duration} | {data.title}</h2>
-        
         {/* Route: full width */}
         {Array.isArray(data.route) && data.route.length > 1 && (
-          <div className="w-full mb-8">
+          <div className="w-full mb-6">
             <ResponsiveRoute stops={data.route} slug={data.slug} />
           </div>
         )}
+
+        {/* Category Tags */}
+        {data.tags && data.tags.length > 0 && (
+          <CategoryTags tags={data.tags} />
+        )}
+        
+        {/* Trip title - centered */}
+        <h2 className="text-3xl font-bold text-foreground text-center mb-8">{data.duration} | {data.title}</h2>
 
         {/* Content grid: about text and highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
