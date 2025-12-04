@@ -171,31 +171,43 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
 
   const isJapan = slug === "japan";
 
+  // Check if tablet size (768px to 1024px)
+  const [isTablet, setIsTablet] = React.useState(false);
+  
+  React.useEffect(() => {
+    const checkTablet = () => {
+      setIsTablet(window.innerWidth >= 768 && window.innerWidth < 1024);
+    };
+    checkTablet();
+    window.addEventListener("resize", checkTablet);
+    return () => window.removeEventListener("resize", checkTablet);
+  }, []);
+
   // size presets (more aggressive scaling to fit)
   const presets = {
     normal: {
-      chip: "px-2.5 py-1 text-[13px] gap-1",
-      icon: "h-4 w-4",
-      connectorW: "w-5",
-      labelMax: "max-w-[140px]",
+      chip: isTablet ? "px-2 py-0.5 text-xs gap-1" : "px-2.5 py-1 text-[13px] gap-1",
+      icon: isTablet ? "h-3.5 w-3.5" : "h-4 w-4",
+      connectorW: isTablet ? "w-3" : "w-5",
+      labelMax: isTablet ? "max-w-[90px]" : "max-w-[140px]",
     },
     compact: {
-      chip: "px-2 py-0.5 text-xs gap-1",
-      icon: "h-3.5 w-3.5",
-      connectorW: "w-4",
-      labelMax: "max-w-[120px]",
+      chip: isTablet ? "px-1.5 py-0.5 text-[11px] gap-0.5" : "px-2 py-0.5 text-xs gap-1",
+      icon: isTablet ? "h-3 w-3" : "h-3.5 w-3.5",
+      connectorW: isTablet ? "w-2" : "w-4",
+      labelMax: isTablet ? "max-w-[75px]" : "max-w-[120px]",
     },
     tight: {
-      chip: "px-1.5 py-0.5 text-xs gap-0.5",
-      icon: "h-3.5 w-3.5",
-      connectorW: "w-3",
-      labelMax: "max-w-[100px]",
+      chip: isTablet ? "px-1 py-0.5 text-[10px] gap-0.5" : "px-1.5 py-0.5 text-xs gap-0.5",
+      icon: isTablet ? "h-3 w-3" : "h-3.5 w-3.5",
+      connectorW: isTablet ? "w-2" : "w-3",
+      labelMax: isTablet ? "max-w-[65px]" : "max-w-[100px]",
     },
   }[mode];
 
   return (
     <div
-      className={`w-full rounded-none bg-transparent p-0 shadow-none ${
+      className={`w-full rounded-none bg-transparent p-0 shadow-none md:max-w-full lg:max-w-none ${
         isJapan ? "flex flex-col items-center" : ""
       }`}
       style={{ border: 0 }}
