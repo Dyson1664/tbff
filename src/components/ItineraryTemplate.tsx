@@ -289,13 +289,6 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
           px-4 md:px-8 py-8 md:rounded-t-2xl md:rounded-b-none">
         
-        {/* Route: mobile only */}
-        {Array.isArray(data.route) && data.route.length > 1 && (
-          <div className="w-full mb-6 md:hidden">
-            <ResponsiveRoute stops={data.route} slug={data.slug} />
-          </div>
-        )}
-
         {/* Trip title - centered */}
         <h2 className="text-3xl font-bold text-foreground text-center mb-6">{data.duration} | {data.title}</h2>
 
@@ -322,6 +315,13 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
             <TripHighlights data={data} />
           </div>
         </div>
+
+        {/* Route: mobile only - below highlights */}
+        {Array.isArray(data.route) && data.route.length > 1 && (
+          <div className="w-full mt-6 md:hidden">
+            <ResponsiveRoute stops={data.route} slug={data.slug} />
+          </div>
+        )}
       </div>
     </div>
   );
