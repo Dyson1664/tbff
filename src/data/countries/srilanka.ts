@@ -42,6 +42,7 @@ export const srilankaData = {
   tags: [
     { emoji: "🚀", label: "Adventure" },
     { emoji: "🪭", label: "Culture" },
+    { emoji: "🏖️", label: "Beach" },
     { emoji: "🧳", label: "Solo" }
   ],
   subtitle: "Discover the Pearl of the Indian Ocean with its ancient heritage and stunning landscapes",
