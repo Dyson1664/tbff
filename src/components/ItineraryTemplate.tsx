@@ -287,7 +287,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
       <div className="bg-white md:bg-background
           w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
           md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-          px-4 md:px-8 py-8 md:rounded-2xl">
+          px-4 md:px-8 py-8 md:rounded-t-2xl">
         
         {/* Trip title - centered */}
         <h2 className="text-3xl font-bold text-foreground text-center mb-6">{data.duration} | {data.title}</h2>
@@ -409,7 +409,7 @@ const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?
       className="bg-white md:bg-background
                  w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                  md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-                 py-8 md:pt-4 md:pb-10 md:rounded-2xl">
+                 py-8 md:pt-4 md:pb-10 md:rounded-b-2xl">
       <div className="max-w-6xl mx-auto px-4 md:px-4">
         {/* Route: desktop only - above What's Included, centered */}
         {Array.isArray(route) && route.length > 1 && (
