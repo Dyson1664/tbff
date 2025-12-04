@@ -418,7 +418,7 @@ const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?
               <ResponsiveRoute stops={route} slug={slug} />
             </div>
             {/* Grey divider/spacer between route and What's Included */}
-            <div className="hidden md:block h-8 bg-muted/50 -mx-4 md:-mx-4 my-8 rounded-lg" />
+            <div className="hidden md:block h-8 bg-muted/50 -mx-4 md:-mx-4 my-8" />
           </>
         )}
 
