@@ -296,13 +296,15 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           </div>
         )}
 
+        {/* Trip title - centered */}
+        <h2 className="text-3xl font-bold text-foreground text-center mb-4">{data.duration} | {data.title}</h2>
+
         {/* Category Tags */}
         {data.tags && data.tags.length > 0 && (
-          <CategoryTags tags={data.tags} />
+          <div className="mb-8">
+            <CategoryTags tags={data.tags} />
+          </div>
         )}
-        
-        {/* Trip title - centered */}
-        <h2 className="text-3xl font-bold text-foreground text-center mb-8">{data.duration} | {data.title}</h2>
 
         {/* Content grid: about text and highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
