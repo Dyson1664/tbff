@@ -424,7 +424,7 @@ const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?
           </>
         )}
 
-        <div className="md:bg-background md:rounded-2xl md:px-8 md:pt-6">
+        <div className="md:bg-background md:rounded-2xl md:px-8 md:pt-6 md:pb-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
           </div>
