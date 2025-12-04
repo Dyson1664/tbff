@@ -797,11 +797,11 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             
             {/* Daily Itinerary (full-bleed on mobile) */}
             <div
-              className="bg-white md:bg-transparent
+              className="bg-white md:bg-background
                          w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
-                         md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0 rounded-2xl mt-10 md:mt-16">
-              {/* Itinerary Title - connected to container */}
-              <div className="text-center pt-8 pb-6">
+                         md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0 md:rounded-2xl mt-10 md:mt-16">
+              {/* Itinerary Title - left aligned, inside container */}
+              <div className="px-4 md:px-8 pt-8 pb-4">
                 <h2 className="text-3xl font-bold text-primary">{STATIC_TEXT.itineraryTitle}</h2>
               </div>
               {itineraryContent}
