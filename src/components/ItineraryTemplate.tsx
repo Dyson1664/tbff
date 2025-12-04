@@ -407,11 +407,11 @@ const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?
       className="bg-white md:bg-background
                  w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                  md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-                 py-8 md:py-10 md:rounded-b-2xl md:rounded-t-none">
+                 py-8 md:pt-4 md:pb-10 md:rounded-b-2xl md:rounded-t-none">
       <div className="max-w-6xl mx-auto px-4 md:px-4">
-        {/* Route: desktop only - above What's Included */}
+        {/* Route: desktop only - above What's Included, centered */}
         {Array.isArray(route) && route.length > 1 && (
-          <div className="hidden md:block w-full mb-8">
+          <div className="hidden md:flex justify-center w-full mb-6">
             <ResponsiveRoute stops={route} slug={slug} />
           </div>
         )}
