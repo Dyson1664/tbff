@@ -20,7 +20,7 @@ export const CategoryTags = memo(({ tags }: CategoryTagsProps) => {
           className="inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full"
         >
           <span className="text-lg">{tag.emoji}</span>
-          <span className="text-sm font-semibold text-primary">{tag.label}</span>
+          <span className={`text-sm font-semibold ${tag.label === "Adventure" ? "text-black" : "text-primary"}`}>{tag.label}</span>
         </div>
       ))}
     </div>
