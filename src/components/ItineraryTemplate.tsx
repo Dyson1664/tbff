@@ -282,16 +282,16 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
   }, [data.title]);
 
   return (
-    <div className="mb-16">
+    <div className="mb-8 md:mb-0">
       {/* Single white container with everything */}
       <div className="bg-white md:bg-background
           w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
           md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-          px-4 md:px-8 py-8 rounded-2xl">
+          px-4 md:px-8 py-8 md:rounded-t-2xl md:rounded-b-none">
         
-        {/* Route: full width */}
+        {/* Route: mobile only */}
         {Array.isArray(data.route) && data.route.length > 1 && (
-          <div className="w-full mb-6">
+          <div className="w-full mb-6 md:hidden">
             <ResponsiveRoute stops={data.route} slug={data.slug} />
           </div>
         )}
@@ -387,7 +387,7 @@ const IncludedSection = memo(
 
 
 
-const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsIncludedHighlight[] }) => {
+const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?: WhatsIncludedHighlight[]; route?: string[]; slug?: string }) => {
   if (!highlights || highlights.length === 0) return null;
 
   const handleLinkClick = useCallback((url: string) => {
@@ -404,11 +404,18 @@ const WhatsIncludedHighlights = memo(({ highlights }: { highlights?: WhatsInclud
 
   return (
     <div
-  className="bg-white md:bg-background
-             w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
-             md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
-             py-8 md:py-10 rounded-2xl">
-    <div className="max-w-6xl mx-auto px-4 md:px-4">
+      className="bg-white md:bg-background
+                 w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
+                 md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
+                 py-8 md:py-10 md:rounded-b-2xl md:rounded-t-none">
+      <div className="max-w-6xl mx-auto px-4 md:px-4">
+        {/* Route: desktop only - above What's Included */}
+        {Array.isArray(route) && route.length > 1 && (
+          <div className="hidden md:block w-full mb-8">
+            <ResponsiveRoute stops={route} slug={slug} />
+          </div>
+        )}
+
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
         </div>
@@ -780,7 +787,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
             )}
 
             {/* What's Included Highlights */}
-            <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} />
+            <WhatsIncludedHighlights highlights={data.whatsIncludedHighlights} route={data.route} slug={data.slug} />
             
             {/* Itinerary Title */}
             <div className="text-center mt-10 md:mt-16 mb-8">
