@@ -131,6 +131,11 @@ export const indiaData = {
   id: "india-journey", 
   slug: "india-journey",
   title: "India Journey",
+  tags: [
+    { emoji: "🚀", label: "Adventure" },
+    { emoji: "🪭", label: "Culture" },
+    { emoji: "🧳", label: "Solo" }
+  ],
   subtitle: "Immerse yourself in the colors, flavors, and ancient wisdom of incredible India",
   location: "India",
   duration: "14 days",
