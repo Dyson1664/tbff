@@ -420,7 +420,7 @@ const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?
               </div>
             </div>
             {/* Grey gap between route and what's included */}
-            <div className="hidden md:block h-3 bg-muted/40 -mx-4" />
+            <div className="hidden md:block h-4 bg-muted/40 -mx-4" />
           </>
         )}
 
