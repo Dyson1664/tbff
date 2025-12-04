@@ -39,6 +39,11 @@ export const srilankaData = {
   id: "srilanka-serenity",
   slug: "sri-lanka",
   title: "Sri Lanka Explorer",
+  tags: [
+    { emoji: "🚀", label: "Adventure" },
+    { emoji: "🪭", label: "Culture" },
+    { emoji: "🧳", label: "Solo" }
+  ],
   subtitle: "Discover the Pearl of the Indian Ocean with its ancient heritage and stunning landscapes",
   location: "Sri Lanka",
   duration: "11 days",
