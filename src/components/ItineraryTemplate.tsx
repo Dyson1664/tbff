@@ -406,7 +406,7 @@ const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?
 
   return (
     <div
-      className="bg-white md:bg-muted/40
+      className="bg-white md:bg-transparent
                  w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]
                  md:w-auto md:left-auto md:right-auto md:ml-0 md:mr-0
                  py-8 md:py-0">
@@ -414,17 +414,17 @@ const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?
         {/* Route: desktop only - above What's Included, centered */}
         {Array.isArray(route) && route.length > 1 && (
           <>
-            <div className="hidden md:block bg-background rounded-b-2xl pb-6 -mx-4 px-4">
+            <div className="hidden md:block bg-background rounded-b-2xl pb-6 px-8">
               <div className="flex justify-center w-full">
                 <ResponsiveRoute stops={route} slug={slug} />
               </div>
             </div>
             {/* Grey gap between route and what's included */}
-            <div className="hidden md:block h-4 bg-muted/40 -mx-4" />
+            <div className="hidden md:block h-4" />
           </>
         )}
 
-        <div className="md:bg-background md:rounded-2xl md:-mx-4 md:px-4 md:pt-6 md:mt-2">
+        <div className="md:bg-background md:rounded-2xl md:px-8 md:pt-6">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
           </div>
