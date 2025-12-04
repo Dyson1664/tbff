@@ -413,42 +413,42 @@ const WhatsIncludedHighlights = memo(({ highlights, route, slug }: { highlights?
       <div className="max-w-6xl mx-auto px-4 md:px-4">
         {/* Route: desktop only - above What's Included, centered */}
         {Array.isArray(route) && route.length > 1 && (
-          <>
-            <div className="hidden md:flex justify-center w-full">
+          <div className="hidden md:block bg-background rounded-b-2xl pb-6 -mx-4 px-4 mb-4">
+            <div className="flex justify-center w-full">
               <ResponsiveRoute stops={route} slug={slug} />
             </div>
-            {/* Grey divider/spacer between route and What's Included */}
-            <div className="hidden md:block h-8 bg-muted/50 -mx-4 md:-mx-4 my-8" />
-          </>
+          </div>
         )}
 
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
-        </div>
+        <div className="md:bg-background md:rounded-t-2xl md:-mx-4 md:px-4 md:pt-6">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">WHAT'S INCLUDED</h2>
+          </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
-          {highlights.map((highlight, index) => {
-            const IconComponent = highlight.icon;
-            return (
-              <div key={index} className="text-center space-y-3">
-                <div className="flex justify-center">
-                  <IconComponent className="w-12 h-12 text-primary" strokeWidth={1.25} />
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
+            {highlights.map((highlight, index) => {
+              const IconComponent = highlight.icon;
+              return (
+                <div key={index} className="text-center space-y-3">
+                  <div className="flex justify-center">
+                    <IconComponent className="w-12 h-12 text-primary" strokeWidth={1.25} />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground" dangerouslySetInnerHTML={{ __html: highlight.title }} />
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {highlight.description}
+                  </p>
+                  {highlight.link && (
+                    <button 
+                      onClick={() => handleLinkClick(highlight.link.url)}
+                      className="text-primary hover:text-primary/80 underline text-xs cursor-pointer"
+                    >
+                      {highlight.link.text}
+                    </button>
+                  )}
                 </div>
-                <h3 className="text-lg font-bold text-foreground" dangerouslySetInnerHTML={{ __html: highlight.title }} />
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {highlight.description}
-                </p>
-                {highlight.link && (
-                  <button 
-                    onClick={() => handleLinkClick(highlight.link.url)}
-                    className="text-primary hover:text-primary/80 underline text-xs cursor-pointer"
-                  >
-                    {highlight.link.text}
-                  </button>
-                )}
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
