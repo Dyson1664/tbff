@@ -119,7 +119,7 @@ const TBFFFooter = () => {
                   <Link 
                     key={trip.title}
                     to={trip.link} 
-                    className="block hover:text-primary transition-colors"
+                    className="block hover:text-[#fbddda] transition-colors"
                     onClick={() => window.scrollTo(0, 0)}
                   >
                     {trip.title}
@@ -135,14 +135,14 @@ const TBFFFooter = () => {
             <div className="space-y-3 text-sm">
               <Link 
                 to="/contact" 
-                className="block hover:text-primary transition-colors"
+                className="block hover:text-[#fbddda] transition-colors"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Contact Us
               </Link>
               <Link 
                 to="/faqs" 
-                className="block hover:text-primary transition-colors"
+                className="block hover:text-[#fbddda] transition-colors"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 FAQs
@@ -150,7 +150,7 @@ const TBFFFooter = () => {
               
               <Link 
                 to="/terms" 
-                className="block hover:text-primary transition-colors"
+                className="block hover:text-[#fbddda] transition-colors"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Terms & Conditions
@@ -161,14 +161,14 @@ const TBFFFooter = () => {
             <div className="space-y-3 text-sm">
               <Link 
                 to="/pre-departure" 
-                className="block hover:text-primary transition-colors"
+                className="block hover:text-[#fbddda] transition-colors"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Pre-departure Info
               </Link>
               <Link 
                 to="/travel-safety" 
-                className="block hover:text-primary transition-colors"
+                className="block hover:text-[#fbddda] transition-colors"
                 onClick={() => window.scrollTo(0, 0)}
               >
                 Travel Safety
@@ -188,13 +188,13 @@ const TBFFFooter = () => {
           <div className="flex space-x-6 mt-4 md:mt-0 text-sm text-gray-400">
             <Link 
               to="/terms" 
-              className="hover:text-primary transition-colors"
+              className="hover:text-[#fbddda] transition-colors"
               onClick={() => window.scrollTo(0, 0)}
             >
               Terms & Conditions
             </Link>
             <span>•</span>
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-[#fbddda] transition-colors">Privacy Policy</a>
           </div>
         </div>
       </div>
