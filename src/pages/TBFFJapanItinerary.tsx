@@ -31,6 +31,9 @@ const TBFFJapanItinerary = () => {
         .tbff-theme [class*="gradient"] {
           background: #506345 !important;
         }
+        .tbff-theme .bg-primary\/10 {
+          background-color: #fbddda !important;
+        }
       `}</style>
       <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} />
     </div>
