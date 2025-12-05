@@ -20,6 +20,12 @@ const TBFFJapanItinerary = () => {
         .tbff-theme .bg-primary [class*="text-white"] {
           color: #506345 !important;
         }
+        .tbff-theme .fill-primary {
+          fill: #506345 !important;
+        }
+        .tbff-theme .text-primary {
+          color: #506345 !important;
+        }
       `}</style>
       <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} />
     </div>
