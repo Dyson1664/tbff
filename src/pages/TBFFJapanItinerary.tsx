@@ -1,5 +1,6 @@
 import { ItineraryTemplate } from "@/components/ItineraryTemplate";
 import { japanData } from "@/data/countries/japan";
+import TBFFFooter from "@/components/common/TBFFFooter";
 
 const TBFFJapanItinerary = () => {
   // CSS filter to shift teal (#0FC2BF) to olive green (#506345)
@@ -38,7 +39,7 @@ const TBFFJapanItinerary = () => {
           color: #506345 !important;
         }
       `}</style>
-      <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} />
+      <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} FooterComponent={TBFFFooter} />
     </div>
   );
 };
