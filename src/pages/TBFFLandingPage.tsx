@@ -56,7 +56,7 @@ interface Destination {
 }
 
 const TBFF_DESTINATIONS: readonly Destination[] = [
-  { name: "Thailand", image: thailandHero, comingSoon: true },
+  { name: "Thailand", image: thailandHero, route: "/project/tbff/thailand-itinerary" },
   { name: "Sri Lanka", image: srilankaHero, route: "/project/tbff/srilanka-itinerary" },
   { name: "Philippines", image: philippinesHero, route: "/project/tbff/philippines-itinerary" },
   { name: "Japan", image: japanHero, route: "/project/tbff/japan-itinerary" },
