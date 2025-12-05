@@ -11,11 +11,13 @@ const TBFFJapanItinerary = () => {
   return (
     <div className="tbff-theme">
       <style>{`
-        .tbff-theme .bg-white {
+        .tbff-theme {
           background-color: #fbddda !important;
         }
-        .tbff-theme .md\\:bg-white {
-          background-color: #fbddda !important;
+        .tbff-theme .bg-gray-50,
+        .tbff-theme .bg-muted,
+        .tbff-theme [class*="gradient"] {
+          background: #fbddda !important;
         }
       `}</style>
       <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} />
