@@ -16,7 +16,8 @@ const TBFFJapanItinerary = () => {
           color: #506345 !important;
           border-color: #fbddda !important;
         }
-        .tbff-theme .bg-primary .text-white {
+        .tbff-theme .bg-primary .text-white,
+        .tbff-theme .bg-primary [class*="text-white"] {
           color: #506345 !important;
         }
       `}</style>
