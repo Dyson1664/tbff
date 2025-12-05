@@ -43,7 +43,7 @@ const TBFF_TOURS = [
     price: "From $1,299",
     image: philippinesHero,
     tag: "",
-    route: "/philippines-itinerary",
+    route: "/project/tbff/philippines-itinerary",
     overview: "Crystal lagoons, hidden beaches, and island paradise await in the Philippines."
   }
 ] as const;
@@ -58,7 +58,7 @@ interface Destination {
 const TBFF_DESTINATIONS: readonly Destination[] = [
   { name: "Thailand", image: thailandHero, comingSoon: true },
   { name: "Sri Lanka", image: srilankaHero, route: "/project/tbff/srilanka-itinerary" },
-  { name: "Philippines", image: philippinesHero, route: "/philippines-itinerary" },
+  { name: "Philippines", image: philippinesHero, route: "/project/tbff/philippines-itinerary" },
   { name: "Japan", image: japanHero, route: "/project/tbff/japan-itinerary" },
 ] as const;
 
