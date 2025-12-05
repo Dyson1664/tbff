@@ -51,9 +51,6 @@ const TBFFJapanItinerary = () => {
           background: linear-gradient(180deg, #fbddda 0%, #fbddda 50%, #fbddda 100%) !important;
           background-image: repeating-linear-gradient(180deg, transparent, transparent 4px, white 4px, white 8px) !important;
         }
-        .tbff-theme footer {
-          background-color: #efe6dd !important;
-        }
       `}</style>
       <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} FooterComponent={TBFFFooter} />
     </div>
