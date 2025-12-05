@@ -629,7 +629,7 @@ export const ItineraryTemplate = memo(({ data, logoStyle, FooterComponent }: Iti
                   Day {day.day}
                 </h2>
                 <span aria-hidden="true" className="mx-2 text-muted-foreground/40">|</span>
-                <h3 className="min-w-0 break-words text-base md:text-lg font-semibold text-muted-foreground group-hover:text-[#fbddda] transition-colors duration-200">
+                <h3 className="min-w-0 break-words text-base md:text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">
                   {day.title}
                 </h3>
               </div>
