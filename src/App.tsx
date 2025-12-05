@@ -30,6 +30,7 @@ import NotFound from "./pages/NotFound";
 import TBFFLandingPage from "./pages/TBFFLandingPage";
 import TBFFJapanItinerary from "./pages/TBFFJapanItinerary";
 import TBFFSriLankaItinerary from "./pages/TBFFSriLankaItinerary";
+import TBFFPhilippinesItinerary from "./pages/TBFFPhilippinesItinerary";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/project/tbff" element={<TBFFLandingPage />} />
           <Route path="/project/tbff/japan-itinerary" element={<TBFFJapanItinerary />} />
           <Route path="/project/tbff/srilanka-itinerary" element={<TBFFSriLankaItinerary />} />
+          <Route path="/project/tbff/philippines-itinerary" element={<TBFFPhilippinesItinerary />} />
           
           {/* Destination Pages */}
           <Route path="/france" element={<FranceDestination />} />
