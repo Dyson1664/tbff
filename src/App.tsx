@@ -28,6 +28,7 @@ import TermsConditions from "./pages/TermsConditions";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
 import TBFFLandingPage from "./pages/TBFFLandingPage";
+import TBFFJapanItinerary from "./pages/TBFFJapanItinerary";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/project/tbff" element={<TBFFLandingPage />} />
+          <Route path="/project/tbff/japan-itinerary" element={<TBFFJapanItinerary />} />
           
           {/* Destination Pages */}
           <Route path="/france" element={<FranceDestination />} />

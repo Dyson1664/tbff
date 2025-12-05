@@ -21,7 +21,7 @@ const TBFF_TOURS = [
     price: "From $1,899",
     image: japanHero,
     tag: "",
-    route: "/japan-itinerary",
+    route: "/project/tbff/japan-itinerary",
     overview: "Neon cities to Zen temples—Tokyo to Kyoto by bullet train, sushi, and shrines."
   },
   {
@@ -59,7 +59,7 @@ const TBFF_DESTINATIONS: readonly Destination[] = [
   { name: "Thailand", image: thailandHero, comingSoon: true },
   { name: "Sri Lanka", image: srilankaHero, route: "/srilanka-itinerary" },
   { name: "Philippines", image: philippinesHero, route: "/philippines-itinerary" },
-  { name: "Japan", image: japanHero, route: "/japan-itinerary" },
+  { name: "Japan", image: japanHero, route: "/project/tbff/japan-itinerary" },
 ] as const;
 
 // Memoized destination card component
