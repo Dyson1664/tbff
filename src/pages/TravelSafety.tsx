@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/common/Footer";
 import {
@@ -170,8 +171,8 @@ const TravelSafety = React.memo(() => {
           </div>
 
           {/* TBFF Link */}
-          <a 
-            href="/project/tbff" 
+          <Link 
+            to="/project/tbff" 
             className="block bg-primary/10 border border-primary/20 rounded-2xl p-6 md:p-8 shadow-sm hover:bg-primary/15 transition-colors"
           >
             <div className="flex items-center gap-3">
@@ -181,7 +182,7 @@ const TravelSafety = React.memo(() => {
                 <p className="text-muted-foreground mt-1">Check out our featured group travel experiences.</p>
               </div>
             </div>
-          </a>
+          </Link>
 
           {/* 2. Health First */}
           <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
