@@ -32,7 +32,7 @@ const TBFF_TOURS = [
     price: "From $1,449",
     image: srilankaDay06,
     tag: "",
-    route: "/srilanka-itinerary",
+    route: "/project/tbff/srilanka-itinerary",
     overview: "From Colombo's vibrant streets to Ella's trails and Arugam Bay's waves—Sri Lanka awaits."
   },
   {
@@ -57,7 +57,7 @@ interface Destination {
 
 const TBFF_DESTINATIONS: readonly Destination[] = [
   { name: "Thailand", image: thailandHero, comingSoon: true },
-  { name: "Sri Lanka", image: srilankaHero, route: "/srilanka-itinerary" },
+  { name: "Sri Lanka", image: srilankaHero, route: "/project/tbff/srilanka-itinerary" },
   { name: "Philippines", image: philippinesHero, route: "/philippines-itinerary" },
   { name: "Japan", image: japanHero, route: "/project/tbff/japan-itinerary" },
 ] as const;
