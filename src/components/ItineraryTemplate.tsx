@@ -301,7 +301,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
         )}
 
         {/* Content grid: about text and highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           {/* Left col: about text */}
           <div className="order-1 md:order-none space-y-6 w-full">
             {data.aboutDescription.map((paragraph, index) => (
