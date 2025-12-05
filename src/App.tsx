@@ -27,6 +27,7 @@ import FAQs from "./pages/FAQs";
 import TermsConditions from "./pages/TermsConditions";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
+import TBFFLandingPage from "./pages/TBFFLandingPage";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
       <AppRouter>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/project/tbff" element={<TBFFLandingPage />} />
           
           {/* Destination Pages */}
           <Route path="/france" element={<FranceDestination />} />
