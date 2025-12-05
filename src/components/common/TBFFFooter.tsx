@@ -21,7 +21,7 @@ const TBFFFooter = () => {
                   <span className="text-gray-400 text-sm">Logo Here</span>
                 </div>
                 {/* Social Media Icons */}
-                <div className="flex space-x-3">
+                <div className="flex space-x-3 mt-auto">
                   <a
                     href="#"
                     target="_blank"
@@ -70,7 +70,7 @@ const TBFFFooter = () => {
                   className="w-40 h-auto max-w-full object-contain mx-auto mb-4"
                 />
                 {/* Social Media Icons */}
-                <div className="flex space-x-3">
+                <div className="flex space-x-3 mt-auto">
                   <a
                     href="https://www.tiktok.com/@imaginebeyondtrav"
                     target="_blank"
