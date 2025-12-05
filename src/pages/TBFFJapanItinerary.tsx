@@ -34,6 +34,9 @@ const TBFFJapanItinerary = () => {
         .tbff-theme [class*="bg-primary"] {
           background-color: #fbddda !important;
         }
+        .tbff-theme .text-foreground {
+          color: #506345 !important;
+        }
       `}</style>
       <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} />
     </div>
