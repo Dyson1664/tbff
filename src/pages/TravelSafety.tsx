@@ -169,6 +169,20 @@ const TravelSafety = React.memo(() => {
             </ul>
           </div>
 
+          {/* TBFF Link */}
+          <a 
+            href="/project/tbff" 
+            className="block bg-primary/10 border border-primary/20 rounded-2xl p-6 md:p-8 shadow-sm hover:bg-primary/15 transition-colors"
+          >
+            <div className="flex items-center gap-3">
+              <Globe className="w-6 h-6 text-primary" />
+              <div>
+                <h3 className="text-xl font-semibold text-foreground">Explore TBFF Tours</h3>
+                <p className="text-muted-foreground mt-1">Check out our featured group travel experiences.</p>
+              </div>
+            </div>
+          </a>
+
           {/* 2. Health First */}
           <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
