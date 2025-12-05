@@ -38,6 +38,19 @@ const TBFFJapanItinerary = () => {
         .tbff-theme .text-foreground {
           color: #506345 !important;
         }
+        /* Transportation dotted lines - override hardcoded teal to pink */
+        .tbff-theme [style*="0FC2BF"] {
+          background: #fbddda !important;
+        }
+        .tbff-theme .w-1.h-16.bg-primary,
+        .tbff-theme .md\\:w-60.md\\:h-1.bg-primary {
+          background-color: #fbddda !important;
+        }
+        .tbff-theme .w-1.h-16.bg-primary > div,
+        .tbff-theme .md\\:w-60.md\\:h-1.bg-primary > div {
+          background: linear-gradient(180deg, #fbddda 0%, #fbddda 50%, #fbddda 100%) !important;
+          background-image: repeating-linear-gradient(180deg, transparent, transparent 4px, white 4px, white 8px) !important;
+        }
       `}</style>
       <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} FooterComponent={TBFFFooter} />
     </div>
