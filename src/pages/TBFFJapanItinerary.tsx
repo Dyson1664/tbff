@@ -31,9 +31,7 @@ const TBFFJapanItinerary = () => {
         .tbff-theme [class*="gradient"] {
           background: #506345 !important;
         }
-        .tbff-theme .bg-primary\/10,
-        .tbff-theme [class*="bg-primary/10"],
-        .tbff-theme [class*="bg-primary\\/10"] {
+        .tbff-theme [class*="bg-primary"] {
           background-color: #fbddda !important;
         }
       `}</style>
