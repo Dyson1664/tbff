@@ -2,7 +2,13 @@ import { ItineraryTemplate } from "@/components/ItineraryTemplate";
 import { japanData } from "@/data/countries/japan";
 
 const TBFFJapanItinerary = () => {
-  return <ItineraryTemplate data={japanData} />;
+  // CSS filter to shift teal (#0FC2BF) to olive green (#506345)
+  // Using filter combination to approximate the target color
+  const tbffLogoStyle = {
+    filter: 'brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(70deg) brightness(95%) contrast(90%)'
+  };
+
+  return <ItineraryTemplate data={japanData} logoStyle={tbffLogoStyle} />;
 };
 
 export default TBFFJapanItinerary;
