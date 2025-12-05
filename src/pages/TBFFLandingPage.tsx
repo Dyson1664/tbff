@@ -2,7 +2,7 @@ import { useMemo, memo } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { TripCard } from "@/components/common/TripCard";
-import Footer from "@/components/common/Footer";
+import TBFFFooter from "@/components/common/TBFFFooter";
 
 // Import destination images
 import thailandHero from "@/assets/thailand-hero.jpg";
@@ -206,7 +206,7 @@ export default memo(function TBFFLandingPage() {
       </section>
 
       {/* Footer */}
-      <Footer />
+      <TBFFFooter />
     </div>
   );
 });

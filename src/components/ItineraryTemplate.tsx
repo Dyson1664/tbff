@@ -104,6 +104,7 @@ interface CountryData {
 interface ItineraryTemplateProps {
   data: CountryData;
   logoStyle?: React.CSSProperties;
+  FooterComponent?: React.ComponentType;
 }
 
 // Review Section Component
@@ -556,7 +557,7 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
 
 
 
-export const ItineraryTemplate = memo(({ data, logoStyle }: ItineraryTemplateProps) => {
+export const ItineraryTemplate = memo(({ data, logoStyle, FooterComponent }: ItineraryTemplateProps) => {
   // Memoize derived values
   const countryName = useMemo(() => {
     // Special case for Sri Lanka to keep both words
@@ -856,7 +857,7 @@ export const ItineraryTemplate = memo(({ data, logoStyle }: ItineraryTemplatePro
       </div>
 
       {/* Footer */}
-      <Footer />
+      {FooterComponent ? <FooterComponent /> : <Footer />}
     </div>
   );
 });
