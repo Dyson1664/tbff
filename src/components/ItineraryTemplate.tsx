@@ -103,6 +103,7 @@ interface CountryData {
 
 interface ItineraryTemplateProps {
   data: CountryData;
+  logoStyle?: React.CSSProperties;
 }
 
 // Review Section Component
@@ -555,7 +556,7 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
 
 
 
-export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
+export const ItineraryTemplate = memo(({ data, logoStyle }: ItineraryTemplateProps) => {
   // Memoize derived values
   const countryName = useMemo(() => {
     // Special case for Sri Lanka to keep both words
@@ -655,7 +656,7 @@ export const ItineraryTemplate = memo(({ data }: ItineraryTemplateProps) => {
 
   return (
     <div className={STATIC_STYLES.gradient}>
-      <Navbar />
+      <Navbar logoStyle={logoStyle} />
       
       {/* Hero Section (custom) */}
         <section className="relative h-[70vh] md:h-[70vh] flex overflow-hidden md:mx-6 lg:mx-12 xl:mx-16 rounded-none md:rounded-2xl mt-0 md:mt-6 bg-transparent md:bg-white p-0 md:p-6 shadow-none md:shadow-sm">
