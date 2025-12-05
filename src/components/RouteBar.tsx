@@ -251,7 +251,7 @@ function DesktopScroller({ stops, slug }: { stops: string[]; slug?: string }) {
           {isJapan && (
             <div className="flex items-center gap-2 mr-3">
               <RouteIcon className="h-5 w-5 text-primary" />
-              <h3 className="text-lg font-semibold">Route</h3>
+              <h3 className="text-lg font-semibold text-[#506345]">Route</h3>
             </div>
           )}
 
