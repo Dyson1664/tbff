@@ -115,6 +115,11 @@ const DestinationCard = memo(({ destination }: { destination: Destination }) => 
 });
 
 export default memo(function TBFFLandingPage() {
+  // CSS filter to shift teal (#0FC2BF) to olive green (#506345)
+  const tbffLogoStyle = {
+    filter: 'brightness(0) saturate(100%) invert(35%) sepia(15%) saturate(600%) hue-rotate(70deg) brightness(95%) contrast(90%)'
+  };
+
   const tourCards = useMemo(() => 
     TBFF_TOURS.map((tour) => (
       <TripCard 
@@ -139,9 +144,32 @@ export default memo(function TBFFLandingPage() {
   );
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="tbff-theme min-h-screen bg-background">
+      <style>{`
+        .tbff-theme .bg-primary {
+          background-color: #fbddda !important;
+          color: #506345 !important;
+          border-color: #fbddda !important;
+        }
+        .tbff-theme .bg-primary .text-white,
+        .tbff-theme .bg-primary [class*="text-white"] {
+          color: #506345 !important;
+        }
+        .tbff-theme .fill-primary {
+          fill: #506345 !important;
+        }
+        .tbff-theme .text-primary {
+          color: #506345 !important;
+        }
+        .tbff-theme .bg-primary\\/10 {
+          background-color: rgba(251, 221, 218, 0.3) !important;
+        }
+        .tbff-theme .hover\\:text-primary:hover {
+          color: #506345 !important;
+        }
+      `}</style>
       {/* Navigation */}
-      <Navbar />
+      <Navbar logoStyle={tbffLogoStyle} />
 
       {/* Video Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
