@@ -211,7 +211,7 @@ const TripHighlights = memo(({ data }: { data: CountryData }) => {
   const highlights = data.highlights || defaultHighlights;
 
   return (
-    <div className="space-y-4">
+    <div>
       {/* Mobile: Just title */}
       <h3 className="md:hidden text-xl font-semibold text-foreground mb-4">Trip Highlights</h3>
       
@@ -312,7 +312,7 @@ const AboutSection = memo(({ data }: { data: CountryData }) => {
           </div>
 
           {/* Right col: highlights */}
-          <div className="order-2 md:order-none w-full">
+          <div className="order-2 md:order-none w-full self-start">
             <TripHighlights data={data} />
           </div>
         </div>
