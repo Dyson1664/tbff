@@ -2,7 +2,6 @@ import { useMemo, memo } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { TripCard } from "@/components/common/TripCard";
-import { FEATURED_TOURS, TOUR_ROUTES } from "@/data/landing";
 import Footer from "@/components/common/Footer";
 
 // Import destination images
@@ -10,6 +9,44 @@ import thailandHero from "@/assets/thailand-hero.jpg";
 import srilankaHero from "@/assets/srilanka-hero.jpg";
 import philippinesHero from "@/assets/philippines-hero.jpg";
 import japanHero from "@/assets/japan-hero.jpg";
+import srilankaDay06 from "@/assets/srilanka-day05-ella-bridge.jpg";
+
+// TBFF specific tours - Japan, Sri Lanka, Philippines
+const TBFF_TOURS = [
+  {
+    id: 1,
+    title: "Japan Golden Route",
+    location: "Tokyo, Japan",
+    duration: "7 days",
+    price: "From $1,899",
+    image: japanHero,
+    tag: "",
+    route: "/japan-itinerary",
+    overview: "Neon cities to Zen temples—Tokyo to Kyoto by bullet train, sushi, and shrines."
+  },
+  {
+    id: 2,
+    title: "Sri Lanka Explorer",
+    location: "Colombo, Sri Lanka",
+    duration: "11 days",
+    price: "From $1,449",
+    image: srilankaDay06,
+    tag: "",
+    route: "/srilanka-itinerary",
+    overview: "From Colombo's vibrant streets to Ella's trails and Arugam Bay's waves—Sri Lanka awaits."
+  },
+  {
+    id: 3,
+    title: "Philippines Island Hopping",
+    location: "Manila, Philippines",
+    duration: "10 days",
+    price: "From $1,299",
+    image: philippinesHero,
+    tag: "",
+    route: "/philippines-itinerary",
+    overview: "Crystal lagoons, hidden beaches, and island paradise await in the Philippines."
+  }
+] as const;
 
 interface Destination {
   name: string;
@@ -79,7 +116,7 @@ const DestinationCard = memo(({ destination }: { destination: Destination }) => 
 
 export default memo(function TBFFLandingPage() {
   const tourCards = useMemo(() => 
-    FEATURED_TOURS.map((tour) => (
+    TBFF_TOURS.map((tour) => (
       <TripCard 
         key={tour.id} 
         id={tour.id.toString()}
@@ -89,7 +126,7 @@ export default memo(function TBFFLandingPage() {
         duration={tour.duration}
         price={tour.price}
         tag={tour.tag}
-        route={TOUR_ROUTES[tour.id]}
+        route={tour.route}
         overview={tour.overview}
       />
     )), []
