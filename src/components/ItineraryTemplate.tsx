@@ -144,7 +144,7 @@ const ReviewSection = memo(({ review }: { review?: { testimonialText: string; au
             {!review.disableReadMore && (
               <button 
                 onClick={() => setIsModalOpen(true)}
-                className="text-[#0FC2BF] hover:underline text-sm font-medium inline-flex items-center gap-1"
+                className="text-[#506345] hover:underline text-sm font-medium inline-flex items-center gap-1"
               >
                 Read more here
               </button>
