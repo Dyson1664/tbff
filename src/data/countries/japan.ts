@@ -1,5 +1,7 @@
 // Import images
 import japanHero from "@/assets/japan-hero.jpg";
+
+
 import japanHero2 from "@/assets/japan-hero2.jpg";
 import japanHero3 from "@/assets/japan-hero3.jpg";
 import japanGarden from "@/assets/japan-garden.jpg";
@@ -30,6 +32,15 @@ import tile02  from "@/assets/japan-tile02.jpg";
 import tile03  from "@/assets/japan-tile03.jpg";
 import tile04  from "@/assets/japan-tile04.jpg";
 
+import japanReel from "@/assets/videos/japan/tbff-japan.mp4";
+import japancover from "@/assets/japan-reel-cover.jpg";
+
+import tokyoReel from "@/assets/videos/japan/tokyo.mp4";
+import kyotoReel from "@/assets/videos/japan/kyoto.mp4";
+
+import tokyocover from "@/assets/tokyo-cover.jpg";
+import kyotocover from "@/assets/kyoto-cover.jpeg";
+
 
 // Import icons for highlights
 import { Home, Zap, Plane, Users, Soup, TreePine } from "lucide-react";
@@ -51,7 +62,8 @@ export const japanData = {
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
   aboutDescription: [
     "Experience the mesmerizing contrast of Japan, where bullet trains glide past ancient temples and neon-lit cities coexist with serene gardens. This 7-day journey takes you from the bustling metropolis of Tokyo to the cultural heart of Kyoto.",
-    "Immerse yourself in Japanese culture through tea ceremonies, temple visits, and authentic culinary experiences. From the iconic Mount Fuji to the peaceful bamboo groves, discover why Japan captivates travelers from around the world."
+    "Immerse yourself in Japanese culture through tea ceremonies, temple visits, and authentic culinary experiences. From the iconic Mount Fuji to the peaceful bamboo groves, discover why Japan captivates travelers from around the world.",
+    "Get ready to make unforgettable memories with your girls as you explore Japan in style and laughter."
   ],
   overviewGallery2x:[tile01, tile04, tile02, tile03],
   aboutImages: [japanGarden, japanTokyo],
@@ -60,22 +72,27 @@ export const japanData = {
 // Trip highlights — Japan (7 days)
 highlights: [
   {
-    title: "Mt. Fuji & Hakone Loop",
-    description:
-      "Glide by ropeway over Owakudani, sail Lake Ashi on the pirate ship, and (weather permitting) catch iconic views of Mt. Fuji.",
-    image: japanmtfuji, // Hakone / Mt. Fuji day
+    title: "Professional Photographer",
+    description: "Capture cinematic moments during your Tokyo shoot experience.",
+    image: japancover,       // cover photo displayed before play
+    video: japanReel      // main Japan reel
+        // optional poster for video overlay
   },
   {
-    title: "Fushimi Inari’s Thousand Gates",
+    title: "Tokyo – Sensō-ji to Shibuya",
     description:
-      "Walk the vermilion torii tunnels of Kyoto’s most photographed shrine—serene at sunrise and pure Kyoto magic.",
-    image: japanDay05, // Fushimi Inari day
+      "From ancient temples to neon nights. A seamless flow through the best of Tokyo.",
+    image: tokyocover,
+    video: tokyoReel      // NEW! your Tokyo reel
+
   },
   {
-    title: "Senso-ji to Golden Gai",
+    title: "Kyoto Magic – Fushimi Inari",
     description:
-      "Start at historic Sensō-ji and end in Shinjuku’s tiny Golden Gai bars—Tokyo’s timeless temples and neon nightlife in one sweep.",
-    image: japanDay03, // Meiji/Harajuku/Golden Gai day (or swap to japanDay02 if you prefer Senso-ji imagery)
+      "Walk through Kyoto’s iconic red torii gates—silent, spiritual, unforgettable.",
+    image: kyotocover,
+    video: kyotoReel     // NEW! your Kyoto reel
+
   },
 ],
 

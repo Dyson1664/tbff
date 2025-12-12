@@ -43,7 +43,7 @@ const App = () => (
       <Sonner />
       <AppRouter>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<TBFFLandingPage />} />
           <Route path="/project/tbff" element={<TBFFLandingPage />} />
           <Route path="/project/tbff/japan-itinerary" element={<TBFFJapanItinerary />} />
           <Route path="/project/tbff/srilanka-itinerary" element={<TBFFSriLankaItinerary />} />
