@@ -141,10 +141,16 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html,
+  body {
+    background-color: #fbddda; /* ✅ forces iOS safe-area background to pink */
+  }
+
   body {
     @apply bg-background text-foreground;
   }
 }
+
 
 /* Custom scrollbar styles for virtual scrolling */
 .scrollbar-thin {
