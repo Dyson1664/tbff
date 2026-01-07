@@ -15,7 +15,18 @@ import indiaDay13 from "@/assets/india-day13-main-taj-mahal.jpg";
 
 import bhutanHero from "@/assets/bhutan-hero.jpg";
 import vietnamHero from "@/assets/vietnam-hero.jpg";
-import { Star, MapPin, Users, Shield, Compass, Globe, Mail } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import {
+  Star,
+  MapPin,
+  CalendarCheck,
+  ShieldCheck,
+  CreditCard,
+  Headphones,
+  Users,
+  MapPinned,
+} from "lucide-react";
+
 
 export interface FeaturedTour {
   id: number;
@@ -48,10 +59,11 @@ export interface Testimonial {
 }
 
 export interface Feature {
-  icon: typeof Users;
+  icon: LucideIcon;
   title: string;
   description: string;
 }
+
 
 export const FEATURED_TOURS: readonly FeaturedTour[] = [
   {
@@ -139,24 +151,47 @@ export const TESTIMONIALS: readonly Testimonial[] = [
   }
 ] as const;
 
-// Extract features to module level
-export const FEATURES: readonly Feature[] = [
+
+
+export const FEATURES = [
   {
+    title: "Hosting group trips since 2021",
+    description:
+      "Thousands of shared moments — built around community, confidence, and unforgettable experiences.",
     icon: Users,
-    title: "Social Travel",
-    description: "Connect with like-minded travelers and make lifelong friends on your journey"
   },
   {
-    icon: Compass,
-    title: "Expert Guides", 
-    description: "Local experts who know hidden gems and authentic experiences off the beaten path"
+    title: "Everything planned for you",
+    description:
+      "Accommodation, transport, and activities are organized so you can just show up and enjoy.",
+    icon: CalendarCheck,
   },
   {
-    icon: Shield,
-    title: "Safe & Secure",
-    description: "24/7 support and carefully vetted accommodations for your peace of mind"
-  }
+    title: "24/7 support on the ground",
+    description:
+      "A tour guide is with you throughout the trip — plus support before you travel and help with onward plans.",
+    icon: Headphones,
+  },
+  {
+    title: "Safety is our top priority",
+    description:
+      "We choose trusted partners, vetted accommodations, and keep the group supported at every step.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Flexible payment options",
+    description:
+      "Pay tour operators directly with payment plan options available where offered.",
+    icon: CreditCard,
+  },
+  {
+    title: "Small group sizes",
+    description:
+      "Typically 8–16 travelers — the perfect balance of social and personal space.",
+    icon: MapPinned,
+  },
 ] as const;
+
 
 // Tour route mappings for efficient lookups
 export const TOUR_ROUTES: Record<number, string> = {

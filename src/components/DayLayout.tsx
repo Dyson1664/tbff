@@ -18,11 +18,14 @@ interface Accommodation {
   image?: string;
 }
 
+type TransportMode = "car" | "ship" | "bus" | "train" | "plane";
+
 interface Transportation {
   from: string;
   to: string;
   duration: string;
   distance?: string;
+  mode?: TransportMode; // ✅ add
 }
 
 interface DayLayoutProps {
@@ -197,12 +200,33 @@ export const DayLayout = memo(({
           <div className="space-y-4">
             {/* Transportation Icons */}
             <div className="flex justify-center gap-4 mb-6">
-              <Car className="w-8 h-8 text-primary" />
-              <Ship className="w-8 h-8 text-muted-foreground/40" />
-              <Bus className="w-8 h-8 text-muted-foreground/40" />
-              <Train className="w-8 h-8 text-muted-foreground/40" />
-              <Plane className="w-8 h-8 text-muted-foreground/40" />
-            </div>
+  <Car
+    className={`w-8 h-8 ${
+      transportation.mode === "car" ? "text-primary" : "text-muted-foreground/40"
+    }`}
+  />
+  <Ship
+    className={`w-8 h-8 ${
+      transportation.mode === "ship" ? "text-primary" : "text-muted-foreground/40"
+    }`}
+  />
+  <Bus
+    className={`w-8 h-8 ${
+      transportation.mode === "bus" ? "text-primary" : "text-muted-foreground/40"
+    }`}
+  />
+  <Train
+    className={`w-8 h-8 ${
+      transportation.mode === "train" ? "text-primary" : "text-muted-foreground/40"
+    }`}
+  />
+  <Plane
+    className={`w-8 h-8 ${
+      transportation.mode === "plane" ? "text-primary" : "text-muted-foreground/40"
+    }`}
+  />
+</div>
+
             
             {/* Route Line */}
             <div className="flex flex-col md:flex-row items-center justify-center relative max-w-sm mx-auto">

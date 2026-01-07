@@ -48,7 +48,10 @@ export const TripCard = memo(({
       {/* tighter bottom padding; adjust pb-* if needed */}
       <CardContent className="px-6 pt-6 pb-3">
         <div>
-          <h3 className="text-xl font-bold text-foreground mb-1 tracking-tight">{title}</h3>
+          <h3 className="text-xl font-bold text-[#F4909F] group-hover:text-[#506345] transition-colors mb-1 tracking-tight">
+  {title}
+</h3>
+
 
           {/* One-line overview (with ellipsis) */}
           {oneLine && (

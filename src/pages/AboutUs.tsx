@@ -1,17 +1,16 @@
 import { memo } from "react";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/common/Footer";
+
+import TBFFFooter from "@/components/common/TBFFFooter"; // ✅ use TBFF footer
 import { HeroSection } from "@/components/common/HeroSection";
 
 import landingHero from "@/assets/landing-hero.jpg";
 import aboutus1 from "@/assets/about-us-1.jpeg";
 import aboutus2 from "@/assets/about-us-2.jpeg";
 
-// NEW: team photos (place these files in /src/assets/)
+// team photos
 import aboutusDarrin from "@/assets/darrin5.png";
-//import aboutusDave from "@/assets/dave.jpg";
 import aboutusDave from "@/assets/dave8.png";
-
 
 // Founders data
 const FOUNDERS_INFO = {
@@ -21,7 +20,31 @@ const FOUNDERS_INFO = {
 
 export default memo(function AboutUs() {
   return (
-    <div className="min-h-screen bg-background">
+  <div className="ibt-theme min-h-screen bg-background">
+  <style>{`
+  .ibt-theme {
+    --primary: 179 95% 41%;            /* teal */
+    --primary-foreground: 0 0% 100%;
+    --ring: 179 95% 41%;
+  }
+
+  .ibt-theme .bg-primary {
+    background-color: hsl(179 95% 41%) !important;
+  }
+
+  .ibt-theme .text-primary {
+    color: hsl(179 95% 41%) !important;
+  }
+
+  .ibt-theme .bg-primary\\/10 {
+    background-color: hsl(179 95% 41% / 0.1) !important;
+  }
+
+  .ibt-theme .hover\\:text-primary:hover {
+    color: hsl(179 95% 41%) !important;
+  }
+`}</style>
+
       <Navbar />
 
       {/* Hero Section */}
@@ -51,7 +74,9 @@ export default memo(function AboutUs() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Mission</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Our Mission
+              </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-4">
                 Our mission is simple: to deliver imaginative, expertly run trips that turn
                 strangers into friends and destinations into lasting memories. We care deeply about
@@ -59,7 +84,9 @@ export default memo(function AboutUs() {
                 thoughtfully curated, community-minded, and seamlessly organized—so you can explore
                 more and worry less.
               </p>
-              <p className="text-xl font-semibold text-primary italic">Dream it. Live it. Imagine Beyond</p>
+              <p className="text-xl font-semibold text-primary italic">
+                Dream it. Live it. Imagine Beyond
+              </p>
             </div>
           </div>
         </div>
@@ -70,7 +97,9 @@ export default memo(function AboutUs() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Our Vision</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+                Our Vision
+              </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 We envision a vibrant, inclusive, and responsible travel community. A world where
                 travel is not only for new experiences but also a positive impact for the places and
@@ -96,7 +125,9 @@ export default memo(function AboutUs() {
       <section className="py-24 bg-gradient-to-br from-primary/10 via-primary/5 to-background relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <div className="absolute -top-8 left-1/2 -translate-x-1/2 w-24 h-24 bg-gradient-to-br from-primary to-primary/60 rounded-full opacity-20" />
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">Our Purpose</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+            Our Purpose
+          </h2>
           <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
             Our purpose is to form lifelong connections and make a positive change in every
             community we visit and the people we meet. We believe travel should enrich both the
@@ -111,14 +142,18 @@ export default memo(function AboutUs() {
       <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Meet Our Team</h2>
-            <p className="text-lg text-muted-foreground">The passionate people behind your amazing travel experiences</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              The passionate people behind your amazing travel experiences
+            </p>
           </div>
 
           <div>
             {/* Team Photos */}
             <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
-              {/* Darrin - shown first on mobile and left on desktop */}
+              {/* Darrin */}
               <div className="text-center order-1 md:order-1">
                 <div className="w-48 h-48 mx-auto mb-4 rounded-full border-4 border-white shadow-lg overflow-hidden">
                   <img
@@ -133,7 +168,7 @@ export default memo(function AboutUs() {
                 <p className="text-sm text-muted-foreground">Denver, Colorado</p>
               </div>
 
-              {/* Dave - shown second on mobile and right on desktop */}
+              {/* Dave */}
               <div className="text-center order-2 md:order-2">
                 <div className="w-48 h-48 mx-auto mb-4 rounded-full border-4 border-white shadow-lg overflow-hidden">
                   <img
@@ -156,7 +191,8 @@ export default memo(function AboutUs() {
         </div>
       </section>
 
-      <Footer />
+      {/* ✅ TBFF footer */}
+      <TBFFFooter />
     </div>
   );
 });

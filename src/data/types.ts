@@ -121,3 +121,11 @@ export interface DestinationData {
 export interface UnifiedDestinationData extends DestinationData {
   itinerary: ItineraryData;
 }
+
+export interface AccommodationHighlight {
+  title: string;
+  description?: string;
+  image?: string;
+  images?: string[];
+  video?: string;
+}

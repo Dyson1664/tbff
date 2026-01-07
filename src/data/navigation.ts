@@ -1,10 +1,10 @@
-// Static navigation data extracted from components for better performance
+// Static navigation data for TBFF only
 
 export interface NavigationTrip {
   title: string;
   duration: string;
   location: string;
-  link: string;
+  link: string; // TBFF-only link
 }
 
 export interface NavigationDestination {
@@ -14,26 +14,70 @@ export interface NavigationDestination {
   link: string;
 }
 
-// Extract trips data to module level - prevents recreation on every render
+// ===============================
+// TBFF Trips (MUST match Navbar routes)
+// ===============================
 export const NAVIGATION_TRIPS: readonly NavigationTrip[] = [
-  { title: "India Journey", duration: "14 Days", location: "India", link: "/india-itinerary" },
-  { title: "Japan Golden Route", duration: "7 Days", location: "Japan", link: "/japan-itinerary" },
-  { title: "Philippines Paradise", duration: "10 Days", location: "Philippines", link: "/philippines-itinerary" },
-  { title: "Sri Lanka Explorer", duration: "11 Days", location: "Sri Lanka", link: "/srilanka-itinerary" },
-  { title: "Thailand Discovery", duration: "Coming Soon", location: "Thailand", link: "#" },
-  { title: "Vietnam Culture Journey", duration: "Coming Soon", location: "Vietnam", link: "#" },
-  { title: "Colombia Coffee Trail", duration: "Coming Soon", location: "Colombia", link: "#" },
-  //{ title: "Bhutan Monastery Trek", duration: "9 Days", location: "Bhutan", link: "/bhutan-itinerary" },
+  {
+    title: "Japan Golden Route",
+    duration: "7 Days",
+    location: "Japan",
+    link: "/project/tbff/japan-itinerary",
+  },
+  {
+    title: "Colombia Highlights",
+    duration: "10 Days",
+    location: "Colombia",
+    link: "/project/tbff/colombia-itinerary", // ✅ FIXED
+  },
+  {
+    title: "Sri Lanka Explorer",
+    duration: "11 Days",
+    location: "Sri Lanka",
+    link: "/project/tbff/srilanka-itinerary",
+  },
+  {
+    title: "Philippines Island Hopping",
+    duration: "10 Days",
+    location: "Philippines",
+    link: "/project/tbff/philippines-itinerary",
+  },
+
+  // Coming soon (hidden by footer filter)
+  {
+    title: "Thailand Adventure",
+    duration: "Coming Soon",
+    location: "Thailand",
+    link: "#",
+  },
 ] as const;
 
-// Extract destinations data to module level
+// ===============================
+// TBFF Destinations (optional)
+// ===============================
 export const NAVIGATION_DESTINATIONS: readonly NavigationDestination[] = [
-  { city: "Thailand", country: "Asia", description: "Temples, beaches & culture", link: "/thailand" },
-  { city: "Sri Lanka", country: "Asia", description: "Pearl of the Indian Ocean", link: "/srilanka" },
-  { city: "Philippines", country: "Asia", description: "Tropical islands paradise", link: "/philippines" },
-  { city: "Japan", country: "Asia", description: "Ancient traditions & modern cities", link: "/japan" },
-  //{ city: "Colombia", country: "South America", description: "Coffee culture & vibrant cities", link: "/colombia" },
-  { city: "India", country: "Asia", description: "Rich heritage & diverse culture", link: "/india" },
-  //{ city: "Bhutan", country: "Asia", description: "Land of the Thunder Dragon", link: "/bhutan" },
-  //{ city: "Vietnam", country: "Asia", description: "Historic charm & natural beauty", link: "/vietnam" }
+  {
+    city: "Japan",
+    country: "Asia",
+    description: "Ancient traditions & modern cities",
+    link: "/japan",
+  },
+  {
+    city: "Colombia",
+    country: "South America",
+    description: "Coffee culture & vibrant cities",
+    link: "/colombia",
+  },
+  {
+    city: "Sri Lanka",
+    country: "Asia",
+    description: "Pearl of the Indian Ocean",
+    link: "/srilanka",
+  },
+  {
+    city: "Philippines",
+    country: "Asia",
+    description: "Tropical islands paradise",
+    link: "/philippines",
+  },
 ] as const;

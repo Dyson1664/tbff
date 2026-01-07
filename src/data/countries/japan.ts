@@ -1,6 +1,7 @@
 // Import images
 import japanHero from "@/assets/japan-hero.jpg";
 
+import japanHero4 from "@/assets/tbff-japan-hero.jpg";
 
 import japanHero2 from "@/assets/japan-hero2.jpg";
 import japanHero3 from "@/assets/japan-hero3.jpg";
@@ -13,7 +14,7 @@ import review1 from "@/assets/review-1.png";
 import review2 from "@/assets/review-2.png";
 
 //import japanDay01 from "@/assets/japan-day01-main-shibuya-crossing.jpg";      // Tokyo arrival + Shibuya
-import japanDay01  from "@/assets/japan-day01-groupbb.jpg";               // Asakusa Sensō-ji / Kaminarimon
+import japanDay01  from "@/assets/japan-day1.jpg";               // Asakusa Sensō-ji / Kaminarimon
 
 import japanDay02  from "@/assets/japan-day02-main-sensoji.jpg";               // Asakusa Sensō-ji / Kaminarimon
 import japanDay03  from "@/assets/japan-day03-group.jpg";           // Meiji Shrine + Harajuku/Golden Gai
@@ -31,15 +32,39 @@ import tile01  from "@/assets/japan-tile01.jpg";
 import tile02  from "@/assets/japan-tile02.jpg";
 import tile03  from "@/assets/japan-tile03.jpg";
 import tile04  from "@/assets/japan-tile04.jpg";
+import tile05  from "@/assets/tile-5.jpg";
 
-import japanReel from "@/assets/videos/japan/tbff-japan.mp4";
+const japanReel = "/videos/japan/tbff-japan.mp4";
+
+//import japanReel from "@/public/videos/japan/tbff-japan.mp4";
 import japancover from "@/assets/japan-reel-cover.jpg";
 
-import tokyoReel from "@/assets/videos/japan/tokyo.mp4";
-import kyotoReel from "@/assets/videos/japan/kyoto.mp4";
+// import tokyoReel from "@/public/videos/japan/tokyo.mp4";
+const tokyoReel = "/videos/japan/tokyo.mp4";
+
+//import kyotoReel from "@/public/videos/japan/kyoto.mp4";
+const kyotoReel = "videos/japan/kyoto.mp4"
 
 import tokyocover from "@/assets/tokyo-cover.jpg";
 import kyotocover from "@/assets/kyoto-cover.jpeg";
+
+// import japanReel2 from "@/public/videos/japan/tbff-japan-reel.mp4";
+const japanReel2 = "videos/japan/tbff-japan-reel.mp4"
+
+// hotels
+import tokyohotel from "@/assets/tokyo-hotel.jpg";
+import tokyohotel2 from "@/assets/tokyo-hotel-2.jpg";
+import tokyohotel3 from "@/assets/tokyo-hotel-3.jpg";
+import tokyohotel4 from "@/assets/tokyo-hotel-4.jpg";
+
+import kyotohotel from "@/assets/kyoto-hotel.webp";
+import kyotohotel2 from "@/assets/kyoto-hotel-2.jpg";
+import kyotohotel3 from "@/assets/kyoto-hotel-3.jpg";
+import kyotohotel4 from "@/assets/kyoto-hotel-4.jpg";
+
+
+
+
 
 
 // Import icons for highlights
@@ -61,11 +86,11 @@ export const japanData = {
   price: "USD $1,899",
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
   aboutDescription: [
-    "Experience the mesmerizing contrast of Japan, where bullet trains glide past ancient temples and neon-lit cities coexist with serene gardens. This 7-day journey takes you from the bustling metropolis of Tokyo to the cultural heart of Kyoto.",
-    "Immerse yourself in Japanese culture through tea ceremonies, temple visits, and authentic culinary experiences. From the iconic Mount Fuji to the peaceful bamboo groves, discover why Japan captivates travelers from around the world.",
-    "Get ready to make unforgettable memories with your girls as you explore Japan in style and laughter."
+    "Discover Japan through a beautifully balanced journey designed for connection, culture, and ease. This 7-day TravelBFF experience takes you from the energy of Tokyo to the timeless charm of Kyoto, blending iconic landmarks with meaningful moments.",
+    "You’ll experience Japan’s traditions through tea ceremonies, temple visits, and thoughtfully planned activities, while also enjoying downtime to connect with your group. From Mount Fuji views to serene gardens, every detail is curated so you can fully be present.",
+    "Travel solo, feel supported, and return home with new friendships and unforgettable memories from one of the world’s most captivating destinations."
   ],
-  overviewGallery2x:[tile01, tile04, tile02, tile03],
+  overviewGallery2x:[tile01, tile05, tile02, tile03],
   aboutImages: [japanGarden, japanTokyo],
 
 
@@ -73,19 +98,18 @@ export const japanData = {
 highlights: [
   {
     title: "Professional Photographer",
-    description: "Capture cinematic moments during your Tokyo shoot experience.",
+    description: "Capture unforgettable moments with your girls during a Tokyo photoshoot.",
     image: japancover,       // cover photo displayed before play
     video: japanReel      // main Japan reel
         // optional poster for video overlay
   },
   {
-    title: "Tokyo – Sensō-ji to Shibuya",
-    description:
-      "From ancient temples to neon nights. A seamless flow through the best of Tokyo.",
-    image: tokyocover,
-    video: tokyoReel      // NEW! your Tokyo reel
-
-  },
+  title: "Tokyo – Kyoto",
+   description: "From peaceful temples to buzzing streets. Japan hits different.",
+ // image: tokyocover,//
+  video: japanReel2
+},
+,
   {
     title: "Kyoto Magic – Fushimi Inari",
     description:
@@ -136,6 +160,21 @@ whatsIncludedHighlights: [
   }
 ],
 
+accommodations: [
+    {
+      title: "THE KNOT TOKYO Shinjuku",
+      description: "Stylish contemporary hotel with its own bakery in the heart of Tokyo's entertainment district with easy metro access.",
+      images: [tokyohotel, tokyohotel2, tokyohotel3, tokyohotel4]
+
+    },
+    {
+      title: "Prince Smart Inn Shijo Omiya",
+      description: "Modern Kyoto hotel perfectly positioned for exploring ancient temples and traditional districts.",
+      images: [kyotohotel2, kyotohotel, kyotohotel3, kyotohotel4]
+    }
+  ],
+
+
   itinerary: [
   // --- JAPAN: Days 1–4 (paste over your existing day 1–4 objects) ---
 {
@@ -149,11 +188,13 @@ whatsIncludedHighlights: [
   accommodation: { name: "THE KNOT TOKYO Shinjuku" },
   highlights: "Self-guided neighborhood strolls, optional Mario Kart street karts, shopping districts",
   transportation: {
-    from: "Narita/Haneda Airport",
-    to: "The Knot Tokyo",
-    duration: "≈ 60 Minutes by train",
-    distance: "—"
-  }
+  mode: "train", // ✅ add this
+  from: "Narita/Haneda Airport",
+  to: "The Knot Tokyo",
+  duration: "≈ 60 Minutes by train",
+  //distance: "—"//
+}
+
 },
 {
   day: 2,
@@ -307,9 +348,12 @@ whatsIncludedHighlights: [
 ],
 
 review: {
-  testimonialText: "Did the Japan tour and it was honestly the best time of my life! A great mix of experiencing culture, food and nightlife. Would definitely recommend, one ticked off the bucket list!",
-  author: "Daniel Riley, United Kingdom",
-  images: []
+  testimonialText:
+    "The most fun! I felt safe & loved that everything was planned for me. All I had to do was show up! Don't hesitate to book, you won't regret it!!!",
+  author: "Monica @itsmonicaaarroyo",
+  images: [],
+  disableReadMore: true
 }
+
 
 };

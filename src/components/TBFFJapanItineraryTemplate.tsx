@@ -677,15 +677,20 @@ export const TBFFJapanItineraryTemplate = memo(({ data, logoStyle, FooterCompone
           <div className={`${index < data.itinerary.length - 1 ? 'border-b border-gray-200' : ''} mx-0 md:mx-6`}>
             <AccordionTrigger className="px-4 md:px-0 py-4 hover:no-underline group">
               <div className="w-full flex items-baseline gap-2 md:gap-4 text-left">
-                <h2 className="whitespace-nowrap flex-shrink-0 text-2xl font-bold text-foreground">
+                {/* If you want "Day 1" to turn pink too, add group-hover + group-data */}
+                <h2 className="whitespace-nowrap flex-shrink-0 text-2xl font-bold text-foreground transition-colors duration-200 group-hover:text-[#F4909F] group-data-[state=open]:text-[#F4909F]">
                   Day {day.day}
                 </h2>
+
                 <span aria-hidden="true" className="mx-2 text-muted-foreground/40">|</span>
-                <h3 className="min-w-0 break-words text-base md:text-lg font-semibold text-muted-foreground group-hover:text-primary transition-colors duration-200">
+
+                {/* ✅ THIS is what was teal before: group-hover:text-primary */}
+                <h3 className="min-w-0 break-words text-base md:text-lg font-semibold text-muted-foreground transition-colors duration-200 group-hover:text-[#F4909F] group-data-[state=open]:text-[#F4909F]">
                   {day.title}
                 </h3>
               </div>
             </AccordionTrigger>
+
           </div>
           <AccordionContent className="px-0 pb-0">
             <DayLayout
@@ -710,71 +715,71 @@ export const TBFFJapanItineraryTemplate = memo(({ data, logoStyle, FooterCompone
   return (
   <div className="tbff-theme">
     <style>{`
-      /* Core TBFF palette */
-      .tbff-theme .bg-primary {
-        background-color: #fbddda !important;
-        color: #506345 !important;
-        border-color: #fbddda !important;
-      }
+  /* Core TBFF palette */
+  .tbff-theme .bg-primary {
+    background-color: #fbddda !important;
+    color: #506345 !important;
+    border-color: #fbddda !important;
+  }
 
-      .tbff-theme .bg-primary .text-white,
-      .tbff-theme .bg-primary [class*="text-white"] {
-        color: #506345 !important;
-      }
+  .tbff-theme .bg-primary .text-white,
+  .tbff-theme .bg-primary [class*="text-white"] {
+    color: #506345 !important;
+  }
 
-      .tbff-theme .fill-primary {
-        fill: #506345 !important;
-      }
+  .tbff-theme .fill-primary {
+    fill: #506345 !important;
+  }
 
-      .tbff-theme .text-primary {
-        color: #506345 !important;
-      }
+  .tbff-theme .text-primary {
+    color: #506345 !important;
+  }
 
-      .tbff-theme .bg-primary\\/10 {
-        background-color: rgba(251, 221, 218, 0.3) !important;
-      }
+  .tbff-theme .bg-primary\\/10 {
+    background-color: rgba(251, 221, 218, 0.3) !important;
+  }
 
-      .tbff-theme .hover\\:text-primary:hover {
-        color: #506345 !important;
-      }
+  /* Light background cards / muted sections */
+  .tbff-theme .bg-gray-50,
+  .tbff-theme .bg-muted,
+  .tbff-theme [class*="gradient"] {
+    background: #506345 !important;
+  }
 
-      /* Light background cards / muted sections */
-      .tbff-theme .bg-gray-50,
-      .tbff-theme .bg-muted,
-      .tbff-theme [class*="gradient"] {
-        background: #506345 !important;
-      }
+  /* Catch other bg-primary utility variants */
+  .tbff-theme [class*="bg-primary"] {
+    background-color: #fbddda !important;
+  }
 
-      /* Catch other bg-primary utility variants */
-      .tbff-theme [class*="bg-primary"] {
-        background-color: #fbddda !important;
-      }
+  /* General foreground text color */
+  .tbff-theme .text-foreground {
+    color: #506345 !important;
+  }
 
-      /* General foreground text color */
-      .tbff-theme .text-foreground {
-        color: #506345 !important;
-      }
+  /* Transportation dotted lines - override hardcoded teal (#0FC2BF) to blush */
+  .tbff-theme [style*="0FC2BF"] {
+    background: #fbddda !important;
+  }
 
-      /* Transportation dotted lines - override hardcoded teal (#0FC2BF) to blush */
-      .tbff-theme [style*="0FC2BF"] {
-        background: #fbddda !important;
-      }
-      .tbff-theme .w-1.h-16.bg-primary,
-      .tbff-theme .md\\:w-60.md\\:h-1.bg-primary {
-        background-color: #fbddda !important;
-      }
-      .tbff-theme .w-1.h-16.bg-primary > div,
-      .tbff-theme .md\\:w-60.md\\:h-1.bg-primary > div {
-        background: linear-gradient(180deg, #fbddda 0%, #fbddda 50%, #fbddda 100%) !important;
-        background-image: repeating-linear-gradient(
-          180deg,
-          transparent,
-          transparent 4px,
-          white 4px,
-          white 8px
-        ) !important;
-      }
-    `}</style>
+  .tbff-theme .w-1.h-16.bg-primary,
+  .tbff-theme .md\\:w-60.md\\:h-1.bg-primary {
+    background-color: #fbddda !important;
+  }
+
+  .tbff-theme .w-1.h-16.bg-primary > div,
+  .tbff-theme .md\\:w-60.md\\:h-1.bg-primary > div {
+    background-image: repeating-linear-gradient(
+      180deg,
+      transparent,
+      transparent 4px,
+      white 4px,
+      white 8px
+    ) !important;
+  }
+  .tbff-theme [data-radix-collection-item] button:hover { color: #F4909F !important; }
+
+`}</style>
+
 
     <div className={STATIC_STYLES.gradient}>
       <Navbar logoStyle={logoStyle} />
