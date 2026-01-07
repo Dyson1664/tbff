@@ -279,11 +279,10 @@ export default memo(function TBFFLandingPage() {
         {/* Hero Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-            TBFF Adventures
+            Travelbff
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl drop-shadow-md">
-            Discover hidden gems and iconic landmarks with curated experiences
-            for those who say yes to adventure
+            Connecting Women Worldwide
           </p>
         </div>
 
