@@ -14,6 +14,8 @@ import japanHero from "@/assets/japan-hero.jpg";
 import japanHero3 from "@/assets/japan-hero-3.jpg";
 import colombiaHero from "@/assets/colombia/colombia-day7.jpg";
 
+
+
 // TBFF specific tours - Japan, Colombia (2 trips)
 const TBFF_TOURS = [
   {
@@ -257,42 +259,43 @@ export default memo(function TBFFLandingPage() {
       {/* Navigation */}
       <Navbar logoStyle={tbffLogoStyle} />
 
-      {/* ✅ Main Hero (video) */}
       <section className="relative h-screen w-full overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source
-            src="https://videos.pexels.com/video-files/3571264/3571264-uhd_2560_1440_30fps.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+  <picture className="absolute inset-0 w-full h-full">
+    <source
+      media="(max-width: 767px)"
+      srcSet="/hero/tbff-hero-mobile.jpg"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcSet="/hero/tbff-hero-desktop.jpg"
+    />
+    <img
+      src="/hero/tbff-hero-desktop.jpg"
+      alt="Travelbff hero"
+      className="w-full h-full object-cover"
+    />
+  </picture>
 
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/30" />
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/30" />
 
-        {/* Hero Content */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
-            Travelbff
-          </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl drop-shadow-md">
-            Connecting Women Worldwide
-          </p>
-        </div>
+  {/* Hero Content */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg">
+      Travelbff
+    </h1>
+    <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl drop-shadow-md">
+      Connecting Women Worldwide
+    </p>
+  </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <div className="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2" />
-          </div>
-        </div>
-      </section>
+  {/* Scroll indicator */}
+  <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <div className="w-8 h-12 border-2 border-white/50 rounded-full flex justify-center">
+      <div className="w-1 h-3 bg-white/70 rounded-full mt-2" />
+    </div>
+  </div>
+</section>
 
       {/* Featured Tours */}
       <section className="py-16 bg-background">

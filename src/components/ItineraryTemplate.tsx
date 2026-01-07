@@ -1056,13 +1056,13 @@ const StickyBookingCard = memo(({ data, countryName }: { data: CountryData; coun
           ) : (
             <a href={bookingUrl} className="block">
               <Button size="default" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl font-semibold">
-                RESERVE NOW
+                RESERVE NOW $500
               </Button>
             </a>
           )}
 
           <p className="text-xs text-center text-muted-foreground leading-relaxed">
-            Reserve for $300 - deducted from total fees. Non-refundable.
+            Reserve for $500 - deducted from total fees.
           </p>
         </div>
       </div>

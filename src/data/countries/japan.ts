@@ -43,7 +43,7 @@ import japancover from "@/assets/japan-reel-cover.jpg";
 const tokyoReel = "/videos/japan/tokyo.mp4";
 
 //import kyotoReel from "@/public/videos/japan/kyoto.mp4";
-const kyotoReel = "videos/japan/kyoto.mp4"
+//const kyotoReel = "videos/japan/kyoto.mp4"
 
 import tokyocover from "@/assets/tokyo-cover.jpg";
 import kyotocover from "@/assets/kyoto-cover.jpeg";
@@ -109,15 +109,7 @@ highlights: [
  // image: tokyocover,//
   video: japanReel2
 },
-,
-  {
-    title: "Kyoto Magic – Fushimi Inari",
-    description:
-      "Walk through Kyoto’s iconic red torii gates—silent, spiritual, unforgettable.",
-    image: kyotocover,
-    video: kyotoReel     // NEW! your Kyoto reel
 
-  },
 ],
 
 

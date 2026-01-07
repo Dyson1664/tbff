@@ -26,7 +26,6 @@ export const colombiaData = {
   tags: [
     { emoji: "🏖️", label: "Beach" },
     { emoji: "🚀", label: "Adventure" },
-    { emoji: "🏝️", label: "Island Hopping" },
     { emoji: "💃", label: "Culture" },
     { emoji: "🧳", label: "Solo" },
   ],

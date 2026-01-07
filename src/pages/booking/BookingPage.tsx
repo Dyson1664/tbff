@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -8,6 +8,7 @@ import { CalendarIcon } from "lucide-react";
 
 import Navbar from "@/components/Navbar";
 import TBFFFooter from "@/components/common/TBFFFooter";
+
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -249,6 +250,12 @@ export default function BookingPage() {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // ✅ ADD THIS — scroll to top when booking page loads
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  // ✅ END ADD
+
   const config = slug ? BOOKING_CONFIG[slug] : undefined;
 
   const schema = useMemo(() => {
@@ -340,9 +347,10 @@ export default function BookingPage() {
       <main className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-2xl sm:text-3xl font-bold text-foreground mb-2">
-              Complete Your Booking – {config.countryName}
-            </h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-[#F4909F] mb-2">
+          Complete Your Booking – {config.countryName}
+        </h1>
+
             <p className="text-muted-foreground">
               Fill in your details to continue to payment.
             </p>
