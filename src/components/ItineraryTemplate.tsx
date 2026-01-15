@@ -1345,7 +1345,7 @@ export const ItineraryTemplate = memo(({ data, logoStyle, FooterComponent }: Iti
           ) : (
             <a href={getBookingUrlBySlug(data.slug)} className="flex-shrink-0">
               <Button size="default" className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full font-semibold px-8">
-                RESERVE NOW
+                RESERVE NOW $500
               </Button>
             </a>
           )}
