@@ -116,8 +116,7 @@ const TERMS_SECTIONS = [
     title: "13. Force Majeure & Extraordinary Events",
     content: [
       "IBT is not liable for delays, changes, or cancellations caused by events beyond its control including natural disasters, pandemics, government actions, civil unrest, supplier failure, or transportation disruptions.",
-      "IBT may modify, suspend, shorten, or cancel tours in good faith.",
-      "Refunds are limited to amounts recovered from suppliers and do not include third-party costs.",
+      "IBT may, acting reasonably and in good faith, modify, suspend, shorten, or cancel tours where required for safety, operational, legal, or force majeure reasons, or where minimum participation requirements are not met.",
       "No refunds will be issued for fear of travel, perceived risk, or media coverage where the tour continues lawfully."
     ]
   },
