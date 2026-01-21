@@ -23,7 +23,7 @@ const TBFF_TOURS = [
     title: "Japan Golden Route",
     location: "Tokyo, Japan",
     duration: "7 days",
-    price: "From $1,899",
+    price: "From $1,895",
     image: japanHero3,
     tag: "",
     route: "/project/tbff/japan-itinerary",

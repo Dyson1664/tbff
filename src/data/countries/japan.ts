@@ -83,7 +83,7 @@ export const japanData = {
   location: "Japan",
   duration: "7 days",
   heroImage: japanHero3,
-  price: "USD $1,899",
+  price: "USD $1,895",
   route: ["Tokyo", "Mt. Fuji", "Kyoto"],
   aboutDescription: [
     "Discover Japan through a beautifully balanced journey designed for connection, culture, and ease. This 7-day TravelBFF experience takes you from the energy of Tokyo to the timeless charm of Kyoto, blending iconic landmarks with meaningful moments.",
@@ -98,19 +98,20 @@ export const japanData = {
 highlights: [
   {
     title: "Professional Photographer",
-    description: "Capture unforgettable moments with your girls during a Tokyo photoshoot.",
-    image: japancover,       // cover photo displayed before play
-    video: japanReel      // main Japan reel
-        // optional poster for video overlay
+    description:
+      "Capture unforgettable moments with your girls during a Tokyo photoshoot.",
+    image: japancover, // cover photo displayed before play
+    video: `${japanReel}?v=1`, // cache-busted video
   },
   {
-  title: "Tokyo – Kyoto",
-   description: "From peaceful temples to buzzing streets. Japan hits different.",
- // image: tokyocover,//
-  video: japanReel2
-},
-
+    title: "Tokyo – Kyoto",
+    description:
+      "From peaceful temples to buzzing streets. Japan hits different.",
+    // image: tokyocover,
+    video: `${japanReel2}?v=1`, // cache-busted video
+  },
 ],
+
 
 
 

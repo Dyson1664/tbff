@@ -74,7 +74,7 @@ export const FEATURED_TOURS: readonly FeaturedTour[] = [
     duration: "7 days",
     rating: 4.9,
     reviews: 142,
-    price: "From $1,899",
+    price: "From $1,895",
     image: japanHero,
     tag: "",
     overview:
