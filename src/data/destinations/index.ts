@@ -78,7 +78,7 @@ export const destinationsData: Record<string, DestinationData> = {
       {
         id: "colombia-adventure",
         title: "Colombia Adventure",
-        duration: "10 days",
+        duration: "7 days",
         description: "Explore vibrant cities, pristine beaches, and rich coffee culture in this South American gem",
         image: colombiaHeroImage,
         price: "From $1,799",

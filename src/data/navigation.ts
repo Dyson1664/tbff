@@ -26,7 +26,7 @@ export const NAVIGATION_TRIPS: readonly NavigationTrip[] = [
   },
   {
     title: "Colombia Highlights",
-    duration: "10 Days",
+    duration: "7 Days",
     location: "Colombia",
     link: "/project/tbff/colombia-itinerary", // ✅ FIXED
   },

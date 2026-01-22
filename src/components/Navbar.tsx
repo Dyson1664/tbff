@@ -16,7 +16,7 @@ const TBFF_TRIPS = [
   {
     title: "Colombia Highlights",
     location: "Colombia",
-    duration: "10 days",
+    duration: "7 days",
     link: "/project/tbff/colombia-itinerary",
   },
 ] as const;
@@ -210,7 +210,7 @@ const Navbar = memo(() => {
                 className="w-full justify-start"
                 onClick={toggleMobileTrips}
               >
-                TBFF Trips
+                tbff trips
                 <ChevronDown className="w-4 h-4 ml-auto" />
               </Button>
 

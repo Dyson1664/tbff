@@ -34,7 +34,7 @@ const TBFF_TOURS = [
     id: 2,
     title: "Colombia Highlights",
     location: "Bogotá, Colombia",
-    duration: "10 days",
+    duration: "7 days",
     price: "From $1,679",
     image: colombiaHero,
     tag: "",
