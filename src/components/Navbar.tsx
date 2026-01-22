@@ -148,18 +148,29 @@ const Navbar = memo(() => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/">
-            <Button
-              variant="link"
-              className="p-0 hover:no-underline flex items-center"
-            >
-              <img
-                src={tbffLogo}
-                alt="TBFF Logo"
-                className="h-10 md:h-12 lg:h-14 w-auto"
-              />
-            </Button>
-          </Link>
+          <Link
+  to="/"
+  onClick={() => {
+    // close mobile menu if open
+    setIsMobileMenuOpen(false);
+    setMobileActiveDropdown(null);
+
+    // scroll to top
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }}
+>
+  <Button
+    variant="link"
+    className="p-0 hover:no-underline flex items-center"
+  >
+    <img
+      src={tbffLogo}
+      alt="TBFF Logo"
+      className="h-10 md:h-12 lg:h-14 w-auto"
+    />
+  </Button>
+</Link>
+
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center ml-auto mr-12">
