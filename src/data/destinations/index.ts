@@ -114,7 +114,7 @@ export const destinationsData: Record<string, DestinationData> = {
         duration: "8 days",
         description: "Immerse yourself in the vibrant culture, stunning temples, and pristine beaches of the Land of Smiles",
         image: thailandHeroImage,
-        price: "From $1,599",
+        price: "From $1,679",
         route: "/thailand-itinerary"
       }
     ],
